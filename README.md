@@ -4,7 +4,7 @@
 
 [Leia em português](https://wesleyvieira99.github.io/nu/) · [Read in English](https://wesleyvieira99.github.io/nu/en.html) · [PDF português](docs/pdf/Nubank_Confianca_em_Escala_PT.pdf) · [English PDF](docs/pdf/Nubank_Trust_at_Scale_EN.pdf)
 
-[![Python case labs](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml/badge.svg)](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml)
+[Automação dos testes Python · Python test workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml)
 
 ![Prévia dos diagramas / Diagram preview](docs/preview.png)
 
