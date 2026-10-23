@@ -1,0 +1,440 @@
+{
+  "pass": true,
+  "total_diagrams": 48,
+  "unique_compositions": 24,
+  "unchanged_nodes_and_edges": true,
+  "diagrams": [
+    {
+      "lang": "pt",
+      "page": 35,
+      "key": "arquiteturas-1",
+      "family": "command_read_split",
+      "nodes": 8,
+      "edges": 8,
+      "sha256": "0d4a2b1a298f9bd6b53125ca3fbc8559f5c92048d5910af3ce70897102beb551"
+    },
+    {
+      "lang": "pt",
+      "page": 36,
+      "key": "arquiteturas-2",
+      "family": "recovery_fork_loop",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "12d82e9d3c169cbedda906c499c97af798c5e692b9419f5f3af4cb2bb535e6e8"
+    },
+    {
+      "lang": "pt",
+      "page": 37,
+      "key": "arquiteturas-3",
+      "family": "release_control_loop",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "c972197d2ca9c5124adece39818b5ff1e25ec92e6d6edc9668bc934e7deb9b3f"
+    },
+    {
+      "lang": "pt",
+      "page": 38,
+      "key": "arquiteturas-4",
+      "family": "prediction_decision_learning",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "0be5ad65a3b3bd7520a93719c9d775457cdf6408ec3aebe4af8fcdad10b4f6fe"
+    },
+    {
+      "lang": "pt",
+      "page": 41,
+      "key": "01-3",
+      "family": "financial_backbone_help_branch",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "236829c7f11a7a2397400445c70e9db14580e5be2386eaa838b854783a2b91ba"
+    },
+    {
+      "lang": "pt",
+      "page": 54,
+      "key": "02-3",
+      "family": "evidence_corridor_identity_handshake",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "04d899e19dd1e771556dac8e9fcfc25b6ebd834e4fc9692595ef6e8e945da9da"
+    },
+    {
+      "lang": "pt",
+      "page": 67,
+      "key": "03-3",
+      "family": "render_hub_audit_fanin",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "406cfdfd1a636aeb29dd835f5063265f4fe02c19c8c21adcdab04d1f59d7cb61"
+    },
+    {
+      "lang": "pt",
+      "page": 80,
+      "key": "04-3",
+      "family": "provenance_funnel_revocation",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "4dadc703b4e581d68a60149c2ced6cbc676c383a99ceb43ce8acd4ab92eb2058"
+    },
+    {
+      "lang": "pt",
+      "page": 93,
+      "key": "05-3",
+      "family": "time_axis_revalidation",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "6aeb345e99a8d7185a4af1bbd990b9e4c4f25ff0c1a135d55cd6542c6afa5494"
+    },
+    {
+      "lang": "pt",
+      "page": 106,
+      "key": "06-3",
+      "family": "context_and_financial_authority",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "2b273711d2215b891b24df5f2544d6c1ad6372dd9e1d0e7dbae01b5eed614dce"
+    },
+    {
+      "lang": "pt",
+      "page": 119,
+      "key": "07-3",
+      "family": "export_pipeline_reconciliation_brace",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "8a9bc4ce48b9b94b79a881773abe975a0e5b47f2294b7382dbfec6162c62f223"
+    },
+    {
+      "lang": "pt",
+      "page": 132,
+      "key": "08-3",
+      "family": "shipment_normal_exception_lanes",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "2157124b1cc1b8e50d4353306602d8eed8b9aa0608376f02075ac5297190bfd7"
+    },
+    {
+      "lang": "pt",
+      "page": 145,
+      "key": "09-3",
+      "family": "financial_data_preference_rails",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "5c655aae8eecccbee5b559f8913b0136b9f833e30991ead5da3bda31603e3959"
+    },
+    {
+      "lang": "pt",
+      "page": 158,
+      "key": "10-3",
+      "family": "verifiable_artifact_circuit",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "dd3477e5bae3a70e09ed862ef1a8b85ecd9c1232ca913491ddfed3e41a19cf25"
+    },
+    {
+      "lang": "pt",
+      "page": 171,
+      "key": "11-3",
+      "family": "read path / asynchronous refresh / canonical escape",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "cdf385d10e1672f7f5a6b66687a1feee59f2fb70e6c6d7b4d42d15aa41557d07"
+    },
+    {
+      "lang": "pt",
+      "page": 184,
+      "key": "12-3",
+      "family": "cloud boundary / two-input admission / reconciliation",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "832a4bc66aaeafb2b465783aa8ab1850f2234dd7db5b781400073d4a79812383"
+    },
+    {
+      "lang": "pt",
+      "page": 197,
+      "key": "13-3",
+      "family": "ownership matrix / central conditional workflow",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "d5df761b6b94c29b1ce289fc9760c669f08d7b116d04facedde7d0a63e0379d8"
+    },
+    {
+      "lang": "pt",
+      "page": 210,
+      "key": "14-3",
+      "family": "publication staircase / capability negotiation",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "51bf7915e55ab3a6d0d4fcabc313332f55bdb8afa3535c5ce416896f6a3f3727"
+    },
+    {
+      "lang": "pt",
+      "page": 223,
+      "key": "15-3",
+      "family": "release feedback circuit / observational branch",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "8ce18aa0dad78a15dfd6065c70f8626ee3f993ef7902de6d19fb73f081d00b2d"
+    },
+    {
+      "lang": "pt",
+      "page": 236,
+      "key": "16-3",
+      "family": "human triage chain / external learning return",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "449ee36f6a47cbfed7099d2675a86f33bd692e398eaa56941b4b54b29e1e3c6e"
+    },
+    {
+      "lang": "pt",
+      "page": 249,
+      "key": "17-3",
+      "family": "policy fork / financial effect and human review",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "80d4617bd9bf8c1183efe3682689e3732088893632ca970a75cacd06418d4ff8"
+    },
+    {
+      "lang": "pt",
+      "page": 262,
+      "key": "18-3",
+      "family": "online–replay comparison / common contract",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "465cbfdcaff50c6656ed0655168d6339fd74d3b3193b90f2b887ae7aa31335c6"
+    },
+    {
+      "lang": "pt",
+      "page": 275,
+      "key": "19-3",
+      "family": "visual composition arc / device evidence return",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "cc6f49f3095f6d50582f664854429c6f5c017ea6ef6aa5c6416e239caaf9a93f"
+    },
+    {
+      "lang": "pt",
+      "page": 288,
+      "key": "20-3",
+      "family": "physical–digital bridge / assisted route",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "1bf05e7ae1cb7a989e903f6b90604834772c636b7df9627937673e972b4a918b"
+    },
+    {
+      "lang": "en",
+      "page": 35,
+      "key": "arquiteturas-1",
+      "family": "command_read_split",
+      "nodes": 8,
+      "edges": 8,
+      "sha256": "d09bfe341bcd48b53f9643745d87c96fbbb5247ac53d40bc0d1aa97d984e9996"
+    },
+    {
+      "lang": "en",
+      "page": 36,
+      "key": "arquiteturas-2",
+      "family": "recovery_fork_loop",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "2318849cd0038c47658e64ee125d3544a10796b9a9ab074bf0b4782e138cfbcd"
+    },
+    {
+      "lang": "en",
+      "page": 37,
+      "key": "arquiteturas-3",
+      "family": "release_control_loop",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "7104a23a1f11bf75530e5a0ea5ea62ed6d2d0b74bb343bf55568e220a2c483b4"
+    },
+    {
+      "lang": "en",
+      "page": 38,
+      "key": "arquiteturas-4",
+      "family": "prediction_decision_learning",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "4461cd285a93f03dc4fd19b7b7b2ccbbef0dc433a8d34381c4614006e6aebb39"
+    },
+    {
+      "lang": "en",
+      "page": 41,
+      "key": "01-3",
+      "family": "financial_backbone_help_branch",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "f9730577cf3bb5ae899a392f53950ea93ea2c2145b36707b7021200b05037c25"
+    },
+    {
+      "lang": "en",
+      "page": 54,
+      "key": "02-3",
+      "family": "evidence_corridor_identity_handshake",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "77a86575b7f4b584393c894be26b5b8ea06acd082a573a3f85f84f0eca8a55ff"
+    },
+    {
+      "lang": "en",
+      "page": 67,
+      "key": "03-3",
+      "family": "render_hub_audit_fanin",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "6ec8d1cc85f501e88241c1dddaf6d144952ecdd50fcb968cf56a075ebf3a7276"
+    },
+    {
+      "lang": "en",
+      "page": 80,
+      "key": "04-3",
+      "family": "provenance_funnel_revocation",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "002ac7311206e59d6a8549c0466e906c955568ceeb12355fb4a5f226fb4c1a64"
+    },
+    {
+      "lang": "en",
+      "page": 93,
+      "key": "05-3",
+      "family": "time_axis_revalidation",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "f872b2752cc0031be9bf7acf87e53000b5d393619d144af1e00504fef0f06375"
+    },
+    {
+      "lang": "en",
+      "page": 106,
+      "key": "06-3",
+      "family": "context_and_financial_authority",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "67b2f707b5420f3794ae1d9941ee48d7e2e5077f872ccc4c335535d088f12704"
+    },
+    {
+      "lang": "en",
+      "page": 119,
+      "key": "07-3",
+      "family": "export_pipeline_reconciliation_brace",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "04c1c6b667371bfdd1a9e0c877b4352aab9b52b22e1a6f3a709d4f59327a10a2"
+    },
+    {
+      "lang": "en",
+      "page": 132,
+      "key": "08-3",
+      "family": "shipment_normal_exception_lanes",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "e5aa4f58eccb048a32f68058dfe98af429306596f76ea11e30f5ff1adef33300"
+    },
+    {
+      "lang": "en",
+      "page": 145,
+      "key": "09-3",
+      "family": "financial_data_preference_rails",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "e9e69a7b828fd4d1cece78e0b92eafe8b300cb19a19870074b4b439f30d1bc4f"
+    },
+    {
+      "lang": "en",
+      "page": 158,
+      "key": "10-3",
+      "family": "verifiable_artifact_circuit",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "cc8bf1c1c341241ca8ae0b7972aefca21026ed9e7ddbccadeabdc56f552735be"
+    },
+    {
+      "lang": "en",
+      "page": 171,
+      "key": "11-3",
+      "family": "read path / asynchronous refresh / canonical escape",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "86011be622f3a724fd0a4ff9c33c18bb812a72bc9950eb819427cc401cd7dd06"
+    },
+    {
+      "lang": "en",
+      "page": 184,
+      "key": "12-3",
+      "family": "cloud boundary / two-input admission / reconciliation",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "5fab0520338606a5c7b71e187811974ee2b657e1b0e8801a51952e85dcb74150"
+    },
+    {
+      "lang": "en",
+      "page": 197,
+      "key": "13-3",
+      "family": "ownership matrix / central conditional workflow",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "648a59e40d459c06251d5cc185430f9bd5f38cc46eedd9e09e6bb1b88c6a272e"
+    },
+    {
+      "lang": "en",
+      "page": 210,
+      "key": "14-3",
+      "family": "publication staircase / capability negotiation",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "59c439e556102f7c04d84da171c193b3422890c54c949a3ff8d8cbf243a2eea9"
+    },
+    {
+      "lang": "en",
+      "page": 223,
+      "key": "15-3",
+      "family": "release feedback circuit / observational branch",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "e4f0b1c58572aa67d7557739a31e797f9c07aa6656439c09224bcefb5c2f1cc9"
+    },
+    {
+      "lang": "en",
+      "page": 236,
+      "key": "16-3",
+      "family": "human triage chain / external learning return",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "f6a31fb7928001dfbc3dad8b7e17c616403fd355155c282782a6b25f3a7d9e16"
+    },
+    {
+      "lang": "en",
+      "page": 249,
+      "key": "17-3",
+      "family": "policy fork / financial effect and human review",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "3f3133d0621a96457db984ef43a57f02fcc398cc6318e7ad0968480b38001d92"
+    },
+    {
+      "lang": "en",
+      "page": 262,
+      "key": "18-3",
+      "family": "online–replay comparison / common contract",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "2bc31813ed593d2bb63ff51802e86193bfabae0729869a241a37e0a5e3752e92"
+    },
+    {
+      "lang": "en",
+      "page": 275,
+      "key": "19-3",
+      "family": "visual composition arc / device evidence return",
+      "nodes": 7,
+      "edges": 7,
+      "sha256": "f83889fbb88f6808e0f97206fb22acad2d1f7e61e7e3824c22c17e5bbd658b43"
+    },
+    {
+      "lang": "en",
+      "page": 288,
+      "key": "20-3",
+      "family": "physical–digital bridge / assisted route",
+      "nodes": 7,
+      "edges": 8,
+      "sha256": "cd7e051e2e425720fd9e6ff0cbeea75150c33e55b474d6f74ae3f95183ec7cc1"
+    }
+  ]
+}

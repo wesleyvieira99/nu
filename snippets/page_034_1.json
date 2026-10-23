@@ -1,0 +1,16 @@
+{
+  "title": "Proposta: confiança na jornada",
+  "panels": [
+    {"title": "Conclusão confirmada", "unit": "percent"},
+    {"title": "Estado desconhecido", "unit": "short"},
+    {"title": "Tempo de confirmação P99", "unit": "ms"},
+    {"title": "Reconciliação mais antiga", "unit": "s"},
+    {"title": "Contatos por 1.000 jornadas", "unit": "short"}
+  ],
+  "dimensions": ["journey", "release", "cohort"],
+  "decision": {
+    "owner": "proposed-journey-team",
+    "action": "hold rollout when guardrails fail",
+    "runbook": "referência local do serviço"
+  }
+}

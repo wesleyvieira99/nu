@@ -1,0 +1,22 @@
+{
+  "contract": "portfolio.delivery.v1",
+  "event_id": "demo-event-42",
+  "shipment_id": "demo-shipment-7",
+  "sequence": 12,
+  "status": "exception",
+  "occurred_at": "2026-10-20T14:00:00Z",
+  "received_at": "2026-10-20T14:01:00Z",
+  "origin": {
+    "partner": "synthetic-carrier",
+    "schema_revision": 1
+  },
+  "next_action": {
+    "owner": "delivery-operations",
+    "kind": "review-attempt",
+    "due_at": "2026-10-21T14:00:00Z"
+  },
+  "privacy": {
+    "contains_full_address": false,
+    "customer_visible": true
+  }
+}

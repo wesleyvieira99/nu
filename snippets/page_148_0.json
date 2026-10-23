@@ -1,0 +1,23 @@
+{
+  "contract": "portfolio.invoice.v1",
+  "period": "2026-10",
+  "revision": 4,
+  "currency": "BRL",
+  "total_cents": 900,
+  "due_date": "2026-11-10",
+  "status": "open",
+  "entries": [
+    {
+      "id": "demo-purchase",
+      "kind": "purchase",
+      "amount_cents": 1000
+    },
+    {
+      "id": "demo-adjustment",
+      "kind": "adjustment",
+      "amount_cents": -100
+    }
+  ],
+  "complete": true,
+  "updated_at": "2026-10-23T12:00:00Z"
+}

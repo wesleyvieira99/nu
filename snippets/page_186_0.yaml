@@ -1,0 +1,24 @@
+groups:
+  - name: portfolio-capacity
+    rules:
+      - alert: SafeCapacityExhausted
+        expr: portfolio_safe_headroom < 0
+        for: 5m
+        labels:
+          severity: warning
+          owner: platform-demo
+        annotations:
+          summary: "Margem segura negativa"
+          description: "Revisar reservas e demanda planejada."
+      - alert: CapacitySourceStale
+        expr: time() - portfolio_capacity_collected_at > 900
+        for: 10m
+        labels:
+          severity: warning
+          owner: platform-demo
+        annotations:
+          summary: "Fonte de capacidade desatualizada"
+          description: "Confirmar coleta antes de admitir expansão."
+
+# Métricas, limiares e responsável são exemplos propostos.
+# Validar regras com dados e ferramentas do ambiente real.

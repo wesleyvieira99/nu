@@ -1,0 +1,652 @@
+{
+  "accessed": "2026-10-23",
+  "assets": {
+    "nubank": {
+      "id": "nubank",
+      "url": "https://www.datomic.com/images/customers/01_nulogo_the-purple.svg",
+      "source": "https://www.datomic.com/",
+      "bytes": 1423,
+      "kind": "logo",
+      "path": "evidence/nubank.svg",
+      "sha256": "551f5f6cfe6ca40c64c7af69ebbe8320e3396b4b3539548404dbcee05d4ff5bc"
+    },
+    "clojure": {
+      "id": "clojure",
+      "url": "https://clojure.org/images/clojure-logo-120b.png",
+      "source": "https://clojure.org/",
+      "bytes": 4021,
+      "kind": "logo",
+      "path": "evidence/clojure.png",
+      "sha256": "4fbe07080f09fa408af17de574c9a636638347dabdfe406ec09d7e045c8e8939"
+    },
+    "datomic": {
+      "id": "datomic",
+      "url": "https://www.datomic.com/images/Datomic%20wordmark%20horizontal.svg",
+      "source": "https://www.datomic.com/",
+      "bytes": 10470,
+      "kind": "logo",
+      "path": "evidence/datomic.svg",
+      "sha256": "0d15eb5d9a4a566f1f7650dc4465dc691522107cea3edae908b40000675b02b3"
+    },
+    "kafka": {
+      "id": "kafka",
+      "url": "https://kafka.apache.org/logos/kafka_logo--simple.png",
+      "source": "https://kafka.apache.org/",
+      "bytes": 3233,
+      "kind": "logo",
+      "path": "evidence/kafka.png",
+      "sha256": "3cfcbb2acf90114ffc5b9287a336487c4872be230e4553bdca7f2a09be6a7d33"
+    },
+    "prometheus": {
+      "id": "prometheus",
+      "url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "source": "https://prometheus.io/",
+      "bytes": 1028,
+      "kind": "logo",
+      "path": "evidence/prometheus.svg",
+      "sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc"
+    },
+    "flutter": {
+      "id": "flutter",
+      "url": "https://flutter.dev/assets/icon_flutter.817b4a56b047d0d36b338dd9ffd44dbd.svg",
+      "source": "https://flutter.dev/brand",
+      "bytes": 9431,
+      "kind": "logo",
+      "path": "evidence/flutter.svg",
+      "sha256": "147e0e0ed83205719f0614c5133595f4b68e198ca6e2931bf4b65383a15f37d5"
+    },
+    "dart": {
+      "id": "dart",
+      "url": "https://dart.dev/assets/img/logo/dart-192.svg",
+      "source": "https://dart.dev/",
+      "bytes": 1631,
+      "kind": "logo",
+      "path": "evidence/dart.svg",
+      "sha256": "f56021f03f95c46f1f2bcefab7de3926c82efa88a80afdd6ff797a5d3865c7a0"
+    },
+    "python": {
+      "id": "python",
+      "url": "https://www.python.org/static/community_logos/python-logo-generic.svg",
+      "source": "https://www.python.org/community/logos/",
+      "bytes": 15301,
+      "kind": "logo",
+      "path": "evidence/python.svg",
+      "sha256": "0305d6b2bb2e2761502d072e8e2db1248dbd1a99f51fb4b4bcb9e43c486ef6b2"
+    },
+    "kubernetes": {
+      "id": "kubernetes",
+      "url": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg",
+      "source": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg",
+      "bytes": 11626,
+      "kind": "logo",
+      "path": "evidence/kubernetes.svg",
+      "sha256": "a8f6c3b81e588eb0eee4b5ae707ad11b16d0c5ce132719871e559eed0e61e6bf"
+    },
+    "opentelemetry": {
+      "id": "opentelemetry",
+      "url": "https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg",
+      "source": "https://opentelemetry.io/",
+      "bytes": 3266,
+      "kind": "logo",
+      "path": "evidence/opentelemetry.svg",
+      "sha256": "b85ba39c57e614d569b72d70c2353923c1f88ef670bcc98addce2ce2bc7eb9a7"
+    },
+    "postgresql": {
+      "id": "postgresql",
+      "url": "https://www.postgresql.org/media/img/about/press/elephant.png",
+      "source": "https://www.postgresql.org/",
+      "bytes": 50279,
+      "kind": "logo",
+      "path": "evidence/postgresql.png",
+      "sha256": "ff92fb5d12a7fa6b23c2eb403d2edf4fbc58ced802021e1f02c3583cb70957be"
+    },
+    "grafana": {
+      "id": "grafana",
+      "url": "https://a-us.storyblok.com/f/567658451994139/143x24/8360e7918b/grafana-header-logo.svg",
+      "source": "https://grafana.com/",
+      "bytes": 12962,
+      "kind": "logo",
+      "path": "evidence/grafana.svg",
+      "sha256": "9069b557771b50b35642fa03564ebca4bd6b608d6603c48185f74024568b922e"
+    },
+    "java": {
+      "id": "java",
+      "url": "https://dev.java/assets/images/java-logo-vector.png",
+      "source": "https://dev.java/",
+      "bytes": 16190,
+      "kind": "logo",
+      "path": "evidence/java.png",
+      "sha256": "d1f0e101d26d783618e7ed008e2ea148b120c8116d232463832b3b63b8431874"
+    },
+    "portrait": {
+      "id": "portrait",
+      "url": "https://wesleyvieira99.github.io/WVPortfolio/public/assets/portrait.jpg",
+      "source": "https://wesleyvieira99.github.io/WVPortfolio/",
+      "bytes": 387460,
+      "kind": "photo",
+      "path": "evidence/portrait.jpg",
+      "sha256": "73e5e9f04c62407f2f5ec465b9117ce53a4ddcc4b7b5e42fc9a4a24337e45cf9"
+    },
+    "award-0": {
+      "id": "award-0",
+      "url": "https://wesleyvieira99.github.io/WVPortfolio/public/assets/award_0.jpg",
+      "source": "https://wesleyvieira99.github.io/WVPortfolio/",
+      "bytes": 70857,
+      "kind": "photo",
+      "path": "evidence/award-0.jpg",
+      "sha256": "a3d7a7a24a0c7cfab9c65b530e410f15a773f2d126feb7a53f815a317230663f"
+    },
+    "award-1": {
+      "id": "award-1",
+      "url": "https://wesleyvieira99.github.io/WVPortfolio/public/assets/award_1.jpg",
+      "source": "https://wesleyvieira99.github.io/WVPortfolio/",
+      "bytes": 116163,
+      "kind": "photo",
+      "path": "evidence/award-1.jpg",
+      "sha256": "ba0bc51bb344e618180828f7857c17798b1a24437953e5dba55fd89d4b017ebd"
+    },
+    "aws": {
+      "id": "aws",
+      "url": "https://aws.amazon.com/",
+      "source": "https://aws.amazon.com/",
+      "bytes": 7418,
+      "kind": "logo",
+      "path": "evidence/aws.svg",
+      "sha256": "01fc4590e3e5bf12e857e109dd81090cf6e77ec7d3389980e13e24fe164671fb"
+    },
+    "redis": {
+      "id": "redis",
+      "url": "https://redis.io/",
+      "source": "https://redis.io/",
+      "bytes": 2486,
+      "kind": "logo",
+      "path": "evidence/redis.svg",
+      "sha256": "f7a4f008a6df70f7b9bf92a4dbfd74c24d4f33f382a35e9aaa9b3144e73963cb"
+    },
+    "typescript": {
+      "id": "typescript",
+      "url": "https://www.typescriptlang.org/",
+      "source": "https://www.typescriptlang.org/",
+      "bytes": 1692,
+      "kind": "logo",
+      "path": "evidence/typescript.svg",
+      "sha256": "85a2e2020be041d822cc85fa8b8e73c442ae6019d7d16b8fb93fa8591d1e2193"
+    },
+    "nu-engineer": {
+      "id": "nu-engineer",
+      "url": "https://www.datocms-assets.com/162099/1782405772-focused-woman-working-headphones-office.webp?q=60",
+      "source": "https://international.nubank.com.br/en/about/",
+      "kind": "photo",
+      "caption": "Woman with headphones working focused. In the blurred foreground, there is a purple bottle and a green plant.",
+      "path": "evidence/nu-engineer.webp",
+      "sha256": "9f088615ea21f7c03863fbeb419bc4c95413f1659f40360e6ac23f64a1ae4313"
+    },
+    "nu-meeting": {
+      "id": "nu-meeting",
+      "url": "https://www.datocms-assets.com/162099/1782486803-people-through-glass-meeting-nubank-logo.jpg?q=60",
+      "source": "https://international.nubank.com.br/en/about/",
+      "kind": "photo",
+      "caption": "People seen through a glass wall, sitting at a table and chatting in a meeting room; in the background, a display board with the Nubank logo.",
+      "path": "evidence/nu-meeting.jpg",
+      "sha256": "9a0d2753f8351de25345e5f6258a1cecc18d00f0fff3feb900538e7ebfc5018c"
+    },
+    "nu-office": {
+      "id": "nu-office",
+      "url": "https://www.datocms-assets.com/162099/1782473433-nubank-headquarters-purple-logo-employees-walking.webp?q=60",
+      "source": "https://international.nubank.com.br/en/about/",
+      "kind": "photo",
+      "caption": "Man and woman walk in an office lobby next to a large purple Nubank logo surrounded by plants.",
+      "path": "evidence/nu-office.webp",
+      "sha256": "3c60dda7d48eea1ac8922b79a94d9fa618cac45bdc666dbdb1688513608d989a"
+    },
+    "nu-collaboration": {
+      "id": "nu-collaboration",
+      "url": "https://www.datocms-assets.com/162099/1782391179-people-standing-talking-outdoor-area.webp?q=60",
+      "source": "https://international.nubank.com.br/en/about/",
+      "kind": "photo",
+      "caption": "Group of four professionals talking while standing in an office with a staircase and plants in the background. The woman in the center is smiling.",
+      "path": "evidence/nu-collaboration.webp",
+      "sha256": "40188ecb917d07d0e314771c02ff4cc11056f8b26b9ec2a0f644bca0f78901f5"
+    },
+    "terraform": {
+      "id": "terraform",
+      "url": "https://raw.githubusercontent.com/hashicorp/design-system/main/packages/flight-icons/svg/terraform-color-16.svg",
+      "source": "https://github.com/hashicorp/design-system",
+      "kind": "logo",
+      "path": "evidence/terraform.svg",
+      "sha256": "67f8d31d37fd8c15516569eb8ae400d7b09fff13d6b7214483fe1af4a9449e92"
+    },
+    "app-03-1": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/notificacoes-push-do-app-nubank-esquece-do-valor-sugestoes-Dly2fsieCTAwemO",
+      "kind": "Print publicado por usuário na NuCommunity; não reproduzido em ambiente controlado.",
+      "path": "evidence/app-03-1.png",
+      "sha256": "5051fc6bb1a29ca7847d9cd503ae394f679896b7fcd344614cedf70766cba868"
+    },
+    "app-05-1": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/assistente-de-pagamentos-do-nubank-precisa-de-melhorias-CD5OrzX9jWPOsF6",
+      "kind": "Print publicado por usuário na NuCommunity; não reproduzido em ambiente controlado.",
+      "path": "evidence/app-05-1.png",
+      "sha256": "d535760b9ef7be0d2ed549f63e02de0a86c94fe9f0b93a1dd81947f185f64532"
+    },
+    "app-06-1": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/modo-rua-precisa-de-um-pequeno-ajuste-ne-qMb3GZwa82zYnGv",
+      "kind": "Print publicado por usuário na NuCommunity; não reproduzido em ambiente controlado.",
+      "path": "evidence/app-06-1.png",
+      "sha256": "da4dd52c004e2bbf262368393a17e152af68ffa543bd7c149e84d1c77ac06e90"
+    },
+    "official-1": {
+      "source": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
+      "kind": "official",
+      "path": "evidence/official-1.png",
+      "sha256": "098e96a4da473944cdcfb88c8523a80d1824364f390ecb40941226a265454bde"
+    },
+    "source-01": {
+      "source": "https://comunidade.nubank.com.br/vida-financeira/post/pix-fora-do-ar-novamente-IZtsFKl2sGHAPn1",
+      "kind": "capture",
+      "path": "evidence/source-01.png",
+      "sha256": "9ee14fc0dc86cd1ef1dca1dda5075626b12b634a11df3a8cd4b4c9651cd23f3b"
+    },
+    "source-02": {
+      "source": "https://comunidade.nubank.com.br/duvidas/post/sem-acesso-a-minha-conta-pede-reconhecimento-facial-24sdVnkTTIWGmoj",
+      "kind": "capture",
+      "path": "evidence/source-02.png",
+      "sha256": "8ed349b9ffe244f51163a91e9a575f6dcd843eac90a569e4f1896eb26d89a190"
+    },
+    "source-03": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/notificacoes-push-do-app-nubank-esquece-do-valor-sugestoes-Dly2fsieCTAwemO",
+      "kind": "capture",
+      "path": "evidence/source-03.png",
+      "sha256": "49c5245076de86ec057b74c4aa0be4269465d65520c3a3afa781f7f4e5dcbaca"
+    },
+    "source-04": {
+      "source": "https://comunidade.nubank.com.br/discussoes/post/open-finance-cofrinhos-do-mercado-pago-nao-aparecem-no-nubank-zS0XMHfgMLVRdEG",
+      "kind": "capture",
+      "path": "evidence/source-04.png",
+      "sha256": "e0bfec5b66329c6bb3696eda7e26fc17db45e3b01115d0db620b98409ce5abf7"
+    },
+    "source-05": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/assistente-de-pagamentos-do-nubank-precisa-de-melhorias-CD5OrzX9jWPOsF6",
+      "kind": "capture",
+      "path": "evidence/source-05.png",
+      "sha256": "2329b58eac1e76fa8acaec8c22fcab112321970e0bcc8a6a6a99037e65995bb4"
+    },
+    "source-06": {
+      "source": "https://comunidade.nubank.com.br/sugestoes-ideias/post/modo-rua-precisa-de-um-pequeno-ajuste-ne-qMb3GZwa82zYnGv",
+      "kind": "capture",
+      "path": "evidence/source-06.png",
+      "sha256": "166c1d54395c2b258073f79d77406fe636739d0970161c9da7819f32c9d12142"
+    },
+    "source-07": {
+      "source": "https://comunidade.nubank.com.br/duvidas/post/extrato-ofx-com-erro-skG7GDXoha1Yh09",
+      "kind": "capture",
+      "path": "evidence/source-07.png",
+      "sha256": "20d7101e893ba12b96418c05ae9c5703ad57cb8c7d01167618a9128af1cb62fc"
+    },
+    "source-11": {
+      "source": "https://building.nu.com/how-we-reduced-critical-path-latency-by-76-at-nubank/",
+      "kind": "capture",
+      "path": "evidence/source-11.png",
+      "sha256": "bf56e65bbb456f71b91ee3188a5d11179dca9d7aa7f570d812bb4dc23501e084"
+    },
+    "source-12": {
+      "source": "https://building.nu.com/managing-cloud-limits/",
+      "kind": "capture",
+      "path": "evidence/source-12.png",
+      "sha256": "00180dc8da030398f1a13c9d55d94f547d640e5825547a68f09069595cbcf0dc"
+    },
+    "source-13": {
+      "source": "https://building.nu.com/how-nubank-distributes-infrastructure-ownership-to-operate-more-than-21-thousand-databases-with-a-lean-team/",
+      "kind": "capture",
+      "path": "evidence/source-13.png",
+      "sha256": "aa3818eace0c538fdd963a07f51141ca3bbe605d09f012954bc690020f6d5731"
+    },
+    "source-14": {
+      "source": "https://building.nu.com/server-driven-ui-framework-at-nubank/",
+      "kind": "capture",
+      "path": "evidence/source-14.png",
+      "sha256": "7c7324798552376afed232f9dc316deadf77d10ba18921bd654ebddbc7faa66c"
+    },
+    "source-15": {
+      "source": "https://building.nu.com/platform-engineering-observability-and-scaling-mobile-development/",
+      "kind": "capture",
+      "path": "evidence/source-15.png",
+      "sha256": "70d7b33fb8512b90b3b38ca6b104a0a0b8dbaa870cc221a428a26c0ae58aeba8"
+    },
+    "source-16": {
+      "source": "https://building.nu.com/presenting-precog-nubanks-real-time-event-ai/",
+      "kind": "capture",
+      "path": "evidence/source-16.png",
+      "sha256": "d543f4b026215382d0fb401b026c6186d84f9e195ac80e440b1458568570c972"
+    },
+    "source-17": {
+      "source": "https://building.nu.com/practices-to-scale-machine-learning-operations/",
+      "kind": "capture",
+      "path": "evidence/source-17.png",
+      "sha256": "56eef2f09d530575ab62be35b9fe9488e45d1282bcba05c608737cdb85b3db58"
+    },
+    "source-18": {
+      "source": "https://building.nu.com/dealing-with-train-serve-skew-in-real-time-ml-models-a-short-guide/",
+      "kind": "capture",
+      "path": "evidence/source-18.png",
+      "sha256": "676844381e2176d7f7c3afdb2316f46a75c11260fd2803b68d851f41274cdda6"
+    },
+    "source-19": {
+      "source": "https://building.nu.com/the-birth-of-the-dark-mode-a-journey-into-nubanks-app-evolution/",
+      "kind": "capture",
+      "path": "evidence/source-19.png",
+      "sha256": "d184d2d3f43efeeb3a7eed48b6f063fa907ffbee18fa348744c100e983e84c7b"
+    },
+    "source-20": {
+      "source": "https://building.nubank.com/bridging-the-gap-nubanks-commitment-in-serving-the-visually-impaired/",
+      "kind": "capture",
+      "path": "evidence/source-20.png",
+      "sha256": "52422dba7f7e4176667eb85e5e8d9c2de9cb43ef726703fa76cf0befe34a2763"
+    },
+    "source-08": {
+      "source": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
+      "kind": "capture",
+      "path": "evidence/source-08.png",
+      "sha256": "eecc30d18c0b5454ae63c183d66a89841802eadc54404f0ab77288a57ccb5d43"
+    },
+    "source-09": {
+      "source": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
+      "kind": "capture",
+      "path": "evidence/source-09.png",
+      "sha256": "eecc30d18c0b5454ae63c183d66a89841802eadc54404f0ab77288a57ccb5d43"
+    },
+    "source-10": {
+      "source": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
+      "kind": "capture",
+      "path": "evidence/source-10.png",
+      "sha256": "eecc30d18c0b5454ae63c183d66a89841802eadc54404f0ab77288a57ccb5d43"
+    },
+    "diagram-pt-arquiteturas-1-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-arquiteturas-1-0.svg",
+      "sha256": "0d4a2b1a298f9bd6b53125ca3fbc8559f5c92048d5910af3ce70897102beb551"
+    },
+    "diagram-pt-arquiteturas-2-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-arquiteturas-2-0.svg",
+      "sha256": "12d82e9d3c169cbedda906c499c97af798c5e692b9419f5f3af4cb2bb535e6e8"
+    },
+    "diagram-pt-arquiteturas-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-arquiteturas-3-0.svg",
+      "sha256": "c972197d2ca9c5124adece39818b5ff1e25ec92e6d6edc9668bc934e7deb9b3f"
+    },
+    "diagram-pt-arquiteturas-4-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-arquiteturas-4-0.svg",
+      "sha256": "0be5ad65a3b3bd7520a93719c9d775457cdf6408ec3aebe4af8fcdad10b4f6fe"
+    },
+    "diagram-pt-01-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-01-3-0.svg",
+      "sha256": "236829c7f11a7a2397400445c70e9db14580e5be2386eaa838b854783a2b91ba"
+    },
+    "diagram-pt-02-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-02-3-0.svg",
+      "sha256": "04d899e19dd1e771556dac8e9fcfc25b6ebd834e4fc9692595ef6e8e945da9da"
+    },
+    "diagram-pt-03-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-03-3-0.svg",
+      "sha256": "406cfdfd1a636aeb29dd835f5063265f4fe02c19c8c21adcdab04d1f59d7cb61"
+    },
+    "diagram-pt-04-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-04-3-0.svg",
+      "sha256": "4dadc703b4e581d68a60149c2ced6cbc676c383a99ceb43ce8acd4ab92eb2058"
+    },
+    "diagram-pt-05-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-05-3-0.svg",
+      "sha256": "6aeb345e99a8d7185a4af1bbd990b9e4c4f25ff0c1a135d55cd6542c6afa5494"
+    },
+    "diagram-pt-06-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-06-3-0.svg",
+      "sha256": "2b273711d2215b891b24df5f2544d6c1ad6372dd9e1d0e7dbae01b5eed614dce"
+    },
+    "diagram-pt-07-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-07-3-0.svg",
+      "sha256": "8a9bc4ce48b9b94b79a881773abe975a0e5b47f2294b7382dbfec6162c62f223"
+    },
+    "diagram-pt-08-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-08-3-0.svg",
+      "sha256": "2157124b1cc1b8e50d4353306602d8eed8b9aa0608376f02075ac5297190bfd7"
+    },
+    "diagram-pt-09-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-09-3-0.svg",
+      "sha256": "5c655aae8eecccbee5b559f8913b0136b9f833e30991ead5da3bda31603e3959"
+    },
+    "diagram-pt-10-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-10-3-0.svg",
+      "sha256": "dd3477e5bae3a70e09ed862ef1a8b85ecd9c1232ca913491ddfed3e41a19cf25"
+    },
+    "diagram-pt-11-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-11-3-0.svg",
+      "sha256": "cdf385d10e1672f7f5a6b66687a1feee59f2fb70e6c6d7b4d42d15aa41557d07"
+    },
+    "diagram-pt-12-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-12-3-0.svg",
+      "sha256": "832a4bc66aaeafb2b465783aa8ab1850f2234dd7db5b781400073d4a79812383"
+    },
+    "diagram-pt-13-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-13-3-0.svg",
+      "sha256": "d5df761b6b94c29b1ce289fc9760c669f08d7b116d04facedde7d0a63e0379d8"
+    },
+    "diagram-pt-14-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-14-3-0.svg",
+      "sha256": "51bf7915e55ab3a6d0d4fcabc313332f55bdb8afa3535c5ce416896f6a3f3727"
+    },
+    "diagram-pt-15-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-15-3-0.svg",
+      "sha256": "8ce18aa0dad78a15dfd6065c70f8626ee3f993ef7902de6d19fb73f081d00b2d"
+    },
+    "diagram-pt-16-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-16-3-0.svg",
+      "sha256": "449ee36f6a47cbfed7099d2675a86f33bd692e398eaa56941b4b54b29e1e3c6e"
+    },
+    "diagram-pt-17-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-17-3-0.svg",
+      "sha256": "80d4617bd9bf8c1183efe3682689e3732088893632ca970a75cacd06418d4ff8"
+    },
+    "diagram-pt-18-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-18-3-0.svg",
+      "sha256": "465cbfdcaff50c6656ed0655168d6339fd74d3b3193b90f2b887ae7aa31335c6"
+    },
+    "diagram-pt-19-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-19-3-0.svg",
+      "sha256": "cc6f49f3095f6d50582f664854429c6f5c017ea6ef6aa5c6416e239caaf9a93f"
+    },
+    "diagram-pt-20-3-0": {
+      "source": "Desenho autoral · proposta externa",
+      "kind": "diagram",
+      "path": "evidence/diagram-pt-20-3-0.svg",
+      "sha256": "1bf05e7ae1cb7a989e903f6b90604834772c636b7df9627937673e972b4a918b"
+    },
+    "diagram-en-arquiteturas-1-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-arquiteturas-1-0.svg",
+      "sha256": "d09bfe341bcd48b53f9643745d87c96fbbb5247ac53d40bc0d1aa97d984e9996"
+    },
+    "diagram-en-arquiteturas-2-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-arquiteturas-2-0.svg",
+      "sha256": "2318849cd0038c47658e64ee125d3544a10796b9a9ab074bf0b4782e138cfbcd"
+    },
+    "diagram-en-arquiteturas-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-arquiteturas-3-0.svg",
+      "sha256": "7104a23a1f11bf75530e5a0ea5ea62ed6d2d0b74bb343bf55568e220a2c483b4"
+    },
+    "diagram-en-arquiteturas-4-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-arquiteturas-4-0.svg",
+      "sha256": "4461cd285a93f03dc4fd19b7b7b2ccbbef0dc433a8d34381c4614006e6aebb39"
+    },
+    "diagram-en-01-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-01-3-0.svg",
+      "sha256": "f9730577cf3bb5ae899a392f53950ea93ea2c2145b36707b7021200b05037c25"
+    },
+    "diagram-en-02-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-02-3-0.svg",
+      "sha256": "77a86575b7f4b584393c894be26b5b8ea06acd082a573a3f85f84f0eca8a55ff"
+    },
+    "diagram-en-03-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-03-3-0.svg",
+      "sha256": "6ec8d1cc85f501e88241c1dddaf6d144952ecdd50fcb968cf56a075ebf3a7276"
+    },
+    "diagram-en-04-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-04-3-0.svg",
+      "sha256": "002ac7311206e59d6a8549c0466e906c955568ceeb12355fb4a5f226fb4c1a64"
+    },
+    "diagram-en-05-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-05-3-0.svg",
+      "sha256": "f872b2752cc0031be9bf7acf87e53000b5d393619d144af1e00504fef0f06375"
+    },
+    "diagram-en-06-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-06-3-0.svg",
+      "sha256": "67b2f707b5420f3794ae1d9941ee48d7e2e5077f872ccc4c335535d088f12704"
+    },
+    "diagram-en-07-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-07-3-0.svg",
+      "sha256": "04c1c6b667371bfdd1a9e0c877b4352aab9b52b22e1a6f3a709d4f59327a10a2"
+    },
+    "diagram-en-08-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-08-3-0.svg",
+      "sha256": "e5aa4f58eccb048a32f68058dfe98af429306596f76ea11e30f5ff1adef33300"
+    },
+    "diagram-en-09-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-09-3-0.svg",
+      "sha256": "e9e69a7b828fd4d1cece78e0b92eafe8b300cb19a19870074b4b439f30d1bc4f"
+    },
+    "diagram-en-10-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-10-3-0.svg",
+      "sha256": "cc8bf1c1c341241ca8ae0b7972aefca21026ed9e7ddbccadeabdc56f552735be"
+    },
+    "diagram-en-11-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-11-3-0.svg",
+      "sha256": "86011be622f3a724fd0a4ff9c33c18bb812a72bc9950eb819427cc401cd7dd06"
+    },
+    "diagram-en-12-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-12-3-0.svg",
+      "sha256": "5fab0520338606a5c7b71e187811974ee2b657e1b0e8801a51952e85dcb74150"
+    },
+    "diagram-en-13-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-13-3-0.svg",
+      "sha256": "648a59e40d459c06251d5cc185430f9bd5f38cc46eedd9e09e6bb1b88c6a272e"
+    },
+    "diagram-en-14-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-14-3-0.svg",
+      "sha256": "59c439e556102f7c04d84da171c193b3422890c54c949a3ff8d8cbf243a2eea9"
+    },
+    "diagram-en-15-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-15-3-0.svg",
+      "sha256": "e4f0b1c58572aa67d7557739a31e797f9c07aa6656439c09224bcefb5c2f1cc9"
+    },
+    "diagram-en-16-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-16-3-0.svg",
+      "sha256": "f6a31fb7928001dfbc3dad8b7e17c616403fd355155c282782a6b25f3a7d9e16"
+    },
+    "diagram-en-17-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-17-3-0.svg",
+      "sha256": "3f3133d0621a96457db984ef43a57f02fcc398cc6318e7ad0968480b38001d92"
+    },
+    "diagram-en-18-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-18-3-0.svg",
+      "sha256": "2bc31813ed593d2bb63ff51802e86193bfabae0729869a241a37e0a5e3752e92"
+    },
+    "diagram-en-19-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-19-3-0.svg",
+      "sha256": "f83889fbb88f6808e0f97206fb22acad2d1f7e61e7e3824c22c17e5bbd658b43"
+    },
+    "diagram-en-20-3-0": {
+      "source": "Original drawing · external proposal",
+      "kind": "diagram",
+      "path": "evidence/diagram-en-20-3-0.svg",
+      "sha256": "cd7e051e2e425720fd9e6ff0cbeea75150c33e55b474d6f74ae3f95183ec7cc1"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "pass": true,
+  "editions": {
+    "pt": {
+      "pages": 320,
+      "empty_pages": [],
+      "broken_glyph_pages": [],
+      "links": 1765,
+      "content_unchanged": true,
+      "stats": {
+        "cases": 20,
+        "diagrams": 24,
+        "code_blocks": 86,
+        "tests": 216
+      },
+      "sha256": "31cd7c4283966367e4b01f64329b69e52c77b3e90a83c772e3d62b4a8496c6ba"
+    },
+    "en": {
+      "pages": 320,
+      "empty_pages": [],
+      "broken_glyph_pages": [],
+      "links": 1765,
+      "content_unchanged": true,
+      "stats": {
+        "cases": 20,
+        "diagrams": 24,
+        "code_blocks": 86,
+        "tests": 216
+      },
+      "sha256": "0a271e753b618c3557b3d4565c3da1591c4803484fd587847639585db1decf24"
+    }
+  }
+}

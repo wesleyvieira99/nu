@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-23T22:08:53.437576+00:00",
+  "scope": {
+    "languages": [
+      "pt",
+      "en"
+    ],
+    "render_dpi": 120,
+    "all_diagram_pages_per_language": [
+      35,
+      36,
+      37,
+      38,
+      41,
+      54,
+      67,
+      80,
+      93,
+      106,
+      119,
+      132,
+      145,
+      158,
+      171,
+      184,
+      197,
+      210,
+      223,
+      236,
+      249,
+      262,
+      275,
+      288
+    ],
+    "diagrams_visually_reviewed": 48,
+    "non_diagram_samples_per_language": [
+      1,
+      2,
+      7,
+      39,
+      104,
+      320
+    ],
+    "total_rendered_pages": 60,
+    "structural_navigation_pages_checked": 640
+  },
+  "issues": [],
+  "visual_checks": {
+    "diagram_nodes_and_labels": "All 24 compositions reviewed in both languages. Node labels and explanations remain within their shapes, with no cut text or missing glyphs seen.",
+    "arrows_and_legend": "Arrows, line direction, route badges or node-to-node legend keys are visible. No connection was obscured by a text label or by the rounded clipping boundary.",
+    "variety": "Distinct arrangements, groupings and object shapes are retained across the 24 designs; Portuguese and English preserve corresponding structure.",
+    "rounded_images": "Photographs and source images show subtle rounded corners. Diagram outer bounds retain all visible content. Official logo silhouettes are unchanged.",
+    "page_layout": "Sampled covers, contents, profile, evidence and credits retain separated body, sources and footer navigation. Full-page architecture samples preserve caption and prose spacing.",
+    "typography": "PDF font inspection found diagram descriptive text at approximately 7.68–8.04 pt and node titles at approximately 9.47–9.92 pt; small numeric reference badges and category labels use smaller secondary type. Vector text remains selectable and scalable.",
+    "navigation": "The 5-control footer remains visible in all sampled layouts, including dark covers; native destinations, all bookmarks and image clipping operators passed the full validator again."
+  },
+  "limitations": [
+    "Visual review focuses on the 48 redesigned diagrams and 12 non-diagram samples; the complete 640-page navigation and clip validation is automated.",
+    "Source screenshots retain their original resolution and language; no screenshot content was regenerated or enhanced."
+  ],
+  "files": {
+    "pt": {
+      "name": "Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "31cd7c4283966367e4b01f64329b69e52c77b3e90a83c772e3d62b4a8496c6ba",
+      "bytes": 15858899,
+      "pages": 320,
+      "menu_links": 1600,
+      "all_internal_links": 1629,
+      "external_links": 136,
+      "outline_roots": 27,
+      "chapter_subtopics": 317,
+      "rounded_images": 57,
+      "min_content_scale": 0.92,
+      "navigation_report": "pdf-navigation-validation-pt.json"
+    },
+    "en": {
+      "name": "Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "0a271e753b618c3557b3d4565c3da1591c4803484fd587847639585db1decf24",
+      "bytes": 15828014,
+      "pages": 320,
+      "menu_links": 1600,
+      "all_internal_links": 1629,
+      "external_links": 136,
+      "outline_roots": 27,
+      "chapter_subtopics": 317,
+      "rounded_images": 57,
+      "min_content_scale": 0.92,
+      "navigation_report": "pdf-navigation-validation-en.json"
+    }
+  }
+}

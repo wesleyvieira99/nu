@@ -1,0 +1,23 @@
+{
+  "contract": "portfolio.ui.v1",
+  "revision": "demo-invoice-r17",
+  "protocol": 1,
+  "required_components": ["text", "action"],
+  "purpose": "invoice-navigation",
+  "nodes": [
+    {
+      "type": "text",
+      "text": "Consulte sua fatura"
+    },
+    {
+      "type": "action",
+      "text": "Ver fatura",
+      "accessible_name": "Abrir detalhes da fatura",
+      "action": "view-invoice"
+    }
+  ],
+  "rollout": {
+    "experiment": "demo-navigation-v1",
+    "maximum_percent": 5
+  }
+}

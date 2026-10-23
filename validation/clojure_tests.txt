@@ -1,0 +1,5 @@
+
+Testing decision-core
+
+Ran 11 tests containing 22 assertions.
+0 failures, 0 errors.

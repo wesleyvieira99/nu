@@ -1,0 +1,518 @@
+[
+  {
+    "file": "page_018_1.clj",
+    "page": 18,
+    "language": "clojure",
+    "caption": "Trecho do laboratório decision_core.clj; execução local verificada. Modelo em memória, sem rede."
+  },
+  {
+    "file": "page_019_1.clj",
+    "page": 19,
+    "language": "clojure",
+    "caption": "Trecho do laboratório local; valid-command? está definido no arquivo completo. Teste concorrente executado."
+  },
+  {
+    "file": "page_020_1.clj",
+    "page": 20,
+    "language": "clojure",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_021_1.json",
+    "page": 21,
+    "language": "json",
+    "caption": "Contrato JSON proposto, com identificadores sintéticos; não representa um evento interno do Nubank."
+  },
+  {
+    "file": "page_022_1.py",
+    "page": 22,
+    "language": "python",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_023_1.yaml",
+    "page": 23,
+    "language": "yaml",
+    "caption": "Manifesto de referência, deliberadamente sem imagem executável. Não aplicado a cluster."
+  },
+  {
+    "file": "page_024_1.dart",
+    "page": 24,
+    "language": "dart",
+    "caption": "Fragmento Flutter/Dart de referência; não compilado nesta edição."
+  },
+  {
+    "file": "page_025_1.dart",
+    "page": 25,
+    "language": "dart",
+    "caption": "Exemplo didático em Dart 3; não compilado nesta edição."
+  },
+  {
+    "file": "page_026_1.promql",
+    "page": 26,
+    "language": "promql",
+    "caption": "Consultas PromQL propostas; não executadas em servidor Prometheus."
+  },
+  {
+    "file": "page_027_1.py",
+    "page": 27,
+    "language": "python",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_028_1.java",
+    "page": 28,
+    "language": "java",
+    "caption": "Fragmento Java de referência; não compilado como programa nesta edição."
+  },
+  {
+    "file": "page_029_1.py",
+    "page": 29,
+    "language": "python",
+    "caption": "Exemplo didático separado dos vinte laboratórios executados; limiar sintético."
+  },
+  {
+    "file": "page_030_1.sql",
+    "page": 30,
+    "language": "sql",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_031_1.py",
+    "page": 31,
+    "language": "python",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_032_1.tf",
+    "page": 32,
+    "language": "hcl",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_033_1.ts",
+    "page": 33,
+    "language": "typescript",
+    "caption": "Exemplo autoral de referência; não executado contra infraestrutura real."
+  },
+  {
+    "file": "page_034_1.json",
+    "page": 34,
+    "language": "json",
+    "caption": "Especificação conceitual de painel; não é o schema de importação do Grafana."
+  },
+  {
+    "file": "page_042_0.py",
+    "page": 42,
+    "language": "python",
+    "caption": "Recorte do método pay; preâmbulo e gravação omitidos. Arquivo completo executado e verificado."
+  },
+  {
+    "file": "page_043_0.clj",
+    "page": 43,
+    "language": "clojure",
+    "caption": "Função didática proposta; este trecho Clojure não foi executado."
+  },
+  {
+    "file": "page_045_0.py",
+    "page": 45,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_046_0.py",
+    "page": 46,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_055_0.py",
+    "page": 55,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_056_0.clj",
+    "page": 56,
+    "language": "clojure",
+    "caption": "Esboço Datomic/Clojure, atributos propostos; não executado."
+  },
+  {
+    "file": "page_058_0.py",
+    "page": 58,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_059_0.py",
+    "page": 59,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_068_0.py",
+    "page": 68,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_069_0.clj",
+    "page": 69,
+    "language": "clojure",
+    "caption": "Catálogo e função propostos; Clojure não executado."
+  },
+  {
+    "file": "page_071_0.py",
+    "page": 71,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_072_0.py",
+    "page": 72,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_081_0.py",
+    "page": 81,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_082_0.clj",
+    "page": 82,
+    "language": "clojure",
+    "caption": "Contrato e funções didáticas propostas; Clojure não executado."
+  },
+  {
+    "file": "page_084_0.py",
+    "page": 84,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_085_0.py",
+    "page": 85,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_094_0.py",
+    "page": 94,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_095_0.dart",
+    "page": 95,
+    "language": "dart",
+    "caption": "Modelo de apresentação proposto; Dart/Flutter não executados."
+  },
+  {
+    "file": "page_097_0.py",
+    "page": 97,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_098_0.py",
+    "page": 98,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_107_0.py",
+    "page": 107,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_108_0.dart",
+    "page": 108,
+    "language": "dart",
+    "caption": "Mapeamento de mensagens proposto; Dart/Flutter não executados."
+  },
+  {
+    "file": "page_110_0.py",
+    "page": 110,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_111_0.py",
+    "page": 111,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_120_0.py",
+    "page": 120,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_121_0.clj",
+    "page": 121,
+    "language": "clojure",
+    "caption": "Serializador proposto; Clojure não executado."
+  },
+  {
+    "file": "page_123_0.py",
+    "page": 123,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_124_0.py",
+    "page": 124,
+    "language": "python",
+    "caption": "Trecho do laboratório sintético; execução verificada no arquivo completo."
+  },
+  {
+    "file": "page_133_0.py",
+    "page": 133,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_08.py. Python executado localmente; dados e contratos sintéticos."
+  },
+  {
+    "file": "page_134_0.clj",
+    "page": 134,
+    "language": "clojure",
+    "caption": "Trecho Clojure didático não executado; função e contrato autorais propostos."
+  },
+  {
+    "file": "page_135_0.json",
+    "page": 135,
+    "language": "json",
+    "caption": "Contrato JSON autoral, sintético e não integrado; campos adicionais não são implementados pelo laboratório."
+  },
+  {
+    "file": "page_137_0.py",
+    "page": 137,
+    "language": "python",
+    "caption": "Fragmento de testes de labs/case_08.py. Resultado: 8 testes passaram; ver results_08.txt."
+  },
+  {
+    "file": "page_146_0.py",
+    "page": 146,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_09.py. Modelo Python local executado; não é implementação do app."
+  },
+  {
+    "file": "page_147_0.dart",
+    "page": 147,
+    "language": "dart",
+    "caption": "Trecho Flutter/Dart didático, não executado. Componente autoral, sem dependência de NuDS interno."
+  },
+  {
+    "file": "page_148_0.json",
+    "page": 148,
+    "language": "json",
+    "caption": "Contrato JSON proposto com dados sintéticos; apenas o subconjunto Invoice é executado no laboratório."
+  },
+  {
+    "file": "page_150_0.py",
+    "page": 150,
+    "language": "python",
+    "caption": "Fragmento de labs/case_09.py. Resultado local: 8 testes passaram; ver results_09.txt."
+  },
+  {
+    "file": "page_159_0.py",
+    "page": 159,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_10.py. HMAC local com chave de teste; não é assinatura legal ou infraestrutura real."
+  },
+  {
+    "file": "page_160_0.clj",
+    "page": 160,
+    "language": "clojure",
+    "caption": "Trecho Clojure ilustrativo não executado; nomes e contratos propostos pelo autor."
+  },
+  {
+    "file": "page_161_0.sql",
+    "page": 161,
+    "language": "sql",
+    "caption": "SQL de referência proposto. Não executado; laboratório usa objetos Python imutáveis."
+  },
+  {
+    "file": "page_163_0.py",
+    "page": 163,
+    "language": "python",
+    "caption": "Fragmento de labs/case_10.py. Resultado: 7 testes passaram; ver results_10.txt."
+  },
+  {
+    "file": "page_172_0.py",
+    "page": 172,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_11.py. Python executado; projeção sintética sem autorização financeira."
+  },
+  {
+    "file": "page_173_0.clj",
+    "page": 173,
+    "language": "clojure",
+    "caption": "Trecho Clojure proposto e não executado; canonical-reader é uma dependência autoral abstrata."
+  },
+  {
+    "file": "page_174_0.json",
+    "page": 174,
+    "language": "json",
+    "caption": "Envelope e nome de tópico autorais propostos. Não executado em Kafka; laboratório usa chamadas locais."
+  },
+  {
+    "file": "page_176_0.py",
+    "page": 176,
+    "language": "python",
+    "caption": "Fragmento de labs/case_11.py. Resultado: 7 testes passaram; ver results_11.txt. Sem benchmark."
+  },
+  {
+    "file": "page_185_0.py",
+    "page": 185,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_12.py. Reserva sintética em memória; não provisiona AWS ou Kubernetes."
+  },
+  {
+    "file": "page_186_0.yaml",
+    "page": 186,
+    "language": "yaml",
+    "caption": "YAML de referência não executado. Métricas e nomes são propostos, não telemetria interna do Nubank."
+  },
+  {
+    "file": "page_187_0.json",
+    "page": 187,
+    "language": "json",
+    "caption": "Contrato e números inteiramente sintéticos; aritmética linear coberta pelo teste de forecast."
+  },
+  {
+    "file": "page_189_0.py",
+    "page": 189,
+    "language": "python",
+    "caption": "Fragmento de labs/case_12.py. Resultado: 9 testes passaram; ver results_12.txt."
+  },
+  {
+    "file": "page_198_0.py",
+    "page": 198,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_13.py. Arquivamento apenas lógico em memória; nenhum banco real é alterado."
+  },
+  {
+    "file": "page_199_0.clj",
+    "page": 199,
+    "language": "clojure",
+    "caption": "Trecho Clojure/Datomic de referência não executado; schema e função propostos. :db/cas é operação documentada."
+  },
+  {
+    "file": "page_200_0.json",
+    "page": 200,
+    "language": "json",
+    "caption": "Contrato proposto de governança; não representa política de retenção do Nubank nem autorização de descarte."
+  },
+  {
+    "file": "page_202_0.py",
+    "page": 202,
+    "language": "python",
+    "caption": "Fragmento de labs/case_13.py. Resultado: 8 testes passaram; ver results_13.txt."
+  },
+  {
+    "file": "page_211_0.py",
+    "page": 211,
+    "language": "python",
+    "caption": "Fragmento literal de labs/case_14.py. Modelo Python executado; não implementa BDC/NuDS reais."
+  },
+  {
+    "file": "page_212_0.dart",
+    "page": 212,
+    "language": "dart",
+    "caption": "Flutter/Dart autoral e não executado. dispatch e tipos de nó são contratos propostos, não APIs do Nubank."
+  },
+  {
+    "file": "page_213_0.json",
+    "page": 213,
+    "language": "json",
+    "caption": "Manifesto e nomes de ações autorais propostos; dados sintéticos. Não é schema oficial do BDC."
+  },
+  {
+    "file": "page_215_0.py",
+    "page": 215,
+    "language": "python",
+    "caption": "Fragmento de labs/case_14.py. Resultado: 11 testes passaram; ver results_14.txt."
+  },
+  {
+    "file": "page_224_0.py",
+    "page": 224,
+    "language": "python",
+    "caption": "Trecho de case_15.py; execução Python verificada. Regra ilustrativa, sem inferência estatística. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_225_0.dart",
+    "page": 225,
+    "language": "dart",
+    "caption": "Dart ilustrativo, não executado. Interfaces e nomes propostos; não são SDK interno do Nubank."
+  },
+  {
+    "file": "page_237_0.py",
+    "page": 237,
+    "language": "python",
+    "caption": "Trecho executado de case_16.py. Ranking por pesos inventados; não implementa Precog. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_238_0.clj",
+    "page": 238,
+    "language": "clojure",
+    "caption": "Clojure ilustrativo não executado; namespaces, filas e política são propostas externas."
+  },
+  {
+    "file": "page_250_0.py",
+    "page": 250,
+    "language": "python",
+    "caption": "Trecho executado de case_17.py. Modelo logístico de brinquedo, fixo, não treinado. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_251_0.py",
+    "page": 251,
+    "language": "python",
+    "caption": "Função e cenário executados em case_17.py; custos sintéticos, sem projeção do Nubank. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_263_0.py",
+    "page": 263,
+    "language": "python",
+    "caption": "Trecho executado de case_18.py; eventos e relógios sintéticos. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_264_0.py",
+    "page": 264,
+    "language": "python",
+    "caption": "Funções e exemplos executados em case_18.py. Hash identifica parâmetros, não certifica implementação. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_276_0.py",
+    "page": 276,
+    "language": "python",
+    "caption": "Trecho de case_19.py executado com Python; pares sintéticos, sem capturas do aplicativo. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_277_0.dart",
+    "page": 277,
+    "language": "dart",
+    "caption": "Componente Flutter proposto; não é código do Nubank e não foi executado neste ambiente."
+  },
+  {
+    "file": "page_289_0.py",
+    "page": 289,
+    "language": "python",
+    "caption": "Trecho de case_20.py executado localmente; modelo didático, não implementação de autenticação. Tipos, imports e validadores estão no arquivo completo."
+  },
+  {
+    "file": "page_290_0.dart",
+    "page": 290,
+    "language": "dart",
+    "caption": "Flutter/Dart ilustrativo e independente; verificar com TalkBack, VoiceOver e usuários antes de qualquer uso."
+  },
+  {
+    "file": "page_311_1.sh",
+    "page": 311,
+    "language": "bash",
+    "caption": "Comandos locais; não acessam serviços bancários. Consulte LEIA-ME.html para versões e escopo."
+  }
+]

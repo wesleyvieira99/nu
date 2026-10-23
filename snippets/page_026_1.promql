@@ -1,0 +1,17 @@
+# Proporção de jornadas com resultado confirmado em até 2s.
+# Métricas e rótulos propostos; janela ilustrativa.
+sum(rate(journey_confirmation_seconds_bucket{
+  journey="payment", le="2"
+}[30m]))
+/
+sum(rate(journey_confirmation_seconds_count{
+  journey="payment"
+}[30m]))
+
+# Percentil de cauda: analisar por versão do app/serviço.
+histogram_quantile(
+  0.99,
+  sum by (le, release) (
+    rate(journey_confirmation_seconds_bucket[5m])
+  )
+)

@@ -1,0 +1,6 @@
+{
+  "Space Grotesk": "https://github.com/google/fonts/tree/main/ofl/spacegrotesk",
+  "Inter": "https://github.com/google/fonts/tree/main/ofl/inter",
+  "JetBrains Mono": "https://github.com/google/fonts/tree/main/ofl/jetbrainsmono",
+  "note": "Static instances and WOFF2 files derived from the official variable fonts; OFL licenses included."
+}

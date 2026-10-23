@@ -1,0 +1,4618 @@
+{
+  "started": "2026-10-23T22:08:24.875Z",
+  "scope": "Targeted re-test after reader usability rebuild",
+  "pages": [
+    1,
+    2,
+    3,
+    7,
+    39,
+    41,
+    42,
+    54,
+    65,
+    91,
+    104,
+    132,
+    171,
+    210,
+    249,
+    262,
+    275,
+    288,
+    320
+  ],
+  "widths": [
+    390,
+    1440
+  ],
+  "variants": [
+    {
+      "lang": "pt",
+      "input": {
+        "file": "work/v4/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 10531714,
+        "mtime": "2026-10-23T22:08:06.199Z",
+        "sha256": "7c2e99ed1cdc8b7c6d9dc432813cfe7daeecc6c1711a277b0620d7dd609b549a"
+      },
+      "viewports": [
+        {
+          "lang": "pt",
+          "width": 390,
+          "height": 844,
+          "pages": [
+            {
+              "page": 1,
+              "id": "cover",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1510,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                },
+                {
+                  "asset": "nu-office",
+                  "width": 1600,
+                  "height": 1065,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 2,
+              "id": "toc-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2113,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 3,
+              "id": "toc-2",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1813,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 7,
+              "id": "abertura-4",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1653,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 39,
+              "id": "01-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2185,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-01",
+                  "width": 271,
+                  "height": 30,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 41,
+              "id": "01-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2022,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-01-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 42,
+              "id": "01-4",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1985,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 54,
+              "id": "02-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1761,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-02-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 65,
+              "id": "03-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2360,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-03",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-03-1",
+                  "width": 344,
+                  "height": 110,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 91,
+              "id": "05-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2376,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-05",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-05-1",
+                  "width": 689,
+                  "height": 204,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 104,
+              "id": "06-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2530,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-06",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-06-1",
+                  "width": 349,
+                  "height": 499,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 132,
+              "id": "08-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1658,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-08-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1701,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-11-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 210,
+              "id": "14-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1698,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-14-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 249,
+              "id": "17-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1579,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-17-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 262,
+              "id": "18-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1579,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-18-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 275,
+              "id": "19-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1736,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-19-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 288,
+              "id": "20-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1705,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-20-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 320,
+              "id": "fontes-7",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1919,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            }
+          ],
+          "controls": [
+            {
+              "name": "scrollable reading viewport and dock separation at top and bottom",
+              "status": "PASS",
+              "detail": {
+                "pages": 19,
+                "minGap": 11,
+                "allScrollResets": true
+              }
+            },
+            {
+              "name": "code wrapping, mobile font, hint, and asynchronous copy",
+              "status": "PASS",
+              "detail": {
+                "original": {
+                  "font": "12px",
+                  "whiteSpace": "pre",
+                  "width": 338,
+                  "scrollWidth": 629
+                },
+                "wrapped": {
+                  "whiteSpace": "pre-wrap",
+                  "width": 338,
+                  "scrollWidth": 338
+                },
+                "copied": "Copiado"
+              }
+            },
+            {
+              "name": "zoom initially fits entire image",
+              "status": "PASS",
+              "detail": {
+                "width": 322,
+                "height": 200,
+                "scrollWidth": 322,
+                "scrollHeight": 200,
+                "imageWidth": 321.96875,
+                "imageHeight": 199.625,
+                "detail": false
+              }
+            },
+            {
+              "name": "zoom detail enlarges and allows internal panning, then fits again",
+              "status": "PASS",
+              "detail": {
+                "width": 322,
+                "height": 589,
+                "scrollWidth": 950,
+                "scrollHeight": 589,
+                "left": 100,
+                "top": 0,
+                "imageWidth": 950
+              }
+            },
+            {
+              "name": "menu settings theme and font work on this viewport",
+              "status": "PASS",
+              "detail": {
+                "themeToggle": true,
+                "fontBefore": "17px",
+                "fontAfter": "18px"
+              }
+            },
+            {
+              "name": "menu focus mode has a visible exit control",
+              "status": "PASS",
+              "detail": [
+                {
+                  "selector": "#focus",
+                  "visible": true,
+                  "rect": {
+                    "top": 795,
+                    "bottom": 815,
+                    "width": 34,
+                    "height": 20
+                  }
+                },
+                {
+                  "selector": "#menu",
+                  "visible": false,
+                  "rect": {
+                    "top": -50.5,
+                    "bottom": -14.5,
+                    "width": 20,
+                    "height": 36
+                  }
+                },
+                {
+                  "selector": "#mobile-focus",
+                  "visible": false,
+                  "rect": {
+                    "top": 0,
+                    "bottom": 0,
+                    "width": 0,
+                    "height": 0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "language round trip preserves final page and hash",
+              "status": "PASS",
+              "detail": {
+                "hash": "#fontes-7",
+                "page": 320,
+                "nextDisabled": true
+              }
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": [],
+          "zoomFit": {
+            "width": 322,
+            "height": 200,
+            "scrollWidth": 322,
+            "scrollHeight": 200,
+            "imageWidth": 321.96875,
+            "imageHeight": 199.625,
+            "detail": false
+          },
+          "focusExit": [
+            {
+              "selector": "#focus",
+              "visible": true,
+              "rect": {
+                "top": 795,
+                "bottom": 815,
+                "width": 34,
+                "height": 20
+              }
+            },
+            {
+              "selector": "#menu",
+              "visible": false,
+              "rect": {
+                "top": -50.5,
+                "bottom": -14.5,
+                "width": 20,
+                "height": 36
+              }
+            },
+            {
+              "selector": "#mobile-focus",
+              "visible": false,
+              "rect": {
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            }
+          ],
+          "status": "PASS"
+        },
+        {
+          "lang": "pt",
+          "width": 1440,
+          "height": 1100,
+          "pages": [
+            {
+              "page": 1,
+              "id": "cover",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1109,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                },
+                {
+                  "asset": "nu-office",
+                  "width": 1600,
+                  "height": 1065,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 2,
+              "id": "toc-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1079,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 3,
+              "id": "toc-2",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 946,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 7,
+              "id": "abertura-4",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1396,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 39,
+              "id": "01-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1226,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-01",
+                  "width": 271,
+                  "height": 30,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 41,
+              "id": "01-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1797,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-01-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 42,
+              "id": "01-4",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1540,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 54,
+              "id": "02-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1715,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-02-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 65,
+              "id": "03-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1257,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-03",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-03-1",
+                  "width": 344,
+                  "height": 110,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 91,
+              "id": "05-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1257,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-05",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-05-1",
+                  "width": 689,
+                  "height": 204,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 104,
+              "id": "06-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1278,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-06",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-06-1",
+                  "width": 349,
+                  "height": 499,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 132,
+              "id": "08-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1578,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-08-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1632,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-11-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 210,
+              "id": "14-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1661,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-14-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 249,
+              "id": "17-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1750,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-17-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 262,
+              "id": "18-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1696,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-18-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 275,
+              "id": "19-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1809,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-19-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 288,
+              "id": "20-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1809,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-20-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 320,
+              "id": "fontes-7",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1268,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            }
+          ],
+          "controls": [
+            {
+              "name": "scrollable reading viewport and dock separation at top and bottom",
+              "status": "PASS",
+              "detail": {
+                "pages": 19,
+                "minGap": 8,
+                "allScrollResets": true
+              }
+            },
+            {
+              "name": "code wrapping, mobile font, hint, and asynchronous copy",
+              "status": "PASS",
+              "detail": {
+                "original": {
+                  "font": "13px",
+                  "whiteSpace": "pre",
+                  "width": 1266,
+                  "scrollWidth": 1266
+                },
+                "wrapped": {
+                  "whiteSpace": "pre-wrap",
+                  "width": 1266,
+                  "scrollWidth": 1266
+                },
+                "copied": "Copiado"
+              }
+            },
+            {
+              "name": "zoom initially fits entire image",
+              "status": "PASS",
+              "detail": {
+                "width": 1204,
+                "height": 620,
+                "scrollWidth": 1204,
+                "scrollHeight": 620,
+                "imageWidth": 1000,
+                "imageHeight": 620,
+                "detail": false
+              }
+            },
+            {
+              "name": "zoom detail enlarges and allows internal panning, then fits again",
+              "status": "PASS",
+              "detail": {
+                "width": 1204,
+                "height": 858,
+                "scrollWidth": 1686,
+                "scrollHeight": 1045,
+                "left": 100,
+                "top": 100,
+                "imageWidth": 1685.59375
+              }
+            },
+            {
+              "name": "menu settings theme and font work on this viewport",
+              "status": "PASS",
+              "detail": {
+                "themeToggle": true,
+                "fontBefore": "17px",
+                "fontAfter": "18px"
+              }
+            },
+            {
+              "name": "menu focus mode has a visible exit control",
+              "status": "PASS",
+              "detail": [
+                {
+                  "selector": "#focus",
+                  "visible": true,
+                  "rect": {
+                    "top": 1044.5,
+                    "bottom": 1064.5,
+                    "width": 34,
+                    "height": 20
+                  }
+                },
+                {
+                  "selector": "#menu",
+                  "visible": false,
+                  "rect": {
+                    "top": -54.5,
+                    "bottom": -18.5,
+                    "width": 62.75,
+                    "height": 36
+                  }
+                },
+                {
+                  "selector": "#mobile-focus",
+                  "visible": false,
+                  "rect": {
+                    "top": 0,
+                    "bottom": 0,
+                    "width": 0,
+                    "height": 0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "language round trip preserves final page and hash",
+              "status": "PASS",
+              "detail": {
+                "hash": "#fontes-7",
+                "page": 320,
+                "nextDisabled": true
+              }
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": [],
+          "zoomFit": {
+            "width": 1204,
+            "height": 620,
+            "scrollWidth": 1204,
+            "scrollHeight": 620,
+            "imageWidth": 1000,
+            "imageHeight": 620,
+            "detail": false
+          },
+          "focusExit": [
+            {
+              "selector": "#focus",
+              "visible": true,
+              "rect": {
+                "top": 1044.5,
+                "bottom": 1064.5,
+                "width": 34,
+                "height": 20
+              }
+            },
+            {
+              "selector": "#menu",
+              "visible": false,
+              "rect": {
+                "top": -54.5,
+                "bottom": -18.5,
+                "width": 62.75,
+                "height": 36
+              }
+            },
+            {
+              "selector": "#mobile-focus",
+              "visible": false,
+              "rect": {
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            }
+          ],
+          "status": "PASS"
+        }
+      ],
+      "errors": [],
+      "finalInput": {
+        "file": "work/v4/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 10531714,
+        "mtime": "2026-10-23T22:08:06.199Z",
+        "sha256": "7c2e99ed1cdc8b7c6d9dc432813cfe7daeecc6c1711a277b0620d7dd609b549a"
+      },
+      "inputChangedDuringRun": false
+    },
+    {
+      "lang": "en",
+      "input": {
+        "file": "work/v4/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 10502533,
+        "mtime": "2026-10-23T22:08:06.401Z",
+        "sha256": "76ebd68fc299345c51664ad0ca81088731fc70971d26b9b6a1bc3db815d36d35"
+      },
+      "viewports": [
+        {
+          "lang": "en",
+          "width": 390,
+          "height": 844,
+          "pages": [
+            {
+              "page": 1,
+              "id": "cover",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1510,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                },
+                {
+                  "asset": "nu-office",
+                  "width": 1600,
+                  "height": 1065,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 2,
+              "id": "toc-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2177,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 3,
+              "id": "toc-2",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1857,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 7,
+              "id": "abertura-4",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1622,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 39,
+              "id": "01-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2121,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-01",
+                  "width": 271,
+                  "height": 30,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 41,
+              "id": "01-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1920,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-01-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 42,
+              "id": "01-4",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1948,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 54,
+              "id": "02-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1698,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-02-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 65,
+              "id": "03-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2377,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-03",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-03-1",
+                  "width": 344,
+                  "height": 110,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 91,
+              "id": "05-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2322,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-05",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-05-1",
+                  "width": 689,
+                  "height": 204,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 104,
+              "id": "06-1",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 2453,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-06",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-06-1",
+                  "width": 349,
+                  "height": 499,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 132,
+              "id": "08-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1658,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-08-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1607,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-11-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 210,
+              "id": "14-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1627,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-14-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 249,
+              "id": "17-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1516,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-17-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 262,
+              "id": "18-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1516,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-18-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 275,
+              "id": "19-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1705,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-19-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 288,
+              "id": "20-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1674,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-20-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 320,
+              "id": "fontes-7",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 64,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1802,
+              "clientHeight": 704,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            }
+          ],
+          "controls": [
+            {
+              "name": "scrollable reading viewport and dock separation at top and bottom",
+              "status": "PASS",
+              "detail": {
+                "pages": 19,
+                "minGap": 11,
+                "allScrollResets": true
+              }
+            },
+            {
+              "name": "code wrapping, mobile font, hint, and asynchronous copy",
+              "status": "PASS",
+              "detail": {
+                "original": {
+                  "font": "12px",
+                  "whiteSpace": "pre",
+                  "width": 338,
+                  "scrollWidth": 629
+                },
+                "wrapped": {
+                  "whiteSpace": "pre-wrap",
+                  "width": 338,
+                  "scrollWidth": 338
+                },
+                "copied": "Copied"
+              }
+            },
+            {
+              "name": "zoom initially fits entire image",
+              "status": "PASS",
+              "detail": {
+                "width": 322,
+                "height": 200,
+                "scrollWidth": 322,
+                "scrollHeight": 200,
+                "imageWidth": 321.96875,
+                "imageHeight": 199.625,
+                "detail": false
+              }
+            },
+            {
+              "name": "zoom detail enlarges and allows internal panning, then fits again",
+              "status": "PASS",
+              "detail": {
+                "width": 322,
+                "height": 589,
+                "scrollWidth": 950,
+                "scrollHeight": 589,
+                "left": 100,
+                "top": 0,
+                "imageWidth": 950
+              }
+            },
+            {
+              "name": "menu settings theme and font work on this viewport",
+              "status": "PASS",
+              "detail": {
+                "themeToggle": true,
+                "fontBefore": "17px",
+                "fontAfter": "18px"
+              }
+            },
+            {
+              "name": "menu focus mode has a visible exit control",
+              "status": "PASS",
+              "detail": [
+                {
+                  "selector": "#focus",
+                  "visible": true,
+                  "rect": {
+                    "top": 795,
+                    "bottom": 815,
+                    "width": 34,
+                    "height": 20
+                  }
+                },
+                {
+                  "selector": "#menu",
+                  "visible": false,
+                  "rect": {
+                    "top": -50.5,
+                    "bottom": -14.5,
+                    "width": 20,
+                    "height": 36
+                  }
+                },
+                {
+                  "selector": "#mobile-focus",
+                  "visible": false,
+                  "rect": {
+                    "top": 0,
+                    "bottom": 0,
+                    "width": 0,
+                    "height": 0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "language round trip preserves final page and hash",
+              "status": "PASS",
+              "detail": {
+                "hash": "#fontes-7",
+                "page": 320,
+                "nextDisabled": true
+              }
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": [],
+          "zoomFit": {
+            "width": 322,
+            "height": 200,
+            "scrollWidth": 322,
+            "scrollHeight": 200,
+            "imageWidth": 321.96875,
+            "imageHeight": 199.625,
+            "detail": false
+          },
+          "focusExit": [
+            {
+              "selector": "#focus",
+              "visible": true,
+              "rect": {
+                "top": 795,
+                "bottom": 815,
+                "width": 34,
+                "height": 20
+              }
+            },
+            {
+              "selector": "#menu",
+              "visible": false,
+              "rect": {
+                "top": -50.5,
+                "bottom": -14.5,
+                "width": 20,
+                "height": 36
+              }
+            },
+            {
+              "selector": "#mobile-focus",
+              "visible": false,
+              "rect": {
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            }
+          ],
+          "status": "PASS"
+        },
+        {
+          "lang": "en",
+          "width": 1440,
+          "height": 1100,
+          "pages": [
+            {
+              "page": 1,
+              "id": "cover",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1101,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                },
+                {
+                  "asset": "nu-office",
+                  "width": 1600,
+                  "height": 1065,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 2,
+              "id": "toc-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1079,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 3,
+              "id": "toc-2",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 980,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 7,
+              "id": "abertura-4",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1396,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "portrait",
+                  "width": 1290,
+                  "height": 1104,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 39,
+              "id": "01-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1258,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-01",
+                  "width": 271,
+                  "height": 30,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 41,
+              "id": "01-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1767,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-01-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 42,
+              "id": "01-4",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1594,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "kubernetes",
+                  "width": 777,
+                  "height": 754,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 54,
+              "id": "02-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1685,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-02-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 65,
+              "id": "03-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1201,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "source-03",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-03-1",
+                  "width": 344,
+                  "height": 110,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 91,
+              "id": "05-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1170,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-05",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-05-1",
+                  "width": 689,
+                  "height": 204,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 104,
+              "id": "06-1",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1241,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "source-06",
+                  "width": 875,
+                  "height": 32,
+                  "complete": true
+                },
+                {
+                  "asset": "app-06-1",
+                  "width": 349,
+                  "height": 499,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 132,
+              "id": "08-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1578,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-08-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1602,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-11-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 210,
+              "id": "14-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1578,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-14-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 249,
+              "id": "17-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1750,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-17-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 262,
+              "id": "18-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1720,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-18-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 275,
+              "id": "19-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1809,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-19-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 288,
+              "id": "20-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1809,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-20-3-0",
+                  "width": 1000,
+                  "height": 620,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 320,
+              "id": "fontes-7",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1440,
+              "mainScrollWidth": 1440,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1268,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            }
+          ],
+          "controls": [
+            {
+              "name": "scrollable reading viewport and dock separation at top and bottom",
+              "status": "PASS",
+              "detail": {
+                "pages": 19,
+                "minGap": 8,
+                "allScrollResets": true
+              }
+            },
+            {
+              "name": "code wrapping, mobile font, hint, and asynchronous copy",
+              "status": "PASS",
+              "detail": {
+                "original": {
+                  "font": "13px",
+                  "whiteSpace": "pre",
+                  "width": 1266,
+                  "scrollWidth": 1266
+                },
+                "wrapped": {
+                  "whiteSpace": "pre-wrap",
+                  "width": 1266,
+                  "scrollWidth": 1266
+                },
+                "copied": "Copied"
+              }
+            },
+            {
+              "name": "zoom initially fits entire image",
+              "status": "PASS",
+              "detail": {
+                "width": 1204,
+                "height": 620,
+                "scrollWidth": 1204,
+                "scrollHeight": 620,
+                "imageWidth": 1000,
+                "imageHeight": 620,
+                "detail": false
+              }
+            },
+            {
+              "name": "zoom detail enlarges and allows internal panning, then fits again",
+              "status": "PASS",
+              "detail": {
+                "width": 1204,
+                "height": 858,
+                "scrollWidth": 1686,
+                "scrollHeight": 1045,
+                "left": 100,
+                "top": 100,
+                "imageWidth": 1685.59375
+              }
+            },
+            {
+              "name": "menu settings theme and font work on this viewport",
+              "status": "PASS",
+              "detail": {
+                "themeToggle": true,
+                "fontBefore": "17px",
+                "fontAfter": "18px"
+              }
+            },
+            {
+              "name": "menu focus mode has a visible exit control",
+              "status": "PASS",
+              "detail": [
+                {
+                  "selector": "#focus",
+                  "visible": true,
+                  "rect": {
+                    "top": 1044.5,
+                    "bottom": 1064.5,
+                    "width": 34,
+                    "height": 20
+                  }
+                },
+                {
+                  "selector": "#menu",
+                  "visible": false,
+                  "rect": {
+                    "top": -54.5,
+                    "bottom": -18.5,
+                    "width": 79.359375,
+                    "height": 36
+                  }
+                },
+                {
+                  "selector": "#mobile-focus",
+                  "visible": false,
+                  "rect": {
+                    "top": 0,
+                    "bottom": 0,
+                    "width": 0,
+                    "height": 0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "language round trip preserves final page and hash",
+              "status": "PASS",
+              "detail": {
+                "hash": "#fontes-7",
+                "page": 320,
+                "nextDisabled": true
+              }
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": [],
+          "zoomFit": {
+            "width": 1204,
+            "height": 620,
+            "scrollWidth": 1204,
+            "scrollHeight": 620,
+            "imageWidth": 1000,
+            "imageHeight": 620,
+            "detail": false
+          },
+          "focusExit": [
+            {
+              "selector": "#focus",
+              "visible": true,
+              "rect": {
+                "top": 1044.5,
+                "bottom": 1064.5,
+                "width": 34,
+                "height": 20
+              }
+            },
+            {
+              "selector": "#menu",
+              "visible": false,
+              "rect": {
+                "top": -54.5,
+                "bottom": -18.5,
+                "width": 79.359375,
+                "height": 36
+              }
+            },
+            {
+              "selector": "#mobile-focus",
+              "visible": false,
+              "rect": {
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            }
+          ],
+          "status": "PASS"
+        }
+      ],
+      "errors": [],
+      "finalInput": {
+        "file": "work/v4/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 10502533,
+        "mtime": "2026-10-23T22:08:06.401Z",
+        "sha256": "76ebd68fc299345c51664ad0ca81088731fc70971d26b9b6a1bc3db815d36d35"
+      },
+      "inputChangedDuringRun": false
+    }
+  ],
+  "screenshots": [
+    "work/v4/qa/final-reader-pt-390-cover.png",
+    "work/v4/qa/final-reader-pt-390-page-39.png",
+    "work/v4/qa/final-reader-pt-390-page-41.png",
+    "work/v4/qa/final-reader-pt-390-page-42.png",
+    "work/v4/qa/final-reader-pt-390-wrapped-code.png",
+    "work/v4/qa/final-reader-pt-390-zoom-fit.png",
+    "work/v4/qa/final-reader-pt-390-zoom-detail.png",
+    "work/v4/qa/final-reader-pt-390-settings.png",
+    "work/v4/qa/final-reader-pt-390-focus.png",
+    "work/v4/qa/final-reader-pt-1440-cover.png",
+    "work/v4/qa/final-reader-pt-1440-page-39.png",
+    "work/v4/qa/final-reader-pt-1440-page-41.png",
+    "work/v4/qa/final-reader-pt-1440-page-42.png",
+    "work/v4/qa/final-reader-pt-1440-wrapped-code.png",
+    "work/v4/qa/final-reader-pt-1440-zoom-fit.png",
+    "work/v4/qa/final-reader-pt-1440-zoom-detail.png",
+    "work/v4/qa/final-reader-pt-1440-settings.png",
+    "work/v4/qa/final-reader-pt-1440-focus.png",
+    "work/v4/qa/final-reader-en-390-cover.png",
+    "work/v4/qa/final-reader-en-390-page-39.png",
+    "work/v4/qa/final-reader-en-390-page-41.png",
+    "work/v4/qa/final-reader-en-390-page-42.png",
+    "work/v4/qa/final-reader-en-390-wrapped-code.png",
+    "work/v4/qa/final-reader-en-390-zoom-fit.png",
+    "work/v4/qa/final-reader-en-390-zoom-detail.png",
+    "work/v4/qa/final-reader-en-390-settings.png",
+    "work/v4/qa/final-reader-en-390-focus.png",
+    "work/v4/qa/final-reader-en-1440-cover.png",
+    "work/v4/qa/final-reader-en-1440-page-39.png",
+    "work/v4/qa/final-reader-en-1440-page-41.png",
+    "work/v4/qa/final-reader-en-1440-page-42.png",
+    "work/v4/qa/final-reader-en-1440-wrapped-code.png",
+    "work/v4/qa/final-reader-en-1440-zoom-fit.png",
+    "work/v4/qa/final-reader-en-1440-zoom-detail.png",
+    "work/v4/qa/final-reader-en-1440-settings.png",
+    "work/v4/qa/final-reader-en-1440-focus.png"
+  ],
+  "finished": "2026-10-23T22:08:42.216Z",
+  "status": "PASS",
+  "summary": {
+    "pageViewportChecks": 76,
+    "failedControls": [],
+    "inputChangedDuringRun": false
+  }
+}
