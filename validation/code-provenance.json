@@ -28,5 +28,5 @@
     "case_11.py": "d8db176ded801abf1cf2a0860e0bbf95354029836b3a928cf9ef9a57a01fa5ad",
     "decision_core.clj": "14cfeb8dbee805addc7595683fb4464183056b22aab2608edbd3fac2b23204bf"
   },
-  "note": "Executable sources are byte-identical to the edition with recorded passing test runs; V4 adds distinct diagram compositions, rounded image frames and native PDF navigation; code and prose are unchanged from the bilingual edition."
+  "note": "Executable sources are byte-identical to the edition with recorded passing test runs; V5 adds persistent chapter navigation on desktop, a visible chapter selector on tablet/mobile, and official technology marks within 24 distinct diagram compositions. Rounded image frames and native PDF navigation are retained; code and prose are unchanged from the bilingual edition."
 }

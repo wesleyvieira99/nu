@@ -6,7 +6,7 @@
 
 [Automação dos testes Python · Python test workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml)
 
-![Prévia dos diagramas / Diagram preview](docs/preview.png)
+![Menu de capítulos e diagramas da edição V5 / V5 chapter navigation and diagram preview](docs/preview.png)
 
 ## Português
 
@@ -14,7 +14,7 @@ Uma candidatura apresentada como trabalho examinável: vinte estudos sobre jorna
 
 Este é um estudo independente de Wesley Vieira. Não é uma publicação oficial do Nubank e não representa acesso a sistemas, incidentes ou prioridades internas. Relatos públicos de clientes são sinais para investigação, não reproduções controladas ou diagnósticos confirmados. As propostas e os laboratórios são externos; as fontes, datas e limitações aparecem junto às análises no livro. Logos e fotografias são atribuídos aos respectivos titulares e fontes.
 
-O leitor HTML oferece índice, busca, alternância PT/EN, navegação por página, código copiável e ampliação de imagens. Os PDFs incluem sumário clicável, marcadores por capítulo e subtópico, além de um menu de navegação em todas as páginas. As capturas originais permanecem no idioma da fonte, inclusive na edição em inglês.
+A edição **V5** mantém os capítulos visíveis: menu lateral no computador e seletor fixo no celular e tablet. O capítulo atual fica destacado, e o índice completo reúne a busca e os subtópicos. Os **24 diagramas** usam composições específicas, conexões organizadas e **logos oficiais das tecnologias propostas**, com [mapeamento e fontes](evidence/diagram-technology-map.json). O leitor também oferece alternância PT/EN preservando a página, código copiável, tema escuro e ampliação de imagens. Os PDFs incluem sumário clicável, marcadores por capítulo e subtópico, além de um menu de navegação em todas as páginas. As capturas originais permanecem no idioma da fonte, inclusive na edição em inglês.
 
 ### Reproduzir os laboratórios
 
@@ -47,7 +47,7 @@ A candidacy presented as reviewable work: twenty studies of Nubank customer jour
 
 This is an independent study by Wesley Vieira, not an official Nubank publication. It does not imply access to internal systems, incidents or priorities. Public customer reports are investigative signals, not controlled reproductions or confirmed diagnoses. Proposals and labs are external; sources, dates and limitations accompany the analysis in the book. Logos and photographs are credited to their respective owners and sources.
 
-The HTML reader includes contents, search, PT/EN switching, page navigation, copyable code and image zoom. The PDFs contain a clickable contents page, chapter and subtopic bookmarks, and navigation controls on every page. Original source screenshots retain their original language in the English edition.
+Edition **V5** keeps chapters visible: a persistent desktop rail and a fixed chapter selector on phones and tablets. The current chapter is highlighted, and the full contents menu includes search and subtopics. The **24 diagrams** use distinct compositions, organized connections and **official marks for the proposed technologies**, with a [mapping and sources](evidence/diagram-technology-map.json). The reader also supports PT/EN switching while preserving the current page, copyable code, dark mode and image zoom. The PDFs contain a clickable contents page, chapter and subtopic bookmarks, and navigation controls on every page. Original source screenshots retain their original language in the English edition.
 
 ### Run the labs
 
@@ -111,7 +111,8 @@ Each book link opens the corresponding case. Cada link abre o caso correspondent
 | `evidence/` e `sources.json` | Imagens, diagramas e proveniência | Images, diagrams and provenance |
 | `manuscripts/` | Conteúdo editável PT/EN | Editable PT/EN content |
 | `fonts/` | Fontes e licenças OFL | Typefaces and OFL licenses |
-| `validation/` | Relatórios da edição | Edition validation reports |
+| `evidence/diagram-technology-map.json` | Tecnologias propostas e fontes das marcas | Proposed technologies and official mark sources |
+| `validation/` | Revisão dos PDFs, menu de capítulos e geometria dos diagramas | PDF review, chapter navigation and diagram geometry checks |
 | `.github/workflows/labs.yml` | Validação dos testes Python | Python test validation |
 
 ## Autor · Author

@@ -14026,7 +14026,7 @@
             },
             {
               "title": "typescript · origem",
-              "url": "https://www.typescriptlang.org/"
+              "url": "https://www.typescriptlang.org/branding/"
             },
             {
               "title": "nu-app-life · origem",
@@ -27524,7 +27524,7 @@
         },
         {
           "title": "typescript · origem",
-          "url": "https://www.typescriptlang.org/"
+          "url": "https://www.typescriptlang.org/branding/"
         },
         {
           "title": "nu-app-life · origem",
@@ -27725,12 +27725,12 @@
     },
     "typescript": {
       "id": "typescript",
-      "url": "https://www.typescriptlang.org/",
-      "source": "https://www.typescriptlang.org/",
-      "bytes": 1692,
+      "url": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
+      "source": "https://www.typescriptlang.org/branding/",
+      "bytes": 3278,
       "kind": "logo",
-      "path": "../evidence/typescript.svg",
-      "sha256": "85a2e2020be041d822cc85fa8b8e73c442ae6019d7d16b8fb93fa8591d1e2193"
+      "path": "../evidence/typescript.png",
+      "sha256": "4716ee8a737cdd724dbb20e7f9ad060f0257ed6d736209000a4fcc9b3a2b9b92"
     },
     "nu-engineer": {
       "id": "nu-engineer",
@@ -27924,145 +27924,145 @@
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-arquiteturas-1-0.svg",
-      "sha256": "0d4a2b1a298f9bd6b53125ca3fbc8559f5c92048d5910af3ce70897102beb551"
+      "sha256": "b0f3ba66371b7b8985f386ea4f227497f1a6f381afd1df956d8a8d625eca4ee8"
     },
     "diagram-pt-arquiteturas-2-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-arquiteturas-2-0.svg",
-      "sha256": "12d82e9d3c169cbedda906c499c97af798c5e692b9419f5f3af4cb2bb535e6e8"
+      "sha256": "252fb7eb5bda7ec84a940535fc87266b4a02e0a4adb976636bb8ae706060d857"
     },
     "diagram-pt-arquiteturas-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-arquiteturas-3-0.svg",
-      "sha256": "c972197d2ca9c5124adece39818b5ff1e25ec92e6d6edc9668bc934e7deb9b3f"
+      "sha256": "7ca0c9c60af4639b5c29ff18a69d363b94be1fec125f113c51885a3f95a3c5b9"
     },
     "diagram-pt-arquiteturas-4-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-arquiteturas-4-0.svg",
-      "sha256": "0be5ad65a3b3bd7520a93719c9d775457cdf6408ec3aebe4af8fcdad10b4f6fe"
+      "sha256": "700d221a603e0692dd2ee681be957f7b88528de6c8bc3b23413c52001b4bae97"
     },
     "diagram-pt-01-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-01-3-0.svg",
-      "sha256": "236829c7f11a7a2397400445c70e9db14580e5be2386eaa838b854783a2b91ba"
+      "sha256": "cd223f30c82e979e4cdff00466ecc6b259ee95431c6e3ad7b761d33f1513a8e1"
     },
     "diagram-pt-02-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-02-3-0.svg",
-      "sha256": "04d899e19dd1e771556dac8e9fcfc25b6ebd834e4fc9692595ef6e8e945da9da"
+      "sha256": "30056e453117e00601c03beccae8518c855d80640eb8136b07b69a5c127f3c98"
     },
     "diagram-pt-03-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-03-3-0.svg",
-      "sha256": "406cfdfd1a636aeb29dd835f5063265f4fe02c19c8c21adcdab04d1f59d7cb61"
+      "sha256": "d4c632628f2ecd29ae961f50027b9a39442e7a4187ebe8dc5a74367523d8d31e"
     },
     "diagram-pt-04-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-04-3-0.svg",
-      "sha256": "4dadc703b4e581d68a60149c2ced6cbc676c383a99ceb43ce8acd4ab92eb2058"
+      "sha256": "4f1823c46f9d1af59425b993208350a64ec158ae065085912f78ab49abf3eb36"
     },
     "diagram-pt-05-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-05-3-0.svg",
-      "sha256": "6aeb345e99a8d7185a4af1bbd990b9e4c4f25ff0c1a135d55cd6542c6afa5494"
+      "sha256": "814af4b36966096f6a491b12cdbf5dcc28907774398481ed68f3fe77a3617fd0"
     },
     "diagram-pt-06-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-06-3-0.svg",
-      "sha256": "2b273711d2215b891b24df5f2544d6c1ad6372dd9e1d0e7dbae01b5eed614dce"
+      "sha256": "60f7899aa528ee1dd315bb0031084f1dbf881aa9a7451c454b90fdae54dfcd0f"
     },
     "diagram-pt-07-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-07-3-0.svg",
-      "sha256": "8a9bc4ce48b9b94b79a881773abe975a0e5b47f2294b7382dbfec6162c62f223"
+      "sha256": "4283bda6da6e5717cd22e312ed2b23aa0dec8fe800c30fa4e6795f93ec6fb889"
     },
     "diagram-pt-08-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-08-3-0.svg",
-      "sha256": "2157124b1cc1b8e50d4353306602d8eed8b9aa0608376f02075ac5297190bfd7"
+      "sha256": "f286e0456c950b92136c5a56e5c89f0d784d1882ce86862957564ad1ae2f9857"
     },
     "diagram-pt-09-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-09-3-0.svg",
-      "sha256": "5c655aae8eecccbee5b559f8913b0136b9f833e30991ead5da3bda31603e3959"
+      "sha256": "1c6360b4f4cb34063b3e28c6d477473cd5dd6c2b4a10568763195109c61fb356"
     },
     "diagram-pt-10-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-10-3-0.svg",
-      "sha256": "dd3477e5bae3a70e09ed862ef1a8b85ecd9c1232ca913491ddfed3e41a19cf25"
+      "sha256": "e50047e2e7cf2b8baef51057566fe0cefba74be35a4bcaf58d81908bebee877f"
     },
     "diagram-pt-11-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-11-3-0.svg",
-      "sha256": "cdf385d10e1672f7f5a6b66687a1feee59f2fb70e6c6d7b4d42d15aa41557d07"
+      "sha256": "30c4d8fedaf8f4bfda28c7357469df8890599839d44c70dfccc421d5b60562bf"
     },
     "diagram-pt-12-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-12-3-0.svg",
-      "sha256": "832a4bc66aaeafb2b465783aa8ab1850f2234dd7db5b781400073d4a79812383"
+      "sha256": "e1b2d553653b2a9c1b8c9efea9d2738c256827967150a5bda91afb9bd08757d4"
     },
     "diagram-pt-13-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-13-3-0.svg",
-      "sha256": "d5df761b6b94c29b1ce289fc9760c669f08d7b116d04facedde7d0a63e0379d8"
+      "sha256": "d4917a650c2150cf248f4a495cd42039f58a62286af1113712336fee0becda28"
     },
     "diagram-pt-14-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-14-3-0.svg",
-      "sha256": "51bf7915e55ab3a6d0d4fcabc313332f55bdb8afa3535c5ce416896f6a3f3727"
+      "sha256": "96fdd300fac63b6812a0b482b8df8fc59b55da0244f4fe65b174f9795d555c0f"
     },
     "diagram-pt-15-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-15-3-0.svg",
-      "sha256": "8ce18aa0dad78a15dfd6065c70f8626ee3f993ef7902de6d19fb73f081d00b2d"
+      "sha256": "b9588fdd0d30129c5df0a00345b8c8f719c98b958558f001084eec26fa7223f7"
     },
     "diagram-pt-16-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-16-3-0.svg",
-      "sha256": "449ee36f6a47cbfed7099d2675a86f33bd692e398eaa56941b4b54b29e1e3c6e"
+      "sha256": "8029fb4a5565d968bada77b0245707cc601ee679f0d52108dc19e9abaa9b7466"
     },
     "diagram-pt-17-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-17-3-0.svg",
-      "sha256": "80d4617bd9bf8c1183efe3682689e3732088893632ca970a75cacd06418d4ff8"
+      "sha256": "569b874e3531cfe5eb26ce92689f992d13ef8e6418bba853c372356173594089"
     },
     "diagram-pt-18-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-18-3-0.svg",
-      "sha256": "465cbfdcaff50c6656ed0655168d6339fd74d3b3193b90f2b887ae7aa31335c6"
+      "sha256": "b5c8f8146641f7d292de4daea95a08dda1ef35ca103427b4cd17e5d8c8441580"
     },
     "diagram-pt-19-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-19-3-0.svg",
-      "sha256": "cc6f49f3095f6d50582f664854429c6f5c017ea6ef6aa5c6416e239caaf9a93f"
+      "sha256": "d0192aeaf7a05d33ea607c0d5c1bde4657ce0691146cf6bc3ac1a3817983b668"
     },
     "diagram-pt-20-3-0": {
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
       "path": "../evidence/diagram-pt-20-3-0.svg",
-      "sha256": "1bf05e7ae1cb7a989e903f6b90604834772c636b7df9627937673e972b4a918b"
+      "sha256": "89d17a30c01e101163a1d7946ce831636fa62d0756bee6911d786d63be8a25d2"
     }
   },
   "total_pages": 320,

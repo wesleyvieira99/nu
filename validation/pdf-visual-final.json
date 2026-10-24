@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "reviewed_at_utc": "2026-10-23T22:08:53.437576+00:00",
+  "reviewed_at_utc": "2026-10-24T00:46:14.126873+00:00",
   "scope": {
     "languages": [
       "pt",
@@ -43,17 +43,32 @@
       320
     ],
     "total_rendered_pages": 60,
-    "structural_navigation_pages_checked": 640
+    "structural_navigation_pages_checked": 640,
+    "diagram_sheets": [
+      "pdf-final-visual/diagram-sheet-01.png",
+      "pdf-final-visual/diagram-sheet-02.png",
+      "pdf-final-visual/diagram-sheet-03.png",
+      "pdf-final-visual/diagram-sheet-04.png",
+      "pdf-final-visual/diagram-sheet-05.png",
+      "pdf-final-visual/diagram-sheet-06.png",
+      "pdf-final-visual/diagram-sheet-07.png",
+      "pdf-final-visual/diagram-sheet-08.png",
+      "pdf-final-visual/diagram-sheet-09.png",
+      "pdf-final-visual/diagram-sheet-10.png",
+      "pdf-final-visual/diagram-sheet-11.png",
+      "pdf-final-visual/diagram-sheet-12.png"
+    ]
   },
   "issues": [],
   "visual_checks": {
-    "diagram_nodes_and_labels": "All 24 compositions reviewed in both languages. Node labels and explanations remain within their shapes, with no cut text or missing glyphs seen.",
-    "arrows_and_legend": "Arrows, line direction, route badges or node-to-node legend keys are visible. No connection was obscured by a text label or by the rounded clipping boundary.",
-    "variety": "Distinct arrangements, groupings and object shapes are retained across the 24 designs; Portuguese and English preserve corresponding structure.",
+    "diagram_nodes_and_labels": "All 48 diagrams in 12 paired sheets inspected at 120 dpi. Official marks, category chips, node titles and descriptions are visible and contained; no clipped text or missing glyphs seen.",
+    "arrows_and_legend": "Orthogonal paths, numbered arrows and localized legends remain distinct from node content. No route or label is cut by the rounded outer boundary.",
+    "variety": "24 context-specific compositions retained across Portuguese and English, with role-specific official technology marks and non-brand symbols for people or abstract entities.",
     "rounded_images": "Photographs and source images show subtle rounded corners. Diagram outer bounds retain all visible content. Official logo silhouettes are unchanged.",
     "page_layout": "Sampled covers, contents, profile, evidence and credits retain separated body, sources and footer navigation. Full-page architecture samples preserve caption and prose spacing.",
-    "typography": "PDF font inspection found diagram descriptive text at approximately 7.68–8.04 pt and node titles at approximately 9.47–9.92 pt; small numeric reference badges and category labels use smaller secondary type. Vector text remains selectable and scalable.",
-    "navigation": "The 5-control footer remains visible in all sampled layouts, including dark covers; native destinations, all bookmarks and image clipping operators passed the full validator again."
+    "typography": "PDF-rendered labels and node titles were inspected at 120 dpi; smaller technology names and secondary route labels remain legible when enlarged. Vector diagram text scales with PDF zoom.",
+    "navigation": "Visible localized footer controls on every sampled page, including covers and credits; full native-link validation independently passed all 640 pages.",
+    "technology_provenance": "diagram-technology-map.json lists proposed technology placement and official-source references. Marks identify proposed implementations and do not establish internal Nubank architecture."
   },
   "limitations": [
     "Visual review focuses on the 48 redesigned diagrams and 12 non-diagram samples; the complete 640-page navigation and clip validation is automated.",
@@ -62,8 +77,8 @@
   "files": {
     "pt": {
       "name": "Nubank_Confianca_em_Escala_PT.pdf",
-      "sha256": "31cd7c4283966367e4b01f64329b69e52c77b3e90a83c772e3d62b4a8496c6ba",
-      "bytes": 15858899,
+      "sha256": "db15ebf16dfcceefe33a5271abe03f6c34655f2e70d29b7b5f842e492920048d",
+      "bytes": 25270686,
       "pages": 320,
       "menu_links": 1600,
       "all_internal_links": 1629,
@@ -76,8 +91,8 @@
     },
     "en": {
       "name": "Nubank_Trust_at_Scale_EN.pdf",
-      "sha256": "0a271e753b618c3557b3d4565c3da1591c4803484fd587847639585db1decf24",
-      "bytes": 15828014,
+      "sha256": "68c4a5b669dbd5a937ee241352238ba6129d71bf9b096bec35d1ee7096cb8301",
+      "bytes": 25236836,
       "pages": 320,
       "menu_links": 1600,
       "all_internal_links": 1629,
@@ -88,5 +103,6 @@
       "min_content_scale": 0.92,
       "navigation_report": "pdf-navigation-validation-en.json"
     }
-  }
+  },
+  "edition": "V5"
 }

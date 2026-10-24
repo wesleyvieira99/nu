@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "scope": "Final sticky close-control check after chapter navigation PASS",
+  "checks": [
+    {
+      "lang": "pt",
+      "width": 1440,
+      "closeControl": {
+        "x": 1283,
+        "y": 97,
+        "width": 37,
+        "height": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "lang": "pt",
+      "width": 820,
+      "closeControl": {
+        "x": 743,
+        "y": 97,
+        "width": 37,
+        "height": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "lang": "pt",
+      "width": 390,
+      "closeControl": {
+        "x": 333,
+        "y": 82,
+        "width": 33,
+        "height": 33
+      },
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "closeControl": {
+        "x": 1283,
+        "y": 97,
+        "width": 37,
+        "height": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 820,
+      "closeControl": {
+        "x": 743,
+        "y": 97,
+        "width": 37,
+        "height": 37
+      },
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "closeControl": {
+        "x": 333,
+        "y": 82,
+        "width": 33,
+        "height": 33
+      },
+      "status": "PASS"
+    }
+  ],
+  "files": {
+    "pt": {
+      "file": "Nubank_Confianca_em_Escala_PT.html",
+      "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
+    },
+    "en": {
+      "file": "Nubank_Trust_at_Scale_EN.html",
+      "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
+    }
+  }
+}

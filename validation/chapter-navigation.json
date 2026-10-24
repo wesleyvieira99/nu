@@ -1,0 +1,2410 @@
+{
+  "started": "2026-10-24T00:45:39.585Z",
+  "scope": "V5 persistent chapter navigation in PT/EN at desktop, tablet and mobile widths",
+  "variants": [
+    {
+      "lang": "pt",
+      "width": 1440,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "rail"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 632.734375,
+            "y": 966,
+            "right": 1087.265625,
+            "bottom": 1023,
+            "width": 454.53125,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 589.375,
+            "y": 966,
+            "right": 1130.625,
+            "bottom": 1023,
+            "width": 541.25,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 617.515625,
+            "y": 966,
+            "right": 1102.484375,
+            "bottom": 1023,
+            "width": 484.96875,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 613.796875,
+            "y": 966,
+            "right": 1106.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 613.796875,
+            "y": 966,
+            "right": 1106.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 613.796875,
+            "y": 966,
+            "right": 1106.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 592.859375,
+            "y": 966,
+            "right": 1127.140625,
+            "bottom": 1023,
+            "width": 534.28125,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 641.453125,
+            "y": 966,
+            "right": 1078.546875,
+            "bottom": 1023,
+            "width": 437.09375,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "lang": "pt",
+      "width": 820,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "select"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Select supports keyboard without changing a single book page",
+          "status": "PASS",
+          "detail": {
+            "selected": "02-1",
+            "page": 52
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 182.734375,
+            "y": 966,
+            "right": 637.265625,
+            "bottom": 1023,
+            "width": 454.53125,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 139.375,
+            "y": 966,
+            "right": 680.625,
+            "bottom": 1023,
+            "width": 541.25,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 167.515625,
+            "y": 966,
+            "right": 652.484375,
+            "bottom": 1023,
+            "width": 484.96875,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 163.796875,
+            "y": 966,
+            "right": 656.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 163.796875,
+            "y": 966,
+            "right": 656.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 163.796875,
+            "y": 966,
+            "right": 656.203125,
+            "bottom": 1023,
+            "width": 492.40625,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 142.859375,
+            "y": 966,
+            "right": 677.140625,
+            "bottom": 1023,
+            "width": 534.28125,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 191.453125,
+            "y": 966,
+            "right": 628.546875,
+            "bottom": 1023,
+            "width": 437.09375,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "lang": "pt",
+      "width": 390,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "select"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Select supports keyboard without changing a single book page",
+          "status": "PASS",
+          "detail": {
+            "selected": "02-1",
+            "page": 52
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 90.953125,
+            "y": 779,
+            "right": 299.046875,
+            "bottom": 831,
+            "width": 208.09375,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "rail"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 654.203125,
+            "y": 966,
+            "right": 1065.796875,
+            "bottom": 1023,
+            "width": 411.59375,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 598.421875,
+            "y": 966,
+            "right": 1121.578125,
+            "bottom": 1023,
+            "width": 523.15625,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 615.703125,
+            "y": 966,
+            "right": 1104.296875,
+            "bottom": 1023,
+            "width": 488.59375,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 620.359375,
+            "y": 966,
+            "right": 1099.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 620.359375,
+            "y": 966,
+            "right": 1099.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 620.359375,
+            "y": 966,
+            "right": 1099.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 610.78125,
+            "y": 966,
+            "right": 1109.21875,
+            "bottom": 1023,
+            "width": 498.4375,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 280,
+            "y": 72,
+            "right": 1440,
+            "bottom": 958,
+            "width": 1160,
+            "height": 886
+          },
+          "rail": {
+            "x": 16,
+            "y": 90,
+            "right": 264,
+            "bottom": 1022,
+            "width": 248,
+            "height": 932
+          },
+          "bar": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "dock": {
+            "x": 639.15625,
+            "y": 966,
+            "right": 1080.84375,
+            "bottom": 1023,
+            "width": 441.6875,
+            "height": 57
+          },
+          "docWidth": 1440,
+          "mainScrollWidth": 1160,
+          "mainWidth": 1160,
+          "viewport": 1440
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 820,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "select"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Select supports keyboard without changing a single book page",
+          "status": "PASS",
+          "detail": {
+            "selected": "02-1",
+            "page": 52
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 204.203125,
+            "y": 966,
+            "right": 615.796875,
+            "bottom": 1023,
+            "width": 411.59375,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 148.421875,
+            "y": 966,
+            "right": 671.578125,
+            "bottom": 1023,
+            "width": 523.15625,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 165.703125,
+            "y": 966,
+            "right": 654.296875,
+            "bottom": 1023,
+            "width": 488.59375,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 170.359375,
+            "y": 966,
+            "right": 649.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 170.359375,
+            "y": 966,
+            "right": 649.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 170.359375,
+            "y": 966,
+            "right": 649.640625,
+            "bottom": 1023,
+            "width": 479.28125,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 160.78125,
+            "y": 966,
+            "right": 659.21875,
+            "bottom": 1023,
+            "width": 498.4375,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 0,
+            "y": 126,
+            "right": 820,
+            "bottom": 958,
+            "width": 820,
+            "height": 832
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 72,
+            "right": 820,
+            "bottom": 126,
+            "width": 820,
+            "height": 54
+          },
+          "dock": {
+            "x": 189.15625,
+            "y": 966,
+            "right": 630.84375,
+            "bottom": 1023,
+            "width": 441.6875,
+            "height": 57
+          },
+          "docWidth": 820,
+          "mainScrollWidth": 820,
+          "mainWidth": 820,
+          "viewport": 820
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "checks": [
+        {
+          "name": "Chapter navigation visible on the cover",
+          "status": "PASS",
+          "detail": {
+            "chapterLinks": 25,
+            "selectOptions": 27,
+            "navMode": "select"
+          }
+        },
+        {
+          "name": "Direct chapter navigation and current chapter state",
+          "status": "PASS",
+          "detail": {
+            "chapterStart": 39,
+            "currentPage": 41
+          }
+        },
+        {
+          "name": "Reading area, chapter menu and dock remain separate",
+          "status": "PASS",
+          "detail": {
+            "pagesChecked": 8
+          }
+        },
+        {
+          "name": "History and language switches keep chapter and page",
+          "status": "PASS",
+          "detail": {
+            "history": true,
+            "languageRoundTrip": true
+          }
+        },
+        {
+          "name": "Full chapter menu, search, focus trap and close restoration",
+          "status": "PASS",
+          "detail": {
+            "focusTrap": true,
+            "restoreFocus": true,
+            "search": true
+          }
+        },
+        {
+          "name": "Select supports keyboard without changing a single book page",
+          "status": "PASS",
+          "detail": {
+            "selected": "02-1",
+            "page": 52
+          }
+        },
+        {
+          "name": "Dark mode keeps chapter navigation legible",
+          "status": "PASS",
+          "detail": {
+            "darkMode": true
+          }
+        },
+        {
+          "name": "Focus mode frees reading area and has a visible exit",
+          "status": "PASS",
+          "detail": {
+            "exitVisible": true
+          }
+        },
+        {
+          "name": "Existing code, zoom and final-page controls still work",
+          "status": "PASS",
+          "detail": {
+            "wrap": true,
+            "zoom": true,
+            "lastPage": true
+          }
+        }
+      ],
+      "pageErrors": [],
+      "pageGeometry": [
+        {
+          "id": "cover",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "abertura-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "fundamentos-1",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-1",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-3",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "01-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "20-4",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        },
+        {
+          "id": "fontes-7",
+          "main": {
+            "x": 0,
+            "y": 118,
+            "right": 390,
+            "bottom": 768,
+            "width": 390,
+            "height": 650
+          },
+          "rail": {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bar": {
+            "x": 0,
+            "y": 64,
+            "right": 390,
+            "bottom": 118,
+            "width": 390,
+            "height": 54
+          },
+          "dock": {
+            "x": 94.5234375,
+            "y": 779,
+            "right": 295.4765625,
+            "bottom": 831,
+            "width": 200.953125,
+            "height": 52
+          },
+          "docWidth": 390,
+          "mainScrollWidth": 390,
+          "mainWidth": 390,
+          "viewport": 390
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [
+    "work/v5/qa/chapter-navigation/pt-1440-cover.png",
+    "work/v5/qa/chapter-navigation/pt-1440-architecture.png",
+    "work/v5/qa/chapter-navigation/pt-1440-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/pt-1440-dark.png",
+    "work/v5/qa/chapter-navigation/pt-1440-focus.png",
+    "work/v5/qa/chapter-navigation/pt-1440-code.png",
+    "work/v5/qa/chapter-navigation/pt-820-cover.png",
+    "work/v5/qa/chapter-navigation/pt-820-architecture.png",
+    "work/v5/qa/chapter-navigation/pt-820-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/pt-820-dark.png",
+    "work/v5/qa/chapter-navigation/pt-820-focus.png",
+    "work/v5/qa/chapter-navigation/pt-820-code.png",
+    "work/v5/qa/chapter-navigation/pt-390-cover.png",
+    "work/v5/qa/chapter-navigation/pt-390-architecture.png",
+    "work/v5/qa/chapter-navigation/pt-390-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/pt-390-dark.png",
+    "work/v5/qa/chapter-navigation/pt-390-focus.png",
+    "work/v5/qa/chapter-navigation/pt-390-code.png",
+    "work/v5/qa/chapter-navigation/en-1440-cover.png",
+    "work/v5/qa/chapter-navigation/en-1440-architecture.png",
+    "work/v5/qa/chapter-navigation/en-1440-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/en-1440-dark.png",
+    "work/v5/qa/chapter-navigation/en-1440-focus.png",
+    "work/v5/qa/chapter-navigation/en-1440-code.png",
+    "work/v5/qa/chapter-navigation/en-820-cover.png",
+    "work/v5/qa/chapter-navigation/en-820-architecture.png",
+    "work/v5/qa/chapter-navigation/en-820-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/en-820-dark.png",
+    "work/v5/qa/chapter-navigation/en-820-focus.png",
+    "work/v5/qa/chapter-navigation/en-820-code.png",
+    "work/v5/qa/chapter-navigation/en-390-cover.png",
+    "work/v5/qa/chapter-navigation/en-390-architecture.png",
+    "work/v5/qa/chapter-navigation/en-390-chapter-menu.png",
+    "work/v5/qa/chapter-navigation/en-390-dark.png",
+    "work/v5/qa/chapter-navigation/en-390-focus.png",
+    "work/v5/qa/chapter-navigation/en-390-code.png"
+  ],
+  "finished": "2026-10-24T00:46:22.755Z",
+  "status": "PASS",
+  "summary": {
+    "viewports": 6,
+    "checks": 52,
+    "pageGeometryChecks": 48,
+    "failures": []
+  },
+  "files": {
+    "pt": {
+      "file": "Nubank_Confianca_em_Escala_PT.html",
+      "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
+    },
+    "en": {
+      "file": "Nubank_Trust_at_Scale_EN.html",
+      "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "geometry": {
+    "width": 1600,
+    "height": 1200,
+    "scrollWidth": 1600,
+    "scrollHeight": 1200,
+    "images": [
+      {
+        "src": "final-reader-pt-1440-page-41.png",
+        "naturalWidth": 1440,
+        "naturalHeight": 1100
+      },
+      {
+        "src": "preview-mobile-chapters.png",
+        "naturalWidth": 390,
+        "naturalHeight": 844
+      }
+    ],
+    "cards": [
+      {
+        "scrollHeight": 844,
+        "clientHeight": 844,
+        "scrollWidth": 1140,
+        "clientWidth": 1140
+      },
+      {
+        "scrollHeight": 844,
+        "clientHeight": 844,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      }
+    ]
+  },
+  "source_sha256": {
+    "final-reader-pt-1440-page-41.png": "ef8f327b1decb1f5b59fc6012cbf53e058e894b0c936c57ac7b41135f3b83d9d",
+    "preview-mobile-chapters.png": "b9e0c48d5b77f955d1568c768a80bbc7e51fe9457ba5cef47c0226593eec88f9"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "started": "2026-10-23T22:08:24.875Z",
+  "started": "2026-10-24T00:43:54.881Z",
   "scope": "Targeted re-test after reader usability rebuild",
   "pages": [
     1,
@@ -30,10 +30,10 @@
     {
       "lang": "pt",
       "input": {
-        "file": "work/v4/Nubank_Confianca_em_Escala_PT.html",
-        "bytes": 10531714,
-        "mtime": "2026-10-23T22:08:06.199Z",
-        "sha256": "7c2e99ed1cdc8b7c6d9dc432813cfe7daeecc6c1711a277b0620d7dd609b549a"
+        "file": "work/v5/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 22297869,
+        "mtime": "2026-10-24T00:38:01.508Z",
+        "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
       },
       "viewports": [
         {
@@ -48,13 +48,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1510,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -108,13 +108,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2113,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -132,13 +132,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1813,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -156,13 +156,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1653,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -186,13 +186,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2185,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -252,13 +252,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2022,
-              "clientHeight": 704,
+              "scrollHeight": 2028,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -304,8 +304,8 @@
                 },
                 {
                   "asset": "diagram-pt-01-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -318,13 +318,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1985,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -378,13 +378,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1761,
-              "clientHeight": 704,
+              "scrollHeight": 1766,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -418,8 +418,8 @@
                 },
                 {
                   "asset": "diagram-pt-02-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -432,13 +432,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2360,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -498,13 +498,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2376,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -564,13 +564,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2530,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -630,13 +630,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1658,
-              "clientHeight": 704,
+              "scrollHeight": 1664,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -670,8 +670,8 @@
                 },
                 {
                   "asset": "diagram-pt-08-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -684,13 +684,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1701,
-              "clientHeight": 704,
+              "scrollHeight": 1728,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -731,7 +731,7 @@
                 {
                   "asset": "diagram-pt-11-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -744,13 +744,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1698,
-              "clientHeight": 704,
+              "scrollHeight": 1725,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -785,7 +785,7 @@
                 {
                   "asset": "diagram-pt-14-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -798,13 +798,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1579,
-              "clientHeight": 704,
+              "scrollHeight": 1606,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -833,7 +833,7 @@
                 {
                   "asset": "diagram-pt-17-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -846,13 +846,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1579,
-              "clientHeight": 704,
+              "scrollHeight": 1606,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -881,7 +881,7 @@
                 {
                   "asset": "diagram-pt-18-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -894,13 +894,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1736,
-              "clientHeight": 704,
+              "scrollHeight": 1764,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -929,7 +929,7 @@
                 {
                   "asset": "diagram-pt-19-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -942,13 +942,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1705,
-              "clientHeight": 704,
+              "scrollHeight": 1732,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -977,7 +977,7 @@
                 {
                   "asset": "diagram-pt-20-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -990,13 +990,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1919,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -1041,11 +1041,11 @@
               "status": "PASS",
               "detail": {
                 "width": 322,
-                "height": 200,
+                "height": 205,
                 "scrollWidth": 322,
-                "scrollHeight": 200,
-                "imageWidth": 321.96875,
-                "imageHeight": 199.625,
+                "scrollHeight": 205,
+                "imageWidth": 321.984375,
+                "imageHeight": 204.90625,
                 "detail": false
               }
             },
@@ -1054,9 +1054,9 @@
               "status": "PASS",
               "detail": {
                 "width": 322,
-                "height": 589,
+                "height": 605,
                 "scrollWidth": 950,
-                "scrollHeight": 589,
+                "scrollHeight": 605,
                 "left": 100,
                 "top": 0,
                 "imageWidth": 950
@@ -1089,10 +1089,10 @@
                   "selector": "#menu",
                   "visible": false,
                   "rect": {
-                    "top": -50.5,
-                    "bottom": -14.5,
-                    "width": 20,
-                    "height": 36
+                    "top": -48.5,
+                    "bottom": -16.5,
+                    "width": 64.640625,
+                    "height": 32
                   }
                 },
                 {
@@ -1121,11 +1121,11 @@
           "pageErrors": [],
           "zoomFit": {
             "width": 322,
-            "height": 200,
+            "height": 205,
             "scrollWidth": 322,
-            "scrollHeight": 200,
-            "imageWidth": 321.96875,
-            "imageHeight": 199.625,
+            "scrollHeight": 205,
+            "imageWidth": 321.984375,
+            "imageHeight": 204.90625,
             "detail": false
           },
           "focusExit": [
@@ -1143,10 +1143,10 @@
               "selector": "#menu",
               "visible": false,
               "rect": {
-                "top": -50.5,
-                "bottom": -14.5,
-                "width": 20,
-                "height": 36
+                "top": -48.5,
+                "bottom": -16.5,
+                "width": 64.640625,
+                "height": 32
               }
             },
             {
@@ -1172,14 +1172,14 @@
               "id": "cover",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1109,
+              "scrollHeight": 1054,
               "clientHeight": 946,
               "images": [
                 {
@@ -1232,14 +1232,14 @@
               "id": "toc-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1079,
+              "scrollHeight": 1100,
               "clientHeight": 946,
               "images": [
                 {
@@ -1256,8 +1256,8 @@
               "id": "toc-2",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
@@ -1280,14 +1280,14 @@
               "id": "abertura-4",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1396,
+              "scrollHeight": 1427,
               "clientHeight": 946,
               "images": [
                 {
@@ -1310,14 +1310,14 @@
               "id": "01-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1226,
+              "scrollHeight": 1337,
               "clientHeight": 946,
               "images": [
                 {
@@ -1376,14 +1376,14 @@
               "id": "01-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1797,
+              "scrollHeight": 1711,
               "clientHeight": 946,
               "images": [
                 {
@@ -1430,8 +1430,8 @@
                 },
                 {
                   "asset": "diagram-pt-01-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1442,14 +1442,14 @@
               "id": "01-4",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1540,
+              "scrollHeight": 1564,
               "clientHeight": 946,
               "images": [
                 {
@@ -1502,14 +1502,14 @@
               "id": "02-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1715,
+              "scrollHeight": 1599,
               "clientHeight": 946,
               "images": [
                 {
@@ -1544,8 +1544,8 @@
                 },
                 {
                   "asset": "diagram-pt-02-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1556,14 +1556,14 @@
               "id": "03-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1257,
+              "scrollHeight": 1368,
               "clientHeight": 946,
               "images": [
                 {
@@ -1622,14 +1622,14 @@
               "id": "05-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1257,
+              "scrollHeight": 1368,
               "clientHeight": 946,
               "images": [
                 {
@@ -1688,14 +1688,14 @@
               "id": "06-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1278,
+              "scrollHeight": 1366,
               "clientHeight": 946,
               "images": [
                 {
@@ -1754,14 +1754,14 @@
               "id": "08-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1578,
+              "scrollHeight": 1497,
               "clientHeight": 946,
               "images": [
                 {
@@ -1796,8 +1796,8 @@
                 },
                 {
                   "asset": "diagram-pt-08-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1808,14 +1808,14 @@
               "id": "11-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1632,
+              "scrollHeight": 1611,
               "clientHeight": 946,
               "images": [
                 {
@@ -1857,7 +1857,7 @@
                 {
                   "asset": "diagram-pt-11-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1868,14 +1868,14 @@
               "id": "14-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1661,
+              "scrollHeight": 1592,
               "clientHeight": 946,
               "images": [
                 {
@@ -1911,7 +1911,7 @@
                 {
                   "asset": "diagram-pt-14-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1922,14 +1922,14 @@
               "id": "17-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1750,
+              "scrollHeight": 1759,
               "clientHeight": 946,
               "images": [
                 {
@@ -1959,7 +1959,7 @@
                 {
                   "asset": "diagram-pt-17-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -1970,14 +1970,14 @@
               "id": "18-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1696,
+              "scrollHeight": 1710,
               "clientHeight": 946,
               "images": [
                 {
@@ -2007,7 +2007,7 @@
                 {
                   "asset": "diagram-pt-18-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2018,14 +2018,14 @@
               "id": "19-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1809,
+              "scrollHeight": 1799,
               "clientHeight": 946,
               "images": [
                 {
@@ -2055,7 +2055,7 @@
                 {
                   "asset": "diagram-pt-19-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2066,14 +2066,14 @@
               "id": "20-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1809,
+              "scrollHeight": 1847,
               "clientHeight": 946,
               "images": [
                 {
@@ -2103,7 +2103,7 @@
                 {
                   "asset": "diagram-pt-20-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2114,14 +2114,14 @@
               "id": "fontes-7",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1268,
+              "scrollHeight": 1300,
               "clientHeight": 946,
               "images": [
                 {
@@ -2151,13 +2151,13 @@
                 "original": {
                   "font": "13px",
                   "whiteSpace": "pre",
-                  "width": 1266,
-                  "scrollWidth": 1266
+                  "width": 1022,
+                  "scrollWidth": 1022
                 },
                 "wrapped": {
                   "whiteSpace": "pre-wrap",
-                  "width": 1266,
-                  "scrollWidth": 1266
+                  "width": 1022,
+                  "scrollWidth": 1022
                 },
                 "copied": "Copiado"
               }
@@ -2167,11 +2167,11 @@
               "status": "PASS",
               "detail": {
                 "width": 1204,
-                "height": 620,
+                "height": 700,
                 "scrollWidth": 1204,
-                "scrollHeight": 620,
-                "imageWidth": 1000,
-                "imageHeight": 620,
+                "scrollHeight": 700,
+                "imageWidth": 1100,
+                "imageHeight": 700,
                 "detail": false
               }
             },
@@ -2182,7 +2182,7 @@
                 "width": 1204,
                 "height": 858,
                 "scrollWidth": 1686,
-                "scrollHeight": 1045,
+                "scrollHeight": 1073,
                 "left": 100,
                 "top": 100,
                 "imageWidth": 1685.59375
@@ -2217,7 +2217,7 @@
                   "rect": {
                     "top": -54.5,
                     "bottom": -18.5,
-                    "width": 62.75,
+                    "width": 81.359375,
                     "height": 36
                   }
                 },
@@ -2247,11 +2247,11 @@
           "pageErrors": [],
           "zoomFit": {
             "width": 1204,
-            "height": 620,
+            "height": 700,
             "scrollWidth": 1204,
-            "scrollHeight": 620,
-            "imageWidth": 1000,
-            "imageHeight": 620,
+            "scrollHeight": 700,
+            "imageWidth": 1100,
+            "imageHeight": 700,
             "detail": false
           },
           "focusExit": [
@@ -2271,7 +2271,7 @@
               "rect": {
                 "top": -54.5,
                 "bottom": -18.5,
-                "width": 62.75,
+                "width": 81.359375,
                 "height": 36
               }
             },
@@ -2291,20 +2291,20 @@
       ],
       "errors": [],
       "finalInput": {
-        "file": "work/v4/Nubank_Confianca_em_Escala_PT.html",
-        "bytes": 10531714,
-        "mtime": "2026-10-23T22:08:06.199Z",
-        "sha256": "7c2e99ed1cdc8b7c6d9dc432813cfe7daeecc6c1711a277b0620d7dd609b549a"
+        "file": "work/v5/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 22297869,
+        "mtime": "2026-10-24T00:38:01.508Z",
+        "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
       },
       "inputChangedDuringRun": false
     },
     {
       "lang": "en",
       "input": {
-        "file": "work/v4/Nubank_Trust_at_Scale_EN.html",
-        "bytes": 10502533,
-        "mtime": "2026-10-23T22:08:06.401Z",
-        "sha256": "76ebd68fc299345c51664ad0ca81088731fc70971d26b9b6a1bc3db815d36d35"
+        "file": "work/v5/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 22268606,
+        "mtime": "2026-10-24T00:38:01.783Z",
+        "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
       },
       "viewports": [
         {
@@ -2319,13 +2319,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1510,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2379,13 +2379,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2177,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2403,13 +2403,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1857,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2427,13 +2427,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1622,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2457,13 +2457,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2121,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2523,13 +2523,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1920,
-              "clientHeight": 704,
+              "scrollHeight": 1925,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2575,8 +2575,8 @@
                 },
                 {
                   "asset": "diagram-en-01-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2589,13 +2589,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1948,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2649,13 +2649,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1698,
-              "clientHeight": 704,
+              "scrollHeight": 1703,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2689,8 +2689,8 @@
                 },
                 {
                   "asset": "diagram-en-02-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2703,13 +2703,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2377,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2769,13 +2769,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2322,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2835,13 +2835,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 2453,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2901,13 +2901,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1658,
-              "clientHeight": 704,
+              "scrollHeight": 1664,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -2941,8 +2941,8 @@
                 },
                 {
                   "asset": "diagram-en-08-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -2955,13 +2955,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1607,
-              "clientHeight": 704,
+              "scrollHeight": 1634,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3002,7 +3002,7 @@
                 {
                   "asset": "diagram-en-11-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3015,13 +3015,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1627,
-              "clientHeight": 704,
+              "scrollHeight": 1654,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3056,7 +3056,7 @@
                 {
                   "asset": "diagram-en-14-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3069,13 +3069,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1516,
-              "clientHeight": 704,
+              "scrollHeight": 1544,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3104,7 +3104,7 @@
                 {
                   "asset": "diagram-en-17-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3117,13 +3117,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1516,
-              "clientHeight": 704,
+              "scrollHeight": 1544,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3152,7 +3152,7 @@
                 {
                   "asset": "diagram-en-18-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3165,13 +3165,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1705,
-              "clientHeight": 704,
+              "scrollHeight": 1732,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3200,7 +3200,7 @@
                 {
                   "asset": "diagram-en-19-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3213,13 +3213,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1674,
-              "clientHeight": 704,
+              "scrollHeight": 1701,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3248,7 +3248,7 @@
                 {
                   "asset": "diagram-en-20-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3261,13 +3261,13 @@
               "viewportWidth": 390,
               "mainWidth": 390,
               "mainScrollWidth": 390,
-              "mainTop": 64,
+              "mainTop": 118,
               "mainBottom": 768,
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
               "scrollHeight": 1802,
-              "clientHeight": 704,
+              "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
@@ -3312,11 +3312,11 @@
               "status": "PASS",
               "detail": {
                 "width": 322,
-                "height": 200,
+                "height": 205,
                 "scrollWidth": 322,
-                "scrollHeight": 200,
-                "imageWidth": 321.96875,
-                "imageHeight": 199.625,
+                "scrollHeight": 205,
+                "imageWidth": 321.984375,
+                "imageHeight": 204.90625,
                 "detail": false
               }
             },
@@ -3325,9 +3325,9 @@
               "status": "PASS",
               "detail": {
                 "width": 322,
-                "height": 589,
+                "height": 605,
                 "scrollWidth": 950,
-                "scrollHeight": 589,
+                "scrollHeight": 605,
                 "left": 100,
                 "top": 0,
                 "imageWidth": 950
@@ -3360,10 +3360,10 @@
                   "selector": "#menu",
                   "visible": false,
                   "rect": {
-                    "top": -50.5,
-                    "bottom": -14.5,
-                    "width": 20,
-                    "height": 36
+                    "top": -48.5,
+                    "bottom": -16.5,
+                    "width": 63.3125,
+                    "height": 32
                   }
                 },
                 {
@@ -3392,11 +3392,11 @@
           "pageErrors": [],
           "zoomFit": {
             "width": 322,
-            "height": 200,
+            "height": 205,
             "scrollWidth": 322,
-            "scrollHeight": 200,
-            "imageWidth": 321.96875,
-            "imageHeight": 199.625,
+            "scrollHeight": 205,
+            "imageWidth": 321.984375,
+            "imageHeight": 204.90625,
             "detail": false
           },
           "focusExit": [
@@ -3414,10 +3414,10 @@
               "selector": "#menu",
               "visible": false,
               "rect": {
-                "top": -50.5,
-                "bottom": -14.5,
-                "width": 20,
-                "height": 36
+                "top": -48.5,
+                "bottom": -16.5,
+                "width": 63.3125,
+                "height": 32
               }
             },
             {
@@ -3443,14 +3443,14 @@
               "id": "cover",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1101,
+              "scrollHeight": 1041,
               "clientHeight": 946,
               "images": [
                 {
@@ -3503,14 +3503,14 @@
               "id": "toc-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1079,
+              "scrollHeight": 1016,
               "clientHeight": 946,
               "images": [
                 {
@@ -3527,14 +3527,14 @@
               "id": "toc-2",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 980,
+              "scrollHeight": 946,
               "clientHeight": 946,
               "images": [
                 {
@@ -3551,14 +3551,14 @@
               "id": "abertura-4",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1396,
+              "scrollHeight": 1427,
               "clientHeight": 946,
               "images": [
                 {
@@ -3581,14 +3581,14 @@
               "id": "01-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1258,
+              "scrollHeight": 1368,
               "clientHeight": 946,
               "images": [
                 {
@@ -3647,14 +3647,14 @@
               "id": "01-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1767,
+              "scrollHeight": 1711,
               "clientHeight": 946,
               "images": [
                 {
@@ -3701,8 +3701,8 @@
                 },
                 {
                   "asset": "diagram-en-01-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3713,14 +3713,14 @@
               "id": "01-4",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1594,
+              "scrollHeight": 1583,
               "clientHeight": 946,
               "images": [
                 {
@@ -3773,14 +3773,14 @@
               "id": "02-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1685,
+              "scrollHeight": 1599,
               "clientHeight": 946,
               "images": [
                 {
@@ -3815,8 +3815,8 @@
                 },
                 {
                   "asset": "diagram-en-02-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -3827,14 +3827,14 @@
               "id": "03-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1201,
+              "scrollHeight": 1335,
               "clientHeight": 946,
               "images": [
                 {
@@ -3893,14 +3893,14 @@
               "id": "05-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1170,
+              "scrollHeight": 1312,
               "clientHeight": 946,
               "images": [
                 {
@@ -3959,14 +3959,14 @@
               "id": "06-1",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1241,
+              "scrollHeight": 1248,
               "clientHeight": 946,
               "images": [
                 {
@@ -4025,14 +4025,14 @@
               "id": "08-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1578,
+              "scrollHeight": 1497,
               "clientHeight": 946,
               "images": [
                 {
@@ -4067,8 +4067,8 @@
                 },
                 {
                   "asset": "diagram-en-08-3-0",
-                  "width": 1000,
-                  "height": 620,
+                  "width": 1100,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4079,14 +4079,14 @@
               "id": "11-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1602,
+              "scrollHeight": 1532,
               "clientHeight": 946,
               "images": [
                 {
@@ -4128,7 +4128,7 @@
                 {
                   "asset": "diagram-en-11-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4139,14 +4139,14 @@
               "id": "14-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1578,
+              "scrollHeight": 1562,
               "clientHeight": 946,
               "images": [
                 {
@@ -4182,7 +4182,7 @@
                 {
                   "asset": "diagram-en-14-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4193,14 +4193,14 @@
               "id": "17-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1750,
+              "scrollHeight": 1759,
               "clientHeight": 946,
               "images": [
                 {
@@ -4230,7 +4230,7 @@
                 {
                   "asset": "diagram-en-17-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4241,14 +4241,14 @@
               "id": "18-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1720,
+              "scrollHeight": 1729,
               "clientHeight": 946,
               "images": [
                 {
@@ -4278,7 +4278,7 @@
                 {
                   "asset": "diagram-en-18-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4289,14 +4289,14 @@
               "id": "19-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1809,
+              "scrollHeight": 1799,
               "clientHeight": 946,
               "images": [
                 {
@@ -4326,7 +4326,7 @@
                 {
                   "asset": "diagram-en-19-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4337,14 +4337,14 @@
               "id": "20-3",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1809,
+              "scrollHeight": 1818,
               "clientHeight": 946,
               "images": [
                 {
@@ -4374,7 +4374,7 @@
                 {
                   "asset": "diagram-en-20-3-0",
                   "width": 1000,
-                  "height": 620,
+                  "height": 700,
                   "complete": true
                 }
               ],
@@ -4385,14 +4385,14 @@
               "id": "fontes-7",
               "globalWidth": 1440,
               "viewportWidth": 1440,
-              "mainWidth": 1440,
-              "mainScrollWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
               "mainTop": 72,
               "mainBottom": 1018,
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1268,
+              "scrollHeight": 1300,
               "clientHeight": 946,
               "images": [
                 {
@@ -4422,13 +4422,13 @@
                 "original": {
                   "font": "13px",
                   "whiteSpace": "pre",
-                  "width": 1266,
-                  "scrollWidth": 1266
+                  "width": 1022,
+                  "scrollWidth": 1022
                 },
                 "wrapped": {
                   "whiteSpace": "pre-wrap",
-                  "width": 1266,
-                  "scrollWidth": 1266
+                  "width": 1022,
+                  "scrollWidth": 1022
                 },
                 "copied": "Copied"
               }
@@ -4438,11 +4438,11 @@
               "status": "PASS",
               "detail": {
                 "width": 1204,
-                "height": 620,
+                "height": 700,
                 "scrollWidth": 1204,
-                "scrollHeight": 620,
-                "imageWidth": 1000,
-                "imageHeight": 620,
+                "scrollHeight": 700,
+                "imageWidth": 1100,
+                "imageHeight": 700,
                 "detail": false
               }
             },
@@ -4453,7 +4453,7 @@
                 "width": 1204,
                 "height": 858,
                 "scrollWidth": 1686,
-                "scrollHeight": 1045,
+                "scrollHeight": 1073,
                 "left": 100,
                 "top": 100,
                 "imageWidth": 1685.59375
@@ -4488,7 +4488,7 @@
                   "rect": {
                     "top": -54.5,
                     "bottom": -18.5,
-                    "width": 79.359375,
+                    "width": 79.78125,
                     "height": 36
                   }
                 },
@@ -4518,11 +4518,11 @@
           "pageErrors": [],
           "zoomFit": {
             "width": 1204,
-            "height": 620,
+            "height": 700,
             "scrollWidth": 1204,
-            "scrollHeight": 620,
-            "imageWidth": 1000,
-            "imageHeight": 620,
+            "scrollHeight": 700,
+            "imageWidth": 1100,
+            "imageHeight": 700,
             "detail": false
           },
           "focusExit": [
@@ -4542,7 +4542,7 @@
               "rect": {
                 "top": -54.5,
                 "bottom": -18.5,
-                "width": 79.359375,
+                "width": 79.78125,
                 "height": 36
               }
             },
@@ -4562,53 +4562,53 @@
       ],
       "errors": [],
       "finalInput": {
-        "file": "work/v4/Nubank_Trust_at_Scale_EN.html",
-        "bytes": 10502533,
-        "mtime": "2026-10-23T22:08:06.401Z",
-        "sha256": "76ebd68fc299345c51664ad0ca81088731fc70971d26b9b6a1bc3db815d36d35"
+        "file": "work/v5/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 22268606,
+        "mtime": "2026-10-24T00:38:01.783Z",
+        "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
       },
       "inputChangedDuringRun": false
     }
   ],
   "screenshots": [
-    "work/v4/qa/final-reader-pt-390-cover.png",
-    "work/v4/qa/final-reader-pt-390-page-39.png",
-    "work/v4/qa/final-reader-pt-390-page-41.png",
-    "work/v4/qa/final-reader-pt-390-page-42.png",
-    "work/v4/qa/final-reader-pt-390-wrapped-code.png",
-    "work/v4/qa/final-reader-pt-390-zoom-fit.png",
-    "work/v4/qa/final-reader-pt-390-zoom-detail.png",
-    "work/v4/qa/final-reader-pt-390-settings.png",
-    "work/v4/qa/final-reader-pt-390-focus.png",
-    "work/v4/qa/final-reader-pt-1440-cover.png",
-    "work/v4/qa/final-reader-pt-1440-page-39.png",
-    "work/v4/qa/final-reader-pt-1440-page-41.png",
-    "work/v4/qa/final-reader-pt-1440-page-42.png",
-    "work/v4/qa/final-reader-pt-1440-wrapped-code.png",
-    "work/v4/qa/final-reader-pt-1440-zoom-fit.png",
-    "work/v4/qa/final-reader-pt-1440-zoom-detail.png",
-    "work/v4/qa/final-reader-pt-1440-settings.png",
-    "work/v4/qa/final-reader-pt-1440-focus.png",
-    "work/v4/qa/final-reader-en-390-cover.png",
-    "work/v4/qa/final-reader-en-390-page-39.png",
-    "work/v4/qa/final-reader-en-390-page-41.png",
-    "work/v4/qa/final-reader-en-390-page-42.png",
-    "work/v4/qa/final-reader-en-390-wrapped-code.png",
-    "work/v4/qa/final-reader-en-390-zoom-fit.png",
-    "work/v4/qa/final-reader-en-390-zoom-detail.png",
-    "work/v4/qa/final-reader-en-390-settings.png",
-    "work/v4/qa/final-reader-en-390-focus.png",
-    "work/v4/qa/final-reader-en-1440-cover.png",
-    "work/v4/qa/final-reader-en-1440-page-39.png",
-    "work/v4/qa/final-reader-en-1440-page-41.png",
-    "work/v4/qa/final-reader-en-1440-page-42.png",
-    "work/v4/qa/final-reader-en-1440-wrapped-code.png",
-    "work/v4/qa/final-reader-en-1440-zoom-fit.png",
-    "work/v4/qa/final-reader-en-1440-zoom-detail.png",
-    "work/v4/qa/final-reader-en-1440-settings.png",
-    "work/v4/qa/final-reader-en-1440-focus.png"
+    "work/v5/qa/final-reader-pt-390-cover.png",
+    "work/v5/qa/final-reader-pt-390-page-39.png",
+    "work/v5/qa/final-reader-pt-390-page-41.png",
+    "work/v5/qa/final-reader-pt-390-page-42.png",
+    "work/v5/qa/final-reader-pt-390-wrapped-code.png",
+    "work/v5/qa/final-reader-pt-390-zoom-fit.png",
+    "work/v5/qa/final-reader-pt-390-zoom-detail.png",
+    "work/v5/qa/final-reader-pt-390-settings.png",
+    "work/v5/qa/final-reader-pt-390-focus.png",
+    "work/v5/qa/final-reader-pt-1440-cover.png",
+    "work/v5/qa/final-reader-pt-1440-page-39.png",
+    "work/v5/qa/final-reader-pt-1440-page-41.png",
+    "work/v5/qa/final-reader-pt-1440-page-42.png",
+    "work/v5/qa/final-reader-pt-1440-wrapped-code.png",
+    "work/v5/qa/final-reader-pt-1440-zoom-fit.png",
+    "work/v5/qa/final-reader-pt-1440-zoom-detail.png",
+    "work/v5/qa/final-reader-pt-1440-settings.png",
+    "work/v5/qa/final-reader-pt-1440-focus.png",
+    "work/v5/qa/final-reader-en-390-cover.png",
+    "work/v5/qa/final-reader-en-390-page-39.png",
+    "work/v5/qa/final-reader-en-390-page-41.png",
+    "work/v5/qa/final-reader-en-390-page-42.png",
+    "work/v5/qa/final-reader-en-390-wrapped-code.png",
+    "work/v5/qa/final-reader-en-390-zoom-fit.png",
+    "work/v5/qa/final-reader-en-390-zoom-detail.png",
+    "work/v5/qa/final-reader-en-390-settings.png",
+    "work/v5/qa/final-reader-en-390-focus.png",
+    "work/v5/qa/final-reader-en-1440-cover.png",
+    "work/v5/qa/final-reader-en-1440-page-39.png",
+    "work/v5/qa/final-reader-en-1440-page-41.png",
+    "work/v5/qa/final-reader-en-1440-page-42.png",
+    "work/v5/qa/final-reader-en-1440-wrapped-code.png",
+    "work/v5/qa/final-reader-en-1440-zoom-fit.png",
+    "work/v5/qa/final-reader-en-1440-zoom-detail.png",
+    "work/v5/qa/final-reader-en-1440-settings.png",
+    "work/v5/qa/final-reader-en-1440-focus.png"
   ],
-  "finished": "2026-10-23T22:08:42.216Z",
+  "finished": "2026-10-24T00:44:24.710Z",
   "status": "PASS",
   "summary": {
     "pageViewportChecks": 76,

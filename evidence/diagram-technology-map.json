@@ -1,0 +1,291 @@
+{
+  "note": {
+    "pt": "Implementação sugerida · marcas oficiais das tecnologias",
+    "en": "Proposed implementation · official technology marks"
+  },
+  "proposed_technology_by_node": {
+    "arquiteturas-1": {
+      "1": "flutter",
+      "2": "aws",
+      "3": "clojure",
+      "4": "datomic",
+      "5": "kafka",
+      "6": "clojure",
+      "7": null,
+      "8": "opentelemetry"
+    },
+    "arquiteturas-2": {
+      "1": null,
+      "2": "flutter",
+      "3": "clojure",
+      "4": "clojure",
+      "5": null,
+      "6": "datomic",
+      "7": "flutter"
+    },
+    "arquiteturas-3": {
+      "1": "flutter",
+      "2": "typescript",
+      "3": "dart",
+      "4": "aws",
+      "5": "flutter",
+      "6": "prometheus",
+      "7": "clojure"
+    },
+    "arquiteturas-4": {
+      "1": "kafka",
+      "2": "python",
+      "3": "python",
+      "4": "clojure",
+      "5": "clojure",
+      "6": null,
+      "7": "python"
+    },
+    "01-3": {
+      "1": "flutter",
+      "2": "clojure",
+      "3": "clojure",
+      "4": "datomic",
+      "5": "kafka",
+      "6": "clojure",
+      "7": "flutter"
+    },
+    "02-3": {
+      "1": "flutter",
+      "2": "clojure",
+      "3": "flutter",
+      "4": null,
+      "5": "datomic",
+      "6": "clojure",
+      "7": "flutter"
+    },
+    "03-3": {
+      "1": "clojure",
+      "2": "kafka",
+      "3": "clojure",
+      "4": "flutter",
+      "5": null,
+      "6": "flutter",
+      "7": "datomic"
+    },
+    "04-3": {
+      "1": "clojure",
+      "2": null,
+      "3": "clojure",
+      "4": "clojure",
+      "5": "datomic",
+      "6": "clojure",
+      "7": "flutter"
+    },
+    "05-3": {
+      "1": null,
+      "2": "datomic",
+      "3": "flutter",
+      "4": "python",
+      "5": "kafka",
+      "6": "clojure",
+      "7": "flutter"
+    },
+    "06-3": {
+      "1": "flutter",
+      "2": "dart",
+      "3": "clojure",
+      "4": "clojure",
+      "5": "clojure",
+      "6": "clojure",
+      "7": "flutter"
+    },
+    "07-3": {
+      "1": null,
+      "2": "datomic",
+      "3": "clojure",
+      "4": "python",
+      "5": null,
+      "6": null,
+      "7": "python"
+    },
+    "08-3": {
+      "0": null,
+      "1": "clojure",
+      "2": "datomic",
+      "3": "clojure",
+      "4": "datomic",
+      "5": "flutter",
+      "6": "python"
+    },
+    "09-3": {
+      "0": null,
+      "1": "clojure",
+      "2": "redis",
+      "3": "dart",
+      "4": "flutter",
+      "5": "flutter",
+      "6": "flutter"
+    },
+    "10-3": {
+      "0": null,
+      "1": "clojure",
+      "2": null,
+      "3": "python",
+      "4": "postgresql",
+      "5": "flutter",
+      "6": "clojure"
+    },
+    "11-3": {
+      "0": "clojure",
+      "1": "kafka",
+      "2": "clojure",
+      "3": "datomic",
+      "4": "clojure",
+      "5": "clojure",
+      "6": null
+    },
+    "12-3": {
+      "0": "aws",
+      "1": "python",
+      "2": "datomic",
+      "3": "python",
+      "4": "kubernetes",
+      "5": "terraform",
+      "6": "flutter"
+    },
+    "13-3": {
+      "0": null,
+      "1": "datomic",
+      "2": null,
+      "3": null,
+      "4": "clojure",
+      "5": "aws",
+      "6": "clojure"
+    },
+    "14-3": {
+      "0": null,
+      "1": "dart",
+      "2": "datomic",
+      "3": "clojure",
+      "4": "flutter",
+      "5": "clojure",
+      "6": "opentelemetry"
+    },
+    "15-3": {
+      "1": "flutter",
+      "2": "dart",
+      "3": "opentelemetry",
+      "4": "python",
+      "5": "grafana",
+      "6": "python",
+      "7": null
+    },
+    "16-3": {
+      "1": "kafka",
+      "2": "kafka",
+      "3": "redis",
+      "4": "python",
+      "5": "clojure",
+      "6": null,
+      "7": null
+    },
+    "17-3": {
+      "1": "flutter",
+      "2": "python",
+      "3": "python",
+      "4": "clojure",
+      "5": "clojure",
+      "6": null,
+      "7": "python"
+    },
+    "18-3": {
+      "1": "kafka",
+      "2": "clojure",
+      "3": "python",
+      "4": "python",
+      "5": "python",
+      "6": "datomic",
+      "7": null
+    },
+    "19-3": {
+      "1": "clojure",
+      "2": "dart",
+      "3": "dart",
+      "4": "flutter",
+      "5": "flutter",
+      "6": "python",
+      "7": null
+    },
+    "20-3": {
+      "1": "nubank",
+      "2": "flutter",
+      "3": "clojure",
+      "4": "clojure",
+      "5": null,
+      "6": "clojure",
+      "7": "datomic"
+    }
+  },
+  "official_marks": {
+    "aws": {
+      "name": "AWS",
+      "source": "https://aws.amazon.com/"
+    },
+    "clojure": {
+      "name": "Clojure",
+      "source": "https://clojure.org/"
+    },
+    "dart": {
+      "name": "Dart",
+      "source": "https://dart.dev/"
+    },
+    "datomic": {
+      "name": "Datomic",
+      "source": "https://www.datomic.com/"
+    },
+    "flutter": {
+      "name": "Flutter",
+      "source": "https://flutter.dev/brand"
+    },
+    "grafana": {
+      "name": "Grafana",
+      "source": "https://grafana.com/"
+    },
+    "kafka": {
+      "name": "Apache Kafka",
+      "source": "https://kafka.apache.org/"
+    },
+    "kubernetes": {
+      "name": "Kubernetes",
+      "source": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg"
+    },
+    "nubank": {
+      "name": "Nubank",
+      "source": "https://www.datomic.com/"
+    },
+    "opentelemetry": {
+      "name": "OpenTelemetry",
+      "source": "https://opentelemetry.io/"
+    },
+    "postgresql": {
+      "name": "PostgreSQL",
+      "source": "https://www.postgresql.org/"
+    },
+    "prometheus": {
+      "name": "Prometheus",
+      "source": "https://prometheus.io/"
+    },
+    "python": {
+      "name": "Python",
+      "source": "https://www.python.org/community/logos/"
+    },
+    "redis": {
+      "name": "Redis",
+      "source": "https://redis.io/"
+    },
+    "terraform": {
+      "name": "Terraform",
+      "source": "https://github.com/hashicorp/design-system"
+    },
+    "typescript": {
+      "name": "TypeScript",
+      "source": "https://www.typescriptlang.org/branding/"
+    }
+  }
+}
