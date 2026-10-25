@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "currency": "BRL",
+  "assumptions_not_observed_returns": true,
+  "source_book_sha256": "486d620173b766e52eee5f042f9a46d9e84f5cf38b0d63ff0d771a0a099362d6",
+  "cases": [
+    {
+      "case": "01",
+      "page_id": "01-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 8000.0,
+          "variable_cost": 0.0,
+          "run_cost": 4000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 40000.0,
+          "variable_cost": 0.0,
+          "run_cost": 8000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 120000.0,
+          "variable_cost": 0.0,
+          "run_cost": 15000.0,
+          "build_cost": 120000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "02",
+      "page_id": "02-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 2800.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 16800.0,
+          "variable_cost": 0.0,
+          "run_cost": 8000.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 50400.0,
+          "variable_cost": 0.0,
+          "run_cost": 12000.0,
+          "build_cost": 150000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "03",
+      "page_id": "03-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. The original realizable-capacity factor is already included; the slider applies an additional stress.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 3750.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 180000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 22500.0,
+          "variable_cost": 0.0,
+          "run_cost": 10000.0,
+          "build_cost": 180000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 60000.0,
+          "variable_cost": 0.0,
+          "run_cost": 18000.0,
+          "build_cost": 180000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "04",
+      "page_id": "04-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 5400.0,
+          "variable_cost": 5400.0,
+          "run_cost": 3000.0,
+          "build_cost": 110000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 28800.0,
+          "variable_cost": 11520.0,
+          "run_cost": 6000.0,
+          "build_cost": 110000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 81000.0,
+          "variable_cost": 13500.0,
+          "run_cost": 10000.0,
+          "build_cost": 110000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "05",
+      "page_id": "05-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 4000.0,
+          "variable_cost": 450.0,
+          "run_cost": 4000.0,
+          "build_cost": 100000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 28800.0,
+          "variable_cost": 1350.0,
+          "run_cost": 7000.0,
+          "build_cost": 100000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 86400.0,
+          "variable_cost": 2700.0,
+          "run_cost": 12000.0,
+          "build_cost": 100000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "06",
+      "page_id": "06-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. The original realizable-capacity factor is already included; the slider applies an additional stress.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 2500.0,
+          "variable_cost": 600.0,
+          "run_cost": 3000.0,
+          "build_cost": 140000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 18000.0,
+          "variable_cost": 1800.0,
+          "run_cost": 6000.0,
+          "build_cost": 140000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 60000.0,
+          "variable_cost": 3600.0,
+          "run_cost": 10000.0,
+          "build_cost": 140000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "07",
+      "page_id": "07-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 8100.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 160000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 43200.0,
+          "variable_cost": 0.0,
+          "run_cost": 10000.0,
+          "build_cost": 160000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 108000.0,
+          "variable_cost": 0.0,
+          "run_cost": 18000.0,
+          "build_cost": 160000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "08",
+      "page_id": "08-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 144000.0,
+          "variable_cost": 0.0,
+          "run_cost": 60000.0,
+          "build_cost": 240000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 504000.0,
+          "variable_cost": 0.0,
+          "run_cost": 90000.0,
+          "build_cost": 240000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 1080000.0,
+          "variable_cost": 0.0,
+          "run_cost": 120000.0,
+          "build_cost": 240000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "09",
+      "page_id": "09-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 70800.0,
+          "variable_cost": 0.0,
+          "run_cost": 60000.0,
+          "build_cost": 260000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 240000.0,
+          "variable_cost": 0.0,
+          "run_cost": 60000.0,
+          "build_cost": 260000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 676800.0,
+          "variable_cost": 0.0,
+          "run_cost": 60000.0,
+          "build_cost": 260000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "10",
+      "page_id": "10-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 4050.0,
+          "variable_cost": 0.0,
+          "run_cost": 36000.0,
+          "build_cost": 180000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 27000.0,
+          "variable_cost": 0.0,
+          "run_cost": 36000.0,
+          "build_cost": 180000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 108000.0,
+          "variable_cost": 0.0,
+          "run_cost": 36000.0,
+          "build_cost": 180000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "11",
+      "page_id": "11-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 16000.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 120000.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 400000.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 120000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "12",
+      "page_id": "12-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 3900.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 90000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 15600.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 90000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 46800.0,
+          "variable_cost": 0.0,
+          "run_cost": 24000.0,
+          "build_cost": 90000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "13",
+      "page_id": "13-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 6400.0,
+          "variable_cost": 0.0,
+          "run_cost": 12000.0,
+          "build_cost": 60000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 32000.0,
+          "variable_cost": 0.0,
+          "run_cost": 12000.0,
+          "build_cost": 60000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 96000.0,
+          "variable_cost": 0.0,
+          "run_cost": 12000.0,
+          "build_cost": 60000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "14",
+      "page_id": "14-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "year",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 14400.0,
+          "variable_cost": 0.0,
+          "run_cost": 30000.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 67200.0,
+          "variable_cost": 0.0,
+          "run_cost": 30000.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 192000.0,
+          "variable_cost": 0.0,
+          "run_cost": 30000.0,
+          "build_cost": 150000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost"
+    },
+    {
+      "case": "15",
+      "page_id": "15-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 3200.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 8000.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 120000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 16000.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 120000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "16",
+      "page_id": "16-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 3240.0,
+          "variable_cost": 0.0,
+          "run_cost": 4000.0,
+          "build_cost": 90000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 9720.0,
+          "variable_cost": 0.0,
+          "run_cost": 4000.0,
+          "build_cost": 90000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 19440.0,
+          "variable_cost": 0.0,
+          "run_cost": 4000.0,
+          "build_cost": 90000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "17",
+      "page_id": "17-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 6000.0,
+          "variable_cost": 0.0,
+          "run_cost": 4500.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 12000.0,
+          "variable_cost": 0.0,
+          "run_cost": 4500.0,
+          "build_cost": 150000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 18000.0,
+          "variable_cost": 0.0,
+          "run_cost": 4500.0,
+          "build_cost": 150000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "18",
+      "page_id": "18-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. Benefit already covers one cohort with six active months per extra line; do not multiply it by six again.",
+      "period": "cohort",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 7200.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 20000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 18000.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 20000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 28800.0,
+          "variable_cost": 0.0,
+          "run_cost": 5000.0,
+          "build_cost": 20000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; six_month_cohort = period_net − build_cost"
+    },
+    {
+      "case": "19",
+      "page_id": "19-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. Variable cost is the assumed forgone contribution; it also remains fixed in this stress test.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 2500.0,
+          "variable_cost": 150.0,
+          "run_cost": 3000.0,
+          "build_cost": 80000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 5000.0,
+          "variable_cost": 300.0,
+          "run_cost": 3000.0,
+          "build_cost": 80000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 7500.0,
+          "variable_cost": 450.0,
+          "run_cost": 3000.0,
+          "build_cost": 80000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    },
+    {
+      "case": "20",
+      "page_id": "20-17",
+      "type": "simulation",
+      "title": "Scenario sensitivity · BRL",
+      "note": "All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. BRL-days of unresolved exposure are excluded from benefit; they are not profit.",
+      "period": "month",
+      "scenarios": [
+        {
+          "name": "Conservative",
+          "benefit": 5000.0,
+          "variable_cost": 0.0,
+          "run_cost": 2000.0,
+          "build_cost": 60000.0
+        },
+        {
+          "name": "Base",
+          "benefit": 7500.0,
+          "variable_cost": 0.0,
+          "run_cost": 2000.0,
+          "build_cost": 60000.0
+        },
+        {
+          "name": "Ambitious",
+          "benefit": 10000.0,
+          "variable_cost": 0.0,
+          "run_cost": 2000.0,
+          "build_cost": 60000.0
+        }
+      ],
+      "formula": "period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost"
+    }
+  ]
+}

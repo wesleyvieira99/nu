@@ -40,6 +40,8 @@ A tela não é participante dessa transação: sua prévia pode envelhecer. O di
 
 ## Núcleo: duas vias, um saldo
 
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]`
+
 ```python
     def reserve(self, owner, ident, card, cents):
         if not isinstance(ident, str) or not ident.strip():
@@ -83,6 +85,8 @@ O teto é uma configuração separada. O laboratório modela orçamento acumulad
 
 ## Uma prévia honesta no aplicativo
 
+`Transactional Revalidation [proposal]` · `Shared Budget Invariant [proposal]`
+
 ```dart
 class CreditView {
   final int globalAvailableCents;
@@ -110,6 +114,8 @@ O componente precisa distinguir teto escolhido de crédito disponível em texto 
 
 ## Contrato de limite e de orçamento
 
+`Transactional Revalidation [proposal]` · `Shared Budget Invariant [proposal]`
+
 | Campo | O que representa | O que não representa |
 | --- | --- | --- |
 | global_available | Crédito após reservas | Promessa de aprovação |
@@ -136,6 +142,8 @@ Valores sintéticos; não reproduzem o saldo privado da reclamação.
 A interface não deve apresentar dados de uma conta sob contexto de outra sessão. Cache precisa de escopo por titular, cartão e versão. O motivo seguro de recusa é um contrato entre risco e produto; logs detalhados ficam restritos. A exposição pública de sinais de fraude não é necessária para explicar que teto virtual e limite aprovado são conceitos diferentes.
 
 ## Concorrência ataca a autoridade
+
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]`
 
 ```python
     def test_two_cards_cannot_overspend_shared_credit(self):
@@ -236,3 +244,95 @@ Os valores do laboratório são exemplos sintéticos. A conta real do relato per
 A decisão final exige compreensão melhor, projeções com semântica correta e ausência de regressão na política. Se a evidência mostrar apenas terminologia ruim, priorizar uma melhoria pequena. Se houver disputa de saldo concorrente, tratar a autoridade antes da apresentação. O projeto é forte quando a intervenção acompanha o problema demonstrado, não quando maximiza a quantidade de serviços novos.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py)
+
+## Padrões com prova no código
+
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]` · `Aggregate boundary [proposal]` · `Spring Transactions [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Transactional Revalidation | Credit.reserve | a reserva revalida o crédito atual sem confiar na prévia |
+| Shared Budget Invariant | Credit.reserve | dois cartões não excedem o orçamento compartilhado |
+| Aggregate boundary / credit domain | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Transactions + optimistic locking. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Credit.reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+- [P1 · test_stale_preview_cannot_authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L126)
+- [P2 · Credit.reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+- [P2 · test_two_cards_cannot_overspend_shared_credit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L84)
+
+## Sequência de execução
+
+![Não modela risco, 3DS, rede real nem expiração de reservas. Orçamento sintético não tem período comercial.](../../evidence/sequence-pt-13.svg)
+
+Não modela risco, 3DS, rede real nem expiração de reservas. Orçamento sintético não tem período comercial.
+
+**Autoridade e fronteira de falha**
+
+a reserva revalida o crédito atual sem confiar na prévia. dois cartões não excedem o orçamento compartilhado.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [preview](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L30)
+- [reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+
+## Features, histórias e aceite
+
+**F13.1 · Prévia do limite utilizável · D16–30**
+
+Como cliente, quero entender teto do cartão e crédito compartilhado. Aceite: a reserva revalida o crédito atual sem confiar na prévia.
+
+**F13.2 · Reserva única e conjunta · D31–60**
+
+Como cliente, quero evitar uso simultâneo acima do crédito disponível. Aceite: dois cartões não excedem o orçamento compartilhado.
+
+**F13.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F13.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L126)
+- [Aceite F13.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L84)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 6400.00 | 0.00 | 12000.00 | 60000.00 |
+| Base | 32000.00 | 0.00 | 12000.00 | 60000.00 |
+| Ambicioso | 96000.00 | 0.00 | 12000.00 | 60000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -5600.00 | -65600.00 | -68800.00 |
+| Base | 20000.00 | -40000.00 | -56000.00 |
+| Ambicioso | 84000.00 | 24000.00 | -24000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contatos por confusão de teto. Ameaça: confundir saldo legitimamente alterado e leitura velha. |
+| Economia por unidade | Usuários elegíveis × contatos evitados × custo; crédito e volume transacionado não são receita. |
+| Experimento proposto | Alterar só a explicação, mantendo autorização; comparar uso do cartão virtual e versão. |
+| Critério de parada | Parar por vazamento entre contas, promessa de aprovação ou autorização fora da política. |
+
+- [Reclame AQUI · ID 244706833](https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

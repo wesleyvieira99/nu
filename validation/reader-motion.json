@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "V7 CSS/JS injected into complete V6 books in memory; no production HTML edited. Cover media fixture uses existing official-source URL and office poster to exercise player contract only.",
+  "checks": [
+    "Initial cover: motion enabled; official player absent before click",
+    "Pause persisted across reload",
+    "YouTube loads only after click and returns to poster when motion paused",
+    "One render per navigation; browser Back restores cover",
+    "PT→EN preserves page and localizes line metadata",
+    "Theme, font size and focus controls remain functional",
+    "Search and Escape close work",
+    "Diagram zoom/details remain functional",
+    "820px: no horizontal shell overflow; chapter20 direct navigation works",
+    "390px: no horizontal shell overflow; chapter20 direct navigation works",
+    "Reduced motion stops CSS ambient motion and disables autoplay preference"
+  ],
+  "screenshots": [
+    "v7-cover-desktop.png",
+    "v7-code-desktop.png",
+    "v7-cover-820.png",
+    "v7-cover-390.png"
+  ],
+  "errors": []
+}

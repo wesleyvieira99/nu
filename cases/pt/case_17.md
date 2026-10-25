@@ -39,6 +39,8 @@ O laboratório só executa a alternativa dinheiro, deliberadamente. Milhas exigi
 
 ## Consumir exatamente a prévia aceita
 
+`Quote / Commit [lab]` · `Expiring Quote [lab]`
+
 ```python
     def redeem(self, actor, quote_id, choice, key, now):
         with self.lock:
@@ -81,6 +83,8 @@ A mesma chave devolve o mesmo recibo após o compromisso. Outra chave para a mes
 
 ## Dart: consequência antes do botão
 
+`Quote / Commit [proposal]` · `Expiring Quote [proposal]`
+
 ```dart
 class RedemptionPreview {
   final int pointsConsumedMinor;
@@ -105,6 +109,8 @@ Eu organizaria a prévia em uma frase principal e três quantidades: o que sai, 
 Um aviso genérico repetido pode virar ruído. Eu compararia uma consequência concreta com uma caixa de confirmação adicional, medindo entendimento e erros, não cliques. Ao expirar a cotação, a interface volta à prévia e exige nova confirmação; não atualiza números atrás do botão já aceito. A regra de irreversibilidade precisa ser comunicada sem prometer exceção operacional.
 
 ## Unidades que o contrato não confunde
+
+`Quote / Commit [proposal]` · `Expiring Quote [proposal]`
 
 | Campo | Unidade | Invariante |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ A representação de pontos precisa dizer unidade e precisão em todo limite. Um
 O registro de confirmação deve ser suficiente para revisar qual prévia foi apresentada, sem capturar a tela inteira ou dados de viagem. Retenção e acesso seguem política definida com Privacidade. Reconstruir uma decisão não exige armazenar todos os gestos da pessoa; exige identidade da cotação, revisão do texto e resultado financeiro.
 
 ## O teste não confunde UX com atomicidade
+
+`Quote / Commit [lab]` · `Expiring Quote [lab]`
 
 ```python
     def test_same_balance_cannot_be_spent_twice(self):
@@ -217,3 +225,95 @@ O aceite requer unidade explícita, cotação emitida por autoridade, saldo reva
 Eu avançaria se a prévia melhora compreensão sem inventar flexibilidade contratual. Pararia se a solução depende de prometer reversão que o domínio não oferece. A demonstração final para o revisor deve permitir explicar, em voz alta e sem jargão, o saldo antes, a escolha e o saldo depois.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py)
+
+## Padrões com prova no código
+
+`Quote / Commit [lab]` · `Expiring Quote [lab]` · `Aggregate invariant [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Quote / Commit | Benefits.redeem | duas tentativas concorrentes sobre o mesmo saldo permitem um commit |
+| Expiring Quote | Benefits.redeem | cotação expirada não produz resgate |
+| Aggregate invariant / benefit ledger | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + immutable quote DTO. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Benefits.redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+- [P1 · test_concurrent_choices_only_one_commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L113)
+- [P2 · Benefits.redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+- [P2 · test_expired_preview_has_no_financial_effect](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L105)
+
+## Sequência de execução
+
+![Taxa vem de cotação confiada. Centésimos de ponto e centavos são distintos; lock não é transação distribuída.](../../evidence/sequence-pt-17.svg)
+
+Taxa vem de cotação confiada. Centésimos de ponto e centavos são distintos; lock não é transação distribuída.
+
+**Autoridade e fronteira de falha**
+
+duas tentativas concorrentes sobre o mesmo saldo permitem um commit. cotação expirada não produz resgate.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L37)
+- [redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+
+## Features, histórias e aceite
+
+**F17.1 · Escolha com consequência · D16–30**
+
+Como cliente, quero entender a exclusividade antes de consumir os pontos. Aceite: duas tentativas concorrentes sobre o mesmo saldo permitem um commit.
+
+**F17.2 · Prévia sem efeito financeiro · D31–60**
+
+Como cliente, quero deixar uma cotação expirar sem movimentar meu saldo. Aceite: cotação expirada não produz resgate.
+
+**F17.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F17.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L113)
+- [Aceite F17.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L105)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 6000.00 | 0.00 | 4500.00 | 150000.00 |
+| Base | 12000.00 | 0.00 | 4500.00 | 150000.00 |
+| Ambicioso | 18000.00 | 0.00 | 4500.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 1500.00 | -132000.00 | -168000.00 |
+| Base | 7500.00 | -60000.00 | -132000.00 |
+| Ambicioso | 13500.00 | 12000.00 | -96000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: entendimento de saldo e exclusividade. Ameaça: menos contato por desistência de pedir reversão. |
+| Economia por unidade | Resgates × mal-entendido × prevenção × custo de atendimento e reparação assumida; não presume direito à reversão. |
+| Experimento proposto | Pesquisar e testar apenas apresentação; não randomizar taxa, direito ou reversibilidade. |
+| Critério de parada | Parar por consumo duplicado; expandir só com compreensão e conclusão legítima preservadas. |
+
+- [Reclame AQUI · ID 245086475](https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

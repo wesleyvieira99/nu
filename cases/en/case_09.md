@@ -40,6 +40,8 @@ Available-credit updates may run at a different pace, but must expose their revi
 
 ## Core: allocate or change nothing
 
+`Unit of Work [lab]` · `Conservation Invariant [lab]`
+
 ```python
     def apply(self, ident, amount, plan, crash=False):
         if not isinstance(ident, str) or not ident.strip():
@@ -83,6 +85,8 @@ The example receives a preselected plan and does not implement Nubank’s contra
 
 ## Pure rules, transactional writes
 
+`Unit of Work [proposal]` · `Conservation Invariant [proposal]`
+
 ```clojure
 (defn allocation-valid? [{:keys [received allocations unapplied]}]
   (and (pos-int? received)
@@ -104,6 +108,8 @@ The function checks conservation but cannot prove that each obligation is eligib
 Event integration should persist allocation and publication intent atomically. The projection consumer deduplicates by identifier and financial revision. Transport ordering alone is insufficient: replay, reprocessing and consumer changes can redeliver the same fact. Publication failure leaves identifiable pending work, not permission to apply the payment again.
 
 ## Conserve money and identity
+
+`Unit of Work [proposal]` · `Conservation Invariant [proposal]`
 
 | Field | Meaning | Owner |
 | --- | --- | --- |
@@ -130,6 +136,8 @@ Synthetic example: 15,001 received, 15,000 applied and 1 unapplied.
 A credit projection behind the financial revision explains that the view is still updating, without asserting that credit is already available. Identifiers must not expose accounts or contracts in public URLs. Support receives what is needed to explain allocation; third-party details and unrelated obligations remain protected. Rectification should reference the earlier fact and preserve the trail.
 
 ## Partial failure must not partially settle
+
+`Unit of Work [lab]` · `Conservation Invariant [lab]`
 
 ```python
     def test_failure_after_first_write_rolls_everything_back(self):
@@ -225,3 +233,95 @@ A reviewer must be able to explain where every cent came from and where it went.
 Proceeding requires a reconciled sample, demonstrated customer understanding and operations able to resolve differences. If conservation breaks, the gate is to stop and correct the financial authority. If writes are correct and only the view is confusing, the explanation pilot can proceed with lower risk and cost.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py)
+
+## Patterns with proof
+
+`Unit of Work [lab]` · `Conservation Invariant [lab]` · `Transactional boundary [proposal]` · `Spring Transactions [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Unit of Work | Ledger.apply | a partial failure rolls back all changes |
+| Conservation Invariant | Ledger.receipt | allocated value plus the remainder conserves the received value |
+| Transactional boundary / ledger adapter | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Transactions + integer minor units. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Ledger.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L34)
+- [P1 · test_failure_after_first_write_rolls_everything_back](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L95)
+- [P2 · Ledger.receipt](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L66)
+- [P2 · test_exact_conservation_across_two_targets](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L130)
+
+## Execution sequence
+
+![Settlement and contractual order come from adapters; the model does not prove actual credit-limit restoration.](../../evidence/sequence-en-09.svg)
+
+Settlement and contractual order come from adapters; the model does not prove actual credit-limit restoration.
+
+**Authority and failure boundary**
+
+a partial failure rolls back all changes. allocated value plus the remainder conserves the received value.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L34)
+- [receipt](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L66)
+
+## Features, stories and acceptance
+
+**F09.1 · Atomic allocation · D16–30**
+
+As a customer, I want to understand how my payment was allocated. Acceptance: a partial failure rolls back all changes.
+
+**F09.2 · Receipt by destination · D31–60**
+
+As a reconciliation operator, I want to reconcile the paid total with each obligation. Acceptance: allocated value plus the remainder conserves the received value.
+
+**F09.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F09.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L95)
+- [Acceptance F09.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L130)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 70800.00 | 0.00 | 60000.00 | 260000.00 |
+| Base | 240000.00 | 0.00 | 60000.00 | 260000.00 |
+| Ambitious | 676800.00 | 0.00 | 60000.00 | 260000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | 10800.00 | -249200.00 | -284600.00 |
+| Base | 180000.00 | -80000.00 | -200000.00 |
+| Ambitious | 616800.00 | 356800.00 | 18400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: contacts and reconciliation hours per payment. Threat: confusing network and settlement delays. |
+| Unit economics | Avoided contacts + hours released per thousand payments; received principal is excluded from benefit. |
+| Proposed experiment | Release the receipt without changing allocation; match product, financing and amount. |
+| Stop rule | Stop for broken conservation, repeated payments or cross-account context. |
+
+- [Reclame AQUI · ID 242838873](https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

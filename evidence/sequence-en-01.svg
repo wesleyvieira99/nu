@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Pix: refunds need confirmation</title>
+<desc id="desc">The trusted flag is injected; there is no real Pix call or event signature.</desc>
+<defs><marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7c22bf"/></marker><marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#087f8c"/></marker></defs>
+<rect x="0" y="0" width="1200" height="800" rx="20" fill="#fcfbfe"/>
+<text x="32" y="32" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="start" >SEQUENCE 01</text>
+<text x="32" y="58" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#251936" text-anchor="start" >Pix: refunds need confirmation</text>
+<g data-participant="u">
+<line x1="100.0" y1="168" x2="100.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="u" x="12.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<circle cx="100.0" cy="90" r="5.5" fill="none" stroke="#6c6178" stroke-width="1.8"/><path d="M91.0,107 Q100.0,90 109.0,107" fill="none" stroke="#6c6178" stroke-width="1.8"/>
+<text x="100" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Customer</text>
+<text x="100" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >ROLE / INTEGRATION</text>
+</g>
+<g data-participant="app">
+<line x1="350.0" y1="168" x2="350.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="app" x="262.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="flutter" x="322.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAAA4CAIAAACqiesdAAAIX0lEQVR42u3ba2xUxxUH8HNmxjvrxV4TgsHYpiFqi/qIVBVQ27QlJRDiNE0qlRBQIIE0aat+bwxpkSoqpVJVtUqQ+qEf2yppXqStIrUkViiYl02waQtIQY6dFIzXooDBu/a+7pw5/XB37743UT7cvcZYlh/yrnX3t/8zrzuDzAxz5IMBmEEg/P5DOpUQJpkBRC59QO4bgvuykBklymb98CLa1CV9uEg15zT/eIGGU9Ik04BY/aGY+4qWhUTVqh9s9UkTAMTc0vzDBRrISDNTWzMfVOSc5nei9pFuaf2qQzGXNC/SQFpmb2QsY1kcyxKKzEKgbNUPRmlTlyAG9Otq1Zyp9Is0kJbOdKYsa1WSl9f8dpQe6ZLEIKBeoOcRaHG7OZCRznTGepmsVcLMUqCK6gdaabPvmoEueU/zTxdNTpO9P9R8kqvZ0yDN4IKWaKaVM50hLmo1sYYmoorq+1vo0QZpBrTkPc0XL5qBtMqWtZvV48kCc9lsoGYQQd2CFggvjdOxtKrshaq1oSwRZXE2EbBB16+CqAnw53E6liq0myUB5bKw5ip9Ywtt6W6wZrDaUE/z5Uv2aEpmK7NZbeQpEVRU3xcMzQCBFjTH6UhS1NQsjatEVtHwvRHa2i2JueGaQSl5T/OVcarMZq0OSbiaLbQtp4kYgNeigqP56iXqr6tZ/LtEltHwugW0rVtagIBoNh6UASyDRHhtwh6eldl4ps4qBhdXelv4nghtXy5tnYHpfGtDPc39E/bQrKjU5BrZVG3heyL28eBpNhK0SJMOzni9UE0cRgAGgazawt+K0OPLRQA1GwZaollS6Vyn9RQITW3htc1meyCz2TBQT/ONmD04U328yeVLSK6m/mazeeJTynJANRvQKTGDBZAIb0zQOzPVe6GammGzw9XEgGr6nVBP8y8xm9fkj9AEEAihNv0NbXbcEXRNXxPqaf41ZvsSwolnrMtTexXJy+bdYdo5FzT9Ay3SpLcTskyTazzF1fx6mJ68QxZrfrIbbnjTgFZqcl6z9o2MeprzveRLNBMZa5nrThSZQSA3tYXvrtRkQARimMwAu93ZR/wrRgAU6BDfuQBvElCJ8OYkvT0jnUTGUg1Nd7uHO94EDrWFv6rp+5XZRMgQ7/uA3kspk8qiEMA1V08AwFpGKYSUO7tuItAXL5j+hKJU2tqageK8mQBuWhj+WriaJkDWwgtj9D4pk0wBCrblw4TS2aqVSqJWP1xGa9vlfFkcKTZwNfPZZMyvIeU1+YUxGiFl4inA8mxWaLJQEkOhpzpobbu0DMKXphf92Sz25iT9PS5NPENl3VE1zadXlGoyIIJj+fkxGjHKiacsiMo3o3TeykIJ1KGnltl17YIAJNxEnRIxfHeZJKYDrNntlCo6alfzK5qeXiEZwNN0k+VY2DdKI6SceDqnWWd+xSyVQB16ssOuaxeGWfm4WKr8mY0Rw/c6JTAdAG3i5R29q7kmRD9YIblozOhqWoZ9Y+Z8TrP6YKtSc2cH3btE+qzpX8kXJp0T9FaiUPsMIAGaFuo1mn5UoYnADsMv3qPLUpnpNLmaHyObO5bShqUN0PRvLo+Yy+mmLtnTSjKqhUAAFsBqoV4VqqoJBnDXWeqLq/HJpJvoj6O5s8NuWCqNbYCmfwkty+nrE9SXkJTIyFa9WtOP76zQRDAWes+YwbSy07MOiNs1djUjcT1NEQ49sdRuWCKMZSUaM59Cn7eEe6b7J+igkV+y1TXJwq5z5kRSQTxpAAHAMCzW2NmM3nIfF70GIYWIhLa300Y3m6Jhs1P0f489AwAzIp68Yde0CYmF6Xlek3efo+N5TY+72LRUE0VEb2un+xut2RjQysy6bZ2raRl6z5gTKWXjSaoYXbmmXu17mo8tpp4OSQwS5/Ft5Nx9ISzM05nh2XN0PKW4QtN92xXC1QwDQGczWsvoarbbnqWB0AxEQr2ZJQPsPmv6Z8s1KzffOQxLQtAZEaJFP7aYgqMZjJ0jzAzoMDxzJnsyFeJEQbPqW20ZJPCVDKiIfrYD1t0uDYPCWxsdCkNUBACB0KGRi3obrrER1/1Jh/XZQ6f6/jGYq7LAHF8LxO47BJAIP/t809bFDkYjWDF+z1FyfsipdWzg3al/nd53NNb70ikpkGxQTIMBmu/lf7Ky6dFFjohGitfmuPiUArPQ+vLAySun/wNai2zid//8709fHlJSBMQ0KPtD3e7eMvSubNqyiDAaEcjMpVllFmH9v+Mnrwz9W2mNlo2x0sw+/84He14dDohpgHYwe6bPrJSbXdOSuSWLsL5ydPDau6eV1kAWyAKzIatM8rd9Y3teCYRpsI7VeKa7V8rNtxkRjUgEZmZmEQ5fPTI4NTistAZjwRZaAkNWOsnf9I0FIacYwOPd3rGaX503+68rTqQ4pKcOHZ8aGMKWBSTRKmGLtn+7S/dKCqMivQ985rktqwxZKRBv+tWmT2D6y/Pmb3F1/cCxyyeGeGELScEiPw2oOBQipTAqsqvn089tXd0o04CepHNrnyzv+Zy6b+rD2MgF6FhkQpJF0XGaiiM2hkg5s79+a/Tnr59uVO3LvXv3BtgUreWNn70tlkgOXUo2Wce9a1x2e654T6lllmCOjCXIcTbc1UmWEcHPnAYX1DNlhoe+3D05FR+aSCk2ZLnWGnN+8ykrMP1j0+Rk/TcNNGjRqjM/tGp57Fp86FKqCUwhp6WURcosmfpH49Zx1vtrGnRQdx6FgJb54VXLY1fjwxNpwVnLdTTd5pUV0+HRaUvO+rs6LYO4BVrFdPXyyWvx4fFZYQ0zV92gWxgAgJVAh0en2WTXf7HzVsnXzOn7setnYzNoqa6m+8nSOodHboCldV9Y5sN1/h/vlJfieoo7/gAAAABJRU5ErkJggg=="/>
+<text x="350" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Proposed app</text>
+<text x="350" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >FLUTTER · PROPOSED</text>
+</g>
+<g data-participant="model">
+<line x1="600.0" y1="168" x2="600.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="model" x="512.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="python" x="572.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,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"/>
+<text x="600" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Receipts</text>
+<text x="600" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >PYTHON · LAB</text>
+</g>
+<g data-participant="db">
+<line x1="850.0" y1="168" x2="850.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="db" x="762.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="sqlite" x="822.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,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"/>
+<text x="850" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Local SQLite</text>
+<text x="850" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >SQLITE · LAB</text>
+</g>
+<g data-participant="adapter">
+<line x1="1100.0" y1="168" x2="1100.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="adapter" x="1012.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<circle cx="1100.0" cy="90" r="5.5" fill="none" stroke="#6c6178" stroke-width="1.8"/><path d="M1091.0,107 Q1100.0,90 1109.0,107" fill="none" stroke="#6c6178" stroke-width="1.8"/>
+<text x="1100" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Financial adapter</text>
+<text x="1100" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >ROLE / INTEGRATION</text>
+</g>
+<rect data-alt="frame" x="57" y="528" width="1127" height="209" rx="10" fill="#f8f4fb" fill-opacity="0.8" stroke="#ccbadb" stroke-width="1.2"/>
+<line x1="57" y1="655" x2="1184" y2="655" stroke="#ccbadb" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100.0" y1="528" x2="100.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="350.0" y1="528" x2="350.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="600.0" y1="528" x2="600.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="850.0" y1="528" x2="850.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="1100.0" y1="528" x2="1100.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<g data-message="1" data-scope="integration" data-source="u" data-target="app">
+<rect data-label-bed="1" x="150.11525" y="189" width="149.7695" height="19" rx="4" fill="#fcfbfe"/>
+<text x="225" y="205" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="1">Check Pix status</text>
+<line data-message-arrow="1" x1="100.0" y1="220" x2="343.0" y2="220" stroke="#087f8c" stroke-width="2"/>
+<polygon data-arrowhead="1" points="349.0,220 337.0,215 337.0,225" fill="#087f8c"/>
+<circle cx="29" cy="200" r="17" fill="#087f8c"/>
+<text x="29" y="206" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >1</text>
+<text x="59" y="206" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#087f8c" text-anchor="middle" >P</text>
+</g>
+<g data-message="2" data-scope="lab" data-source="app" data-target="model">
+<rect data-label-bed="2" x="376.45375" y="239" width="197.0925" height="19" rx="4" fill="#fcfbfe"/>
+<text x="475" y="255" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="2">Create identified intent</text>
+<line data-message-arrow="2" x1="350.0" y1="270" x2="593.0" y2="270" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="2" points="599.0,270 587.0,265 587.0,275" fill="#7c22bf"/>
+<circle cx="29" cy="250" r="17" fill="#7c22bf"/>
+<text x="29" y="256" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >2</text>
+<text x="59" y="256" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="3" data-scope="lab" data-source="model" data-target="db">
+<rect data-label-bed="3" x="661.4095" y="289" width="127.181" height="19" rx="4" fill="#fcfbfe"/>
+<text x="725" y="305" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="3">Store pending</text>
+<line data-message-arrow="3" x1="600.0" y1="320" x2="843.0" y2="320" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="3" points="849.0,320 837.0,315 837.0,325" fill="#7c22bf"/>
+<circle cx="29" cy="300" r="17" fill="#7c22bf"/>
+<text x="29" y="306" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >3</text>
+<text x="59" y="306" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="4" data-scope="lab" data-source="adapter" data-target="model">
+<rect data-label-bed="4" x="744.77525" y="339" width="210.4495" height="19" rx="4" fill="#fcfbfe"/>
+<text x="850" y="355" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="4">Confirm refund_pending</text>
+<line data-message-arrow="4" x1="1100.0" y1="370" x2="607.0" y2="370" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="4" points="601.0,370 613.0,365 613.0,375" fill="#7c22bf"/>
+<circle cx="29" cy="350" r="17" fill="#7c22bf"/>
+<text x="29" y="356" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >4</text>
+<text x="59" y="356" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="5" data-scope="lab" data-source="model" data-target="db">
+<rect data-label-bed="5" x="641.62375" y="389" width="166.7525" height="19" rx="4" fill="#fcfbfe"/>
+<text x="725" y="405" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="5">Write state + event</text>
+<line data-message-arrow="5" x1="600.0" y1="420" x2="843.0" y2="420" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="5" points="849.0,420 837.0,415 837.0,425" fill="#7c22bf"/>
+<circle cx="29" cy="400" r="17" fill="#7c22bf"/>
+<text x="29" y="406" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >5</text>
+<text x="59" y="406" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="6" data-scope="lab" data-source="app" data-target="model">
+<rect data-label-bed="6" x="372.86474999999996" y="439" width="204.27050000000003" height="19" rx="4" fill="#fcfbfe"/>
+<text x="475" y="455" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="6">Read with owner scope</text>
+<line data-message-arrow="6" x1="350.0" y1="470" x2="593.0" y2="470" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="6" points="599.0,470 587.0,465 587.0,475" fill="#7c22bf"/>
+<circle cx="29" cy="450" r="17" fill="#7c22bf"/>
+<text x="29" y="456" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >6</text>
+<text x="59" y="456" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="7" data-scope="lab" data-source="model" data-target="app">
+<rect data-label-bed="7" x="368.99825" y="489" width="212.0035" height="19" rx="4" fill="#fcfbfe"/>
+<text x="475" y="505" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="7">Returned amount = zero</text>
+<line data-message-arrow="7" x1="600.0" y1="520" x2="357.0" y2="520" stroke="#7c22bf" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="7" points="351.0,520 363.0,515 363.0,525" fill="#7c22bf"/>
+<circle cx="29" cy="500" r="17" fill="#7c22bf"/>
+<text x="29" y="506" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >7</text>
+<text x="59" y="506" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<text x="72" y="544" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="bold" fill="#7c22bf" text-anchor="start" data-branch="0">alt · Verified financial event</text>
+<g data-message="8" data-scope="lab" data-source="adapter" data-target="model">
+<rect data-label-bed="8" x="772.54375" y="566" width="154.91250000000002" height="19" rx="4" fill="#f8f4fb"/>
+<text x="850" y="582" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="8">Confirm refunded</text>
+<line data-message-arrow="8" x1="1100.0" y1="597" x2="607.0" y2="597" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="8" points="601.0,597 613.0,592 613.0,602" fill="#7c22bf"/>
+<circle cx="29" cy="577" r="17" fill="#7c22bf"/>
+<text x="29" y="583" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >8</text>
+<text x="59" y="583" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="9" data-scope="lab" data-source="model" data-target="db">
+<rect data-label-bed="9" x="616.68575" y="616" width="216.6285" height="19" rx="4" fill="#f8f4fb"/>
+<text x="725" y="632" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="9">Record refunded amount</text>
+<line data-message-arrow="9" x1="600.0" y1="647" x2="843.0" y2="647" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="9" points="849.0,647 837.0,642 837.0,652" fill="#7c22bf"/>
+<circle cx="29" cy="627" r="17" fill="#7c22bf"/>
+<text x="29" y="633" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >9</text>
+<text x="59" y="633" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<text x="72" y="671" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="bold" fill="#7c22bf" text-anchor="start" data-branch="1">else · No new confirmation</text>
+<g data-message="10" data-scope="lab" data-source="app" data-target="model">
+<rect data-label-bed="10" x="388.79325" y="693" width="172.4135" height="19" rx="4" fill="#f8f4fb"/>
+<text x="475" y="709" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="10">No event: read only</text>
+<line data-message-arrow="10" x1="350.0" y1="724" x2="593.0" y2="724" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="10" points="599.0,724 587.0,719 587.0,729" fill="#7c22bf"/>
+<circle cx="29" cy="704" r="17" fill="#7c22bf"/>
+<text x="29" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >10</text>
+<text x="59" y="710" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<text x="32" y="765" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="normal" fill="#6c6178" text-anchor="start" >L · Lab contract     P · Proposed interaction     Dashed = return</text>
+<text x="32" y="788" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="normal" fill="#6c6178" text-anchor="start" >Independent external model · Does not describe Nubank’s internal architecture.</text>
+</svg>

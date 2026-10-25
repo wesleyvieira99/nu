@@ -27,6 +27,8 @@ The article and transcript make different contributions. The article describes t
 
 Actual frame from Metrópoles, 11 March 2026. The transcript describes the company case at 02:26 and reports release at 06:59–07:23.
 
+[Source video / Vídeo da fonte](https://www.youtube.com/watch?v=f6zCNrN1T8Y)
+
 The technical question is whether a restriction remains connected to grounds, evidence, an owner and its next review as it crosses support, risk and account closure. This does not determine whether a particular suspicion was valid. A testable hypothesis is lost context between initial restriction and execution of an authorized exit.
 
 I would sample cases by measure type and reconstruct state changes with accountable owners. Decision time would be compared with actual transfer instruction, distinguishing document waits, active legal holds and operational queues. The report does not provide that breakdown. I would not apply a universal 72-hour deadline: the rule depends on the relevant grounds and requires legal validation.
@@ -46,6 +48,8 @@ Review receives events and consults the effective policy. An eligible decision p
 The design separates review from execution. Approving an exit does not prove that the balance was transferred. Confirmation depends on reconciliation, an authorized destination and no active impediments, checked again at the execution boundary.
 
 ## Executable core
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]`
 
 ```python
     def execute_exit(self, expected, role, destination_owner,
@@ -84,6 +88,8 @@ The 200,000,100-cent amount is merely a synthetic fixture above BRL 2,000.00lion
 
 ## Stack implementation
 
+`Separation of Duties [proposal]` · `Versioned Decision [proposal]`
+
 ```sql
 -- Illustrative compare-and-write; not executed.
 UPDATE restriction_case
@@ -106,6 +112,8 @@ I would favor integration with the existing restriction record rather than a sec
 - [PostgreSQL — Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
 
 ## Contracts and ownership
+
+`Separation of Duties [proposal]` · `Versioned Decision [proposal]`
 
 | Field / rule | Owner | Invariant |
 | --- | --- | --- |
@@ -133,6 +141,8 @@ A restriction should not be a context-free boolean. Its contract must represent 
 An exit instruction retains the authorizing decision but rechecks impediments before execution. A new restriction between review and transfer invalidates the earlier version. Approved communication explains the stage and permitted appeal channel without revealing detection signals. Retention and access to court or supporting documents follow specific policies rather than generic logging defaults.
 
 ## Adversarial verification
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]`
 
 ```python
     def test_overdue_review_does_not_release_money(self):
@@ -226,3 +236,96 @@ To proceed, the domain must provide a valid taxonomy, operator identity, destina
 - Audit separates decision from execution.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py)
+
+## Patterns with proof
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]` · `Hexagonal Architecture [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Separation of Duties | Restriction.execute_exit | the reviewer cannot execute the financial exit |
+| Versioned Decision | Restriction.decide | a decision based on an old version is rejected |
+| Hexagonal Architecture / policy boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + Spring Security. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · LangGraph**
+
+Proposed experiment: LangGraph to organize authorized evidence for human review. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Restriction.execute_exit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L39)
+- [P1 · test_review_role_cannot_execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L88)
+- [P2 · Restriction.decide](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L27)
+- [P2 · test_stale_review_rejected](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L104)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Execution sequence
+
+![Roles, eligibility and absence of holds are trusted inputs; no real transfer is made.](../../evidence/sequence-en-03.svg)
+
+Roles, eligibility and absence of holds are trusted inputs; no real transfer is made.
+
+**Authority and failure boundary**
+
+the reviewer cannot execute the financial exit. an overdue deadline cannot release money automatically.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [decide](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L27)
+- [execute_exit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L39)
+
+## Features, stories and acceptance
+
+**F03.1 · Owned review · D16–30**
+
+As a customer, I want to track the next review and its owner. Acceptance: the reviewer cannot execute the financial exit.
+
+**F03.2 · Authorized and reconciled exit · D31–60**
+
+As an authorized execution operator, I want to execute an approved decision without ignoring holds. Acceptance: an overdue deadline cannot release money automatically.
+
+**F03.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F03.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L88)
+- [Acceptance F03.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L74)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. The original realizable-capacity factor is already included; the slider applies an additional stress.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 3750.00 | 0.00 | 5000.00 | 180000.00 |
+| Base | 22500.00 | 0.00 | 10000.00 | 180000.00 |
+| Ambitious | 60000.00 | 0.00 | 18000.00 | 180000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -1250.00 | -195000.00 | -217500.00 |
+| Base | 12500.00 | -30000.00 | -165000.00 |
+| Ambitious | 42000.00 | 324000.00 | -36000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: working minutes per case. Threat: mixing document restrictions and court orders. |
+| Unit economics | Cases × minutes released / 60 × hourly cost × realizable share; released funds belong to the customer. |
+| Proposed experiment | Match category and complexity while preserving human review, ownership and exit reconciliation. |
+| Stop rule | Stop for an improper release, exposed risk signals or an unreconciled execution. |
+
+- [Metrópoles](https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

@@ -102,488 +102,488 @@
     "caption": "Especificação conceitual de painel; não é o schema de importação do Grafana."
   },
   {
-    "file": "page_042_0.py",
+    "file": "page_042_1.py",
     "page": 42,
     "language": "python",
     "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
   },
   {
-    "file": "page_043_0.clj",
+    "file": "page_043_1.clj",
     "page": 43,
     "language": "clojure",
     "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
   },
   {
-    "file": "page_044_1.json",
+    "file": "page_044_2.json",
     "page": 44,
     "language": "json",
     "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
   },
   {
-    "file": "page_045_0.py",
+    "file": "page_045_1.py",
     "page": 45,
     "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_055_0.py",
-    "page": 55,
+    "file": "page_059_1.py",
+    "page": 59,
     "language": "python",
     "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
   },
   {
-    "file": "page_056_0.dart",
-    "page": 56,
+    "file": "page_060_1.dart",
+    "page": 60,
     "language": "dart",
     "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
   },
   {
-    "file": "page_057_1.json",
-    "page": 57,
+    "file": "page_061_2.json",
+    "page": 61,
     "language": "json",
     "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
   },
   {
-    "file": "page_058_0.py",
-    "page": 58,
+    "file": "page_062_1.py",
+    "page": 62,
     "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_068_0.py",
-    "page": 68,
+    "file": "page_076_1.py",
+    "page": 76,
     "language": "python",
     "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
   },
   {
-    "file": "page_069_0.sql",
-    "page": 69,
+    "file": "page_077_1.sql",
+    "page": 77,
     "language": "sql",
     "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
   },
   {
-    "file": "page_070_1.json",
-    "page": 70,
+    "file": "page_078_2.json",
+    "page": 78,
     "language": "json",
     "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
   },
   {
-    "file": "page_071_0.py",
-    "page": 71,
+    "file": "page_079_1.py",
+    "page": 79,
     "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_081_0.py",
-    "page": 81,
+    "file": "page_093_1.py",
+    "page": 93,
     "language": "python",
     "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
   },
   {
-    "file": "page_082_0.dart",
-    "page": 82,
+    "file": "page_094_1.dart",
+    "page": 94,
     "language": "dart",
     "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
   },
   {
-    "file": "page_083_1.json",
-    "page": 83,
-    "language": "json",
-    "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
-  },
-  {
-    "file": "page_084_0.py",
-    "page": 84,
-    "language": "python",
-    "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
-  },
-  {
-    "file": "page_094_0.py",
-    "page": 94,
-    "language": "python",
-    "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
-  },
-  {
-    "file": "page_095_0.ts",
+    "file": "page_095_2.json",
     "page": 95,
-    "language": "typescript",
-    "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
-  },
-  {
-    "file": "page_096_1.json",
-    "page": 96,
     "language": "json",
     "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
   },
   {
-    "file": "page_097_0.py",
-    "page": 97,
+    "file": "page_096_1.py",
+    "page": 96,
     "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_107_0.py",
-    "page": 107,
-    "language": "python",
-    "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
-  },
-  {
-    "file": "page_108_0.ts",
-    "page": 108,
-    "language": "typescript",
-    "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
-  },
-  {
-    "file": "page_109_1.json",
-    "page": 109,
-    "language": "json",
-    "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
-  },
-  {
-    "file": "page_110_0.py",
+    "file": "page_110_1.py",
     "page": 110,
     "language": "python",
+    "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+  },
+  {
+    "file": "page_111_1.ts",
+    "page": 111,
+    "language": "typescript",
+    "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+  },
+  {
+    "file": "page_112_2.json",
+    "page": 112,
+    "language": "json",
+    "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+  },
+  {
+    "file": "page_113_1.py",
+    "page": 113,
+    "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_120_0.py",
-    "page": 120,
+    "file": "page_127_1.py",
+    "page": 127,
     "language": "python",
     "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
   },
   {
-    "file": "page_121_0.clj",
-    "page": 121,
+    "file": "page_128_1.ts",
+    "page": 128,
+    "language": "typescript",
+    "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+  },
+  {
+    "file": "page_129_2.json",
+    "page": 129,
+    "language": "json",
+    "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+  },
+  {
+    "file": "page_130_1.py",
+    "page": 130,
+    "language": "python",
+    "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+  },
+  {
+    "file": "page_144_1.py",
+    "page": 144,
+    "language": "python",
+    "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+  },
+  {
+    "file": "page_145_1.clj",
+    "page": 145,
     "language": "clojure",
     "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
   },
   {
-    "file": "page_122_1.json",
-    "page": 122,
+    "file": "page_146_2.json",
+    "page": 146,
     "language": "json",
     "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
   },
   {
-    "file": "page_123_0.py",
-    "page": 123,
+    "file": "page_147_1.py",
+    "page": 147,
     "language": "python",
     "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
   },
   {
-    "file": "page_133_0.py",
-    "page": 133,
+    "file": "page_161_1.py",
+    "page": 161,
     "language": "python",
     "caption": "Trecho literal de labs/case_08.py; executado nos testes locais."
   },
   {
-    "file": "page_134_0.clj",
-    "page": 134,
+    "file": "page_162_1.clj",
+    "page": 162,
     "language": "clojure",
     "caption": "Exemplo ilustrativo em Clojure, não executado; integração e política ainda exigem validação."
   },
   {
-    "file": "page_135_1.json",
-    "page": 135,
+    "file": "page_163_2.json",
+    "page": 163,
     "language": "json",
     "caption": "Contrato sintético e ilustrativo; não é payload capturado do aplicativo."
   },
   {
-    "file": "page_136_0.py",
-    "page": 136,
+    "file": "page_164_1.py",
+    "page": 164,
     "language": "python",
     "caption": "Trechos literais; 9 testes locais passaram no conjunto completo."
   },
   {
-    "file": "page_146_0.py",
-    "page": 146,
+    "file": "page_178_1.py",
+    "page": 178,
     "language": "python",
     "caption": "Trecho literal de labs/case_09.py; SQLite representa uma autoridade local."
   },
   {
-    "file": "page_147_0.clj",
-    "page": 147,
+    "file": "page_179_1.clj",
+    "page": 179,
     "language": "clojure",
     "caption": "Exemplo ilustrativo em Clojure, não executado; o laboratório Python é o artefato testado."
   },
   {
-    "file": "page_148_1.json",
-    "page": 148,
+    "file": "page_180_2.json",
+    "page": 180,
     "language": "json",
     "caption": "Exemplo sintético: 15.001 recebidos, 15.000 aplicados, 1 não aplicado."
   },
   {
-    "file": "page_149_0.py",
-    "page": 149,
+    "file": "page_181_1.py",
+    "page": 181,
     "language": "python",
     "caption": "Trechos literais da suíte; 9 testes passaram."
   },
   {
-    "file": "page_159_0.py",
-    "page": 159,
+    "file": "page_195_1.py",
+    "page": 195,
     "language": "python",
     "caption": "Trecho literal de labs/case_10.py; dois bancos locais e um provedor sintético."
   },
   {
-    "file": "page_160_0.dart",
-    "page": 160,
+    "file": "page_196_1.dart",
+    "page": 196,
     "language": "dart",
     "caption": "Dart ilustrativo, não executado; estados e textos exigem revisão de produto e acessibilidade."
   },
   {
-    "file": "page_161_1.json",
-    "page": 161,
+    "file": "page_197_2.json",
+    "page": 197,
     "language": "json",
     "caption": "Contrato sintético em centavos; não é uma captura do NuPay."
   },
   {
-    "file": "page_162_0.py",
-    "page": 162,
+    "file": "page_198_1.py",
+    "page": 198,
     "language": "python",
     "caption": "Trechos literais; 9 testes passaram, incluindo retomada após timeout."
   },
   {
-    "file": "page_172_0.py",
-    "page": 172,
+    "file": "page_212_1.py",
+    "page": 212,
     "language": "python",
     "caption": "Trecho literal de labs/case_11.py; modelo em memória, protegido por lock local."
   },
   {
-    "file": "page_173_0.clj",
-    "page": 173,
+    "file": "page_213_1.clj",
+    "page": 213,
     "language": "clojure",
     "caption": "Clojure ilustrativo e não executado; regras simplificadas equivalentes ao laboratório."
   },
   {
-    "file": "page_174_1.json",
-    "page": 174,
+    "file": "page_214_2.json",
+    "page": 214,
     "language": "json",
     "caption": "Exemplo sintético de três estornos; nenhum valor foi extraído da conta do reclamante."
   },
   {
-    "file": "page_175_0.py",
-    "page": 175,
+    "file": "page_215_1.py",
+    "page": 215,
     "language": "python",
     "caption": "Trechos literais; 9 testes locais passaram."
   },
   {
-    "file": "page_185_0.py",
-    "page": 185,
+    "file": "page_229_1.py",
+    "page": 229,
     "language": "python",
     "caption": "Trecho literal de labs/case_12.py; estado local sintético de uma conta."
   },
   {
-    "file": "page_186_0.clj",
-    "page": 186,
+    "file": "page_230_1.clj",
+    "page": 230,
     "language": "clojure",
     "caption": "Clojure ilustrativo, não executado; não representa código de transportadora ou do Nubank."
   },
   {
-    "file": "page_187_1.json",
-    "page": 187,
+    "file": "page_231_2.json",
+    "page": 231,
     "language": "json",
     "caption": "Estado sintético: entrega declarada, contestação aberta e cartão inativo."
   },
   {
-    "file": "page_188_0.py",
-    "page": 188,
+    "file": "page_232_1.py",
+    "page": 232,
     "language": "python",
     "caption": "Trechos literais; 10 testes passaram no laboratório."
   },
   {
-    "file": "page_198_0.py",
-    "page": 198,
+    "file": "page_246_1.py",
+    "page": 246,
     "language": "python",
     "caption": "Trecho literal de labs/case_13.py; reserva local em SQLite com centavos inteiros."
   },
   {
-    "file": "page_199_0.dart",
-    "page": 199,
+    "file": "page_247_1.dart",
+    "page": 247,
     "language": "dart",
     "caption": "Dart ilustrativo e não executado; o laboratório Python valida a autoridade, não este componente."
   },
   {
-    "file": "page_200_1.json",
-    "page": 200,
+    "file": "page_248_2.json",
+    "page": 248,
     "language": "json",
     "caption": "Valores sintéticos; não reproduzem o saldo privado da reclamação."
   },
   {
-    "file": "page_201_0.py",
-    "page": 201,
+    "file": "page_249_1.py",
+    "page": 249,
     "language": "python",
     "caption": "Teste literal; a suíte completa passou 10 testes."
   },
   {
-    "file": "page_211_0.py",
-    "page": 211,
+    "file": "page_263_1.py",
+    "page": 263,
     "language": "python",
     "caption": "Trecho literal de labs/case_14.py; execução transacional em centavos."
   },
   {
-    "file": "page_212_0.clj",
-    "page": 212,
+    "file": "page_264_1.clj",
+    "page": 264,
     "language": "clojure",
     "caption": "Clojure ilustrativo, não executado; regras sintéticas para revisão do contrato."
   },
   {
-    "file": "page_213_1.json",
-    "page": 213,
+    "file": "page_265_2.json",
+    "page": 265,
     "language": "json",
     "caption": "Exemplo sintético: R$ 50 de fatura + R$ 100 de principal −R$ 10 de desconto = R$ 140."
   },
   {
-    "file": "page_214_0.py",
-    "page": 214,
+    "file": "page_266_1.py",
+    "page": 266,
     "language": "python",
     "caption": "Teste literal; 9 testes passaram na suíte completa."
   },
   {
-    "file": "page_224_0.py",
-    "page": 224,
+    "file": "page_280_1.py",
+    "page": 280,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_225_0.dart",
-    "page": 225,
+    "file": "page_281_1.dart",
+    "page": 281,
     "language": "dart",
     "caption": "Exemplo Dart ilustrativo, não executado; texto de demonstração requer localização."
   },
   {
-    "file": "page_226_1.json",
-    "page": 226,
+    "file": "page_282_2.json",
+    "page": 282,
     "language": "json",
     "caption": "Contrato proposto, dados sintéticos; schema não executado."
   },
   {
-    "file": "page_227_0.py",
-    "page": 227,
+    "file": "page_283_1.py",
+    "page": 283,
     "language": "python",
     "caption": "Trecho literal dos testes; 13 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_237_0.py",
-    "page": 237,
+    "file": "page_297_1.py",
+    "page": 297,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_238_0.clj",
-    "page": 238,
+    "file": "page_298_1.clj",
+    "page": 298,
     "language": "clojure",
     "caption": "Clojure ilustrativo não executado; não é o motor de regras do Nubank."
   },
   {
-    "file": "page_239_1.json",
-    "page": 239,
+    "file": "page_299_2.json",
+    "page": 299,
     "language": "json",
     "caption": "Contrato proposto; fixture sintética, não resposta de API real."
   },
   {
-    "file": "page_240_0.py",
-    "page": 240,
+    "file": "page_300_1.py",
+    "page": 300,
     "language": "python",
     "caption": "Trecho literal dos testes; 15 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_250_0.py",
-    "page": 250,
+    "file": "page_314_1.py",
+    "page": 314,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_251_0.dart",
-    "page": 251,
+    "file": "page_315_1.dart",
+    "page": 315,
     "language": "dart",
     "caption": "Dart ilustrativo não executado; formatação monetária e localização omitidas."
   },
   {
-    "file": "page_252_1.json",
-    "page": 252,
+    "file": "page_316_2.json",
+    "page": 316,
     "language": "json",
     "caption": "Fixture explicativa das quantidades relatadas; contrato proposto não executado."
   },
   {
-    "file": "page_253_0.py",
-    "page": 253,
+    "file": "page_317_1.py",
+    "page": 317,
     "language": "python",
     "caption": "Trecho literal dos testes; 13 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_263_0.py",
-    "page": 263,
+    "file": "page_331_1.py",
+    "page": 331,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_264_0.dart",
-    "page": 264,
+    "file": "page_332_1.dart",
+    "page": 332,
     "language": "dart",
     "caption": "Dart ilustrativo, não executado; mensagens finais exigem pesquisa e localização."
   },
   {
-    "file": "page_265_1.json",
-    "page": 265,
+    "file": "page_333_2.json",
+    "page": 333,
     "language": "json",
     "caption": "Contrato ilustrativo não executado; sem número de telefone ou conteúdo do SMS."
   },
   {
-    "file": "page_266_0.py",
-    "page": 266,
+    "file": "page_334_1.py",
+    "page": 334,
     "language": "python",
     "caption": "Trecho literal dos testes; 12 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_276_0.py",
-    "page": 276,
+    "file": "page_348_1.py",
+    "page": 348,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_277_0.ts",
-    "page": 277,
+    "file": "page_349_1.ts",
+    "page": 349,
     "language": "typescript",
     "caption": "TypeScript ilustrativo não executado; tipos não substituem validação de runtime."
   },
   {
-    "file": "page_278_1.json",
-    "page": 278,
+    "file": "page_350_2.json",
+    "page": 350,
     "language": "json",
     "caption": "Contrato proposto e sintético; nenhuma conversão deve nascer desta negativa."
   },
   {
-    "file": "page_279_0.py",
-    "page": 279,
+    "file": "page_351_1.py",
+    "page": 351,
     "language": "python",
     "caption": "Trecho literal dos testes; 14 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_289_0.py",
-    "page": 289,
+    "file": "page_365_1.py",
+    "page": 365,
     "language": "python",
     "caption": "Trecho literal do laboratório executado; imports e inicialização no arquivo completo."
   },
   {
-    "file": "page_290_0.sql",
-    "page": 290,
+    "file": "page_366_1.sql",
+    "page": 366,
     "language": "sql",
     "caption": "SQL ilustrativo não executado; apenas estorno integral único neste modelo."
   },
   {
-    "file": "page_291_1.json",
-    "page": 291,
+    "file": "page_367_2.json",
+    "page": 367,
     "language": "json",
     "caption": "Contrato sintético proposto, não executado; ausência de autorização não é permissão."
   },
   {
-    "file": "page_292_0.py",
-    "page": 292,
+    "file": "page_368_1.py",
+    "page": 368,
     "language": "python",
     "caption": "Trecho literal dos testes; 13 testes do laboratório passaram localmente."
   },
   {
-    "file": "page_311_1.sh",
-    "page": 311,
+    "file": "page_391_1.sh",
+    "page": 391,
     "language": "bash",
     "caption": "Comandos locais; não acessam serviços bancários. Consulte LEIA-ME.html para versões e escopo."
   }

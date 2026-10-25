@@ -40,6 +40,8 @@ O cliente inicia contestação por canal autenticado. Reemissão cria nova gera�
 
 ## Núcleo: geração e disputa persistente
 
+`Generation Token [lab]` · `Authority Separation [lab]`
+
 ```python
     def event(self, ident, generation, kind, scope):
         if not isinstance(ident, str) or not ident.strip():
@@ -87,6 +89,8 @@ O escopo recebido é contexto confiável injetado pelo servidor, não uma creden
 
 ## Normalizar sem apagar procedência
 
+`Generation Token [proposal]` · `Authority Separation [proposal]`
+
 ```clojure
 (defn accept-delivery [state event]
   (cond
@@ -110,6 +114,8 @@ O redutor não tenta descobrir a verdade física a partir de um status. Ele apli
 A camada de integração autentica origem, limita replay e valida vínculo entre remessa e conta. Um timestamp recebido não é suficiente para ordenar toda a vida do cartão: relógios divergem e fornecedores podem reenviar informações antigas. Geração e identidade são controles mais fortes para impedir que uma atualização de uma via cancelada pareça confirmar a nova.
 
 ## Contrato entre físico e digital
+
+`Generation Token [proposal]` · `Authority Separation [proposal]`
 
 | Campo | Autoridade | Regra |
 | --- | --- | --- |
@@ -136,6 +142,8 @@ Estado sintético: entrega declarada, contestação aberta e cartão inativo.
 Comprovantes podem conter endereço, assinatura ou imagem de terceiro. A referência de evidência deve permitir acesso por finalidade, expiração e auditoria. O aplicativo apresenta informação suficiente para o cliente agir, sem publicar dados do recebedor. A equipe de logística mantém responsabilidade por obter a evidência do parceiro; não transfere essa integração ao cliente.
 
 ## Replays não encerram a exceção
+
+`Generation Token [lab]` · `Authority Separation [lab]`
 
 ```python
     def test_old_delivery_does_not_replace_new_generation(self):
@@ -230,3 +238,95 @@ A demonstração local verifica precedência e persistência, não se uma encome
 Prosseguir apenas quando a apuração tiver responsável, os eventos estiverem vinculados corretamente e a segurança de ativação permanecer intacta. Se a evidência operacional mostrar problema de rota, a intervenção pode ser logística. A contribuição de engenharia é garantir que o produto represente essa realidade com clareza e não a esconda atrás de um estado único.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py)
+
+## Padrões com prova no código
+
+`Generation Token [lab]` · `Authority Separation [lab]` · `Anti-corruption Layer [proposal]` · `Spring Kafka [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Generation Token | Delivery.event | evento antigo não substitui a geração atual |
+| Authority Separation | Delivery.event | a transportadora não possui autoridade de ativação |
+| Anti-corruption Layer / carrier adapter | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Kafka + schema validation. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Delivery.event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [P1 · test_old_delivery_does_not_replace_new_generation](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L87)
+- [P2 · Delivery.event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [P2 · test_carrier_cannot_activate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L107)
+
+## Sequência de execução
+
+![Escopos são injetados. Assinatura da transportadora, posse e fatores de ativação exigem integração.](../../evidence/sequence-pt-12.svg)
+
+Escopos são injetados. Assinatura da transportadora, posse e fatores de ativação exigem integração.
+
+**Autoridade e fronteira de falha**
+
+evento antigo não substitui a geração atual. a transportadora não possui autoridade de ativação.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [reissue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L65)
+
+## Features, histórias e aceite
+
+**F12.1 · Rastreio por geração · D16–30**
+
+Como cliente, quero acompanhar o cartão correto depois de uma reemissão. Aceite: evento antigo não substitui a geração atual.
+
+**F12.2 · Entrega distinta de ativação · D31–60**
+
+Como cliente, quero contestar entrega sem ativar um cartão desconhecido. Aceite: a transportadora não possui autoridade de ativação.
+
+**F12.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F12.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L87)
+- [Aceite F12.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L107)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 3900.00 | 0.00 | 24000.00 | 90000.00 |
+| Base | 15600.00 | 0.00 | 24000.00 | 90000.00 |
+| Ambicioso | 46800.00 | 0.00 | 24000.00 | 90000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -20100.00 | -110100.00 | -112050.00 |
+| Base | -8400.00 | -98400.00 | -106200.00 |
+| Ambicioso | 22800.00 | -67200.00 | -90600.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: reemissões por reposição. Ameaça: reduzir custo negando envio necessário. |
+| Economia por unidade | Reemissões evitadas × (cartão + frete + suporte incremental); não presume posse pelo rastreio. |
+| Experimento proposto | Comparar rotas e parceiros, controlar sazonalidade e confirmar posse ou resolução. |
+| Critério de parada | Parar por via inválida ativada, disputa encerrada automaticamente ou coleta excessiva. |
+
+- [Reclame AQUI · ID 230126691](https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

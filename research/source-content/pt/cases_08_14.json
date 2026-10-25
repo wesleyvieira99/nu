@@ -1,0 +1,3307 @@
+[
+  {
+    "title": "Empréstimo contestado: uma decisão precisa poder ser revisada",
+    "subtitle": "Da evidência de acesso ao dossiê, ao recurso e à responsabilidade",
+    "source_title": "Reclame AQUI — empréstimo não reconhecido e suporte",
+    "pages": [
+      {
+        "title": "08 · A contestação e o contraponto",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Em 14/01/2026, a reclamação 237674561 relata empréstimo não reconhecido, descoberto após três parcelas vencidas. O Nubank responde que a contratação ocorreu em março de 2024 em aparelho autorizado, mediante senha, e que não encontrou irregularidade. Mantém a negativa. O cliente encerra o caso em 31/01 como Não resolvido. Esses são relatos públicos de partes em desacordo; não permitem concluir fraude ou consentimento."
+          },
+          {
+            "type": "callout",
+            "title": "O que esta evidência sustenta",
+            "text": "Uma oportunidade de tornar a investigação compreensível e revisável. O valor contratado, o contrato individual e os sinais completos não estão públicos. A captura documenta a reclamação e a resposta; não substitui uma perícia."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 08 · 2026-01-14",
+            "url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/"
+          }
+        ]
+      },
+      {
+        "title": "Acesso observado não resolve consentimento",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A pergunta de engenharia começa na fronteira entre evidência e conclusão. Um registro de dispositivo autorizado pode ser relevante para a investigação, mas não deve ser armazenado como sinônimo de vontade do titular. A proposta separa fatos de acesso, versão da política aplicada, interpretação do revisor e decisão comunicada. Isso permite contestar uma premissa específica sem reabrir toda a conversa do zero."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese falsificável é que parte do retrabalho decorre de dossiês incompletos ou de decisões que não deixam explícita sua fundamentação revisável. Eu confrontaria uma amostra autorizada de casos com recontato com o que o agente conseguia consultar naquele momento. Se o dossiê já era completo e compreensível, a hipótese perde força; a intervenção pode estar na política, na comunicação ou em outra etapa."
+          },
+          {
+            "type": "p",
+            "text": "O estudo não propõe revelar segredos antifraude ao público nem converter toda contestação em reembolso. A decisão financeira continua sujeita à autoridade e à política aprovadas. O ganho procurado é uma análise consistente, com responsável, evidências minimizadas e recurso definido. A complexidade jurídica e operacional precisa ser validada com especialistas antes de definir prazos ou medidas provisórias."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Dossiê com revisão independente",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Fatos, decisão e recurso separados",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Cliente",
+                "detail": "Contestação autenticada",
+                "group": "pessoa"
+              },
+              {
+                "id": "1",
+                "label": "API do caso",
+                "detail": "Escopo e protocolo",
+                "group": "entrada"
+              },
+              {
+                "id": "2",
+                "label": "Fatos duráveis",
+                "detail": "Identidade e versão",
+                "group": "registro"
+              },
+              {
+                "id": "3",
+                "label": "Triagem",
+                "detail": "Lacunas e encaminhamento",
+                "group": "coordenação"
+              },
+              {
+                "id": "4",
+                "label": "Dossiê",
+                "detail": "Decisões preservadas",
+                "group": "histórico"
+              },
+              {
+                "id": "5",
+                "label": "App e atendimento",
+                "detail": "Etapa e próximo passo",
+                "group": "experiência"
+              },
+              {
+                "id": "6",
+                "label": "Revisão humana",
+                "detail": "Evidência e recurso",
+                "group": "pessoas"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "abrir contestação",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "gravar antes de responder",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "processar fatos",
+                "from": "2"
+              },
+              {
+                "to": "4",
+                "label": "publicar etapa",
+                "from": "3"
+              },
+              {
+                "to": "5",
+                "label": "consulta autorizada",
+                "from": "4"
+              },
+              {
+                "to": "6",
+                "label": "revisão necessária",
+                "from": "3"
+              },
+              {
+                "to": "4",
+                "label": "decisão versionada",
+                "from": "6"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A API autentica o titular e restringe o caso ao seu escopo. O registro durável conserva ações antes da confirmação; a triagem organiza lacunas, sem decidir fraude. O dossiê fornece projeções diferentes para cliente e atendimento, mantendo referência comum de versão."
+          },
+          {
+            "type": "p",
+            "text": "A revisão humana grava decisão e política no histórico. Um recurso acrescenta uma etapa; não apaga a primeira decisão. O caminho de exceção exige revisor independente no modelo. Identidade, autorização real e retenção de provas são integrações necessárias, fora do laboratório."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: revisão e identidade da ação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def append(self, action_id, expected, actor, role, kind, evidence):\n        if not isinstance(action_id, str) or not action_id.strip():\n            raise ValueError('nonempty action identity required')\n        event = dict(actor=actor, role=role, kind=kind, evidence=evidence)\n        payload = json.dumps(event, sort_keys=True)\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            old = self.db.execute('SELECT payload FROM events WHERE action_id=?',\n                                  (action_id,)).fetchone()\n            if old:\n                if old[0] != payload:\n                    raise ValueError('idempotency conflict')\n                return self.history()\n            history = self.history()\n            if expected != len(history):\n                raise ValueError('stale revision')\n            allowed = {'evidence': 'analyst', 'decision': 'reviewer',\n                       'appeal': 'customer', 'review': 'reviewer'}\n            if kind not in allowed or allowed[kind] != role:\n                raise PermissionError('role not authorized')\n            if kind == 'decision' and not any(\n                    e['kind'] == 'evidence' for e in history):\n                raise ValueError('no evidence dossier')\n            validate_transition(history, event)\n            self.db.execute('INSERT INTO events VALUES(?,?,?)',\n                            (expected + 1, action_id, payload))\n        return self.history()",
+            "caption": "Trecho literal de labs/case_08.py; executado nos testes locais."
+          },
+          {
+            "type": "p",
+            "text": "A transação compara revisão esperada, identidade da ação e papel autorizado. Uma retentativa idêntica retorna o histórico sem duplicar o evento; reutilizar a chave com outro conteúdo é conflito. Esse contrato impede duas decisões concorrentes de avançarem a mesma revisão."
+          },
+          {
+            "type": "p",
+            "text": "O laboratório representa um único caso e recebe papéis de um contexto confiável. Não autentica pessoas nem determina a legitimidade do empréstimo. O método validate_transition exige evidência antes da decisão e protege a independência do recurso. O banco local demonstra persistência; não representa o armazenamento real da instituição."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "A política deve ser explícita",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn reviewable? [{:keys [evidence decision policy]}]\n  (and (seq evidence)\n       (string? policy)\n       (every? #(contains? % :source-ref) evidence)\n       (not= :device-access-only decision)))\n\n(defn appeal-command [case-id revision reviewer]\n  {:case-id case-id\n   :expected-revision revision\n   :action :independent-review\n   :reviewer reviewer})",
+            "caption": "Exemplo ilustrativo em Clojure, não executado; integração e política ainda exigem validação."
+          },
+          {
+            "type": "p",
+            "text": "Uma função pura pode verificar completude estrutural antes de encaminhar o dossiê. Ela não transforma presença de dados em veredicto correto. O exemplo rejeita uma categoria simplificada de decisão baseada somente em acesso ao dispositivo; essa regra é uma proposta do estudo, não uma regra conhecida do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "No serviço, o identificador do revisor deve vir da identidade autenticada, e não do corpo enviado pelo cliente. A política possui versão imutável, vigência e responsável. Mudanças de política precisam de exemplos aprovados e revisão operacional, porque um deploy tecnicamente correto ainda pode produzir decisões inadequadas. Kafka transportaria referências minimizadas; anexos sensíveis permaneceriam em armazenamento restrito."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Contrato de evidência e de acesso",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Objeto",
+              "Responsável",
+              "Regra"
+            ],
+            "rows": [
+              [
+                "Referência de evidência",
+                "Segurança",
+                "Hash e origem; sem senha"
+              ],
+              [
+                "Decisão",
+                "Revisor autorizado",
+                "Política e revisão obrigatórias"
+              ],
+              [
+                "Recurso",
+                "Operações",
+                "Preserva decisão anterior"
+              ],
+              [
+                "Projeção do cliente",
+                "Produto",
+                "Motivo suficiente, sem segredo"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"case_id\": \"synthetic-08\",\n  \"revision\": 3,\n  \"evidence\": [{\"category\": \"device_access\", \"digest\": \"sha256:...\"}],\n  \"decision\": {\"policy\": \"v1\", \"reviewer_ref\": \"reviewer-1\"},\n  \"appeal\": {\"status\": \"pending\", \"independent_reviewer\": true},\n  \"customer_projection\": {\"stage\": \"under_review\"}\n}",
+            "caption": "Contrato sintético e ilustrativo; não é payload capturado do aplicativo."
+          },
+          {
+            "type": "p",
+            "text": "O hash ajuda a identificar a evidência, mas não prova que ela é verdadeira nem substitui cadeia de custódia. A política de retenção define por quanto tempo o objeto pode ser consultado; a projeção não deve manter cópia desnecessária. Acesso administrativo exige finalidade registrada e deve ser auditável por uma equipe independente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Testar o recurso e a retomada",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_appeal_requires_independent_reviewer(self):\n        self.seed()\n        self.d.append('a', 2, 'owner', 'customer', 'appeal', {})\n        with self.assertRaises(PermissionError):\n            self.d.append('r', 3, 'r1', 'reviewer', 'review', {'policy': 'v2'})\n        self.assertEqual(len(self.d.history()), 3)\n        self.d.append('r', 3, 'r2', 'reviewer', 'review', {'policy': 'v2'})\n        self.assertEqual(self.d.history()[1]['evidence']['policy'], 'v1')\n\n    def test_restart_and_retry_preserve_one_evidence(self):\n        self.d.append('e', 0, 'a', 'analyst', 'evidence', self.ev)\n        self.d.close()\n        self.d = Dispute(self.path)\n        result = self.d.append('e', 0, 'a', 'analyst', 'evidence', self.ev)\n        self.assertEqual(len(result), 1)\n        self.assertNotIn('consent', result[0]['evidence'])",
+            "caption": "Trechos literais; 9 testes locais passaram no conjunto completo."
+          },
+          {
+            "type": "p",
+            "text": "A primeira asserção protege a independência do recurso e verifica que uma rejeição não muda o histórico. A segunda fecha e reabre o banco, repete a ação e confirma um único registro. Outros testes atacam revisão velha, papel errado, ausência de evidência e payload sensível."
+          },
+          {
+            "type": "p",
+            "text": "Os testes não avaliam qualidade humana, autenticidade da evidência ou justiça da política. Para produção, acrescentaria revisão de amostras cegas, testes de acesso entre contas, expiração de permissões, auditoria de exportação e exercícios de indisponibilidade da ferramenta. Um sistema que preserva perfeitamente uma decisão ruim ainda precisa de correção de processo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Medir revisão útil e custo humano",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Definição",
+              "Janela / corte"
+            ],
+            "rows": [
+              [
+                "Revisão útil",
+                "Casos com ação fundamentada / abertos",
+                "Semanal; tipo de disputa"
+              ],
+              [
+                "Retrabalho",
+                "Minutos repetidos / dossiê elegível",
+                "Amostra mensal; equipe"
+              ],
+              [
+                "Recontato",
+                "Contatos repetitivos / casos",
+                "30 dias; etapa"
+              ],
+              [
+                "Divergência",
+                "Decisões alteradas por falha material / auditadas",
+                "Mensal; política"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A linha de base é desconhecida. Instrumentaria transições com case_id pseudonimizado, versão e instante; o tempo de trabalho exige amostragem operacional, não apenas duração da fila. Idade de caso e tempo efetivamente trabalhado são medidas diferentes. Também acompanharia acesso indevido e falhas de auditoria como guardrails."
+          },
+          {
+            "type": "p",
+            "text": "O piloto compararia equipes ou períodos equivalentes com critérios de elegibilidade pré-definidos, evitando selecionar apenas casos simples. Uma revisão independente avaliaria amostras de ambos os grupos. Interromperia a expansão se surgissem exposição de dados, perda de evidência ou piora material da consistência das decisões, mesmo que o tempo médio caísse."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor: capacidade recuperada, não lucro",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 144.000",
+                "R$ 60.000",
+                "R$ -156.000"
+              ],
+              [
+                "Base",
+                "R$ 504.000",
+                "R$ 90.000",
+                "R$ 174.000"
+              ],
+              [
+                "Ambicioso",
+                "R$ 1.080.000",
+                "R$ 120.000",
+                "R$ 720.000"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Todos os insumos são assumidos: 12 mil, 24 mil ou 40 mil dossiês anuais; 8, 14 ou 18 minutos de retrabalho evitados; R$ 90 por hora total. A capacidade valorizada é N × minutos ÷ 60 × 90. Assumo implementação de R$ 240 mil e operação anual de R$ 60 mil, 90 mil ou 120 mil. A última coluna desconta ambos no primeiro ano e não representa caixa realizado."
+          },
+          {
+            "type": "p",
+            "text": "No cenário base, 24.000 × 14 ÷ 60 × 90 = R$ 504.000; menos R$ 90.000 e R$ 240.000 resulta em R$ 174.000 de capacidade líquida modelada. O equilíbrio do primeiro ano exige aproximadamente 15.715 dossiês equivalentes. Se as horas apenas forem redistribuídas, não há economia de caixa automática. O investimento depende de confirmar retrabalho evitável e de haver uso concreto para a capacidade liberada."
+          },
+          {
+            "type": "callout",
+            "title": "Separação financeira",
+            "text": "Principal contestado e possível fraude não entram nesta conta. Uma perda só pode ser estimada com confirmação, exposição e recuperação verificáveis. Não agregar benefícios com outros capítulos que tratem os mesmos contatos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Plano de 90 dias com responsáveis",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Entrega e responsável",
+              "Porta de saída"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Risco + operações: taxonomia e amostra",
+                "Fatos e inferências separados"
+              ],
+              [
+                "16–30 dias",
+                "Staff + privacidade: contrato e acesso",
+                "Revisão de acesso aprovada"
+              ],
+              [
+                "31–60 dias",
+                "EM + operações: sombra e treinamento",
+                "Amostra independente consistente"
+              ],
+              [
+                "61–90 dias",
+                "Produto + risco: piloto limitado",
+                "Guardrails e capacidade validados"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O calendário é hipótese de planejamento. A dependência crítica é obter acesso autorizado a uma amostra suficiente, não construir a tela. Se fontes de evidência forem incompatíveis, o primeiro entregável passa a ser a identificação dessas lacunas e a atribuição de responsáveis por corrigi-las."
+          },
+          {
+            "type": "p",
+            "text": "O Engineering Manager organiza capacidade entre crédito, fraude, atendimento e privacidade; o Staff define contratos e critérios técnicos. A revisão de política permanece com seus responsáveis. Cada fase termina com evidência observável e decisão registrada de continuar, restringir ou parar. Não uso o prazo para prometer uma alteração que dependa de validação externa."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Operar sem transformar fila em abandono",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A implantação começa em sombra: a nova ferramenta prepara o dossiê, mas a operação existente continua decidindo. Compara-se completude, tempo de preparo e divergências, sem mudar automaticamente cobrança ou crédito. O canário seguinte expõe acompanhamento e revisão para uma coorte limitada, com capacidade humana reservada para os recursos."
+          },
+          {
+            "type": "p",
+            "text": "Alertas devem distinguir fila envelhecida, evidência indisponível e falha de autorização. Operações responde pela fila; segurança responde por exposição; a equipe do serviço responde por perda ou duplicação de eventos. Uma indisponibilidade da projeção não encerra o protocolo nem apaga sua trilha. O cliente recebe indicação honesta de etapa e próximo passo."
+          },
+          {
+            "type": "p",
+            "text": "Rollback desliga a nova projeção e o roteamento automático, preservando o histórico e os casos em curso. Um exercício deve simular banco indisponível após decisão, permissão revogada durante consulta e retorno de uma versão antiga. O runbook precisa explicar como reconciliar pendências e como comunicar continuidade, sem exportar dossiês para planilhas desprotegidas."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição para a decisão",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu definiria o modelo de evidência, os limites de autorização e os invariantes de revisão. Conduziria a discussão sobre consistência, retenção e exposição de sinais, usando exemplos concretos de divergência. A decisão mais importante seria manter separado o registro de acesso da interpretação sobre consentimento, evitando que um campo técnico carregue uma conclusão que não lhe pertence."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu criaria uma entrega conjunta com operação e risco, estabelecendo dono da jornada e tempo reservado para revisão. Priorizaria primeiro o retrabalho mais frequente demonstrado pela amostra, com critérios explícitos para decidir se o próximo investimento é produto, integração ou treinamento. Essas são ações que proponho executar; não alego ter dirigido equipes ou políticas do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "Eu rejeitaria a alternativa de automatizar a negativa apenas porque o dossiê contém um dispositivo conhecido. Também evitaria abrir todos os sinais ao atendimento. A proposta equilibra revisão útil e minimização de acesso, e aceita um custo operacional maior quando necessário para preservar a qualidade de uma decisão sensível."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Entrega para revisão técnica e operacional",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar: python3 labs/case_08.py. A suíte completa possui 9 testes; nenhum serviço externo é acessado.",
+              "Revisar Dispute.append e validate_transition; depois inspecionar o histórico antes e depois de um recurso.",
+              "Confirmar que retry, conflito de chave, revisão antiga e papel incorreto não criam nova decisão.",
+              "Antes de produção: identidade, escopo por conta, retenção, política, auditoria e revisão humana independente."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O laboratório cabe em uma revisão conjunta: engenharia explica o contrato; operações verifica se o histórico permite reconstruir o trabalho; risco avalia quais decisões exigem supervisão; privacidade avalia exposição. A execução local valida apenas os invariantes modelados, não o mérito de uma contestação."
+          },
+          {
+            "type": "p",
+            "text": "A porta final é simples: prosseguir apenas se a amostra demonstrar lacuna corrigível, a revisão independente mantiver qualidade e a capacidade liberada tiver destino. Caso contrário, preservar o aprendizado e escolher outra intervenção. O resultado esperado desta proposta é uma decisão melhor fundamentada e mais fácil de revisar, sem promessa de resolver automaticamente disputas financeiras."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "08",
+    "technologies": [
+      "clojure",
+      "kafka",
+      "datomic",
+      "aws",
+      "flutter",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/"
+  },
+  {
+    "title": "Fatura paga, limite incerto: seguir cada centavo",
+    "subtitle": "Recebimento, alocação e projeção precisam compartilhar um contrato",
+    "source_title": "Reclame AQUI — pagamento de fatura e limite",
+    "pages": [
+      {
+        "title": "09 · Pago não explica a alocação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A reclamação 242838873, de 10/03/2026, relata fatura indicada como paga e limite não totalmente recomposto, após três chamados. Em 17/03, o Nubank informa correção da fatura, consideração do pagamento e quitação das parcelas antecipadas. Explica a recomposição do limite conforme processamento e saldo financiado. O estado público é Respondida; não há confirmação final do cliente. Valores individuais estão ocultos."
+          },
+          {
+            "type": "callout",
+            "title": "Limite da evidência",
+            "text": "A resposta sustenta correção realizada, mas não revela o razão, a ordem dos eventos ou a causa técnica. Este estudo propõe rastreabilidade de alocação; não diagnostica o sistema responsável."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 09 · 2026-03-10",
+            "url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/"
+          }
+        ]
+      },
+      {
+        "title": "Três estados com consequências diferentes",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Receber dinheiro, aplicar dinheiro e atualizar uma leitura de limite são etapas distintas. A interface pode informar corretamente que houve pagamento e ainda deixar sem resposta quais obrigações foram liquidadas. Quando existe financiamento, o efeito sobre crédito disponível depende de regras que um único rótulo não consegue explicar. O recibo precisa ligar recebimento, destino e consequência, em vez de apenas substituir uma palavra na tela."
+          },
+          {
+            "type": "p",
+            "text": "Minha hipótese é que parte do recontato nasce da ausência dessa ligação verificável entre canais. A investigação usaria o identificador de pagamento para reconstruir confirmação, alocações, compensações e atualização de projeção. Compararia o que o cliente viu com o que suporte e razão registravam na mesma versão. Se o problema estiver no cálculo da obrigação, melhorar a apresentação será insuficiente e deve ceder prioridade à correção financeira."
+          },
+          {
+            "type": "p",
+            "text": "A fronteira de responsabilidade inclui regras contratuais de financiamento e reconhecimento da liquidação. O aplicativo não pode decidir sozinho para qual dívida mover o valor. Também não deve convidar a um segundo pagamento enquanto a primeira alocação estiver incerta. A proposta torna explícita a pendência e oferece acompanhamento pelo mesmo identificador."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Um recibo ligado ao razão",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Alocação verificável e leitura versionada",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Recebimento",
+                "detail": "Confirmação financeira",
+                "group": "razão"
+              },
+              {
+                "id": "1",
+                "label": "Alocador",
+                "detail": "Contrato e obrigação",
+                "group": "domínio"
+              },
+              {
+                "id": "2",
+                "label": "Projeção",
+                "detail": "Recibo versionado",
+                "group": "leitura"
+              },
+              {
+                "id": "3",
+                "label": "Consulta do recibo",
+                "detail": "Estado e versão",
+                "group": "experiência"
+              },
+              {
+                "id": "4",
+                "label": "Limite explicado",
+                "detail": "Aplicado ou atualizando",
+                "group": "interface"
+              },
+              {
+                "id": "5",
+                "label": "Regras de soma",
+                "detail": "Conservação em centavos",
+                "group": "contrato"
+              },
+              {
+                "id": "6",
+                "label": "Reconciliador",
+                "detail": "Recebido versus aplicado",
+                "group": "controle"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "liquidação confirmada",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "publicar recibo",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "retorno com versão",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "leitura de mesma versão",
+                "from": "2"
+              },
+              {
+                "to": "4",
+                "label": "explicar efeito",
+                "from": "3"
+              },
+              {
+                "to": "6",
+                "label": "invariantes",
+                "from": "5"
+              },
+              {
+                "to": "6",
+                "label": "valores do recibo",
+                "from": "3"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O alocador recebe confirmação financeira e aplica um plano validado. O recibo canônico e sua projeção carregam a mesma revisão. O reconciliador compara valores do recibo com invariantes independentes; uma divergência não é resolvida escondendo centavos na apresentação."
+          },
+          {
+            "type": "p",
+            "text": "A atualização do limite pode seguir outro ritmo, mas precisa indicar sua versão e estado. O diagrama resume responsabilidades, não todas as integrações. Correção financeira exige compensações autorizadas no razão; o reconciliador detecta e encaminha, sem editar saldos por conta própria."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: alocar ou não alterar nada",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def apply(self, ident, amount, plan, crash=False):\n        if not isinstance(ident, str) or not ident.strip():\n            raise ValueError('nonempty payment identity required')\n        if type(amount) is not int or amount <= 0:\n            raise ValueError('positive integer cents required')\n        if any(type(v) is not int or v <= 0 for v in plan.values()):\n            raise ValueError('invalid allocation')\n        encoded = json.dumps(plan, sort_keys=True)\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            old = self.db.execute('SELECT amount,plan FROM payments WHERE id=?',\n                                  (ident,)).fetchone()\n            if old:\n                if old != (amount, encoded):\n                    raise ValueError('payment conflict')\n                return self.receipt(ident)\n            if sum(plan.values()) > amount:\n                raise ValueError('allocation exceeds received amount')\n            for target, value in plan.items():\n                changed = self.db.execute('UPDATE obligations SET due=due-? '\n                    'WHERE id=? AND due>=?', (value, target, value)).rowcount\n                if changed != 1:\n                    raise ValueError('unknown or overpaid obligation')\n                self.db.execute('INSERT INTO allocations VALUES(?,?,?)',\n                                (ident, target, value))\n            if crash:\n                raise RuntimeError('crash before commit')\n            self.db.execute('INSERT INTO payments VALUES(?,?,?,?)',\n                            (ident, amount, encoded, amount - sum(plan.values())))\n        return self.receipt(ident)",
+            "caption": "Trecho literal de labs/case_09.py; SQLite representa uma autoridade local."
+          },
+          {
+            "type": "p",
+            "text": "A escrita condicional impede aplicar mais que a obrigação deve. Todas as alocações e o recibo pertencem à mesma transação: se o segundo destino for inválido, o primeiro também volta ao estado anterior. O saldo não aplicado permanece explícito."
+          },
+          {
+            "type": "p",
+            "text": "O exemplo recebe um plano já escolhido; não implementa a prioridade contratual do Nubank. Em produção, essa escolha precisa de política versionada, autorização por conta e prova de liquidação. A retentativa só é aceita quando valor e plano são idênticos. Reutilizar a chave para mudar o destino exige outra ação autorizada, nunca uma atualização silenciosa."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Função pura, escrita transacional",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn allocation-valid? [{:keys [received allocations unapplied]}]\n  (and (pos-int? received)\n       (every? pos-int? (vals allocations))\n       (<= 0 unapplied)\n       (= received (+ unapplied (reduce + (vals allocations))))))\n\n(defn allocation-event [payment-id revision plan]\n  {:event-type :payment-applied\n   :payment-id payment-id\n   :revision revision\n   :allocations plan})",
+            "caption": "Exemplo ilustrativo em Clojure, não executado; o laboratório Python é o artefato testado."
+          },
+          {
+            "type": "p",
+            "text": "A função verifica conservação, mas não prova que cada obrigação é elegível. Essa segunda validação precisa ocorrer dentro da fronteira transacional que conhece saldo, titular e contrato. Separar cálculo puro de persistência facilita testar regras e revisar mudanças, sem atribuir à função garantias que dependem do banco."
+          },
+          {
+            "type": "p",
+            "text": "Uma integração com eventos deve gravar alocação e intenção de publicação atomicamente. O consumidor da projeção deduplica pelo identificador e pela revisão financeira. Não basta confiar na ordem do transporte: replay, reprocessamento e mudanças de consumidor podem entregar novamente o mesmo fato. Falhas de publicação deixam trabalho pendente identificável, não autorização para reaplicar o pagamento."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Conservar dinheiro e identidade",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo",
+              "Semântica",
+              "Responsável"
+            ],
+            "rows": [
+              [
+                "payment_id",
+                "Recebimento estável",
+                "Liquidação"
+              ],
+              [
+                "allocations",
+                "Destino em centavos",
+                "Crédito/fatura"
+              ],
+              [
+                "unapplied",
+                "Saldo ainda sem destino",
+                "Operações"
+              ],
+              [
+                "revision",
+                "Fato financeiro de origem",
+                "Razão"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"payment_id\": \"synthetic-payment-09\",\n  \"currency\": \"BRL\",\n  \"received_cents\": 15001,\n  \"allocations\": {\"bill\": 10000, \"installment\": 5000},\n  \"unapplied_cents\": 1,\n  \"ledger_revision\": 42,\n  \"limit_projection_revision\": 41,\n  \"limit_state\": \"updating\"\n}",
+            "caption": "Exemplo sintético: 15.001 recebidos, 15.000 aplicados, 1 não aplicado."
+          },
+          {
+            "type": "p",
+            "text": "A revisão de limite inferior à revisão financeira explica que a leitura ainda está atualizando, sem afirmar crédito já disponível. Identificadores não devem expor conta ou contrato em URLs públicas. O suporte recebe o necessário para explicar a alocação; detalhes de terceiros e outras obrigações permanecem protegidos. Retificação deve referenciar o fato anterior e conservar a trilha."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Falha parcial não pode virar meia baixa",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_failure_after_first_write_rolls_everything_back(self):\n        with self.assertRaises(ValueError):\n            self.l.apply('p', 20000, {'bill': 10000, 'installment': 6000})\n        self.assertEqual(self.l.due('bill'), 10000)\n        self.assertEqual(self.l.due('installment'), 5000)\n        self.assertEqual(self.l.db.execute(\n            'SELECT COUNT(*) FROM allocations').fetchone()[0], 0)\n\n    def test_restart_retry_does_not_apply_twice(self):\n        first = self.l.apply('p', 12000, {'bill': 10000})\n        self.l.close()\n        self.l = Ledger(self.path)\n        self.assertEqual(self.l.apply('p', 12000, {'bill': 10000}), first)\n        self.assertEqual(first['unapplied'], 2000)\n        self.assertEqual(self.l.due('bill'), 0)",
+            "caption": "Trechos literais da suíte; 9 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O teste de falha parcial tenta quitar uma obrigação e exceder outra, verificando rollback integral. O teste de retomada reabre o banco e confirma que o mesmo recebimento não reaplica o dinheiro. A suíte também verifica centavo residual, plano conflitante, valor fracionário e tentativa de pagar obrigação já quitada."
+          },
+          {
+            "type": "p",
+            "text": "Ainda faltam regras de juros, taxas, moeda, estorno e autorização entre contas. Um teste de integração deve observar outbox e projeção após falha entre commit e publicação, validando o recibo contra uma fonte independente. A conservação local é necessária, mas não substitui reconciliação com o sistema de liquidação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Métricas que seguem o pagamento",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Aplicação atrasada",
+                "Pagamentos além do prazo / elegíveis",
+                "Diária; tipo de dívida"
+              ],
+              [
+                "Saldo sem destino",
+                "Centavos não aplicados / recebidos",
+                "Diária; idade"
+              ],
+              [
+                "Recontato",
+                "Contatos de alocação / pagamentos",
+                "30 dias; contrato"
+              ],
+              [
+                "Divergência",
+                "Recibos que não conciliam / verificados",
+                "Contínua; revisão"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As linhas de base e prazos internos são desconhecidos. Definiria primeiro a origem de cada timestamp: confirmação externa, commit de aplicação e publicação da projeção. Um atraso de rede não deve ser confundido com atraso de liquidação. Contatos exigem taxonomia revisada em amostra para separar dúvida de apresentação de erro financeiro real."
+          },
+          {
+            "type": "p",
+            "text": "O experimento libera o recibo explicável sem mudar regras de alocação. Compara coortes equivalentes por produto, financiamento e valor. Pararia a expansão diante de qualquer quebra de conservação, aumento de pagamentos repetidos ou vazamento de contexto entre contas. O objetivo de reduzir contato não pode incentivar ocultação da opção de ajuda."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Conta financeira com duas parcelas de custo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 70.800",
+                "R$ 60.000",
+                "R$ -249.200"
+              ],
+              [
+                "Base",
+                "R$ 240.000",
+                "R$ 60.000",
+                "R$ -80.000"
+              ],
+              [
+                "Ambicioso",
+                "R$ 676.800",
+                "R$ 60.000",
+                "R$ 356.800"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Todos os valores abaixo são hipóteses: 60 mil, 120 mil ou 240 mil pagamentos elegíveis/ano; redução de 0,06, 0,10 ou 0,14 contato por pagamento; R$ 18 por contato. Além disso, assumo 1, 2 ou 3 horas de conciliação evitadas a cada mil pagamentos, a R$ 100/h. Implementação: R$ 260 mil; operação anual: R$ 60 mil. Contatos e horas de conciliação devem ser conjuntos de trabalho diferentes."
+          },
+          {
+            "type": "p",
+            "text": "No cenário base, 120.000 × 0,10 × 18 + 120 × 2 × 100 = R$ 240.000 de capacidade anual. O primeiro ano resulta em R$ 240.000 − 60.000 − 260.000 = −R$ 80.000. O equilíbrio exigiria 160 mil pagamentos equivalentes à hipótese base. Essa conta favorece um piloto ou reaproveitamento de componentes, não aprovação automática do projeto completo."
+          },
+          {
+            "type": "callout",
+            "title": "Sem converter saldo em receita",
+            "text": "Limite recomposto e principal recebido não são lucro. A capacidade só vira caixa se houver redução concreta de gasto. Excluir desta conta o retrabalho de antecipação já medido no caso 14."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap orientado à reconciliação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Dono e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Fatura + crédito: mapa de alocação",
+                "Casos sintéticos conciliados"
+              ],
+              [
+                "16–30 dias",
+                "Staff: recibo e outbox",
+                "Falhas não duplicam aplicação"
+              ],
+              [
+                "31–60 dias",
+                "Operações: sombra de reconciliação",
+                "Diferenças classificadas"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto: canário do recibo",
+                "Contatos caem; integridade mantida"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A principal dependência é uma referência financeira confiável para comparar a nova leitura. Sem isso, um painel pode apenas tornar um erro mais convincente. Na primeira fase, contabilidade e crédito aprovam os exemplos de pagamento parcial, financiamento, antecipação e compensação, com valores em centavos e versões explícitas."
+          },
+          {
+            "type": "p",
+            "text": "O calendário de 90 dias é cenário de planejamento. O EM reserva capacidade de suporte e operações durante o canário; o Staff define testes de falha e contrato de correção. Se a qualidade das referências não atingir o gate, a entrega seguinte é reconciliação e saneamento, não expansão visual. Cada exceção precisa de responsável e destino para o valor não aplicado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollback preserva a escrita financeira",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O lançamento começa por leitura em sombra. A projeção calcula o recibo e é comparada com o razão, sem orientar o cliente nem alterar alocações. Depois, um canário expõe a memória de aplicação para contas elegíveis. A leitura antiga permanece disponível como fallback identificado, sem misturar versões de total e detalhe."
+          },
+          {
+            "type": "p",
+            "text": "Alertas combinam idade do saldo não aplicado, atraso de projeção e violações de soma. Plataforma responde por publicação; crédito e fatura respondem pela interpretação financeira; operações coordena resolução do cliente. Uma fila de erro deve carregar IDs e motivos, nunca dados financeiros completos desnecessários em logs abertos."
+          },
+          {
+            "type": "p",
+            "text": "Desligar o novo recibo não desfaz pagamentos confirmados. Rollback é de apresentação e roteamento, seguido de reconciliação das pendências. Exercícios incluem crash antes e depois do commit, consumidor atrasado e correção concorrente. A ferramenta precisa distinguir o que foi recebido do que foi aplicado durante toda a recuperação, inclusive para o atendimento."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição em duas frentes",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu colocaria conservação e identidade no centro do desenho. Escolheria a fronteira da transação, definiria a compensação e documentaria quais leituras podem ser eventualmente consistentes. Eu rejeitaria a solução de inferir limite disponível apenas de um rótulo de fatura paga, porque ela troca um contrato financeiro por uma aproximação visual."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu uniria as equipes que hoje podem enxergar partes diferentes do mesmo pagamento. Definiria um responsável pela resolução ponta a ponta e um acordo de investigação com IDs compartilhados. O plano deve incluir treinamento do suporte e capacidade para tratar exceções, não somente a entrega do componente móvel."
+          },
+          {
+            "type": "p",
+            "text": "Eu também defenderia uma decisão econômica proporcional à evidência. O cenário base não paga a implantação no primeiro ano assumido. Se uma API de recibo existente puder ser ampliada, o custo muda e deve ser recalculado. Meu papel é explicitar esse tradeoff e proteger a integridade da jornada, sem apresentar capacidade potencial como economia já realizada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roteiro de revisão do recibo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_09.py; 9 testes locais, sem integração bancária.",
+              "Ler Ledger.apply e receipt; reproduzir alocação em dois destinos com um centavo residual.",
+              "Provocar falha no segundo destino e confirmar que o primeiro não permanece baixado.",
+              "Antes de produção: liquidação real, escopo por conta, regras contratuais, outbox e compensações."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O revisor deve conseguir responder de onde veio cada centavo e para onde ele foi. Um recibo que apenas mostra um total não satisfaz o contrato. A demonstração local permite inspecionar pagamentos, obrigações e alocações diretamente, mas não cobre todas as regras de um cartão ou financiamento real."
+          },
+          {
+            "type": "p",
+            "text": "A decisão de avançar exige uma amostra conciliada, compreensão demonstrada pelo cliente e operação capaz de resolver diferenças. Se houver quebra de conservação, o gate é parar e corrigir a autoridade financeira. Se a escrita estiver correta e apenas a leitura for confusa, o piloto de explicação pode seguir com risco e custo menores."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "09",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "kafka",
+      "flutter",
+      "prometheus",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/"
+  },
+  {
+    "title": "NuPay após erro exibido: recuperar a intenção antes de repetir",
+    "subtitle": "Resultado desconhecido é um estado financeiro, não um convite a cobrar de novo",
+    "source_title": "Reclame AQUI — duplicidade e juros no NuPay",
+    "pages": [
+      {
+        "title": "10 · Duplicidade com desfecho confirmado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No caso 241843991, de 27/02/2026, o cliente relata erro exibido e repetição de pagamento NuPay, resultando em duas operações de R$ 900 e juros de R$ 81,17. O Nubank informa crédito da duplicidade e dos juros em 04/03; o cliente confirma resolução. A causa técnica não está demonstrada."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Dado público",
+              "Cuidado de interpretação"
+            ],
+            "rows": [
+              [
+                "4 parcelas de R$ 245,29",
+                "Soma declarada: R$ 981,16"
+              ],
+              [
+                "R$ 900 + R$ 81,17",
+                "Soma analítica: R$ 981,17"
+              ],
+              [
+                "Diferença: R$ 0,01",
+                "Não inventar ajuste de arredondamento"
+              ]
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Caso histórico resolvido",
+            "text": "A divergência de um centavo pertence ao relato. O lançamento exato do ajuste não foi publicado; a resposta confirma categorias, não um total numérico."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 10 · 2026-02-27",
+            "url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/"
+          }
+        ]
+      },
+      {
+        "title": "Timeout não equivale a falha definitiva",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Uma interrupção pode ocorrer depois que o parceiro aceitou o pagamento e antes que o aplicativo receba a confirmação. Nesse intervalo, dizer que nada aconteceu pode induzir uma nova intenção financeira. A hipótese deste capítulo é que um estado explícito de resultado desconhecido, acompanhado de consulta à tentativa original, reduz repetição involuntária sem impedir novas compras legítimas."
+          },
+          {
+            "type": "p",
+            "text": "A investigação deve reconstruir IDs, instantes e contratos entre cliente, serviço e provedor. É necessário distinguir retry da mesma intenção de uma segunda compra deliberada. Valor, comerciante e proximidade temporal ajudam na análise, mas não são identidade suficiente: duas compras iguais podem ser legítimas. A fonte pública não permite concluir qual mecanismo estava presente ou ausente no incidente."
+          },
+          {
+            "type": "p",
+            "text": "O controle deve começar antes do envio: gerar e persistir a intenção, vincular conteúdo e chave, recuperar o estado após reinício do aplicativo. Se o provedor não oferecer idempotência ou consulta confiável, a garantia diminui. Nesse caso, a experiência precisa reconhecer a incerteza e acionar reconciliação, em vez de prometer exatamente uma execução distribuída."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Uma intenção atravessa a incerteza",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Retomar o mesmo pagamento",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "App",
+                "detail": "Intenção persistente",
+                "group": "experiência"
+              },
+              {
+                "id": "1",
+                "label": "Vínculo da intenção",
+                "detail": "Chave e conteúdo",
+                "group": "contrato"
+              },
+              {
+                "id": "2",
+                "label": "Registro da intenção",
+                "detail": "Pendente ou confirmado",
+                "group": "persistência"
+              },
+              {
+                "id": "3",
+                "label": "Despachante",
+                "detail": "Mesma chave no provedor",
+                "group": "integração"
+              },
+              {
+                "id": "4",
+                "label": "Provedor",
+                "detail": "Efeito financeiro externo",
+                "group": "terceiro"
+              },
+              {
+                "id": "5",
+                "label": "Confirmador",
+                "detail": "Recibo ou incerteza",
+                "group": "domínio"
+              },
+              {
+                "id": "6",
+                "label": "Reconciliação",
+                "detail": "Retoma intenção original",
+                "group": "controle"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "criar ou retomar",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "persistir vínculo",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "despachar intenção",
+                "from": "2"
+              },
+              {
+                "to": "4",
+                "label": "chave idempotente",
+                "from": "3"
+              },
+              {
+                "to": "5",
+                "label": "retorno ou consulta",
+                "from": "4"
+              },
+              {
+                "to": "6",
+                "label": "pendência identificada",
+                "from": "5"
+              },
+              {
+                "to": "2",
+                "label": "atualizar mesma intenção",
+                "from": "6"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O registro vincula chave, valor, moeda e recebedor antes do despacho. O provedor conserva a mesma chave entre tentativas. Confirmação e reconciliação atualizam a intenção original, permitindo que o aplicativo retome o recibo após perder a resposta."
+          },
+          {
+            "type": "p",
+            "text": "O modelo usa dois bancos para representar a fronteira entre serviço e provedor. Não existe transação distribuída entre eles. A propriedade depende explicitamente de deduplicação no provedor; sem essa capacidade, o desenho exige outra estratégia operacional e não pode manter a mesma promessa."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: persistir antes de despachar",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def pay(self, key, amount, merchant, timeout_after_provider=False):\n        if not isinstance(key, str) or not key.strip():\n            raise ValueError('nonempty intent identity required')\n        if type(amount) is not int or amount <= 0 or not merchant:\n            raise ValueError('invalid intent')\n        payload = json.dumps([amount, merchant])\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            old = self.db.execute('SELECT payload,receipt FROM intents WHERE key=?',\n                                  (key,)).fetchone()\n            if old and old[0] != payload:\n                raise ValueError('intent conflict')\n            if old and old[1]:\n                return old[1]\n            self.db.execute('INSERT OR IGNORE INTO intents VALUES(?,?,NULL)',\n                            (key, payload))\n        receipt = self.provider.charge(key, payload)\n        if timeout_after_provider:\n            raise TimeoutError('provider committed; local outcome unknown')\n        with self.db:\n            self.db.execute('UPDATE intents SET receipt=? WHERE key=?',\n                            (receipt, key))\n        return receipt\n\n    def state(self, key):\n        row = self.db.execute('SELECT receipt FROM intents WHERE key=?',\n                              (key,)).fetchone()\n        return 'absent' if row is None else ('confirmed' if row[0] else 'unknown')",
+            "caption": "Trecho literal de labs/case_10.py; dois bancos locais e um provedor sintético."
+          },
+          {
+            "type": "p",
+            "text": "A intenção é gravada antes da chamada externa. O timeout injetado acontece depois do commit do provedor e antes de salvar o recibo local. A retomada usa a mesma chave e recebe o recibo já existente, demonstrando que ausência de resposta não autoriza outro efeito."
+          },
+          {
+            "type": "p",
+            "text": "Não se deve manter uma transação local aberta enquanto espera a rede: isso cria bloqueios sem tornar o parceiro atomicamente participante. O laboratório torna essa separação visível. Em produção, o payload inclui escopo de conta e contrato; a integração precisa tratar retenção de chave, expiração e compatibilidade do provedor."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "O estado deve orientar a próxima ação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "dart",
+            "code": "sealed class PaymentState {}\nclass Unknown extends PaymentState {\n  final String intentId;\n  Unknown(this.intentId);\n}\nclass Confirmed extends PaymentState {\n  final String receiptId;\n  Confirmed(this.receiptId);\n}\n\nString nextAction(PaymentState state) => switch (state) {\n  Unknown() => 'Check the existing payment',\n  Confirmed() => 'Open receipt',\n  _ => 'Continue',\n};",
+            "caption": "Dart ilustrativo, não executado; estados e textos exigem revisão de produto e acessibilidade."
+          },
+          {
+            "type": "p",
+            "text": "A interface oferece consulta da tentativa existente quando o resultado é desconhecido. O texto é apenas um exemplo: precisa informar o que está sendo verificado, sem afirmar débito ou falha antes da confirmação. O botão de nova compra deve representar nova intenção explícita, não um retry disfarçado."
+          },
+          {
+            "type": "p",
+            "text": "Persistência local ajuda o aplicativo a retomar, mas o servidor continua sendo a referência. Reinstalação, troca de aparelho ou limpeza de armazenamento não podem criar automaticamente outra cobrança. Ao recuperar a sessão, o cliente consulta intenções autorizadas e recentes. Dados do recebedor devem ser suficientes para reconhecimento, com minimização de informação sensível e sem expor credenciais de integração."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Identidade antes de heurística",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Contrato",
+              "Invariante",
+              "Limite"
+            ],
+            "rows": [
+              [
+                "Mesma chave",
+                "Mesmo conteúdo e recibo",
+                "Escopo e retenção definidos"
+              ],
+              [
+                "Conteúdo diferente",
+                "Conflito explícito",
+                "Não atualizar em silêncio"
+              ],
+              [
+                "Nova intenção",
+                "Pode repetir valor",
+                "Consentimento próprio"
+              ],
+              [
+                "Correção",
+                "Vínculo com principal/encargos",
+                "Política e reconciliação"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"intent_id\": \"synthetic-intent-10\",\n  \"currency\": \"BRL\",\n  \"amount_cents\": 90000,\n  \"merchant_ref\": \"synthetic-merchant\",\n  \"payload_digest\": \"sha256:...\",\n  \"provider_key\": \"synthetic-intent-10\",\n  \"state\": \"unknown\",\n  \"next_action\": \"query_existing_intent\"\n}",
+            "caption": "Contrato sintético em centavos; não é uma captura do NuPay."
+          },
+          {
+            "type": "p",
+            "text": "O digest não substitui validação dos campos e não deve ser usado como única autorização. Uma correção financeira é outra operação, vinculada ao efeito original; ela não apaga a intenção nem transforma uma tentativa confirmada em nunca ocorrida. Juros e principal exigem trilhas separadas para que a resolução seja completa e auditável."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Falhar depois do efeito externo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_timeout_restart_and_retry_produce_one_charge(self):\n        with self.assertRaises(TimeoutError):\n            self.c.pay('intent1', 90000, 'merchant', True)\n        self.assertEqual(self.c.state('intent1'), 'unknown')\n        self.assertEqual(self.charges(), 1)\n        self.c.db.close()\n        self.c = IntentClient(self.path / 'client.db', self.p)\n        self.assertEqual(self.c.pay('intent1', 90000, 'merchant'),\n                         'provider:intent1')\n        self.assertEqual(self.charges(), 1)\n        self.assertEqual(self.c.state('intent1'), 'confirmed')\n\n    def test_same_amount_can_be_two_explicit_purchases(self):\n        self.c.pay('intent1', 90000, 'merchant')\n        self.c.pay('intent2', 90000, 'merchant')\n        self.assertEqual(self.charges(), 2)",
+            "caption": "Trechos literais; 9 testes passaram, incluindo retomada após timeout."
+          },
+          {
+            "type": "p",
+            "text": "O cenário adverso mais importante já produziu efeito no provedor. A asserção verifica uma cobrança após reabrir o cliente e repetir a chamada. Outro teste permite duas compras iguais com intenções diferentes, evitando uma proteção que bloqueie indiscriminadamente pagamentos legítimos."
+          },
+          {
+            "type": "p",
+            "text": "A suíte também verifica conflito de valor, recebedor diferente, múltiplos timeouts e centavos inválidos. Não cobre rede real, retenção de chaves do parceiro, juros ou cancelamento comercial. O contrato de integração precisa testar esses comportamentos com o provedor, especialmente uma resposta tardia depois que a jornada foi encaminhada para atendimento."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Medir ambiguidade e efeito confirmado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Definição",
+              "Coleta / corte"
+            ],
+            "rows": [
+              [
+                "Resultado desconhecido",
+                "Intenções sem desfecho / elegíveis",
+                "Eventos; provedor e versão"
+              ],
+              [
+                "Duplicidade confirmada",
+                "Repetições involuntárias / intenções",
+                "Revisão; motivo"
+              ],
+              [
+                "Tempo de reconciliação",
+                "p95 até resultado definitivo",
+                "Por idade e parceiro"
+              ],
+              [
+                "Falso bloqueio",
+                "Compras legítimas impedidas / revisadas",
+                "Amostra independente"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As taxas atuais são desconhecidas. Uma exceção de rede não pode entrar automaticamente no numerador de duplicidade. A confirmação exige vínculo entre intenções e análise do efeito, preservando compras legítimas iguais. O indicador de correção completa verifica principal e encargos associados, sem inferir que todo ajuste é perda do banco."
+          },
+          {
+            "type": "p",
+            "text": "O experimento começa com recuperação de intenção em sombra e testes de falha. O canário compara versões móveis e parceiros compatíveis, mantendo política de autorização constante. Qualquer nova duplicidade causada pelo controle, impedimento de pagamento legítimo ou perda de rastreabilidade interrompe a expansão. Conversão isolada não é critério suficiente de sucesso."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Um caso forte não prova ROI elevado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 4.050",
+                "R$ 36.000",
+                "R$ -211.950"
+              ],
+              [
+                "Base",
+                "R$ 27.000",
+                "R$ 36.000",
+                "R$ -189.000"
+              ],
+              [
+                "Ambicioso",
+                "R$ 108.000",
+                "R$ 36.000",
+                "R$ -108.000"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Hipóteses anuais: 30 mil, 60 mil ou 100 mil intenções ambíguas; duplicidade confirmada em 0,5%, 1% ou 2%; prevenção incremental de 30%, 50% ou 60%. Isso produz 45, 300 ou 1.200 incidentes evitados. Assumo R$ 50 de atendimento/conciliação e R$ 40 de encargos irrecuperáveis por incidente, total R$ 90. Não uso os valores do relato como custo médio do banco."
+          },
+          {
+            "type": "p",
+            "text": "Implementação assumida: R$ 180 mil; operação anual: R$ 36 mil. No cenário base, 300 × 90 = R$ 27.000; primeiro ano: R$ 27.000 − 36.000 − 180.000 = −R$ 189.000. O equilíbrio exige 2.400 incidentes efetivamente evitados no primeiro ano. Nenhum cenário apresentado justifica sozinho o investimento completo. Uma correção menor, reaproveitada em plataforma, pode ter outra conta e deve ser estimada separadamente."
+          },
+          {
+            "type": "callout",
+            "title": "Não confundir fluxo e perda",
+            "text": "Principal devolvido não é automaticamente despesa do banco. Capacidade operacional, encargos suportados e dinheiro do cliente são categorias distintas. O incidente real não fornece frequência populacional nem ganho realizado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap condicionado ao parceiro",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Pagamentos: contrato do provedor",
+                "Idempotência/consulta verificadas"
+              ],
+              [
+                "16–30 dias",
+                "Staff + mobile: intenção persistente",
+                "Reinício recupera mesma operação"
+              ],
+              [
+                "31–60 dias",
+                "Operações: falhas e sombra",
+                "Efeito externo reconciliado"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto: canário por parceiro",
+                "Sem duplicidade nem falso bloqueio"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A dependência mais importante é saber o que o parceiro realmente garante e por quanto tempo guarda a chave. Se a consulta não distingue pendente de inexistente, o desenho precisa preservar essa ambiguidade. O cronograma de 90 dias é planejamento proposto, não promessa de mudança pelo Nubank ou pelo provedor."
+          },
+          {
+            "type": "p",
+            "text": "O EM negocia capacidade de integração, teste e suporte; o Staff documenta as garantias por cenário de falha. A entrega móvel deve esperar o contrato do servidor. Um texto melhor, sem recuperação de estado, pode apenas esconder o problema. A porta econômica também é explícita: começar por mudança limitada quando os cenários não sustentam plataforma nova."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Operar o desconhecido sem repetir",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O canário deve ter uma fila de intenções desconhecidas com idade, parceiro e próximo passo. Alertas não transportam dados completos do pagamento; usam referências autorizadas para investigação. A equipe de pagamentos responde pelo efeito, integração pelo contrato externo e atendimento pela continuidade da comunicação ao cliente."
+          },
+          {
+            "type": "p",
+            "text": "O runbook começa consultando a intenção existente e a evidência do provedor. Não orienta o operador a criar outra cobrança para testar se funciona. Quando a confirmação chega tarde, ela deve atualizar o mesmo caso e impedir correções duplicadas. Um pedido de reembolso exige fluxo próprio e autorização adequada; não é consequência automática de timeout."
+          },
+          {
+            "type": "p",
+            "text": "Rollback desativa a nova experiência, mas conserva intenções e confirmações já gravadas. Simularia perda de resposta, retorno duplicado, resposta fora de ordem e indisponibilidade da consulta. Também testaria recuperação após reinstalação do app. A condição de parada é qualquer cenário em que o estado mostrado induza ação financeira incompatível com o que se sabe."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição para o contrato",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu tornaria explícitas as garantias locais e as dependências externas. Recusaria o uso de exatamente uma vez como slogan para toda a jornada. O desenho deve dizer onde há transação, onde há deduplicação e onde existe incerteza. Eu também definiria a diferença entre retry e nova intenção para que prevenção de duplicidade não impeça compras legítimas."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu coordenaria mobile, pagamentos, parceiro e suporte em torno de cenários reproduzíveis de falha. A equipe precisa de tempo para exercícios e reconciliação, não apenas de uma meta de entrega visual. Eu colocaria o custo do projeto e a evidência de incidência na mesma decisão de prioridade."
+          },
+          {
+            "type": "p",
+            "text": "A alternativa rejeitada é bloquear automaticamente qualquer pagamento de mesmo valor ao mesmo recebedor em uma janela curta. Essa regra pode gerar falsos positivos e não resolve perda de resposta. Uma intenção identificada oferece contrato mais preciso, desde que o parceiro coopere. Quando ele não coopera, a limitação precisa aparecer no desenho e no plano operacional."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Revisão do efeito único sob uma hipótese",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_10.py; 9 testes locais sem chamadas financeiras.",
+              "Inspecionar Provider.charge e IntentClient.pay; localizar os dois commits separados.",
+              "Injetar timeout_after_provider = True e observar estado unknown com uma cobrança existente.",
+              "Retomar com a mesma chave; depois criar outra intenção explícita e verificar duas compras legítimas."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A garantia demonstrada depende de o provedor sintético deduplicar corretamente. O laboratório não prova que um parceiro real oferece a mesma retenção, escopo ou consulta. Antes de produção, são necessários testes contratuais, autenticação, moeda, regras de expiração e reconciliação independente do efeito."
+          },
+          {
+            "type": "p",
+            "text": "Avançar somente quando o contrato externo estiver confirmado, a mensagem orientar a ação correta e o piloto demonstrar redução de repetição sem bloquear compras válidas. Caso contrário, limitar a mudança à recuperação de informações e à operação assistida. O valor desta contribuição está em tornar a incerteza administrável e impedir que uma resposta perdida vire uma nova obrigação financeira."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "10",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "flutter",
+      "dart",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/"
+  },
+  {
+    "title": "Estorno em três lançamentos: a fatura precisa explicar a própria soma",
+    "subtitle": "Proveniência, versão e acessibilidade antes de presumir erro contábil",
+    "source_title": "Reclame AQUI — estorno não percebido na fatura",
+    "pages": [
+      {
+        "title": "11 · Crédito visível, saldo questionado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No caso 213597411, de 31/03/2025, o cliente relata três estornos cuja soma considera correta, mas não percebe o abatimento da fatura. O Nubank afirma aplicação correta e explica compras menos pagamento antecipado menos estornos. O cliente confirma resolução em 08/04. A fonte não demonstra defeito contábil nem esclarece qual ação produziu o desfecho."
+          },
+          {
+            "type": "callout",
+            "title": "Escopo do capítulo",
+            "text": "Investigar compreensão e consistência da leitura. Valores individuais não estão públicos. A solução proposta não parte da premissa de dinheiro retido; começa pela capacidade de explicar cada crédito e o saldo correspondente."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 11 · 2025-03-31",
+            "url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/"
+          }
+        ]
+      },
+      {
+        "title": "Um total correto pode continuar opaco",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O cliente precisa reconhecer a compra de origem, identificar todos os créditos associados e entender a diferença entre saldo aberto e documento fechado. Três linhas verdes não respondem necessariamente quanto mudou no valor a pagar. A proposta é uma memória de cálculo navegável, com relação explícita entre estorno, compra e versão da fatura."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese falsificável é que a decomposição reduz erros de interpretação quando o crédito já foi contabilizado corretamente. Testaria tarefas concretas: encontrar a compra cancelada, somar estornos parciais e explicar o saldo após um pagamento antecipado. Se participantes continuam errando, investigaria linguagem, agrupamento ou discrepância entre versões; não atribuiria automaticamente o problema à falta de atenção do cliente."
+          },
+          {
+            "type": "p",
+            "text": "Também existe uma fronteira contábil: um modelo de apresentação não pode corrigir o razão para fazer sua soma parecer consistente. A fonte financeira mantém autoridade. O aplicativo deve demonstrar a conta da versão consultada e oferecer investigação quando não conseguir conciliá-la. Documentos de fechamento e leituras abertas precisam informar sua data de referência, sem prometer identidade entre períodos diferentes."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Total e detalhe viajam na mesma versão",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Crédito com origem e saldo explicável",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Razão financeiro",
+                "detail": "Débitos e créditos",
+                "group": "autoridade"
+              },
+              {
+                "id": "1",
+                "label": "Eventos",
+                "detail": "IDs e revisão de origem",
+                "group": "transporte"
+              },
+              {
+                "id": "2",
+                "label": "Soma explicável",
+                "detail": "Vínculos e conservação",
+                "group": "domínio"
+              },
+              {
+                "id": "3",
+                "label": "Fatura versionada",
+                "detail": "Total e detalhes juntos",
+                "group": "persistência"
+              },
+              {
+                "id": "4",
+                "label": "API de leitura",
+                "detail": "Escopo e versão",
+                "group": "serviço"
+              },
+              {
+                "id": "5",
+                "label": "Consulta canônica",
+                "detail": "Referência para divergência",
+                "group": "controle"
+              },
+              {
+                "id": "6",
+                "label": "Cliente",
+                "detail": "Crédito com proveniência",
+                "group": "experiência"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "publicar fatos",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "consumir sem duplicar",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "snapshot coerente",
+                "from": "2"
+              },
+              {
+                "to": "4",
+                "label": "ler mesma versão",
+                "from": "3"
+              },
+              {
+                "to": "5",
+                "label": "ausência ou divergência",
+                "from": "4"
+              },
+              {
+                "to": "0",
+                "label": "consultar autoridade",
+                "from": "5"
+              },
+              {
+                "to": "6",
+                "label": "explicar saldo e créditos",
+                "from": "4"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "Eventos preservam identidade e versão do razão. O agregador liga estornos à compra e constrói um snapshot cujo total e detalhes pertencem à mesma revisão. O cliente pode expandir a explicação sem receber uma segunda soma calculada por regras independentes."
+          },
+          {
+            "type": "p",
+            "text": "A consulta canônica é o caminho para dados ausentes ou divergentes, não licença para misturar valores de versões diferentes. A interface informa quando a referência mudou. O desenho não pretende cobrir juros, câmbio ou todos os lançamentos de um produto real; essas regras exigem integração com a autoridade financeira."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: identidade e limite do estorno",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def append(self, entry):\n        if not isinstance(entry.id, str) or not entry.id.strip():\n            raise ValueError('nonempty entry identity required')\n        if type(entry.cents) is not int or entry.cents <= 0:\n            raise ValueError('positive integer cents required')\n        if entry.kind not in {'purchase', 'refund', 'payment'}:\n            raise ValueError('unknown entry type')\n        with self.lock:\n            old = self.entries.get(entry.id)\n            if old:\n                if old != entry:\n                    raise ValueError('entry identity conflict')\n                return\n            if entry.kind == 'refund':\n                purchase = self.entries.get(entry.parent)\n                if not purchase or purchase.kind != 'purchase':\n                    raise ValueError('missing purchase provenance')\n                used = sum(e.cents for e in self.entries.values()\n                           if e.kind == 'refund' and e.parent == entry.parent)\n                if used + entry.cents > purchase.cents:\n                    raise ValueError('refund exceeds purchase')\n            elif entry.parent:\n                raise ValueError('unexpected parent')\n            self.entries[entry.id] = entry\n\n    def snapshot(self):\n        with self.lock:\n            return tuple(self.entries.values())",
+            "caption": "Trecho literal de labs/case_11.py; modelo em memória, protegido por lock local."
+          },
+          {
+            "type": "p",
+            "text": "Cada lançamento tem identidade imutável. Um estorno precisa referenciar uma compra existente e a soma de estornos de principal não pode exceder essa compra no modelo. Retentativas idênticas não criam uma segunda redução. O snapshot retorna uma tupla de objetos imutáveis."
+          },
+          {
+            "type": "p",
+            "text": "Essa limitação é deliberada: compensação adicional, juros e outras categorias exigiriam tipos próprios, não um estorno maior disfarçado. O laboratório não persiste em disco nem implementa consumo distribuído. O lock demonstra a exclusão necessária em uma autoridade local; um serviço real precisa de transação ou escrita condicional correspondente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Uma função de soma compartilhada",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn explain-statement [entries]\n  (let [sum-kind (fn [kind]\n                   (reduce + (map :cents\n                     (filter #(= kind (:kind %)) entries))))\n        purchases (sum-kind :purchase)\n        refunds (sum-kind :refund)\n        payments (sum-kind :payment)\n        signed (- purchases refunds payments)]\n    {:purchases purchases\n     :refunds refunds\n     :payments payments\n     :amount-due (max 0 signed)\n     :credit-balance (max 0 (- signed))}))",
+            "caption": "Clojure ilustrativo e não executado; regras simplificadas equivalentes ao laboratório."
+          },
+          {
+            "type": "p",
+            "text": "O redutor separa compras, estornos e pagamentos. Quando o saldo assinado fica negativo, apresenta crédito disponível na fatura, não valor a pagar negativo. Isso evita perder significado financeiro ao limitar o total visual a zero. As duas quantidades continuam reconciliáveis."
+          },
+          {
+            "type": "p",
+            "text": "App, PDF e atendimento deveriam consumir a mesma projeção ou um contrato comum de cálculo, com versão declarada. Copiar a fórmula em três clientes aumenta o risco de divergência. A implementação real deve acrescentar categorias aprovadas por contabilidade e manter testes de paridade entre canais. A função não decide data de lançamento nem se o estabelecimento efetivamente devolveu dinheiro."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Proveniência é parte do contrato",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Elemento",
+              "Regra",
+              "Privacidade"
+            ],
+            "rows": [
+              [
+                "entry_id",
+                "Identidade estável",
+                "Sem conta no identificador público"
+              ],
+              [
+                "parent",
+                "Compra de origem do estorno",
+                "Somente dono autorizado"
+              ],
+              [
+                "revision",
+                "Total e detalhes coerentes",
+                "Não expor histórico desnecessário"
+              ],
+              [
+                "credit_balance",
+                "Crédito distinto do valor devido",
+                "Texto acessível"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"statement_id\": \"synthetic-statement-11\",\n  \"revision\": 4,\n  \"currency\": \"BRL\",\n  \"purchases_cents\": 10000,\n  \"refunds_cents\": 10000,\n  \"payments_cents\": 0,\n  \"amount_due_cents\": 0,\n  \"refund_entries\": [\"r0\", \"r1\", \"r2\"],\n  \"source_purchase\": \"p\"\n}",
+            "caption": "Exemplo sintético de três estornos; nenhum valor foi extraído da conta do reclamante."
+          },
+          {
+            "type": "p",
+            "text": "Uma relação muitos-para-um é necessária quando a devolução chega em partes. O total da compra e seus créditos não devem ser duplicados apenas porque aparecem no resumo e no detalhamento. No atendimento, uma referência curta permite localizar a mesma versão sem pedir ao cliente que envie novamente todos os documentos ou exponha informações de outras compras."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Testar soma, versão e concorrência",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_three_refunds_reduce_exactly_once(self):\n        for i, cents in enumerate((3333, 3333, 3334)):\n            refund = Entry('r' + str(i), 'refund', cents, 'p')\n            self.s.append(refund)\n            self.s.append(refund)\n        result = explain(self.s.snapshot())\n        self.assertEqual(result['refunds'], 10000)\n        self.assertEqual(result['amount_due'], 0)\n        self.assertEqual(result['revision'], 4)\n\n    def test_old_snapshot_does_not_change_after_new_credit(self):\n        old = self.s.snapshot()\n        self.s.append(Entry('r', 'refund', 5000, 'p'))\n        self.assertEqual(explain(old)['amount_due'], 10000)\n        self.assertEqual(explain(self.s.snapshot())['amount_due'], 5000)",
+            "caption": "Trechos literais; 9 testes locais passaram."
+          },
+          {
+            "type": "p",
+            "text": "A divisão sintética 3.333 + 3.333 + 3.334 demonstra conservação exata de 10.000 centavos. O replay de cada crédito não altera o resultado. O snapshot antigo permanece estável após um novo estorno, permitindo explicar por que duas versões legítimas podem mostrar saldos diferentes."
+          },
+          {
+            "type": "p",
+            "text": "Outros testes rejeitam estorno sem origem, excesso de devolução, conflito de identidade e centavos inválidos. A concorrência tenta devolver 6.000 duas vezes contra 10.000 e aceita apenas uma operação. Não há testes de regra contratual real, fechamento, tributos ou juros. Esses limites devem aparecer antes que o exemplo seja usado como referência de implementação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "O sucesso é compreensão demonstrada",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Compreensão",
+                "Tarefas respondidas corretamente / tarefas",
+                "Sessões; acessibilidade"
+              ],
+              [
+                "Contato interpretativo",
+                "Dúvidas sobre crédito aplicado / estornos",
+                "30 dias; tipo de estorno"
+              ],
+              [
+                "Paridade",
+                "Snapshots conciliados / comparados",
+                "Diária; canal e revisão"
+              ],
+              [
+                "Proveniência",
+                "Créditos com origem válida / créditos",
+                "Contínua; integração"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As linhas de base são desconhecidas. O experimento usa tarefas equivalentes e grupos comparáveis, com o mesmo cálculo financeiro. Mede acerto e tempo, sem confundir uma tela mais rápida com entendimento melhor. Leitores de tela precisam anunciar sinal, valor e vínculo; cor não pode ser a única informação sobre crédito."
+          },
+          {
+            "type": "p",
+            "text": "A classificação de contato é auditada para não chamar erro financeiro de dúvida do cliente. Interromperia o canário diante de divergência de soma, mistura de versões ou piora de compreensão em grupos assistivos. A quantidade de cliques em detalhes é sinal de uso, não prova de sucesso. A validação final pede ao participante explicar o saldo com suas próprias palavras."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Economia depende de dúvidas evitadas",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 16.000",
+                "R$ 24.000",
+                "R$ -128.000"
+              ],
+              [
+                "Base",
+                "R$ 120.000",
+                "R$ 24.000",
+                "R$ -24.000"
+              ],
+              [
+                "Ambicioso",
+                "R$ 400.000",
+                "R$ 24.000",
+                "R$ 256.000"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Hipóteses anuais: 200 mil, 500 mil ou 1 milhão de estornos elegíveis; redução de 0,005, 0,015 ou 0,025 contato interpretativo por estorno; R$ 16 por contato. Implementação assumida: R$ 120 mil; operação: R$ 24 mil/ano. O cálculo monetiza capacidade de atendimento, não o valor do crédito devolvido ao cliente."
+          },
+          {
+            "type": "p",
+            "text": "No cenário base, 500.000 × 0,015 × 16 = R$ 120.000. Após operação e implantação, o primeiro ano fica em −R$ 24.000. O equilíbrio exige 600 mil estornos equivalentes à hipótese base. Se o produto já tiver uma projeção comum, o investimento incremental pode ser menor; a estimativa deve então ser refeita, sem transportar automaticamente o benefício assumido."
+          },
+          {
+            "type": "callout",
+            "title": "Não somar as mesmas jornadas",
+            "text": "Excluir contatos de duplicidade tratados no caso 10 e de alocação tratados no 09. Horas liberadas só viram caixa com mudança concreta de gasto. Nenhuma taxa ou economia foi observada no Nubank por este estudo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap de cálculo e linguagem",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Dono e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Contabilidade + design: cenários",
+                "Somas e perguntas aprovadas"
+              ],
+              [
+                "16–30 dias",
+                "Staff: projeção e vínculos",
+                "Total/detalhe na mesma revisão"
+              ],
+              [
+                "31–60 dias",
+                "Mobile + acessibilidade: protótipo",
+                "Compreensão assistiva validada"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto: experimento",
+                "Acerto melhora sem divergência"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O prazo de 90 dias é uma hipótese de planejamento. Primeiro é necessário obter exemplos representativos de estornos parciais, pagamentos e fechamento, sempre com acesso autorizado ou dados sintéticos. Sem essa cobertura, uma tela bonita pode funcionar apenas no caso simples e falhar justamente na jornada que gera contato."
+          },
+          {
+            "type": "p",
+            "text": "O Staff define versão e invariantes; contabilidade aprova semântica; design valida linguagem; o EM protege capacidade para pesquisa e ajustes. A aceitação não é uma lista de componentes renderizados. Ela exige que o cliente reconheça a origem do crédito e compreenda o saldo, e que suporte consiga reproduzir a explicação usando a mesma referência."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Operação com fallback identificável",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A projeção roda primeiro em sombra e compara somas com a referência financeira. No canário, a memória de cálculo aparece sob demanda para uma coorte limitada. Se a versão mudar durante a consulta, a interface informa atualização e recalcula o conjunto completo; não troca apenas o total deixando detalhes antigos."
+          },
+          {
+            "type": "p",
+            "text": "Alertas cobrem créditos órfãos, excesso de estorno de principal e divergência de versão entre canais. A equipe da projeção investiga processamento; contabilidade resolve semântica; atendimento recebe instrução para distinguir dúvida de erro. Logs usam referências, não descrições completas de compras ou documentos pessoais."
+          },
+          {
+            "type": "p",
+            "text": "Rollback esconde o detalhamento novo e mantém o saldo canônico, preservando IDs para investigação. Um exercício deve simular evento repetido, estorno antes da compra e PDF de versão anterior. A reconciliação precisa explicar por que o evento foi rejeitado ou aguardou dependência. Não se deve descartar silenciosamente um crédito porque chegou fora de ordem."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição para confiança na soma",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu definiria uma representação financeira que preserve sinal, origem e revisão. Evitaria três cálculos independentes para app, PDF e suporte. A escolha técnica seria uma projeção explicável com fonte canônica e política clara para eventos fora de ordem, sem transformar a interface em autoridade financeira."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu organizaria a entrega com contabilidade, experiência, acessibilidade e operação. Reservaria tempo para observar usuários interpretando cenários difíceis, porque compreensão não emerge automaticamente de uma tabela correta. O backlog incluiria linguagem e suporte, além de processamento e telemetria."
+          },
+          {
+            "type": "p",
+            "text": "Eu rejeitaria resolver o problema apenas mudando a cor do estorno ou adicionando um selo de aplicado. Isso reforça uma afirmação sem permitir verificá-la. O tradeoff é oferecer detalhes suficientes sem sobrecarregar a tela inicial: resumo simples, explicação progressiva e total rigorosamente ligado à versão. Essas são contribuições propostas, sem alegação de atuação passada no banco."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff: reproduzir a explicação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_11.py; 9 testes, dados sintéticos em memória.",
+              "Ler Entry, Statement.append, snapshot e explain; observar débito, crédito e saldo a pagar.",
+              "Repetir três estornos, guardar uma versão antiga e comparar com a nova.",
+              "Antes de produção: persistência, ordem de eventos, categorias contábeis, autorização e paridade entre canais."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O revisor deve conseguir explicar por que um crédito reduz o saldo e por que uma versão antiga permanece diferente. A solução não depende de esconder o histórico nem de ensinar o cliente a refazer manualmente toda a contabilidade. O laboratório demonstra um contrato pequeno que pode ser discutido com produto e contabilidade."
+          },
+          {
+            "type": "p",
+            "text": "Avançar apenas se a projeção conciliar, a linguagem melhorar compreensão e os guardrails assistivos forem preservados. Se houver erro financeiro, a correção do razão tem prioridade. Se houver apenas dúvida interpretativa, o experimento pode validar uma melhoria menor. A força do caso está em respeitar essa distinção, inclusive quando a reclamação histórica já foi resolvida."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "11",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "kafka",
+      "flutter",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/"
+  },
+  {
+    "title": "Entregue no rastreio, ausente na mão: separar entrega e posse",
+    "subtitle": "Gerações de cartão, prova de origem e uma exceção com responsável",
+    "source_title": "Reclame AQUI — cartão não recebido e reenvios",
+    "pages": [
+      {
+        "title": "12 · A resposta posterior muda o contexto",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A reclamação 230126691, de 23/10/2025, relata mensagens de entrega sem recebimento e, depois, uma quarta tentativa frustrada. O Nubank informa cancelamento das vias não recebidas e, em 10/11, nova entrega, desbloqueio e uso. A página continua Em réplica, sem confirmação final da cliente. Não se deve apresentar o cartão como ainda desaparecido."
+          },
+          {
+            "type": "callout",
+            "title": "Mídia e evidência",
+            "text": "A cliente menciona vídeo doméstico, mas não há URL pública verificada nas capturas. O livro usa a página real como prova documental; não inventa gravação, assinatura ou foto de entrega."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 12 · 2025-10-23",
+            "url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/"
+          }
+        ]
+      },
+      {
+        "title": "O fornecedor afirma um fato; o produto decide um estado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Um evento de transportadora pode ser confiável como registro do que ela declarou e ainda ser insuficiente para concluir posse pelo destinatário. A jornada deve preservar essa distinção. Entrega declarada, entrega contestada e ativação segura são estados com autoridades diferentes; reduzi-los a um único status impede tratar divergências sem sobrescrever informação."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese é que parte das reemissões repetidas pode ser evitada quando evento, via e remessa possuem identidade própria e a exceção tem um responsável ponta a ponta. Eu reconstruiria jornadas autorizadas por geração de cartão, distinguindo perda original, pedido substituto, reenvio e retorno tardio. Se a recorrência tiver outra origem, como endereço ou desempenho de rota, o plano precisa atacar essa causa operacional demonstrada."
+          },
+          {
+            "type": "p",
+            "text": "O estudo não conclui que o fornecedor falsificou entrega nem que o banco tinha determinada integração. A investigação deve buscar comprovante, procedência, horário e política de apuração, com acesso mínimo. Não é aceitável exigir exposição pública de endereço, assinatura ou vídeo da residência para que o cliente consiga acompanhamento."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "A via antiga não manda na nova",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Remessa, geração e contestação",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Transportadora",
+                "detail": "Evento e procedência",
+                "group": "terceiro"
+              },
+              {
+                "id": "1",
+                "label": "Gateway de entrega",
+                "detail": "Origem e identidade",
+                "group": "ingestão"
+              },
+              {
+                "id": "2",
+                "label": "Registro de remessas",
+                "detail": "Via e geração do cartão",
+                "group": "persistência"
+              },
+              {
+                "id": "3",
+                "label": "Consistência",
+                "detail": "Evento antigo ou disputa",
+                "group": "domínio"
+              },
+              {
+                "id": "4",
+                "label": "Decisão de reemissão",
+                "detail": "Política e autorização",
+                "group": "controle"
+              },
+              {
+                "id": "5",
+                "label": "Gestão das vias",
+                "detail": "Cancela antiga; cria nova",
+                "group": "execução"
+              },
+              {
+                "id": "6",
+                "label": "Cliente",
+                "detail": "Contesta recebimento",
+                "group": "pessoa"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "evento autenticado",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "gravar com identidade",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "interpretar geração",
+                "from": "2"
+              },
+              {
+                "to": "4",
+                "label": "encaminhar exceção",
+                "from": "3"
+              },
+              {
+                "to": "4",
+                "label": "contestação autorizada",
+                "from": "6"
+              },
+              {
+                "to": "5",
+                "label": "reemitir com controle",
+                "from": "4"
+              },
+              {
+                "to": "2",
+                "label": "nova geração e histórico",
+                "from": "5"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O gateway preserva a identidade do evento e a referência da remessa. O registro liga cada remessa a uma geração do cartão. A verificação de consistência encaminha eventos antigos e disputas para uma decisão controlada, sem alterar silenciosamente a via atual."
+          },
+          {
+            "type": "p",
+            "text": "O cliente inicia contestação por canal autenticado. Reemissão cria nova geração e cancela a anterior conforme política; não é consequência automática de qualquer atraso. Ativação segura permanece um contrato separado. O provedor externo não recebe marca de tecnologia interna nem autoridade para ativar o cartão."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: geração e disputa persistente",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def event(self, ident, generation, kind, scope):\n        if not isinstance(ident, str) or not ident.strip():\n            raise ValueError('nonempty event identity required')\n        if type(generation) is not int or generation < 1:\n            raise ValueError('positive integer generation required')\n        required = {'delivered': 'carrier', 'dispute': 'customer',\n                    'activate': 'customer_verified'}\n        if kind not in required or required[kind] != scope:\n            raise PermissionError('scope mismatch')\n        payload = json.dumps([generation, kind, scope])\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            old = self.db.execute('SELECT payload FROM events WHERE id=?',\n                                  (ident,)).fetchone()\n            if old:\n                if old[0] != payload:\n                    raise ValueError('event conflict')\n                return self.state()\n            current, carrier, disputed, active = self.state()\n            if generation > current:\n                raise ValueError('future generation; event not consumed')\n            if generation == current:\n                if kind == 'delivered':\n                    carrier = 'delivered'\n                elif kind == 'dispute':\n                    disputed, active = 1, 0\n                elif kind == 'activate':\n                    if disputed:\n                        raise ValueError('dispute requires separate resolution')\n                    active = 1\n                self.db.execute('UPDATE card SET carrier=?,disputed=?,active=? '\n                                'WHERE id=1', (carrier, disputed, active))\n            self.db.execute('INSERT INTO events VALUES(?,?)', (ident, payload))\n        return self.state()",
+            "caption": "Trecho literal de labs/case_12.py; estado local sintético de uma conta."
+          },
+          {
+            "type": "p",
+            "text": "Um evento de geração antiga é registrado, mas não altera o cartão atual. Uma entrega repetida também não limpa a contestação. O modelo diferencia declaração do transportador, disputa e ativação, impedindo que um webhook transforme automaticamente entrega em uso autorizado."
+          },
+          {
+            "type": "p",
+            "text": "O escopo recebido é contexto confiável injetado pelo servidor, não uma credencial enviada livremente pelo usuário. Assinatura do parceiro e fatores reais de ativação não estão implementados. Uma disputa bloqueia ativação nesse modelo; sua resolução operacional exige um fluxo separado, enquanto a reemissão cria outra geração controlada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Normalizar sem apagar procedência",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn accept-delivery [state event]\n  (cond\n    (not= (:generation state) (:generation event))\n    (assoc state :last-event-result :old-generation)\n\n    (= :delivered (:type event))\n    (assoc state :carrier-state :delivered)\n\n    (= :customer-dispute (:type event))\n    (assoc state :disputed? true :active? false)\n\n    :else state))\n;; Carrier delivery does not clear :disputed? or set :active?.",
+            "caption": "Clojure ilustrativo, não executado; não representa código de transportadora ou do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O redutor não tenta descobrir a verdade física a partir de um status. Ele aplica regras de precedência e conserva a disputa. A normalização deve guardar o evento original com acesso restrito, além do estado comum usado pelo produto. Caso contrário, detalhes necessários à apuração desaparecem na tradução entre fornecedores."
+          },
+          {
+            "type": "p",
+            "text": "A camada de integração autentica origem, limita replay e valida vínculo entre remessa e conta. Um timestamp recebido não é suficiente para ordenar toda a vida do cartão: relógios divergem e fornecedores podem reenviar informações antigas. Geração e identidade são controles mais fortes para impedir que uma atualização de uma via cancelada pareça confirmar a nova."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Contrato entre físico e digital",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo",
+              "Autoridade",
+              "Regra"
+            ],
+            "rows": [
+              [
+                "carrier_state",
+                "Transportadora",
+                "Declaração com origem"
+              ],
+              [
+                "customer_disputed",
+                "Cliente autenticado",
+                "Não apagado por replay"
+              ],
+              [
+                "card_generation",
+                "Gestão de cartões",
+                "Via anterior não sobrescreve"
+              ],
+              [
+                "card_active",
+                "Ativação segura",
+                "Independente da entrega"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"card_generation\": 2,\n  \"shipment_ref\": \"synthetic-shipment-12\",\n  \"carrier_state\": \"delivered\",\n  \"customer_disputed\": true,\n  \"card_active\": false,\n  \"event_id\": \"carrier-event-17\",\n  \"evidence_ref\": null,\n  \"next_action\": \"investigate_delivery\"\n}",
+            "caption": "Estado sintético: entrega declarada, contestação aberta e cartão inativo."
+          },
+          {
+            "type": "p",
+            "text": "Comprovantes podem conter endereço, assinatura ou imagem de terceiro. A referência de evidência deve permitir acesso por finalidade, expiração e auditoria. O aplicativo apresenta informação suficiente para o cliente agir, sem publicar dados do recebedor. A equipe de logística mantém responsabilidade por obter a evidência do parceiro; não transfere essa integração ao cliente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Replays não encerram a exceção",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_old_delivery_does_not_replace_new_generation(self):\n        self.d.event('d1', 1, 'delivered', 'carrier')\n        self.d.reissue(1, 'operator')\n        self.d.event('late', 1, 'delivered', 'carrier')\n        self.assertEqual(self.d.state(), (2, 'pending', 0, 0))\n\n    def test_replayed_delivery_cannot_clear_dispute(self):\n        self.d.event('d1', 1, 'delivered', 'carrier')\n        self.d.event('c1', 1, 'dispute', 'customer')\n        self.d.event('d1', 1, 'delivered', 'carrier')\n        self.d.event('d2', 1, 'delivered', 'carrier')\n        self.assertEqual(self.d.state(), (1, 'delivered', 1, 0))\n        with self.assertRaises(ValueError):\n            self.d.event('a1', 1, 'activate', 'customer_verified')",
+            "caption": "Trechos literais; 10 testes passaram no laboratório."
+          },
+          {
+            "type": "p",
+            "text": "O primeiro teste demonstra que uma confirmação antiga não transforma a segunda geração em entregue. O segundo repete o webhook original e envia outro evento de entrega: a disputa permanece aberta e a ativação segue bloqueada. A propriedade é mais importante que a ordem feliz de mensagens."
+          },
+          {
+            "type": "p",
+            "text": "A suíte também verifica reinício, conflito de evento, papel incorreto, reemissão com geração antiga e cancelamento da ativação anterior. Não testa entrega física, assinatura criptográfica ou prova de posse. Exercícios de integração devem validar fornecedores reais, políticas de expiração e falhas entre cancelamento da via antiga e emissão da nova."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Medir posse e exceção, não só expedição",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Entrega contestada",
+                "Contestações / entregas declaradas",
+                "Semanal; rota e parceiro"
+              ],
+              [
+                "Reemissão repetida",
+                "Novas vias / jornada de reposição",
+                "30 dias; geração"
+              ],
+              [
+                "Tempo de exceção",
+                "p95 até decisão com responsável",
+                "Diária; motivo"
+              ],
+              [
+                "Via inválida ativa",
+                "Ativações de via cancelada / tentativas",
+                "Contínua; integração"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A linha de base é desconhecida. Dados operacionais devem ligar jornada, remessa e geração sem exportar endereços para telemetria geral. Tempo até posse confirmada pode depender de ativação ou outro sinal seguro aprovado; não deve ser inferido apenas do evento da transportadora."
+          },
+          {
+            "type": "p",
+            "text": "O piloto compara rotas e fornecedores equivalentes, controlando mudanças de sazonalidade e modalidade de envio. A redução de reemissão só conta como melhoria se a posse ou resolução for confirmada. Pararia a expansão diante de ativação indevida, fechamento automático de disputa ou coleta excessiva de dados pessoais. Reduzir custo negando reenvio necessário é um resultado adverso, não sucesso."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Frete evitado tem um limite econômico",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 3.900",
+                "R$ 24.000",
+                "R$ -110.100"
+              ],
+              [
+                "Base",
+                "R$ 15.600",
+                "R$ 24.000",
+                "R$ -98.400"
+              ],
+              [
+                "Ambicioso",
+                "R$ 46.800",
+                "R$ 24.000",
+                "R$ -67.200"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Hipóteses anuais: 50 mil, 100 mil ou 150 mil remessas elegíveis; reemissões evitadas em 0,2%, 0,4% ou 0,8% dessas jornadas. Isso corresponde a 100, 400 ou 1.200 reemissões. Assumo R$ 9 por cartão, R$ 18 por envio e R$ 12 de suporte incremental, total R$ 39. Nenhum custo unitário vem da reclamação."
+          },
+          {
+            "type": "p",
+            "text": "Implementação assumida: R$ 90 mil; operação: R$ 24 mil/ano. No cenário base, 400 × 39 = R$ 15.600; primeiro ano: R$ 15.600 − 24.000 − 90.000 = −R$ 98.400. O equilíbrio exige aproximadamente 2.924 reemissões evitadas no primeiro ano. Esses cenários não sustentam sozinhos um investimento amplo; favorecem piloto focalizado ou extensão de fluxo existente."
+          },
+          {
+            "type": "callout",
+            "title": "Benefício não demonstrado",
+            "text": "A quantidade narrada por uma cliente não é taxa populacional. Não contar toda contestação como fraude nem toda reemissão como evitável. Suporte já incluído no custo logístico não pode ser somado outra vez."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com fornecedor e operação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Dono e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Logística: mapa de eventos e rotas",
+                "Identidades e fontes conferidas"
+              ],
+              [
+                "16–30 dias",
+                "Staff + cartões: geração e contrato",
+                "Via antiga não altera atual"
+              ],
+              [
+                "31–60 dias",
+                "Operações + parceiro: apuração",
+                "Exceção tem dono e evidência"
+              ],
+              [
+                "61–90 dias",
+                "EM: piloto em rota limitada",
+                "Posse melhora; segurança mantida"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O calendário é uma hipótese de 90 dias. A dependência crítica é a cooperação operacional do fornecedor, incluindo qualidade de eventos e acesso a comprovantes. Se essa fonte não existir, a primeira entrega deve tornar a lacuna visível e definir alternativa, não criar uma falsa certeza no aplicativo."
+          },
+          {
+            "type": "p",
+            "text": "O EM coordena capacidade de logística, cartão, suporte e parceiro. O Staff define geração, identidade e transições. A política de reenvio precisa de aprovação operacional; não pode surgir como efeito colateral de um retry técnico. Cada gate inclui uma jornada contestada, uma entrega legítima e um evento tardio de via cancelada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Runbook para uma entrega contestada",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O atendimento abre um caso vinculado à remessa e à geração, preservando a declaração do cliente. O operador consulta procedência e próxima ação autorizada. Reemitir sem diagnóstico não é o único botão: apuração, canal alternativo e cancelamento de via exposta precisam de política e responsabilidade claras."
+          },
+          {
+            "type": "p",
+            "text": "Alertas separam ausência de atualização, disputa envelhecida e evento incompatível com a geração. Logística responde pelo parceiro; cartões responde por cancelamento e ativação; a equipe do serviço responde por perda de eventos. Informações sensíveis permanecem em ferramentas com acesso restrito, não em tickets amplamente visíveis."
+          },
+          {
+            "type": "p",
+            "text": "Rollback desativa interpretação nova e conserva histórico de geração e disputa. Nunca reativa vias canceladas. O exercício operacional inclui webhook repetido após reemissão, entrega informada para a via errada e indisponibilidade do comprovante. A reconciliação precisa manter o cliente informado sem usar um status de rastreio como prova conclusiva de posse."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição atravessa a fronteira física",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu definiria uma identidade que sobreviva a reemissão, troca de transportadora e eventos tardios. A decisão central seria separar declaração de entrega de ativação segura e manter a contestação como fato próprio. A arquitetura deve tolerar a imperfeição do mundo físico sem fingir que uma ordem de mensagens resolve a verdade da entrega."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu criaria um dono para a exceção completa e um fórum operacional com o fornecedor. A equipe precisa acompanhar resolução e custo por jornada, não apenas número de cartões expedidos. Eu reservaria capacidade para casos fora do fluxo comum e alinharia quais evidências são necessárias para mudar de etapa."
+          },
+          {
+            "type": "p",
+            "text": "Eu rejeitaria a alternativa de encerrar automaticamente o caso quando a transportadora reenviar entregue. Também evitaria coletar vídeos residenciais como requisito padrão. O tradeoff é ter apuração suficiente com dados mínimos e custo proporcional. O investimento deve ser guiado por rotas e causas verificadas, sem extrapolar uma reclamação para toda a operação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff: revisar a geração atual",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_12.py; 10 testes com banco local e eventos sintéticos.",
+              "Ler Delivery.event e reissue; identificar quem pode declarar entrega, contestar e ativar.",
+              "Criar segunda geração e reenviar um evento da primeira; a via atual deve permanecer inalterada.",
+              "Antes de produção: assinatura do parceiro, identidade, prova de posse, retenção e resolução de disputa."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A demonstração local verifica precedência e persistência, não se uma encomenda chegou. O revisor deve reconhecer essa fronteira e pedir testes contratuais do fornecedor antes de aprovar a integração. Também deve verificar que o atendimento consegue reconstruir todas as vias sem confundir um cartão cancelado com o atual."
+          },
+          {
+            "type": "p",
+            "text": "Prosseguir apenas quando a apuração tiver responsável, os eventos estiverem vinculados corretamente e a segurança de ativação permanecer intacta. Se a evidência operacional mostrar problema de rota, a intervenção pode ser logística. A contribuição de engenharia é garantir que o produto represente essa realidade com clareza e não a esconda atrás de um estado único."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "12",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "kafka",
+      "aws",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/"
+  },
+  {
+    "title": "Teto do cartão virtual não é crédito disponível",
+    "subtitle": "Explicar a restrição sem enfraquecer a autorização financeira",
+    "source_title": "Reclame AQUI — compra recusada e teto do cartão virtual",
+    "pages": [
+      {
+        "title": "13 · Dois valores, interpretações diferentes",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A reclamação 244706833, de 30/03/2026, relata compra de R$ 300 recusada apesar de um valor visualizado de R$ 800. O Nubank responde que a imagem correspondia ao teto configurado do cartão virtual, não ao crédito aprovado, e que compras comprometiam o limite global. O estado é Respondida. A fonte não comprova falha de 3DS ou autorização indevida."
+          },
+          {
+            "type": "callout",
+            "title": "Imagem citada, não disponível",
+            "text": "A resposta menciona screenshot enviado pela cliente, mas o AX público não expõe seu endereço. A evidência publicada é a página real. O exemplo de R$ 400/R$ 100 na resposta é hipotético, não saldo da conta."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 13 · 2026-03-30",
+            "url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/"
+          }
+        ]
+      },
+      {
+        "title": "Configurar um teto não concede crédito",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O produto reúne pelo menos três conceitos: limite aprovado, saldo global ainda disponível e restrição escolhida para um cartão virtual. Um número configurável pode parecer uma promessa de compra se o rótulo e a hierarquia não deixarem claro o que ele controla. A proposta separa essas informações e explica a restrição mais forte, sem sugerir que o cliente ganhou crédito ao mover um controle."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese falsificável é que parte das tentativas e contatos resulta dessa confusão, não de um defeito de autorização. Eu observaria usuários explicando o efeito de aumentar o teto virtual e compararia a resposta com sua ação posterior. Também investigaria desatualização: uma leitura correta pode ficar velha quando outro cartão consome crédito compartilhado."
+          },
+          {
+            "type": "p",
+            "text": "A autorização continua independente. Mesmo com crédito disponível, outros controles podem recusar a compra. A interface deve oferecer informação atual e suficiente, não garantia absoluta de aprovação. O estudo não recomenda retirar controles de risco, aumentar limite ou mudar política para produzir uma taxa de conversão aparentemente melhor."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "O crédito é compartilhado; a reserva é atômica",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Teto local e autoridade global",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Fonte de crédito",
+                "detail": "Limite aprovado",
+                "group": "autoridade"
+              },
+              {
+                "id": "1",
+                "label": "Saldo global",
+                "detail": "Reservas compartilhadas",
+                "group": "persistência"
+              },
+              {
+                "id": "2",
+                "label": "Orçamento do cartão",
+                "detail": "Teto e consumo da via",
+                "group": "controle"
+              },
+              {
+                "id": "3",
+                "label": "App",
+                "detail": "Pedido autenticado",
+                "group": "experiência"
+              },
+              {
+                "id": "4",
+                "label": "Política de risco",
+                "detail": "Controles independentes",
+                "group": "decisão"
+              },
+              {
+                "id": "5",
+                "label": "Contexto atual",
+                "detail": "Sinais com validade",
+                "group": "integração"
+              },
+              {
+                "id": "6",
+                "label": "Autorizador",
+                "detail": "Reserva atômica e escopo",
+                "group": "domínio"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "conceder conforme política",
+                "from": "0"
+              },
+              {
+                "to": "6",
+                "label": "orçamento restante",
+                "from": "2"
+              },
+              {
+                "to": "6",
+                "label": "solicitar compra",
+                "from": "3"
+              },
+              {
+                "to": "6",
+                "label": "saldo vigente",
+                "from": "1"
+              },
+              {
+                "to": "6",
+                "label": "controles de risco",
+                "from": "4"
+              },
+              {
+                "to": "6",
+                "label": "contexto verificado",
+                "from": "5"
+              },
+              {
+                "to": "1",
+                "label": "reservar condicionalmente",
+                "from": "6"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A fonte de crédito define a concessão; o saldo global registra reservas compartilhadas. O orçamento do cartão acrescenta uma restrição, enquanto política e contexto mantêm controles próprios. O autorizador valida escopo e reserva contra a autoridade vigente."
+          },
+          {
+            "type": "p",
+            "text": "A tela não é participante dessa transação: sua prévia pode envelhecer. O diagrama enfatiza autorização, enquanto a leitura explicável consome projeções versionadas. Nenhuma edição do teto virtual altera o crédito global. A validação de risco real está fora do laboratório e permanece necessária para produção."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: duas vias, um saldo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def reserve(self, owner, ident, card, cents):\n        if not isinstance(ident, str) or not ident.strip():\n            raise ValueError('nonempty reservation identity required')\n        if type(cents) is not int or cents <= 0:\n            raise ValueError('integer cents required')\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            available = self.preview(owner, card)\n            old = self.db.execute('SELECT card,cents FROM holds WHERE id=?',\n                                  (ident,)).fetchone()\n            if old:\n                if old != (card, cents):\n                    raise ValueError('reservation conflict')\n                return ident\n            if cents > available:\n                raise ValueError('insufficient global credit or card budget')\n            self.db.execute('UPDATE account SET free=free-? WHERE owner=?',\n                            (cents, owner))\n            self.db.execute('UPDATE cards SET spent=spent+? WHERE id=?',\n                            (cents, card))\n            self.db.execute('INSERT INTO holds VALUES(?,?,?)', (ident, card, cents))\n        return ident\n\n    def set_cap(self, owner, card, cap):\n        if type(cap) is not int or cap < 0:\n            raise ValueError('integer cap required')\n        with self.db:\n            if self.db.execute('UPDATE cards SET cap=? WHERE id=? AND owner=?',\n                               (cap, card, owner)).rowcount != 1:\n                raise PermissionError('not owned')",
+            "caption": "Trecho literal de labs/case_13.py; reserva local em SQLite com centavos inteiros."
+          },
+          {
+            "type": "p",
+            "text": "A transação consulta crédito global e orçamento do cartão, verifica identidade da reserva e só então reduz ambos. Duas compras concorrentes em cartões diferentes não podem usar o mesmo saldo. A autorização de titular ocorre antes de devolver um recibo idempotente, impedindo que a chave sirva para consultar operação de outra pessoa."
+          },
+          {
+            "type": "p",
+            "text": "O teto é uma configuração separada. O laboratório modela orçamento acumulado sintético, não um período real do produto. Expiração de reservas, liquidação, reversão e análise de risco não estão implementadas. A prévia é útil para explicar, mas a decisão financeira revalida tudo dentro da transação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Uma prévia honesta no aplicativo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "dart",
+            "code": "class CreditView {\n  final int globalAvailableCents;\n  final int virtualCapCents;\n  final int virtualSpentCents;\n  final DateTime asOf;\n  CreditView(this.globalAvailableCents, this.virtualCapCents,\n      this.virtualSpentCents, this.asOf);\n\n  int get previewCents {\n    final remaining = virtualCapCents - virtualSpentCents;\n    final bounded = remaining < globalAvailableCents\n        ? remaining : globalAvailableCents;\n    return bounded < 0 ? 0 : bounded;\n  }\n  // A display estimate never replaces server authorization.\n}",
+            "caption": "Dart ilustrativo e não executado; o laboratório Python valida a autoridade, não este componente."
+          },
+          {
+            "type": "p",
+            "text": "A prévia usa o menor valor entre crédito global e orçamento restante, limitado a zero. Essa fórmula só faz sentido quando unidades, moeda e períodos são compatíveis. Uma implementação real deve declarar tais condições e mostrar a data de referência, evitando combinar um orçamento mensal com consumo de outra janela."
+          },
+          {
+            "type": "p",
+            "text": "O componente precisa distinguir teto escolhido de crédito disponível em texto e sem depender de cor. Mensagens sobre recusa usam motivos seguros e acionáveis, sem expor mecanismos antifraude. Um valor estimado não deve virar frase de aprovação garantida. Revalidar no servidor protege contra concorrência; explicar o estado evita que essa proteção pareça comportamento arbitrário."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Contrato de limite e de orçamento",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo",
+              "O que representa",
+              "O que não representa"
+            ],
+            "rows": [
+              [
+                "global_available",
+                "Crédito após reservas",
+                "Promessa de aprovação"
+              ],
+              [
+                "virtual_cap",
+                "Restrição configurada",
+                "Nova concessão"
+              ],
+              [
+                "virtual_spent",
+                "Consumo na janela definida",
+                "Todo saldo financiado"
+              ],
+              [
+                "as_of",
+                "Referência da leitura",
+                "Estado eterno"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"account_ref\": \"synthetic-account-13\",\n  \"card_ref\": \"virtual-a\",\n  \"currency\": \"BRL\",\n  \"global_available_cents\": 20000,\n  \"virtual_cap_cents\": 80000,\n  \"virtual_spent_cents\": 30000,\n  \"preview_cents\": 20000,\n  \"as_of\": \"synthetic-revision-2\",\n  \"authorization_guaranteed\": false\n}",
+            "caption": "Valores sintéticos; não reproduzem o saldo privado da reclamação."
+          },
+          {
+            "type": "p",
+            "text": "A interface não deve apresentar dados de uma conta sob contexto de outra sessão. Cache precisa de escopo por titular, cartão e versão. O motivo seguro de recusa é um contrato entre risco e produto; logs detalhados ficam restritos. A exposição pública de sinais de fraude não é necessária para explicar que teto virtual e limite aprovado são conceitos diferentes."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Concorrência ataca a autoridade",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_two_cards_cannot_overspend_shared_credit(self):\n        barrier = threading.Barrier(2)\n        results = []\n        def attempt(card):\n            client = Credit(self.path)\n            barrier.wait()\n            try:\n                client.reserve('owner', 'hold-' + card, card, 30000)\n                results.append('ok')\n            except ValueError:\n                results.append('declined')\n            finally:\n                client.db.close()\n        threads = [threading.Thread(target=attempt, args=(c,)) for c in ('a', 'b')]\n        for thread in threads:\n            thread.start()\n        for thread in threads:\n            thread.join()\n        self.assertCountEqual(results, ['ok', 'declined'])\n        self.assertEqual(self.c.preview('owner', 'a'), 20000)",
+            "caption": "Teste literal; a suíte completa passou 10 testes."
+          },
+          {
+            "type": "p",
+            "text": "As duas threads abrem conexões distintas e competem por R$ 500 sintéticos, tentando reservar R$ 300 cada. Apenas uma pode concluir. O resultado não depende de a tela ter mostrado saldo suficiente antes das tentativas. Isso demonstra por que cálculo móvel não substitui a autoridade financeira."
+          },
+          {
+            "type": "p",
+            "text": "Outros testes cobrem aumento de teto sem criação de crédito, redução de orçamento, retry, usuário errado, prévia antiga, conflito de chave e retomada após reinício. A suíte não testa risco, rede de cartões ou expiração de reserva. Esses controles precisam de testes próprios e não podem ser removidos para reproduzir o exemplo simplificado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Compreensão sem afrouxar controles",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Definição",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Entendimento",
+                "Usuários que explicam o teto / testados",
+                "Sessões; acessibilidade"
+              ],
+              [
+                "Contato por confusão",
+                "Contatos desse motivo / elegíveis",
+                "30 dias; versão móvel"
+              ],
+              [
+                "Recusa após consulta",
+                "Recusas por crédito / tentativas após leitura",
+                "Diária; idade da leitura"
+              ],
+              [
+                "Fora da política",
+                "Aprovações incompatíveis / auditadas",
+                "Contínua; controle de risco"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As linhas de base são desconhecidas. A primeira métrica exige tarefa de compreensão, não pergunta de satisfação. A terceira precisa distinguir saldo que mudou legitimamente de leitura atrasada. Recolheria apenas eventos e categorias necessárias, sem registrar detalhes sensíveis de compras em telemetria de experiência."
+          },
+          {
+            "type": "p",
+            "text": "O experimento mantém a política de autorização constante e altera somente a explicação. Coortes são segmentadas por uso de cartão virtual e versão. Interromperia expansão por vazamento entre contas, promessa enganosa de aprovação ou aumento de aprovações fora da política. Uma redução de tentativas pode ser positiva quando evita ações que o cliente agora entende que não cabem no crédito disponível."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor calculado sem contar compras negadas como receita",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 6.400",
+                "R$ 12.000",
+                "R$ -65.600"
+              ],
+              [
+                "Base",
+                "R$ 32.000",
+                "R$ 12.000",
+                "R$ -40.000"
+              ],
+              [
+                "Ambicioso",
+                "R$ 96.000",
+                "R$ 12.000",
+                "R$ 24.000"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Hipóteses anuais: 100 mil, 250 mil ou 500 mil usuários elegíveis; redução de 0,004, 0,008 ou 0,012 contato por usuário; R$ 16 por contato. Implementação assumida: R$ 60 mil; operação: R$ 12 mil/ano. A conta considera somente capacidade de atendimento, sem converter volume de compra em margem."
+          },
+          {
+            "type": "p",
+            "text": "No cenário base, 250.000 × 0,008 × 16 = R$ 32.000. O primeiro ano resulta em R$ 32.000 − 12.000 − 60.000 = −R$ 40.000. O equilíbrio exige 562.500 usuários equivalentes à hipótese base. O cenário ambicioso produz R$ 24.000 líquidos modelados no primeiro ano, mas depende de efeito e coorte ainda não medidos."
+          },
+          {
+            "type": "callout",
+            "title": "A conta que não faço",
+            "text": "Não trato R$ 300 tentados como receita perdida nem R$ 800 como crédito aprovado. Uma análise de contribuição de compras exigiria elegibilidade e margem verificadas, além de experimento causal separado. ARPAC do grupo não substitui esses dados."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap de terminologia e consistência",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Dono e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Design + crédito: termos e tarefas",
+                "Usuário distingue teto de crédito"
+              ],
+              [
+                "16–30 dias",
+                "Staff + mobile: projeção e versão",
+                "Cache respeita conta e período"
+              ],
+              [
+                "31–60 dias",
+                "Risco + engenharia: testes de reserva",
+                "Concorrência preserva saldo"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto: experimento limitado",
+                "Compreensão cresce; política igual"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O horizonte de 90 dias é proposto. Uma mudança pequena de linguagem pode ser validada antes da integração mais ampla, desde que não esconda desatualização. A dependência financeira é conhecer a semântica de consumo do cartão e a autoridade responsável por reservas; o produto não deve inventar uma conta simplificada sem esse alinhamento."
+          },
+          {
+            "type": "p",
+            "text": "O EM coordena design, mobile, cartões, crédito e risco. O Staff define quais dados podem ser eventualmente consistentes e qual decisão precisa ser atômica. O gate de cada fase inclui acessibilidade e comportamento em sessão trocada. A definição de sucesso combina interpretação correta e segurança, em vez de perseguir aprovação a qualquer custo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Leitura atrasada não deve virar crédito fictício",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A implantação começa com comparação em sombra entre prévia e autoridade, registrando idade e motivo da diferença. O canário altera a apresentação para uma coorte limitada. Quando a consulta falhar, a interface mantém uma referência identificada ou informa indisponibilidade; não substitui o valor por teto configurado como se fossem equivalentes."
+          },
+          {
+            "type": "p",
+            "text": "Alertas separam atraso de projeção, erro de escopo e inconsistência de reserva. A equipe financeira responde pelo saldo; mobile pela associação correta da resposta à sessão; risco pelos motivos permitidos de comunicação. O suporte recebe explicação consistente com a mesma versão, sem acesso indiscriminado a sinais internos."
+          },
+          {
+            "type": "p",
+            "text": "Rollback reverte a experiência visual e preserva reservas confirmadas. Exercícios incluem dois cartões concorrentes, redução de teto abaixo do consumo, troca de conta durante consulta e resposta antiga chegando depois de uma nova. A autorização nunca pode depender da ordem em que esses componentes renderizam. Qualquer saldo comprometido exige reconciliação, não limpeza de cache como correção financeira."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição: clareza com autoridade",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu separaria configuração, projeção e autorização. Definiria identidade das reservas, consistência global e escopo das leituras. A decisão técnica mais importante é manter o crédito compartilhado em uma autoridade capaz de arbitrar concorrência, enquanto a experiência apresenta uma estimativa honesta e compreensível."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu faria produto, crédito e risco concordarem sobre os termos e o experimento antes da entrega. A equipe precisaria observar usuários, não apenas validar screenshots. Eu protegeria tempo para acessibilidade, suporte e análise dos motivos de recusa, porque a melhoria depende tanto da linguagem quanto da integração."
+          },
+          {
+            "type": "p",
+            "text": "Eu rejeitaria aumentar a taxa de aprovação relaxando controles para compensar uma explicação ruim. Também evitaria mostrar apenas o menor número sem explicar sua origem: isso pode resolver a tentativa atual e manter a confusão. O tradeoff é exposição suficiente para compreensão, preservando limites de risco e complexidade visual. Nenhuma contribuição proposta presume autoridade minha sobre políticas do banco."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff: provar que o teto não cria saldo",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_13.py; 10 testes locais, incluindo duas conexões concorrentes.",
+              "Inspecionar Credit.preview, reserve e set_cap; aumentar teto e observar crédito global inalterado.",
+              "Repetir a mesma reserva e consultar com outro titular; não pode haver débito duplo nem vazamento de recibo.",
+              "Antes de produção: risco, rede de cartões, expiração, liquidação, reversões e autorização real."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Os valores do laboratório são exemplos sintéticos. A conta real do relato permanece privada e não deve ser reconstruída por inferência a partir de um teto configurado. O revisor deve verificar a propriedade financeira e, separadamente, se a interface explica a restrição sem prometer sucesso."
+          },
+          {
+            "type": "p",
+            "text": "A decisão final exige compreensão melhor, projeções com semântica correta e ausência de regressão na política. Se a evidência mostrar apenas terminologia ruim, priorizar uma melhoria pequena. Se houver disputa de saldo concorrente, tratar a autoridade antes da apresentação. O projeto é forte quando a intervenção acompanha o problema demonstrado, não quando maximiza a quantidade de serviços novos."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "13",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "kafka",
+      "flutter",
+      "dart",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/"
+  },
+  {
+    "title": "Antecipação recebida, execução atrasada: tornar o plano verificável",
+    "subtitle": "Cotação, validade, alocação e desconto com um recibo único",
+    "source_title": "Reclame AQUI — antecipação de parcelas e divergência de informações",
+    "pages": [
+      {
+        "title": "14 · A empresa reconhece a execução tardia",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Na reclamação 238574883, de 23/01/2026, a cliente relata dificuldade para antecipar parcelas e orientações divergentes. O Nubank reconhece pagamento recebido e execução fora da data prevista; informa efetivação da parcela 23 em 02/02, com 13 restantes. Explica condições de pagamento e sustenta que o atendimento cumpriu seu prazo. O estado é Respondida, sem confirmação final da cliente."
+          },
+          {
+            "type": "callout",
+            "title": "O que permanece desconhecido",
+            "text": "Não há valor, taxa, memória de cálculo ou causa técnica pública. A admissão é sobre execução fora da data; não autoriza concluir que todas as tentativas ou regras de insuficiência estavam erradas."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — caso 14 · 2026-01-23",
+            "url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/"
+          }
+        ]
+      },
+      {
+        "title": "Receber não é efetivar a antecipação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Uma jornada de antecipação envolve oferta de desconto, escolha de parcelas, pagamento e aplicação financeira. Esses eventos podem ocorrer em momentos diferentes e responder a regras diferentes. O produto precisa tornar visível se existe apenas uma solicitação, uma cotação válida, dinheiro recebido ou uma obrigação realmente quitada. Sem essa distinção, um débito pode parecer conclusão de uma operação que ainda depende de alocação."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese é que uma cotação versionada, ligada ao recibo final e à fila de exceções, reduz operações recebidas sem efetivação compreensível. Eu reconstruiria uma amostra por quote_id e payment_id, comparando regra, validade, recebimento e aplicação. Não presumiria que o problema é somente de interface: divergência de cálculo ou execução deve ser tratada na autoridade financeira."
+          },
+          {
+            "type": "p",
+            "text": "O laboratório propõe um pacote sintético atômico de fatura e antecipação. Isso não descreve a prioridade contratual atual do Nubank. A regra real de aplicação parcial, cancelamento e reversão de desconto precisa ser validada antes da implementação. O modelo serve para discutir a fronteira entre dinheiro recebido, consentimento sobre um plano e obrigação efetivamente liquidada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "A cotação é um contrato com validade",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Plano aceito e execução identificável",
+            "nodes": [
+              {
+                "id": "0",
+                "label": "Contrato",
+                "detail": "Regras e revisão",
+                "group": "autoridade"
+              },
+              {
+                "id": "1",
+                "label": "Cotador",
+                "detail": "Principal e desconto",
+                "group": "domínio"
+              },
+              {
+                "id": "2",
+                "label": "Registro de cotações",
+                "detail": "Plano imutável e validade",
+                "group": "persistência"
+              },
+              {
+                "id": "3",
+                "label": "Consulta de plano",
+                "detail": "Elegibilidade e versão",
+                "group": "serviço"
+              },
+              {
+                "id": "4",
+                "label": "App",
+                "detail": "Consentimento explícito",
+                "group": "experiência"
+              },
+              {
+                "id": "5",
+                "label": "Executor financeiro",
+                "detail": "Alocação atômica e recibo",
+                "group": "autoridade"
+              },
+              {
+                "id": "6",
+                "label": "Observabilidade",
+                "detail": "Pendência e divergência",
+                "group": "operação"
+              }
+            ],
+            "edges": [
+              {
+                "to": "1",
+                "label": "regras vigentes",
+                "from": "0"
+              },
+              {
+                "to": "2",
+                "label": "persistir cotação",
+                "from": "1"
+              },
+              {
+                "to": "3",
+                "label": "disponibilizar plano",
+                "from": "2"
+              },
+              {
+                "to": "3",
+                "label": "consultar elegibilidade",
+                "from": "4"
+              },
+              {
+                "to": "4",
+                "label": "plano e validade",
+                "from": "3"
+              },
+              {
+                "to": "5",
+                "label": "confirmar operação",
+                "from": "4"
+              },
+              {
+                "to": "6",
+                "label": "telemetria mínima",
+                "from": "4"
+              },
+              {
+                "to": "3",
+                "label": "sinal para pausar oferta",
+                "from": "6"
+              }
+            ],
+            "caption": "Arquitetura externa proposta; não representa a implementação interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O cotador utiliza regras e revisão do contrato para publicar um plano imutável. O aplicativo consulta validade e confirma uma operação identificada. O executor financeiro revalida e aplica dentro de sua autoridade, produzindo recibo próprio; a consulta não substitui essa decisão."
+          },
+          {
+            "type": "p",
+            "text": "Observabilidade sinaliza pendências e divergências para a operação responsável, que pode pausar novas ofertas. O diagrama não concede ao monitor autoridade para editar saldo. Recebimento real, cálculo contratual e razão são integrações necessárias; o laboratório reduz esse conjunto a uma conta e valores sintéticos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo: revalidar antes de aplicar",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def execute(self, ident, now, crash=False):\n        with self.db:\n            self.db.execute('BEGIN IMMEDIATE')\n            row = self.db.execute('SELECT revision,bill,principal,discount,'\n                'expires,received,executed FROM quotes WHERE id=?',\n                (ident,)).fetchone()\n            if not row:\n                raise ValueError('unknown quote')\n            revision, bill, principal, discount, expires, received, done = row\n            needed = bill + principal - discount\n            if done:\n                return dict(applied=needed, unapplied=received - needed)\n            current = self.db.execute('SELECT revision FROM contract').fetchone()[0]\n            if now >= expires or revision != current:\n                raise ValueError('expired or stale quote; funds remain unapplied')\n            if received < needed:\n                raise ValueError('full quoted amount not received')\n            self.db.execute('UPDATE contract SET revision=revision+1,'\n                            'settled=settled+?', (principal,))\n            self.db.execute('UPDATE quotes SET executed=1 WHERE id=?', (ident,))\n            if crash:\n                raise RuntimeError('crash before commit')\n        return dict(applied=needed, unapplied=received - needed)",
+            "caption": "Trecho literal de labs/case_14.py; execução transacional em centavos."
+          },
+          {
+            "type": "p",
+            "text": "A cotação só é aplicada se revisão, validade e valor recebido forem compatíveis. Uma falha antes do commit reverte toda a execução. Depois de concluída, uma retentativa retorna o recibo original mesmo que o relógio já tenha ultrapassado a validade; ela não tenta executar uma nova antecipação."
+          },
+          {
+            "type": "p",
+            "text": "Dinheiro recebido em cotação expirada ou insuficiente permanece registrado para resolução, sem sumir nem ser aplicado sob outro preço silenciosamente. O laboratório não implementa devolução automática. O relógio e os fatos de liquidação devem vir de fontes confiáveis do servidor, e o desconto fornecido precisa de cálculo contratual aprovado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Cálculo puro não dispensa a transação",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn executable? [quote contract now received]\n  (let [required (+ (:bill-cents quote)\n                    (- (:principal-cents quote)\n                       (:discount-cents quote)))]\n    (and (= (:revision quote) (:revision contract))\n         (< now (:expires-at quote))\n         (>= received required))))\n\n;; Run this check inside the same authority as financial application.\n;; The clock, contract and settlement evidence are server-owned.\n;; A completed operation returns its original receipt on retry.",
+            "caption": "Clojure ilustrativo, não executado; regras sintéticas para revisão do contrato."
+          },
+          {
+            "type": "p",
+            "text": "A função expressa as condições de execução, mas avaliá-la fora da transação deixa uma janela para alteração do contrato. O serviço precisa comparar a revisão e aplicar a mudança na mesma autoridade. O valor necessário deve incluir todos os componentes aprovados, sem omitir a fatura corrente para tornar a oferta aparentemente mais barata."
+          },
+          {
+            "type": "p",
+            "text": "Mudança material de preço ou plano exige nova confirmação. Revalidar não significa recalcular e debitar silenciosamente. O histórico conserva cotação aceita, motivo de cancelamento e recibo de aplicação. Uma implementação em Clojure pode manter o cálculo determinístico; integração financeira e publicação de eventos continuam responsáveis por atomicidade, durabilidade e reconciliação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Plano, recebimento e recibo separados",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Objeto",
+              "Identidade",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "Cotação",
+                "quote_id + revisão",
+                "Plano imutável e expiração"
+              ],
+              [
+                "Recebimento",
+                "payment_id",
+                "Mesmo pagamento não soma duas vezes"
+              ],
+              [
+                "Execução",
+                "quote_id",
+                "Aplicação única após validação"
+              ],
+              [
+                "Exceção",
+                "Caso vinculado",
+                "Destino do valor sempre explícito"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"quote_id\": \"synthetic-quote-14\",\n  \"contract_revision\": 1,\n  \"currency\": \"BRL\",\n  \"current_bill_cents\": 5000,\n  \"principal_cents\": 10000,\n  \"discount_cents\": 1000,\n  \"required_cents\": 14000,\n  \"received_cents\": 14000,\n  \"execution_state\": \"pending\",\n  \"expires_at\": 100\n}",
+            "caption": "Exemplo sintético: R$ 50 de fatura + R$ 100 de principal −R$ 10 de desconto = R$ 140."
+          },
+          {
+            "type": "p",
+            "text": "O desconto não é uma economia do banco a ser maximizada: é parte da obrigação contratual com o cliente. A apresentação deve separar principal, encargos, desconto e total requerido. Identificadores permitem investigação sem expor contrato completo em logs. O responsável financeiro define retenção e compensações; atendimento recebe uma memória de cálculo acessível e uma próxima ação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Crash e validade atacam o plano",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_received_is_not_executed_and_crash_rolls_back(self):\n        self.r.receive('p', 'q', 14000)\n        with self.assertRaises(RuntimeError):\n            self.r.execute('q', 90, crash=True)\n        self.assertEqual(self.r.db.execute('SELECT settled FROM contract')\n                         .fetchone()[0], 0)\n        self.r.db.close()\n        self.r = Repayment(self.path)\n        self.assertEqual(self.r.execute('q', 90)['applied'], 14000)\n        self.assertEqual(self.r.execute('q', 200)['applied'], 14000)\n        self.assertEqual(self.r.db.execute('SELECT settled FROM contract')\n                         .fetchone()[0], 10000)",
+            "caption": "Teste literal; 9 testes passaram na suíte completa."
+          },
+          {
+            "type": "p",
+            "text": "O teste recebe o valor e falha depois das escritas, antes do commit. A obrigação permanece não liquidada; após reinício, a execução conclui uma vez. A repetição posterior à validade retorna o mesmo resultado, demonstrando a diferença entre recuperar um recibo e aceitar uma cotação expirada."
+          },
+          {
+            "type": "p",
+            "text": "Outros testes cobrem pagamento parcial, expiração, duplicação de recebimento, conflito, cotação tornada antiga por outra execução, excesso de um centavo e desconto inválido. Não há juros reais, débito automático externo ou devolução implementada. Uma suíte de integração deve validar os lançamentos contra contabilidade e exercitar compensação de operações que não puderem ser efetivadas."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Medir o intervalo que o cliente não vê",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Definição",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Tempo de execução",
+                "p95 de recebido elegível até aplicado",
+                "Diária; modalidade"
+              ],
+              [
+                "Pendente financiado",
+                "Operações com valor recebido sem execução / elegíveis",
+                "Diária; idade e motivo"
+              ],
+              [
+                "Desconto divergente",
+                "Centavos diferentes do plano aprovado",
+                "Contínua; versão contratual"
+              ],
+              [
+                "Cancelamento explicado",
+                "Casos com motivo e destino comunicados / cancelados",
+                "Semanal; canal"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "As linhas de base são desconhecidas. Recebimento precisa de timestamp financeiro, não do toque no botão. Também é necessário distinguir cotação expirada antes do pagamento de execução atrasada depois de elegibilidade confirmada. Essa segmentação evita atribuir ao mesmo indicador comportamentos com causas e responsabilidades diferentes."
+          },
+          {
+            "type": "p",
+            "text": "O piloto mantém cálculo contratual aprovado e compara acompanhamento antigo com plano/recibo explícitos. A expansão para execução nova exige validação financeira independente. Interromperia por dupla aplicação, desconto incorreto, dinheiro sem destino rastreável ou cancelamento comunicado de forma enganosa. Tempo menor não compensa um centavo aplicado ao contrato errado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor do retrabalho, não do desconto retirado",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Potencial/ano",
+              "Operação/ano",
+              "Ano 1 após custo"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "R$ 14.400",
+                "R$ 30.000",
+                "R$ -165.600"
+              ],
+              [
+                "Base",
+                "R$ 67.200",
+                "R$ 30.000",
+                "R$ -112.800"
+              ],
+              [
+                "Ambicioso",
+                "R$ 192.000",
+                "R$ 30.000",
+                "R$ 12.000"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Hipóteses anuais: 30 mil, 70 mil ou 120 mil antecipações elegíveis; redução absoluta de incidentes em 0,3%, 0,6% ou 1%. Assumo R$ 140 de retrabalho e R$ 20 de suporte incremental por incidente, total R$ 160. Isso corresponde a 90, 420 ou 1.200 ocorrências evitadas. Implementação: R$ 150 mil; operação: R$ 30 mil/ano, ambas assumidas."
+          },
+          {
+            "type": "p",
+            "text": "No cenário base, 420 × 160 = R$ 67.200. O primeiro ano resulta em R$ 67.200 − 30.000 − 150.000 = −R$ 112.800. O equilíbrio exige 187.500 antecipações equivalentes à hipótese base. O cenário ambicioso resulta em R$ 12.000 líquidos modelados, mas sua incidência e seu efeito precisam ser medidos. O plano deve começar pequeno se não houver evidência de escala suficiente."
+          },
+          {
+            "type": "callout",
+            "title": "Fronteiras da conta",
+            "text": "Não calcular perda a partir das quantidades de parcelas do relato. Desconto contratual correto não é custo evitável. Excluir ocorrências e contatos já contabilizados no caso 09; não somar capacidade liberada como se fosse caixa garantido."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com contabilidade no início",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Dono e entrega",
+              "Gate"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Crédito + contabilidade: regras",
+                "Exemplos de cálculo aprovados"
+              ],
+              [
+                "16–30 dias",
+                "Staff: cotação e execução",
+                "Validade e revisão atômicas"
+              ],
+              [
+                "31–60 dias",
+                "Operações: sombra e reconciliação",
+                "Recebido tem destino verificável"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto: piloto limitado",
+                "Desconto correto e recontato menor"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O horizonte de 90 dias é uma proposta. A dependência crítica é concordância sobre regra contratual, arredondamento e prioridade de aplicação. Não cabe à equipe móvel inferir essas condições de textos de atendimento. Exemplos aprovados precisam incluir insuficiência, vencimento, pagamento excedente e mudança de contrato entre oferta e execução."
+          },
+          {
+            "type": "p",
+            "text": "O EM reúne financiamento, fatura, débito automático, suporte e contabilidade em uma entrega única. O Staff define as fronteiras técnicas e a estratégia de compensação. Cada fase termina com evidência de que o estado comunicado corresponde ao financeiro. Se o cálculo não estiver validado, a próxima etapa é resolver essa lacuna, não acelerar o rollout."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Operação de uma cotação que não concluiu",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O canário começa com cotação e recibo em sombra, comparados com a fonte financeira. A equipe acompanha uma fila de operações recebidas sem execução, segmentada por validade, insuficiência e revisão antiga. Cada categoria tem responsável e próxima ação; o status genérico de processamento não substitui um plano de resolução."
+          },
+          {
+            "type": "p",
+            "text": "Alertas cobrem idade, valor e divergência de desconto. Crédito responde pela regra; plataforma financeira pela aplicação; operações pela resolução; produto pela comunicação. O runbook não permite reaplicar um pagamento sob outro plano sem autorização. Caso seja necessária devolução ou compensação, ela mantém vínculo com recebimento e cotação originais."
+          },
+          {
+            "type": "p",
+            "text": "Rollback pausa novas ofertas ou a nova experiência, preservando recibos e valores já recebidos. Exercícios incluem crash após commit, cotação vencida durante pagamento, débito automático concorrente e resposta antiga. A recuperação começa pela autoridade financeira, não pela tela. Toda pendência deve terminar em aplicação válida ou destino aprovado e rastreável para o dinheiro."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição: tornar a promessa executável",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu definiria o que significa aceitar uma cotação e qual autoridade garante sua execução. Separaria cálculo puro, consentimento, recebimento e aplicação, com identidade e revisão em cada fronteira. Eu rejeitaria uma correção que apenas altere o status visual quando a operação financeira ainda não foi efetivada."
+          },
+          {
+            "type": "p",
+            "text": "Como Engineering Manager, eu coordenaria os times que compartilham essa jornada e tornaria as dependências visíveis no plano. Atendimento precisa de acesso ao plano aceito e ao motivo da exceção; contabilidade precisa de lançamentos reconciliáveis; mobile precisa de uma semântica estável para explicar. A entrega só termina quando esses três lados funcionam juntos."
+          },
+          {
+            "type": "p",
+            "text": "O tradeoff central é validade da oferta versus fricção. Manter uma cotação indefinidamente pode comprometer a regra financeira; expirar sem explicar pode frustrar o cliente. Eu escolheria revalidação transparente, com novo consentimento quando houver mudança material. O custo e a oportunidade seriam reavaliados no piloto, sem alegar ganhos ou autoridade que não possuo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff: dinheiro recebido tem um destino",
+        "kicker": "PROPOSTA EXTERNA / EXTERNAL PROPOSAL",
+        "blocks": [
+          {
+            "type": "bullets",
+            "items": [
+              "Executar python3 labs/case_14.py; 9 testes locais e valores sintéticos.",
+              "Revisar quote, receive e execute; observar recebimento separado da efetivação.",
+              "Injetar crash antes do commit, reabrir banco e repetir; principal só pode ser liquidado uma vez.",
+              "Antes de produção: preço contratual, relógio confiável, autorização, liquidação, razão e devolução controlada."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O revisor deve verificar tanto o caminho feliz quanto a operação que não pode concluir. O laboratório conserva dinheiro recebido em uma pendência explícita; não promete que isso seja suficiente para uma experiência real. A resolução exige política, prazo validado e comunicação, além da transação."
+          },
+          {
+            "type": "p",
+            "text": "Avançar somente quando plano, execução e recibo conciliam, o cliente entende o total necessário e a operação sabe tratar expiração e insuficiência. Se não houver base para automatizar, manter assistência humana com rastreabilidade. O resultado desejado é uma promessa financeira que pode ser explicada e cumprida, e uma exceção que não desaparece entre equipes."
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "id": "14",
+    "technologies": [
+      "clojure",
+      "datomic",
+      "flutter",
+      "prometheus",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/"
+  }
+]

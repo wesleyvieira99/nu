@@ -40,6 +40,8 @@ A publicação assíncrona pode atrasar; por isso, a leitura declara sua última
 
 ## Núcleo executável
 
+`Idempotent Consumer [lab]` · `Explicit State Machine [lab]`
+
 ```python
     def confirm(self, op, event_id, target, trusted=False):
         if trusted is not True or not event_id:
@@ -79,6 +81,8 @@ O valor devolvido é registrado em centavos e nunca aumenta por replay. Consulta
 
 ## Implementação na stack
 
+`Idempotent Consumer [proposal]` · `Explicit State Machine [proposal]`
+
 ```clojure
 (defn receipt-transition [state event]
   ;; Proposed pure rule; persistence must serialize the decision.
@@ -103,6 +107,8 @@ Eu manteria a stack existente como primeira opção. A seleção de PostgreSQL o
 - [Clojure — Data Structures](https://clojure.org/reference/data_structures)
 
 ## Contratos e propriedade
+
+`Idempotent Consumer [proposal]` · `Explicit State Machine [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -130,6 +136,8 @@ O contrato distingue identificador de tentativa, identidade de evento e titular 
 A retenção precisa cobrir investigação e repetição legítima, com política aprovada pelo domínio e privacidade. Logs operacionais registrariam correlação mínima; nomes, chaves Pix e extratos não virariam labels de métricas. O recibo é histórico e não deve ser apresentado como saldo atual. Para registros antigos, a migração preservaria as identidades antes de habilitar consumidores novos.
 
 ## Verificação adversarial
+
+`Idempotent Consumer [lab]` · `Explicit State Machine [lab]`
 
 ```python
     def test_concurrent_refund_replays_once(self):
@@ -229,3 +237,95 @@ O handoff entrega código, testes, contrato e perguntas de integração: quem au
 - Rollback conserva identidades e histórico.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py)
+
+## Padrões com prova no código
+
+`Idempotent Consumer [lab]` · `Explicit State Machine [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Idempotent Consumer | Receipts.confirm | um evento financeiro repetido preserva um único estorno |
+| Explicit State Machine | Receipts.confirm | estorno exige transição financeira permitida |
+| CQRS / authoritative read model | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + transactional repository. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Receipts.confirm](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L41)
+- [P1 · test_concurrent_refund_replays_once](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L89)
+- [P2 · Receipts.confirm](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L41)
+- [P2 · test_refund_without_failure_is_rejected](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L109)
+
+## Sequência de execução
+
+![O sinal trusted é injetado; não há Pix real nem assinatura de eventos.](../../evidence/sequence-pt-01.svg)
+
+O sinal trusted é injetado; não há Pix real nem assinatura de eventos.
+
+**Autoridade e fronteira de falha**
+
+um evento financeiro repetido preserva um único estorno. timeout isolado mantém a operação inconclusiva.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [confirm](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L41)
+- [read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L68)
+
+## Features, histórias e aceite
+
+**F01.1 · Recibo conciliado · D16–30**
+
+Como cliente, quero consultar uma tentativa inconclusiva sem repetir o Pix. Aceite: um evento financeiro repetido preserva um único estorno.
+
+**F01.2 · Separar timeout de devolução · D31–60**
+
+Como responsável pela conciliação, quero identificar a evidência que autoriza a mudança de estado. Aceite: timeout isolado mantém a operação inconclusiva.
+
+**F01.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F01.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L89)
+- [Aceite F01.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L101)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 8000.00 | 0.00 | 4000.00 | 120000.00 |
+| Base | 40000.00 | 0.00 | 8000.00 | 120000.00 |
+| Ambicioso | 120000.00 | 0.00 | 15000.00 | 120000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 4000.00 | -72000.00 | -120000.00 |
+| Base | 32000.00 | 264000.00 | 24000.00 |
+| Ambicioso | 105000.00 | 1140000.00 | 420000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contatos por tentativa inconclusiva. Ameaça: retries contados como novos clientes. |
+| Economia por unidade | Tentativas elegíveis × redução absoluta de contato × custo por contato; principal devolvido não é receita. |
+| Experimento proposto | Consulta em sombra antes da coorte com recibo; acompanhar contatos por sete dias e manter ajuda disponível. |
+| Critério de parada | Parar por confirmação falsa, acesso cruzado ou Pix duplicado atribuível ao recibo. |
+
+- [Reclame AQUI · ID 250462257](https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

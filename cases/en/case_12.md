@@ -40,6 +40,8 @@ The customer disputes receipt through an authenticated channel. Reissue creates 
 
 ## Core: generation and persistent dispute
 
+`Generation Token [lab]` · `Authority Separation [lab]`
+
 ```python
     def event(self, ident, generation, kind, scope):
         if not isinstance(ident, str) or not ident.strip():
@@ -87,6 +89,8 @@ The supplied scope is trusted context injected by the server, not a freely submi
 
 ## Normalize without losing provenance
 
+`Generation Token [proposal]` · `Authority Separation [proposal]`
+
 ```clojure
 (defn accept-delivery [state event]
   (cond
@@ -110,6 +114,8 @@ The reducer does not discover physical truth from a status. It applies precedenc
 Integration authenticates origin, limits replay and validates shipment/account linkage. An incoming timestamp cannot order the entire card lifecycle: clocks differ and suppliers may resend old information. Generation and identity provide stronger protection against an update for a canceled card appearing to confirm the new one.
 
 ## A physical-to-digital contract
+
+`Generation Token [proposal]` · `Authority Separation [proposal]`
 
 | Field | Authority | Rule |
 | --- | --- | --- |
@@ -136,6 +142,8 @@ Synthetic state: declared delivery, open dispute and inactive card.
 Delivery evidence may contain an address, signature or third-party image. Its reference should support purpose-bound access, expiry and auditing. The app presents enough information for customer action without publishing recipient data. Logistics remains responsible for obtaining partner evidence rather than transferring that integration burden to the customer.
 
 ## Replays cannot close the exception
+
+`Generation Token [lab]` · `Authority Separation [lab]`
 
 ```python
     def test_old_delivery_does_not_replace_new_generation(self):
@@ -230,3 +238,95 @@ The local demonstration verifies precedence and persistence, not whether a parce
 Proceed only when investigation has an owner, events are correctly linked and activation security remains intact. If operational evidence shows a route problem, the intervention may be logistical. Engineering’s contribution is ensuring that the product represents that reality clearly rather than hiding it behind one status.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py)
+
+## Patterns with proof
+
+`Generation Token [lab]` · `Authority Separation [lab]` · `Anti-corruption Layer [proposal]` · `Spring Kafka [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Generation Token | Delivery.event | an old event cannot replace the current generation |
+| Authority Separation | Delivery.event | the carrier has no activation authority |
+| Anti-corruption Layer / carrier adapter | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Kafka + schema validation. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Delivery.event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [P1 · test_old_delivery_does_not_replace_new_generation](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L87)
+- [P2 · Delivery.event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [P2 · test_carrier_cannot_activate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L107)
+
+## Execution sequence
+
+![Scopes are injected. Carrier signatures, possession and activation factors require integration.](../../evidence/sequence-en-12.svg)
+
+Scopes are injected. Carrier signatures, possession and activation factors require integration.
+
+**Authority and failure boundary**
+
+an old event cannot replace the current generation. the carrier has no activation authority.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29)
+- [reissue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L65)
+
+## Features, stories and acceptance
+
+**F12.1 · Tracking by generation · D16–30**
+
+As a customer, I want to track the correct card after reissue. Acceptance: an old event cannot replace the current generation.
+
+**F12.2 · Delivery separate from activation · D31–60**
+
+As a customer, I want to dispute delivery without activating an unknown card. Acceptance: the carrier has no activation authority.
+
+**F12.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F12.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L87)
+- [Acceptance F12.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L107)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 3900.00 | 0.00 | 24000.00 | 90000.00 |
+| Base | 15600.00 | 0.00 | 24000.00 | 90000.00 |
+| Ambitious | 46800.00 | 0.00 | 24000.00 | 90000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -20100.00 | -110100.00 | -112050.00 |
+| Base | -8400.00 | -98400.00 | -106200.00 |
+| Ambitious | 22800.00 | -67200.00 | -90600.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: reissues per replacement journey. Threat: cutting costs by denying necessary delivery. |
+| Unit economics | Avoided reissues × (card + shipping + incremental support cost); tracking does not establish possession. |
+| Proposed experiment | Match routes and partners, account for seasonality and confirm possession or resolution. |
+| Stop rule | Stop for an invalid card activation, automatically closed dispute or excessive data collection. |
+
+- [Reclame AQUI · ID 230126691](https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

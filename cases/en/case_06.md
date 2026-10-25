@@ -40,6 +40,8 @@ The app response distinguishes received, being checked, available for analysis a
 
 ## Executable core
 
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]`
+
 ```python
     def append(self, owner, upload_id, content, now):
         if owner != self.owner:
@@ -76,6 +78,8 @@ Material received after cutoff is retained as late, but submit does not promise 
 
 ## Stack implementation
 
+`Append-only Evidence [proposal]` · `Quarantine Gate [proposal]`
+
 ```typescript
 // Proposed metadata only; no storage permissions implemented here.
 type EvidenceRecord = {
@@ -101,6 +105,8 @@ The dispute service decides admissibility and deadline; storage does not assume 
 - [Amazon S3 — User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
 ## Contracts and ownership
+
+`Append-only Evidence [proposal]` · `Quarantine Gate [proposal]`
 
 | Field / rule | Owner | Invariant |
 | --- | --- | --- |
@@ -129,6 +135,8 @@ The contract associates upload_id, dossier version, digest and receipt time. A d
 The model does not allow silent attachment replacement. Corrections become new versions with an explicit relationship to the previous one. Deadlines need a source, time zone and applicable rule reviewed with card-network operations. Privacy requires separating receipt visibility from document access. Retention must consider dispute and relevant obligations rather than defaulting to unlimited storage.
 
 ## Adversarial verification
+
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]`
 
 ```python
     def test_late_evidence_is_retained_without_submission_promise(self):
@@ -224,3 +232,96 @@ Production handoff requires protected storage, a real scanner, format validation
 - Quarantined documents are not submitted.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py)
+
+## Patterns with proof
+
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]` · `Event-driven dossier [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Append-only Evidence | Dossier.append | reusing an identifier with different content conflicts |
+| Quarantine Gate | Dossier.submit | an unsafe file cannot pass the submission gate |
+| Event-driven dossier / anti-corruption layer | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + object-storage adapter. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · LangGraph**
+
+Proposed experiment: LangGraph to extract and summarize already-admitted documents with source references. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Dossier.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L21)
+- [P1 · test_reused_upload_id_cannot_replace_evidence](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L81)
+- [P2 · Dossier.submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L55)
+- [P2 · test_malware_cannot_submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L91)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Execution sequence
+
+![clean is a trusted fixture, not antivirus. A hash proves neither admissibility nor a favorable outcome.](../../evidence/sequence-en-06.svg)
+
+clean is a trusted fixture, not antivirus. A hash proves neither admissibility nor a favorable outcome.
+
+**Authority and failure boundary**
+
+reusing an identifier with different content conflicts. an unsafe file cannot pass the submission gate.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L21)
+- [submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L55)
+
+## Features, stories and acceptance
+
+**F06.1 · Preserved additional evidence · D16–30**
+
+As a customer, I want to add a document without replacing its earlier version. Acceptance: reusing an identifier with different content conflicts.
+
+**F06.2 · Admissibility before submission · D31–60**
+
+As a customer, I want to know whether a document was received or actually submitted. Acceptance: an unsafe file cannot pass the submission gate.
+
+**F06.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F06.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L81)
+- [Acceptance F06.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L91)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. The original realizable-capacity factor is already included; the slider applies an additional stress.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 2500.00 | 600.00 | 3000.00 | 140000.00 |
+| Base | 18000.00 | 1800.00 | 6000.00 | 140000.00 |
+| Ambitious | 60000.00 | 3600.00 | 10000.00 | 140000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -1100.00 | -153200.00 | -168200.00 |
+| Base | 10200.00 | -17600.00 | -125600.00 |
+| Ambitious | 46400.00 | 416800.00 | 56800.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: minutes per eligible dossier. Threat: treating more irrelevant attachments as success. |
+| Unit economics | Realizable triage capacity minus upload scanning and operation; no chargeback win is modeled. |
+| Proposed experiment | Match dispute stage and reason; track admissibility and seven-day repeat contacts. |
+| Stop rule | Stop for an exposed document, substituted evidence or a missed deadline. |
+
+- [Reclame AQUI · ID 240394695](https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

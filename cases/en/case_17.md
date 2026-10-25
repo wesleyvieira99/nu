@@ -39,6 +39,8 @@ The lab deliberately executes only the cash alternative. Miles would require ano
 
 ## Consume exactly the accepted preview
 
+`Quote / Commit [lab]` · `Expiring Quote [lab]`
+
 ```python
     def redeem(self, actor, quote_id, choice, key, now):
         with self.lock:
@@ -81,6 +83,8 @@ The same key returns the same receipt after commitment. Another key for the same
 
 ## Dart: consequence before the button
 
+`Quote / Commit [proposal]` · `Expiring Quote [proposal]`
+
 ```dart
 class RedemptionPreview {
   final int pointsConsumedMinor;
@@ -105,6 +109,8 @@ I would organize the preview around one main sentence and three quantities: what
 A repeated generic warning can become noise. I would compare a concrete consequence with an additional confirmation box, measuring comprehension and errors rather than clicks. When the quote expires, the interface returns to preview and requires fresh confirmation; it does not update numbers behind an already accepted button. Irreversibility must be communicated without promising an operational exception.
 
 ## Units the contract cannot confuse
+
+`Quote / Commit [proposal]` · `Expiring Quote [proposal]`
 
 | Field | Unit | Invariant |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ Point representation must state unit and precision at every boundary. A decimal 
 The confirmation record should be sufficient to review which preview was presented without capturing an entire screen or travel data. Retention and access follow a policy agreed with Privacy. Reconstructing a decision does not require storing every gesture; it requires quote identity, copy revision and the financial result.
 
 ## The test separates UX from atomicity
+
+`Quote / Commit [lab]` · `Expiring Quote [lab]`
 
 ```python
     def test_same_balance_cannot_be_spent_twice(self):
@@ -217,3 +225,95 @@ Acceptance requires explicit units, an authority-issued quote, revalidated balan
 I would proceed if the preview improves understanding without inventing contractual flexibility. I would stop if the solution depends on promising a reversal the domain does not offer. The final reviewer demonstration should make it possible to explain aloud, without jargon, the balance before, the choice and the balance afterward.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py)
+
+## Patterns with proof
+
+`Quote / Commit [lab]` · `Expiring Quote [lab]` · `Aggregate invariant [proposal]` · `Spring Boot [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Quote / Commit | Benefits.redeem | two concurrent attempts against the same balance permit one commit |
+| Expiring Quote | Benefits.redeem | an expired quote cannot redeem benefits |
+| Aggregate invariant / benefit ledger | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + immutable quote DTO. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Benefits.redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+- [P1 · test_concurrent_choices_only_one_commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L113)
+- [P2 · Benefits.redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+- [P2 · test_expired_preview_has_no_financial_effect](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L105)
+
+## Execution sequence
+
+![Rates come from trusted quotes. Point hundredths and cash cents differ; the lock is not a distributed transaction.](../../evidence/sequence-en-17.svg)
+
+Rates come from trusted quotes. Point hundredths and cash cents differ; the lock is not a distributed transaction.
+
+**Authority and failure boundary**
+
+two concurrent attempts against the same balance permit one commit. an expired quote cannot redeem benefits.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L37)
+- [redeem](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53)
+
+## Features, stories and acceptance
+
+**F17.1 · Choice with consequences · D16–30**
+
+As a customer, I want to understand exclusivity before consuming points. Acceptance: two concurrent attempts against the same balance permit one commit.
+
+**F17.2 · Preview without financial effect · D31–60**
+
+As a customer, I want to let a quote expire without moving my balance. Acceptance: an expired quote cannot redeem benefits.
+
+**F17.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F17.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L113)
+- [Acceptance F17.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L105)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 6000.00 | 0.00 | 4500.00 | 150000.00 |
+| Base | 12000.00 | 0.00 | 4500.00 | 150000.00 |
+| Ambitious | 18000.00 | 0.00 | 4500.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | 1500.00 | -132000.00 | -168000.00 |
+| Base | 7500.00 | -60000.00 | -132000.00 |
+| Ambitious | 13500.00 | 12000.00 | -96000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: understanding of balance and exclusivity. Threat: fewer contacts because users give up seeking reversal. |
+| Unit economics | Redemptions × misunderstanding × prevention × handling and assumed remediation cost; no reversal right is presumed. |
+| Proposed experiment | Research and test presentation only; do not randomize rates, rights or reversibility. |
+| Stop rule | Stop for duplicate consumption; expand only with understanding and legitimate completion preserved. |
+
+- [Reclame AQUI · ID 245086475](https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

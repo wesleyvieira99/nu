@@ -1,0 +1,3500 @@
+[
+  {
+    "id": "01",
+    "title": "Pix de R$ 300,00: esclarecer o estorno",
+    "subtitle": "Um recibo confiável para uma tentativa que falhou.",
+    "technologies": [
+      "flutter",
+      "clojure",
+      "postgresql",
+      "kafka",
+      "opentelemetry",
+      "python",
+      "java"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+    "source_title": "Reclame AQUI — relato e resposta pública",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Histórico resolvido · RA 250462257",
+            "text": "Em 03/06/2026, uma consumidora relatou ter recebido R$ 700,00, transferido R$ 200,00 e tentado outro Pix de R$ 300,00 que falhou. Após mais de 24 horas, dizia não ver o retorno. Em 09/06, o Nubank reconheceu comportamento pontual na comunicação, afirmou estorno automático e envio de extrato privado. Em 10/06, ela marcou resolvido e deu nota 9. O horário exato do estorno não é público."
+          },
+          {
+            "type": "p",
+            "text": "O caso orienta uma pergunta de produto: quando a transferência não conclui, a pessoa consegue distinguir tentativa, valor temporariamente indisponível e retorno confirmado? O extrato privado não foi inspecionado; portanto, não reconstruo um saldo nem uma cronologia financeira além do relato. A captura mostra uma manifestação pública com solução posterior, não a tela do aplicativo nem evidência de defeito atual. A proposta preserva esse desfecho e investiga uma jornada possível de ambiguidade."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — relato e resposta pública",
+            "url": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Uma hipótese falsificável é que a informação de retorno chega ao canal de consulta depois da confirmação financeira, prolongando a incerteza sem prolongar necessariamente a retenção. Eu correlacionaria tentativa, confirmação, lançamento e primeira consulta visível, comparando relógios e versões. Se a informação já estava disponível e foi compreendida, a hipótese perde força; a investigação passa ao contexto de apresentação ou atendimento."
+          },
+          {
+            "type": "p",
+            "text": "O time precisaria distinguir falha de transporte, rejeição antes da liquidação e devolução efetiva. Esses eventos não são sinônimos. A resposta pública não identifica serviço, banco de dados ou fila, então seria incorreto atribuir o episódio a Kafka, cache ou arquitetura distribuída. A primeira entrega é um mapa de estados observados com responsáveis, não a substituição de infraestrutura."
+          },
+          {
+            "type": "p",
+            "text": "A investigação também precisa separar tempo do cliente de tempo do servidor. Uma tentativa pode ser criada offline, enviada depois e consultada por outro aparelho. Sem essa distinção, o painel atribui à confirmação financeira um atraso de conectividade. Eu usaria timestamps com origem declarada e uma linha temporal por operação, com acesso restrito para investigação. Divergências de relógio devem aparecer como incerteza de medida, não como uma duração negativa silenciosamente descartada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Pix de R$ 300,00: esclarecer o estorno",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "App do titular",
+                "detail": "Tentativa e recibo",
+                "group": "experiência"
+              },
+              {
+                "id": "2",
+                "label": "API de consulta",
+                "detail": "Escopo por titular",
+                "group": "serviço"
+              },
+              {
+                "id": "3",
+                "label": "Estado da tentativa",
+                "detail": "Transições permitidas",
+                "group": "domínio"
+              },
+              {
+                "id": "4",
+                "label": "Recibo persistente",
+                "detail": "Estado + evento único",
+                "group": "persistência"
+              },
+              {
+                "id": "5",
+                "label": "Confirmações",
+                "detail": "Eventos conciliados",
+                "group": "integração"
+              },
+              {
+                "id": "6",
+                "label": "Leitura do estorno",
+                "detail": "Valor e última confirmação",
+                "group": "consulta"
+              },
+              {
+                "id": "7",
+                "label": "Ajuda contextual",
+                "detail": "Próxima ação segura",
+                "group": "suporte"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "consulta autenticada"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "label": "consulta por operação"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "transição atômica"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "publicação recuperável"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "estado confirmado"
+              },
+              {
+                "from": "1",
+                "to": "6",
+                "label": "consulta do recibo"
+              },
+              {
+                "from": "1",
+                "to": "7",
+                "label": "orientação contextual"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A entrada autenticada consulta e o domínio aplica apenas transições autorizadas. O registro persistente conserva a identidade do evento e o estado confirmado na mesma transação. O caminho de ajuda oferece orientação sem criar outra ordem financeira."
+          },
+          {
+            "type": "p",
+            "text": "A publicação assíncrona pode atrasar; por isso, a leitura declara sua última confirmação e tem uma rota de conciliação. O desenho não move autoridade sobre dinheiro para a interface. O laboratório verifica uma fronteira local, sem simular liquidação no arranjo Pix."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def confirm(self, op, event_id, target, trusted=False):\n        if trusted is not True or not event_id:\n            raise PermissionError(\"verified adapter required\")\n        allowed = {\"pending\": {\"settled\", \"refund_pending\"},\n                   \"refund_pending\": {\"refunded\"}}\n        with self.connect() as db:\n            db.execute(\"BEGIN IMMEDIATE\")\n            prior = db.execute(\"SELECT op,target FROM events WHERE id=?\",\n                               (event_id,)).fetchone()\n            if prior:\n                if prior != (op, target):\n                    raise ValueError(\"event identity conflict\")\n                return False\n            row = db.execute(\"SELECT state,amount FROM ops WHERE id=?\",\n                             (op,)).fetchone()\n            if not row:\n                raise KeyError(op)\n            if target not in allowed.get(row[0], set()):\n                raise ValueError(\"illegal transition\")\n            returned = row[1] if target == \"refunded\" else 0\n            db.execute(\"UPDATE ops SET state=?,returned=? WHERE id=?\",\n                       (target, returned, op))\n            db.execute(\"INSERT INTO events VALUES (?,?,?)\",\n                       (event_id, op, target))\n            return True",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "A operação começa pendente. Uma confirmação de falha permite aguardar o estorno; somente um evento posterior autorizado marca o retorno. BEGIN IMMEDIATE serializa escritores no arquivo SQLite didático. A identidade do evento é comparada também ao conteúdo, impedindo que uma chave seja reutilizada para outra transição."
+          },
+          {
+            "type": "p",
+            "text": "O valor devolvido é registrado em centavos e nunca aumenta por replay. Consultar dez vezes não muda o estado. Isso esclarece a garantia: trata-se de um recibo de confirmação, não de um motor que decide devolver dinheiro por timeout. Assinatura, autenticidade do adaptador e conciliação com o ledger ainda seriam integrações obrigatórias."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn receipt-transition [state event]\n  ;; Proposed pure rule; persistence must serialize the decision.\n  (let [allowed {:pending #{:settled :refund-pending}\n                 :refund-pending #{:refunded}}\n        target (:target event)]\n    (cond\n      (not (true? (:verified event)))\n      {:error :untrusted-event}\n      (not (contains? (get allowed state #{}) target))\n      {:error :illegal-transition}\n      :else {:next-state target\n             :event-id (:event-id event)})))",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O exemplo Clojure torna a regra de transição inspecionável e separa rejeição de efeito. Em produção, a função precisaria executar sobre uma versão ainda válida, dentro da transação apropriada ou com comparação de versão. Uma decisão pura correta não elimina corridas entre leitura e gravação."
+          },
+          {
+            "type": "p",
+            "text": "Eu manteria a stack existente como primeira opção. A seleção de PostgreSQL ou Datomic dependeria do domínio responsável, dos mecanismos de transação já operados e do custo de migração. A UI Flutter consumiria estados explícitos, com linguagem revisada para não transformar “aguardando confirmação” em “dinheiro perdido”. O trecho não foi executado em Clojure."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Clojure — Data Structures",
+            "url": "https://clojure.org/reference/data_structures"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "operation_id",
+                "Pix",
+                "Intenção estável"
+              ],
+              [
+                "event_id + payload",
+                "Adaptador",
+                "Conflito rejeitado"
+              ],
+              [
+                "owner_scope",
+                "Identidade",
+                "Consulta autorizada"
+              ],
+              [
+                "returned_cents",
+                "Financeiro",
+                "Só confirmado"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"operation_id\": \"synthetic-pix-a\",\n  \"event_id\": \"synthetic-return-a\",\n  \"state\": \"refunded\",\n  \"amount_cents\": 30000,\n  \"returned_cents\": 30000,\n  \"owner_scope\": \"authenticated-subject\"\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "O contrato distingue identificador de tentativa, identidade de evento e titular autorizado. operation_id não é uma credencial: conhecer seu valor não autoriza consulta. A versão do schema permite evolução de mensagens sem aceitar silenciosamente estados desconhecidos."
+          },
+          {
+            "type": "p",
+            "text": "A retenção precisa cobrir investigação e repetição legítima, com política aprovada pelo domínio e privacidade. Logs operacionais registrariam correlação mínima; nomes, chaves Pix e extratos não virariam labels de métricas. O recibo é histórico e não deve ser apresentado como saldo atual. Para registros antigos, a migração preservaria as identidades antes de habilitar consumidores novos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_concurrent_refund_replays_once(self):\n        self.apply(\"failed\", \"refund_pending\")\n        barrier = threading.Barrier(4)\n        def retry(_):\n            barrier.wait(timeout=5)\n            return self.apply(\"refund\", \"refunded\")\n        with ThreadPoolExecutor(max_workers=4) as pool:\n            results = list(pool.map(retry, range(4)))\n        self.assertEqual(results.count(True), 1)\n        self.assertEqual(self.bank.read(\"pix-a\", \"owner-a\")[\n            \"returned_cents\"], 30000)\n\n    def test_timeout_is_not_refund_authority(self):\n        for _ in range(10):\n            self.bank.read(\"pix-a\", \"owner-a\")\n        receipt = self.bank.read(\"pix-a\", \"owner-a\")\n        self.assertEqual(receipt[\"state\"], \"pending\")\n        self.assertEqual(receipt[\"returned_cents\"], 0)",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 12 testes executados incluem concorrência de quatro consumidores, repetição, conflito de payload, autorização, dinheiro inválido e reabertura do arquivo. O teste de consulta repetida impede que a aplicação esconda uma decisão financeira dentro de uma leitura. O teste de transição rejeitada confirma que uma identidade de evento não é consumida antes de existir efeito válido."
+          },
+          {
+            "type": "p",
+            "text": "Esses testes não validam mensagens assinadas, falha de energia, disponibilidade de participantes ou capacidade de produção. Antes do piloto, eu acrescentaria reprodução de mensagens reais anonimizadas e teste de recuperação do publicador. A evidência necessária é conservação de identidade e valor, não apenas resposta HTTP 200."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Estado confiável p 95",
+                "Tempo tentativa→confirmação",
+                "7 dias; tipo de falha"
+              ],
+              [
+                "Contatos /1 mil",
+                "Contatos / tentativas elegíveis",
+                "7 dias; versão app"
+              ],
+              [
+                "Repetição indevida",
+                "Ordens duplicadas / tentativas",
+                "Diário; coorte"
+              ],
+              [
+                "Divergência",
+                "Recibos incorretos / auditados",
+                "Diário; estado"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O experimento começaria com consultas em sombra comparadas à fonte financeira, sem mostrar o novo recibo. Depois, uma coorte elegível receberia a explicação; o controle manteria a experiência anterior com o mesmo atendimento disponível. A unidade de análise é a tentativa inconclusiva, evitando contar cada retry como cliente adicional."
+          },
+          {
+            "type": "p",
+            "text": "A coleta combina eventos confirmados e contatos associados por referência restrita, nunca por texto público do cliente. Avaliaria sete dias de acompanhamento por tentativa e cortes por versão do aplicativo e caminho de falha. Qualquer confirmação falsa, acesso cruzado ou Pix duplicado atribuível ao recibo interrompe a expansão. A baseline é desconhecida e precisa ser medida."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "20 mil × 0,05 × R$ 8,00",
+                "R$ 4.000,00",
+                "30,00"
+              ],
+              [
+                "Base",
+                "50 mil × 0,10 × R$ 8,00",
+                "R$ 32.000,00",
+                "3,75"
+              ],
+              [
+                "Ambicioso",
+                "100 mil × 0,15 × R$ 8,00",
+                "R$ 105.000,00",
+                "1,14"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "R$ 300,00 é o principal discutido no relato; não é ganho do banco e não entra no cálculo abaixo. Os cenários assumem, por mês, 20 mil / 50 mil / 100 mil tentativas elegíveis, redução incremental de contatos de 0,05 / 0,10 / 0,15 e custo marginal evitável de R$ 8,00 por contato. O custo operacional adicional assumido é R$ 4.000,00 / R$ 8.000,00 / R$ 15.000,00."
+          },
+          {
+            "type": "p",
+            "text": "A conta é volume × contatos evitados por tentativa × custo marginal menos operação. O investimento assumido de R$ 120.000,00 só tem retorno quando o líquido mensal é positivo. O cenário conservador demonstra que uma ideia útil pode não pagar sua implantação no primeiro ano nessa escala. Capacidade liberada sem redução de despesa deve ser reportada como capacidade, sem substituir o custo marginal por salário médio."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 120.000,00. Resultados anuais líquidos antes da implementação: R$ 48.000,00 / R$ 384.000,00 / R$ 1.260.000,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Líder Pix",
+                "Mapa e amostra conciliada"
+              ],
+              [
+                "16–30 dias",
+                "Staff + identidade",
+                "Contrato; escopo validado"
+              ],
+              [
+                "31–60 dias",
+                "Engenharia + suporte",
+                "Sombra sem divergência"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto",
+                "Piloto; decisão econômica"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O horizonte de 90 dias é uma proposta condicionada à descoberta. O responsável técnico de Pix valida estados e evidências; produto aprova a interpretação; atendimento verifica se consegue explicar o mesmo recibo. O EM coordena dependências e disponibilidade de especialistas, sem assumir autoridade sobre a regra financeira."
+          },
+          {
+            "type": "p",
+            "text": "Não avançaria diretamente de design para uma coorte ampla. O aceite intermediário exige conciliar uma amostra de tentativas e provar que uma resposta perdida pode ser consultada depois. Se a principal causa observada for atraso real de devolução, o trabalho deve incluir o domínio financeiro correspondente; melhorar apenas o texto seria insuficiente. O orçamento pode ser reestimado depois desse diagnóstico."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O rollout começa pelo observador, depois pela consulta autenticada e finalmente pela apresentação. Uma flag pode retirar a nova tela, mas não apagar recibos ou eventos já reconhecidos. Durante rollback, o serviço anterior precisa continuar consultando o registro compatível; versões incompatíveis devem ser bloqueadas antes do tráfego."
+          },
+          {
+            "type": "p",
+            "text": "O plantonista de pagamentos recebe alertas de divergência, enquanto suporte recebe a orientação aprovada para estados desconhecidos. Um exercício injeta evento repetido, atraso de publicação e indisponibilidade da leitura. A ação segura é preservar evidência e encaminhar conciliação, nunca disparar uma nova transferência. Alertas sem dono ou sem procedimento de resolução não atendem ao aceite operacional."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu proporia a fronteira de autoridade, revisaria invariantes e documentaria a decisão entre consultar uma projeção e buscar a fonte financeira. Também facilitaria uma revisão com os times responsáveis para reduzir dependências desnecessárias. A escolha rejeitada é um timer que transforma silêncio em estorno: ele confunde indisponibilidade com decisão financeira e pode contradizer liquidação já ocorrida."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu estruturaria entregas pequenas, capacidade para investigação e uma definição compartilhada de pronto envolvendo suporte e produto. Essas são contribuições propostas, não alegações de que já conduzi essa iniciativa no Nubank. A entrevista pode explorar como eu negociaria uma redução de escopo que preserva correção, mesmo quando um prazo comercial favorece uma solução aparentemente mais rápida."
+          },
+          {
+            "type": "p",
+            "text": "Para a entrevista, eu pediria um exemplo anonimizado de tentativa inconclusiva e explicaria qual decisão tomaria com cada evidência adicional. Esse exercício demonstra capacidade de reduzir ambiguidade antes de escolher tecnologia. Como líder, eu deixaria explícito quem pode autorizar uma mudança no contrato financeiro e quem responde pela mensagem ao cliente. A colaboração evita uma correção local que apenas transfere a dúvida para outro time."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 01 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_01.py -v · 12 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor começa por Receipts.create, confirma a tentativa sintética e acompanha confirm até read. Deve observar que settled é terminal neste fluxo e que uma transferência liquidada exigiria outro processo de devolução. O fixture de 30000 centavos ilustra o valor mencionado, sem reproduzir conta ou extrato real."
+          },
+          {
+            "type": "p",
+            "text": "O handoff entrega código, testes, contrato e perguntas de integração: quem autentica o evento, qual sistema confirma retorno e como a publicação recupera após falha? O próximo investimento depende dessas respostas e de uma baseline de contatos. Se não houver ambiguidade mensurável ou se o custo de conciliação exceder o benefício, encerro o piloto preservando a instrumentação útil."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Replay não duplica valor nem muda conteúdo.",
+              "Nenhum titular consulta recibo alheio.",
+              "Rollback conserva identidades e histórico."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_01.py",
+      "tests": 12,
+      "result": "12 testes passaram",
+      "scope": "SQLite local; sem liquidação externa ou assinatura de eventos."
+    }
+  },
+  {
+    "id": "02",
+    "title": "Pix recebido, saldo desatualizado",
+    "subtitle": "O incidente de 8 de julho como teste de observabilidade.",
+    "technologies": [
+      "flutter",
+      "dart",
+      "java",
+      "postgresql",
+      "prometheus",
+      "python",
+      "clojure"
+    ],
+    "source_url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+    "source_title": "Canaltech — incidente de 08/07/2026",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Incidente histórico normalizado · 08/07/2026",
+            "text": "O Canaltech reproduziu um Pix enviado ao Nubank cujo valor não aparecia no app em 08/07/2026. O teste entre contas Nubank não reproduziu o problema. A matéria registrou aviso de carregamento da conta. O Nubank informou instabilidade temporária e normalização por volta de 11 h 15. Não foram publicados valor transferido, população afetada ou duração exata."
+          },
+          {
+            "type": "p",
+            "text": "A evidência inclui observação própria de uma redação e resposta do banco. Isso é mais específico que uma contagem de menções, mas não substitui telemetria financeira. A fotografia da matéria mostra a página do aplicativo na loja, portanto sua legenda é editorial. Não a apresento como captura do erro. A notícia relaciona relatos no X; esses posts não foram verificados individualmente na origem. O capítulo usa a observação e a normalização informadas, sem estimar prejuízo."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Canaltech — incidente de 08/07/2026",
+            "url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Saldo não exibido permite hipóteses diferentes: leitura indisponível, projeção atrasada, integração interrompida ou crédito ainda não confirmado. Eu começaria pela última confirmação conhecida de cada camada, sem assumir que o ledger falhou. Um Pix entre instituições e outro entre contas internas são sondas diferentes; a amostra publicada não prova exclusividade do impacto externo."
+          },
+          {
+            "type": "p",
+            "text": "A hipótese investigável é que um snapshot antigo permaneceu sem contexto suficiente de validade. O teste exige capturar versão, instante da fonte, instante de consulta e mensagem apresentada. Se a fonte também não confirmou o crédito, o produto deve mostrar desconhecimento, não transformar uma atualização de tela em certeza financeira. O suporte precisa distinguir essas duas situações."
+          },
+          {
+            "type": "p",
+            "text": "A versão de um snapshot deve ser comparável dentro de uma conta e de uma origem definida. Somar versões de componentes diferentes cria uma ordem artificial. Se o resumo combinar múltiplas fontes, a resposta precisa declarar cobertura e idade de cada componente relevante. Eu começaria pelo menor conjunto capaz de explicar o saldo observado, sem transformar este caso em uma reescrita de toda a home. Esse recorte facilita provar correção antes de ampliar a composição."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Pix recebido, saldo desatualizado",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "App de saldo",
+                "detail": "Última atualização visível",
+                "group": "experiência"
+              },
+              {
+                "id": "2",
+                "label": "Consulta autorizada",
+                "detail": "Conta e instante de leitura",
+                "group": "serviço"
+              },
+              {
+                "id": "3",
+                "label": "Fonte financeira",
+                "detail": "Snapshot confirmado",
+                "group": "domínio"
+              },
+              {
+                "id": "4",
+                "label": "Validador de versão",
+                "detail": "Sequência e relógio",
+                "group": "consistência"
+              },
+              {
+                "id": "5",
+                "label": "Projeção de saldo",
+                "detail": "Valor com validade",
+                "group": "persistência"
+              },
+              {
+                "id": "6",
+                "label": "Conciliação",
+                "detail": "Compara com fonte",
+                "group": "operação"
+              },
+              {
+                "id": "7",
+                "label": "Estado da jornada",
+                "detail": "Frescor e incidente",
+                "group": "consulta"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "consulta de conta"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "label": "busca autenticada"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "snapshot recebido"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "versão aceita"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "amostra para comparar"
+              },
+              {
+                "from": "6",
+                "to": "5",
+                "label": "correção confirmada"
+              },
+              {
+                "from": "5",
+                "to": "7",
+                "label": "leitura com validade"
+              },
+              {
+                "from": "7",
+                "to": "1",
+                "label": "estado apresentado"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A fonte financeira permanece autoritativa. O validador aceita versões crescentes e a projeção guarda validade junto ao valor. A conciliação compara uma amostra com a origem e só devolve correções confirmadas."
+          },
+          {
+            "type": "p",
+            "text": "O estado da jornada combina duas informações independentes: frescor daquele saldo e existência de incidente. Encerrar o banner não renova o snapshot. Essa separação evita uma interface verde que transmite confiança sem nova evidência financeira."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def read(self, owner, now):\n        if owner != self.owner:\n            raise PermissionError(\"account scope\")\n        integer(now)\n        with self.lock:\n            snapshot = self.snapshot\n            active_incident = now < self.incident_until\n            if snapshot is None:\n                return {\"state\": \"unknown\", \"balance_cents\": None,\n                        \"incident\": active_incident, \"may_resend\": False}\n            version, cents, observed, valid_until = snapshot\n            if now < observed:\n                return {\"state\": \"unknown\", \"balance_cents\": None,\n                        \"incident\": active_incident, \"may_resend\": False}\n            fresh = now < valid_until\n            return {\"state\": \"fresh\" if fresh else \"stale\",\n                    \"balance_cents\": cents, \"version\": version,\n                    \"as_of\": observed, \"incident\": active_incident,\n                    \"may_resend\": False}",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "BalanceView.read verifica titular e relógio antes de montar a resposta. Sem snapshot, retorna desconhecido com valor ausente; zero seria uma afirmação financeira falsa. Um instante anterior à observação também produz desconhecido. No limite exato de validade, o estado passa a desatualizado."
+          },
+          {
+            "type": "p",
+            "text": "O modelo permite exibir o último valor acompanhado de sua data, mas nunca recomenda reenviar Pix. O lock só protege memória de um processo. Persistência, autenticação e sincronização de relógios precisam ser implementadas fora desse núcleo. Um número inteiro de segundos facilita os testes, sem determinar o formato temporal da API real."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "dart",
+            "code": "String balanceLabel(Map<String, Object?> view) {\n  // Proposed presentation only; never authorizes a transfer.\n  switch (view['state']) {\n    case 'fresh':\n      return 'Confirmed balance';\n    case 'stale':\n      return 'Last known balance — awaiting update';\n    default:\n      return 'Balance currently unavailable';\n  }\n}\nbool mayResendPix(Map<String, Object?> view) => false;",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "No Dart proposto, uma função de apresentação trata unknown, stale e fresh como estados explícitos. O status do incidente é recebido separadamente. A camada visual não calcula saldo nem altera validade; limita-se a traduzir contratos em informação compreensível e acessível."
+          },
+          {
+            "type": "p",
+            "text": "Eu verificaria leitura por tecnologia assistiva, localização do horário e comportamento durante reconexão. Um skeleton infinito pode esconder que existe um saldo anterior; mostrar esse valor sem contexto pode induzir erro. A decisão exige pesquisa de compreensão com tarefas reais. O exemplo não foi compilado, e suas mensagens devem passar pela revisão de produto antes de qualquer uso."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Dart — Switch statements",
+            "url": "https://dart.dev/language/branches"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "source_version",
+                "Fonte",
+                "Crescente por conta"
+              ],
+              [
+                "observed_at",
+                "Financeiro",
+                "Relógio validado"
+              ],
+              [
+                "valid_until",
+                "Contrato",
+                "Expira sem renovar"
+              ],
+              [
+                "incident_until",
+                "Plantão",
+                "Não altera saldo"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"source_version\": 8,\n  \"balance_cents\": 12000,\n  \"observed_at\": 100,\n  \"valid_until\": 120,\n  \"incident_until\": 125,\n  \"state\": \"stale\"\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "A versão pertence à fonte e não ao número de refreshes do cliente. Dois snapshots com a mesma versão e valores diferentes são um conflito que merece investigação. Uma versão mais antiga não substitui a recente; uma versão nova com relógio regressivo também é rejeitada no modelo."
+          },
+          {
+            "type": "p",
+            "text": "A duração de validade deve refletir o contrato do dado e ser configurada pelo responsável financeiro, não escolhida arbitrariamente pela UI. Telemetria registra idade agregada e estado, evitando conta ou valor como rótulos. A conciliação usa acesso restrito para investigar exemplos. A expiração de um aviso de incidente nunca modifica esses contratos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_incident_expiry_does_not_refresh_balance(self):\n        self.view.incident(125, True)\n        result = self.view.read(\"a\", 130)\n        self.assertFalse(result[\"incident\"])\n        self.assertEqual(result[\"state\"], \"stale\")\n        self.assertFalse(result[\"may_resend\"])\n\n    def test_concurrent_versions_keep_newest(self):\n        def publish(version):\n            return self.view.publish(version, version * 100, 110, 140, True)\n        with ThreadPoolExecutor(max_workers=4) as pool:\n            list(pool.map(publish, (5, 2, 4, 3)))\n        self.assertEqual(self.view.read(\"a\", 115)[\"version\"], 5)\n        self.assertEqual(self.view.read(\"a\", 115)[\"balance_cents\"], 500)",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes atacam fronteiras de tempo, conflito de versão, origem não autorizada, conta alheia e publicação concorrente. O teste principal deixa o banner expirar enquanto o saldo permanece antigo. Outro publica versões fora de ordem e exige que a maior sobreviva. Não basta testar se aparece uma mensagem: o resultado precisa manter valor, versão e contexto coerentes."
+          },
+          {
+            "type": "p",
+            "text": "O programa não comprova a qualidade de um relógio distribuído ou a atualização de um sistema externo. Para integração, adicionaria simulação de clock skew, leitura parcial e atraso do canário, além de testes de acessibilidade. Os dados de 12000 centavos são sintéticos e não vêm do relato."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Frescor",
+                "Leituras vencidas / leituras",
+                "15 min; origem"
+              ],
+              [
+                "Detecção",
+                "Tempo falha→alerta",
+                "Incidente; caminho"
+              ],
+              [
+                "Compreensão",
+                "Tarefas corretas / tarefas",
+                "Pesquisa; estado"
+              ],
+              [
+                "Contatos",
+                "Contatos / sessões expostas",
+                "24 h; gravidade"
+              ],
+              [
+                "Falso atual",
+                "Rótulos errados / auditados",
+                "Contínuo; versão"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A coleta deve separar disponibilidade, correção e frescor. Um endpoint rápido pode devolver dado velho; um canário saudável não representa todos os bancos de origem. Eu segmentaria por caminho de recebimento e versão do app, usando volumes agregados e uma janela móvel de 15 minutos para operação."
+          },
+          {
+            "type": "p",
+            "text": "O experimento de comunicação precisa comparar episódios ou coortes equivalentes, pois incidentes diferem em intensidade. A hipótese é reduzir contatos e repetições sem esconder incerteza. A investigação para quando surgir saldo rotulado como atual sem evidência válida, divergência de valor ou orientação de repetição insegura. Não definiria um objetivo de latência antes de medir o caminho existente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "2 × 20 mil × 0,01",
+                "R$ -2.200,00",
+                "Não há"
+              ],
+              [
+                "Base",
+                "3 × 40 mil × 0,02",
+                "R$ 8.800,00",
+                "17,05"
+              ],
+              [
+                "Ambicioso",
+                "4 × 60 mil × 0,03",
+                "R$ 38.400,00",
+                "3,91"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O custo modelado é de acompanhamento de incidentes, não de dinheiro supostamente perdido. Assumo por mês 2 / 3 / 4 episódios comparáveis, 20 mil / 40 mil / 60 mil sessões por episódio e queda incremental de contato de 0,01 / 0,02 / 0,03. Cada contato evitável custa hipoteticamente R$ 7,00; canários e operação acrescentam R$ 5.000,00 / R$ 8.000,00 / R$ 12.000,00 por mês."
+          },
+          {
+            "type": "p",
+            "text": "Multiplico episódios × sessões × diferença de contato × custo e desconto a operação. O investimento hipotético é R$ 150.000,00. Esses volumes não são estimativas da ocorrência de julho: são entradas de sensibilidade. Se o incidente futuro tiver outra gravidade, os resultados não podem ser transportados automaticamente. A mesma sessão não deve entrar simultaneamente neste caso e no caso 01 para somar benefícios."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 150.000,00. Resultados anuais líquidos antes da implementação: R$ -26.400,00 / R$ 105.600,00 / R$ 460.800,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Financeiro + SRE",
+                "Semântica e sondas"
+              ],
+              [
+                "16–30 dias",
+                "Staff + mobile",
+                "Contrato e sombra"
+              ],
+              [
+                "31–60 dias",
+                "Produto + suporte",
+                "Compreensão validada"
+              ],
+              [
+                "61–90 dias",
+                "EM + plantão",
+                "Piloto e exercício"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Nas primeiras semanas, engenharia financeira e confiabilidade definem o que cada fonte confirma. Produto e atendimento acordam mensagens para ausência, atraso e recuperação. O responsável por canários valida que as sondas não criam transações não autorizadas e que um teste não congestiona o caminho real."
+          },
+          {
+            "type": "p",
+            "text": "O marco seguinte é uma comparação invisível entre rótulos calculados e evidência. Somente depois vem a interface em pequena coorte. O EM coordena revisão e escala de plantão; o Staff resolve contratos entre fonte, projeção e cliente. Se não for possível medir frescor com confiança, o lançamento fica restrito à informação de indisponibilidade, sem simular precisão."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O runbook separa falha de consulta de confirmação financeira ausente. Se o observador perde conexão, não deve publicar que todos os Pix falharam. Um incidente tem dono, escopo, versão e expiração; uma atualização de normalização precisa ser rastreável ao responsável."
+          },
+          {
+            "type": "p",
+            "text": "No exercício de falha, congelo a projeção, faço o banner expirar e restauro apenas a API. A UI deve continuar reconhecendo o dado antigo. O rollback retira mensagens novas mas preserva snapshots e instrumentação. O suporte recebe uma resposta consistente com a visão técnica e não é orientado a confirmar crédito que o sistema ainda não confirmou."
+          },
+          {
+            "type": "p",
+            "text": "Limite do laboratório: os avisos de incidente não têm versão; um aviso antigo pode substituir um novo. Isso não renova o saldo. A ordenação dos avisos faz parte da integração proposta, ainda não implementada no exemplo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Minha contribuição Staff seria tornar explícita a semântica de validade e revisar como o cliente recebe uma resposta composta. Eu rejeitaria um único booleano “sistema normal”: ele mistura saúde global, disponibilidade local e correção de uma conta. Uma representação mais expressiva exige cuidado de produto, mas permite explicar limites sem inventar certeza."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, conduziria uma entrega que reúne confiabilidade, pagamentos, mobile e atendimento com responsáveis definidos. A decisão de parar pode ser valiosa: um banner que aumenta dúvidas ou gera confirmações falsas não merece expansão mesmo que reduza chamadas. Eu apresentaria evidências e alternativas ao time, respeitando decisões e conhecimento da stack existente."
+          },
+          {
+            "type": "p",
+            "text": "Uma boa decisão Staff também explicita o que o observador não sabe. Eu discutiria com produto a diferença entre afirmar indisponibilidade e afirmar que uma operação não ocorreu. Como EM, protegeria tempo de análise pós-incidente e revisaria a utilidade dos alertas com quem recebe o plantão. Essa rotina reduz o incentivo de publicar rapidamente um estado verde sem evidência suficiente apenas para encerrar o incidente administrativo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 02 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_02.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor executa o laboratório, chama publish com versões diferentes e observa read no limite da validade. Depois encerra o incidente sem atualizar o saldo. Esse percurso demonstra a separação central sem depender de uma infraestrutura real."
+          },
+          {
+            "type": "p",
+            "text": "O pacote de integração deve responder quem emite a versão, como o tempo é obtido, qual é o orçamento de atraso e quem confirma normalização. Antes de expandir, exigir amostra auditada, teste com tecnologia assistiva e capacidade de conciliar snapshots divergentes. Se esses pontos não tiverem proprietário, a decisão é manter a instrumentação em sombra e resolver a responsabilidade antes da exposição ao cliente."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Banner expirado não renova dados.",
+              "Saldo desconhecido não aparece como zero.",
+              "Versão conflitante gera investigação."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_02.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Projeção em memória; nenhuma escrita financeira."
+    }
+  },
+  {
+    "id": "03",
+    "title": "Restrição de conta: revisão e saída",
+    "subtitle": "Evidência, responsável e reconciliação antes de liberar.",
+    "technologies": [
+      "java",
+      "kafka",
+      "postgresql",
+      "aws",
+      "flutter",
+      "python"
+    ],
+    "source_url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+    "source_title": "Metrópoles — bloqueio e desfecho relatado",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Desfecho relatado pela imprensa · março de 2026",
+            "text": "O Metrópoles relatou bloqueio superior a R$ 2.000.000,00 de um centro de estética, iniciado em 20/01/2026 e seguido de encerramento da conta. A reportagem atribui à defesa a origem tributária e relata ordem judicial. O Nubank mencionou segurança e compliance e não comentou detalhes por sigilo. No vídeo de 11/03, a repórter disse que o dinheiro foi transferido para outro banco. Autos e cumprimento não foram verificados independentemente."
+          },
+          {
+            "type": "p",
+            "text": "O artigo e a transcrição têm contribuições diferentes. O primeiro descreve a controvérsia; a transcrição de 06:59–07:23 acrescenta o desfecho segundo a repórter. Não afirmo que assisti integralmente ao vídeo nem que consultei os autos. A proposta não trata a retenção como atual. Também não transporta indenizações de outros clientes citados na matéria para este episódio. O caso orienta desenho de revisão, explicação e saída, com controles proporcionais à autoridade de cada decisão."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Metrópoles — bloqueio e desfecho relatado",
+            "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro"
+          },
+          {
+            "title": "Metrópoles — desfecho relatado, 06:59–07:23",
+            "url": "https://www.youtube.com/watch?v=f6zCNrN1T8Y&t=419s"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A pergunta técnica é se uma restrição continua ligada a fundamento, evidência, responsável e próxima revisão ao atravessar atendimento, risco e encerramento. Isso não determina se uma suspeita específica era válida. Uma hipótese verificável é a perda de contexto entre o bloqueio inicial e a execução de uma saída autorizada."
+          },
+          {
+            "type": "p",
+            "text": "Eu amostraria casos por tipo de medida e reconstruiria mudanças de estado com responsáveis. Compararia a data da decisão com a instrução efetiva de transferência, distinguindo espera por documentos, restrição legal ativa e fila operacional. A fonte jornalística não fornece essa decomposição. Não usaria um prazo universal de 72 horas: a regra depende do fundamento aplicável e deve ser validada pelo jurídico."
+          },
+          {
+            "type": "p",
+            "text": "Um documento enviado pela empresa pode ser relevante sem ser conclusivo. O sistema precisa registrar que foi recebido, quem avaliou e qual decisão autorizada decorreu dele, sem automatizar a conclusão jurídica pela presença de um arquivo. Eu investigaria também handoffs entre áreas: uma tarefa concluída por atendimento não necessariamente encerra revisão de risco. A distinção entre estado de trabalho e estado da restrição evita indicadores de produtividade que escondem casos ainda sem solução operacional."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Restrição de conta: revisão e saída",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "Mudança de restrição",
+                "detail": "Escopo e versão",
+                "group": "domínio"
+              },
+              {
+                "id": "2",
+                "label": "Fila de revisão",
+                "detail": "Evento rastreável",
+                "group": "integração"
+              },
+              {
+                "id": "3",
+                "label": "Política aplicável",
+                "detail": "Fundamento e autoridade",
+                "group": "governança"
+              },
+              {
+                "id": "4",
+                "label": "Revisor autorizado",
+                "detail": "Evidência e decisão",
+                "group": "controle"
+              },
+              {
+                "id": "5",
+                "label": "Executor de saída",
+                "detail": "Saldo e titularidade",
+                "group": "financeiro"
+              },
+              {
+                "id": "6",
+                "label": "Acompanhamento",
+                "detail": "Estado permitido ao cliente",
+                "group": "experiência"
+              },
+              {
+                "id": "7",
+                "label": "Trilha de auditoria",
+                "detail": "Decisão e comunicação",
+                "group": "persistência"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "encaminha revisão"
+              },
+              {
+                "from": "2",
+                "to": "4",
+                "label": "caso e evidências"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "regra vigente"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "instrução elegível"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "resultado confirmado"
+              },
+              {
+                "from": "4",
+                "to": "7",
+                "label": "fundamento registrado"
+              },
+              {
+                "from": "6",
+                "to": "7",
+                "label": "comunicação registrada"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A revisão recebe eventos e consulta a política vigente. Uma decisão elegível vai para execução financeira; a trilha conserva fundamento e comunicação. O cliente recebe somente o estado cuja exposição foi aprovada, sem limiares antifraude ou dados de terceiros."
+          },
+          {
+            "type": "p",
+            "text": "O desenho separa revisão de execução. Aprovar uma saída não comprova que o saldo foi transferido. A confirmação depende de conciliação, destino autorizado e ausência de impedimentos ativos, verificados novamente na fronteira de execução."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def execute_exit(self, expected, role, destination_owner,\n                     reconciled_cents, no_active_hold=False):\n        with self.lock:\n            if role != \"executor\":\n                raise PermissionError(\"execution scope\")\n            if type(expected) is not int or expected != self.version:\n                raise ValueError(\"stale execution\")\n            if self.state != \"exit_approved\":\n                raise ValueError(\"review required\")\n            if (not isinstance(destination_owner, str)\n                    or not destination_owner.strip()\n                    or destination_owner != self.owner):\n                raise PermissionError(\"destination ownership\")\n            if type(reconciled_cents) is not int:\n                raise ValueError(\"integer cents required\")\n            if reconciled_cents != self.cents:\n                raise ValueError(\"reconcile before transfer\")\n            if no_active_hold is not True:\n                raise ValueError(\"legal and risk holds unresolved\")\n            self.state = \"transferred\"\n            self.released = self.cents\n            self.version += 1\n            return self.released",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "Restriction.execute_exit exige papel de executor, versão esperada, titularidade do destino, saldo conciliado e liberação explícita dos impedimentos. Cada rejeição preserva a aprovação anterior sem transferir valor. O relógio de revisão não participa da autorização: vencer a data cria trabalho pendente, não direito técnico de movimentar recursos."
+          },
+          {
+            "type": "p",
+            "text": "O valor sintético de 200000100 centavos é apenas uma fixture acima de R$ 2.000.000,00, não a quantia exata do caso. O modelo usa lock em memória e não executa pagamentos. Uma integração real precisaria de controle transacional durável, identidade do operador e confirmação da transferência por um domínio financeiro autorizado."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "sql",
+            "code": "-- Illustrative compare-and-write; not executed.\nUPDATE restriction_case\nSET state = 'exit_approved', version = version + 1,\n    decision_ref = :approved_decision\nWHERE case_id = :case_id\n  AND version = :expected_version\n  AND state = 'restricted'\n  AND reconciliation_version = :confirmed_version;\n-- Require exactly one row; otherwise reload and review.\n-- Transfer execution is a separate authorized transaction.",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O SQL ilustrativo condiciona uma atualização à versão, ao estado e à confirmação de conciliação. Ele demonstra a ideia de comparar e gravar, mas não implementa sozinho segregação de funções ou avaliação jurídica. O serviço precisa verificar identidade e política antes da transação e tratar uma atualização de zero linhas como conflito."
+          },
+          {
+            "type": "p",
+            "text": "Eu favoreceria uma integração com o registro de restrições existente em vez de criar um segundo centro de decisão. Uma fila pode distribuir trabalho; não pode decidir que um caso é elegível porque ficou velho. O esquema de permissões deve separar quem revisa, quem executa e quem audita, com caminhos excepcionais documentados e revisados."
+          }
+        ],
+        "sources": [
+          {
+            "title": "PostgreSQL — Transaction Isolation",
+            "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "restriction_scope",
+                "Risco/jurídico",
+                "Fundamento específico"
+              ],
+              [
+                "decision_version",
+                "Revisor",
+                "Conflito invalida"
+              ],
+              [
+                "evidence_ref",
+                "Custódia",
+                "Acesso restrito"
+              ],
+              [
+                "exit_instruction",
+                "Financeiro",
+                "Revalida impedimentos"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"case_id\": \"synthetic-restriction\",\n  \"restriction_scope\": \"account_exit\",\n  \"decision_version\": 2,\n  \"evidence_ref\": \"restricted-object-reference\",\n  \"state\": \"exit_approved\",\n  \"execution_confirmed\": false\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "Uma restrição não deve ser um booleano sem contexto. O contrato precisa representar escopo, fundamento, versão e referência de evidência, mantendo documentos sensíveis fora de eventos amplamente distribuídos. A referência pode ser auditável sem expor o conteúdo ao atendimento geral."
+          },
+          {
+            "type": "p",
+            "text": "A instrução de saída guarda a decisão que a autorizou, mas revalida impedimentos antes de executar. Um novo bloqueio entre revisão e transferência invalida a versão anterior. Para comunicação, a redação aprovada explica a etapa e o canal permitido de contestação sem revelar sinais de detecção. Retenção e acesso aos autos ou documentos seguem políticas específicas, não padrões genéricos de logging."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_overdue_review_does_not_release_money(self):\n        self.assertTrue(self.case.due(999))\n        self.assertEqual(self.case.state, \"restricted\")\n        self.assertEqual(self.case.released, 0)\n\n    def test_reconciliation_failure_preserves_approval(self):\n        self.approve()\n        with self.assertRaises(ValueError):\n            self.execute(reconciled_cents=1)\n        self.assertEqual(self.case.state, \"exit_approved\")\n        self.assertEqual(self.case.released, 0)\n        self.assertEqual(self.execute(), 200000100)",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes mostram que revisão vencida não libera dinheiro, que conciliação divergente impede execução e que um revisor não ocupa automaticamente o papel de executor. Também testam destino alheio, evidência ausente, versão antiga, repetição e valores inválidos. Uma segunda execução não pode aumentar o total transferido."
+          },
+          {
+            "type": "p",
+            "text": "A suíte não valida a correção jurídica de uma política nem a autenticidade de documentos. O próximo nível exigiria testes de integração de papéis e simulação de uma nova restrição chegando entre aprovação e envio. O objetivo é provar que nenhuma simplificação operacional cria liberação indevida, mantendo um caminho auditável para os casos elegíveis."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Idade p 95",
+                "Tempo por caso aberto",
+                "Diário; fundamento"
+              ],
+              [
+                "Sem dono",
+                "Casos sem dono / ativos",
+                "Diário; categoria"
+              ],
+              [
+                "Saída confirmada",
+                "Tempo aprovação→execução",
+                "Semanal; impedimento"
+              ],
+              [
+                "Falha de controle",
+                "Falhas / execuções auditadas",
+                "Contínuo; versão"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A idade da fila deve ser segmentada pelo fundamento; misturar uma pendência documental e uma ordem judicial pode ocultar prioridades distintas. O painel mede itens sem proprietário ou revisão definida e acompanha o intervalo de aprovação até execução confirmada. Dados de casos individuais permanecem restritos."
+          },
+          {
+            "type": "p",
+            "text": "Eu compararia coortes equivalentes por categoria e complexidade, mantendo revisão humana disponível. A redução de contatos só é favorável se não vier de um canal que impede contestação. Liberação indevida, exposição de sinais ou execução sem conciliação interrompem o piloto imediatamente. Baselines e limites operacionais devem ser definidos com risco, jurídico e operação, não inferidos do valor da reportagem."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "1 mil × 10 min × 25%",
+                "R$ -1.250,00",
+                "Não há"
+              ],
+              [
+                "Base",
+                "2,5 mil × 15 min × 40%",
+                "R$ 12.500,00",
+                "14,40"
+              ],
+              [
+                "Ambicioso",
+                "4 mil × 20 min × 50%",
+                "R$ 42.000,00",
+                "4,29"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O cálculo não usa o saldo retido como benefício. Assumo 1.000 / 2.500 / 4.000 revisões mensais, economia de 10 / 15 / 20 minutos por revisão e custo de R$ 90,00 por hora. Apenas 25% / 40% / 50% da capacidade liberada é assumida como despesa efetivamente evitável. Desconto operação mensal de R$ 5.000,00 / R$ 10.000,00 / R$ 18.000,00 e um investimento hipotético de R$ 180.000,00."
+          },
+          {
+            "type": "p",
+            "text": "A fórmula é casos × minutos / 60 × custo / hora × fração realizável menos operação. Essa fração deve ser demonstrada por alteração concreta de gasto; se não existir, o benefício financeiro correspondente é zero, mesmo que a fila melhore. Não acrescento indenizações evitadas: não há probabilidade ou custo causal verificáveis para sustentá-las."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 180.000,00. Resultados anuais líquidos antes da implementação: R$ -15.000,00 / R$ 150.000,00 / R$ 504.000,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Jurídico + risco",
+                "Taxonomia aprovada"
+              ],
+              [
+                "16–30 dias",
+                "Staff + operações",
+                "Papéis e evidência"
+              ],
+              [
+                "31–60 dias",
+                "Engenharia financeira",
+                "Sombra conciliada"
+              ],
+              [
+                "61–90 dias",
+                "EM + governança",
+                "Piloto restrito; revisão"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O planejamento começa pela taxonomia de medidas e pela identificação dos responsáveis legais e operacionais. A arquitetura vem depois de entender onde termina a autoridade de cada time. Um caso encerrado precisa de um caminho de saída tão explícito quanto o caminho que criou a restrição."
+          },
+          {
+            "type": "p",
+            "text": "O Staff coordena contratos e pontos de revalidação; o EM garante capacidade de jurídico, risco e atendimento nos marcos de aceite. A fase em sombra deve reproduzir decisões já tomadas sem executá-las. Se surgirem fundamentos sem regra aprovada ou sem proprietário, esses casos ficam fora do piloto até resolução. O horizonte é proposto, não compromisso assumido pelo Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O canário inicial acompanha poucos tipos de restrição e não automatiza a decisão substantiva. Alertas de revisão vencida vão ao responsável da categoria; alertas de execução divergente vão ao domínio financeiro. O cliente recebe informação de etapa, não uma promessa de liberação por calendário."
+          },
+          {
+            "type": "p",
+            "text": "O exercício operacional inclui nova ordem restritiva após aprovação, troca de titularidade do destino e falha depois de enviar a instrução. Neste último caso, consultar e conciliar precedem qualquer reenvio. Rollback congela novas execuções pela versão nova e preserva auditoria. Uma fila mais rápida que perde fundamento, evidência ou possibilidade de recurso é um resultado inaceitável."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu ajudaria a transformar estados implícitos em um protocolo que permite contestar, revisar e executar com rastreabilidade. A alternativa rejeitada é desbloquear automaticamente ao vencer um timer. Ela parece resolver demora, mas ignora impedimentos e mistura prazo de trabalho com autoridade financeira."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu organizaria a colaboração entre especialistas sem prometer que engenharia pode decidir sozinha uma questão regulatória. Isso inclui capacidade para revisão, treinamento do suporte e critérios de interrupção que tenham respaldo dos responsáveis. Minha proposta de valor é aproximar qualidade técnica e responsabilidade operacional, não apresentar como experiência passada uma iniciativa que estou propondo externamente."
+          },
+          {
+            "type": "p",
+            "text": "Na avaliação de liderança, eu explicaria como lidar com uma divergência entre urgência do cliente e uma restrição que permanece válida. O caminho não é escolher entre empatia e controle: é oferecer informação permitida, revisão responsável e execução correta quando autorizada. Eu pediria que a equipe discutisse um caso limite e registrasse a decisão, incluindo a razão de não automatizar determinada etapa. Isso torna o projeto revisável por especialistas além da engenharia."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 03 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_03.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor acompanha due, decide e execute_exit nessa ordem, notando que a primeira função não altera dinheiro. Depois injeta saldo divergente e confirma que a aprovação continua disponível para uma execução posterior correta. O laboratório é uma demonstração de controle, não uma recomendação jurídica nem um sistema de encerramento bancário."
+          },
+          {
+            "type": "p",
+            "text": "Para prosseguir, o domínio precisa fornecer taxonomia válida, identidade dos operadores, confirmação de titularidade e fonte de conciliação. A decisão de investimento depende do volume elegível e de despesa realmente evitável. Se esses contratos não puderem ser estabelecidos, a entrega deve ficar no acompanhamento e na qualidade da fila, preservando execução existente."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Timer não autoriza transferência.",
+              "Nova restrição invalida aprovação antiga.",
+              "Auditoria conserva decisão e execução distintas."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_03.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Controle de revisão em memória; nenhuma transferência real."
+    }
+  },
+  {
+    "id": "04",
+    "title": "Câmera quebrada, recuperação segura",
+    "subtitle": "Uma alternativa assistida sem remover controles de identidade.",
+    "technologies": [
+      "flutter",
+      "dart",
+      "java",
+      "aws",
+      "postgresql",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+    "source_title": "Reclame AQUI — relato e resposta pública",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Resolvido · RA 230743513",
+            "text": "Em 31/10/2025, um consumidor relatou não conseguir entrar na conta porque a autorização facial dependia de uma câmera quebrada. Em 03/11, o Nubank informou que recebeu uma selfie com código, validou o dispositivo internamente e liberou as funções. O consumidor marcou o problema como resolvido. A fonte não informa duração exata, valor indisponível ou como a foto alternativa foi capturada."
+          },
+          {
+            "type": "p",
+            "text": "Este caso não prova erro de reconhecimento facial. A barreira descrita é incapacidade física de capturar uma imagem, e a resposta mostra que já existia uma solução assistida. A proposta melhora descoberta, encaminhamento e acompanhamento dessa alternativa, sem alegar que o Nubank a desconhecia. Não há foto biométrica pública a reproduzir; a captura documenta a reclamação e sua resolução. A discussão técnica começa no momento em que repetir a mesma instrução deixa de ser uma ação útil."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — relato e resposta pública",
+            "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Permissão negada, câmera indisponível e identidade não confirmada são motivos distintos. Misturá-los numa mensagem genérica cria tentativas que não alteram a capacidade do dispositivo. A hipótese é que diagnosticar o impedimento antes da captura reduz encaminhamentos repetidos, mantendo a mesma exigência de identidade."
+          },
+          {
+            "type": "p",
+            "text": "Eu investigaria a sequência de erros locais, tentativas e contatos por jornada, sem registrar imagens em analytics. Uma amostra de recuperação assistida permitiria identificar onde a pessoa abandona ou reinicia o processo. Se o encaminhamento já for claro e a espera estiver na análise especializada, a prioridade muda para capacidade e qualidade da revisão. O relato sozinho não mede essa distribuição."
+          },
+          {
+            "type": "p",
+            "text": "O diagnóstico local deve ser tratado como sinal não confiável. Um cliente adulterado pode declarar câmera ausente; por isso, esse resultado apenas escolhe uma rota de orientação e nunca reduz a exigência de identidade. Eu verificaria ainda se a alternativa é utilizável por quem não dispõe de outro aparelho, mantendo essa limitação explícita em pesquisa. O caso resolvido não informa qual recurso permitiu a captura alternativa, então não posso supor que todas as pessoas tenham a mesma opção."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Câmera quebrada, recuperação segura",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "Política de identidade",
+                "detail": "Alternativas e revogação",
+                "group": "autoridade"
+              },
+              {
+                "id": "2",
+                "label": "Titular em recuperação",
+                "detail": "Câmera indisponível",
+                "group": "pessoa"
+              },
+              {
+                "id": "3",
+                "label": "Coleta assistida",
+                "detail": "Desafio e evidência",
+                "group": "integração"
+              },
+              {
+                "id": "4",
+                "label": "Revisão de identidade",
+                "detail": "Decisão autenticada",
+                "group": "controle"
+              },
+              {
+                "id": "5",
+                "label": "Registro do desafio",
+                "detail": "Dispositivo e validade",
+                "group": "persistência"
+              },
+              {
+                "id": "6",
+                "label": "Autorizador",
+                "detail": "Consumo de uso único",
+                "group": "segurança"
+              },
+              {
+                "id": "7",
+                "label": "App recuperado",
+                "detail": "Acesso confirmado",
+                "group": "experiência"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "3",
+                "label": "autoriza alternativa"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "label": "envio protegido"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "evidência restrita"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "decisão versionada"
+              },
+              {
+                "from": "1",
+                "to": "5",
+                "label": "revoga desafio"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "aprovação vinculada"
+              },
+              {
+                "from": "6",
+                "to": "7",
+                "label": "sessão autorizada"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A pessoa fornece evidência por canal protegido, enquanto a política autoriza quais alternativas são aceitáveis. A revisão gera uma decisão vinculada ao desafio e ao dispositivo pretendido. A política também pode revogar o registro antes do consumo."
+          },
+          {
+            "type": "p",
+            "text": "O autorizador não interpreta foto nem mensagem de suporte: consome uma aprovação válida uma única vez. A interface só declara recuperação após confirmação do autorizador. Pessoas e revisores são papéis, não componentes de software com logotipo."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def authorize(self, owner, device, challenge, now):\n        with self.lock:\n            if owner != self.owner or device != self.device:\n                raise PermissionError(\"recovery binding\")\n            if type(now) is not int or now < 0:\n                raise ValueError(\"invalid clock\")\n            if now >= self.expires_at:\n                raise ValueError(\"challenge expired\")\n            if challenge != self.challenge:\n                raise PermissionError(\"challenge mismatch\")\n            if self.state != \"approved\" or not self.evidence:\n                raise ValueError(\"review required or challenge consumed\")\n            self.state = \"authorized\"\n            self.challenge = None\n            return {\"device\": self.device, \"authorized\": True}",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "Recovery.authorize exige vínculo com titular, aparelho e desafio, além de prazo válido e aprovação anterior. Ao concluir, consome o desafio e impede reutilização. A invalidação ocorre sob o mesmo lock que verifica as condições, evitando que duas chamadas concorrentes autorizem pela mesma evidência local."
+          },
+          {
+            "type": "p",
+            "text": "O código não reconhece rostos nem decide se uma pessoa é legítima. review recebe uma decisão de identidade já validada por um adaptador confiável no modelo. Essa limitação é central: testar uma máquina de estados não equivale a provar segurança biométrica. Em produção, a evidência, o operador e a sessão precisam de autenticação e persistência apropriadas."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "dart",
+            "code": "String nextStep(String capability, String verification) {\n  // Proposed copy routing; never grants account access.\n  if (capability == 'camera_unavailable') {\n    return 'Open the approved assisted recovery path';\n  }\n  if (capability == 'permission_denied') {\n    return 'Review camera permission instructions';\n  }\n  if (verification == 'not_confirmed') {\n    return 'Follow the identity review instructions';\n  }\n  return 'Continue the approved capture flow';\n}",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O Dart ilustrativo separa incapacidade de hardware de falha na verificação. A experiência deve explicar a próxima ação possível sem recomendar atalhos que removem controles. Uma pessoa sem câmera funcional pode precisar de canal assistido ou outro meio aprovado, cuja elegibilidade pertence à política de identidade."
+          },
+          {
+            "type": "p",
+            "text": "Eu revisaria acessibilidade desde a primeira tela: foco previsível, instruções faladas e preservação do progresso após interrupção. A alternativa não deve obrigar a pessoa a descobrir um contato por tentativa e erro. O trecho não foi compilado e não aciona permissões reais; a integração requer testes em aparelhos representativos e revisão com segurança."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Dart — Branches",
+            "url": "https://dart.dev/language/branches"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "challenge_id",
+                "Identidade",
+                "Uso único"
+              ],
+              [
+                "device_binding",
+                "Autorizador",
+                "Contexto imutável"
+              ],
+              [
+                "evidence_ref",
+                "Revisão",
+                "Sem biometria no log"
+              ],
+              [
+                "expires_at",
+                "Política",
+                "Limite exclusivo"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"challenge_id\": \"synthetic-one-use\",\n  \"device_binding\": \"synthetic-device\",\n  \"evidence_ref\": \"restricted-reference\",\n  \"expires_at\": 100,\n  \"state\": \"approved\",\n  \"authorized\": false\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "O desafio precisa de identificador, validade, dispositivo pretendido e referência à decisão. O contrato não carrega selfie ou documento para a UI geral: transmite o estado mínimo necessário. Uma revogação deve prevalecer sobre uma autorização ainda não consumida, e a consulta deve refletir isso sem reiniciar silenciosamente o caso."
+          },
+          {
+            "type": "p",
+            "text": "A política de retenção distingue material biométrico, decisão de revisão e logs operacionais. Cada categoria exige acesso e prazo apropriados. Não faria do armazenamento de evidências um arquivo permanente por conveniência técnica. A titularidade vem da sessão verificada; não pode ser escolhida pelo corpo de uma requisição pública, mesmo que o laboratório receba strings diretamente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_parallel_authorization_consumes_once(self):\n        self.approve()\n        def attempt(_):\n            try:\n                return self.auth()[\"authorized\"]\n            except (ValueError, PermissionError):\n                return False\n        with ThreadPoolExecutor(max_workers=4) as pool:\n            result = list(pool.map(attempt, range(4)))\n        self.assertEqual(result.count(True), 1)\n\n    def test_camera_problem_is_not_identity_proof(self):\n        with self.assertRaises(ValueError):\n            self.auth()\n        self.assertEqual(self.r.state, \"collecting\")",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes verificam uso único sob concorrência, expiração exata, aparelho diferente, titular incorreto, revogação, decisão sem evidência e valores booleanos enganosos. O teste mais importante confirma que declarar problema na câmera não autoriza nada. Outro mostra que uma tentativa com desafio errado não transforma a seguinte em sucesso sem revisão."
+          },
+          {
+            "type": "p",
+            "text": "Faltam testes reais de captura, prova de vida, acessibilidade e armazenamento. Eles pertencem a camadas diferentes e exigem critérios próprios. Eu adicionaria exercícios de interrupção de rede e troca de aparelho durante a recuperação, sempre verificando que a decisão aprovada continua vinculada ao contexto correto e não migra para outro dispositivo."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Conclusão legítima",
+                "Recuperações válidas / elegíveis",
+                "7 dias; impedimento"
+              ],
+              [
+                "Repetição inútil",
+                "Tentativas sem mudança / jornadas",
+                "Sessão; aparelho"
+              ],
+              [
+                "Fila p 95",
+                "Tempo até revisão",
+                "Diário; alternativa"
+              ],
+              [
+                "Tomada de conta",
+                "Casos confirmados / recuperações",
+                "Janela de risco; coorte"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Conclusão legítima e apropriação de conta precisam ser lidas juntas. Uma melhoria de conversão que autoriza pessoas indevidas é uma regressão, mesmo que o atendimento diminua. A coleta segmenta impedimento físico, permissão e revisão, evitando usar biometria bruta como dimensão analítica."
+          },
+          {
+            "type": "p",
+            "text": "O piloto mantém uma coorte comparável de jornadas elegíveis e observa recontatos por sete dias, além de sinais de fraude na janela definida pelo time de identidade. Testes de compreensão incluem pessoas com limitações de captura. Qualquer aumento confirmado de autorização indevida interrompe a expansão; um aumento de tempo de revisão também exige examinar se o fluxo apenas deslocou trabalho para especialistas."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "3 mil; 0,2 contato; 10% revisão",
+                "R$ -3.000,00",
+                "Não há"
+              ],
+              [
+                "Base",
+                "8 mil; 0,4 contato; 8% revisão",
+                "R$ 11.280,00",
+                "9,75"
+              ],
+              [
+                "Ambicioso",
+                "15 mil; 0,6 contato; 5% revisão",
+                "R$ 57.500,00",
+                "1,91"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Assumo 3.000 / 8.000 / 15.000 recuperações mensais, 0,2 / 0,4 / 0,6 contato evitado por jornada e R$ 9,00 por contato. A alternativa pode aumentar revisão: assumo 0,10 / 0,08 / 0,05 revisão adicional por jornada a R$ 18,00. Operação acrescenta R$ 3.000,00 / R$ 6.000,00 / R$ 10.000,00 mensais, com implantação hipotética de R$ 110.000,00."
+          },
+          {
+            "type": "p",
+            "text": "A fórmula desconta a revisão adicional antes da operação. Assim, encaminhar melhor não é automaticamente mais barato. A análise não usa saldo do cliente, pois nenhum foi publicado. Fraude residual deve ser medida como guardrail e incluída no orçamento se houver diferença atribuível; não assumi benefício antifraude inexistente. Capacidade de atendimento só vira economia de caixa quando reduz gasto realizável."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 110.000,00. Resultados anuais líquidos antes da implementação: R$ -36.000,00 / R$ 135.360,00 / R$ 690.000,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Identidade + acessibilidade",
+                "Alternativas aprovadas"
+              ],
+              [
+                "16–30 dias",
+                "Mobile + privacidade",
+                "Motivos sem biometria"
+              ],
+              [
+                "31–60 dias",
+                "Staff + revisão",
+                "Vínculo e revogação"
+              ],
+              [
+                "61–90 dias",
+                "EM + suporte",
+                "Piloto com capacidade"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O primeiro marco alinha identidade, mobile e acessibilidade sobre as alternativas já disponíveis. O segundo instrumenta motivos de impedimento sem coletar material sensível. O terceiro constrói retomada e acompanhamento em ambiente controlado. Só depois o piloto mede se a pessoa chega ao canal correto com menos repetição."
+          },
+          {
+            "type": "p",
+            "text": "O EM precisa reservar capacidade de revisão humana antes de aumentar entrada. O Staff define contratos de vinculação e revogação com os responsáveis pelos dispositivos. Uma taxa de encaminhamento maior sem capacidade de atendimento pode piorar espera; por isso, o aceite envolve fila e qualidade, não apenas telas entregues. O prazo proposto pode mudar após descoberta."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O rollout não começa desabilitando reconhecimento facial. Começa tornando uma alternativa aprovada encontrável e acompanhável. O plantão de identidade recebe alertas de uso repetido, contexto divergente e falhas de consumo; atendimento recebe orientação para não solicitar material por canais improvisados."
+          },
+          {
+            "type": "p",
+            "text": "Os exercícios incluem desafio expirado durante análise, revogação pelo titular e aprovação seguida de perda de conexão. A retomada consulta o estado existente antes de abrir outro caso. Rollback preserva decisões e permite atendimento assistido pelas rotas anteriores. Se houver dúvida sobre o vínculo da evidência com o dispositivo, a ação é nova revisão autorizada, nunca liberar por conveniência."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu trabalharia a diferença entre capacidade do aparelho e confiança na identidade, evitando que uma simplificação de UI contamine autorização. Rejeitaria uma regra que aceita qualquer foto enviada após erro de câmera: o problema físico não aumenta a confiabilidade da evidência. A alternativa correta precisa de política, revisão e vínculo de uso único."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu coordenaria mobile, identidade, privacidade e suporte para entregar uma jornada que possa ser operada. Isso inclui capacidade de especialistas e treinamento, além de código. Minha contribuição proposta é tornar segurança e acessibilidade critérios conjuntos de qualidade, com transparência sobre o que o laboratório demonstra e o que depende de validação adicional."
+          },
+          {
+            "type": "p",
+            "text": "Eu também evitaria um objetivo de conversão que pressione revisores a aprovar casos incertos. O EM deve acompanhar qualidade da decisão, carga e escalonamento, enquanto o Staff mantém o protocolo capaz de representar espera e necessidade de revisão adicional. Uma recuperação pode ser legitimamente mais longa quando faltam evidências. O ganho desejado é remover repetição inútil e melhorar orientação, preservando a decisão de segurança que o caso exige."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 04 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_04.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor primeiro tenta authorize sem review e observa a rejeição. Depois aprova uma referência sintética, altera o dispositivo e verifica nova rejeição; apenas o contexto correto consome o desafio. Esse roteiro demonstra que capacidade de captura e autorização são contratos separados."
+          },
+          {
+            "type": "p",
+            "text": "O handoff exige política de alternativas aprovada, serviço de sessão, armazenamento restrito e plano de retenção. Também requer teste em hardware real, suporte para interrupções e acompanhamento de fraude. Prosseguir depende de evidência de recuperação legítima melhor sem enfraquecimento de identidade. Se a causa dominante for capacidade de revisão, priorizo a fila antes de acrescentar mais etapas ao aplicativo."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Câmera indisponível não prova identidade.",
+              "Desafio expirado ou revogado não autoriza.",
+              "Material sensível fica fora de analytics."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_04.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Máquina de estados; nenhuma biometria ou prova de vida real."
+    }
+  },
+  {
+    "id": "05",
+    "title": "Novo telefone, código que não chega",
+    "subtitle": "Recuperar o contato sem confundir prova de e-mail e autorização.",
+    "technologies": [
+      "flutter",
+      "typescript",
+      "java",
+      "redis",
+      "aws",
+      "python",
+      "postgresql"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+    "source_title": "Reclame AQUI — relato e resposta pública",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Respondida · RA 242544191",
+            "text": "Em 06/03/2026, um consumidor relatou trocar de celular, não conhecer ou não acessar o e-mail anterior e não receber o código no novo endereço informado. Em 13/03, o Nubank explicou verificações adicionais e informou que um aparelho havia sido autorizado em 09/03. Disse aguardar retorno à orientação privada. O registro está respondido, sem confirmação final pública do consumidor. Não há causa comprovada de falha na entrega."
+          },
+          {
+            "type": "p",
+            "text": "Um aparelho autorizado não comprova, por si só, que a pessoa concluiu toda a jornada descrita. A resposta pode indicar progresso importante, mas não autoriza converter respondida em resolvida. Este caso trata de e-mail, não de SMS ou câmera quebrada. As mensagens privadas não foram consultadas. A proposta usa o obstáculo relatado para examinar o contrato entre contato atualizado, código entregue, código validado e sessão do novo dispositivo."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — relato e resposta pública",
+            "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O relato permite investigar entrega, associação de geração e compreensão da jornada, mas não identifica provedor, bounce ou filtro de spam. Eu rastrearia uma recuperação por recovery_id, comparando solicitação de mudança, emissão, aceitação pelo provedor, retorno de entrega e validação. Aceitação SMTP não significa leitura nem prova de identidade."
+          },
+          {
+            "type": "p",
+            "text": "Uma hipótese é que o cliente não consiga distinguir qual contato está ativo e qual desafio ainda vale após reenvio. Isso pode ser refutado por logs e pesquisa: se o contato e o desafio estiverem consistentes, o gargalo pode estar fora dessa fronteira. Não afirmaria causa com base apenas em uma mensagem “não chegou”."
+          },
+          {
+            "type": "p",
+            "text": "A investigação de entrega precisa reconhecer feedback incompleto. Alguns provedores informam aceitação sem confirmação de entrega; outros retornam eventos atrasados ou duplicados. Eu documentaria quais sinais são observações e quais são inferências, mantendo a mensagem ao cliente compatível com essa diferença. Um novo e-mail informado ainda precisa de validação de identidade para mudança de cadastro. A pesquisa deve observar se o usuário entende que confirmar o contato e recuperar acesso podem exigir passos distintos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Novo telefone, código que não chega",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "Pedido de recuperação",
+                "detail": "Sessão e aparelho pretendido",
+                "group": "entrada"
+              },
+              {
+                "id": "2",
+                "label": "Contato versionado",
+                "detail": "Geração atual do endereço",
+                "group": "domínio"
+              },
+              {
+                "id": "3",
+                "label": "Política de desafio",
+                "detail": "Prazo e limite de tentativas",
+                "group": "segurança"
+              },
+              {
+                "id": "4",
+                "label": "Emissor de código",
+                "detail": "Desafio vinculado à geração",
+                "group": "serviço"
+              },
+              {
+                "id": "5",
+                "label": "Registro temporário",
+                "detail": "Hash e validade",
+                "group": "persistência"
+              },
+              {
+                "id": "6",
+                "label": "Verificador",
+                "detail": "Revalida geração e consumo",
+                "group": "autoridade"
+              },
+              {
+                "id": "7",
+                "label": "Retomada no app",
+                "detail": "Contato e acesso distintos",
+                "group": "experiência"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "solicitação validada"
+              },
+              {
+                "from": "2",
+                "to": "4",
+                "label": "geração e escopo"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "limites aprovados"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "persiste antes do envio"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "desafio apresentado"
+              },
+              {
+                "from": "2",
+                "to": "6",
+                "label": "revalida geração"
+              },
+              {
+                "from": "6",
+                "to": "7",
+                "label": "resultado limitado"
+              },
+              {
+                "from": "2",
+                "to": "7",
+                "label": "consulta do progresso"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O contato versionado alimenta emissão e verificação. A política define limites, enquanto o registro conserva o desafio vigente. O verificador consulta novamente a geração antes de consumir o código, evitando que uma mudança concorrente deixe um desafio antigo utilizável."
+          },
+          {
+            "type": "p",
+            "text": "O app recebe progresso de contato separado de acesso. Confirmar o endereço é apenas uma etapa; a autorização de aparelho continua no domínio de identidade. O diagrama não representa o provedor de entrega como fonte de confiança sobre a titularidade."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def verify(self, owner, generation, code, now):\n        if owner != self.owner:\n            raise PermissionError(\"recovery scope\")\n        if type(now) is not int or now < 0 or not isinstance(code, str):\n            raise ValueError(\"invalid request\")\n        with self.lock:\n            current = self.challenge\n            if current is None:\n                raise ValueError(\"challenge unavailable\")\n            issued_generation, digest, issued_at, expiry, attempts = current\n            if type(generation) is not int or generation != self.generation:\n                raise ValueError(\"obsolete contact generation\")\n            if generation != issued_generation or not issued_at <= now < expiry:\n                raise ValueError(\"challenge expired or not yet valid\")\n            if attempts >= 3:\n                raise ValueError(\"attempt budget exhausted\")\n            current[4] += 1\n            candidate = hashlib.sha256(code.encode()).digest()\n            if not hmac.compare_digest(candidate, digest):\n                raise PermissionError(\"invalid code\")\n            self.verified, self.challenge = True, None\n            return True",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "ContactRecovery.verify rejeita geração antiga, tempo inválido, desafio ausente e orçamento de tentativas esgotado. O hash compara o código sem persistir seu texto no registro didático. Após sucesso, o desafio é consumido e verified passa a verdadeiro; device_authorized permanece falso."
+          },
+          {
+            "type": "p",
+            "text": "O laboratório recebe códigos fixos para testes reprodutíveis. Um serviço real deve gerar segredos aleatórios, limitar abuso distribuído e proteger armazenamento. Hash simples de um código curto não é proteção suficiente contra extração do banco; seria necessário um desenho de segredos e chaves adequado. O objetivo aqui é verificar ciclo de vida e vínculo, sem simular um serviço pronto de autenticação."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "typescript",
+            "code": "// Proposed presentation contract; validate network input separately.\ntype RecoveryView =\n  | { state: 'contact_pending'; generation: number }\n  | { state: 'contact_verified'; generation: number }\n  | { state: 'device_authorized'; deviceRef: string };\nfunction accessReady(view: RecoveryView): boolean {\n  return view.state === 'device_authorized';\n}\nfunction contactReady(view: RecoveryView): boolean {\n  return view.state === 'contact_verified'\n      || view.state === 'device_authorized';\n}",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O contrato TypeScript usa uma união explícita para distinguir contato pendente, contato confirmado e aparelho autorizado. Isso facilita revisão da UI, mas tipos estáticos não validam dados recebidos da rede. O adaptador ainda precisa validar schema, origem e escopo antes de construir esse objeto."
+          },
+          {
+            "type": "p",
+            "text": "A mensagem não expõe o e-mail inteiro nem informa a existência de uma conta para solicitantes não autenticados. O reenvio mostra um prazo coerente com a política e preserva a jornada. Eu reutilizaria o provedor de entrega existente sempre que possível, acrescentando correlação e tratamento de eventos em vez de presumir que trocar fornecedor resolve a causa desconhecida."
+          }
+        ],
+        "sources": [
+          {
+            "title": "TypeScript — Narrowing",
+            "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "recovery_id",
+                "Identidade",
+                "Escopo por titular"
+              ],
+              [
+                "contact_generation",
+                "Contato",
+                "Muda com autorização"
+              ],
+              [
+                "challenge_hash",
+                "Segurança",
+                "Nunca logar código"
+              ],
+              [
+                "delivery_state",
+                "Adaptador",
+                "Aceito ≠ lido"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"recovery_id\": \"synthetic-recovery\",\n  \"contact_generation\": 2,\n  \"delivery_state\": \"accepted\",\n  \"contact_verified\": false,\n  \"device_authorized\": false,\n  \"expires_at\": 160\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "A geração muda apenas após atualização de contato autorizada. Cada emissão substitui o desafio anterior dentro dessa geração e aplica cooldown. O TTL pertence ao desafio, enquanto o limite de tentativas pertence à política de abuso. Na produção, limites adicionais por conta, aparelho e origem precisam sobreviver a reinício e múltiplas instâncias."
+          },
+          {
+            "type": "p",
+            "text": "Eventos de entrega devem distinguir aceito, devolvido e expirado sem concluir que a mensagem foi lida. O registro público não fornece tais eventos. Logs evitam códigos e endereços completos; a investigação usa referências protegidas. Alteração de contato não pode permitir que um invasor escolha livremente o destino e se torne titular por receber o próprio código."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_contact_change_invalidates_old_code(self):\n        self.r.change_contact(\"a\", \"other@example.test\", True)\n        self.r.issue(\"a\", \"654321\", 110, 60)\n        with self.assertRaises(ValueError):\n            self.r.verify(\"a\", 1, \"123456\", 120)\n        self.assertTrue(self.r.verify(\"a\", 2, \"654321\", 120))\n\n    def test_contact_proof_does_not_authorize_device(self):\n        self.assertTrue(self.r.verify(\"a\", 1, \"123456\", 120))\n        self.assertTrue(self.r.verified)\n        self.assertFalse(self.r.device_authorized)",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes incluem troca de contato com código antigo, reenvio, limite de tentativas, expiração, relógio futuro, replay e titular incorreto. O teste de separação de estado confirma que validar e-mail não autoriza um dispositivo. Essa invariante evita transformar um mecanismo de entrega em prova completa de identidade."
+          },
+          {
+            "type": "p",
+            "text": "A suíte não envia e-mail nem mede entregabilidade. Faltam eventos do provedor, limites entre processos e testes de enumeração por tempo de resposta. Antes de produção, eu acrescentaria ataques de reenvio coordenado e duas sessões mudando o contato simultaneamente, além de integração com a política real de recuperação de identidade."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Contato confirmado",
+                "Confirmações / jornadas",
+                "7 dias; provedor"
+              ],
+              [
+                "Retomada",
+                "Retomadas concluídas / iniciadas",
+                "Sessão; versão"
+              ],
+              [
+                "Recontato",
+                "Contatos repetidos / recovery_id",
+                "7 dias; motivo"
+              ],
+              [
+                "Código obsoleto",
+                "Aceites indevidos / verificações",
+                "Contínuo; geração"
+              ],
+              [
+                "Abuso",
+                "Casos confirmados / jornadas",
+                "Janela de risco"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O funil precisa mostrar emissão, entrega observável, validação de contato e autorização, sem tratar essas etapas como equivalentes. Eu mediria recontato por recuperação e tempo por etapa, com cortes por provedor e versão de app quando houver volume suficiente para preservar privacidade."
+          },
+          {
+            "type": "p",
+            "text": "O experimento compara jornadas elegíveis de complexidade semelhante e observa recuperação legítima, mensagens enviadas e carga de revisão. Uma melhora de entrega que aumenta abuso não passa no aceite. A expansão para se houver código obsoleto aceito, vazamento de cadastro ou tomada de conta atribuível ao fluxo. A baseline permanece desconhecida até instrumentação e validação com o time de identidade."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "10 mil; Δ 0,05; 15 mil envios",
+                "R$ -450,00",
+                "Não há"
+              ],
+              [
+                "Base",
+                "30 mil; Δ 0,12; 45 mil envios",
+                "R$ 20.450,00",
+                "4,89"
+              ],
+              [
+                "Ambicioso",
+                "60 mil; Δ 0,18; 90 mil envios",
+                "R$ 71.700,00",
+                "1,39"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Assumo 10.000 / 30.000 / 60.000 jornadas mensais, redução de recontato de 0,05 / 0,12 / 0,18 e custo marginal de R$ 8,00 por contato. Assumo 15.000 / 45.000 / 90.000 mensagens adicionais a R$ 0,03 cada, mais R$ 4.000,00 / R$ 7.000,00 / R$ 12.000,00 de operação mensal. A implementação hipotética custa R$ 100.000,00."
+          },
+          {
+            "type": "p",
+            "text": "O benefício líquido é jornadas × recontatos evitados × custo, menos mensagens e operação. Não uso receita média global por cliente para valorar acesso recuperado; seria necessário demonstrar incremento causal de receita e margem, o que o relato não permite. O cenário conservador pode ser negativo, evidenciando que enviar mais mensagens sem reduzir dúvida suficientemente não justifica o investimento por custo evitado."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 100.000,00. Resultados anuais líquidos antes da implementação: R$ -5.400,00 / R$ 245.400,00 / R$ 860.400,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Identidade + entrega",
+                "Mapa de eventos"
+              ],
+              [
+                "16–30 dias",
+                "Staff + segurança",
+                "Geração e limites"
+              ],
+              [
+                "31–60 dias",
+                "Mobile + produto",
+                "Retomada em sombra"
+              ],
+              [
+                "61–90 dias",
+                "EM + suporte",
+                "Piloto sem abuso novo"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O roadmap começa com um inventário de eventos já disponíveis e das formas de recuperar contato. A equipe de identidade valida quais mudanças exigem revisão; o responsável pela entrega descreve o que seus callbacks realmente significam. Produto define mensagens que expliquem andamento sem revelar cadastro."
+          },
+          {
+            "type": "p",
+            "text": "A etapa em sombra compara geração emitida e consumida, antes de alterar reenvio ou experiência. O EM coordena dependências com o provedor e capacidade de revisão; o Staff resolve concorrência e persistência da política. Se a observabilidade revelar problema predominantemente externo, o plano deve priorizar o adaptador e comunicação, sem refazer desnecessariamente toda a autenticação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No canário, a emissão antiga e a nova precisam compartilhar o mesmo controle de geração. Uma flag de UI não impede que um código antigo seja aceito por um backend incompatível. A migração exige compatibilidade ou bloqueio explícito de versões que não entendem a nova identidade."
+          },
+          {
+            "type": "p",
+            "text": "O exercício inclui retorno de entrega atrasado, reenvio concorrente e troca de contato enquanto o código está em trânsito. A operação deve conseguir distinguir atraso do provedor de desafio já revogado. Rollback preserva gerações e limites; não reativa segredos antigos. Alertas de abuso vão ao time de identidade, enquanto falhas de entrega agregadas acionam o responsável pelo canal."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu proporia o contrato de geração e a separação entre posse do contato e autorização do dispositivo. Rejeitaria a alternativa de aceitar qualquer código ainda não expirado: dois contatos e dois reenvios podem deixar várias provas contraditórias aparentemente válidas. O desafio precisa ser o vigente no contexto correto."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu construiria uma entrega com segurança, entrega de mensagens e mobile, incluindo testes de abuso no critério de pronto. Também garantiria que o suporte veja o mesmo progresso sem acessar segredos. Essas ações são uma proposta de trabalho e de coordenação, não uma declaração de autoridade ou resultados anteriores dentro do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "A decisão técnica precisa resistir à pressão por remover etapas sem entender sua finalidade. Eu explicaria quais controles são obrigatórios para o risco e quais repetições são apenas consequência de estado mal preservado. Como EM, organizaria uma revisão com atendimento usando jornadas anonimizadas, permitindo que as pessoas que recebem a dúvida participem do design. Isso produz uma solução mais operável e evita adicionar mais um botão de reenvio sem resolver o contexto."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 05 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_05.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor começa por change_contact, emite um código, altera novamente o contato e tenta consumir a geração anterior. Depois verifica que o contato novo pode ser confirmado sem autorizar o aparelho. Os testes usam endereços example.test e códigos sintéticos; não fazem envio nem acesso real."
+          },
+          {
+            "type": "p",
+            "text": "O handoff pede serviço de identidade, geração de segredos, armazenamento protegido, callbacks de entrega e rate limiting durável. A decisão de prosseguir exige recuperação legítima mensurável e guardrails de abuso. Se só melhorar aceitação do provedor, sem conclusão ou redução de recontato, o piloto não demonstra o valor pretendido e precisa de novo diagnóstico."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Contato verificado não autoriza aparelho.",
+              "Reenvio invalida o desafio anterior.",
+              "Nenhum código aparece em logs."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_05.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Desafio em memória; sem e-mail, autenticação real ou limite distribuído."
+    }
+  },
+  {
+    "id": "06",
+    "title": "Nova evidência durante a contestação",
+    "subtitle": "Receber, verificar e decidir admissibilidade são etapas diferentes.",
+    "technologies": [
+      "flutter",
+      "typescript",
+      "aws",
+      "java",
+      "postgresql",
+      "python"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+    "source_title": "Reclame AQUI — relato e resposta pública",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Respondida · RA 240394695",
+            "text": "Em 10/02/2026, uma consumidora relatou contestar compra Airbnb não reconhecida e não conseguir acrescentar comprovantes enquanto o caso estava em análise. Em 18/02, o Nubank informou crédito de confiança, disputa aberta em 11/02, cancelamento do cartão virtual e desativação do atualizador automático. Os valores aparecem mascarados. Não há resultado final público nem confirmação de que o canal de anexos foi reaberto."
+          },
+          {
+            "type": "p",
+            "text": "O obstáculo concreto é acrescentar material depois da abertura, não demonstrar aqui se a compra era fraudulenta. A confirmação atribuída ao Airbnb está em mensagem privada não examinada. O crédito de confiança é provisório e deve aparecer separado do resultado da disputa. A proposta não promete que todo documento tardio será aceito pela bandeira: busca preservar material, explicar a etapa e oferecer decisão de admissibilidade rastreável."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — relato e resposta pública",
+            "url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Um estado “em análise” pode estar sendo usado para bloquear toda edição, embora acrescentar uma evidência e alterar a reclamação original tenham riscos diferentes. Essa é uma hipótese, não a causa comprovada do app. Eu mapearia as etapas internas e os prazos externos, identificando onde anexos adicionais ainda podem ser considerados."
+          },
+          {
+            "type": "p",
+            "text": "A investigação compara tentativas de upload, contatos para envio e decisões do analista. É necessário separar impedimento de interface, limite de formato, quarentena e corte da bandeira. Se o material já estava fora do prazo aplicável, a melhoria pode ser uma explicação e um encaminhamento permitido, sem sugerir que engenharia consegue reabrir unilateralmente a disputa."
+          },
+          {
+            "type": "p",
+            "text": "Também distinguiria evidência complementar de correção de dados da transação contestada. A primeira pode ser acrescentada sem alterar a identidade do caso; a segunda pode exigir revisão do próprio objeto da disputa. Se ambos usarem o mesmo botão genérico de editar, fica difícil explicar o que foi efetivamente recebido. O desenho proposto registra intenção do envio e mantém rastreabilidade, permitindo ao analista decidir como o material se relaciona ao conjunto anterior."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "Nova evidência durante a contestação",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "App de contestação",
+                "detail": "Novo documento e recibo",
+                "group": "experiência"
+              },
+              {
+                "id": "2",
+                "label": "Upload protegido",
+                "detail": "Limite e identidade",
+                "group": "entrada"
+              },
+              {
+                "id": "3",
+                "label": "Validador do anexo",
+                "detail": "Hash e quarentena",
+                "group": "segurança"
+              },
+              {
+                "id": "4",
+                "label": "Dossiê versionado",
+                "detail": "Evidência e corte externo",
+                "group": "domínio"
+              },
+              {
+                "id": "5",
+                "label": "Escopo do titular",
+                "detail": "Vínculo com a disputa",
+                "group": "autoridade"
+              },
+              {
+                "id": "6",
+                "label": "Envio autorizado",
+                "detail": "Admissibilidade revisada",
+                "group": "integração"
+              },
+              {
+                "id": "7",
+                "label": "Status da evidência",
+                "detail": "Recebida não é aceita",
+                "group": "consulta"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "envio autenticado"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "label": "bytes e referência"
+              },
+              {
+                "from": "5",
+                "to": "3",
+                "label": "autoriza vínculo"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "anexo verificado"
+              },
+              {
+                "from": "4",
+                "to": "6",
+                "label": "decisão de envio"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "revalida permissão"
+              },
+              {
+                "from": "4",
+                "to": "7",
+                "label": "estado do material"
+              },
+              {
+                "from": "7",
+                "to": "1",
+                "label": "recibo consultável"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O upload entra em quarentena e conserva identidade antes de chegar ao dossiê. O escopo do titular protege tanto a entrada quanto a submissão. A política do dossiê determina o que pode seguir após revisão, sem apagar evidências anteriores."
+          },
+          {
+            "type": "p",
+            "text": "O retorno ao aplicativo distingue recebido, em verificação, disponível para análise e enviado. Receber bytes não confirma mérito ou aceitação externa. O desenho também não mistura esse estado com crédito provisório ou decisão financeira definitiva."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def append(self, owner, upload_id, content, now):\n        if owner != self.owner:\n            raise PermissionError(\"dispute scope\")\n        if not upload_id or type(content) is not bytes:\n            raise ValueError(\"upload identity and bytes required\")\n        if not 0 < len(content) <= 1024 * 1024:\n            raise ValueError(\"attachment size\")\n        if type(now) is not int or now < 0:\n            raise ValueError(\"clock\")\n        digest = hashlib.sha256(content).hexdigest()\n        with self.lock:\n            if upload_id in self.seen:\n                previous = self.items[self.seen[upload_id]]\n                if previous[\"digest\"] != digest:\n                    raise ValueError(\"upload identity conflict\")\n                return dict(previous)\n            item = dict(version=len(self.items) + 1, digest=digest,\n                        received_at=now, state=\"quarantined\",\n                        late=now >= self.cutoff)\n            self.seen[upload_id] = len(self.items)\n            self.items.append(item)\n            return dict(item)",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "Dossier.append aplica escopo, tamanho e identidade do upload antes de criar uma versão. Repetir a mesma chave e conteúdo retorna o registro anterior; reutilizar a chave com bytes diferentes gera conflito. O retorno é uma cópia, para que o chamador não altere o estado interno por acidente."
+          },
+          {
+            "type": "p",
+            "text": "Material recebido após o corte é preservado como tardio, mas submit não promete enviá-lo nessa janela. O scanner é uma fronteira simulada: um booleano confiável representa resultado externo já verificado. O laboratório não inspeciona malware nem armazena arquivos em nuvem. Seu contrato é conservar versão e separar recebimento de elegibilidade."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "typescript",
+            "code": "// Proposed metadata only; no storage permissions implemented here.\ntype EvidenceRecord = {\n  dossierId: string;\n  uploadId: string;\n  version: number;\n  originalObjectRef: string;\n  digest: string;\n  state: 'quarantined' | 'reviewable' | 'rejected' | 'submitted';\n  late: boolean;\n};\nfunction readyForReview(item: EvidenceRecord): boolean {\n  return item.state === 'reviewable';\n}",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O exemplo de armazenamento define referências e estados, não permissões completas. Em uma integração com S 3, eu projetaria upload restrito, quarentena, avaliação de conteúdo e liberação para analistas autorizados. O objeto original e eventuais derivados precisam de identidades distintas, para que remoção de metadados não destrua a referência probatória original."
+          },
+          {
+            "type": "p",
+            "text": "O serviço de disputa decide admissibilidade e prazo; o armazenamento não assume essa autoridade. URLs temporárias não devem virar links públicos no histórico. A UI pode mostrar nome seguro, tamanho e recibo sem renderizar conteúdo ativo. O exemplo TypeScript é ilustrativo e não foi executado ou conectado a serviços AWS."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Amazon S3 — User Guide",
+            "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "upload_id + digest",
+                "Ingestão",
+                "Sem substituição"
+              ],
+              [
+                "dossier_version",
+                "Disputa",
+                "Histórico preservado"
+              ],
+              [
+                "scan_state",
+                "Segurança",
+                "Quarentena primeiro"
+              ],
+              [
+                "cutoff + rule",
+                "Operação",
+                "Receber ≠ submeter"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"dossier_id\": \"synthetic-dispute\",\n  \"upload_id\": \"synthetic-upload\",\n  \"dossier_version\": 2,\n  \"digest\": \"sha256-reference\",\n  \"state\": \"quarantined\",\n  \"late\": false,\n  \"provisional_credit_is_final\": false\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "O contrato associa upload_id, versão do dossiê, digest e momento de recebimento. O digest detecta alteração de bytes, mas não prova que o conteúdo é verdadeiro. A revisão substantiva continua necessária e pode rejeitar material tecnicamente íntegro."
+          },
+          {
+            "type": "p",
+            "text": "O modelo não aceita substituir silenciosamente um anexo. Correções são novas versões com relação explícita à anterior. Prazos precisam de origem, fuso e regra aplicável, revisados com operação da bandeira. Privacidade exige separar quem vê o recibo de quem pode abrir documentos. Retenção deve considerar disputa, contestação e obrigações pertinentes, sem adotar armazenamento ilimitado como padrão."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_late_evidence_is_retained_without_submission_promise(self):\n        item = self.upload(now=101)\n        self.d.scan(item[\"version\"], True, True)\n        with self.assertRaises(ValueError):\n            self.d.submit(item[\"version\"], \"dispute-analyst\", True)\n        self.assertEqual(len(self.d.items), 1)\n        self.assertEqual(self.d.items[0][\"state\"], \"reviewable\")\n\n    def test_reused_upload_id_cannot_replace_evidence(self):\n        original = self.upload()\n        with self.assertRaises(ValueError):\n            self.upload(data=b\"replacement\")\n        self.assertEqual(self.d.items[0][\"digest\"], original[\"digest\"])",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes verificam material tardio preservado sem promessa de submissão, conflito de identidade, quarentena, conteúdo rejeitado, escopo, replay e mutação do retorno. A fronteira exata do corte conta como tardia no modelo e precisa ser validada contra a regra real antes da integração."
+          },
+          {
+            "type": "p",
+            "text": "O teste de substituição protege evidência anterior, enquanto o de quarentena impede que upload concluído pareça prova já utilizável. A suíte não valida tipos de arquivo reais, antivírus, acessibilidade ou regras de bandeira. Eu acrescentaria testes com arquivos malformados e interrupção durante envio, além de restauração do vínculo após expiração de uma URL temporária."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Recibo válido",
+                "Uploads vinculados / elegíveis",
+                "Diário; etapa"
+              ],
+              [
+                "Análise p 95",
+                "Tempo recepção→admissibilidade",
+                "Semanal; corte"
+              ],
+              [
+                "Recontato",
+                "Contatos para anexar / dossiês",
+                "7 dias; motivo"
+              ],
+              [
+                "Integridade",
+                "Falhas / anexos auditados",
+                "Contínuo; versão"
+              ],
+              [
+                "Custo de triagem",
+                "Minutos / dossiê elegível",
+                "Semanal; material"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O sucesso não é simplesmente aumentar anexos. A métrica principal observa material elegível recebido com recibo e analisado dentro da janela útil. Mais documentos irrelevantes podem aumentar custo e atrasar decisões; por isso, acompanhar tempo do analista e admissibilidade é necessário."
+          },
+          {
+            "type": "p",
+            "text": "O piloto compara disputas de estágio e motivo semelhantes, com avaliação por analistas que conhecem os prazos. Recontatos são medidos por dossiê em sete dias. Nenhum resultado de chargeback é atribuído à melhoria sem comparação adequada, porque mérito e estabelecimento influenciam o desfecho. Exposição de documento, troca de prova ou prazo perdido interrompem imediatamente a expansão."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "2 mil × 4 min × 25%",
+                "R$ -1.100,00",
+                "Não há"
+              ],
+              [
+                "Base",
+                "6 mil × 6 min × 40%",
+                "R$ 10.200,00",
+                "13,73"
+              ],
+              [
+                "Ambicioso",
+                "12 mil × 8 min × 50%",
+                "R$ 46.400,00",
+                "3,02"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O modelo financeiro usa retrabalho do analista, sem inventar o valor mascarado da compra. Assumo 2.000 / 6.000 / 12.000 dossiês mensais, 4 / 6 / 8 minutos poupados por dossiê, R$ 75,00 por hora e fração realizável de 25% / 40% / 50%. Assumo 3.000 / 9.000 / 18.000 uploads adicionais a R$ 0,20, mais R$ 3.000,00 / R$ 6.000,00 / R$ 10.000,00 mensais de operação. A implantação hipotética custa R$ 140.000,00."
+          },
+          {
+            "type": "p",
+            "text": "A conta desconta verificação de arquivos e operação da capacidade monetizável. Se a capacidade não reduzir despesa, reporto horas, não caixa. Principal eventualmente recuperado ao cliente fica fora dessa fórmula. Um aumento de vitória em disputa só entraria em análise separada depois de demonstrar causalidade e quem efetivamente recebe o benefício."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 140.000,00. Resultados anuais líquidos antes da implementação: R$ -13.200,00 / R$ 122.400,00 / R$ 556.800,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Operação de disputas",
+                "Etapas e cortes"
+              ],
+              [
+                "16–30 dias",
+                "Segurança + privacidade",
+                "Custódia e acesso"
+              ],
+              [
+                "31–60 dias",
+                "Staff + mobile",
+                "Recibo e quarentena"
+              ],
+              [
+                "61–90 dias",
+                "EM + analistas",
+                "Piloto; custo de triagem"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A operação de disputas lidera o mapa de etapas e cortes; segurança define a fronteira de upload; privacidade revisa custódia e retenção. O Staff articula esses contratos para que uma alteração aparentemente pequena no app não crie um canal de documentos sem governança."
+          },
+          {
+            "type": "p",
+            "text": "O primeiro protótipo deve receber anexos sintéticos, gerar recibo e mostrar ao analista somente material liberado. Depois, uma coorte restrita valida utilidade e custo. O EM garante treinamento e capacidade para o aumento de entrada. Se o corte externo impedir consideração, a entrega se limita a encaminhamento permitido e explicação, sem prometer que toda evidência muda o resultado."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O rollout habilita recebimento antes de qualquer automação de envio externo. O analista continua responsável por admissibilidade; uma flag não pode transformar todos os anexos em prova aceita. O plantão de segurança observa falhas de quarentena, e operação de disputas acompanha material próximo do corte."
+          },
+          {
+            "type": "p",
+            "text": "O exercício injeta upload duplicado, scanner indisponível e callback atrasado. O estado seguro conserva o arquivo restrito e explica pendência. Rollback fecha novas admissões pelo fluxo novo, mas preserva recibos e acesso autorizado ao material já recebido. Não apagar a evidência é tão importante quanto não submetê-la indevidamente."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu proporia evidência adicional imutável em vez de reabrir livremente todo o formulário. Essa decisão preserva o relato original e torna alterações auditáveis. A alternativa rejeitada é sobrescrever o anexo anterior: ela simplifica a tela, mas perde contexto e pode confundir a análise."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu coordenaria uma entrega com operação de disputa, mobile, segurança e privacidade, colocando capacidade de análise e treinamento no mesmo plano do desenvolvimento. A contribuição proposta é transformar uma barreira concreta em um fluxo operável, sem prometer vitória em chargeback ou atribuir resultado financeiro a um exemplo de código."
+          },
+          {
+            "type": "p",
+            "text": "Uma discussão de contratação pode explorar como eu negociaria o escopo mínimo com operação: talvez o primeiro ganho venha de recibo e encaminhamento, antes de automatizar submissão. Como Staff, documentaria essa fronteira para reduzir risco; como EM, asseguraria que o time não seja cobrado por resultado de bandeira que não controla. O compromisso seria com recebimento íntegro, análise no prazo aplicável e informação correta, medidos separadamente de vitória financeira."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 06 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_06.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor envia bytes sintéticos, repete o upload e tenta reutilizar a identidade com outro conteúdo. Depois observa a diferença entre quarentena, revisão e submissão. Um documento tardio permanece registrado, mas não atravessa o corte automaticamente."
+          },
+          {
+            "type": "p",
+            "text": "Para produção, o handoff requer armazenamento protegido, scanner real, validação de formato, política de retenção e adaptador da bandeira. O aceite inclui acesso por titular, integridade do histórico e mensagens que não confundam crédito provisório com decisão final. Se o custo de triagem adicional superar o retrabalho evitado, a próxima etapa é melhorar orientação de evidência antes de expandir o canal."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Recibo de upload não promete aceitação externa.",
+              "Novo anexo nunca apaga o anterior.",
+              "Documento em quarentena não é submetido."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_06.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Metadados e invariantes; sem scanner ou bandeira reais."
+    }
+  },
+  {
+    "id": "07",
+    "title": "MED: acompanhar sem prometer devolução",
+    "subtitle": "Três Pix somam R$ 478,55; a informação também precisa de estado.",
+    "technologies": [
+      "clojure",
+      "kafka",
+      "postgresql",
+      "flutter",
+      "opentelemetry",
+      "python",
+      "java"
+    ],
+    "source_url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+    "source_title": "Reclame AQUI — relato e resposta pública",
+    "pages": [
+      {
+        "title": "O registro e seu desfecho",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Respondida · RA 228360515",
+            "text": "Em 02/10/2025, uma consumidora relatou três Pix que somavam R$ 478,55 por ingressos CCXP 25 e disse ter avisado o Nubank em menos de duas horas após perceber um golpe. Pediu atualização do MED. O Nubank informou abertura do procedimento, prazo de sete dias corridos mais quatro para reembolso condicionado. Não publicou resultado individual ou valor recuperado. Trata-se de resposta histórica de 2025, não descrição integral das regras atuais."
+          },
+          {
+            "type": "p",
+            "text": "A resposta pública relaciona falta de e-mail a contestação não acolhida ou ausência de saldo, mas não informa qual desfecho ocorreu nesse caso. O cliente precisa de uma conclusão explícita quando houver evidência, e de acompanhamento quando ainda não houver. Não foram examinados boletim de ocorrência, comprovantes ou chat privado. O valor citado é exposição alegada do cliente; não é perda definitiva verificada nem receita potencial do banco."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Reclame AQUI — relato e resposta pública",
+            "url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/"
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico antes da solução",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O diagnóstico separa andamento interbancário de entrega de uma mensagem ao cliente. Ausência de e-mail não revela se o processo está em análise, se houve resposta negativa, se faltou saldo ou se a comunicação falhou. A hipótese de engenharia é que estados explícitos e uma próxima atualização reduzem contatos por incerteza."
+          },
+          {
+            "type": "p",
+            "text": "Eu reconstruiria eventos recebidos, projeção disponível e notificações emitidas por caso, sem inferir que atraso causou esvaziamento da conta recebedora. A fonte não demonstra essa causalidade. O episódio é de 2025; uma implementação atual precisa mapear contratos e regras vigentes em 2026 com Pix, risco e jurídico, sem julgar retroativamente a conduta com requisitos posteriores."
+          },
+          {
+            "type": "p",
+            "text": "A timeline deve explicar devolução parcial sem transformar o restante em dívida do banco. Também precisa distinguir encerramento operacional de impossibilidade definitiva de qualquer recuperação futura, conforme o contrato aplicável. Eu não preencheria lacunas de eventos com uma conclusão provável para tornar a tela mais simples. Se a informação não estiver confirmada, a próxima ação é investigar e comunicar o limite, preservando a possibilidade de atualizar o estado quando surgir evidência autorizada."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Fronteiras da arquitetura",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "diagram",
+            "title": "MED: acompanhar sem prometer devolução",
+            "nodes": [
+              {
+                "id": "1",
+                "label": "Adaptador MED",
+                "detail": "Evento autenticado",
+                "group": "integração"
+              },
+              {
+                "id": "2",
+                "label": "Registro de eventos",
+                "detail": "Sequência e identidade",
+                "group": "persistência"
+              },
+              {
+                "id": "3",
+                "label": "Normalizador",
+                "detail": "Contrato por vigência",
+                "group": "serviço"
+              },
+              {
+                "id": "4",
+                "label": "Validador financeiro",
+                "detail": "Transição e centavos",
+                "group": "controle"
+              },
+              {
+                "id": "5",
+                "label": "Timeline autorizada",
+                "detail": "Estado e valor confirmado",
+                "group": "consulta"
+              },
+              {
+                "id": "6",
+                "label": "App e atendimento",
+                "detail": "Próxima atualização",
+                "group": "experiência"
+              },
+              {
+                "id": "7",
+                "label": "Conciliação do caso",
+                "detail": "Esperado versus informado",
+                "group": "operação"
+              }
+            ],
+            "edges": [
+              {
+                "from": "1",
+                "to": "2",
+                "label": "recebe e persiste"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "label": "eventos ordenados"
+              },
+              {
+                "from": "3",
+                "to": "4",
+                "label": "evento normalizado"
+              },
+              {
+                "from": "4",
+                "to": "5",
+                "label": "projeção confirmada"
+              },
+              {
+                "from": "5",
+                "to": "6",
+                "label": "consulta por titular"
+              },
+              {
+                "from": "6",
+                "to": "7",
+                "label": "dúvida ou divergência"
+              },
+              {
+                "from": "2",
+                "to": "7",
+                "label": "histórico esperado"
+              }
+            ],
+            "caption": "Arquitetura independente proposta; tecnologias sugeridas, não infraestrutura interna do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O adaptador verifica origem antes de persistir. O normalizador traduz a versão vigente para um contrato interno; o validador protege transições e valores antes de publicar a timeline. App e atendimento compartilham essa visão autorizada."
+          },
+          {
+            "type": "p",
+            "text": "A conciliação compara o histórico esperado com o estado explicado ao cliente. A sequência do laboratório é interna ao adaptador e não pretende reproduzir campos oficiais do DICT. Uma lacuna bloqueia avanço e exige recuperação, em vez de fabricar um desfecho."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Núcleo executável",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def apply(self, event_id, sequence, state, cents=0, trusted=False):\n        if trusted is not True:\n            raise PermissionError(\"verified MED adapter required\")\n        if type(sequence) is not int or sequence <= 0 or not event_id:\n            raise ValueError(\"event identity\")\n        if type(cents) is not int or cents < 0:\n            raise ValueError(\"integer cents required\")\n        payload = (sequence, state, cents)\n        with self.lock:\n            if event_id in self.events:\n                if self.events[event_id] != payload:\n                    raise ValueError(\"event conflict\")\n                return False\n            if sequence != self.sequence + 1:\n                raise ValueError(\"sequence gap or obsolete event\")\n            allowed = {\"reported\": {\"analyzing\"},\n                       \"analyzing\": {\"partial\", \"closed\"},\n                       \"partial\": {\"partial\", \"closed\"}}\n            if state not in allowed.get(self.state, set()):\n                raise ValueError(\"state transition\")\n            if state != \"partial\" and cents != 0:\n                raise ValueError(\"refund must be explicit\")\n            if state == \"partial\" and not 0 < cents <= self.claimed - self.recovered:\n                raise ValueError(\"invalid recovery amount\")\n            self.recovered += cents\n            self.sequence, self.state = sequence, state\n            self.events[event_id] = payload\n            return True",
+            "caption": "Trecho literal do laboratório independente executado; demais validações estão no arquivo completo."
+          },
+          {
+            "type": "p",
+            "text": "RecoveryTimeline.apply conserva identidade e payload de cada evento. Só aceita a próxima sequência; eventos atrasados ou lacunas exigem conciliação e reenvio controlado. Devolução parcial precisa ser positiva e não pode ultrapassar o valor contestado ainda pendente. Encerrar um caso não acrescenta dinheiro."
+          },
+          {
+            "type": "p",
+            "text": "A função valida autoridade antes de reconhecer replay e rejeita booleanos como valores monetários. O modelo não bloqueia contas, não chama participantes e não implementa todos os estados regulamentares. Ele demonstra uma projeção de comunicação com conservação de centavos. Reabertura ou novas regras exigiriam contrato explícito adicional, não uma transição improvisada."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Implementação na stack",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "clojure",
+            "code": "(defn recovery-event [current event]\n  ;; Proposed local rule, not a DICT payload specification.\n  (let [amount (:cents event)\n        remaining (- (:claimed current) (:recovered current))]\n    (cond\n      (not (true? (:verified event))) {:error :untrusted}\n      (not (integer? amount)) {:error :invalid-money}\n      (not (<= 1 amount remaining)) {:error :amount-out-of-range}\n      (not= (:sequence event) (inc (:sequence current)))\n      {:error :sequence-gap}\n      :else {:next-recovered (+ (:recovered current) amount)\n             :next-sequence (:sequence event)})))",
+            "caption": "Exemplo de integração proposto, não executado; não é código interno do Nubank."
+          },
+          {
+            "type": "p",
+            "text": "O Clojure proposto valida um evento financeiro sem realizar efeito externo. O retorno descreve uma atualização possível; persistência precisa comparar versão e gravar evento e projeção atomicamente. Um consumidor Kafka, se escolhido, deve reconhecer repetições e manter uma estratégia de recuperação de lacunas."
+          },
+          {
+            "type": "p",
+            "text": "O adaptador real exige autenticação e mapeamento do contrato oficial vigente, revisados com o domínio Pix. Não apresento nomes sintéticos como campos de produção. Para Flutter, a timeline separaria valor confirmado, estado de análise e próxima atualização. Não usaria uma barra percentual que sugere probabilidade de recuperação sem um modelo validado e explicável."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Banco Central — API do DICT, referência de integração",
+            "url": "https://aprendervalor.bcb.gov.br/content/estabilidadefinanceira/pix/API-DICT.html"
+          }
+        ]
+      },
+      {
+        "title": "Contratos e propriedade",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Campo / regra",
+              "Responsável",
+              "Invariante"
+            ],
+            "rows": [
+              [
+                "contract_version",
+                "Pix + jurídico",
+                "Vigência explícita"
+              ],
+              [
+                "event_id + sequence",
+                "Adaptador",
+                "Lacuna não avança"
+              ],
+              [
+                "recovered_cents",
+                "Financeiro",
+                "Nunca supera total"
+              ],
+              [
+                "next_update",
+                "Operação",
+                "Não promete devolução"
+              ]
+            ]
+          },
+          {
+            "type": "code",
+            "language": "json",
+            "code": "{\n  \"schema_version\": 1,\n  \"contract_version\": \"synthetic-adapter-v1\",\n  \"case_id\": \"synthetic-med\",\n  \"event_id\": \"synthetic-partial-return\",\n  \"sequence\": 2,\n  \"state\": \"partial\",\n  \"confirmed_cents\": 20000,\n  \"claimed_cents\": 47855\n}",
+            "caption": "Contrato ilustrativo proposto; valores sintéticos, não dados de cliente."
+          },
+          {
+            "type": "p",
+            "text": "O contrato declara versão de schema e vigência da regra, além de identidade, sequência e valor confirmado. O identificador do processo não concede acesso: consultas são vinculadas ao titular e ao escopo operacional do atendimento. Eventos carregam referências mínimas, sem dados completos da conta recebedora."
+          },
+          {
+            "type": "p",
+            "text": "Para devoluções parciais, o total precisa ser reconciliado com a fonte financeira e com eventos anteriores. Uma mensagem duplicada não aumenta o recuperado; uma correção de valor deve ter semântica própria e aprovação, em vez de simplesmente enviar um número negativo. Prazos e estados oficiais seriam validados antes de qualquer integração; o laboratório é independente dessa homologação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Verificação adversarial",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "code",
+            "language": "python",
+            "code": "    def test_partial_refund_replay_never_doubles_money(self):\n        self.event(\"analysis\", 1, \"analyzing\")\n        self.event(\"refund-a\", 2, \"partial\", 20000)\n        self.assertFalse(self.event(\"refund-a\", 2, \"partial\", 20000))\n        self.event(\"refund-b\", 3, \"partial\", 27855)\n        self.assertEqual(self.t.read(\"a\")[\"recovered_cents\"], 47855)\n\n    def test_gap_retries_after_missing_event(self):\n        with self.assertRaises(ValueError):\n            self.event(\"refund\", 2, \"partial\", 100)\n        self.event(\"analysis\", 1, \"analyzing\")\n        self.assertTrue(self.event(\"refund\", 2, \"partial\", 100))",
+            "caption": "Testes literais do laboratório; contagem e resultado obtidos da execução real."
+          },
+          {
+            "type": "p",
+            "text": "Os 14 testes cobrem devolução parcial repetida, soma acima do total, lacuna de sequência, encerramento sem recuperação, tentativa de reabertura, conflito de evento e escopo incorreto. O teste de lacuna mostra que rejeitar um evento não o consome: depois de receber o anterior, o mesmo evento pode ser aceito."
+          },
+          {
+            "type": "p",
+            "text": "O laboratório também impede que silêncio encerre o processo. Não testa saldo real no recebedor, comunicação do arranjo ou prazo regulamentar. Para integração, eu acrescentaria replay de mensagens anonimizadas, comparação com a fonte financeira e exercícios de indisponibilidade do adaptador. A garantia relevante é não comunicar dinheiro recuperado que não foi confirmado."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Python — unittest",
+            "url": "https://docs.python.org/3/library/unittest.html"
+          }
+        ]
+      },
+      {
+        "title": "Medir a jornada certa",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Métrica",
+              "Numerador / denominador",
+              "Janela e corte"
+            ],
+            "rows": [
+              [
+                "Atualização p 95",
+                "Tempo evento→consulta",
+                "Diário; etapa"
+              ],
+              [
+                "Sem próxima data",
+                "Casos sem data / elegíveis",
+                "Diário; responsável"
+              ],
+              [
+                "Dúvida de andamento",
+                "Contatos / processos ativos",
+                "7 dias; coorte"
+              ],
+              [
+                "Valor divergente",
+                "Diferenças / casos auditados",
+                "Contínuo; versão"
+              ],
+              [
+                "Recuperação observada",
+                "Valor devolvido / elegível",
+                "Fechamento; perfil"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O indicador principal mede latência entre evento confirmado e estado consultável, segmentado por etapa e versão do contrato. Também acompanho casos sem próxima atualização, contatos por dúvida e divergência entre valor exibido e confirmado. Esses sinais são diferentes da taxa de recuperação financeira."
+          },
+          {
+            "type": "p",
+            "text": "A avaliação usa coortes de processos comparáveis, considerando tempo de comunicação, perfil e recuperabilidade. Uma timeline mais clara pode reduzir contato sem recuperar um centavo adicional; isso ainda pode ser útil, mas precisa ser descrito corretamente. A expansão para diante de promessa falsa, exposição de dados ou total divergente. A baseline não é pública e deve ser coletada antes de definir metas."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Valor financeiro com premissas",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Cenário assumido",
+              "Entrada principal",
+              "Líquido/mês",
+              "Retorno (meses)"
+            ],
+            "rows": [
+              [
+                "Conservador",
+                "3 mil × 0,3 × R$ 9,00",
+                "R$ 3.100,00",
+                "51,61"
+              ],
+              [
+                "Base",
+                "8 mil × 0,6 × R$ 9,00",
+                "R$ 33.200,00",
+                "4,82"
+              ],
+              [
+                "Ambicioso",
+                "15 mil × 0,8 × R$ 9,00",
+                "R$ 90.000,00",
+                "1,78"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O cenário financeiro mede acompanhamento, sem somar R$ 478,55 como benefício. Assumo 3.000 / 8.000 / 15.000 processos ativos mensais, 0,3 / 0,6 / 0,8 contato evitado por processo e custo marginal de R$ 9,00. A operação adicional assumida custa R$ 5.000,00 / R$ 10.000,00 / R$ 18.000,00 mensais; implantação hipotética de R$ 160.000,00."
+          },
+          {
+            "type": "p",
+            "text": "O cálculo é processos × contatos evitados × custo menos operação. Recuperação adicional ao cliente é uma medida separada, sem valor assumido nesta conta. Se a comunicação não alterar o mecanismo de recuperação, não atribuo causalmente aumento de devolução. Também não somo este cenário ao de suporte geral ou Pix, pois os contatos podem pertencer às mesmas jornadas."
+          },
+          {
+            "type": "p",
+            "text": "Orçamento de implementação assumido: R$ 160.000,00. Resultados anuais líquidos antes da implementação: R$ 37.200,00 / R$ 398.400,00 / R$ 1.080.000,00. Todos os parâmetros são hipóteses, não baselines do Nubank."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Roadmap com responsáveis",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Fase proposta",
+              "Responsável",
+              "Entrega / aceite"
+            ],
+            "rows": [
+              [
+                "0–15 dias",
+                "Pix + risco + jurídico",
+                "Contrato vigente"
+              ],
+              [
+                "16–30 dias",
+                "Staff + operação",
+                "Semântica e conciliação"
+              ],
+              [
+                "31–60 dias",
+                "Mobile + suporte",
+                "Timeline em sombra"
+              ],
+              [
+                "61–90 dias",
+                "EM + produto",
+                "Piloto; clareza medida"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A descoberta reúne domínio Pix, risco e jurídico para mapear contrato vigente e política de comunicação. O marco inicial é uma tabela de eventos com autoridade, interpretação e informação permitida ao titular. O Staff resolve semântica e reconciliação; produto define como explicar estados incompletos sem prometer resultado."
+          },
+          {
+            "type": "p",
+            "text": "A projeção roda em sombra antes de receber tráfego de consulta. Operação compara amostras de devoluções parciais e casos encerrados; atendimento valida sua utilidade. O EM coordena capacidade e dependências regulatórias. Se o adaptador não puder garantir origem ou completude, o piloto se limita a mensagens gerais aprovadas e a melhoria da observabilidade, sem timeline individual especulativa."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Rollout e operação",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O canário começa por leitura e comunicação, sem alterar ações interbancárias. Um dono operacional trata lacunas; outro confirma divergências financeiras. A próxima atualização é um compromisso de informação planejado, não garantia de devolução. Se ela não puder ser cumprida, o caso precisa de novo prazo e escalonamento, não silêncio."
+          },
+          {
+            "type": "p",
+            "text": "O exercício injeta devolução parcial duplicada, evento fora de ordem, adaptador indisponível e encerramento com saldo recuperado zero. Rollback preserva histórico e deixa a consulta anterior explicar os estados conhecidos. Versões de contrato coexistentes devem ser identificáveis; misturar regras históricas e atuais numa mesma máquina sem vigência é risco de interpretação e operação."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Minha contribuição",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Como Staff, eu proporia um protocolo em que estado e valor têm evidência associada, com evolução por vigência. Rejeitaria inferir negativa pelo silêncio de e-mail: entrega de mensagem e decisão do processo são domínios diferentes. Também evitaria um indicador de recuperação percentual sem fundamento, que pode parecer promessa financeira."
+          },
+          {
+            "type": "p",
+            "text": "Como EM, eu alinharia Pix, risco, jurídico, suporte e mobile em torno de um objetivo mensurável de clareza e menor retrabalho. A prioridade não seria demonstrar uma arquitetura sofisticada, mas fazer cada etapa ser explicável e operável. Essas contribuições são propostas para a função, sem afirmar experiência interna ou ganhos já obtidos no Nubank."
+          },
+          {
+            "type": "p",
+            "text": "Na colaboração com o time, eu separaria metas de comunicação de metas de recuperação para evitar uma atribuição enganosa de mérito. O EM pode incentivar rapidez de atualização sem cobrar devolução que depende de saldo e de outros participantes. O Staff pode ajudar a construir evidência de completude e consistência. Esse alinhamento permite mostrar valor real de engenharia mesmo quando o desfecho financeiro de um caso individual permanece limitado por fatores externos."
+          }
+        ],
+        "sources": []
+      },
+      {
+        "title": "Handoff e decisão",
+        "kicker": "Caso 07 · proposta externa",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "Execução local",
+            "text": "python3 labs/case_07.py -v · 14 testes passaram."
+          },
+          {
+            "type": "p",
+            "text": "O revisor executa a análise, aplica duas devoluções parciais sintéticas e repete uma delas. O total deve permanecer 47855 centavos. Em seguida, tenta ultrapassar o valor e fechar um caso sem devolução; o modelo distingue claramente conclusão e dinheiro recuperado."
+          },
+          {
+            "type": "p",
+            "text": "O handoff depende de contrato oficial validado, autenticação de eventos, persistência, conciliação e política de comunicação. Nenhum teste local substitui homologação do arranjo. Prosseguir exige coerência financeira e redução mensurável de incerteza. Se o projeto apenas produz mais notificações sem compreensão ou menor recontato, a decisão é revisar a experiência antes de ampliar o volume."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Devolução duplicada não soma duas vezes.",
+              "Silêncio de e-mail não fecha o processo.",
+              "Contrato histórico e atual ficam separados."
+            ]
+          }
+        ],
+        "sources": []
+      }
+    ],
+    "lab": {
+      "file": "labs/case_07.py",
+      "tests": 14,
+      "result": "14 testes passaram",
+      "scope": "Projeção sintética; não implementa DICT ou regras completas do MED."
+    }
+  }
+]

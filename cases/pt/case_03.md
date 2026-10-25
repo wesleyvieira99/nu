@@ -27,6 +27,8 @@ O artigo e a transcrição têm contribuições diferentes. O primeiro descreve 
 
 Quadro real do Metrópoles, 11/03/2026. A transcrição trata da empresa em 02:26 e relata a liberação em 06:59–07:23.
 
+[Source video / Vídeo da fonte](https://www.youtube.com/watch?v=f6zCNrN1T8Y)
+
 A pergunta técnica é se uma restrição continua ligada a fundamento, evidência, responsável e próxima revisão ao atravessar atendimento, risco e encerramento. Isso não determina se uma suspeita específica era válida. Uma hipótese verificável é a perda de contexto entre o bloqueio inicial e a execução de uma saída autorizada.
 
 Eu amostraria casos por tipo de medida e reconstruiria mudanças de estado com responsáveis. Compararia a data da decisão com a instrução efetiva de transferência, distinguindo espera por documentos, restrição legal ativa e fila operacional. A fonte jornalística não fornece essa decomposição. Não usaria um prazo universal de 72 horas: a regra depende do fundamento aplicável e deve ser validada pelo jurídico.
@@ -46,6 +48,8 @@ A revisão recebe eventos e consulta a política vigente. Uma decisão elegível
 O desenho separa revisão de execução. Aprovar uma saída não comprova que o saldo foi transferido. A confirmação depende de conciliação, destino autorizado e ausência de impedimentos ativos, verificados novamente na fronteira de execução.
 
 ## Núcleo executável
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]`
 
 ```python
     def execute_exit(self, expected, role, destination_owner,
@@ -84,6 +88,8 @@ O valor sintético de 200000100 centavos é apenas uma fixture acima de R$ 2.000
 
 ## Implementação na stack
 
+`Separation of Duties [proposal]` · `Versioned Decision [proposal]`
+
 ```sql
 -- Illustrative compare-and-write; not executed.
 UPDATE restriction_case
@@ -106,6 +112,8 @@ Eu favoreceria uma integração com o registro de restrições existente em vez 
 - [PostgreSQL — Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
 
 ## Contratos e propriedade
+
+`Separation of Duties [proposal]` · `Versioned Decision [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -133,6 +141,8 @@ Uma restrição não deve ser um booleano sem contexto. O contrato precisa repre
 A instrução de saída guarda a decisão que a autorizou, mas revalida impedimentos antes de executar. Um novo bloqueio entre revisão e transferência invalida a versão anterior. Para comunicação, a redação aprovada explica a etapa e o canal permitido de contestação sem revelar sinais de detecção. Retenção e acesso aos autos ou documentos seguem políticas específicas, não padrões genéricos de logging.
 
 ## Verificação adversarial
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]`
 
 ```python
     def test_overdue_review_does_not_release_money(self):
@@ -226,3 +236,96 @@ Para prosseguir, o domínio precisa fornecer taxonomia válida, identidade dos o
 - Auditoria conserva decisão e execução distintas.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py)
+
+## Padrões com prova no código
+
+`Separation of Duties [lab]` · `Versioned Decision [lab]` · `Hexagonal Architecture [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Separation of Duties | Restriction.execute_exit | revisor não executa a saída financeira |
+| Versioned Decision | Restriction.decide | decisão baseada em versão antiga é rejeitada |
+| Hexagonal Architecture / policy boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + Spring Security. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · LangGraph**
+
+Experimento proposto: LangGraph para organizar evidências autorizadas para revisão humana. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Restriction.execute_exit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L39)
+- [P1 · test_review_role_cannot_execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L88)
+- [P2 · Restriction.decide](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L27)
+- [P2 · test_stale_review_rejected](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L104)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Sequência de execução
+
+![Papéis, elegibilidade e ausência de bloqueios são entradas confiadas; não há transferência real.](../../evidence/sequence-pt-03.svg)
+
+Papéis, elegibilidade e ausência de bloqueios são entradas confiadas; não há transferência real.
+
+**Autoridade e fronteira de falha**
+
+revisor não executa a saída financeira. prazo vencido não libera dinheiro automaticamente.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [decide](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L27)
+- [execute_exit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L39)
+
+## Features, histórias e aceite
+
+**F03.1 · Revisão com responsável · D16–30**
+
+Como cliente, quero acompanhar a próxima revisão e seu responsável. Aceite: revisor não executa a saída financeira.
+
+**F03.2 · Saída autorizada e conciliada · D31–60**
+
+Como responsável pela execução autorizada, quero executar uma decisão aprovada sem ignorar impedimentos. Aceite: prazo vencido não libera dinheiro automaticamente.
+
+**F03.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F03.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L88)
+- [Aceite F03.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L74)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal. O fator original de capacidade realizável já está incluído; o controle aplica um estresse adicional.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 3750.00 | 0.00 | 5000.00 | 180000.00 |
+| Base | 22500.00 | 0.00 | 10000.00 | 180000.00 |
+| Ambicioso | 60000.00 | 0.00 | 18000.00 | 180000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -1250.00 | -195000.00 | -217500.00 |
+| Base | 12500.00 | -30000.00 | -165000.00 |
+| Ambicioso | 42000.00 | 324000.00 | -36000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: minutos trabalhados por caso. Ameaça: misturar restrição documental e ordem judicial. |
+| Economia por unidade | Casos × minutos liberados / 60 × custo-hora × fração realizável; dinheiro liberado pertence ao cliente. |
+| Experimento proposto | Comparar categoria e complexidade, preservando revisão humana, dono e conciliação da saída. |
+| Critério de parada | Parar por liberação indevida, exposição de sinais ou execução sem conciliação. |
+
+- [Metrópoles](https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

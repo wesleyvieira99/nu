@@ -46,6 +46,8 @@ The model uses two databases to represent the service/provider boundary. No dist
 
 ## Core: persist before dispatch
 
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]`
+
 ```python
     def pay(self, key, amount, merchant, timeout_after_provider=False):
         if not isinstance(key, str) or not key.strip():
@@ -87,6 +89,8 @@ A local transaction should not remain open while waiting on the network: this cr
 
 ## State should guide the next action
 
+`Idempotency Key [proposal]` · `Intent / Effect Separation [proposal]`
+
 ```dart
 sealed class PaymentState {}
 class Unknown extends PaymentState {
@@ -113,6 +117,8 @@ Local persistence helps app recovery, but the server remains the reference. Rein
 
 ## Identity before heuristics
 
+`Idempotency Key [proposal]` · `Intent / Effect Separation [proposal]`
+
 | Contract | Invariant | Boundary |
 | --- | --- | --- |
 | Same key | Same content and receipt | Defined scope and retention |
@@ -138,6 +144,8 @@ Synthetic contract in cents; not a NuPay capture.
 A digest does not replace field validation and must not serve as the sole authorization. Financial correction is a separate operation linked to the original effect; it neither deletes intent nor turns a confirmed attempt into an event that never occurred. Interest and principal need distinct trails for complete, auditable resolution.
 
 ## Fail after the external effect
+
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]`
 
 ```python
     def test_timeout_restart_and_retry_produce_one_charge(self):
@@ -234,3 +242,95 @@ The demonstrated guarantee depends on correct deduplication by the synthetic pro
 Proceed only when the external contract is confirmed, messaging guides the correct action and the pilot demonstrates fewer repeats without blocking valid purchases. Otherwise limit the change to information recovery and assisted operations. The contribution is to make uncertainty manageable and prevent a lost response from becoming another financial obligation.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py)
+
+## Patterns with proof
+
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]` · `Ports & Adapters [proposal]` · `Spring Boot [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Idempotency Key | IntentClient.pay | restart and retry preserve one provider effect |
+| Intent / Effect Separation | IntentClient.pay | different keys represent different intentions |
+| Ports & Adapters / payment provider | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + resilient HTTP adapter. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · IntentClient.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [P1 · test_timeout_restart_and_retry_produce_one_charge](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L92)
+- [P2 · IntentClient.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [P2 · test_same_amount_can_be_two_explicit_purchases](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L104)
+
+## Execution sequence
+
+![Two local databases. Provider idempotency is an explicit assumption; network exactly-once is not claimed.](../../evidence/sequence-en-10.svg)
+
+Two local databases. Provider idempotency is an explicit assumption; network exactly-once is not claimed.
+
+**Authority and failure boundary**
+
+restart and retry preserve one provider effect. different keys represent different intentions.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [state](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L69)
+
+## Features, stories and acceptance
+
+**F10.1 · Persisted intent · D16–30**
+
+As a customer, I want to retry after a timeout without charging again. Acceptance: restart and retry preserve one provider effect.
+
+**F10.2 · Explicit distinct purchases · D31–60**
+
+As a customer, I want to make two legitimate purchases of the same amount. Acceptance: different keys represent different intentions.
+
+**F10.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F10.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L92)
+- [Acceptance F10.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L104)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 4050.00 | 0.00 | 36000.00 | 180000.00 |
+| Base | 27000.00 | 0.00 | 36000.00 | 180000.00 |
+| Ambitious | 108000.00 | 0.00 | 36000.00 | 180000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -31950.00 | -211950.00 | -213975.00 |
+| Base | -9000.00 | -189000.00 | -202500.00 |
+| Ambitious | 72000.00 | -108000.00 | -162000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: confirmed duplicates per intent. Threat: treating every network error as duplication. |
+| Unit economics | Ambiguous intents × confirmed rate × prevention × incident cost; principal is not a gain. |
+| Proposed experiment | Use shadow recovery and fault tests before an app/partner canary, keeping authorization policy constant. |
+| Stop rule | Stop for a new duplicate, blocked legitimate purchase or lost traceability. |
+
+- [Reclame AQUI · ID 241843991](https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

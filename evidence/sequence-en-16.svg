@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Campaign: due date before payout</title>
+<desc id="desc">signed_cents is a signed amount, not a digital signature. This bounded illustration sends no real money.</desc>
+<defs><marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7c22bf"/></marker><marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#087f8c"/></marker></defs>
+<rect x="0" y="0" width="1200" height="800" rx="20" fill="#fcfbfe"/>
+<text x="32" y="32" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="start" >SEQUENCE 16</text>
+<text x="32" y="58" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#251936" text-anchor="start" >Campaign: due date before payout</text>
+<g data-participant="custody">
+<line x1="100.0" y1="168" x2="100.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="custody" x="12.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<circle cx="100.0" cy="90" r="5.5" fill="none" stroke="#6c6178" stroke-width="1.8"/><path d="M91.0,107 Q100.0,90 109.0,107" fill="none" stroke="#6c6178" stroke-width="1.8"/>
+<text x="100" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Custody</text>
+<text x="100" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >ROLE / INTEGRATION</text>
+</g>
+<g data-participant="model">
+<line x1="350.0" y1="168" x2="350.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="model" x="262.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="python" x="322.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,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"/>
+<text x="350" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Campaign</text>
+<text x="350" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >PYTHON · LAB</text>
+</g>
+<g data-participant="mem">
+<line x1="600.0" y1="168" x2="600.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="mem" x="512.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="python" x="572.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,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"/>
+<text x="600" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >In-memory state</text>
+<text x="600" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >PYTHON · LAB</text>
+</g>
+<g data-participant="app">
+<line x1="850.0" y1="168" x2="850.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="app" x="762.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<image data-logo="flutter" x="822.0" y="82" width="56" height="28" xlink:href="data:image/png;base64,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"/>
+<text x="850" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Proposed app</text>
+<text x="850" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >FLUTTER · PROPOSED</text>
+</g>
+<g data-participant="u">
+<line x1="1100.0" y1="168" x2="1100.0" y2="738" stroke="#d7cddd" stroke-width="1.4" stroke-dasharray="4 6"/>
+<rect data-card="u" x="1012.0" y="76" width="176" height="92" rx="14" fill="white" stroke="#e4dbe9" stroke-width="1.3"/>
+<circle cx="1100.0" cy="90" r="5.5" fill="none" stroke="#6c6178" stroke-width="1.8"/><path d="M1091.0,107 Q1100.0,90 1109.0,107" fill="none" stroke="#6c6178" stroke-width="1.8"/>
+<text x="1100" y="138" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="bold" fill="#251936" text-anchor="middle" >Customer</text>
+<text x="1100" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12.4" font-weight="bold" fill="#6c6178" text-anchor="middle" >ROLE / INTEGRATION</text>
+</g>
+<rect data-alt="frame" x="57" y="478" width="1127" height="259" rx="10" fill="#f8f4fb" fill-opacity="0.8" stroke="#ccbadb" stroke-width="1.2"/>
+<line x1="57" y1="605" x2="1184" y2="605" stroke="#ccbadb" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="100.0" y1="478" x2="100.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="350.0" y1="478" x2="350.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="600.0" y1="478" x2="600.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="850.0" y1="478" x2="850.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<line x1="1100.0" y1="478" x2="1100.0" y2="737" stroke="#d7cddd" stroke-width="1.3" stroke-dasharray="4 6"/>
+<g data-message="1" data-scope="lab" data-source="custody" data-target="model">
+<rect data-label-bed="1" x="125.43625" y="172" width="199.1275" height="44" rx="4" fill="#fcfbfe"/>
+<text x="225" y="190" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="1">Record transfer signed</text>
+<text x="225" y="212" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="1">amount</text>
+<line data-message-arrow="1" x1="100.0" y1="220" x2="343.0" y2="220" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="1" points="349.0,220 337.0,215 337.0,225" fill="#7c22bf"/>
+<circle cx="29" cy="200" r="17" fill="#7c22bf"/>
+<text x="29" y="206" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >1</text>
+<text x="59" y="206" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="2" data-scope="lab" data-source="model" data-target="mem">
+<rect data-label-bed="2" x="370.284" y="239" width="209.43200000000002" height="19" rx="4" fill="#fcfbfe"/>
+<text x="475" y="255" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="2">Deduplicate by event_id</text>
+<line data-message-arrow="2" x1="350.0" y1="270" x2="593.0" y2="270" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="2" points="599.0,270 587.0,265 587.0,275" fill="#7c22bf"/>
+<circle cx="29" cy="250" r="17" fill="#7c22bf"/>
+<text x="29" y="256" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >2</text>
+<text x="59" y="256" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="3" data-scope="lab" data-source="app" data-target="model">
+<rect data-label-bed="3" x="484.4985" y="289" width="231.00300000000001" height="19" rx="4" fill="#fcfbfe"/>
+<text x="600" y="305" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="3">Calculate eligible schedule</text>
+<line data-message-arrow="3" x1="850.0" y1="320" x2="357.0" y2="320" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="3" points="351.0,320 363.0,315 363.0,325" fill="#7c22bf"/>
+<circle cx="29" cy="300" r="17" fill="#7c22bf"/>
+<text x="29" y="306" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >3</text>
+<text x="59" y="306" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="4" data-scope="lab" data-source="model" data-target="app">
+<rect data-label-bed="4" x="496.81025" y="339" width="206.3795" height="19" rx="4" fill="#fcfbfe"/>
+<text x="600" y="355" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="4">Total and ten due dates</text>
+<line data-message-arrow="4" x1="350.0" y1="370" x2="843.0" y2="370" stroke="#7c22bf" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="4" points="849.0,370 837.0,365 837.0,375" fill="#7c22bf"/>
+<circle cx="29" cy="350" r="17" fill="#7c22bf"/>
+<text x="29" y="356" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >4</text>
+<text x="59" y="356" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="5" data-scope="integration" data-source="app" data-target="u">
+<rect data-label-bed="5" x="896.50775" y="372" width="156.9845" height="44" rx="4" fill="#fcfbfe"/>
+<text x="975" y="390" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="5">Show eligible and</text>
+<text x="975" y="412" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="5">upcoming</text>
+<line data-message-arrow="5" x1="850.0" y1="420" x2="1093.0" y2="420" stroke="#087f8c" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="5" points="1099.0,420 1087.0,415 1087.0,425" fill="#087f8c"/>
+<circle cx="29" cy="400" r="17" fill="#087f8c"/>
+<text x="29" y="406" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >5</text>
+<text x="59" y="406" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#087f8c" text-anchor="middle" >P</text>
+</g>
+<g data-message="6" data-scope="lab" data-source="app" data-target="model">
+<rect data-label-bed="6" x="476.784" y="439" width="246.43200000000002" height="19" rx="4" fill="#fcfbfe"/>
+<text x="600" y="455" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="6">Pay with maintenance check</text>
+<line data-message-arrow="6" x1="850.0" y1="470" x2="357.0" y2="470" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="6" points="351.0,470 363.0,465 363.0,475" fill="#7c22bf"/>
+<circle cx="29" cy="450" r="17" fill="#7c22bf"/>
+<text x="29" y="456" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >6</text>
+<text x="59" y="456" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<text x="72" y="494" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="bold" fill="#7c22bf" text-anchor="start" data-branch="0">alt · Due, with maintenance approved</text>
+<g data-message="7" data-scope="lab" data-source="model" data-target="mem">
+<rect data-label-bed="7" x="379.02525" y="499" width="191.9495" height="44" rx="4" fill="#f8f4fb"/>
+<text x="475" y="517" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="7">Freeze plan and store</text>
+<text x="475" y="539" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="7">payment</text>
+<line data-message-arrow="7" x1="350.0" y1="547" x2="593.0" y2="547" stroke="#7c22bf" stroke-width="2"/>
+<polygon data-arrowhead="7" points="599.0,547 587.0,542 587.0,552" fill="#7c22bf"/>
+<circle cx="29" cy="527" r="17" fill="#7c22bf"/>
+<text x="29" y="533" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >7</text>
+<text x="59" y="533" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="8" data-scope="lab" data-source="model" data-target="app">
+<rect data-label-bed="8" x="501.463" y="566" width="197.07399999999998" height="19" rx="4" fill="#f8f4fb"/>
+<text x="600" y="582" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="8">Return due installment</text>
+<line data-message-arrow="8" x1="350.0" y1="597" x2="843.0" y2="597" stroke="#7c22bf" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="8" points="849.0,597 837.0,592 837.0,602" fill="#7c22bf"/>
+<circle cx="29" cy="577" r="17" fill="#7c22bf"/>
+<text x="29" y="583" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >8</text>
+<text x="59" y="583" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<text x="72" y="621" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="bold" fill="#7c22bf" text-anchor="start" data-branch="1">else · Installment not yet due</text>
+<g data-message="9" data-scope="lab" data-source="model" data-target="app">
+<rect data-label-bed="9" x="531.7845" y="643" width="136.43099999999998" height="19" rx="4" fill="#f8f4fb"/>
+<text x="600" y="659" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="9">Reject: not due</text>
+<line data-message-arrow="9" x1="350.0" y1="674" x2="843.0" y2="674" stroke="#7c22bf" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="9" points="849.0,674 837.0,669 837.0,679" fill="#7c22bf"/>
+<circle cx="29" cy="654" r="17" fill="#7c22bf"/>
+<text x="29" y="660" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >9</text>
+<text x="59" y="660" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#7c22bf" text-anchor="middle" >L</text>
+</g>
+<g data-message="10" data-scope="integration" data-source="app" data-target="u">
+<rect data-label-bed="10" x="875.93575" y="676" width="198.1285" height="44" rx="4" fill="#f8f4fb"/>
+<text x="975" y="694" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="10">Show date, no fictional</text>
+<text x="975" y="716" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="normal" fill="#251936" text-anchor="middle" data-message-label="10">credit</text>
+<line data-message-arrow="10" x1="850.0" y1="724" x2="1093.0" y2="724" stroke="#087f8c" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon data-arrowhead="10" points="1099.0,724 1087.0,719 1087.0,729" fill="#087f8c"/>
+<circle cx="29" cy="704" r="17" fill="#087f8c"/>
+<text x="29" y="710" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" >10</text>
+<text x="59" y="710" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#087f8c" text-anchor="middle" >P</text>
+</g>
+<text x="32" y="765" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="normal" fill="#6c6178" text-anchor="start" >L · Lab contract     P · Proposed interaction     Dashed = return</text>
+<text x="32" y="788" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="normal" fill="#6c6178" text-anchor="start" >Independent external model · Does not describe Nubank’s internal architecture.</text>
+</svg>

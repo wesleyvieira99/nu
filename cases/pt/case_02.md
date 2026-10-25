@@ -40,6 +40,8 @@ O estado da jornada combina duas informações independentes: frescor daquele sa
 
 ## Núcleo executável
 
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]`
+
 ```python
     def read(self, owner, now):
         if owner != self.owner:
@@ -73,6 +75,8 @@ O modelo permite exibir o último valor acompanhado de sua data, mas nunca recom
 
 ## Implementação na stack
 
+`Monotonic Versioning [proposal]` · `Freshness Envelope [proposal]`
+
 ```dart
 String balanceLabel(Map<String, Object?> view) {
   // Proposed presentation only; never authorizes a transfer.
@@ -97,6 +101,8 @@ Eu verificaria leitura por tecnologia assistiva, localização do horário e com
 - [Dart — Switch statements](https://dart.dev/language/branches)
 
 ## Contratos e propriedade
+
+`Monotonic Versioning [proposal]` · `Freshness Envelope [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -124,6 +130,8 @@ A versão pertence à fonte e não ao número de refreshes do cliente. Dois snap
 A duração de validade deve refletir o contrato do dado e ser configurada pelo responsável financeiro, não escolhida arbitrariamente pela UI. Telemetria registra idade agregada e estado, evitando conta ou valor como rótulos. A conciliação usa acesso restrito para investigar exemplos. A expiração de um aviso de incidente nunca modifica esses contratos.
 
 ## Verificação adversarial
+
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]`
 
 ```python
     def test_incident_expiry_does_not_refresh_balance(self):
@@ -222,3 +230,95 @@ O pacote de integração deve responder quem emite a versão, como o tempo é ob
 - Versão conflitante gera investigação.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py)
+
+## Padrões com prova no código
+
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Monotonic Versioning | BalanceView.publish | versão antiga não substitui a mais recente |
+| Freshness Envelope | BalanceView.read | no instante de expiração, o snapshot é tratado como desatualizado |
+| CQRS / stale-aware projection | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + typed response DTO. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · BalanceView.publish](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L27)
+- [P1 · test_concurrent_versions_keep_newest](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L84)
+- [P2 · BalanceView.read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L49)
+- [P2 · test_exact_expiry_is_stale](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L93)
+
+## Sequência de execução
+
+![O relógio e a fonte são confiados; o lock cobre um processo. Incidente não renova saldo.](../../evidence/sequence-pt-02.svg)
+
+O relógio e a fonte são confiados; o lock cobre um processo. Incidente não renova saldo.
+
+**Autoridade e fronteira de falha**
+
+versão antiga não substitui a mais recente. sem snapshot, a leitura retorna desconhecido.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [publish](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L27)
+- [read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L49)
+
+## Features, histórias e aceite
+
+**F02.1 · Saldo com frescor explícito · D16–30**
+
+Como cliente, quero saber quando o saldo foi confirmado pela fonte. Aceite: versão antiga não substitui a mais recente.
+
+**F02.2 · Ausência não é saldo zero · D31–60**
+
+Como cliente, quero distinguir falha de consulta de ausência de dinheiro. Aceite: sem snapshot, a leitura retorna desconhecido.
+
+**F02.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F02.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L84)
+- [Aceite F02.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L118)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 2800.00 | 0.00 | 5000.00 | 150000.00 |
+| Base | 16800.00 | 0.00 | 8000.00 | 150000.00 |
+| Ambicioso | 50400.00 | 0.00 | 12000.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -2200.00 | -176400.00 | -193200.00 |
+| Base | 8800.00 | -44400.00 | -145200.00 |
+| Ambicioso | 38400.00 | 310800.00 | 8400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contatos por sessão exposta. Ameaça: comparar incidentes de intensidades diferentes. |
+| Economia por unidade | Incidentes × sessões afetadas × redução de contato × custo; não atribuir melhoria de saldo à comunicação. |
+| Experimento proposto | Comparar episódios ou coortes equivalentes; segmentar origem, versão e frescor, mantendo incerteza visível. |
+| Critério de parada | Parar por rótulo de saldo atual sem evidência, divergência de valor ou repetição insegura. |
+
+- [Canaltech](https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

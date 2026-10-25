@@ -1,122 +1,123 @@
 {
-  "accessed": "2026-10-23",
+  "case_evidence_accessed": "2026-10-23",
+  "media_and_profile_accessed": "2026-10-25",
   "assets": {
     "nubank": {
-      "id": "nubank",
-      "path": "evidence/nubank.svg",
-      "url": "https://www.datomic.com/images/customers/01_nulogo_the-purple.svg",
-      "source": "https://www.datomic.com/",
-      "bytes": 1423,
+      "path": "evidence/nubank.png",
+      "source": "https://nu.com/en/about",
+      "url": "https://nu.com/en/about",
       "kind": "logo",
-      "sha256": "551f5f6cfe6ca40c64c7af69ebbe8320e3396b4b3539548404dbcee05d4ff5bc"
+      "bytes": 17326,
+      "name": "Nubank",
+      "sha256": "f852cc486c72129936e07594e88c5fbcf08daf7f93d58c4ae14181eeeab045fc"
     },
     "clojure": {
-      "id": "clojure",
       "path": "evidence/clojure.png",
-      "url": "https://clojure.org/images/clojure-logo-120b.png",
       "source": "https://clojure.org/",
-      "bytes": 4021,
+      "url": "https://clojure.org/images/clojure-logo-icon-256.png",
       "kind": "logo",
-      "sha256": "4fbe07080f09fa408af17de574c9a636638347dabdfe406ec09d7e045c8e8939"
+      "bytes": 70958,
+      "name": "Clojure",
+      "sha256": "63a0f5cb998a1565043d270c4bb54c29c12bfca5cacdf4760f059e3c6838d899"
     },
     "datomic": {
-      "id": "datomic",
-      "path": "evidence/datomic.svg",
-      "url": "https://www.datomic.com/images/Datomic%20wordmark%20horizontal.svg",
+      "path": "evidence/datomic.png",
       "source": "https://www.datomic.com/",
-      "bytes": 10470,
+      "url": "https://www.datomic.com/images/Datomic%20wordmark%20horizontal.svg",
       "kind": "logo",
-      "sha256": "0d15eb5d9a4a566f1f7650dc4465dc691522107cea3edae908b40000675b02b3"
+      "bytes": 19364,
+      "name": "Datomic",
+      "sha256": "5d10a06bac3497161d4168536fb297704c1c840b24c61da5f21514d07121e700"
     },
     "kafka": {
-      "id": "kafka",
       "path": "evidence/kafka.png",
-      "url": "https://kafka.apache.org/logos/kafka_logo--simple.png",
-      "source": "https://kafka.apache.org/",
-      "bytes": 3233,
+      "source": "https://kafka.apache.org/logos/",
+      "url": "https://kafka.apache.org/logos/kafka-logo-wide.png",
       "kind": "logo",
-      "sha256": "3cfcbb2acf90114ffc5b9287a336487c4872be230e4553bdca7f2a09be6a7d33"
+      "bytes": 17345,
+      "name": "Apache Kafka",
+      "sha256": "3ed77405cd2287c2b21ca648e84a5d7a1668ba7fb32dd196649039911e3b74e4"
     },
     "prometheus": {
-      "id": "prometheus",
-      "path": "evidence/prometheus.svg",
-      "url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "path": "evidence/prometheus.png",
       "source": "https://prometheus.io/",
-      "bytes": 1028,
+      "url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
       "kind": "logo",
-      "sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc"
+      "bytes": 37884,
+      "name": "Prometheus",
+      "sha256": "1c2e38c92a06b6e8cc6b2a35c03f774491c3f30d37a41707dcbbd94240489e9c"
     },
     "flutter": {
-      "id": "flutter",
-      "path": "evidence/flutter.svg",
-      "url": "https://flutter.dev/assets/icon_flutter.817b4a56b047d0d36b338dd9ffd44dbd.svg",
+      "path": "evidence/flutter.png",
       "source": "https://flutter.dev/brand",
-      "bytes": 9431,
+      "url": "https://flutter.dev/assets/icon_flutter.817b4a56b047d0d36b338dd9ffd44dbd.svg",
       "kind": "logo",
-      "sha256": "147e0e0ed83205719f0614c5133595f4b68e198ca6e2931bf4b65383a15f37d5"
+      "bytes": 34777,
+      "name": "Flutter",
+      "sha256": "125afd5977234702321cfdb36f6e6d2e63f3e1a9e3e9c9d227618615e49c17d2"
     },
     "dart": {
-      "id": "dart",
-      "path": "evidence/dart.svg",
-      "url": "https://dart.dev/assets/img/logo/dart-192.svg",
+      "path": "evidence/dart.png",
       "source": "https://dart.dev/",
-      "bytes": 1631,
+      "url": "https://dart.dev/assets/img/logo/dart-192.svg",
       "kind": "logo",
-      "sha256": "f56021f03f95c46f1f2bcefab7de3926c82efa88a80afdd6ff797a5d3865c7a0"
+      "bytes": 42121,
+      "name": "Dart",
+      "sha256": "45f10f94ba9f818e0882e1a588cd4df226398d6ebdc0197cf31bc5ca7aa75dbe"
     },
     "python": {
-      "id": "python",
-      "path": "evidence/python.svg",
-      "url": "https://www.python.org/static/community_logos/python-logo-generic.svg",
+      "path": "evidence/python.png",
       "source": "https://www.python.org/community/logos/",
-      "bytes": 15301,
+      "url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
       "kind": "logo",
-      "sha256": "0305d6b2bb2e2761502d072e8e2db1248dbd1a99f51fb4b4bcb9e43c486ef6b2"
+      "bytes": 49907,
+      "name": "Python",
+      "sha256": "942b660492e5ccdcd836f7fa3d0b46717a06ccfdd77347a050deba3e50fc1171"
     },
     "kubernetes": {
-      "id": "kubernetes",
-      "path": "evidence/kubernetes.svg",
-      "url": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg",
+      "path": "evidence/kubernetes.png",
       "source": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg",
-      "bytes": 11626,
+      "url": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg",
       "kind": "logo",
-      "sha256": "a8f6c3b81e588eb0eee4b5ae707ad11b16d0c5ce132719871e559eed0e61e6bf"
+      "bytes": 51167,
+      "name": "Kubernetes",
+      "sha256": "8a0265b199c247819149d8bb763e0439b268d462d6093228c4f5c24738689928"
     },
     "opentelemetry": {
-      "id": "opentelemetry",
-      "path": "evidence/opentelemetry.svg",
-      "url": "https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg",
+      "path": "evidence/opentelemetry.png",
       "source": "https://opentelemetry.io/",
-      "bytes": 3266,
+      "url": "https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg",
       "kind": "logo",
-      "sha256": "b85ba39c57e614d569b72d70c2353923c1f88ef670bcc98addce2ce2bc7eb9a7"
+      "bytes": 25093,
+      "name": "OpenTelemetry",
+      "sha256": "8f324d13e1241a94d6d3e2d795e147032c3ccb4f0ea6d7e016215cc84274cbb8"
     },
     "postgresql": {
-      "id": "postgresql",
       "path": "evidence/postgresql.png",
-      "url": "https://www.postgresql.org/media/img/about/press/elephant.png",
       "source": "https://www.postgresql.org/",
-      "bytes": 50279,
+      "url": "https://www.postgresql.org/media/img/about/press/elephant.png",
       "kind": "logo",
-      "sha256": "ff92fb5d12a7fa6b23c2eb403d2edf4fbc58ced802021e1f02c3583cb70957be"
+      "bytes": 70438,
+      "name": "PostgreSQL",
+      "sha256": "4009ecf6ed806f3de0467faec35a6466419fb08eac58e8c96809a11ba83043bd"
     },
     "grafana": {
-      "id": "grafana",
-      "path": "evidence/grafana.svg",
-      "url": "https://a-us.storyblok.com/f/567658451994139/143x24/8360e7918b/grafana-header-logo.svg",
+      "path": "evidence/grafana.png",
       "source": "https://grafana.com/",
-      "bytes": 12962,
+      "url": "https://a-us.storyblok.com/f/567658451994139/143x24/8360e7918b/grafana-header-logo.svg",
       "kind": "logo",
-      "sha256": "9069b557771b50b35642fa03564ebca4bd6b608d6603c48185f74024568b922e"
+      "bytes": 22165,
+      "name": "Grafana",
+      "sha256": "47705aa09eaffa546966ea9968df582c011e449f29c3b4d0b63a38eab83c4ac2"
     },
     "java": {
-      "id": "java",
       "path": "evidence/java.png",
-      "url": "https://dev.java/assets/images/java-logo-vector.png",
-      "source": "https://dev.java/",
-      "bytes": 16190,
+      "source": "https://dev.java/duke/",
+      "url": "https://raw.githubusercontent.com/openjdk/duke/master/vector/Hips.svg",
       "kind": "logo",
-      "sha256": "d1f0e101d26d783618e7ed008e2ea148b120c8116d232463832b3b63b8431874"
+      "bytes": 30229,
+      "name": "Java",
+      "sha256": "4448f883071102ad6f08ce888129b2c4a00def411ff2d1e94c021ac6e578ea17"
     },
     "portrait": {
       "id": "portrait",
@@ -146,31 +147,31 @@
       "sha256": "ba0bc51bb344e618180828f7857c17798b1a24437953e5dba55fd89d4b017ebd"
     },
     "aws": {
-      "id": "aws",
-      "path": "evidence/aws.svg",
-      "url": "https://aws.amazon.com/",
+      "path": "evidence/aws.png",
       "source": "https://aws.amazon.com/",
-      "bytes": 7418,
+      "url": "https://aws.amazon.com/",
       "kind": "logo",
-      "sha256": "01fc4590e3e5bf12e857e109dd81090cf6e77ec7d3389980e13e24fe164671fb"
+      "bytes": 22440,
+      "name": "AWS",
+      "sha256": "12129868b8e953cca216ae6368d6b53af78188202b589ab6a5a179475557178a"
     },
     "redis": {
-      "id": "redis",
-      "path": "evidence/redis.svg",
-      "url": "https://redis.io/",
+      "path": "evidence/redis.png",
       "source": "https://redis.io/",
-      "bytes": 2486,
+      "url": "https://redis.io/",
       "kind": "logo",
-      "sha256": "f7a4f008a6df70f7b9bf92a4dbfd74c24d4f33f382a35e9aaa9b3144e73963cb"
+      "bytes": 29279,
+      "name": "Redis",
+      "sha256": "da88886d065a5eb7081342af17502c2b408a60a6944efbbd68a8fb79a0946ba1"
     },
     "typescript": {
-      "id": "typescript",
       "path": "evidence/typescript.png",
-      "url": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
       "source": "https://www.typescriptlang.org/branding/",
-      "bytes": 3278,
+      "url": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
       "kind": "logo",
-      "sha256": "4716ee8a737cdd724dbb20e7f9ad060f0257ed6d736209000a4fcc9b3a2b9b92"
+      "bytes": 17050,
+      "name": "TypeScript",
+      "sha256": "aeb42dfde8241f0ff5b4b181b28f49097812ba623d66f10e7ec71b1b36a8dd4a"
     },
     "nu-engineer": {
       "id": "nu-engineer",
@@ -209,12 +210,13 @@
       "sha256": "40188ecb917d07d0e314771c02ff4cc11056f8b26b9ec2a0f644bca0f78901f5"
     },
     "terraform": {
-      "id": "terraform",
-      "path": "evidence/terraform.svg",
-      "url": "https://raw.githubusercontent.com/hashicorp/design-system/main/packages/flight-icons/svg/terraform-color-16.svg",
+      "path": "evidence/terraform.png",
       "source": "https://github.com/hashicorp/design-system",
+      "url": "https://raw.githubusercontent.com/hashicorp/design-system/main/packages/flight-icons/svg/terraform-color-16.svg",
       "kind": "logo",
-      "sha256": "67f8d31d37fd8c15516569eb8ae400d7b09fff13d6b7214483fe1af4a9449e92"
+      "bytes": 20620,
+      "name": "Terraform",
+      "sha256": "ad35d6795c40fa52b749e295e63729a745178c9880bc77792095eb4f21e8a27c"
     },
     "official-1": {
       "path": "evidence/official-1.png",
@@ -616,293 +618,539 @@
       "sha256": "747161842c7113bcfc77fa8ffb17bc1880e76fbcf1e8bd3b0e591085388394d4",
       "bytes": 41665
     },
+    "cover-poster": {
+      "path": "evidence/cover-poster.jpg",
+      "source": "https://nu.com/en/about",
+      "kind": "photo",
+      "sha256": "2e0858a6e10f41e36758e621b68bd3cdae1e46f16f1f0d285a7bd338b4a55376"
+    },
     "diagram-pt-arquiteturas-1-0": {
       "path": "evidence/diagram-pt-arquiteturas-1-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "b0f3ba66371b7b8985f386ea4f227497f1a6f381afd1df956d8a8d625eca4ee8"
+      "sha256": "a7b4d1805fb2d9ce0d7d82c03c6807218e934e595fe03780b98a8f9b4c8832c3"
     },
     "diagram-pt-arquiteturas-2-0": {
       "path": "evidence/diagram-pt-arquiteturas-2-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "252fb7eb5bda7ec84a940535fc87266b4a02e0a4adb976636bb8ae706060d857"
+      "sha256": "304bdca90a2cf38e0013e48f41e6483919bbb796e30e1d67ae6f4ba40eb945dc"
     },
     "diagram-pt-arquiteturas-3-0": {
       "path": "evidence/diagram-pt-arquiteturas-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "7ca0c9c60af4639b5c29ff18a69d363b94be1fec125f113c51885a3f95a3c5b9"
+      "sha256": "192545535a7f72ca99d8320c9c520a7c6b2724008fac1f684c8235f60642fe2f"
     },
     "diagram-pt-arquiteturas-4-0": {
       "path": "evidence/diagram-pt-arquiteturas-4-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "700d221a603e0692dd2ee681be957f7b88528de6c8bc3b23413c52001b4bae97"
+      "sha256": "e9980e79a26f51a1c55ff29be57a1d37e7460ac1f16850a1aa2a362f67ed39ae"
     },
     "diagram-pt-01-3-0": {
       "path": "evidence/diagram-pt-01-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "873c976a8d2178a169b613eb3e655dc233c1f8f43572bc2b867eb6b90f7e82a4"
+      "sha256": "c20b390b5d45f59ff3bc18846839f933229ed472a15f3f961e544a6857804cc8"
+    },
+    "sequence-pt-01": {
+      "path": "evidence/sequence-pt-01.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "d8a90b33272117a34b62f86b5992d11ed43958d64e2bc305824e670edbbfe4f1"
     },
     "diagram-pt-02-3-0": {
       "path": "evidence/diagram-pt-02-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "33e32accf5029a4c72d845f0573767cecd8139e469a5e94fda4175271db2bd84"
+      "sha256": "e3fe2fd6bbfd224bada3582382fb61f822f77ab1fa86ff00f8bf3c4eb1b73775"
+    },
+    "sequence-pt-02": {
+      "path": "evidence/sequence-pt-02.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "2cf43bb6389fb11553673e131d395057fa587a0b313c8aadd92cf239eb2200c6"
     },
     "diagram-pt-03-3-0": {
       "path": "evidence/diagram-pt-03-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "267252ab355587b5831707bc0e728fe26df9f0f4a3ba62fc7f2476a1941280bf"
+      "sha256": "6274da6b56d861ba582f3b58487079d1606e801d63e28345c62a905494c09893"
+    },
+    "sequence-pt-03": {
+      "path": "evidence/sequence-pt-03.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "7a43949da1b9b46ba26ff8313bc0d3be53ea82d7c6608a36da3159319f98222a"
     },
     "diagram-pt-04-3-0": {
       "path": "evidence/diagram-pt-04-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "0b60f2e432968dc8d8e5025e9d783739d0822e1fb8e6a0def82124078d3e170e"
+      "sha256": "7e93a9d6c67e7f2ab14f3da9a45309c5f66c36e8637182317332cffbcb7fa8a1"
+    },
+    "sequence-pt-04": {
+      "path": "evidence/sequence-pt-04.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "2a1eb2d22ade17d9240349811f9a54e6225476353e4f1416459c10a4686dbd71"
     },
     "diagram-pt-05-3-0": {
       "path": "evidence/diagram-pt-05-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "507836fecc6886122473f464bf5abedaddb6a170d213d32f3a561ca93f684524"
+      "sha256": "7127a40fed6b0d04ea5dd3d7f674d50378ff9098dcc7e15a9501313da37a74d5"
+    },
+    "sequence-pt-05": {
+      "path": "evidence/sequence-pt-05.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "dd991f3e39d00170355be47bc695f459711f3011c40ea893cc468cd374eedaa9"
     },
     "diagram-pt-06-3-0": {
       "path": "evidence/diagram-pt-06-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "614d1731935f448f8b8d52e03e68094a924f9660f861d29c95d1f444362cb5b9"
+      "sha256": "8703ce5f17fddb7ce169073ecdee6ff2ded68e4f4c42dbdda40191eb54a71be2"
+    },
+    "sequence-pt-06": {
+      "path": "evidence/sequence-pt-06.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "84cc70b64d76df50ca866c81c157b59306ee07ea3336e7a46ddc706f86d8961b"
     },
     "diagram-pt-07-3-0": {
       "path": "evidence/diagram-pt-07-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "dc3b7445073e0c4d8d5f1e60a97300db7f890bdfdb82b08bc846f72a51272194"
+      "sha256": "a338d2101246d73d96f31ae28b8729929475b90d1703d483850a263a78887be0"
+    },
+    "sequence-pt-07": {
+      "path": "evidence/sequence-pt-07.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "50e594f88cbf69b6a6fcaebe2dc284f4d509c90db0dcedd519b7d1ba7d6140de"
     },
     "diagram-pt-08-3-0": {
       "path": "evidence/diagram-pt-08-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "73c238c2c4a8fa0f47eed29dc47f1d7c500888a8007d8c97d493c9e150d15e0b"
+      "sha256": "d8f4e2fa76a9d30737a1f260f5370ba01894117c529ae282fa9a8a84375a7b18"
+    },
+    "sequence-pt-08": {
+      "path": "evidence/sequence-pt-08.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "ec95c4a8a5c598dc1545241abfe45a208b72df1bf8191e0bf7b8e8226f3fa8a8"
     },
     "diagram-pt-09-3-0": {
       "path": "evidence/diagram-pt-09-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "a552b781a5f45ab9916dbaeb3b190120839df2a3d3674d5a7d1bff4791f109a9"
+      "sha256": "a76e50ac4ab44db90c95c29b933629ce5407aa2286ce17d5bc3b5c5078df97fd"
+    },
+    "sequence-pt-09": {
+      "path": "evidence/sequence-pt-09.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "cc1d18002011e300ee9ee818b726e41daabe733d2f044f3a400a6a905fecf9f5"
     },
     "diagram-pt-10-3-0": {
       "path": "evidence/diagram-pt-10-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "91974591a726ff599ae5b78ffaf4d0aacc3c3cbe534e26901eb6dc4416a2b60f"
+      "sha256": "69aa3aab36046ec538b819790eaa3c89445fbacac46ff1fa7d57d78ee1b79c23"
+    },
+    "sequence-pt-10": {
+      "path": "evidence/sequence-pt-10.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "7fdaedc256645c6014e0199d75be41a75214f4c57b7f21219c0f4171d9783375"
     },
     "diagram-pt-11-3-0": {
       "path": "evidence/diagram-pt-11-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "b11211895a5855cde23228c4128a94649b7492b73c02a1251d61c0579eafbb78"
+      "sha256": "dd8fc9907fa1ffac38fbcef1b5a354cf5b0794ffbb050276b0652636a1aa7cf9"
+    },
+    "sequence-pt-11": {
+      "path": "evidence/sequence-pt-11.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "4bbc6eea13630cd394f31cc19b41b7481e6e55a7bd0c306ac8ef7924fa0e52ca"
     },
     "diagram-pt-12-3-0": {
       "path": "evidence/diagram-pt-12-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "384e5c0ef8cfa25d727e56a13b5e4f791985b82bdf16049b04fbfa1a08ef8d6c"
+      "sha256": "778b0d03bc38a14b4bc7d8004acc1bc24db78e382d2eb2527e2bdca4def6c822"
+    },
+    "sequence-pt-12": {
+      "path": "evidence/sequence-pt-12.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "21fcc48b4957d0df378f08823eaea60fce433c4e350ab2ddd87995ac5bca4110"
     },
     "diagram-pt-13-3-0": {
       "path": "evidence/diagram-pt-13-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "0dcfd591aa0b4baeb78233eebabd57adf7df2a1b871a6a7f69871bf9dc539030"
+      "sha256": "8697da79f3aaccdab05c7f67f562d3c7b6191103a2e7d42bbd2241cb651d9d58"
+    },
+    "sequence-pt-13": {
+      "path": "evidence/sequence-pt-13.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "d0c434abab71452281c8e61c7c2bb24b9404277b95214ab509f3b50aad1e5f4c"
     },
     "diagram-pt-14-3-0": {
       "path": "evidence/diagram-pt-14-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "e01071d2158dcbefa2c0347a1dfeb4764cf15acf188292ebd685d95f2571eb41"
+      "sha256": "53092440e29d2a98332f4de7eab2d5d96a4d888b417f3af39ef0bc1553b51af1"
+    },
+    "sequence-pt-14": {
+      "path": "evidence/sequence-pt-14.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "c68d7a631a8eff32654675ff3d8676bc3d64e835adaeb3ac5c1f9eeebd4696cf"
     },
     "diagram-pt-15-3-0": {
       "path": "evidence/diagram-pt-15-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "1d3bb378f0b802d7b28857950affb00588024bcf511b46ac732ca5440362a15b"
+      "sha256": "7009aca79a27f6946575a7af6556c63a0046e1bb0af318fff1195406ac8f5577"
+    },
+    "sequence-pt-15": {
+      "path": "evidence/sequence-pt-15.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "1d779f6e9359963c072c25ca5deb32c4c7707c2d326c8cb4e0a3b2dcf0616d70"
     },
     "diagram-pt-16-3-0": {
       "path": "evidence/diagram-pt-16-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "7b116b84fc0e654030a20edb2e8a2e394be11368e9a9acb36e1f98d6482291fe"
+      "sha256": "00e3fae9e59a2a971794ef653d0624377402606cd519c5d52285a85e347996ec"
+    },
+    "sequence-pt-16": {
+      "path": "evidence/sequence-pt-16.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "02daef5a1d2f9f2b3d4e9a0fde736bbd7b0b65ad832d64f50d3654a729c87934"
     },
     "diagram-pt-17-3-0": {
       "path": "evidence/diagram-pt-17-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "0850d0aebfccb7b0a39e09d28aa84c625ce2742c01b43ef53540393ab8e7f557"
+      "sha256": "794e96e9800ab00e65b651a1f03eebd6f152ec234288f836562e3c881ce71f01"
+    },
+    "sequence-pt-17": {
+      "path": "evidence/sequence-pt-17.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "3d4c1099df275cb39368b5ca8360be1831d8301c4aa7ed9055a8f90984dc1e86"
     },
     "diagram-pt-18-3-0": {
       "path": "evidence/diagram-pt-18-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "97c3395f53efb6910874a8b26c6864a19bc63b56282f7e0088066ead8d7a5025"
+      "sha256": "147aeb15315bc5e3933823ca4abde654ecc3b0e47cfa1519000789dade28f88c"
+    },
+    "sequence-pt-18": {
+      "path": "evidence/sequence-pt-18.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "14538ec34b1af73deb1096f2e5eaf275246047d65abb031fc67fb59a7a8208db"
     },
     "diagram-pt-19-3-0": {
       "path": "evidence/diagram-pt-19-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "aab6dc4ffab058a2390603cafe8bc552782070f7e674783bec0cb3e78df24484"
+      "sha256": "487fd01c51f9862ace0e73d95881dfc0c5c120b14f688c0bb24a1287ad35eacc"
+    },
+    "sequence-pt-19": {
+      "path": "evidence/sequence-pt-19.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "c4d27e2fa0e8167de2c02097b43680d3728ff5044e932bc631818e59fd4066fc"
     },
     "diagram-pt-20-3-0": {
       "path": "evidence/diagram-pt-20-3-0.svg",
       "source": "Desenho autoral · proposta externa",
       "kind": "diagram",
-      "sha256": "922110e9e28be306a7b0efe1c6abbbcdb281fc889725d195e024ecec56f12f96"
+      "sha256": "2bb33fa19a0103258994a4c412ac63c2646c1fd90677c4d2925375cf7796dee7"
+    },
+    "sequence-pt-20": {
+      "path": "evidence/sequence-pt-20.svg",
+      "source": "Desenho autoral · proposta externa",
+      "kind": "sequence",
+      "sha256": "95ac7561f62fe2f11281ab02c24fd1aaaccefc57cf5d3fdf80a70aebff2ff984"
     },
     "diagram-en-arquiteturas-1-0": {
       "path": "evidence/diagram-en-arquiteturas-1-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "909bc2a53dfb50d7cd9b8c20ff72bf8e34616471c5a5b5f10ef90101da27d133"
+      "sha256": "d37c9efcf3516ccb7764735489159d8b56939824eff22a1a2cf7fb0d74ffdeea"
     },
     "diagram-en-arquiteturas-2-0": {
       "path": "evidence/diagram-en-arquiteturas-2-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "854315c5aaf800f006bd2c9b6baa7827af358dfb762d92de61e2f1223320cc11"
+      "sha256": "0ca54bed71e33f4fa040276aec78ad694aa50eeb484be4aa92d4f43c35e1dcaf"
     },
     "diagram-en-arquiteturas-3-0": {
       "path": "evidence/diagram-en-arquiteturas-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "942d50d909881b477e962043535dda275aad3b00ff824c811587c4090bc1b040"
+      "sha256": "e49d7a6c28543b638f64e94a912dc009cb6ecb5652facdffd80f807ed60e6a15"
     },
     "diagram-en-arquiteturas-4-0": {
       "path": "evidence/diagram-en-arquiteturas-4-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "5f1025c630115eb1f53a00424f7f7ac564d9a4eb5a834fbec34aed87f313511c"
+      "sha256": "7b8d454d399459ef5f9d43f9092a9c8387297ecbaf2b76a64103e58c23be1409"
     },
     "diagram-en-01-3-0": {
       "path": "evidence/diagram-en-01-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "98a7cc9e4adb6a53517118d70f36b1f859a9fd3f8e32bba00c8486ca28d04fb7"
+      "sha256": "dcfdc6e6d051f578393639855094994e6fb18aed2c52f502f0e66455d45b5ae8"
+    },
+    "sequence-en-01": {
+      "path": "evidence/sequence-en-01.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "3702fb2decf4b498317116985fcf8a2ce82ec3ab02ea1a05f5f5baebe90bad9e"
     },
     "diagram-en-02-3-0": {
       "path": "evidence/diagram-en-02-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "c22d7489609ee0828215654a8f3a1e51f03cb941584ed0c0c0d3f7c11a308141"
+      "sha256": "2be416255f1e864d31372457aa21ac091ebbd0b7efde01b4d1baf034a8cadaa0"
+    },
+    "sequence-en-02": {
+      "path": "evidence/sequence-en-02.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "4e7d1c608026d83c44e32282e1b342fc34165523fbd214f1977f290cc9d27632"
     },
     "diagram-en-03-3-0": {
       "path": "evidence/diagram-en-03-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "85d2ecf488929db4926decac47945bb92b16d5b7c52403a149869900898f7e79"
+      "sha256": "d692c540c8b76a664d4301fb2f02a7551b969c3c4f89a8cc7e61b7a06bf97484"
+    },
+    "sequence-en-03": {
+      "path": "evidence/sequence-en-03.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "beb93d7eeb65175488f9885214bd5e5e6ba432312278239d81885993455988e0"
     },
     "diagram-en-04-3-0": {
       "path": "evidence/diagram-en-04-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "4afad08565c04c069d6d912814cd03fcd7dc2bbd54df00c334e1cc8e5c00bf76"
+      "sha256": "70805e5ad1a3b9900334eb1f4e06d85979e6ec6708e5e7ac2998dff3a6262840"
+    },
+    "sequence-en-04": {
+      "path": "evidence/sequence-en-04.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "7c3a16ef600221e88933cc0dd050adc7caa65ff0b4115841e0889f0d48c36699"
     },
     "diagram-en-05-3-0": {
       "path": "evidence/diagram-en-05-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "18fe02bf6775925791a0475f80bf4fe20482f17e52f7e2d8fca57167b2b47db4"
+      "sha256": "60eb4d54e634967fd61b6ab7691b93f4f7a4e015a5481d168b59becb9fdece5d"
+    },
+    "sequence-en-05": {
+      "path": "evidence/sequence-en-05.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "3035a3714231705b0c3f01776db897848b697416c8ac82f5016d1b554744cca3"
     },
     "diagram-en-06-3-0": {
       "path": "evidence/diagram-en-06-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "60b48191cf3db0c4293e6b42bab0b3768553925e450cabfea3b46e74a7959744"
+      "sha256": "ca3d6b1e653ac5bd855cc5b5d590ee5e011ff83e5b66e5b602fba5e6c14bf6d0"
+    },
+    "sequence-en-06": {
+      "path": "evidence/sequence-en-06.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "de724b4b6482aea4c4bd675cde857e5dbc9ad42c041a42ce286b198b4a0b5ad0"
     },
     "diagram-en-07-3-0": {
       "path": "evidence/diagram-en-07-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "fe9cf0acaf514e1136f2af5d06df09772600205a5b2a0ae621de88c75f979f28"
+      "sha256": "1912f674244faaf21cd0171aafb880c234b47b5723eae708538664e55371a682"
+    },
+    "sequence-en-07": {
+      "path": "evidence/sequence-en-07.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "0520e207b5bd1a77d2125eae9c934167e97a88e5031cd912b93ef74a62c36141"
     },
     "diagram-en-08-3-0": {
       "path": "evidence/diagram-en-08-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "29b7d9b1322cf0d3892904ffd5a5836d94422be5bd00bc7efc80f72fa154db75"
+      "sha256": "9aa48b15eb307db603aebdc98530877e0b9e4087258a66fc820e44c8c4f8dfe4"
+    },
+    "sequence-en-08": {
+      "path": "evidence/sequence-en-08.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "c70341c2addc6099889681635269d0500d2f73ce86c44f14ab4f5c2b7f81d1dd"
     },
     "diagram-en-09-3-0": {
       "path": "evidence/diagram-en-09-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "2201126c5d73f236b419cdc0f8326bac69ba5e3a451add42fb7cb66339c6c99f"
+      "sha256": "1879f89d519093e9540b3e2a0d43e2bb020f81b080521001953c01e0e8053512"
+    },
+    "sequence-en-09": {
+      "path": "evidence/sequence-en-09.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "7cedfc44c733dbfa3a9619c647e77c2b2daac08ebd90bef3f7758aacb577aaa7"
     },
     "diagram-en-10-3-0": {
       "path": "evidence/diagram-en-10-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "56bd8ac62661898c62b14cf120203f3098aca90de5f7ee88ac2c6f3111c2f1a5"
+      "sha256": "1e34641876135e85d528152e16f38406d46ecb5384819ee4c556c2fe185e342a"
+    },
+    "sequence-en-10": {
+      "path": "evidence/sequence-en-10.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "29451b31357a4427455ed69e6ef3d26d61be627d6e311ce62aee3359ffd99378"
     },
     "diagram-en-11-3-0": {
       "path": "evidence/diagram-en-11-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "61d969753bc2a557bfa58cc6748e483a087814e2ca34ca134379055227d19301"
+      "sha256": "3d3d0263970e620038123765b11ab33f5a896074d03484e22d774af894d8d2a0"
+    },
+    "sequence-en-11": {
+      "path": "evidence/sequence-en-11.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "19239a980590c7b82a0243d3b264303f26e8420c4e2fd72bebc0bb5092969994"
     },
     "diagram-en-12-3-0": {
       "path": "evidence/diagram-en-12-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "173eb4ca48df54fb835cc5d862aa3b096ec787029b3f97e60deec3a3c3395067"
+      "sha256": "b0aab52aab3c5bea8d269e51fd6ff66ffd7bf89209904e49fce6b918f95f8a81"
+    },
+    "sequence-en-12": {
+      "path": "evidence/sequence-en-12.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "643c19a9e11b61bbda60672b0fd3e64ddc6931798b8245309180ea953bc0b664"
     },
     "diagram-en-13-3-0": {
       "path": "evidence/diagram-en-13-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "7d1e256bd6b3b78de99674e17f4335f6294268c68ae0b104cfbbb59f4deb030d"
+      "sha256": "0bc92823e53a367cd1ee2925a9a4f5ab388782aeb64cbfdf149825c97dc05498"
+    },
+    "sequence-en-13": {
+      "path": "evidence/sequence-en-13.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "4b74ada9265f1a0171813cb8c50aee6701a253e10212069fa46a52edb9d453fd"
     },
     "diagram-en-14-3-0": {
       "path": "evidence/diagram-en-14-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "5332a223f5a9a6668bac774272ed802365421abcc9671065b6941f0cf9a9a433"
+      "sha256": "add5c24c8583a8fb1fc1631c6ed018dae985934cb11483c9d1b6daaa409c2511"
+    },
+    "sequence-en-14": {
+      "path": "evidence/sequence-en-14.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "070d1c54b2c5bf349f741f5e69f9ea2336ee92111022b157f3e1c10a6710edc3"
     },
     "diagram-en-15-3-0": {
       "path": "evidence/diagram-en-15-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "55eb7c50a392b7dcf0641918742f270aa55debd2656a0ea19f72edc599fb6f36"
+      "sha256": "f35abfd5fe00062a8b117fd3c6513e6b36652e364dba140cb4447bbff0d4152d"
+    },
+    "sequence-en-15": {
+      "path": "evidence/sequence-en-15.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "ce801a35122b0b40df9a22adbfea0870272b697327be54876e887a32ddb78f6f"
     },
     "diagram-en-16-3-0": {
       "path": "evidence/diagram-en-16-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "fe66066c627f1bad64616ce577a0635a22fc8713d37060f8c0cb49cd04b06a30"
+      "sha256": "4d6f2b16d706e4e95d43dc5fad7677c52182e2e914dbef6cd4c7a30513d40c45"
+    },
+    "sequence-en-16": {
+      "path": "evidence/sequence-en-16.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "38d0fd2083aaf2b07ae1d1bb1e5e98573d053540d769fdc766050e5272e6d5aa"
     },
     "diagram-en-17-3-0": {
       "path": "evidence/diagram-en-17-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "036e194dbc6cc13cab03556c30130093ef1dff3b487ae7266634222d9bcc2fa5"
+      "sha256": "1720aeb668793ab5d52ae5ef3d7abdc2a29f066e03fd498acd75b3f42aabf1e2"
+    },
+    "sequence-en-17": {
+      "path": "evidence/sequence-en-17.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "c815c80cb7790ab1ec02abd0fbbafbcbbfc047a198193056d4034e27f3a40804"
     },
     "diagram-en-18-3-0": {
       "path": "evidence/diagram-en-18-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "6cd9d00b0bb75f6253e3f8becdd679e846b91ee0b2689ecdce412a853ff5553d"
+      "sha256": "1ec0318f04a122842b435e051c957519b8548d0a939ecc0e7c3f27b9ed54c3ab"
+    },
+    "sequence-en-18": {
+      "path": "evidence/sequence-en-18.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "a5ae6a575ca70aadc44d405fb7f409422c63b59229cfe2ae649d7285435b9185"
     },
     "diagram-en-19-3-0": {
       "path": "evidence/diagram-en-19-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "50212b6f6cd3baad7dc9520f9a2ba0479e3b63bd8f7a2aa3d44f147bd5530d11"
+      "sha256": "7b3e1116ac5790f16eb2594d7c93b0d36aed054c68c345fbe34ccd9d7c58fb8e"
+    },
+    "sequence-en-19": {
+      "path": "evidence/sequence-en-19.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "3ace48cdd9b616d6ebba4751d342b00ff76bbee2a0661a9483bf980ee344115e"
     },
     "diagram-en-20-3-0": {
       "path": "evidence/diagram-en-20-3-0.svg",
       "source": "Original drawing · external proposal",
       "kind": "diagram",
-      "sha256": "9f5cf245676e763dc0e73ca76c92b2f696c0dd368e971dd861dc7eff552822ac"
+      "sha256": "9c5e9d16946cc3f0c40cf073c93b1e614d293380da44400939ae80ba2addcd1b"
+    },
+    "sequence-en-20": {
+      "path": "evidence/sequence-en-20.svg",
+      "source": "Original drawing · external proposal",
+      "kind": "sequence",
+      "sha256": "6970b0a4bb0baf796ce853827e4b9093b6704fa06ebf41ad85f35d60a3227703"
     }
   }
 }

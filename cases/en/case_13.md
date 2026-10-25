@@ -40,6 +40,8 @@ The screen is not a participant in that transaction: its preview can age. The di
 
 ## Core: two cards, one balance
 
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]`
+
 ```python
     def reserve(self, owner, ident, card, cents):
         if not isinstance(ident, str) or not ident.strip():
@@ -83,6 +85,8 @@ The cap is separate configuration. The laboratory models a synthetic cumulative 
 
 ## An honest app preview
 
+`Transactional Revalidation [proposal]` · `Shared Budget Invariant [proposal]`
+
 ```dart
 class CreditView {
   final int globalAvailableCents;
@@ -110,6 +114,8 @@ The component must distinguish chosen cap from available credit in text, without
 
 ## Credit and budget contracts
 
+`Transactional Revalidation [proposal]` · `Shared Budget Invariant [proposal]`
+
 | Field | What it represents | What it does not |
 | --- | --- | --- |
 | global_available | Credit after reservations | Approval promise |
@@ -136,6 +142,8 @@ Synthetic values; not the private balance from the complaint.
 The interface must not present one account’s data under another session. Cache scope needs account holder, card and revision. Safe decline reasons form a contract between risk and product; detailed logs remain restricted. Public disclosure of fraud signals is unnecessary to explain that virtual cap and approved credit are different concepts.
 
 ## Concurrency attacks the authority
+
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]`
 
 ```python
     def test_two_cards_cannot_overspend_shared_credit(self):
@@ -236,3 +244,95 @@ Laboratory amounts are synthetic examples. The complaint’s real account remain
 The final decision requires improved understanding, semantically correct projections and no policy regression. If evidence shows wording alone is poor, prioritize a small improvement. If concurrent balance contention exists, address authority before presentation. The project is strongest when intervention matches the demonstrated problem rather than maximizing new services.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py)
+
+## Patterns with proof
+
+`Transactional Revalidation [lab]` · `Shared Budget Invariant [lab]` · `Aggregate boundary [proposal]` · `Spring Transactions [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Transactional Revalidation | Credit.reserve | the reservation revalidates current credit instead of trusting the preview |
+| Shared Budget Invariant | Credit.reserve | two cards cannot exceed their shared budget |
+| Aggregate boundary / credit domain | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Transactions + optimistic locking. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Credit.reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+- [P1 · test_stale_preview_cannot_authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L126)
+- [P2 · Credit.reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+- [P2 · test_two_cards_cannot_overspend_shared_credit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L84)
+
+## Execution sequence
+
+![No risk, 3DS, real network or hold expiry is modeled. The synthetic budget has no product billing period.](../../evidence/sequence-en-13.svg)
+
+No risk, 3DS, real network or hold expiry is modeled. The synthetic budget has no product billing period.
+
+**Authority and failure boundary**
+
+the reservation revalidates current credit instead of trusting the preview. two cards cannot exceed their shared budget.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [preview](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L30)
+- [reserve](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39)
+
+## Features, stories and acceptance
+
+**F13.1 · Usable-limit preview · D16–30**
+
+As a customer, I want to understand the card cap and shared credit. Acceptance: the reservation revalidates current credit instead of trusting the preview.
+
+**F13.2 · Single shared reservation · D31–60**
+
+As a customer, I want to prevent simultaneous use above available credit. Acceptance: two cards cannot exceed their shared budget.
+
+**F13.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F13.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L126)
+- [Acceptance F13.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L84)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 6400.00 | 0.00 | 12000.00 | 60000.00 |
+| Base | 32000.00 | 0.00 | 12000.00 | 60000.00 |
+| Ambitious | 96000.00 | 0.00 | 12000.00 | 60000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -5600.00 | -65600.00 | -68800.00 |
+| Base | 20000.00 | -40000.00 | -56000.00 |
+| Ambitious | 84000.00 | 24000.00 | -24000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: contacts caused by ceiling confusion. Threat: mixing legitimate balance changes with stale reads. |
+| Unit economics | Eligible users × avoided contacts × cost; credit and transaction volume are not revenue. |
+| Proposed experiment | Change explanation only, keeping authorization policy; match virtual-card usage and version. |
+| Stop rule | Stop for cross-account leakage, promised approval or out-of-policy authorization. |
+
+- [Reclame AQUI · ID 244706833](https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

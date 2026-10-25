@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "kind": "mp4",
+  "mp4_url": "https://stream.mux.com/UZSKCxTerKjeG81mL3915l7zR006nOR8B/high.mp4",
+  "local_asset": "../docs/assets/media/nu-institutional-official.mp4",
+  "source_url": "https://nu.com/en/about",
+  "original_source_url": "https://international.nubank.com.br/en/about/",
+  "title": {
+    "pt": "Bem-vindo à Nu — vídeo institucional oficial",
+    "en": "Welcome to Nu — official institutional video"
+  },
+  "poster_url": "https://image.mux.com/UZSKCxTerKjeG81mL3915l7zR006nOR8B/thumbnail.jpg",
+  "poster_asset": "../evidence/cover-poster.jpg",
+  "credits": {
+    "pt": "Vídeo e imagem: Nu/Nubank. Reprodução do trecho público exibido no site institucional. Estudo independente, sem afiliação ou endosso.",
+    "en": "Video and image: Nu/Nubank. Public clip displayed on the corporate website. Independent study; no affiliation or endorsement."
+  },
+  "provenance": {
+    "verified_at": "2026-10-25T10:12:10.141617-03:00",
+    "method": "MP4 and poster URLs are present in the official Nu about page HTML; downloads are public CDN resources without authentication or DRM. No YouTube download, trimming, transcoding or synthetic imagery.",
+    "official_page_html_sha256": "5b6fc7c89592ec4bba83fa5f0c74671cceaa65f3c7a10060fbde8de773454d11",
+    "copyright_note": "Public accessibility and an official host are provenance evidence, not an assertion of an open license. Copyright remains with Nu/Nubank."
+  },
+  "file": {
+    "bytes": 4186064,
+    "sha256": "0b84e177261601a36c0ad0028b2b17011019e41dfbd3dfd1c537c938d68a2aae",
+    "duration_seconds": 11.970289,
+    "width": 1920,
+    "height": 1080
+  },
+  "poster": {
+    "bytes": 186819,
+    "sha256": "2e0858a6e10f41e36758e621b68bd3cdae1e46f16f1f0d285a7bd338b4a55376"
+  },
+  "visual_review": {
+    "status": "PASS",
+    "frames_seconds": [
+      1,
+      5,
+      10
+    ],
+    "frames": [
+      "../evidence/source-materials/media/review-1.png",
+      "../evidence/source-materials/media/review-5.png",
+      "../evidence/source-materials/media/review-10.png"
+    ],
+    "observations": "Actual frames show speakers in Nu offices, with a visible Nu mark in the background; clean 1920×1080 source. Short 11.97-second corporate clip; not a technical case-study evidence video."
+  },
+  "integration": {
+    "preferred_src": "../docs/assets/media/nu-institutional-official.mp4",
+    "preferred_poster": "../evidence/cover-poster.jpg",
+    "recommended_defaults": [
+      "muted",
+      "playsinline",
+      "controls",
+      "preload=metadata"
+    ],
+    "reduced_motion": "Use the poster until an explicit play action; do not force motion.",
+    "credit_link": "https://nu.com/en/about"
+  }
+}

@@ -38,6 +38,8 @@ The diagram shows the refund branch; order acknowledgment may close the gap with
 
 ## Timeout opens a case, not a money movement
 
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]`
+
 ```python
     def authorize_refund(self, merchant, payment_id, authorization_id):
         with self.lock:
@@ -82,6 +84,8 @@ The model implements one full refund, not installments or partial refunds. A lat
 
 ## SQL for uniqueness and traceability
 
+`Reconciliation Workflow [proposal]` · `Authority-bound Compensation [proposal]`
+
 ```sql
 CREATE TABLE refund_receipt (
   merchant_id TEXT NOT NULL,
@@ -105,6 +109,8 @@ The constraint protects refund identity but does not make an external effect ato
 The commercial key includes the merchant, preventing collisions between identical order numbers at different stores. Support queries authorized references rather than direct SQL. The financial receipt should explain how the credit appears to the customer without promising that commercial history will be deleted or rewritten.
 
 ## Order and payment retain their identities
+
+`Reconciliation Workflow [proposal]` · `Authority-bound Compensation [proposal]`
 
 | Identity | Owner | Rule |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ I would keep financial and commercial states separate with occurrence and receip
 Reconciliation uses amounts and references within a protected zone. Telemetry receives discrepancy category, age and version, without cart contents or unnecessary purchase details. Retention and access must support investigation and existing policies. An operator who edits the case does not automatically gain permission to issue credit.
 
 ## Prove the absence of an unauthorized credit
+
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]`
 
 ```python
     def test_timeout_is_not_refund_authority(self):
@@ -217,3 +225,96 @@ Acceptance includes merchant and payment isolation, verifiable authorization, id
 I would recommend proceeding if the partner can provide and reconcile evidence and the customer can track the case without retelling the story. I would stop if the plan depends on credit without authority or closing pending work to improve metrics. A resolved purchase needs a trustworthy financial outcome and communication the person can recognize.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py)
+
+## Patterns with proof
+
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]` · `Saga-style compensation [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Reconciliation Workflow | Reconciler.investigate | a timeout opens investigation without authorizing a refund |
+| Authority-bound Compensation | Reconciler.refund | authorizations and retries produce one credit |
+| Saga-style compensation / merchant boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + reconciliation adapter. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · LangGraph**
+
+Proposed experiment: LangGraph to gather payment and order signals for operational review. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Reconciler.investigate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L39)
+- [P1 · test_timeout_is_not_refund_authority](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L99)
+- [P2 · Reconciler.refund](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L72)
+- [P2 · test_concurrent_refunds_credit_once](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L110)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Execution sequence
+
+![A timeout opens investigation, not refund authority. Merchant and writer are trusted model adapters.](../../evidence/sequence-en-20.svg)
+
+A timeout opens investigation, not refund authority. Merchant and writer are trusted model adapters.
+
+**Authority and failure boundary**
+
+a timeout opens investigation without authorizing a refund. authorizations and retries produce one credit.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [investigate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L39)
+- [refund](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L72)
+
+## Features, stories and acceptance
+
+**F20.1 · Investigation with a next step · D16–30**
+
+As a customer, I want to locate an order after payment confirmation. Acceptance: a timeout opens investigation without authorizing a refund.
+
+**F20.2 · Authorized compensation · D31–60**
+
+As a customer, I want to receive an approved refund without duplicate credit. Acceptance: authorizations and retries produce one credit.
+
+**F20.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F20.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L99)
+- [Acceptance F20.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L110)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. BRL-days of unresolved exposure are excluded from benefit; they are not profit.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 5000.00 | 0.00 | 2000.00 | 60000.00 |
+| Base | 7500.00 | 0.00 | 2000.00 | 60000.00 |
+| Ambitious | 10000.00 | 0.00 | 2000.00 | 60000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | 3000.00 | -24000.00 | -54000.00 |
+| Base | 5500.00 | 6000.00 | -39000.00 |
+| Ambitious | 8000.00 | 36000.00 | -24000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: reconciliation minutes per case. Threat: closing unsupported pending cases to shrink backlog. |
+| Unit economics | Cases × minutes released / 60 × hourly cost; BRL-day exposure is a monitoring measure, not an additive benefit. |
+| Proposed experiment | Match merchant contracts, separate aged cases and verify useful action and reconciled refunds. |
+| Stop rule | Stop for a duplicate credit; retain unanswered cases until a reliable state exists. |
+
+- [Reclame AQUI · ID 255046021](https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

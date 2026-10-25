@@ -24,6 +24,8 @@ A proposta foca rastreabilidade da confirmação e responsabilidade pelo próxim
 
 Tutorial oficial do Nubank, 10/10/2025. Contexto do produto; não é filmagem da reclamação.
 
+[Source video / Vídeo da fonte](https://www.youtube.com/watch?v=0-Sftqs-plI)
+
 Responder a uma mensagem, a operadora registrar a resposta e o número tornar-se ativo são eventos distintos. Minha hipótese falsificável é que um diário correlacionado permitiria localizar a fronteira sem comprovação, reduzindo encaminhamentos circulares. Eu verificaria identificadores compartilhados, contratos de retorno, relógios e política de retentativa com o parceiro, sem supor que um webhook específico causou o episódio.
 
 O vídeo oficial do Nubank sobre portabilidade com chip físico e virtual, publicado em 10/10/2025, oferece contexto de produto. Não é registro deste incidente nem comprova que a confirmação chegou à doadora. Eu usaria o material para alinhar instruções de autoatendimento com os estados observáveis e validar se uma pessoa consegue identificar quem deve agir em seguida.
@@ -42,6 +44,8 @@ O contrato define quem pode declarar cada etapa. Estado operacional e diário re
 O diário proposto não inclui conteúdo de SMS. Autorização da doadora e ativação da receptora permanecem distintas. Cobrança provisória exige integração e política próprias; este desenho não presume direito de estorno nem altera contratos de telecomunicações.
 
 ## A origem faz parte do evento
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]`
 
 ```python
     def apply(self, event, authenticated_source):
@@ -87,6 +91,8 @@ Cancelamento é terminal para aquela tentativa. Uma ativação atrasada não res
 
 ## Dart: mostrar dependência sem culpar
 
+`Explicit State Machine [proposal]` · `Issuer-bound Events [proposal]`
+
 ```dart
 enum PortState { requested, waitingDonor, authorized, active, cancelled }
 
@@ -109,6 +115,8 @@ Eu evitaria mostrar apenas pendente. A pessoa precisa distinguir instrução que
 Cobrança e portabilidade aparecem como dimensões separadas. Um ajuste financeiro em análise não pode virar linha ativa, nem uma linha cancelada comprova crédito concluído. Mobile consome projeções autorizadas e acessíveis; o domínio decide transições. Eu exigiria revisão conjunta de Operações NuCel e Atendimento antes de publicar os rótulos.
 
 ## Tentativas não compartilham confirmação
+
+`Explicit State Machine [proposal]` · `Issuer-bound Events [proposal]`
 
 | Campo | Significado | Responsável |
 | --- | --- | --- |
@@ -136,6 +144,8 @@ Uma segunda tentativa recebe identidade nova. Evidência da primeira pode ajudar
 O registro público de acompanhamento usa referência opaca e etapa, sem telefone completo. A tabela de resolução de identidade tem acesso mais restrito e retenção definida. O dono da integração revisa quebra de schema com o parceiro; Atendimento não deve interpretar payload bruto nem transformar ausência de evento em acusação contra o cliente.
 
 ## Reproduzir a lacuna entre empresas
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]`
 
 ```python
     def test_user_sms_claim_cannot_authorize_donor(self):
@@ -221,3 +231,96 @@ O checklist exige isolamento entre tentativas, emissor autenticado, deduplicaç�
 Eu recomendaria avançar quando as organizações conseguem resolver uma divergência sintética com referência compartilhada e prazo de retorno. Pararia se a solução depende de ocultar ausência de confirmação ou redefinir cancelamento como sucesso. O revisor deve conseguir apontar em cada seta do desenho qual contrato autoriza o próximo estado.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py)
+
+## Padrões com prova no código
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]` · `Saga-style coordination [proposal]` · `Spring Kafka [proposal]` · `LangGraph [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Explicit State Machine | Portability.apply | ativação tardia não reabre pedido cancelado |
+| Issuer-bound Events | Portability.apply | relato do SMS não substitui evento da doadora |
+| Saga-style coordination / partner boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Kafka + bounded reconciliation worker. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · LangGraph**
+
+Experimento proposto: LangGraph para preparar uma investigação de divergência para a equipe responsável. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Portability.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [P1 · test_late_activation_cannot_revive_cancelled_request](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L84)
+- [P2 · Portability.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [P2 · test_user_sms_claim_cannot_authorize_donor](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L78)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Sequência de execução
+
+![Origens são atores sintéticos autenticados. SMS não equivale à autorização da doadora nem à ativação.](../../evidence/sequence-pt-18.svg)
+
+Origens são atores sintéticos autenticados. SMS não equivale à autorização da doadora nem à ativação.
+
+**Autoridade e fronteira de falha**
+
+relato do SMS não substitui evento da doadora. ativação tardia não reabre pedido cancelado.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+
+## Features, histórias e aceite
+
+**F18.1 · Confirmação por origem · D16–30**
+
+Como cliente, quero identificar qual operadora ainda precisa confirmar. Aceite: relato do SMS não substitui evento da doadora.
+
+**F18.2 · Reconciliação de eventos tardios · D31–60**
+
+Como cliente, quero cancelar sem reativação inesperada. Aceite: ativação tardia não reabre pedido cancelado.
+
+**F18.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F18.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L78)
+- [Aceite F18.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L84)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal. O benefício já cobre uma coorte com seis meses ativos por linha extra; não multiplicar por seis novamente.
+
+líquido_período = benefício × realização − custo_variável − operação; coorte_seis_meses = líquido_período − implementação
+
+Period / Período: `cohort`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 7200.00 | 0.00 | 5000.00 | 20000.00 |
+| Base | 18000.00 | 0.00 | 5000.00 | 20000.00 |
+| Ambicioso | 28800.00 | 0.00 | 5000.00 | 20000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 2200.00 | -17800.00 | -21400.00 |
+| Base | 13000.00 | -7000.00 | -16000.00 |
+| Ambicioso | 23800.00 | 3800.00 | -10600.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: linhas efetivamente ativas por tentativa elegível. Ameaça: encerrar casos difíceis para melhorar média. |
+| Economia por unidade | Ativações extras × seis meses ativos × contribuição mensal; contribuição marginal é hipótese, não ARPAC global. |
+| Experimento proposto | Comparar coortes por doadora e chip, sazonalidade e pendências; medir conclusão real sem empurrar cancelamento. |
+| Critério de parada | Parar por transição sem evidência; manter cancelamentos e pendências no resultado da coorte. |
+
+- [Reclame AQUI · ID 254143071](https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

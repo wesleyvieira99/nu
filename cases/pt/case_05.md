@@ -40,6 +40,8 @@ O app recebe progresso de contato separado de acesso. Confirmar o endereço é a
 
 ## Núcleo executável
 
+`Generation Token [lab]` · `Bounded Retry Budget [lab]`
+
 ```python
     def verify(self, owner, generation, code, now):
         if owner != self.owner:
@@ -76,6 +78,8 @@ O laboratório recebe códigos fixos para testes reprodutíveis. Um serviço rea
 
 ## Implementação na stack
 
+`Generation Token [proposal]` · `Bounded Retry Budget [proposal]`
+
 ```typescript
 // Proposed presentation contract; validate network input separately.
 type RecoveryView =
@@ -100,6 +104,8 @@ A mensagem não expõe o e-mail inteiro nem informa a existência de uma conta p
 - [TypeScript — Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
 ## Contratos e propriedade
+
+`Generation Token [proposal]` · `Bounded Retry Budget [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -127,6 +133,8 @@ A geração muda apenas após atualização de contato autorizada. Cada emissão
 Eventos de entrega devem distinguir aceito, devolvido e expirado sem concluir que a mensagem foi lida. O registro público não fornece tais eventos. Logs evitam códigos e endereços completos; a investigação usa referências protegidas. Alteração de contato não pode permitir que um invasor escolha livremente o destino e se torne titular por receber o próprio código.
 
 ## Verificação adversarial
+
+`Generation Token [lab]` · `Bounded Retry Budget [lab]`
 
 ```python
     def test_contact_change_invalidates_old_code(self):
@@ -220,3 +228,95 @@ O handoff pede serviço de identidade, geração de segredos, armazenamento prot
 - Nenhum código aparece em logs.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py)
+
+## Padrões com prova no código
+
+`Generation Token [lab]` · `Bounded Retry Budget [lab]` · `Hexagonal Architecture [proposal]` · `Spring Security [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Generation Token | ContactRecovery.change_contact | trocar contato invalida o código anterior |
+| Bounded Retry Budget | ContactRecovery.verify | o orçamento de tentativas bloqueia a próxima verificação |
+| Hexagonal Architecture / delivery adapter | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Security + distributed rate limiter. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · ContactRecovery.change_contact](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L21)
+- [P1 · test_contact_change_invalidates_old_code](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L78)
+- [P2 · ContactRecovery.verify](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L46)
+- [P2 · test_budget_exhaustion](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L95)
+
+## Sequência de execução
+
+![Código de teste é fornecido; canal, segredo aleatório e limites distribuídos são integrações futuras.](../../evidence/sequence-pt-05.svg)
+
+Código de teste é fornecido; canal, segredo aleatório e limites distribuídos são integrações futuras.
+
+**Autoridade e fronteira de falha**
+
+trocar contato invalida o código anterior. o orçamento de tentativas bloqueia a próxima verificação.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [change_contact](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L21)
+- [verify](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L46)
+
+## Features, histórias e aceite
+
+**F05.1 · Contato versionado · D16–30**
+
+Como cliente, quero usar apenas o código do contato atual. Aceite: trocar contato invalida o código anterior.
+
+**F05.2 · Tentativas limitadas e retomada · D31–60**
+
+Como cliente, quero retomar a verificação sem permitir tentativas ilimitadas. Aceite: o orçamento de tentativas bloqueia a próxima verificação.
+
+**F05.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F05.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L78)
+- [Aceite F05.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L95)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 4000.00 | 450.00 | 4000.00 | 100000.00 |
+| Base | 28800.00 | 1350.00 | 7000.00 | 100000.00 |
+| Ambicioso | 86400.00 | 2700.00 | 12000.00 | 100000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -450.00 | -105400.00 | -129400.00 |
+| Base | 20450.00 | 145400.00 | -27400.00 |
+| Ambicioso | 71700.00 | 760400.00 | 242000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contatos por recovery_id. Ameaça: confundir emissão, entrega e autorização. |
+| Economia por unidade | Contato evitado menos mensagens enviadas e operação; custo de envio segue no cenário mesmo sob estresse. |
+| Experimento proposto | Comparar jornadas de complexidade semelhante por provedor; medir retomada legítima e carga de revisão. |
+| Critério de parada | Parar por código obsoleto aceito, vazamento de cadastro ou tomada de conta. |
+
+- [Reclame AQUI · ID 242544191](https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

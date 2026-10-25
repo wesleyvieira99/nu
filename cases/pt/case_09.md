@@ -40,6 +40,8 @@ A atualização do limite pode seguir outro ritmo, mas precisa indicar sua vers�
 
 ## Núcleo: alocar ou não alterar nada
 
+`Unit of Work [lab]` · `Conservation Invariant [lab]`
+
 ```python
     def apply(self, ident, amount, plan, crash=False):
         if not isinstance(ident, str) or not ident.strip():
@@ -83,6 +85,8 @@ O exemplo recebe um plano já escolhido; não implementa a prioridade contratual
 
 ## Função pura, escrita transacional
 
+`Unit of Work [proposal]` · `Conservation Invariant [proposal]`
+
 ```clojure
 (defn allocation-valid? [{:keys [received allocations unapplied]}]
   (and (pos-int? received)
@@ -104,6 +108,8 @@ A função verifica conservação, mas não prova que cada obrigação é elegí
 Uma integração com eventos deve gravar alocação e intenção de publicação atomicamente. O consumidor da projeção deduplica pelo identificador e pela revisão financeira. Não basta confiar na ordem do transporte: replay, reprocessamento e mudanças de consumidor podem entregar novamente o mesmo fato. Falhas de publicação deixam trabalho pendente identificável, não autorização para reaplicar o pagamento.
 
 ## Conservar dinheiro e identidade
+
+`Unit of Work [proposal]` · `Conservation Invariant [proposal]`
 
 | Campo | Semântica | Responsável |
 | --- | --- | --- |
@@ -130,6 +136,8 @@ Exemplo sintético: 15.001 recebidos, 15.000 aplicados, 1 não aplicado.
 A revisão de limite inferior à revisão financeira explica que a leitura ainda está atualizando, sem afirmar crédito já disponível. Identificadores não devem expor conta ou contrato em URLs públicas. O suporte recebe o necessário para explicar a alocação; detalhes de terceiros e outras obrigações permanecem protegidos. Retificação deve referenciar o fato anterior e conservar a trilha.
 
 ## Falha parcial não pode virar meia baixa
+
+`Unit of Work [lab]` · `Conservation Invariant [lab]`
 
 ```python
     def test_failure_after_first_write_rolls_everything_back(self):
@@ -225,3 +233,95 @@ O revisor deve conseguir responder de onde veio cada centavo e para onde ele foi
 A decisão de avançar exige uma amostra conciliada, compreensão demonstrada pelo cliente e operação capaz de resolver diferenças. Se houver quebra de conservação, o gate é parar e corrigir a autoridade financeira. Se a escrita estiver correta e apenas a leitura for confusa, o piloto de explicação pode seguir com risco e custo menores.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py)
+
+## Padrões com prova no código
+
+`Unit of Work [lab]` · `Conservation Invariant [lab]` · `Transactional boundary [proposal]` · `Spring Transactions [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Unit of Work | Ledger.apply | falha parcial desfaz todas as alterações |
+| Conservation Invariant | Ledger.receipt | a soma do valor alocado e do restante conserva o valor recebido |
+| Transactional boundary / ledger adapter | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Transactions + integer minor units. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Ledger.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L34)
+- [P1 · test_failure_after_first_write_rolls_everything_back](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L95)
+- [P2 · Ledger.receipt](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L66)
+- [P2 · test_exact_conservation_across_two_targets](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L130)
+
+## Sequência de execução
+
+![Liquidação e ordem contratual vêm de adaptadores; o modelo não demonstra recomposição real de limite.](../../evidence/sequence-pt-09.svg)
+
+Liquidação e ordem contratual vêm de adaptadores; o modelo não demonstra recomposição real de limite.
+
+**Autoridade e fronteira de falha**
+
+falha parcial desfaz todas as alterações. a soma do valor alocado e do restante conserva o valor recebido.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L34)
+- [receipt](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L66)
+
+## Features, histórias e aceite
+
+**F09.1 · Alocação atômica · D16–30**
+
+Como cliente, quero entender onde meu pagamento foi aplicado. Aceite: falha parcial desfaz todas as alterações.
+
+**F09.2 · Recibo por destino · D31–60**
+
+Como responsável pela conciliação, quero conciliar o total pago com cada obrigação. Aceite: a soma do valor alocado e do restante conserva o valor recebido.
+
+**F09.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F09.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L95)
+- [Aceite F09.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L130)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 70800.00 | 0.00 | 60000.00 | 260000.00 |
+| Base | 240000.00 | 0.00 | 60000.00 | 260000.00 |
+| Ambicioso | 676800.00 | 0.00 | 60000.00 | 260000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 10800.00 | -249200.00 | -284600.00 |
+| Base | 180000.00 | -80000.00 | -200000.00 |
+| Ambicioso | 616800.00 | 356800.00 | 18400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contatos e horas de conciliação por pagamento. Ameaça: confundir rede e liquidação. |
+| Economia por unidade | Contato evitado + horas liberadas por mil pagamentos; o valor recebido não integra o benefício. |
+| Experimento proposto | Liberar o recibo sem mudar alocação; comparar produto, financiamento e valor em coortes equivalentes. |
+| Critério de parada | Parar por quebra de conservação, pagamentos repetidos ou contexto entre contas. |
+
+- [Reclame AQUI · ID 242838873](https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

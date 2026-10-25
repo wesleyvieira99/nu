@@ -24,6 +24,8 @@ The proposal focuses on confirmation traceability and responsibility for the nex
 
 Official Nubank tutorial, 10 October 2025. Product context; this is not a recording of the complaint.
 
+[Source video / Vídeo da fonte](https://www.youtube.com/watch?v=0-Sftqs-plI)
+
 Answering a message, the carrier recording the response and the number becoming active are distinct events. My falsifiable hypothesis is that a correlated journal could locate the boundary lacking evidence and reduce circular handoffs. I would inspect shared identifiers, callback contracts, clocks and retry policy with the partner without assuming that a specific webhook caused this episode.
 
 Nubank’s official video about portability with physical and virtual SIMs, published October 10, 2025, provides product context. It is neither a record of this incident nor proof that confirmation reached the donor. I would use it to align self-service instructions with observable states and validate whether someone can identify who should act next.
@@ -42,6 +44,8 @@ The contract defines who may declare each stage. Operational state and journal r
 The proposed journal does not include SMS content. Donor authorization and recipient activation remain distinct. Provisional billing requires its own integration and policy; this design assumes no refund entitlement and changes no telecommunications contract.
 
 ## Origin is part of the event
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]`
 
 ```python
     def apply(self, event, authenticated_source):
@@ -87,6 +91,8 @@ Cancellation is terminal for that attempt. A late activation cannot resurrect th
 
 ## Dart: show dependency without blame
 
+`Explicit State Machine [proposal]` · `Issuer-bound Events [proposal]`
+
 ```dart
 enum PortState { requested, waitingDonor, authorized, active, cancelled }
 
@@ -109,6 +115,8 @@ I would avoid showing only pending. People need to distinguish an instruction th
 Billing and portability appear as separate dimensions. A financial adjustment under review cannot become an active line, and a cancelled line does not prove a completed credit. Mobile consumes authorized, accessible projections; the domain decides transitions. I would require joint NuCel Operations and Support review before publishing labels.
 
 ## Attempts do not share confirmation
+
+`Explicit State Machine [proposal]` · `Issuer-bound Events [proposal]`
 
 | Field | Meaning | Owner |
 | --- | --- | --- |
@@ -136,6 +144,8 @@ A second attempt receives a new identity. Evidence from the first may help Suppo
 The customer-facing tracking record uses an opaque reference and stage, without a full phone number. The identity-resolution table has stricter access and defined retention. The integration owner reviews schema breaks with the partner; Support should neither interpret raw payloads nor turn an absent event into an accusation against the customer.
 
 ## Reproduce the intercompany gap
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]`
 
 ```python
     def test_user_sms_claim_cannot_authorize_donor(self):
@@ -221,3 +231,96 @@ The checklist requires isolation between attempts, authenticated issuers, dedupl
 I would recommend proceeding when the organizations can resolve a synthetic discrepancy using a shared reference and response deadline. I would stop if the solution depends on hiding absent confirmation or redefining cancellation as success. The reviewer should be able to point to each diagram edge and identify which contract authorizes the next state.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py)
+
+## Patterns with proof
+
+`Explicit State Machine [lab]` · `Issuer-bound Events [lab]` · `Saga-style coordination [proposal]` · `Spring Kafka [proposal]` · `LangGraph [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Explicit State Machine | Portability.apply | late activation cannot reopen a cancelled request |
+| Issuer-bound Events | Portability.apply | an SMS claim cannot replace the donor event |
+| Saga-style coordination / partner boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Kafka + bounded reconciliation worker. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · LangGraph**
+
+Proposed experiment: LangGraph to prepare a discrepancy investigation for the responsible team. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Portability.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [P1 · test_late_activation_cannot_revive_cancelled_request](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L84)
+- [P2 · Portability.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [P2 · test_user_sms_claim_cannot_authorize_donor](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L78)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Execution sequence
+
+![Sources are synthetic authenticated actors. SMS is neither donor authorization nor activation.](../../evidence/sequence-en-18.svg)
+
+Sources are synthetic authenticated actors. SMS is neither donor authorization nor activation.
+
+**Authority and failure boundary**
+
+an SMS claim cannot replace the donor event. late activation cannot reopen a cancelled request.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37)
+
+## Features, stories and acceptance
+
+**F18.1 · Source-bound confirmation · D16–30**
+
+As a customer, I want to identify which operator still needs to confirm. Acceptance: an SMS claim cannot replace the donor event.
+
+**F18.2 · Late-event reconciliation · D31–60**
+
+As a customer, I want to cancel without unexpected reactivation. Acceptance: late activation cannot reopen a cancelled request.
+
+**F18.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F18.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L78)
+- [Acceptance F18.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L84)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. Benefit already covers one cohort with six active months per extra line; do not multiply it by six again.
+
+period_net = benefit × realization − variable_cost − run_cost; six_month_cohort = period_net − build_cost
+
+Period / Período: `cohort`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 7200.00 | 0.00 | 5000.00 | 20000.00 |
+| Base | 18000.00 | 0.00 | 5000.00 | 20000.00 |
+| Ambitious | 28800.00 | 0.00 | 5000.00 | 20000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | 2200.00 | -17800.00 | -21400.00 |
+| Base | 13000.00 | -7000.00 | -16000.00 |
+| Ambitious | 23800.00 | 3800.00 | -10600.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: actually active lines per eligible attempt. Threat: closing difficult cases to improve the average. |
+| Unit economics | Extra activations × six active months × monthly contribution; marginal contribution is an assumption, not global ARPAC. |
+| Proposed experiment | Match donor carrier, SIM type and seasonality; track pending cases and real completion without pushing cancellation. |
+| Stop rule | Stop for an unsupported transition; retain cancellations and pending cases in cohort outcomes. |
+
+- [Reclame AQUI · ID 254143071](https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

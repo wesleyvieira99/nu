@@ -1,0 +1,1464 @@
+{
+  "status": "PASS",
+  "cases": 20,
+  "original_scenarios": 60,
+  "net_comparisons": 60,
+  "horizon_comparisons": 60,
+  "stress_scenarios": 60,
+  "invalid_rates_rejected": 7,
+  "source_sha256": "2f04692815e696a6c35bfe0fad84e35bf6b335baa3d4544054ef5ab473617aa7",
+  "normalization_sha256": "4bfae7119da1127a2efcc898214121e681136ad43c0a5f16a56dd2d6acac2df4",
+  "method": "Decimal comparison against all original scenario nets; separate monthly, annual and six-month-cohort horizons; zero/half/full realization; PT/EN numeric parity.",
+  "important_preservations": [
+    "Cases 04/05/06 retain additional-review, message and scan costs as variable costs.",
+    "Case 18 already contains six months of contribution; no second sixfold multiplication.",
+    "Case 19 retains forgone contribution as a separate variable cost.",
+    "Case 20 excludes BRL-day exposure from monetary benefit.",
+    "Cases 03/06 already contain original realizable-capacity fractions; slider is additional stress.",
+    "No aggregate is calculated across cases."
+  ],
+  "checks": [
+    {
+      "case": "01",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": 4000.0,
+      "original_net": 4000.0,
+      "horizon_after_build": -72000.0,
+      "original_horizon": -72000.0,
+      "match": true
+    },
+    {
+      "case": "01",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 32000.0,
+      "original_net": 32000.0,
+      "horizon_after_build": 264000.0,
+      "original_horizon": 264000.0,
+      "match": true
+    },
+    {
+      "case": "01",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 105000.0,
+      "original_net": 105000.0,
+      "horizon_after_build": 1140000.0,
+      "original_horizon": 1140000.0,
+      "match": true
+    },
+    {
+      "case": "02",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -2200.0,
+      "original_net": -2200.0,
+      "horizon_after_build": -176400.0,
+      "original_horizon": -176400.0,
+      "match": true
+    },
+    {
+      "case": "02",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 8800.0,
+      "original_net": 8800.0,
+      "horizon_after_build": -44400.0,
+      "original_horizon": -44400.0,
+      "match": true
+    },
+    {
+      "case": "02",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 38400.0,
+      "original_net": 38400.0,
+      "horizon_after_build": 310800.0,
+      "original_horizon": 310800.0,
+      "match": true
+    },
+    {
+      "case": "03",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -1250.0,
+      "original_net": -1250.0,
+      "horizon_after_build": -195000.0,
+      "original_horizon": -195000.0,
+      "match": true
+    },
+    {
+      "case": "03",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 12500.0,
+      "original_net": 12500.0,
+      "horizon_after_build": -30000.0,
+      "original_horizon": -30000.0,
+      "match": true
+    },
+    {
+      "case": "03",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 42000.0,
+      "original_net": 42000.0,
+      "horizon_after_build": 324000.0,
+      "original_horizon": 324000.0,
+      "match": true
+    },
+    {
+      "case": "04",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -3000.0,
+      "original_net": -3000.0,
+      "horizon_after_build": -146000.0,
+      "original_horizon": -146000.0,
+      "match": true
+    },
+    {
+      "case": "04",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 11280.0,
+      "original_net": 11280.0,
+      "horizon_after_build": 25360.0,
+      "original_horizon": 25360.0,
+      "match": true
+    },
+    {
+      "case": "04",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 57500.0,
+      "original_net": 57500.0,
+      "horizon_after_build": 580000.0,
+      "original_horizon": 580000.0,
+      "match": true
+    },
+    {
+      "case": "05",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -450.0,
+      "original_net": -450.0,
+      "horizon_after_build": -105400.0,
+      "original_horizon": -105400.0,
+      "match": true
+    },
+    {
+      "case": "05",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 20450.0,
+      "original_net": 20450.0,
+      "horizon_after_build": 145400.0,
+      "original_horizon": 145400.0,
+      "match": true
+    },
+    {
+      "case": "05",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 71700.0,
+      "original_net": 71700.0,
+      "horizon_after_build": 760400.0,
+      "original_horizon": 760400.0,
+      "match": true
+    },
+    {
+      "case": "06",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -1100.0,
+      "original_net": -1100.0,
+      "horizon_after_build": -153200.0,
+      "original_horizon": -153200.0,
+      "match": true
+    },
+    {
+      "case": "06",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 10200.0,
+      "original_net": 10200.0,
+      "horizon_after_build": -17600.0,
+      "original_horizon": -17600.0,
+      "match": true
+    },
+    {
+      "case": "06",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 46400.0,
+      "original_net": 46400.0,
+      "horizon_after_build": 416800.0,
+      "original_horizon": 416800.0,
+      "match": true
+    },
+    {
+      "case": "07",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": 3100.0,
+      "original_net": 3100.0,
+      "horizon_after_build": -122800.0,
+      "original_horizon": -122800.0,
+      "match": true
+    },
+    {
+      "case": "07",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 33200.0,
+      "original_net": 33200.0,
+      "horizon_after_build": 238400.0,
+      "original_horizon": 238400.0,
+      "match": true
+    },
+    {
+      "case": "07",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 90000.0,
+      "original_net": 90000.0,
+      "horizon_after_build": 920000.0,
+      "original_horizon": 920000.0,
+      "match": true
+    },
+    {
+      "case": "08",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": 84000.0,
+      "original_net": 84000.0,
+      "horizon_after_build": -156000.0,
+      "original_horizon": -156000.0,
+      "match": true
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": 414000.0,
+      "original_net": 414000.0,
+      "horizon_after_build": 174000.0,
+      "original_horizon": 174000.0,
+      "match": true
+    },
+    {
+      "case": "08",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 960000.0,
+      "original_net": 960000.0,
+      "horizon_after_build": 720000.0,
+      "original_horizon": 720000.0,
+      "match": true
+    },
+    {
+      "case": "09",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": 10800.0,
+      "original_net": 10800.0,
+      "horizon_after_build": -249200.0,
+      "original_horizon": -249200.0,
+      "match": true
+    },
+    {
+      "case": "09",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": 180000.0,
+      "original_net": 180000.0,
+      "horizon_after_build": -80000.0,
+      "original_horizon": -80000.0,
+      "match": true
+    },
+    {
+      "case": "09",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 616800.0,
+      "original_net": 616800.0,
+      "horizon_after_build": 356800.0,
+      "original_horizon": 356800.0,
+      "match": true
+    },
+    {
+      "case": "10",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": -31950.0,
+      "original_net": -31950.0,
+      "horizon_after_build": -211950.0,
+      "original_horizon": -211950.0,
+      "match": true
+    },
+    {
+      "case": "10",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": -9000.0,
+      "original_net": -9000.0,
+      "horizon_after_build": -189000.0,
+      "original_horizon": -189000.0,
+      "match": true
+    },
+    {
+      "case": "10",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 72000.0,
+      "original_net": 72000.0,
+      "horizon_after_build": -108000.0,
+      "original_horizon": -108000.0,
+      "match": true
+    },
+    {
+      "case": "11",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": -8000.0,
+      "original_net": -8000.0,
+      "horizon_after_build": -128000.0,
+      "original_horizon": -128000.0,
+      "match": true
+    },
+    {
+      "case": "11",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": 96000.0,
+      "original_net": 96000.0,
+      "horizon_after_build": -24000.0,
+      "original_horizon": -24000.0,
+      "match": true
+    },
+    {
+      "case": "11",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 376000.0,
+      "original_net": 376000.0,
+      "horizon_after_build": 256000.0,
+      "original_horizon": 256000.0,
+      "match": true
+    },
+    {
+      "case": "12",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": -20100.0,
+      "original_net": -20100.0,
+      "horizon_after_build": -110100.0,
+      "original_horizon": -110100.0,
+      "match": true
+    },
+    {
+      "case": "12",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": -8400.0,
+      "original_net": -8400.0,
+      "horizon_after_build": -98400.0,
+      "original_horizon": -98400.0,
+      "match": true
+    },
+    {
+      "case": "12",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 22800.0,
+      "original_net": 22800.0,
+      "horizon_after_build": -67200.0,
+      "original_horizon": -67200.0,
+      "match": true
+    },
+    {
+      "case": "13",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": -5600.0,
+      "original_net": -5600.0,
+      "horizon_after_build": -65600.0,
+      "original_horizon": -65600.0,
+      "match": true
+    },
+    {
+      "case": "13",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": 20000.0,
+      "original_net": 20000.0,
+      "horizon_after_build": -40000.0,
+      "original_horizon": -40000.0,
+      "match": true
+    },
+    {
+      "case": "13",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 84000.0,
+      "original_net": 84000.0,
+      "horizon_after_build": 24000.0,
+      "original_horizon": 24000.0,
+      "match": true
+    },
+    {
+      "case": "14",
+      "scenario": 0,
+      "period": "year",
+      "normalized_net": -15600.0,
+      "original_net": -15600.0,
+      "horizon_after_build": -165600.0,
+      "original_horizon": -165600.0,
+      "match": true
+    },
+    {
+      "case": "14",
+      "scenario": 1,
+      "period": "year",
+      "normalized_net": 37200.0,
+      "original_net": 37200.0,
+      "horizon_after_build": -112800.0,
+      "original_horizon": -112800.0,
+      "match": true
+    },
+    {
+      "case": "14",
+      "scenario": 2,
+      "period": "year",
+      "normalized_net": 162000.0,
+      "original_net": 162000.0,
+      "horizon_after_build": 12000.0,
+      "original_horizon": 12000.0,
+      "match": true
+    },
+    {
+      "case": "15",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -1800.0,
+      "original_net": -1800.0,
+      "horizon_after_build": -141600.0,
+      "original_horizon": -141600.0,
+      "match": true
+    },
+    {
+      "case": "15",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 3000.0,
+      "original_net": 3000.0,
+      "horizon_after_build": -84000.0,
+      "original_horizon": -84000.0,
+      "match": true
+    },
+    {
+      "case": "15",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 11000.0,
+      "original_net": 11000.0,
+      "horizon_after_build": 12000.0,
+      "original_horizon": 12000.0,
+      "match": true
+    },
+    {
+      "case": "16",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -760.0,
+      "original_net": -760.0,
+      "horizon_after_build": -99120.0,
+      "original_horizon": -99120.0,
+      "match": true
+    },
+    {
+      "case": "16",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 5720.0,
+      "original_net": 5720.0,
+      "horizon_after_build": -21360.0,
+      "original_horizon": -21360.0,
+      "match": true
+    },
+    {
+      "case": "16",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 15440.0,
+      "original_net": 15440.0,
+      "horizon_after_build": 95280.0,
+      "original_horizon": 95280.0,
+      "match": true
+    },
+    {
+      "case": "17",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": 1500.0,
+      "original_net": 1500.0,
+      "horizon_after_build": -132000.0,
+      "original_horizon": -132000.0,
+      "match": true
+    },
+    {
+      "case": "17",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 7500.0,
+      "original_net": 7500.0,
+      "horizon_after_build": -60000.0,
+      "original_horizon": -60000.0,
+      "match": true
+    },
+    {
+      "case": "17",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 13500.0,
+      "original_net": 13500.0,
+      "horizon_after_build": 12000.0,
+      "original_horizon": 12000.0,
+      "match": true
+    },
+    {
+      "case": "18",
+      "scenario": 0,
+      "period": "cohort",
+      "normalized_net": 2200.0,
+      "original_net": 2200.0,
+      "horizon_after_build": -17800.0,
+      "original_horizon": -17800.0,
+      "match": true
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "period": "cohort",
+      "normalized_net": 13000.0,
+      "original_net": 13000.0,
+      "horizon_after_build": -7000.0,
+      "original_horizon": -7000.0,
+      "match": true
+    },
+    {
+      "case": "18",
+      "scenario": 2,
+      "period": "cohort",
+      "normalized_net": 23800.0,
+      "original_net": 23800.0,
+      "horizon_after_build": 3800.0,
+      "original_horizon": 3800.0,
+      "match": true
+    },
+    {
+      "case": "19",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": -650.0,
+      "original_net": -650.0,
+      "horizon_after_build": -87800.0,
+      "original_horizon": -87800.0,
+      "match": true
+    },
+    {
+      "case": "19",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 1700.0,
+      "original_net": 1700.0,
+      "horizon_after_build": -59600.0,
+      "original_horizon": -59600.0,
+      "match": true
+    },
+    {
+      "case": "19",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 4050.0,
+      "original_net": 4050.0,
+      "horizon_after_build": -31400.0,
+      "original_horizon": -31400.0,
+      "match": true
+    },
+    {
+      "case": "20",
+      "scenario": 0,
+      "period": "month",
+      "normalized_net": 3000.0,
+      "original_net": 3000.0,
+      "horizon_after_build": -24000.0,
+      "original_horizon": -24000.0,
+      "match": true
+    },
+    {
+      "case": "20",
+      "scenario": 1,
+      "period": "month",
+      "normalized_net": 5500.0,
+      "original_net": 5500.0,
+      "horizon_after_build": 6000.0,
+      "original_horizon": 6000.0,
+      "match": true
+    },
+    {
+      "case": "20",
+      "scenario": 2,
+      "period": "month",
+      "normalized_net": 8000.0,
+      "original_net": 8000.0,
+      "horizon_after_build": 36000.0,
+      "original_horizon": 36000.0,
+      "match": true
+    }
+  ],
+  "stress": [
+    {
+      "case": "01",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": 0.0,
+        "horizon_net_after_build": -120000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4000.0,
+        "horizon_net_after_build": -168000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "01",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 12000.0,
+        "horizon_net_after_build": 24000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -8000.0,
+        "horizon_net_after_build": -216000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "01",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 45000.0,
+        "horizon_net_after_build": 420000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -15000.0,
+        "horizon_net_after_build": -300000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "02",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -3600.0,
+        "horizon_net_after_build": -193200.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -210000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "02",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 400.0,
+        "horizon_net_after_build": -145200.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -8000.0,
+        "horizon_net_after_build": -246000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "02",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 13200.0,
+        "horizon_net_after_build": 8400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -12000.0,
+        "horizon_net_after_build": -294000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "03",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -3125.0,
+        "horizon_net_after_build": -217500.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -240000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "03",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 1250.0,
+        "horizon_net_after_build": -165000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -10000.0,
+        "horizon_net_after_build": -300000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "03",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 12000.0,
+        "horizon_net_after_build": -36000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -18000.0,
+        "horizon_net_after_build": -396000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "04",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -5700.0,
+        "horizon_net_after_build": -178400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -8400.0,
+        "horizon_net_after_build": -210800.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "04",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": -3120.0,
+        "horizon_net_after_build": -147440.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -17520.0,
+        "horizon_net_after_build": -320240.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "04",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 17000.0,
+        "horizon_net_after_build": 94000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -23500.0,
+        "horizon_net_after_build": -392000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "05",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -2450.0,
+        "horizon_net_after_build": -129400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4450.0,
+        "horizon_net_after_build": -153400.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "05",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 6050.0,
+        "horizon_net_after_build": -27400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -8350.0,
+        "horizon_net_after_build": -200200.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "05",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 28500.0,
+        "horizon_net_after_build": 242000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -14700.0,
+        "horizon_net_after_build": -276400.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "06",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -2350.0,
+        "horizon_net_after_build": -168200.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -3600.0,
+        "horizon_net_after_build": -183200.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "06",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 1200.0,
+        "horizon_net_after_build": -125600.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -7800.0,
+        "horizon_net_after_build": -233600.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "06",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 16400.0,
+        "horizon_net_after_build": 56800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -13600.0,
+        "horizon_net_after_build": -303200.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "07",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -950.0,
+        "horizon_net_after_build": -171400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -220000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "07",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 11600.0,
+        "horizon_net_after_build": -20800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -10000.0,
+        "horizon_net_after_build": -280000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "07",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 36000.0,
+        "horizon_net_after_build": 272000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -18000.0,
+        "horizon_net_after_build": -376000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "08",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": 12000.0,
+        "horizon_net_after_build": -228000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -60000.0,
+        "horizon_net_after_build": -300000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 162000.0,
+        "horizon_net_after_build": -78000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -90000.0,
+        "horizon_net_after_build": -330000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "08",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 420000.0,
+        "horizon_net_after_build": 180000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -120000.0,
+        "horizon_net_after_build": -360000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "09",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -24600.0,
+        "horizon_net_after_build": -284600.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -60000.0,
+        "horizon_net_after_build": -320000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "09",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 60000.0,
+        "horizon_net_after_build": -200000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -60000.0,
+        "horizon_net_after_build": -320000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "09",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 278400.0,
+        "horizon_net_after_build": 18400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -60000.0,
+        "horizon_net_after_build": -320000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "10",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -33975.0,
+        "horizon_net_after_build": -213975.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -36000.0,
+        "horizon_net_after_build": -216000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "10",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": -22500.0,
+        "horizon_net_after_build": -202500.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -36000.0,
+        "horizon_net_after_build": -216000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "10",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 18000.0,
+        "horizon_net_after_build": -162000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -36000.0,
+        "horizon_net_after_build": -216000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "11",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -16000.0,
+        "horizon_net_after_build": -136000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -144000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "11",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 36000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -144000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "11",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 176000.0,
+        "horizon_net_after_build": 56000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -144000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "12",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -22050.0,
+        "horizon_net_after_build": -112050.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -114000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "12",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": -16200.0,
+        "horizon_net_after_build": -106200.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -114000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "12",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": -600.0,
+        "horizon_net_after_build": -90600.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -24000.0,
+        "horizon_net_after_build": -114000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "13",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -8800.0,
+        "horizon_net_after_build": -68800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -12000.0,
+        "horizon_net_after_build": -72000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "13",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 4000.0,
+        "horizon_net_after_build": -56000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -12000.0,
+        "horizon_net_after_build": -72000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "13",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 36000.0,
+        "horizon_net_after_build": -24000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -12000.0,
+        "horizon_net_after_build": -72000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "14",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -22800.0,
+        "horizon_net_after_build": -172800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -30000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "14",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 3600.0,
+        "horizon_net_after_build": -146400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -30000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "14",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 66000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -30000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "15",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -3400.0,
+        "horizon_net_after_build": -160800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "15",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": -1000.0,
+        "horizon_net_after_build": -132000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "15",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 3000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -180000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "16",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -2380.0,
+        "horizon_net_after_build": -118560.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4000.0,
+        "horizon_net_after_build": -138000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "16",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 860.0,
+        "horizon_net_after_build": -79680.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4000.0,
+        "horizon_net_after_build": -138000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "16",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 5720.0,
+        "horizon_net_after_build": -21360.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4000.0,
+        "horizon_net_after_build": -138000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "17",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -1500.0,
+        "horizon_net_after_build": -168000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4500.0,
+        "horizon_net_after_build": -204000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "17",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 1500.0,
+        "horizon_net_after_build": -132000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4500.0,
+        "horizon_net_after_build": -204000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "17",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 4500.0,
+        "horizon_net_after_build": -96000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -4500.0,
+        "horizon_net_after_build": -204000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "18",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -1400.0,
+        "horizon_net_after_build": -21400.0,
+        "horizon": "six_month_cohort"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -25000.0,
+        "horizon": "six_month_cohort"
+      }
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 4000.0,
+        "horizon_net_after_build": -16000.0,
+        "horizon": "six_month_cohort"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -25000.0,
+        "horizon": "six_month_cohort"
+      }
+    },
+    {
+      "case": "18",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 9400.0,
+        "horizon_net_after_build": -10600.0,
+        "horizon": "six_month_cohort"
+      },
+      "at_0_percent": {
+        "period_net": -5000.0,
+        "horizon_net_after_build": -25000.0,
+        "horizon": "six_month_cohort"
+      }
+    },
+    {
+      "case": "19",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": -1900.0,
+        "horizon_net_after_build": -102800.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -3150.0,
+        "horizon_net_after_build": -117800.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "19",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": -800.0,
+        "horizon_net_after_build": -89600.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -3300.0,
+        "horizon_net_after_build": -119600.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "19",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 300.0,
+        "horizon_net_after_build": -76400.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -3450.0,
+        "horizon_net_after_build": -121400.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "20",
+      "scenario": 0,
+      "at_50_percent": {
+        "period_net": 500.0,
+        "horizon_net_after_build": -54000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -2000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "20",
+      "scenario": 1,
+      "at_50_percent": {
+        "period_net": 1750.0,
+        "horizon_net_after_build": -39000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -2000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      }
+    },
+    {
+      "case": "20",
+      "scenario": 2,
+      "at_50_percent": {
+        "period_net": 3000.0,
+        "horizon_net_after_build": -24000.0,
+        "horizon": "first_year"
+      },
+      "at_0_percent": {
+        "period_net": -2000.0,
+        "horizon_net_after_build": -84000.0,
+        "horizon": "first_year"
+      }
+    }
+  ]
+}

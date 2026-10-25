@@ -1,0 +1,750 @@
+{
+  "status": "PASS",
+  "prepared_at": "2026-10-25T10:10:17.043061-03:00",
+  "brands": [
+    {
+      "id": "nubank",
+      "path": "../evidence/nubank.png",
+      "source_url": "https://nu.com/en/about",
+      "asset_url": "https://nu.com/en/about",
+      "variant": "Purple Nu symbol extracted from the official inline header SVG; original path and #8D0DE3 fill retained. Only responsive CSS sizing removed for standalone rasterization.",
+      "name": "Nubank",
+      "original_source_path": "../evidence/source-materials/brand/source/nubank.svg",
+      "source_sha256": "d7ec9007e831c39cbe68ed73a3561e0eb77e45e98df960e7258c7767b1491e80",
+      "sha256": "f852cc486c72129936e07594e88c5fbcf08daf7f93d58c4ae14181eeeab045fc",
+      "bytes": 17326,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 205011,
+      "visible_bbox": [
+        32,
+        134,
+        480,
+        378
+      ],
+      "source_content_dimensions": [
+        1383,
+        752
+      ],
+      "content_dimensions": [
+        448,
+        244
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0016476417386769304,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing.",
+      "containing_official_html_sha256": "5b6fc7c89592ec4bba83fa5f0c74671cceaa65f3c7a10060fbde8de773454d11"
+    },
+    {
+      "id": "clojure",
+      "path": "../evidence/clojure.png",
+      "source_url": "https://clojure.org/",
+      "asset_url": "https://clojure.org/images/clojure-logo-icon-256.png",
+      "variant": "Official 256px icon linked from the site header; replaces the prior 120px asset.",
+      "name": "Clojure",
+      "original_source_path": "../evidence/source-materials/brand/source/clojure-input.png",
+      "source_sha256": "5bec3b0fb0a012a49e5ae377de8d028e8f0d6e5d53386ee7bb6881d01e68d2ad",
+      "sha256": "63a0f5cb998a1565043d270c4bb54c29c12bfca5cacdf4760f059e3c6838d899",
+      "bytes": 70958,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 100849,
+      "visible_bbox": [
+        32,
+        32,
+        480,
+        480
+      ],
+      "source_content_dimensions": [
+        255,
+        255
+      ],
+      "content_dimensions": [
+        448,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "datomic",
+      "path": "../evidence/datomic.png",
+      "source_url": "https://www.datomic.com/",
+      "asset_url": "https://www.datomic.com/images/Datomic%20wordmark%20horizontal.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Datomic",
+      "original_source_path": "../evidence/source-materials/brand/source/datomic.svg",
+      "source_sha256": "0d15eb5d9a4a566f1f7650dc4465dc691522107cea3edae908b40000675b02b3",
+      "sha256": "5d10a06bac3497161d4168536fb297704c1c840b24c61da5f21514d07121e700",
+      "bytes": 19364,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 250455,
+      "visible_bbox": [
+        32,
+        202,
+        480,
+        310
+      ],
+      "source_content_dimensions": [
+        1400,
+        336
+      ],
+      "content_dimensions": [
+        448,
+        108
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.004444444444444584,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "kafka",
+      "path": "../evidence/kafka.png",
+      "source_url": "https://kafka.apache.org/logos/",
+      "asset_url": "https://kafka.apache.org/logos/kafka-logo-wide.png",
+      "variant": "Official wide black wordmark; replaces the prior 117px asset.",
+      "name": "Apache Kafka",
+      "original_source_path": "../evidence/source-materials/brand/source/kafka-input.png",
+      "source_sha256": "fc50166930598283466a2f29a268127a8ddd2d6de7e9f96979eeb1692803b8e5",
+      "sha256": "3ed77405cd2287c2b21ca648e84a5d7a1668ba7fb32dd196649039911e3b74e4",
+      "bytes": 17345,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 236492,
+      "visible_bbox": [
+        32,
+        153,
+        480,
+        358
+      ],
+      "source_content_dimensions": [
+        614,
+        281
+      ],
+      "content_dimensions": [
+        448,
+        205
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0001430046873760471,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "prometheus",
+      "path": "../evidence/prometheus.png",
+      "source_url": "https://prometheus.io/",
+      "asset_url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Prometheus",
+      "original_source_path": "../evidence/source-materials/brand/source/prometheus.svg",
+      "source_sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc",
+      "sha256": "1c2e38c92a06b6e8cc6b2a35c03f774491c3f30d37a41707dcbbd94240489e9c",
+      "bytes": 37884,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 148879,
+      "visible_bbox": [
+        32,
+        32,
+        480,
+        480
+      ],
+      "source_content_dimensions": [
+        1400,
+        1400
+      ],
+      "content_dimensions": [
+        448,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "flutter",
+      "path": "../evidence/flutter.png",
+      "source_url": "https://flutter.dev/brand",
+      "asset_url": "https://flutter.dev/assets/icon_flutter.817b4a56b047d0d36b338dd9ffd44dbd.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Flutter",
+      "original_source_path": "../evidence/source-materials/brand/source/flutter.svg",
+      "source_sha256": "147e0e0ed83205719f0614c5133595f4b68e198ca6e2931bf4b65383a15f37d5",
+      "sha256": "125afd5977234702321cfdb36f6e6d2e63f3e1a9e3e9c9d227618615e49c17d2",
+      "bytes": 34777,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 190886,
+      "visible_bbox": [
+        75,
+        32,
+        436,
+        480
+      ],
+      "source_content_dimensions": [
+        1129,
+        1400
+      ],
+      "content_dimensions": [
+        361,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0007750221434897897,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "dart",
+      "path": "../evidence/dart.png",
+      "source_url": "https://dart.dev/",
+      "asset_url": "https://dart.dev/assets/img/logo/dart-192.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Dart",
+      "original_source_path": "../evidence/source-materials/brand/source/dart.svg",
+      "source_sha256": "f56021f03f95c46f1f2bcefab7de3926c82efa88a80afdd6ff797a5d3865c7a0",
+      "sha256": "45f10f94ba9f818e0882e1a588cd4df226398d6ebdc0197cf31bc5ca7aa75dbe",
+      "bytes": 42121,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 118406,
+      "visible_bbox": [
+        32,
+        32,
+        480,
+        480
+      ],
+      "source_content_dimensions": [
+        1110,
+        1110
+      ],
+      "content_dimensions": [
+        448,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "python",
+      "path": "../evidence/python.png",
+      "source_url": "https://www.python.org/community/logos/",
+      "asset_url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+      "variant": "Official two-snakes logo device only, including its original soft shadow. This standalone PNG is linked directly by the Python Software Foundation logo page, which explicitly permits the device without its wordmark. No shape, color or shadow redesigned.",
+      "name": "Python",
+      "original_source_path": "../evidence/source-materials/brand/source/python-logo-only.png",
+      "source_sha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+      "sha256": "942b660492e5ccdcd836f7fa3d0b46717a06ccfdd77347a050deba3e50fc1171",
+      "bytes": 49907,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 162431,
+      "visible_bbox": [
+        71,
+        32,
+        441,
+        480
+      ],
+      "source_content_dimensions": [
+        269,
+        326
+      ],
+      "content_dimensions": [
+        370,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0008961763143917612,
+      "transform": "Official transparent PNG proportionally resized with Lanczos and centered on a 512×512 transparent canvas; original symbol colors, geometry and shadow retained.",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "id": "kubernetes",
+      "path": "../evidence/kubernetes.png",
+      "source_url": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg",
+      "asset_url": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Kubernetes",
+      "original_source_path": "../evidence/source-materials/brand/source/kubernetes.svg",
+      "source_sha256": "a8f6c3b81e588eb0eee4b5ae707ad11b16d0c5ce132719871e559eed0e61e6bf",
+      "sha256": "8a0265b199c247819149d8bb763e0439b268d462d6093228c4f5c24738689928",
+      "bytes": 51167,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 114007,
+      "visible_bbox": [
+        32,
+        38,
+        480,
+        473
+      ],
+      "source_content_dimensions": [
+        1400,
+        1359
+      ],
+      "content_dimensions": [
+        448,
+        435
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0002758620689655711,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "opentelemetry",
+      "path": "../evidence/opentelemetry.png",
+      "source_url": "https://opentelemetry.io/",
+      "asset_url": "https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "OpenTelemetry",
+      "original_source_path": "../evidence/source-materials/brand/source/opentelemetry.svg",
+      "source_sha256": "b85ba39c57e614d569b72d70c2353923c1f88ef670bcc98addce2ce2bc7eb9a7",
+      "sha256": "8f324d13e1241a94d6d3e2d795e147032c3ccb4f0ea6d7e016215cc84274cbb8",
+      "bytes": 25093,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 247087,
+      "visible_bbox": [
+        32,
+        177,
+        480,
+        335
+      ],
+      "source_content_dimensions": [
+        1346,
+        475
+      ],
+      "content_dimensions": [
+        448,
+        158
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.000620685763725648,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "postgresql",
+      "path": "../evidence/postgresql.png",
+      "source_url": "https://www.postgresql.org/",
+      "asset_url": "https://www.postgresql.org/media/img/about/press/elephant.png",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "PostgreSQL",
+      "original_source_path": "../evidence/source-materials/brand/source/postgresql-input.png",
+      "source_sha256": "ff92fb5d12a7fa6b23c2eb403d2edf4fbc58ced802021e1f02c3583cb70957be",
+      "sha256": "4009ecf6ed806f3de0467faec35a6466419fb08eac58e8c96809a11ba83043bd",
+      "bytes": 70438,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 118914,
+      "visible_bbox": [
+        39,
+        32,
+        473,
+        480
+      ],
+      "source_content_dimensions": [
+        540,
+        557
+      ],
+      "content_dimensions": [
+        434,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0007523148148148584,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "grafana",
+      "path": "../evidence/grafana.png",
+      "source_url": "https://grafana.com/",
+      "asset_url": "https://a-us.storyblok.com/f/567658451994139/143x24/8360e7918b/grafana-header-logo.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Grafana",
+      "original_source_path": "../evidence/source-materials/brand/source/grafana.svg",
+      "source_sha256": "9069b557771b50b35642fa03564ebca4bd6b608d6603c48185f74024568b922e",
+      "sha256": "47705aa09eaffa546966ea9968df582c011e449f29c3b4d0b63a38eab83c4ac2",
+      "bytes": 22165,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 250652,
+      "visible_bbox": [
+        32,
+        219,
+        480,
+        292
+      ],
+      "source_content_dimensions": [
+        1392,
+        227
+      ],
+      "content_dimensions": [
+        448,
+        73
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.000787277594079594,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "java",
+      "path": "../evidence/java.png",
+      "source_url": "https://dev.java/duke/",
+      "asset_url": "https://raw.githubusercontent.com/openjdk/duke/master/vector/Hips.svg",
+      "variant": "Official Duke mascot, Hips vector variant, from OpenJDK Project Duke. Replaces the white Java wordmark for light-background identification; not the coffee-cup logo.",
+      "name": "Java",
+      "original_source_path": "../evidence/source-materials/brand/source/java.svg",
+      "source_sha256": "f5a063aa2c782c4236833d7b5338a97b27820e2412d9b23263b74d3d5ec8d112",
+      "sha256": "4448f883071102ad6f08ce888129b2c4a00def411ff2d1e94c021ac6e578ea17",
+      "bytes": 30229,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 173545,
+      "visible_bbox": [
+        71,
+        32,
+        441,
+        480
+      ],
+      "source_content_dimensions": [
+        715,
+        865
+      ],
+      "content_dimensions": [
+        370,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0008429070929071303,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "aws",
+      "path": "../evidence/aws.png",
+      "source_url": "https://aws.amazon.com/",
+      "asset_url": "https://aws.amazon.com/",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "AWS",
+      "original_source_path": "../evidence/source-materials/brand/source/aws.svg",
+      "source_sha256": "01fc4590e3e5bf12e857e109dd81090cf6e77ec7d3389980e13e24fe164671fb",
+      "sha256": "12129868b8e953cca216ae6368d6b53af78188202b589ab6a5a179475557178a",
+      "bytes": 22440,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 218675,
+      "visible_bbox": [
+        32,
+        124,
+        480,
+        388
+      ],
+      "source_content_dimensions": [
+        1396,
+        824
+      ],
+      "content_dimensions": [
+        448,
+        264
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0016497351740905053,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "redis",
+      "path": "../evidence/redis.png",
+      "source_url": "https://redis.io/",
+      "asset_url": "https://redis.io/",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Redis",
+      "original_source_path": "../evidence/source-materials/brand/source/redis.svg",
+      "source_sha256": "f7a4f008a6df70f7b9bf92a4dbfd74c24d4f33f382a35e9aaa9b3144e73963cb",
+      "sha256": "da88886d065a5eb7081342af17502c2b408a60a6944efbbd68a8fb79a0946ba1",
+      "bytes": 29279,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 227389,
+      "visible_bbox": [
+        32,
+        186,
+        480,
+        326
+      ],
+      "source_content_dimensions": [
+        1400,
+        437
+      ],
+      "content_dimensions": [
+        448,
+        140
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0011428571428570011,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "typescript",
+      "path": "../evidence/typescript.png",
+      "source_url": "https://www.typescriptlang.org/branding/",
+      "asset_url": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "TypeScript",
+      "original_source_path": "../evidence/source-materials/brand/source/typescript-input.png",
+      "source_sha256": "4716ee8a737cdd724dbb20e7f9ad060f0257ed6d736209000a4fcc9b3a2b9b92",
+      "sha256": "aeb42dfde8241f0ff5b4b181b28f49097812ba623d66f10e7ec71b1b36a8dd4a",
+      "bytes": 17050,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 62750,
+      "visible_bbox": [
+        32,
+        32,
+        480,
+        480
+      ],
+      "source_content_dimensions": [
+        512,
+        512
+      ],
+      "content_dimensions": [
+        448,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "terraform",
+      "path": "../evidence/terraform.png",
+      "source_url": "https://github.com/hashicorp/design-system",
+      "asset_url": "https://raw.githubusercontent.com/hashicorp/design-system/main/packages/flight-icons/svg/terraform-color-16.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "name": "Terraform",
+      "original_source_path": "../evidence/source-materials/brand/source/terraform.svg",
+      "source_sha256": "67f8d31d37fd8c15516569eb8ae400d7b09fff13d6b7214483fe1af4a9449e92",
+      "sha256": "ad35d6795c40fa52b749e295e63729a745178c9880bc77792095eb4f21e8a27c",
+      "bytes": 20620,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 191195,
+      "visible_bbox": [
+        60,
+        32,
+        452,
+        480
+      ],
+      "source_content_dimensions": [
+        1226,
+        1400
+      ],
+      "content_dimensions": [
+        392,
+        448
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0008156606851549286,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing."
+    },
+    {
+      "id": "sqlite",
+      "path": "../evidence/source-materials/brand/sqlite.png",
+      "source_url": "https://www.sqlite.org/src/dir?ci=trunk&name=art",
+      "asset_url": "https://www.sqlite.org/src/raw/art/sqlite370.svg?ci=trunk",
+      "variant": "Official SQLite repository artwork, sqlite370.svg; only its explicit full-canvas white background rectangle rect366 was removed for transparency, with all logo paths/colors intact. Original SVG retained as sqlite-original.svg. SQLite is used by the synthetic local laboratories; this does not assert Nubank production usage.",
+      "name": "SQLite",
+      "original_source_path": "../evidence/source-materials/brand/source/sqlite.svg",
+      "source_sha256": "0bcfc86dbe7998621785e218a6d1333164344bfd86f62d1b5ef74bb887964ed9",
+      "sha256": "7569263514208076a570841e62c7e5fd7d5b7bb33c172250135cc21ebc8a561b",
+      "bytes": 29640,
+      "canvas": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 229140,
+      "visible_bbox": [
+        32,
+        156,
+        480,
+        356
+      ],
+      "source_content_dimensions": [
+        1378,
+        614
+      ],
+      "content_dimensions": [
+        448,
+        200
+      ],
+      "padding_min_px": 32,
+      "aspect_ratio_relative_error": 0.0019158200290275706,
+      "transform": "SVG rasterization when applicable; trim transparent-only margins; proportional Lanczos resize; centered transparent padding. No recoloring, geometry changes or logo redrawing.",
+      "original_download_sha256": "462c4ce8229b585dd6880cd308b121d9de63eb619db05e469598594e80d7b151"
+    }
+  ],
+  "count": 18,
+  "nubank_count": 1,
+  "technology_count": 17,
+  "canvas": [
+    512,
+    512
+  ],
+  "rights_note": "Official-source identification assets; no claim of affiliation or endorsement and no blanket open-license claim. Duke is documented by Oracle as BSD-licensed; other marks remain their owners’ trademarks.",
+  "java_note": "Java uses the official Duke/Hips mascot to provide visible native colors on light surfaces. Source and variant are explicit; the coffee-cup graphic has not been reconstructed or recolored.",
+  "qa_contact_sheet": "../evidence/source-materials/brand/brand-review.png",
+  "visual_review": {
+    "reviewed": true,
+    "image": "../evidence/source-materials/brand/brand-review.png",
+    "observations": [
+      "All 18 marks visually inspected on a light checkerboard.",
+      "No opaque rectangular background remains, except colored shapes that are integral to the original marks (for example the TypeScript tile).",
+      "All marks fit the same square viewport without stretching. The Java Duke variant is visible on light surfaces.",
+      "SQLite has only its full-canvas white background rect366 removed; its logo paths, gradient and colors are unchanged."
+    ]
+  },
+  "source_validation": {
+    "new_sources_browsed": [
+      "https://nu.com/en/about",
+      "https://nu.com/en/newsroom/press-kit",
+      "https://dev.java/duke/",
+      "https://www.oracle.com/a/ocom/docs/java-licensing-logo-guidelines-1908204.pdf",
+      "https://clojure.org/",
+      "https://www.sqlite.org/src/dir?ci=trunk&name=art"
+    ],
+    "existing_sources": "The remaining source URLs and artwork were reused from the previously verified work/v6/book-pt.json assets dictionary. Newly substituted/downloaded assets have explicit variants."
+  },
+  "python_note": "The official two-snakes device replaces the horizontal wordmark so small architecture and sequence nodes remain recognizable. Source page explicitly permits the device-only variant.",
+  "python_variant_update": {
+    "date": "2026-10-25",
+    "previous_sha256": "1f08477ab898dc3d8df7f1636b518486823a18b3a7bb9033c1c197bd5a182a01",
+    "new_sha256": "942b660492e5ccdcd836f7fa3d0b46717a06ccfdd77347a050deba3e50fc1171",
+    "new_source_url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+    "other_brand_pngs_unchanged": true
+  }
+}

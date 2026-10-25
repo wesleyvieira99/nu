@@ -40,6 +40,8 @@ The app receives contact progress separately from access. Confirming an address 
 
 ## Executable core
 
+`Generation Token [lab]` · `Bounded Retry Budget [lab]`
+
 ```python
     def verify(self, owner, generation, code, now):
         if owner != self.owner:
@@ -76,6 +78,8 @@ The lab accepts fixed codes for reproducible tests. A real service must generate
 
 ## Stack implementation
 
+`Generation Token [proposal]` · `Bounded Retry Budget [proposal]`
+
 ```typescript
 // Proposed presentation contract; validate network input separately.
 type RecoveryView =
@@ -100,6 +104,8 @@ Messages neither expose a complete email address nor reveal account existence to
 - [TypeScript — Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
 ## Contracts and ownership
+
+`Generation Token [proposal]` · `Bounded Retry Budget [proposal]`
 
 | Field / rule | Owner | Invariant |
 | --- | --- | --- |
@@ -127,6 +133,8 @@ Generation changes only after an authorized contact update. Each issuance replac
 Delivery events should distinguish accepted, bounced and expired without concluding that a message was read. The public record provides none of these events. Logs exclude codes and full addresses; investigation uses protected references. Contact change must not allow an attacker to choose a destination freely and become the holder by receiving their own code.
 
 ## Adversarial verification
+
+`Generation Token [lab]` · `Bounded Retry Budget [lab]`
 
 ```python
     def test_contact_change_invalidates_old_code(self):
@@ -220,3 +228,95 @@ Handoff requires identity service, secret generation, protected storage, deliver
 - No code appears in logs.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py)
+
+## Patterns with proof
+
+`Generation Token [lab]` · `Bounded Retry Budget [lab]` · `Hexagonal Architecture [proposal]` · `Spring Security [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Generation Token | ContactRecovery.change_contact | changing contact invalidates the previous code |
+| Bounded Retry Budget | ContactRecovery.verify | the attempt budget blocks the next verification |
+| Hexagonal Architecture / delivery adapter | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Security + distributed rate limiter. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · ContactRecovery.change_contact](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L21)
+- [P1 · test_contact_change_invalidates_old_code](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L78)
+- [P2 · ContactRecovery.verify](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L46)
+- [P2 · test_budget_exhaustion](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L95)
+
+## Execution sequence
+
+![A test code is supplied; delivery, random secrets and distributed rate limits need integration.](../../evidence/sequence-en-05.svg)
+
+A test code is supplied; delivery, random secrets and distributed rate limits need integration.
+
+**Authority and failure boundary**
+
+changing contact invalidates the previous code. the attempt budget blocks the next verification.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [change_contact](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L21)
+- [verify](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L46)
+
+## Features, stories and acceptance
+
+**F05.1 · Versioned contact · D16–30**
+
+As a customer, I want to use only the code for the current contact. Acceptance: changing contact invalidates the previous code.
+
+**F05.2 · Bounded attempts and recovery · D31–60**
+
+As a customer, I want to resume verification without allowing unlimited attempts. Acceptance: the attempt budget blocks the next verification.
+
+**F05.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F05.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L78)
+- [Acceptance F05.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L95)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 4000.00 | 450.00 | 4000.00 | 100000.00 |
+| Base | 28800.00 | 1350.00 | 7000.00 | 100000.00 |
+| Ambitious | 86400.00 | 2700.00 | 12000.00 | 100000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -450.00 | -105400.00 | -129400.00 |
+| Base | 20450.00 | 145400.00 | -27400.00 |
+| Ambitious | 71700.00 | 760400.00 | 242000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: contacts per recovery_id. Threat: confusing issuance, delivery and authorization. |
+| Unit economics | Avoided contact cost minus sent messages and operation; delivery cost remains in the stressed scenario. |
+| Proposed experiment | Match journey complexity by provider; measure legitimate resumption and review workload. |
+| Stop rule | Stop for an accepted obsolete code, exposed registration data or account takeover. |
+
+- [Reclame AQUI · ID 242544191](https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

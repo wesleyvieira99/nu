@@ -1,0 +1,746 @@
+{
+  "status": "PASS",
+  "review_scope": "Independent review of pattern claims, implementing functions, tests, feature actors and links; PT/EN coherence. No browser or production deployment performed.",
+  "cases": 20,
+  "pages_per_language": 40,
+  "pages_total": 80,
+  "source_links_checked": 256,
+  "linked_tests_executed": 46,
+  "test_failures": 0,
+  "test_errors": 0,
+  "labs_unchanged": true,
+  "lab_sha256": {
+    "01": "f3698c41746e90a5e170b98f4a93729df20f47e50dd59e57fe125bed105a96d6",
+    "02": "24218bd7c719ce3ef4f583d1ce0c5e098915be7ae4906a1d457f7dd691ea335f",
+    "03": "554a4f9e88570e9c1c2f320ff37bd35bd1fa6836bf71581852c568ba0f66ed3e",
+    "04": "fc1058291cd34abcfa29b1fe6e9435094d2166103b95143c796dd51cc333b6e7",
+    "05": "3fd47dfcfdd99ce9cd28724fc935256b58f2fca1ce032c29ae9102ce7c2a8d28",
+    "06": "2b51e973afd6003298307fa2f72d90b8a964d8529b07161e3ed8eb210ad19b04",
+    "07": "6e0592e6490dbdf47e0981011ee13fcb7150cc4a923f8d17f91b41ff33fe25fd",
+    "08": "708660421d6cd1e04693ddaed49b1611ac56dd27a82fdb53924be3f36d052877",
+    "09": "6d846c9125a6b78f32e2f6a003d159c4b6fd3b40fa15221769c5b25bb2e31140",
+    "10": "27563ef277179745f862e777c91186dfa1b6a9b6c0de32562b227be2390c3167",
+    "11": "6180cd64653d8a0bb94b79ad0ef8b428c7ef19e30737ccf79dd2c99388104b19",
+    "12": "782b4e7a102afbe78cd7e7fa48520e5dd263569ce0280c406a5d2e881049eb64",
+    "13": "88727e6cbe80749399be60b0fd2e24d31a1a7f23d8a3db8bd1a36804777670c4",
+    "14": "e85e916866d33ccb54fa270783be29906dac97975e01f2d90ef672b0226f6762",
+    "15": "019553dbd297cc54721338f7e027de5ad96fd30e2244bf7855821fbaf9d18c03",
+    "16": "6a01963948bbb381fbf0ee9059b4067476ae8448b5f57a1eb6f92fe50be02918",
+    "17": "9d7bc22505243b3c290e9441853577b7b91afec45654ce9e4e1fdfdaebaeb742",
+    "18": "8612cb4796d5c7d1a5afe1aaf45621d5e7c2b283696613ca36492279f6670122",
+    "19": "f780f7fe460308b054136ff26d2c1c85057d287e0a186cceaafb4a46ec6dcee2",
+    "20": "4adf6bb9d97fe6b05bdc2b0d75558d900d3fb896febeed5289c3b119d713d73e"
+  },
+  "module_sha256": "ddd39a66ef5d4f502057aa60e1d29113553b6e3abfbda0f42e098fa0d061aaaa",
+  "script_sha256": "39663eb99f6e7ec5698c40315226c84877a5e6b19e6b6cec240d718752bb7901",
+  "findings_fixed": [
+    {
+      "priority": "P1",
+      "cases": [
+        "04",
+        "14"
+      ],
+      "issue": "Feature acceptance links were reversed relative to their displayed assertions.",
+      "correction": "Reordered the feature-test pair without changing labs."
+    },
+    {
+      "priority": "P1",
+      "cases": [
+        "09"
+      ],
+      "issue": "Conservation prose omitted the unallocated remainder; the linked test receives 15001 and allocates 15000.",
+      "correction": "PT/EN now state allocated amount + remainder = received amount."
+    },
+    {
+      "priority": "P1",
+      "cases": [
+        "13"
+      ],
+      "issue": "Optimistic Concurrency and an expired preview were claimed, but the model locks a transaction and rechecks current credit without a version or expiry token.",
+      "correction": "Renamed to Transactional Revalidation and described current-credit revalidation."
+    },
+    {
+      "priority": "P2",
+      "cases": [
+        "02",
+        "04",
+        "05",
+        "06",
+        "07",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "issue": "The second story defaulted to an operator even when it described the customer receiving money, buying, cancelling or recovering access.",
+      "correction": "Explicit customer roles; operational roles retained only for reconciliation, authorized execution and dossier review."
+    },
+    {
+      "priority": "P2",
+      "cases": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "07",
+        "08",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "17",
+        "18"
+      ],
+      "issue": "Pattern rows reused feature assertion/order although the actual implementing method or most direct proving test differed.",
+      "correction": "Introduced explicit pattern_proofs with implementing method, test and bilingual invariant; feature links remain separately mapped."
+    },
+    {
+      "priority": "P2",
+      "cases": [
+        "17"
+      ],
+      "issue": "Two concurrent choices suggested two distinct redemption options, but the lab tests concurrent attempts for the same supported cash option.",
+      "correction": "Wording now refers to concurrent attempts against the same balance."
+    },
+    {
+      "priority": "P2",
+      "cases": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "issue": "A linked domain unit test could be read as proving the entire feature or production integration.",
+      "correction": "Added explicit scope: the test exercises the domain acceptance condition, not the complete UI or production integration."
+    }
+  ],
+  "unresolved_findings": [],
+  "validation_output": "..............................................\n----------------------------------------------------------------------\nRan 46 tests in 0.057s\n\nOK\n",
+  "cases_reviewed": [
+    {
+      "case": "01",
+      "feature_tests": [
+        "test_concurrent_refund_replays_once",
+        "test_timeout_is_not_refund_authority"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Idempotent Consumer",
+          "method": "Receipts.confirm",
+          "test": "test_concurrent_refund_replays_once"
+        },
+        {
+          "pattern": "Explicit State Machine",
+          "method": "Receipts.confirm",
+          "test": "test_refund_without_failure_is_rejected"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "responsável pela conciliação",
+          "en": "a reconciliation operator"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "02",
+      "feature_tests": [
+        "test_concurrent_versions_keep_newest",
+        "test_empty_view_never_claims_zero"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Monotonic Versioning",
+          "method": "BalanceView.publish",
+          "test": "test_concurrent_versions_keep_newest"
+        },
+        {
+          "pattern": "Freshness Envelope",
+          "method": "BalanceView.read",
+          "test": "test_exact_expiry_is_stale"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "03",
+      "feature_tests": [
+        "test_review_role_cannot_execute",
+        "test_overdue_review_does_not_release_money"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Separation of Duties",
+          "method": "Restriction.execute_exit",
+          "test": "test_review_role_cannot_execute"
+        },
+        {
+          "pattern": "Versioned Decision",
+          "method": "Restriction.decide",
+          "test": "test_stale_review_rejected"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "responsável pela execução autorizada",
+          "en": "an authorized execution operator"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "04",
+      "feature_tests": [
+        "test_camera_problem_is_not_identity_proof",
+        "test_parallel_authorization_consumes_once"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "One-time Capability",
+          "method": "Recovery.authorize",
+          "test": "test_parallel_authorization_consumes_once"
+        },
+        {
+          "pattern": "Device Binding",
+          "method": "Recovery.authorize",
+          "test": "test_other_device_rejected"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "05",
+      "feature_tests": [
+        "test_contact_change_invalidates_old_code",
+        "test_budget_exhaustion"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Generation Token",
+          "method": "ContactRecovery.change_contact",
+          "test": "test_contact_change_invalidates_old_code"
+        },
+        {
+          "pattern": "Bounded Retry Budget",
+          "method": "ContactRecovery.verify",
+          "test": "test_budget_exhaustion"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "06",
+      "feature_tests": [
+        "test_reused_upload_id_cannot_replace_evidence",
+        "test_malware_cannot_submit"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Append-only Evidence",
+          "method": "Dossier.append",
+          "test": "test_reused_upload_id_cannot_replace_evidence"
+        },
+        {
+          "pattern": "Quarantine Gate",
+          "method": "Dossier.submit",
+          "test": "test_malware_cannot_submit"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "07",
+      "feature_tests": [
+        "test_gap_retries_after_missing_event",
+        "test_partial_refund_replay_never_doubles_money"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Ordered Event Processing",
+          "method": "RecoveryTimeline.apply",
+          "test": "test_gap_retries_after_missing_event"
+        },
+        {
+          "pattern": "Monetary Conservation",
+          "method": "RecoveryTimeline.apply",
+          "test": "test_cannot_exceed_claim"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "08",
+      "feature_tests": [
+        "test_appeal_requires_independent_reviewer",
+        "test_restart_and_retry_preserve_one_evidence"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Append-only Journal",
+          "method": "Dispute.append",
+          "test": "test_restart_and_retry_preserve_one_evidence"
+        },
+        {
+          "pattern": "Independent Review",
+          "method": "Dispute.append",
+          "test": "test_appeal_requires_independent_reviewer"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "revisor do dossiê",
+          "en": "a dossier reviewer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "09",
+      "feature_tests": [
+        "test_failure_after_first_write_rolls_everything_back",
+        "test_exact_conservation_across_two_targets"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Unit of Work",
+          "method": "Ledger.apply",
+          "test": "test_failure_after_first_write_rolls_everything_back"
+        },
+        {
+          "pattern": "Conservation Invariant",
+          "method": "Ledger.receipt",
+          "test": "test_exact_conservation_across_two_targets"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "responsável pela conciliação",
+          "en": "a reconciliation operator"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "10",
+      "feature_tests": [
+        "test_timeout_restart_and_retry_produce_one_charge",
+        "test_same_amount_can_be_two_explicit_purchases"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Idempotency Key",
+          "method": "IntentClient.pay",
+          "test": "test_timeout_restart_and_retry_produce_one_charge"
+        },
+        {
+          "pattern": "Intent / Effect Separation",
+          "method": "IntentClient.pay",
+          "test": "test_same_amount_can_be_two_explicit_purchases"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "11",
+      "feature_tests": [
+        "test_old_snapshot_does_not_change_after_new_credit",
+        "test_three_refunds_reduce_exactly_once"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Immutable Snapshot",
+          "method": "Statement.snapshot",
+          "test": "test_old_snapshot_does_not_change_after_new_credit"
+        },
+        {
+          "pattern": "Referenced Credit",
+          "method": "Statement.append",
+          "test": "test_orphan_refund_rejected_without_mutation"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 3
+    },
+    {
+      "case": "12",
+      "feature_tests": [
+        "test_old_delivery_does_not_replace_new_generation",
+        "test_carrier_cannot_activate"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Generation Token",
+          "method": "Delivery.event",
+          "test": "test_old_delivery_does_not_replace_new_generation"
+        },
+        {
+          "pattern": "Authority Separation",
+          "method": "Delivery.event",
+          "test": "test_carrier_cannot_activate"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "13",
+      "feature_tests": [
+        "test_stale_preview_cannot_authorize",
+        "test_two_cards_cannot_overspend_shared_credit"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Transactional Revalidation",
+          "method": "Credit.reserve",
+          "test": "test_stale_preview_cannot_authorize"
+        },
+        {
+          "pattern": "Shared Budget Invariant",
+          "method": "Credit.reserve",
+          "test": "test_two_cards_cannot_overspend_shared_credit"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "14",
+      "feature_tests": [
+        "test_second_quote_becomes_stale_after_execution",
+        "test_received_is_not_executed_and_crash_rolls_back"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Quote / Commit",
+          "method": "Repayment.execute",
+          "test": "test_received_is_not_executed_and_crash_rolls_back"
+        },
+        {
+          "pattern": "Versioned Aggregate",
+          "method": "Repayment.execute",
+          "test": "test_second_quote_becomes_stale_after_execution"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "15",
+      "feature_tests": [
+        "test_cache_does_not_authorize",
+        "test_parallel_commands_cannot_spend_same_version"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Authority Gate",
+          "method": "Withdrawals.withdraw",
+          "test": "test_cache_does_not_authorize"
+        },
+        {
+          "pattern": "Compare-and-Set Version",
+          "method": "Withdrawals.withdraw",
+          "test": "test_parallel_commands_cannot_spend_same_version"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "16",
+      "feature_tests": [
+        "test_complaint_date_is_before_first_due_date",
+        "test_concurrent_payment_is_once_per_installment"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Specification-like Predicate",
+          "method": "Campaign.schedule",
+          "test": "test_complaint_date_is_before_first_due_date"
+        },
+        {
+          "pattern": "Idempotent Installment",
+          "method": "Campaign.pay",
+          "test": "test_concurrent_payment_is_once_per_installment"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "17",
+      "feature_tests": [
+        "test_concurrent_choices_only_one_commit",
+        "test_expired_preview_has_no_financial_effect"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Quote / Commit",
+          "method": "Benefits.redeem",
+          "test": "test_concurrent_choices_only_one_commit"
+        },
+        {
+          "pattern": "Expiring Quote",
+          "method": "Benefits.redeem",
+          "test": "test_expired_preview_has_no_financial_effect"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "18",
+      "feature_tests": [
+        "test_user_sms_claim_cannot_authorize_donor",
+        "test_late_activation_cannot_revive_cancelled_request"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Explicit State Machine",
+          "method": "Portability.apply",
+          "test": "test_late_activation_cannot_revive_cancelled_request"
+        },
+        {
+          "pattern": "Issuer-bound Events",
+          "method": "Portability.apply",
+          "test": "test_user_sms_claim_cannot_authorize_donor"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "19",
+      "feature_tests": [
+        "test_unsupported_transfer_never_debits",
+        "test_capability_change_invalidates_old_preview"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Capability Preflight",
+          "method": "GlobalWallet.issue",
+          "test": "test_unsupported_transfer_never_debits"
+        },
+        {
+          "pattern": "Version-bound Quote",
+          "method": "GlobalWallet.commit",
+          "test": "test_capability_change_invalidates_old_preview"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    },
+    {
+      "case": "20",
+      "feature_tests": [
+        "test_timeout_is_not_refund_authority",
+        "test_concurrent_refunds_credit_once"
+      ],
+      "pattern_proofs": [
+        {
+          "pattern": "Reconciliation Workflow",
+          "method": "Reconciler.investigate",
+          "test": "test_timeout_is_not_refund_authority"
+        },
+        {
+          "pattern": "Authority-bound Compensation",
+          "method": "Reconciler.refund",
+          "test": "test_concurrent_refunds_credit_once"
+        }
+      ],
+      "feature_roles": [
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        },
+        {
+          "pt": "cliente",
+          "en": "a customer"
+        }
+      ],
+      "distinct_tests_executed": 2
+    }
+  ]
+}

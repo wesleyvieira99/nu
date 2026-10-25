@@ -1,8 +1,13 @@
 {
+  "schema_version": 2,
+  "edition": "V7",
+  "status": "PASS",
   "note": {
     "pt": "Implementação sugerida · marcas oficiais das tecnologias",
     "en": "Proposed implementation · official technology marks"
   },
+  "scope": "24 architecture compositions across 48 final Portuguese and English SVGs. Sequence diagrams are documented separately.",
+  "interpretation": "Technology marks identify proposed component implementations. They do not establish Nubank internal architecture, deployment, affiliation or endorsement. A null node technology is an intentionally technology-neutral role.",
   "proposed_technology_by_node": {
     "arquiteturas-1": {
       "1": "flutter",
@@ -225,55 +230,1455 @@
   "official_marks": {
     "aws": {
       "name": "AWS",
-      "source": "https://aws.amazon.com/"
+      "source": "https://aws.amazon.com/",
+      "asset_url": "https://aws.amazon.com/",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/aws.png",
+      "png_sha256": "12129868b8e953cca216ae6368d6b53af78188202b589ab6a5a179475557178a",
+      "source_artwork_sha256": "01fc4590e3e5bf12e857e109dd81090cf6e77ec7d3389980e13e24fe164671fb",
+      "embedded_render_tile_sha256": "7b93831754efa5add552e062cc33efb94616b206c1842d707531fac769bddf16",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "clojure": {
       "name": "Clojure",
-      "source": "https://clojure.org/"
+      "source": "https://clojure.org/",
+      "asset_url": "https://clojure.org/images/clojure-logo-icon-256.png",
+      "variant": "Official 256px icon linked from the site header; replaces the prior 120px asset.",
+      "png": "../evidence/clojure.png",
+      "png_sha256": "63a0f5cb998a1565043d270c4bb54c29c12bfca5cacdf4760f059e3c6838d899",
+      "source_artwork_sha256": "5bec3b0fb0a012a49e5ae377de8d028e8f0d6e5d53386ee7bb6881d01e68d2ad",
+      "embedded_render_tile_sha256": "5bc3c8aee4d555a4aa8e967c8cb5a400f5eb8fa6511ada1c573595949ce6dc39",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "dart": {
       "name": "Dart",
-      "source": "https://dart.dev/"
+      "source": "https://dart.dev/",
+      "asset_url": "https://dart.dev/assets/img/logo/dart-192.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/dart.png",
+      "png_sha256": "45f10f94ba9f818e0882e1a588cd4df226398d6ebdc0197cf31bc5ca7aa75dbe",
+      "source_artwork_sha256": "f56021f03f95c46f1f2bcefab7de3926c82efa88a80afdd6ff797a5d3865c7a0",
+      "embedded_render_tile_sha256": "54e21ea145c6786852e788cecf5ec4c28038e3945239c61cc8ef3e7cdd5f1d3a",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "datomic": {
       "name": "Datomic",
-      "source": "https://www.datomic.com/"
+      "source": "https://www.datomic.com/",
+      "asset_url": "https://www.datomic.com/images/Datomic%20wordmark%20horizontal.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/datomic.png",
+      "png_sha256": "5d10a06bac3497161d4168536fb297704c1c840b24c61da5f21514d07121e700",
+      "source_artwork_sha256": "0d15eb5d9a4a566f1f7650dc4465dc691522107cea3edae908b40000675b02b3",
+      "embedded_render_tile_sha256": "577c50991bb8b92dfbcc64d4d1bb46af1c4689124fed153f3ab59e89a28e17ee",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "flutter": {
       "name": "Flutter",
-      "source": "https://flutter.dev/brand"
+      "source": "https://flutter.dev/brand",
+      "asset_url": "https://flutter.dev/assets/icon_flutter.817b4a56b047d0d36b338dd9ffd44dbd.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/flutter.png",
+      "png_sha256": "125afd5977234702321cfdb36f6e6d2e63f3e1a9e3e9c9d227618615e49c17d2",
+      "source_artwork_sha256": "147e0e0ed83205719f0614c5133595f4b68e198ca6e2931bf4b65383a15f37d5",
+      "embedded_render_tile_sha256": "90c7f860edac2a63a06d9edffea346da4bde811a5194957f30e5cdf170474c95",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "java": {
       "name": "Java",
-      "source": "https://dev.java/"
+      "source": "https://dev.java/duke/",
+      "asset_url": "https://raw.githubusercontent.com/openjdk/duke/master/vector/Hips.svg",
+      "variant": "Official Duke mascot, Hips vector variant, from OpenJDK Project Duke. Replaces the white Java wordmark for light-background identification; not the coffee-cup logo.",
+      "png": "../evidence/java.png",
+      "png_sha256": "4448f883071102ad6f08ce888129b2c4a00def411ff2d1e94c021ac6e578ea17",
+      "source_artwork_sha256": "f5a063aa2c782c4236833d7b5338a97b27820e2412d9b23263b74d3d5ec8d112",
+      "embedded_render_tile_sha256": "5d5669243a5dda0c470c341c3584e51eff408de32353e9c6265443ffd44976f6",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "kafka": {
       "name": "Apache Kafka",
-      "source": "https://kafka.apache.org/"
+      "source": "https://kafka.apache.org/logos/",
+      "asset_url": "https://kafka.apache.org/logos/kafka-logo-wide.png",
+      "variant": "Official wide black wordmark; replaces the prior 117px asset.",
+      "png": "../evidence/kafka.png",
+      "png_sha256": "3ed77405cd2287c2b21ca648e84a5d7a1668ba7fb32dd196649039911e3b74e4",
+      "source_artwork_sha256": "fc50166930598283466a2f29a268127a8ddd2d6de7e9f96979eeb1692803b8e5",
+      "embedded_render_tile_sha256": "c2ef3b4d012250fc0c0512c7a3f6b8f84873b9fc203816b514796601305fd849",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "opentelemetry": {
       "name": "OpenTelemetry",
-      "source": "https://opentelemetry.io/"
+      "source": "https://opentelemetry.io/",
+      "asset_url": "https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/opentelemetry.png",
+      "png_sha256": "8f324d13e1241a94d6d3e2d795e147032c3ccb4f0ea6d7e016215cc84274cbb8",
+      "source_artwork_sha256": "b85ba39c57e614d569b72d70c2353923c1f88ef670bcc98addce2ce2bc7eb9a7",
+      "embedded_render_tile_sha256": "45d919040489a0c1561522964381fa21d861eaa808b9ed5a559354adedb8d846",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "postgresql": {
       "name": "PostgreSQL",
-      "source": "https://www.postgresql.org/"
+      "source": "https://www.postgresql.org/",
+      "asset_url": "https://www.postgresql.org/media/img/about/press/elephant.png",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/postgresql.png",
+      "png_sha256": "4009ecf6ed806f3de0467faec35a6466419fb08eac58e8c96809a11ba83043bd",
+      "source_artwork_sha256": "ff92fb5d12a7fa6b23c2eb403d2edf4fbc58ced802021e1f02c3583cb70957be",
+      "embedded_render_tile_sha256": "4962790078aba9e417303fc65aeaec7d4148781871f43197b8d7621221dfce06",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "prometheus": {
       "name": "Prometheus",
-      "source": "https://prometheus.io/"
+      "source": "https://prometheus.io/",
+      "asset_url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/prometheus.png",
+      "png_sha256": "1c2e38c92a06b6e8cc6b2a35c03f774491c3f30d37a41707dcbbd94240489e9c",
+      "source_artwork_sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc",
+      "embedded_render_tile_sha256": "9db7e7851ddbbc40c41ea891605b6daaa62d1ee1cbd0ea05e469164c4cee288d",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "python": {
       "name": "Python",
-      "source": "https://www.python.org/community/logos/"
+      "source": "https://www.python.org/community/logos/",
+      "asset_url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+      "variant": "Official two-snakes logo device only, including its original soft shadow. This standalone PNG is linked directly by the Python Software Foundation logo page, which explicitly permits the device without its wordmark. No shape, color or shadow redesigned.",
+      "png": "../evidence/python.png",
+      "png_sha256": "942b660492e5ccdcd836f7fa3d0b46717a06ccfdd77347a050deba3e50fc1171",
+      "source_artwork_sha256": "4008a934b415c152bfa513be3e9b05de4212ae41549a27f2c6c8d41b3a24a4da",
+      "embedded_render_tile_sha256": "0edd1ce8c2467a62272eed6fe1e5df61b4a0ab08574e3f3505fec4eb4a354173",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "redis": {
       "name": "Redis",
-      "source": "https://redis.io/"
+      "source": "https://redis.io/",
+      "asset_url": "https://redis.io/",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/redis.png",
+      "png_sha256": "da88886d065a5eb7081342af17502c2b408a60a6944efbbd68a8fb79a0946ba1",
+      "source_artwork_sha256": "f7a4f008a6df70f7b9bf92a4dbfd74c24d4f33f382a35e9aaa9b3144e73963cb",
+      "embedded_render_tile_sha256": "fd969c1604b717254cc91a8542f03688bfd3fe338a1ed6ce81b1f990e1de0a85",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     },
     "typescript": {
       "name": "TypeScript",
-      "source": "https://www.typescriptlang.org/branding/"
+      "source": "https://www.typescriptlang.org/branding/",
+      "asset_url": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
+      "variant": "Official artwork previously sourced and verified in V6; original colors and geometry retained.",
+      "png": "../evidence/typescript.png",
+      "png_sha256": "aeb42dfde8241f0ff5b4b181b28f49097812ba623d66f10e7ec71b1b36a8dd4a",
+      "source_artwork_sha256": "4716ee8a737cdd724dbb20e7f9ad060f0257ed6d736209000a4fcc9b3a2b9b92",
+      "embedded_render_tile_sha256": "1799d2f2c8135c9172f2c29e773cc96d1bb7296e538792020a28768c78c794fe",
+      "render_treatment": "The final SVG uses the official transparent PNG composited losslessly onto its white component tile. Original source PNG colors and geometry are retained; the source PNG remains RGBA."
     }
+  },
+  "architectures": {
+    "arquiteturas-1": {
+      "family": "command_and_read_authorities",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "aws",
+        "3": "clojure",
+        "4": "datomic",
+        "5": "kafka",
+        "6": "clojure",
+        "7": null,
+        "8": "opentelemetry"
+      },
+      "technologies": [
+        "aws",
+        "clojure",
+        "datomic",
+        "flutter",
+        "kafka",
+        "opentelemetry"
+      ],
+      "editions": {
+        "pt": {
+          "page": 35,
+          "page_id": "arquiteturas-1",
+          "title": "Uma jornada, duas autoridades.",
+          "asset": "diagram-pt-arquiteturas-1-0",
+          "svg": "../evidence/diagram-pt-arquiteturas-1-0.svg",
+          "svg_sha256": "a7b4d1805fb2d9ce0d7d82c03c6807218e934e595fe03780b98a8f9b4c8832c3",
+          "node_labels": {
+            "1": "App Flutter",
+            "2": "Borda autenticada",
+            "3": "Núcleo Clojure",
+            "4": "Registro durável",
+            "5": "Kafka",
+            "6": "Projeção de consulta",
+            "7": "Atendimento",
+            "8": "Observabilidade"
+          }
+        },
+        "en": {
+          "page": 35,
+          "page_id": "arquiteturas-1",
+          "title": "One journey, two authorities.",
+          "asset": "diagram-en-arquiteturas-1-0",
+          "svg": "../evidence/diagram-en-arquiteturas-1-0.svg",
+          "svg_sha256": "d37c9efcf3516ccb7764735489159d8b56939824eff22a1a2cf7fb0d74ffdeea",
+          "node_labels": {
+            "1": "Flutter app",
+            "2": "Authenticated edge",
+            "3": "Clojure core",
+            "4": "Durable record",
+            "5": "Kafka",
+            "6": "Read projection",
+            "7": "Support",
+            "8": "Observability"
+          }
+        }
+      }
+    },
+    "arquiteturas-2": {
+      "family": "recovery_decision_branch",
+      "proposed_technology_by_node": {
+        "1": null,
+        "2": "flutter",
+        "3": "clojure",
+        "4": "clojure",
+        "5": null,
+        "6": "datomic",
+        "7": "flutter"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter"
+      ],
+      "editions": {
+        "pt": {
+          "page": 36,
+          "page_id": "arquiteturas-2",
+          "title": "Recuperação como parte do produto.",
+          "asset": "diagram-pt-arquiteturas-2-0",
+          "svg": "../evidence/diagram-pt-arquiteturas-2-0.svg",
+          "svg_sha256": "304bdca90a2cf38e0013e48f41e6483919bbb796e30e1d67ae6f4ba40eb945dc",
+          "node_labels": {
+            "1": "Pessoa",
+            "2": "Canal de orientação",
+            "3": "Verificador de contexto",
+            "4": "Política de recuperação",
+            "5": "Revisão especializada",
+            "6": "Registro de decisão",
+            "7": "Canal de retorno"
+          }
+        },
+        "en": {
+          "page": 36,
+          "page_id": "arquiteturas-2",
+          "title": "Recovery as part of the product.",
+          "asset": "diagram-en-arquiteturas-2-0",
+          "svg": "../evidence/diagram-en-arquiteturas-2-0.svg",
+          "svg_sha256": "0ca54bed71e33f4fa040276aec78ad694aa50eeb484be4aa92d4f43c35e1dcaf",
+          "node_labels": {
+            "1": "Person",
+            "2": "Guidance channel",
+            "3": "Context verifier",
+            "4": "Recovery policy",
+            "5": "Specialist review",
+            "6": "Decision record",
+            "7": "Response channel"
+          }
+        }
+      }
+    },
+    "arquiteturas-3": {
+      "family": "delivery_expansion_gate",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "typescript",
+        "3": "dart",
+        "4": "aws",
+        "5": "flutter",
+        "6": "prometheus",
+        "7": "clojure"
+      },
+      "technologies": [
+        "aws",
+        "clojure",
+        "dart",
+        "flutter",
+        "prometheus",
+        "typescript"
+      ],
+      "editions": {
+        "pt": {
+          "page": 37,
+          "page_id": "arquiteturas-3",
+          "title": "Plataforma de experiência com contratos.",
+          "asset": "diagram-pt-arquiteturas-3-0",
+          "svg": "../evidence/diagram-pt-arquiteturas-3-0.svg",
+          "svg_sha256": "192545535a7f72ca99d8320c9c520a7c6b2724008fac1f684c8235f60642fe2f",
+          "node_labels": {
+            "1": "Design system",
+            "2": "Contrato BDC",
+            "3": "Validador",
+            "4": "Distribuição",
+            "5": "Renderizador Flutter",
+            "6": "Telemetria",
+            "7": "Gate de expansão"
+          }
+        },
+        "en": {
+          "page": 37,
+          "page_id": "arquiteturas-3",
+          "title": "An experience platform with contracts.",
+          "asset": "diagram-en-arquiteturas-3-0",
+          "svg": "../evidence/diagram-en-arquiteturas-3-0.svg",
+          "svg_sha256": "e49d7a6c28543b638f64e94a912dc009cb6ecb5652facdffd80f807ed60e6a15",
+          "node_labels": {
+            "1": "Design system",
+            "2": "BDC contract",
+            "3": "Validator",
+            "4": "Distribution",
+            "5": "Flutter renderer",
+            "6": "Telemetry",
+            "7": "Expansion gate"
+          }
+        }
+      }
+    },
+    "arquiteturas-4": {
+      "family": "prediction_policy_feedback",
+      "proposed_technology_by_node": {
+        "1": "kafka",
+        "2": "python",
+        "3": "python",
+        "4": "clojure",
+        "5": "clojure",
+        "6": null,
+        "7": "python"
+      },
+      "technologies": [
+        "clojure",
+        "kafka",
+        "python"
+      ],
+      "editions": {
+        "pt": {
+          "page": 38,
+          "page_id": "arquiteturas-4",
+          "title": "ML: separar previsão de decisão.",
+          "asset": "diagram-pt-arquiteturas-4-0",
+          "svg": "../evidence/diagram-pt-arquiteturas-4-0.svg",
+          "svg_sha256": "e9980e79a26f51a1c55ff29be57a1d37e7460ac1f16850a1aa2a362f67ed39ae",
+          "node_labels": {
+            "1": "Evento elegível",
+            "2": "Features",
+            "3": "Modelo",
+            "4": "Política",
+            "5": "Efeito controlado",
+            "6": "Resultado revisado",
+            "7": "Avaliação"
+          }
+        },
+        "en": {
+          "page": 38,
+          "page_id": "arquiteturas-4",
+          "title": "ML: separate prediction from decision.",
+          "asset": "diagram-en-arquiteturas-4-0",
+          "svg": "../evidence/diagram-en-arquiteturas-4-0.svg",
+          "svg_sha256": "7b8d454d399459ef5f9d43f9092a9c8387297ecbaf2b76a64103e58c23be1409",
+          "node_labels": {
+            "1": "Eligible event",
+            "2": "Features",
+            "3": "Model",
+            "4": "Policy",
+            "5": "Controlled effect",
+            "6": "Reviewed outcome",
+            "7": "Evaluation"
+          }
+        }
+      }
+    },
+    "01-3": {
+      "family": "receipt_backbone_support_branch",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "java",
+        "3": "clojure",
+        "4": "postgresql",
+        "5": "kafka",
+        "6": "java",
+        "7": "flutter"
+      },
+      "technologies": [
+        "clojure",
+        "flutter",
+        "java",
+        "kafka",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 41,
+          "page_id": "01-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-01-3-0",
+          "svg": "../evidence/diagram-pt-01-3-0.svg",
+          "svg_sha256": "c20b390b5d45f59ff3bc18846839f933229ed472a15f3f961e544a6857804cc8",
+          "node_labels": {
+            "1": "App do titular",
+            "2": "API de consulta",
+            "3": "Estado da tentativa",
+            "4": "Recibo persistente",
+            "5": "Confirmações",
+            "6": "Leitura do estorno",
+            "7": "Ajuda contextual"
+          }
+        },
+        "en": {
+          "page": 41,
+          "page_id": "01-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-01-3-0",
+          "svg": "../evidence/diagram-en-01-3-0.svg",
+          "svg_sha256": "dcfdc6e6d051f578393639855094994e6fb18aed2c52f502f0e66455d45b5ae8",
+          "node_labels": {
+            "1": "Account app",
+            "2": "Receipt API",
+            "3": "Attempt state",
+            "4": "Durable receipt",
+            "5": "Confirmations",
+            "6": "Refund view",
+            "7": "Contextual help"
+          }
+        }
+      }
+    },
+    "02-3": {
+      "family": "freshness_reconciliation_cycle",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "java",
+        "3": "clojure",
+        "4": "java",
+        "5": "postgresql",
+        "6": "python",
+        "7": "flutter"
+      },
+      "technologies": [
+        "clojure",
+        "flutter",
+        "java",
+        "postgresql",
+        "python"
+      ],
+      "editions": {
+        "pt": {
+          "page": 58,
+          "page_id": "02-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-02-3-0",
+          "svg": "../evidence/diagram-pt-02-3-0.svg",
+          "svg_sha256": "e3fe2fd6bbfd224bada3582382fb61f822f77ab1fa86ff00f8bf3c4eb1b73775",
+          "node_labels": {
+            "1": "App de saldo",
+            "2": "Consulta autorizada",
+            "3": "Fonte financeira",
+            "4": "Validador de versão",
+            "5": "Projeção de saldo",
+            "6": "Conciliação",
+            "7": "Estado da jornada"
+          }
+        },
+        "en": {
+          "page": 58,
+          "page_id": "02-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-02-3-0",
+          "svg": "../evidence/diagram-en-02-3-0.svg",
+          "svg_sha256": "2be416255f1e864d31372457aa21ac091ebbd0b7efde01b4d1baf034a8cadaa0",
+          "node_labels": {
+            "1": "Balance app",
+            "2": "Authorized query",
+            "3": "Financial source",
+            "4": "Version validator",
+            "5": "Balance projection",
+            "6": "Reconciliation",
+            "7": "Journey status"
+          }
+        }
+      }
+    },
+    "03-3": {
+      "family": "review_policy_audit_convergence",
+      "proposed_technology_by_node": {
+        "1": "java",
+        "2": "kafka",
+        "3": "postgresql",
+        "4": null,
+        "5": "java",
+        "6": "flutter",
+        "7": "postgresql"
+      },
+      "technologies": [
+        "flutter",
+        "java",
+        "kafka",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 75,
+          "page_id": "03-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-03-3-0",
+          "svg": "../evidence/diagram-pt-03-3-0.svg",
+          "svg_sha256": "6274da6b56d861ba582f3b58487079d1606e801d63e28345c62a905494c09893",
+          "node_labels": {
+            "1": "Mudança de restrição",
+            "2": "Fila de revisão",
+            "3": "Política aplicável",
+            "4": "Revisor autorizado",
+            "5": "Executor de saída",
+            "6": "Acompanhamento",
+            "7": "Trilha de auditoria"
+          }
+        },
+        "en": {
+          "page": 75,
+          "page_id": "03-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-03-3-0",
+          "svg": "../evidence/diagram-en-03-3-0.svg",
+          "svg_sha256": "d692c540c8b76a664d4301fb2f02a7551b969c3c4f89a8cc7e61b7a06bf97484",
+          "node_labels": {
+            "1": "Restriction change",
+            "2": "Review queue",
+            "3": "Applicable policy",
+            "4": "Authorized reviewer",
+            "5": "Exit executor",
+            "6": "Case tracking",
+            "7": "Audit trail"
+          }
+        }
+      }
+    },
+    "04-3": {
+      "family": "identity_alternative_and_revocation",
+      "proposed_technology_by_node": {
+        "1": "java",
+        "2": null,
+        "3": "aws",
+        "4": null,
+        "5": "postgresql",
+        "6": "java",
+        "7": "flutter"
+      },
+      "technologies": [
+        "aws",
+        "flutter",
+        "java",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 92,
+          "page_id": "04-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-04-3-0",
+          "svg": "../evidence/diagram-pt-04-3-0.svg",
+          "svg_sha256": "7e93a9d6c67e7f2ab14f3da9a45309c5f66c36e8637182317332cffbcb7fa8a1",
+          "node_labels": {
+            "1": "Política de identidade",
+            "2": "Titular em recuperação",
+            "3": "Coleta assistida",
+            "4": "Revisão de identidade",
+            "5": "Registro do desafio",
+            "6": "Autorizador",
+            "7": "App recuperado"
+          }
+        },
+        "en": {
+          "page": 92,
+          "page_id": "04-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-04-3-0",
+          "svg": "../evidence/diagram-en-04-3-0.svg",
+          "svg_sha256": "70805e5ad1a3b9900334eb1f4e06d85979e6ec6708e5e7ac2998dff3a6262840",
+          "node_labels": {
+            "1": "Identity policy",
+            "2": "Recovering holder",
+            "3": "Assisted collection",
+            "4": "Identity review",
+            "5": "Challenge record",
+            "6": "Device authorizer",
+            "7": "Recovered app"
+          }
+        }
+      }
+    },
+    "05-3": {
+      "family": "challenge_with_revalidation",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "postgresql",
+        "3": "java",
+        "4": "java",
+        "5": "redis",
+        "6": "java",
+        "7": "flutter"
+      },
+      "technologies": [
+        "flutter",
+        "java",
+        "postgresql",
+        "redis"
+      ],
+      "editions": {
+        "pt": {
+          "page": 109,
+          "page_id": "05-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-05-3-0",
+          "svg": "../evidence/diagram-pt-05-3-0.svg",
+          "svg_sha256": "7127a40fed6b0d04ea5dd3d7f674d50378ff9098dcc7e15a9501313da37a74d5",
+          "node_labels": {
+            "1": "Pedido de recuperação",
+            "2": "Contato versionado",
+            "3": "Política de desafio",
+            "4": "Emissor de código",
+            "5": "Registro temporário",
+            "6": "Verificador",
+            "7": "Retomada no app"
+          }
+        },
+        "en": {
+          "page": 109,
+          "page_id": "05-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-05-3-0",
+          "svg": "../evidence/diagram-en-05-3-0.svg",
+          "svg_sha256": "60eb4d54e634967fd61b6ab7691b93f4f7a4e015a5481d168b59becb9fdece5d",
+          "node_labels": {
+            "1": "Recovery request",
+            "2": "Versioned contact",
+            "3": "Challenge policy",
+            "4": "Code issuer",
+            "5": "Temporary record",
+            "6": "Code verifier",
+            "7": "App resumption"
+          }
+        }
+      }
+    },
+    "06-3": {
+      "family": "evidence_intake_authority_split",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "aws",
+        "3": "java",
+        "4": "postgresql",
+        "5": "java",
+        "6": "java",
+        "7": "flutter"
+      },
+      "technologies": [
+        "aws",
+        "flutter",
+        "java",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 126,
+          "page_id": "06-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-06-3-0",
+          "svg": "../evidence/diagram-pt-06-3-0.svg",
+          "svg_sha256": "8703ce5f17fddb7ce169073ecdee6ff2ded68e4f4c42dbdda40191eb54a71be2",
+          "node_labels": {
+            "1": "App de contestação",
+            "2": "Upload protegido",
+            "3": "Validador do anexo",
+            "4": "Dossiê versionado",
+            "5": "Escopo do titular",
+            "6": "Envio autorizado",
+            "7": "Status da evidência"
+          }
+        },
+        "en": {
+          "page": 126,
+          "page_id": "06-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-06-3-0",
+          "svg": "../evidence/diagram-en-06-3-0.svg",
+          "svg_sha256": "ca3d6b1e653ac5bd855cc5b5d590ee5e011ff83e5b66e5b602fba5e6c14bf6d0",
+          "node_labels": {
+            "1": "Dispute app",
+            "2": "Protected upload",
+            "3": "Attachment validator",
+            "4": "Versioned dossier",
+            "5": "Holder scope",
+            "6": "Authorized submission",
+            "7": "Evidence status"
+          }
+        }
+      }
+    },
+    "07-3": {
+      "family": "ordered_timeline_reconciliation",
+      "proposed_technology_by_node": {
+        "1": "java",
+        "2": "postgresql",
+        "3": "clojure",
+        "4": "clojure",
+        "5": "postgresql",
+        "6": "flutter",
+        "7": "python"
+      },
+      "technologies": [
+        "clojure",
+        "flutter",
+        "java",
+        "postgresql",
+        "python"
+      ],
+      "editions": {
+        "pt": {
+          "page": 143,
+          "page_id": "07-3",
+          "title": "Fronteiras da arquitetura",
+          "asset": "diagram-pt-07-3-0",
+          "svg": "../evidence/diagram-pt-07-3-0.svg",
+          "svg_sha256": "a338d2101246d73d96f31ae28b8729929475b90d1703d483850a263a78887be0",
+          "node_labels": {
+            "1": "Adaptador MED",
+            "2": "Registro de eventos",
+            "3": "Normalizador",
+            "4": "Validador financeiro",
+            "5": "Timeline autorizada",
+            "6": "App e atendimento",
+            "7": "Conciliação do caso"
+          }
+        },
+        "en": {
+          "page": 143,
+          "page_id": "07-3",
+          "title": "Architecture boundaries",
+          "asset": "diagram-en-07-3-0",
+          "svg": "../evidence/diagram-en-07-3-0.svg",
+          "svg_sha256": "1912f674244faaf21cd0171aafb880c234b47b5723eae708538664e55371a682",
+          "node_labels": {
+            "1": "MED adapter",
+            "2": "Event record",
+            "3": "Event normalizer",
+            "4": "Financial validator",
+            "5": "Authorized timeline",
+            "6": "App and support",
+            "7": "Case reconciliation"
+          }
+        }
+      }
+    },
+    "08-3": {
+      "family": "triage_exception_lane",
+      "proposed_technology_by_node": {
+        "0": null,
+        "1": "clojure",
+        "2": "datomic",
+        "3": "clojure",
+        "4": "datomic",
+        "5": "flutter",
+        "6": null
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter"
+      ],
+      "editions": {
+        "pt": {
+          "page": 160,
+          "page_id": "08-3",
+          "title": "Dossiê com revisão independente",
+          "asset": "diagram-pt-08-3-0",
+          "svg": "../evidence/diagram-pt-08-3-0.svg",
+          "svg_sha256": "d8f4e2fa76a9d30737a1f260f5370ba01894117c529ae282fa9a8a84375a7b18",
+          "node_labels": {
+            "0": "Cliente",
+            "1": "API do caso",
+            "2": "Fatos duráveis",
+            "3": "Triagem",
+            "4": "Dossiê",
+            "5": "App e atendimento",
+            "6": "Revisão humana"
+          }
+        },
+        "en": {
+          "page": 160,
+          "page_id": "08-3",
+          "title": "A dossier with independent review",
+          "asset": "diagram-en-08-3-0",
+          "svg": "../evidence/diagram-en-08-3-0.svg",
+          "svg_sha256": "9aa48b15eb307db603aebdc98530877e0b9e4087258a66fc820e44c8c4f8dfe4",
+          "node_labels": {
+            "0": "Customer",
+            "1": "Case API",
+            "2": "Durable facts",
+            "3": "Triage",
+            "4": "Dossier",
+            "5": "App and support",
+            "6": "Human review"
+          }
+        }
+      }
+    },
+    "09-3": {
+      "family": "allocation_projection_consistency",
+      "proposed_technology_by_node": {
+        "0": "datomic",
+        "1": "clojure",
+        "2": "datomic",
+        "3": "flutter",
+        "4": "flutter",
+        "5": "clojure",
+        "6": "clojure"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter"
+      ],
+      "editions": {
+        "pt": {
+          "page": 177,
+          "page_id": "09-3",
+          "title": "Um recibo ligado ao razão",
+          "asset": "diagram-pt-09-3-0",
+          "svg": "../evidence/diagram-pt-09-3-0.svg",
+          "svg_sha256": "a76e50ac4ab44db90c95c29b933629ce5407aa2286ce17d5bc3b5c5078df97fd",
+          "node_labels": {
+            "0": "Recebimento",
+            "1": "Alocador",
+            "2": "Projeção",
+            "3": "Consulta do recibo",
+            "4": "Limite explicado",
+            "5": "Regras de soma",
+            "6": "Reconciliador"
+          }
+        },
+        "en": {
+          "page": 177,
+          "page_id": "09-3",
+          "title": "A receipt linked to the ledger",
+          "asset": "diagram-en-09-3-0",
+          "svg": "../evidence/diagram-en-09-3-0.svg",
+          "svg_sha256": "1879f89d519093e9540b3e2a0d43e2bb020f81b080521001953c01e0e8053512",
+          "node_labels": {
+            "0": "Receipt of funds",
+            "1": "Allocator",
+            "2": "Projection",
+            "3": "Receipt lookup",
+            "4": "Explained credit",
+            "5": "Sum rules",
+            "6": "Reconciler"
+          }
+        }
+      }
+    },
+    "10-3": {
+      "family": "payment_intent_recovery_loop",
+      "proposed_technology_by_node": {
+        "0": "flutter",
+        "1": "clojure",
+        "2": "datomic",
+        "3": "clojure",
+        "4": null,
+        "5": "clojure",
+        "6": "clojure"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter"
+      ],
+      "editions": {
+        "pt": {
+          "page": 194,
+          "page_id": "10-3",
+          "title": "Uma intenção atravessa a incerteza",
+          "asset": "diagram-pt-10-3-0",
+          "svg": "../evidence/diagram-pt-10-3-0.svg",
+          "svg_sha256": "69aa3aab36046ec538b819790eaa3c89445fbacac46ff1fa7d57d78ee1b79c23",
+          "node_labels": {
+            "0": "App",
+            "1": "Vínculo da intenção",
+            "2": "Registro da intenção",
+            "3": "Despachante",
+            "4": "Provedor",
+            "5": "Confirmador",
+            "6": "Reconciliação"
+          }
+        },
+        "en": {
+          "page": 194,
+          "page_id": "10-3",
+          "title": "One intent crosses uncertainty",
+          "asset": "diagram-en-10-3-0",
+          "svg": "../evidence/diagram-en-10-3-0.svg",
+          "svg_sha256": "1e34641876135e85d528152e16f38406d46ecb5384819ee4c556c2fe185e342a",
+          "node_labels": {
+            "0": "App",
+            "1": "Intent binding",
+            "2": "Intent record",
+            "3": "Dispatcher",
+            "4": "Provider",
+            "5": "Confirmation",
+            "6": "Reconciliation"
+          }
+        }
+      }
+    },
+    "11-3": {
+      "family": "statement_authority_fallback",
+      "proposed_technology_by_node": {
+        "0": "datomic",
+        "1": "kafka",
+        "2": "clojure",
+        "3": "datomic",
+        "4": "clojure",
+        "5": "clojure",
+        "6": "flutter"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter",
+        "kafka"
+      ],
+      "editions": {
+        "pt": {
+          "page": 211,
+          "page_id": "11-3",
+          "title": "Total e detalhe viajam na mesma versão",
+          "asset": "diagram-pt-11-3-0",
+          "svg": "../evidence/diagram-pt-11-3-0.svg",
+          "svg_sha256": "dd8fc9907fa1ffac38fbcef1b5a354cf5b0794ffbb050276b0652636a1aa7cf9",
+          "node_labels": {
+            "0": "Razão financeiro",
+            "1": "Eventos",
+            "2": "Soma explicável",
+            "3": "Fatura versionada",
+            "4": "API de leitura",
+            "5": "Consulta canônica",
+            "6": "Cliente"
+          }
+        },
+        "en": {
+          "page": 211,
+          "page_id": "11-3",
+          "title": "Total and detail share a revision",
+          "asset": "diagram-en-11-3-0",
+          "svg": "../evidence/diagram-en-11-3-0.svg",
+          "svg_sha256": "3d3d0263970e620038123765b11ab33f5a896074d03484e22d774af894d8d2a0",
+          "node_labels": {
+            "0": "Financial ledger",
+            "1": "Events",
+            "2": "Explainable sum",
+            "3": "Versioned statement",
+            "4": "Read API",
+            "5": "Canonical lookup",
+            "6": "Customer"
+          }
+        }
+      }
+    },
+    "12-3": {
+      "family": "shipment_reissue_control_loop",
+      "proposed_technology_by_node": {
+        "0": null,
+        "1": "clojure",
+        "2": "datomic",
+        "3": "clojure",
+        "4": "clojure",
+        "5": "clojure",
+        "6": null
+      },
+      "technologies": [
+        "clojure",
+        "datomic"
+      ],
+      "editions": {
+        "pt": {
+          "page": 228,
+          "page_id": "12-3",
+          "title": "A via antiga não manda na nova",
+          "asset": "diagram-pt-12-3-0",
+          "svg": "../evidence/diagram-pt-12-3-0.svg",
+          "svg_sha256": "778b0d03bc38a14b4bc7d8004acc1bc24db78e382d2eb2527e2bdca4def6c822",
+          "node_labels": {
+            "0": "Transportadora",
+            "1": "Gateway de entrega",
+            "2": "Registro de remessas",
+            "3": "Consistência",
+            "4": "Decisão de reemissão",
+            "5": "Gestão das vias",
+            "6": "Cliente"
+          }
+        },
+        "en": {
+          "page": 228,
+          "page_id": "12-3",
+          "title": "The old card cannot govern the new one",
+          "asset": "diagram-en-12-3-0",
+          "svg": "../evidence/diagram-en-12-3-0.svg",
+          "svg_sha256": "b0aab52aab3c5bea8d269e51fd6ff66ffd7bf89209904e49fce6b918f95f8a81",
+          "node_labels": {
+            "0": "Carrier",
+            "1": "Delivery gateway",
+            "2": "Shipment record",
+            "3": "Consistency",
+            "4": "Reissue decision",
+            "5": "Card issue management",
+            "6": "Customer"
+          }
+        }
+      }
+    },
+    "13-3": {
+      "family": "authorization_multi_authority_hub",
+      "proposed_technology_by_node": {
+        "0": "datomic",
+        "1": "datomic",
+        "2": "clojure",
+        "3": "flutter",
+        "4": "clojure",
+        "5": "kafka",
+        "6": "clojure"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter",
+        "kafka"
+      ],
+      "editions": {
+        "pt": {
+          "page": 245,
+          "page_id": "13-3",
+          "title": "O crédito é compartilhado; a reserva é atômica",
+          "asset": "diagram-pt-13-3-0",
+          "svg": "../evidence/diagram-pt-13-3-0.svg",
+          "svg_sha256": "8697da79f3aaccdab05c7f67f562d3c7b6191103a2e7d42bbd2241cb651d9d58",
+          "node_labels": {
+            "0": "Fonte de crédito",
+            "1": "Saldo global",
+            "2": "Orçamento do cartão",
+            "3": "App",
+            "4": "Política de risco",
+            "5": "Contexto atual",
+            "6": "Autorizador"
+          }
+        },
+        "en": {
+          "page": 245,
+          "page_id": "13-3",
+          "title": "Credit is shared; reservation is atomic",
+          "asset": "diagram-en-13-3-0",
+          "svg": "../evidence/diagram-en-13-3-0.svg",
+          "svg_sha256": "0bc92823e53a367cd1ee2925a9a4f5ab388782aeb64cbfdf149825c97dc05498",
+          "node_labels": {
+            "0": "Credit source",
+            "1": "Global balance",
+            "2": "Card budget",
+            "3": "App",
+            "4": "Risk policy",
+            "5": "Current context",
+            "6": "Authorizer"
+          }
+        }
+      }
+    },
+    "14-3": {
+      "family": "quote_consent_execution",
+      "proposed_technology_by_node": {
+        "0": "datomic",
+        "1": "clojure",
+        "2": "datomic",
+        "3": "clojure",
+        "4": "flutter",
+        "5": "clojure",
+        "6": "prometheus"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter",
+        "prometheus"
+      ],
+      "editions": {
+        "pt": {
+          "page": 262,
+          "page_id": "14-3",
+          "title": "A cotação é um contrato com validade",
+          "asset": "diagram-pt-14-3-0",
+          "svg": "../evidence/diagram-pt-14-3-0.svg",
+          "svg_sha256": "53092440e29d2a98332f4de7eab2d5d96a4d888b417f3af39ef0bc1553b51af1",
+          "node_labels": {
+            "0": "Contrato",
+            "1": "Cotador",
+            "2": "Registro de cotações",
+            "3": "Consulta de plano",
+            "4": "App",
+            "5": "Executor financeiro",
+            "6": "Observabilidade"
+          }
+        },
+        "en": {
+          "page": 262,
+          "page_id": "14-3",
+          "title": "A quote is a contract with expiry",
+          "asset": "diagram-en-14-3-0",
+          "svg": "../evidence/diagram-en-14-3-0.svg",
+          "svg_sha256": "add5c24c8583a8fb1fc1631c6ed018dae985934cb11483c9d1b6daaa409c2511",
+          "node_labels": {
+            "0": "Contract",
+            "1": "Quote engine",
+            "2": "Quote registry",
+            "3": "Plan lookup",
+            "4": "App",
+            "5": "Financial executor",
+            "6": "Observability"
+          }
+        }
+      }
+    },
+    "15-3": {
+      "family": "withdrawal_commit_receipt",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "clojure",
+        "3": "clojure",
+        "4": "datomic",
+        "5": "opentelemetry",
+        "6": "kafka",
+        "7": "clojure"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter",
+        "kafka",
+        "opentelemetry"
+      ],
+      "editions": {
+        "pt": {
+          "page": 279,
+          "page_id": "15-3",
+          "title": "O recibo fecha o ciclo",
+          "asset": "diagram-pt-15-3-0",
+          "svg": "../evidence/diagram-pt-15-3-0.svg",
+          "svg_sha256": "7009aca79a27f6946575a7af6556c63a0046e1bb0af318fff1195406ac8f5577",
+          "node_labels": {
+            "1": "App de Caixinhas",
+            "2": "Entrada de resgate",
+            "3": "Autoridade financeira",
+            "4": "Diário de operação",
+            "5": "Sinais operacionais",
+            "6": "Eventos confirmados",
+            "7": "Consulta de recibo"
+          }
+        },
+        "en": {
+          "page": 279,
+          "page_id": "15-3",
+          "title": "The receipt closes the loop",
+          "asset": "diagram-en-15-3-0",
+          "svg": "../evidence/diagram-en-15-3-0.svg",
+          "svg_sha256": "f35abfd5fe00062a8b117fd3c6513e6b36652e364dba140cb4447bbff0d4152d",
+          "node_labels": {
+            "1": "Money Box app",
+            "2": "Withdrawal entry",
+            "3": "Financial authority",
+            "4": "Operation journal",
+            "5": "Operational signals",
+            "6": "Confirmed events",
+            "7": "Receipt query"
+          }
+        }
+      }
+    },
+    "16-3": {
+      "family": "custody_campaign_schedule_loop",
+      "proposed_technology_by_node": {
+        "1": "clojure",
+        "2": "kafka",
+        "3": "datomic",
+        "4": "clojure",
+        "5": "postgresql",
+        "6": "clojure",
+        "7": "datomic"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "kafka",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 296,
+          "page_id": "16-3",
+          "title": "Uma projeção explicável de benefício",
+          "asset": "diagram-pt-16-3-0",
+          "svg": "../evidence/diagram-pt-16-3-0.svg",
+          "svg_sha256": "00e3fae9e59a2a971794ef653d0624377402606cd519c5d52285a85e347996ec",
+          "node_labels": {
+            "1": "Eventos de custódia",
+            "2": "Transporte de fatos",
+            "3": "Livro da campanha",
+            "4": "Decisor versionado",
+            "5": "Agenda de parcelas",
+            "6": "Executor autorizado",
+            "7": "Reconciliação"
+          }
+        },
+        "en": {
+          "page": 296,
+          "page_id": "16-3",
+          "title": "An explainable benefit projection",
+          "asset": "diagram-en-16-3-0",
+          "svg": "../evidence/diagram-en-16-3-0.svg",
+          "svg_sha256": "4d6f2b16d706e4e95d43dc5fad7677c52182e2e914dbef6cd4c7a30513d40c45",
+          "node_labels": {
+            "1": "Custody events",
+            "2": "Fact transport",
+            "3": "Campaign journal",
+            "4": "Versioned decision",
+            "5": "Installment schedule",
+            "6": "Authorized executor",
+            "7": "Reconciliation"
+          }
+        }
+      }
+    },
+    "17-3": {
+      "family": "redemption_confirmation_review_fork",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "datomic",
+        "3": "clojure",
+        "4": "clojure",
+        "5": "datomic",
+        "6": "clojure",
+        "7": "datomic"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter"
+      ],
+      "editions": {
+        "pt": {
+          "page": 313,
+          "page_id": "17-3",
+          "title": "A prévia é parte do compromisso",
+          "asset": "diagram-pt-17-3-0",
+          "svg": "../evidence/diagram-pt-17-3-0.svg",
+          "svg_sha256": "794e96e9800ab00e65b651a1f03eebd6f152ec234288f836562e3c881ce71f01",
+          "node_labels": {
+            "1": "Escolha no app",
+            "2": "Saldo canônico",
+            "3": "Emissor de cotação",
+            "4": "Confirmação explícita",
+            "5": "Resgate atômico",
+            "6": "Revisão assistida",
+            "7": "Registro de decisão"
+          }
+        },
+        "en": {
+          "page": 313,
+          "page_id": "17-3",
+          "title": "The preview is part of the commitment",
+          "asset": "diagram-en-17-3-0",
+          "svg": "../evidence/diagram-en-17-3-0.svg",
+          "svg_sha256": "1720aeb668793ab5d52ae5ef3d7abdc2a29f066e03fd498acd75b3f42aabf1e2",
+          "node_labels": {
+            "1": "Choice in app",
+            "2": "Canonical balance",
+            "3": "Quote issuer",
+            "4": "Explicit confirmation",
+            "5": "Atomic redemption",
+            "6": "Assisted review",
+            "7": "Decision record"
+          }
+        }
+      }
+    },
+    "18-3": {
+      "family": "portability_evidence_comparison",
+      "proposed_technology_by_node": {
+        "1": "kafka",
+        "2": "clojure",
+        "3": "clojure",
+        "4": "postgresql",
+        "5": "clojure",
+        "6": "postgresql",
+        "7": null
+      },
+      "technologies": [
+        "clojure",
+        "kafka",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 330,
+          "page_id": "18-3",
+          "title": "Comparar o ocorrido e o confirmado",
+          "asset": "diagram-pt-18-3-0",
+          "svg": "../evidence/diagram-pt-18-3-0.svg",
+          "svg_sha256": "147aeb15315bc5e3933823ca4abde654ecc3b0e47cfa1519000789dade28f88c",
+          "node_labels": {
+            "1": "Eventos recebidos",
+            "2": "Contrato de etapas",
+            "3": "Estado operacional",
+            "4": "Diário de evidências",
+            "5": "Conciliador de etapas",
+            "6": "Caso de investigação",
+            "7": "Operação e parceiro"
+          }
+        },
+        "en": {
+          "page": 330,
+          "page_id": "18-3",
+          "title": "Compare occurrence and confirmation",
+          "asset": "diagram-en-18-3-0",
+          "svg": "../evidence/diagram-en-18-3-0.svg",
+          "svg_sha256": "1ec0318f04a122842b435e051c957519b8548d0a939ecc0e7c3f27b9ed54c3ab",
+          "node_labels": {
+            "1": "Received events",
+            "2": "Stage contract",
+            "3": "Operational state",
+            "4": "Evidence journal",
+            "5": "Stage reconciler",
+            "6": "Investigation case",
+            "7": "Operations and partner"
+          }
+        }
+      }
+    },
+    "19-3": {
+      "family": "fx_capability_before_conversion",
+      "proposed_technology_by_node": {
+        "1": "flutter",
+        "2": "clojure",
+        "3": "clojure",
+        "4": "flutter",
+        "5": "datomic",
+        "6": "clojure",
+        "7": "postgresql"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "flutter",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 347,
+          "page_id": "19-3",
+          "title": "A capacidade acompanha a cotação",
+          "asset": "diagram-pt-19-3-0",
+          "svg": "../evidence/diagram-pt-19-3-0.svg",
+          "svg_sha256": "487fd01c51f9862ace0e73d95881dfc0c5c120b14f688c0bb24a1287ad35eacc",
+          "node_labels": {
+            "1": "Finalidade declarada",
+            "2": "Catálogo de capacidade",
+            "3": "Cotação autorizada",
+            "4": "Confirmação da prévia",
+            "5": "Conversão financeira",
+            "6": "Conciliação do efeito",
+            "7": "Registro de revisão"
+          }
+        },
+        "en": {
+          "page": 347,
+          "page_id": "19-3",
+          "title": "Capability travels with the quote",
+          "asset": "diagram-en-19-3-0",
+          "svg": "../evidence/diagram-en-19-3-0.svg",
+          "svg_sha256": "7b3e1116ac5790f16eb2594d7c93b0d36aed054c68c345fbe34ccd9d7c58fb8e",
+          "node_labels": {
+            "1": "Declared purpose",
+            "2": "Capability catalog",
+            "3": "Authorized quote",
+            "4": "Preview confirmation",
+            "5": "Financial conversion",
+            "6": "Effect reconciliation",
+            "7": "Review record"
+          }
+        }
+      }
+    },
+    "20-3": {
+      "family": "payment_order_exception_resolution",
+      "proposed_technology_by_node": {
+        "1": "datomic",
+        "2": "clojure",
+        "3": "clojure",
+        "4": null,
+        "5": null,
+        "6": "clojure",
+        "7": "postgresql"
+      },
+      "technologies": [
+        "clojure",
+        "datomic",
+        "postgresql"
+      ],
+      "editions": {
+        "pt": {
+          "page": 364,
+          "page_id": "20-3",
+          "title": "A investigação não cria autoridade de estorno",
+          "asset": "diagram-pt-20-3-0",
+          "svg": "../evidence/diagram-pt-20-3-0.svg",
+          "svg_sha256": "2bb33fa19a0103258994a4c412ac63c2646c1fd90677c4d2925375cf7796dee7",
+          "node_labels": {
+            "1": "Pagamento capturado",
+            "2": "Consulta do caso",
+            "3": "Conciliador de pedido",
+            "4": "Decisão do lojista",
+            "5": "Operação assistida",
+            "6": "Escritor financeiro",
+            "7": "Recibo de desfecho"
+          }
+        },
+        "en": {
+          "page": 364,
+          "page_id": "20-3",
+          "title": "Investigation does not create refund authority",
+          "asset": "diagram-en-20-3-0",
+          "svg": "../evidence/diagram-en-20-3-0.svg",
+          "svg_sha256": "9c5e9d16946cc3f0c40cf073c93b1e614d293380da44400939ae80ba2addcd1b",
+          "node_labels": {
+            "1": "Captured payment",
+            "2": "Case query",
+            "3": "Order reconciler",
+            "4": "Merchant decision",
+            "5": "Assisted operations",
+            "6": "Financial writer",
+            "7": "Outcome receipt"
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "architectures": 24,
+    "final_svg_files": 48,
+    "official_technologies_used": 13,
+    "embedded_logo_instances": 308,
+    "source_arrays_preserved": true,
+    "renderer_mapping_matches_final_svg_metadata": true,
+    "logo_pixels_match_final_png_render_tiles": true,
+    "pt_en_node_mappings_identical": true
   }
 }

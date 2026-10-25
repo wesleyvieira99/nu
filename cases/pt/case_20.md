@@ -38,6 +38,8 @@ O desenho trata o ramo de estorno; confirmação de pedido pode encerrar a lacun
 
 ## Timeout abre caso, não movimenta dinheiro
 
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]`
+
 ```python
     def authorize_refund(self, merchant, payment_id, authorization_id):
         with self.lock:
@@ -82,6 +84,8 @@ O modelo implementa estorno integral único, não parcelas ou devoluções parci
 
 ## SQL para unicidade e rastreabilidade
 
+`Reconciliation Workflow [proposal]` · `Authority-bound Compensation [proposal]`
+
 ```sql
 CREATE TABLE refund_receipt (
   merchant_id TEXT NOT NULL,
@@ -105,6 +109,8 @@ A restrição protege a identidade do estorno, mas não torna um efeito externo 
 A chave comercial inclui o lojista, evitando colisão entre números de pedido iguais em lojas diferentes. A interface de atendimento consulta referências autorizadas, e não SQL direto. O recibo financeiro precisa informar como o crédito aparecerá ao cliente, sem prometer que o histórico comercial será apagado ou reescrito.
 
 ## O pedido e o pagamento mantêm identidades
+
+`Reconciliation Workflow [proposal]` · `Authority-bound Compensation [proposal]`
 
 | Identidade | Dono | Regra |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ Eu manteria estado financeiro e estado comercial separados, com ocorrência e re
 A conciliação utiliza valores e referências na zona protegida. Telemetria recebe categoria de divergência, idade e versão, sem conteúdo do carrinho ou dados desnecessários de compra. Retenção e acesso devem permitir investigação e cumprir políticas existentes. Um operador que altera o caso não ganha automaticamente permissão para emitir crédito.
 
 ## Provar ausência de crédito indevido
+
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]`
 
 ```python
     def test_timeout_is_not_refund_authority(self):
@@ -217,3 +225,96 @@ O aceite inclui isolamento de lojista e pagamento, autorização verificável, e
 Eu recomendaria avançar se o parceiro consegue fornecer e reconciliar evidência, e se o cliente pode acompanhar o caso sem repetir sua história. Pararia se o plano depende de crédito sem autoridade ou de encerrar pendências para melhorar métricas. Uma compra resolvida precisa de desfecho financeiro confiável e de uma comunicação que a pessoa consiga reconhecer.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py)
+
+## Padrões com prova no código
+
+`Reconciliation Workflow [lab]` · `Authority-bound Compensation [lab]` · `Saga-style compensation [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Reconciliation Workflow | Reconciler.investigate | timeout abre investigação sem autorizar estorno |
+| Authority-bound Compensation | Reconciler.refund | autorizações e retries produzem um crédito |
+| Saga-style compensation / merchant boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + reconciliation adapter. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · LangGraph**
+
+Experimento proposto: LangGraph para reunir sinais de pagamento e pedido para revisão operacional. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Reconciler.investigate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L39)
+- [P1 · test_timeout_is_not_refund_authority](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L99)
+- [P2 · Reconciler.refund](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L72)
+- [P2 · test_concurrent_refunds_credit_once](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L110)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Sequência de execução
+
+![Timeout abre investigação, não autoridade de estorno. Lojista e escritor são adaptadores confiados no modelo.](../../evidence/sequence-pt-20.svg)
+
+Timeout abre investigação, não autoridade de estorno. Lojista e escritor são adaptadores confiados no modelo.
+
+**Autoridade e fronteira de falha**
+
+timeout abre investigação sem autorizar estorno. autorizações e retries produzem um crédito.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [investigate](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L39)
+- [refund](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L72)
+
+## Features, histórias e aceite
+
+**F20.1 · Investigação com próximo passo · D16–30**
+
+Como cliente, quero localizar o pedido após pagamento confirmado. Aceite: timeout abre investigação sem autorizar estorno.
+
+**F20.2 · Compensação autorizada · D31–60**
+
+Como cliente, quero receber o estorno aprovado sem crédito duplicado. Aceite: autorizações e retries produzem um crédito.
+
+**F20.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F20.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L99)
+- [Aceite F20.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L110)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal. A exposição pendente em BRL-dias fica fora do benefício; ela não é lucro.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 5000.00 | 0.00 | 2000.00 | 60000.00 |
+| Base | 7500.00 | 0.00 | 2000.00 | 60000.00 |
+| Ambicioso | 10000.00 | 0.00 | 2000.00 | 60000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 3000.00 | -24000.00 | -54000.00 |
+| Base | 5500.00 | 6000.00 | -39000.00 |
+| Ambicioso | 8000.00 | 36000.00 | -24000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: minutos de conciliação por caso. Ameaça: fechar pendências sem evidência para reduzir estoque. |
+| Economia por unidade | Casos × minutos liberados / 60 × custo-hora; exposição em BRL-dias é acompanhamento, não benefício somável. |
+| Experimento proposto | Comparar contratos semelhantes por lojista, separar casos antigos e verificar ação útil e estorno conciliado. |
+| Critério de parada | Parar por crédito duplicado; conservar casos sem resposta até estado confiável. |
+
+- [Reclame AQUI · ID 255046021](https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

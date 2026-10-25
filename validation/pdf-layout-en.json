@@ -283,7 +283,7 @@
     "id": "arquiteturas-1",
     "kind": "architecture",
     "scale": 1,
-    "height": 598.0,
+    "height": 601.9,
     "available": 612.0,
     "title": "One journey, two authorities."
   },
@@ -292,7 +292,7 @@
     "id": "arquiteturas-2",
     "kind": "architecture",
     "scale": 1,
-    "height": 581.1,
+    "height": 585.0,
     "available": 612.0,
     "title": "Recovery as part of the product."
   },
@@ -301,7 +301,7 @@
     "id": "arquiteturas-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 581.1,
+    "height": 585.0,
     "available": 612.0,
     "title": "An experience platform with contracts."
   },
@@ -310,7 +310,7 @@
     "id": "arquiteturas-4",
     "kind": "architecture",
     "scale": 1,
-    "height": 564.2,
+    "height": 568.1,
     "available": 612.0,
     "title": "ML: separate prediction from decision."
   },
@@ -337,7 +337,7 @@
     "id": "01-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
@@ -346,7 +346,7 @@
     "id": "01-4",
     "kind": "code",
     "scale": 1,
-    "height": 510.2,
+    "height": 541.2,
     "available": 574.0,
     "title": "Executable core"
   },
@@ -355,7 +355,7 @@
     "id": "01-5",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 586.5,
     "title": "Stack implementation"
   },
@@ -364,7 +364,7 @@
     "id": "01-6",
     "kind": "code",
     "scale": 1,
-    "height": 512.5,
+    "height": 543.5,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
@@ -373,7 +373,7 @@
     "id": "01-7",
     "kind": "code",
     "scale": 1,
-    "height": 429.8,
+    "height": 460.8,
     "available": 586.5,
     "title": "Adversarial verification"
   },
@@ -433,6 +433,42 @@
   },
   {
     "page": 52,
+    "id": "01-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 53,
+    "id": "01-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 54,
+    "id": "01-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 55,
+    "id": "01-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 56,
     "id": "02-1",
     "kind": "evidence",
     "scale": 1,
@@ -441,7 +477,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 53,
+    "page": 57,
     "id": "02-2",
     "kind": "essay",
     "scale": 1,
@@ -450,52 +486,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 54,
+    "page": 58,
     "id": "02-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 55,
+    "page": 59,
     "id": "02-4",
     "kind": "code",
     "scale": 1,
-    "height": 441.3,
+    "height": 472.3,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 56,
+    "page": 60,
     "id": "02-5",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 57,
+    "page": 61,
     "id": "02-6",
     "kind": "code",
     "scale": 1,
-    "height": 512.5,
+    "height": 543.5,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 58,
+    "page": 62,
     "id": "02-7",
     "kind": "code",
     "scale": 1,
-    "height": 383.9,
+    "height": 414.9,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 59,
+    "page": 63,
     "id": "02-8",
     "kind": "metrics",
     "scale": 1,
@@ -504,7 +540,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 60,
+    "page": 64,
     "id": "02-9",
     "kind": "value",
     "scale": 1,
@@ -513,7 +549,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 61,
+    "page": 65,
     "id": "02-10",
     "kind": "roadmap",
     "scale": 1,
@@ -522,7 +558,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 62,
+    "page": 66,
     "id": "02-11",
     "kind": "essay",
     "scale": 1,
@@ -531,7 +567,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 63,
+    "page": 67,
     "id": "02-12",
     "kind": "essay",
     "scale": 1,
@@ -540,7 +576,7 @@
     "title": "My contribution"
   },
   {
-    "page": 64,
+    "page": 68,
     "id": "02-13",
     "kind": "essay",
     "scale": 1,
@@ -549,7 +585,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 65,
+    "page": 69,
+    "id": "02-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 511.5,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 70,
+    "id": "02-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 71,
+    "id": "02-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 72,
+    "id": "02-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 73,
     "id": "03-1",
     "kind": "evidence",
     "scale": 1,
@@ -558,7 +630,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 66,
+    "page": 74,
     "id": "03-2",
     "kind": "essay",
     "scale": 1,
@@ -567,52 +639,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 67,
+    "page": 75,
     "id": "03-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 68,
+    "page": 76,
     "id": "03-4",
     "kind": "code",
     "scale": 1,
-    "height": 487.2,
+    "height": 518.2,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 69,
+    "page": 77,
     "id": "03-5",
     "kind": "code",
     "scale": 1,
-    "height": 321.0,
+    "height": 352.0,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 70,
+    "page": 78,
     "id": "03-6",
     "kind": "code",
     "scale": 1,
-    "height": 512.5,
+    "height": 543.5,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 71,
+    "page": 79,
     "id": "03-7",
     "kind": "code",
     "scale": 1,
-    "height": 377.8,
+    "height": 408.8,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 72,
+    "page": 80,
     "id": "03-8",
     "kind": "metrics",
     "scale": 1,
@@ -621,7 +693,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 73,
+    "page": 81,
     "id": "03-9",
     "kind": "value",
     "scale": 1,
@@ -630,7 +702,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 74,
+    "page": 82,
     "id": "03-10",
     "kind": "roadmap",
     "scale": 1,
@@ -639,7 +711,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 75,
+    "page": 83,
     "id": "03-11",
     "kind": "essay",
     "scale": 1,
@@ -648,7 +720,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 76,
+    "page": 84,
     "id": "03-12",
     "kind": "essay",
     "scale": 1,
@@ -657,7 +729,7 @@
     "title": "My contribution"
   },
   {
-    "page": 77,
+    "page": 85,
     "id": "03-13",
     "kind": "essay",
     "scale": 1,
@@ -666,7 +738,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 78,
+    "page": 86,
+    "id": "03-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 87,
+    "id": "03-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 88,
+    "id": "03-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 89,
+    "id": "03-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 520.8,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 90,
     "id": "04-1",
     "kind": "evidence",
     "scale": 1,
@@ -675,7 +783,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 79,
+    "page": 91,
     "id": "04-2",
     "kind": "essay",
     "scale": 1,
@@ -684,52 +792,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 80,
+    "page": 92,
     "id": "04-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 81,
+    "page": 93,
     "id": "04-4",
     "kind": "code",
     "scale": 1,
-    "height": 395.4,
+    "height": 426.4,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 82,
+    "page": 94,
     "id": "04-5",
     "kind": "code",
     "scale": 1,
-    "height": 389.3,
+    "height": 420.3,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 83,
+    "page": 95,
     "id": "04-6",
     "kind": "code",
     "scale": 1,
-    "height": 512.5,
+    "height": 543.5,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 84,
+    "page": 96,
     "id": "04-7",
     "kind": "code",
     "scale": 1,
-    "height": 395.4,
+    "height": 426.4,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 85,
+    "page": 97,
     "id": "04-8",
     "kind": "metrics",
     "scale": 1,
@@ -738,7 +846,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 86,
+    "page": 98,
     "id": "04-9",
     "kind": "value",
     "scale": 1,
@@ -747,7 +855,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 87,
+    "page": 99,
     "id": "04-10",
     "kind": "roadmap",
     "scale": 1,
@@ -756,7 +864,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 88,
+    "page": 100,
     "id": "04-11",
     "kind": "essay",
     "scale": 1,
@@ -765,7 +873,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 89,
+    "page": 101,
     "id": "04-12",
     "kind": "essay",
     "scale": 1,
@@ -774,7 +882,7 @@
     "title": "My contribution"
   },
   {
-    "page": 90,
+    "page": 102,
     "id": "04-13",
     "kind": "essay",
     "scale": 1,
@@ -783,7 +891,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 91,
+    "page": 103,
+    "id": "04-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 104,
+    "id": "04-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 105,
+    "id": "04-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 106,
+    "id": "04-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 107,
     "id": "05-1",
     "kind": "evidence",
     "scale": 1,
@@ -792,7 +936,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 92,
+    "page": 108,
     "id": "05-2",
     "kind": "essay",
     "scale": 1,
@@ -801,52 +945,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 93,
+    "page": 109,
     "id": "05-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 94,
+    "page": 110,
     "id": "05-4",
     "kind": "code",
     "scale": 1,
-    "height": 475.7,
+    "height": 506.7,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 95,
+    "page": 111,
     "id": "05-5",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 96,
+    "page": 112,
     "id": "05-6",
     "kind": "code",
     "scale": 1,
-    "height": 529.4,
+    "height": 560.4,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 97,
+    "page": 113,
     "id": "05-7",
     "kind": "code",
     "scale": 1,
-    "height": 349.4,
+    "height": 380.4,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 98,
+    "page": 114,
     "id": "05-8",
     "kind": "metrics",
     "scale": 1,
@@ -855,7 +999,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 99,
+    "page": 115,
     "id": "05-9",
     "kind": "value",
     "scale": 1,
@@ -864,7 +1008,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 100,
+    "page": 116,
     "id": "05-10",
     "kind": "roadmap",
     "scale": 1,
@@ -873,7 +1017,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 101,
+    "page": 117,
     "id": "05-11",
     "kind": "essay",
     "scale": 1,
@@ -882,7 +1026,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 102,
+    "page": 118,
     "id": "05-12",
     "kind": "essay",
     "scale": 1,
@@ -891,7 +1035,7 @@
     "title": "My contribution"
   },
   {
-    "page": 103,
+    "page": 119,
     "id": "05-13",
     "kind": "essay",
     "scale": 1,
@@ -900,7 +1044,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 104,
+    "page": 120,
+    "id": "05-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 511.5,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 121,
+    "id": "05-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 122,
+    "id": "05-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 123,
+    "id": "05-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 124,
     "id": "06-1",
     "kind": "evidence",
     "scale": 1,
@@ -909,7 +1089,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 105,
+    "page": 125,
     "id": "06-2",
     "kind": "essay",
     "scale": 1,
@@ -918,52 +1098,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 106,
+    "page": 126,
     "id": "06-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 107,
+    "page": 127,
     "id": "06-4",
     "kind": "code",
     "scale": 1,
-    "height": 475.7,
+    "height": 506.7,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 108,
+    "page": 128,
     "id": "06-5",
     "kind": "code",
     "scale": 1,
-    "height": 389.3,
+    "height": 420.3,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 109,
+    "page": 129,
     "id": "06-6",
     "kind": "code",
     "scale": 1,
-    "height": 523.9,
+    "height": 554.9,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 110,
+    "page": 130,
     "id": "06-7",
     "kind": "code",
     "scale": 1,
-    "height": 372.4,
+    "height": 403.4,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 111,
+    "page": 131,
     "id": "06-8",
     "kind": "metrics",
     "scale": 1,
@@ -972,7 +1152,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 112,
+    "page": 132,
     "id": "06-9",
     "kind": "value",
     "scale": 1,
@@ -981,7 +1161,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 113,
+    "page": 133,
     "id": "06-10",
     "kind": "roadmap",
     "scale": 1,
@@ -990,7 +1170,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 114,
+    "page": 134,
     "id": "06-11",
     "kind": "essay",
     "scale": 1,
@@ -999,7 +1179,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 115,
+    "page": 135,
     "id": "06-12",
     "kind": "essay",
     "scale": 1,
@@ -1008,7 +1188,7 @@
     "title": "My contribution"
   },
   {
-    "page": 116,
+    "page": 136,
     "id": "06-13",
     "kind": "essay",
     "scale": 1,
@@ -1017,7 +1197,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 117,
+    "page": 137,
+    "id": "06-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 138,
+    "id": "06-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 139,
+    "id": "06-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 140,
+    "id": "06-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 520.8,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 141,
     "id": "07-1",
     "kind": "evidence",
     "scale": 1,
@@ -1026,7 +1242,7 @@
     "title": "The record and its outcome"
   },
   {
-    "page": 118,
+    "page": 142,
     "id": "07-2",
     "kind": "essay",
     "scale": 1,
@@ -1035,52 +1251,52 @@
     "title": "Diagnosis before design"
   },
   {
-    "page": 119,
+    "page": 143,
     "id": "07-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "Architecture boundaries"
   },
   {
-    "page": 120,
+    "page": 144,
     "id": "07-4",
     "kind": "code",
-    "scale": 1,
-    "height": 544.7,
+    "scale": 0.99,
+    "height": 569.9,
     "available": 574.0,
     "title": "Executable core"
   },
   {
-    "page": 121,
+    "page": 145,
     "id": "07-5",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 586.5,
     "title": "Stack implementation"
   },
   {
-    "page": 122,
+    "page": 146,
     "id": "07-6",
     "kind": "code",
     "scale": 1,
-    "height": 523.9,
+    "height": 554.9,
     "available": 612.0,
     "title": "Contracts and ownership"
   },
   {
-    "page": 123,
+    "page": 147,
     "id": "07-7",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 586.5,
     "title": "Adversarial verification"
   },
   {
-    "page": 124,
+    "page": 148,
     "id": "07-8",
     "kind": "metrics",
     "scale": 1,
@@ -1089,7 +1305,7 @@
     "title": "Measure the right journey"
   },
   {
-    "page": 125,
+    "page": 149,
     "id": "07-9",
     "kind": "value",
     "scale": 1,
@@ -1098,7 +1314,7 @@
     "title": "Financial value with assumptions"
   },
   {
-    "page": 126,
+    "page": 150,
     "id": "07-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1107,7 +1323,7 @@
     "title": "Accountable roadmap"
   },
   {
-    "page": 127,
+    "page": 151,
     "id": "07-11",
     "kind": "essay",
     "scale": 1,
@@ -1116,7 +1332,7 @@
     "title": "Rollout and operations"
   },
   {
-    "page": 128,
+    "page": 152,
     "id": "07-12",
     "kind": "essay",
     "scale": 1,
@@ -1125,7 +1341,7 @@
     "title": "My contribution"
   },
   {
-    "page": 129,
+    "page": 153,
     "id": "07-13",
     "kind": "essay",
     "scale": 1,
@@ -1134,7 +1350,43 @@
     "title": "Handoff and decision"
   },
   {
-    "page": 130,
+    "page": 154,
+    "id": "07-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 155,
+    "id": "07-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 507.2,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 156,
+    "id": "07-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 157,
+    "id": "07-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 158,
     "id": "08-1",
     "kind": "evidence",
     "scale": 1,
@@ -1143,7 +1395,7 @@
     "title": "08 · The dispute and the response"
   },
   {
-    "page": 131,
+    "page": 159,
     "id": "08-2",
     "kind": "essay",
     "scale": 1,
@@ -1152,52 +1404,52 @@
     "title": "Observed access does not settle consent"
   },
   {
-    "page": 132,
+    "page": 160,
     "id": "08-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "A dossier with independent review"
   },
   {
-    "page": 133,
+    "page": 161,
     "id": "08-4",
     "kind": "code",
     "scale": 1,
-    "height": 533.2,
+    "height": 564.2,
     "available": 586.5,
     "title": "Core: revision and action identity"
   },
   {
-    "page": 134,
+    "page": 162,
     "id": "08-5",
     "kind": "code",
     "scale": 1,
-    "height": 366.3,
+    "height": 397.3,
     "available": 612.0,
     "title": "Make the policy explicit"
   },
   {
-    "page": 135,
+    "page": 163,
     "id": "08-6",
     "kind": "code",
     "scale": 1,
-    "height": 420.4,
+    "height": 451.4,
     "available": 612.0,
     "title": "Evidence and access contracts"
   },
   {
-    "page": 136,
+    "page": 164,
     "id": "08-7",
     "kind": "code",
     "scale": 1,
-    "height": 389.9,
+    "height": 420.9,
     "available": 612.0,
     "title": "Test appeal and recovery"
   },
   {
-    "page": 137,
+    "page": 165,
     "id": "08-8",
     "kind": "metrics",
     "scale": 1,
@@ -1206,7 +1458,7 @@
     "title": "Measure useful review and human effort"
   },
   {
-    "page": 138,
+    "page": 166,
     "id": "08-9",
     "kind": "value",
     "scale": 1,
@@ -1215,7 +1467,7 @@
     "title": "Value: recovered capacity, not profit"
   },
   {
-    "page": 139,
+    "page": 167,
     "id": "08-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1224,7 +1476,7 @@
     "title": "A 90-day plan with accountable roles"
   },
   {
-    "page": 140,
+    "page": 168,
     "id": "08-11",
     "kind": "essay",
     "scale": 1,
@@ -1233,7 +1485,7 @@
     "title": "Operate without abandoning the queue"
   },
   {
-    "page": 141,
+    "page": 169,
     "id": "08-12",
     "kind": "essay",
     "scale": 1,
@@ -1242,7 +1494,7 @@
     "title": "My contribution to the decision"
   },
   {
-    "page": 142,
+    "page": 170,
     "id": "08-13",
     "kind": "essay",
     "scale": 1,
@@ -1251,7 +1503,43 @@
     "title": "Handoff for technical and operational review"
   },
   {
-    "page": 143,
+    "page": 171,
+    "id": "08-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 511.5,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 172,
+    "id": "08-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 173,
+    "id": "08-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 174,
+    "id": "08-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 175,
     "id": "09-1",
     "kind": "evidence",
     "scale": 1,
@@ -1260,7 +1548,7 @@
     "title": "09 · Paid does not explain allocation"
   },
   {
-    "page": 144,
+    "page": 176,
     "id": "09-2",
     "kind": "essay",
     "scale": 1,
@@ -1269,52 +1557,52 @@
     "title": "Three states, different consequences"
   },
   {
-    "page": 145,
+    "page": 177,
     "id": "09-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 517.4,
+    "height": 521.3,
     "available": 612.0,
     "title": "A receipt linked to the ledger"
   },
   {
-    "page": 146,
+    "page": 178,
     "id": "09-4",
     "kind": "code",
-    "scale": 1,
-    "height": 567.6,
+    "scale": 0.97,
+    "height": 580.7,
     "available": 586.5,
     "title": "Core: allocate or change nothing"
   },
   {
-    "page": 147,
+    "page": 179,
     "id": "09-5",
     "kind": "code",
     "scale": 1,
-    "height": 366.3,
+    "height": 397.3,
     "available": 612.0,
     "title": "Pure rules, transactional writes"
   },
   {
-    "page": 148,
+    "page": 180,
     "id": "09-6",
     "kind": "code",
     "scale": 1,
-    "height": 460.2,
+    "height": 491.2,
     "available": 612.0,
     "title": "Conserve money and identity"
   },
   {
-    "page": 149,
+    "page": 181,
     "id": "09-7",
     "kind": "code",
     "scale": 1,
-    "height": 412.3,
+    "height": 443.3,
     "available": 612.0,
     "title": "Partial failure must not partially settle"
   },
   {
-    "page": 150,
+    "page": 182,
     "id": "09-8",
     "kind": "metrics",
     "scale": 1,
@@ -1323,7 +1611,7 @@
     "title": "Metrics that follow the payment"
   },
   {
-    "page": 151,
+    "page": 183,
     "id": "09-9",
     "kind": "value",
     "scale": 1,
@@ -1332,7 +1620,7 @@
     "title": "A financial case with two cost components"
   },
   {
-    "page": 152,
+    "page": 184,
     "id": "09-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1341,7 +1629,7 @@
     "title": "A reconciliation-led roadmap"
   },
   {
-    "page": 153,
+    "page": 185,
     "id": "09-11",
     "kind": "essay",
     "scale": 1,
@@ -1350,7 +1638,7 @@
     "title": "Rollback preserves financial writes"
   },
   {
-    "page": 154,
+    "page": 186,
     "id": "09-12",
     "kind": "essay",
     "scale": 1,
@@ -1359,7 +1647,7 @@
     "title": "My contribution on two fronts"
   },
   {
-    "page": 155,
+    "page": 187,
     "id": "09-13",
     "kind": "essay",
     "scale": 1,
@@ -1368,7 +1656,43 @@
     "title": "A receipt review walkthrough"
   },
   {
-    "page": 156,
+    "page": 188,
+    "id": "09-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 511.5,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 189,
+    "id": "09-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 190,
+    "id": "09-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 191,
+    "id": "09-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 192,
     "id": "10-1",
     "kind": "evidence",
     "scale": 1,
@@ -1377,7 +1701,7 @@
     "title": "10 · Duplication with confirmed resolution"
   },
   {
-    "page": 157,
+    "page": 193,
     "id": "10-2",
     "kind": "essay",
     "scale": 1,
@@ -1386,52 +1710,52 @@
     "title": "Timeout is not definitive failure"
   },
   {
-    "page": 158,
+    "page": 194,
     "id": "10-3",
     "kind": "architecture",
     "scale": 1,
-    "height": 500.5,
+    "height": 504.4,
     "available": 612.0,
     "title": "One intent crosses uncertainty"
   },
   {
-    "page": 159,
+    "page": 195,
     "id": "10-4",
     "kind": "code",
     "scale": 1,
-    "height": 527.8,
+    "height": 558.8,
     "available": 586.5,
     "title": "Core: persist before dispatch"
   },
   {
-    "page": 160,
+    "page": 196,
     "id": "10-5",
     "kind": "code",
     "scale": 1,
-    "height": 395.4,
+    "height": 426.4,
     "available": 612.0,
     "title": "State should guide the next action"
   },
   {
-    "page": 161,
+    "page": 197,
     "id": "10-6",
     "kind": "code",
     "scale": 1,
-    "height": 460.2,
+    "height": 491.2,
     "available": 612.0,
     "title": "Identity before heuristics"
   },
   {
-    "page": 162,
+    "page": 198,
     "id": "10-7",
     "kind": "code",
     "scale": 1,
-    "height": 406.8,
+    "height": 437.8,
     "available": 612.0,
     "title": "Fail after the external effect"
   },
   {
-    "page": 163,
+    "page": 199,
     "id": "10-8",
     "kind": "metrics",
     "scale": 1,
@@ -1440,7 +1764,7 @@
     "title": "Measure ambiguity and confirmed effects"
   },
   {
-    "page": 164,
+    "page": 200,
     "id": "10-9",
     "kind": "value",
     "scale": 1,
@@ -1449,7 +1773,7 @@
     "title": "A strong case does not prove high ROI"
   },
   {
-    "page": 165,
+    "page": 201,
     "id": "10-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1458,7 +1782,7 @@
     "title": "A partner-dependent roadmap"
   },
   {
-    "page": 166,
+    "page": 202,
     "id": "10-11",
     "kind": "essay",
     "scale": 1,
@@ -1467,7 +1791,7 @@
     "title": "Operate uncertainty without repetition"
   },
   {
-    "page": 167,
+    "page": 203,
     "id": "10-12",
     "kind": "essay",
     "scale": 1,
@@ -1476,7 +1800,7 @@
     "title": "My contribution to the contract"
   },
   {
-    "page": 168,
+    "page": 204,
     "id": "10-13",
     "kind": "essay",
     "scale": 1,
@@ -1485,7 +1809,43 @@
     "title": "Review a single effect under an assumption"
   },
   {
-    "page": 169,
+    "page": 205,
+    "id": "10-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 206,
+    "id": "10-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 207,
+    "id": "10-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 208,
+    "id": "10-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 517.7,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 209,
     "id": "11-1",
     "kind": "evidence",
     "scale": 1,
@@ -1494,7 +1854,7 @@
     "title": "11 · Visible credit, disputed balance"
   },
   {
-    "page": 170,
+    "page": 210,
     "id": "11-2",
     "kind": "essay",
     "scale": 1,
@@ -1503,7 +1863,7 @@
     "title": "A correct total can remain opaque"
   },
   {
-    "page": 171,
+    "page": 211,
     "id": "11-3",
     "kind": "architecture",
     "scale": 1,
@@ -1512,43 +1872,43 @@
     "title": "Total and detail share a revision"
   },
   {
-    "page": 172,
+    "page": 212,
     "id": "11-4",
     "kind": "code",
     "scale": 1,
-    "height": 544.7,
+    "height": 575.7,
     "available": 586.5,
     "title": "Core: identity and refund boundaries"
   },
   {
-    "page": 173,
+    "page": 213,
     "id": "11-5",
     "kind": "code",
     "scale": 1,
-    "height": 372.4,
+    "height": 403.4,
     "available": 612.0,
     "title": "One shared sum function"
   },
   {
-    "page": 174,
+    "page": 214,
     "id": "11-6",
     "kind": "code",
     "scale": 1,
-    "height": 471.7,
+    "height": 502.7,
     "available": 612.0,
     "title": "Provenance is part of the contract"
   },
   {
-    "page": 175,
+    "page": 215,
     "id": "11-7",
     "kind": "code",
     "scale": 1,
-    "height": 395.4,
+    "height": 426.4,
     "available": 612.0,
     "title": "Test sums, revisions and concurrency"
   },
   {
-    "page": 176,
+    "page": 216,
     "id": "11-8",
     "kind": "metrics",
     "scale": 1,
@@ -1557,7 +1917,7 @@
     "title": "Success means demonstrated understanding"
   },
   {
-    "page": 177,
+    "page": 217,
     "id": "11-9",
     "kind": "value",
     "scale": 1,
@@ -1566,7 +1926,7 @@
     "title": "Economics depend on avoided questions"
   },
   {
-    "page": 178,
+    "page": 218,
     "id": "11-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1575,7 +1935,7 @@
     "title": "A calculation-and-language roadmap"
   },
   {
-    "page": 179,
+    "page": 219,
     "id": "11-11",
     "kind": "essay",
     "scale": 1,
@@ -1584,7 +1944,7 @@
     "title": "Operations with an identifiable fallback"
   },
   {
-    "page": 180,
+    "page": 220,
     "id": "11-12",
     "kind": "essay",
     "scale": 1,
@@ -1593,7 +1953,7 @@
     "title": "My contribution to trust in the sum"
   },
   {
-    "page": 181,
+    "page": 221,
     "id": "11-13",
     "kind": "essay",
     "scale": 1,
@@ -1602,7 +1962,43 @@
     "title": "Handoff: reproduce the explanation"
   },
   {
-    "page": 182,
+    "page": 222,
+    "id": "11-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 223,
+    "id": "11-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 224,
+    "id": "11-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 225,
+    "id": "11-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 226,
     "id": "12-1",
     "kind": "evidence",
     "scale": 1,
@@ -1611,7 +2007,7 @@
     "title": "12 · The later response changes the context"
   },
   {
-    "page": 183,
+    "page": 227,
     "id": "12-2",
     "kind": "essay",
     "scale": 1,
@@ -1620,7 +2016,7 @@
     "title": "A supplier states a fact; the product decides a state"
   },
   {
-    "page": 184,
+    "page": 228,
     "id": "12-3",
     "kind": "architecture",
     "scale": 1,
@@ -1629,43 +2025,43 @@
     "title": "The old card cannot govern the new one"
   },
   {
-    "page": 185,
+    "page": 229,
     "id": "12-4",
     "kind": "code",
-    "scale": 0.98,
-    "height": 584.7,
+    "scale": 0.93,
+    "height": 583.7,
     "available": 586.5,
     "title": "Core: generation and persistent dispute"
   },
   {
-    "page": 186,
+    "page": 230,
     "id": "12-5",
     "kind": "code",
     "scale": 1,
-    "height": 372.4,
+    "height": 403.4,
     "available": 612.0,
     "title": "Normalize without losing provenance"
   },
   {
-    "page": 187,
+    "page": 231,
     "id": "12-6",
     "kind": "code",
     "scale": 1,
-    "height": 460.2,
+    "height": 491.2,
     "available": 612.0,
     "title": "A physical-to-digital contract"
   },
   {
-    "page": 188,
+    "page": 232,
     "id": "12-7",
     "kind": "code",
     "scale": 1,
-    "height": 383.9,
+    "height": 414.9,
     "available": 612.0,
     "title": "Replays cannot close the exception"
   },
   {
-    "page": 189,
+    "page": 233,
     "id": "12-8",
     "kind": "metrics",
     "scale": 1,
@@ -1674,7 +2070,7 @@
     "title": "Measure possession and exceptions, not just dispatch"
   },
   {
-    "page": 190,
+    "page": 234,
     "id": "12-9",
     "kind": "value",
     "scale": 1,
@@ -1683,7 +2079,7 @@
     "title": "Avoided shipping has an economic boundary"
   },
   {
-    "page": 191,
+    "page": 235,
     "id": "12-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1692,7 +2088,7 @@
     "title": "A roadmap with supplier and operations"
   },
   {
-    "page": 192,
+    "page": 236,
     "id": "12-11",
     "kind": "essay",
     "scale": 1,
@@ -1701,7 +2097,7 @@
     "title": "A disputed-delivery runbook"
   },
   {
-    "page": 193,
+    "page": 237,
     "id": "12-12",
     "kind": "essay",
     "scale": 1,
@@ -1710,7 +2106,7 @@
     "title": "My contribution crosses the physical boundary"
   },
   {
-    "page": 194,
+    "page": 238,
     "id": "12-13",
     "kind": "essay",
     "scale": 1,
@@ -1719,7 +2115,43 @@
     "title": "Handoff: review the current generation"
   },
   {
-    "page": 195,
+    "page": 239,
+    "id": "12-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 240,
+    "id": "12-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 241,
+    "id": "12-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 242,
+    "id": "12-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 243,
     "id": "13-1",
     "kind": "evidence",
     "scale": 1,
@@ -1728,7 +2160,7 @@
     "title": "13 · Two amounts, different interpretations"
   },
   {
-    "page": 196,
+    "page": 244,
     "id": "13-2",
     "kind": "essay",
     "scale": 1,
@@ -1737,7 +2169,7 @@
     "title": "Setting a cap does not grant credit"
   },
   {
-    "page": 197,
+    "page": 245,
     "id": "13-3",
     "kind": "architecture",
     "scale": 1,
@@ -1746,43 +2178,43 @@
     "title": "Credit is shared; reservation is atomic"
   },
   {
-    "page": 198,
+    "page": 246,
     "id": "13-4",
     "kind": "code",
-    "scale": 1,
-    "height": 567.6,
+    "scale": 0.97,
+    "height": 580.7,
     "available": 586.5,
     "title": "Core: two cards, one balance"
   },
   {
-    "page": 199,
+    "page": 247,
     "id": "13-5",
     "kind": "code",
     "scale": 1,
-    "height": 423.7,
+    "height": 454.7,
     "available": 612.0,
     "title": "An honest app preview"
   },
   {
-    "page": 200,
+    "page": 248,
     "id": "13-6",
     "kind": "code",
     "scale": 1,
-    "height": 471.7,
+    "height": 502.7,
     "available": 612.0,
     "title": "Credit and budget contracts"
   },
   {
-    "page": 201,
+    "page": 249,
     "id": "13-7",
     "kind": "code",
     "scale": 1,
-    "height": 435.9,
+    "height": 466.9,
     "available": 612.0,
     "title": "Concurrency attacks the authority"
   },
   {
-    "page": 202,
+    "page": 250,
     "id": "13-8",
     "kind": "metrics",
     "scale": 1,
@@ -1791,7 +2223,7 @@
     "title": "Understanding without weaker controls"
   },
   {
-    "page": 203,
+    "page": 251,
     "id": "13-9",
     "kind": "value",
     "scale": 1,
@@ -1800,7 +2232,7 @@
     "title": "Value without treating declined purchases as revenue"
   },
   {
-    "page": 204,
+    "page": 252,
     "id": "13-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1809,7 +2241,7 @@
     "title": "A terminology-and-consistency roadmap"
   },
   {
-    "page": 205,
+    "page": 253,
     "id": "13-11",
     "kind": "essay",
     "scale": 1,
@@ -1818,7 +2250,7 @@
     "title": "Stale reads must not become fictional credit"
   },
   {
-    "page": 206,
+    "page": 254,
     "id": "13-12",
     "kind": "essay",
     "scale": 1,
@@ -1827,7 +2259,7 @@
     "title": "My contribution: clarity with authority"
   },
   {
-    "page": 207,
+    "page": 255,
     "id": "13-13",
     "kind": "essay",
     "scale": 1,
@@ -1836,7 +2268,43 @@
     "title": "Handoff: prove a cap cannot create balance"
   },
   {
-    "page": 208,
+    "page": 256,
+    "id": "13-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 257,
+    "id": "13-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 507.2,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 258,
+    "id": "13-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 259,
+    "id": "13-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 260,
     "id": "14-1",
     "kind": "evidence",
     "scale": 1,
@@ -1845,7 +2313,7 @@
     "title": "14 · The company acknowledges late execution"
   },
   {
-    "page": 209,
+    "page": 261,
     "id": "14-2",
     "kind": "essay",
     "scale": 1,
@@ -1854,7 +2322,7 @@
     "title": "Receiving funds is not executing early repayment"
   },
   {
-    "page": 210,
+    "page": 262,
     "id": "14-3",
     "kind": "architecture",
     "scale": 1,
@@ -1863,43 +2331,43 @@
     "title": "A quote is a contract with expiry"
   },
   {
-    "page": 211,
+    "page": 263,
     "id": "14-4",
     "kind": "code",
     "scale": 1,
-    "height": 487.2,
+    "height": 518.2,
     "available": 586.5,
     "title": "Core: revalidate before applying"
   },
   {
-    "page": 212,
+    "page": 264,
     "id": "14-5",
     "kind": "code",
     "scale": 1,
-    "height": 366.3,
+    "height": 397.3,
     "available": 580.9,
     "title": "Pure calculation does not replace a transaction"
   },
   {
-    "page": 213,
+    "page": 265,
     "id": "14-6",
     "kind": "code",
     "scale": 1,
-    "height": 497.0,
+    "height": 528.0,
     "available": 612.0,
     "title": "Separate plan, funding and receipt"
   },
   {
-    "page": 214,
+    "page": 266,
     "id": "14-7",
     "kind": "code",
     "scale": 1,
-    "height": 360.9,
+    "height": 391.9,
     "available": 612.0,
     "title": "Crash and expiry challenge the plan"
   },
   {
-    "page": 215,
+    "page": 267,
     "id": "14-8",
     "kind": "metrics",
     "scale": 1,
@@ -1908,7 +2376,7 @@
     "title": "Measure the interval customers cannot see"
   },
   {
-    "page": 216,
+    "page": 268,
     "id": "14-9",
     "kind": "value",
     "scale": 1,
@@ -1917,7 +2385,7 @@
     "title": "Value rework, not removed discounts"
   },
   {
-    "page": 217,
+    "page": 269,
     "id": "14-10",
     "kind": "roadmap",
     "scale": 1,
@@ -1926,7 +2394,7 @@
     "title": "A roadmap starting with accounting"
   },
   {
-    "page": 218,
+    "page": 270,
     "id": "14-11",
     "kind": "essay",
     "scale": 1,
@@ -1935,7 +2403,7 @@
     "title": "Operate a quote that did not complete"
   },
   {
-    "page": 219,
+    "page": 271,
     "id": "14-12",
     "kind": "essay",
     "scale": 1,
@@ -1944,7 +2412,7 @@
     "title": "My contribution: make the promise executable"
   },
   {
-    "page": 220,
+    "page": 272,
     "id": "14-13",
     "kind": "essay",
     "scale": 1,
@@ -1953,7 +2421,43 @@
     "title": "Handoff: received funds have a destination"
   },
   {
-    "page": 221,
+    "page": 273,
+    "id": "14-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 274,
+    "id": "14-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 275,
+    "id": "14-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 276,
+    "id": "14-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 503.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 277,
     "id": "15-1",
     "kind": "evidence",
     "scale": 1,
@@ -1962,7 +2466,7 @@
     "title": "The incident and its outcome"
   },
   {
-    "page": 222,
+    "page": 278,
     "id": "15-2",
     "kind": "essay",
     "scale": 1,
@@ -1971,7 +2475,7 @@
     "title": "Reading a balance does not authorize withdrawal"
   },
   {
-    "page": 223,
+    "page": 279,
     "id": "15-3",
     "kind": "architecture",
     "scale": 1,
@@ -1980,43 +2484,43 @@
     "title": "The receipt closes the loop"
   },
   {
-    "page": 224,
+    "page": 280,
     "id": "15-4",
     "kind": "code",
-    "scale": 0.99,
-    "height": 584.0,
+    "scale": 0.97,
+    "height": 585.9,
     "available": 586.5,
     "title": "One attempt, one commitment"
   },
   {
-    "page": 225,
+    "page": 281,
     "id": "15-5",
     "kind": "code",
     "scale": 1,
-    "height": 389.3,
+    "height": 420.3,
     "available": 612.0,
     "title": "Dart for an understandable state"
   },
   {
-    "page": 226,
+    "page": 282,
     "id": "15-6",
     "kind": "code",
     "scale": 1,
-    "height": 529.4,
+    "height": 560.4,
     "available": 612.0,
     "title": "Identities that survive a retry"
   },
   {
-    "page": 227,
+    "page": 283,
     "id": "15-7",
     "kind": "code",
     "scale": 1,
-    "height": 492.6,
+    "height": 523.6,
     "available": 612.0,
     "title": "Failures that must not become debits"
   },
   {
-    "page": 228,
+    "page": 284,
     "id": "15-8",
     "kind": "metrics",
     "scale": 1,
@@ -2025,7 +2529,7 @@
     "title": "Metrics that include unknown state"
   },
   {
-    "page": 229,
+    "page": 285,
     "id": "15-9",
     "kind": "value",
     "scale": 1,
@@ -2034,7 +2538,7 @@
     "title": "Value without treating balances as revenue"
   },
   {
-    "page": 230,
+    "page": 286,
     "id": "15-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2043,7 +2547,7 @@
     "title": "A 90-day plan with verifiable exits"
   },
   {
-    "page": 231,
+    "page": 287,
     "id": "15-11",
     "kind": "essay",
     "scale": 1,
@@ -2052,7 +2556,7 @@
     "title": "Operating when a dependency fails"
   },
   {
-    "page": 232,
+    "page": 288,
     "id": "15-12",
     "kind": "essay",
     "scale": 1,
@@ -2061,7 +2565,7 @@
     "title": "My contribution: trust under failure"
   },
   {
-    "page": 233,
+    "page": 289,
     "id": "15-13",
     "kind": "essay",
     "scale": 1,
@@ -2070,7 +2574,43 @@
     "title": "Handoff: from lab to decision"
   },
   {
-    "page": 234,
+    "page": 290,
+    "id": "15-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 291,
+    "id": "15-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 292,
+    "id": "15-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 293,
+    "id": "15-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 517.7,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 294,
     "id": "16-1",
     "kind": "evidence",
     "scale": 1,
@@ -2079,7 +2619,7 @@
     "title": "A contradictory answer, a calendar"
   },
   {
-    "page": 235,
+    "page": 295,
     "id": "16-2",
     "kind": "essay",
     "scale": 1,
@@ -2088,7 +2628,7 @@
     "title": "Three questions before declaring an error"
   },
   {
-    "page": 236,
+    "page": 296,
     "id": "16-3",
     "kind": "architecture",
     "scale": 1,
@@ -2097,43 +2637,43 @@
     "title": "An explainable benefit projection"
   },
   {
-    "page": 237,
+    "page": 297,
     "id": "16-4",
     "kind": "code",
-    "scale": 0.92,
-    "height": 569.5,
+    "scale": 0.9,
+    "height": 554.6,
     "available": 574.0,
     "title": "Calendar before the complaint"
   },
   {
-    "page": 238,
+    "page": 298,
     "id": "16-5",
     "kind": "code",
     "scale": 1,
-    "height": 354.8,
+    "height": 385.8,
     "available": 612.0,
     "title": "One explanation shared by channels"
   },
   {
-    "page": 239,
+    "page": 299,
     "id": "16-6",
     "kind": "code",
     "scale": 1,
-    "height": 512.5,
+    "height": 543.5,
     "available": 612.0,
     "title": "Identifiable rule, event and installment"
   },
   {
-    "page": 240,
+    "page": 300,
     "id": "16-7",
     "kind": "code",
     "scale": 1,
-    "height": 469.7,
+    "height": 500.7,
     "available": 612.0,
     "title": "Test the date, not only the sum"
   },
   {
-    "page": 241,
+    "page": 301,
     "id": "16-8",
     "kind": "metrics",
     "scale": 1,
@@ -2142,7 +2682,7 @@
     "title": "Observable agreement and punctuality"
   },
   {
-    "page": 242,
+    "page": 302,
     "id": "16-9",
     "kind": "value",
     "scale": 1,
@@ -2151,7 +2691,7 @@
     "title": "A promised benefit is an obligation, not profit"
   },
   {
-    "page": 243,
+    "page": 303,
     "id": "16-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2160,7 +2700,7 @@
     "title": "Deliver a decision that can be reviewed"
   },
   {
-    "page": 244,
+    "page": 304,
     "id": "16-11",
     "kind": "essay",
     "scale": 1,
@@ -2169,7 +2709,7 @@
     "title": "Rule changes without rewriting history"
   },
   {
-    "page": 245,
+    "page": 305,
     "id": "16-12",
     "kind": "essay",
     "scale": 1,
@@ -2178,7 +2718,7 @@
     "title": "My contribution: reduce interpretations"
   },
   {
-    "page": 246,
+    "page": 306,
     "id": "16-13",
     "kind": "essay",
     "scale": 1,
@@ -2187,7 +2727,43 @@
     "title": "A guided benefit review"
   },
   {
-    "page": 247,
+    "page": 307,
+    "id": "16-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 308,
+    "id": "16-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 309,
+    "id": "16-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 310,
+    "id": "16-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 517.7,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 311,
     "id": "17-1",
     "kind": "evidence",
     "scale": 1,
@@ -2196,7 +2772,7 @@
     "title": "Confirmed redemption, disputed understanding"
   },
   {
-    "page": 248,
+    "page": 312,
     "id": "17-2",
     "kind": "essay",
     "scale": 1,
@@ -2205,7 +2781,7 @@
     "title": "Two units do not create two assets"
   },
   {
-    "page": 249,
+    "page": 313,
     "id": "17-3",
     "kind": "architecture",
     "scale": 1,
@@ -2214,43 +2790,43 @@
     "title": "The preview is part of the commitment"
   },
   {
-    "page": 250,
+    "page": 314,
     "id": "17-4",
     "kind": "code",
-    "scale": 1,
-    "height": 556.1,
+    "scale": 0.99,
+    "height": 581.3,
     "available": 586.5,
     "title": "Consume exactly the accepted preview"
   },
   {
-    "page": 251,
+    "page": 315,
     "id": "17-5",
     "kind": "code",
     "scale": 1,
-    "height": 417.7,
+    "height": 448.7,
     "available": 612.0,
     "title": "Dart: consequence before the button"
   },
   {
-    "page": 252,
+    "page": 316,
     "id": "17-6",
     "kind": "code",
     "scale": 1,
-    "height": 540.8,
+    "height": 571.8,
     "available": 612.0,
     "title": "Units the contract cannot confuse"
   },
   {
-    "page": 253,
+    "page": 317,
     "id": "17-7",
     "kind": "code",
     "scale": 1,
-    "height": 458.2,
+    "height": 489.2,
     "available": 612.0,
     "title": "The test separates UX from atomicity"
   },
   {
-    "page": 254,
+    "page": 318,
     "id": "17-8",
     "kind": "metrics",
     "scale": 1,
@@ -2259,7 +2835,7 @@
     "title": "Measure understanding, preserve choice"
   },
   {
-    "page": 255,
+    "page": 319,
     "id": "17-9",
     "kind": "value",
     "scale": 1,
@@ -2268,7 +2844,7 @@
     "title": "Cost of understanding, not point value"
   },
   {
-    "page": 256,
+    "page": 320,
     "id": "17-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2277,7 +2853,7 @@
     "title": "From language hypothesis to integration"
   },
   {
-    "page": 257,
+    "page": 321,
     "id": "17-11",
     "kind": "essay",
     "scale": 1,
@@ -2286,7 +2862,7 @@
     "title": "Fail before consumption, explain afterward"
   },
   {
-    "page": 258,
+    "page": 322,
     "id": "17-12",
     "kind": "essay",
     "scale": 1,
@@ -2295,7 +2871,7 @@
     "title": "My contribution: precision and empathy"
   },
   {
-    "page": 259,
+    "page": 323,
     "id": "17-13",
     "kind": "essay",
     "scale": 1,
@@ -2304,7 +2880,43 @@
     "title": "Handoff: review the full consequence"
   },
   {
-    "page": 260,
+    "page": 324,
+    "id": "17-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 432.2,
+    "available": 524.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 325,
+    "id": "17-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 507.2,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 326,
+    "id": "17-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 327,
+    "id": "17-17",
+    "kind": "value",
+    "scale": 0.98,
+    "height": 507.3,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 328,
     "id": "18-1",
     "kind": "evidence",
     "scale": 1,
@@ -2313,7 +2925,7 @@
     "title": "Cancellation did not resolve portability"
   },
   {
-    "page": 261,
+    "page": 329,
     "id": "18-2",
     "kind": "essay",
     "scale": 1,
@@ -2322,7 +2934,7 @@
     "title": "What each confirmation actually proves"
   },
   {
-    "page": 262,
+    "page": 330,
     "id": "18-3",
     "kind": "architecture",
     "scale": 1,
@@ -2331,43 +2943,43 @@
     "title": "Compare occurrence and confirmation"
   },
   {
-    "page": 263,
+    "page": 331,
     "id": "18-4",
     "kind": "code",
-    "scale": 0.98,
-    "height": 584.1,
+    "scale": 0.93,
+    "height": 583.1,
     "available": 586.5,
     "title": "Origin is part of the event"
   },
   {
-    "page": 264,
+    "page": 332,
     "id": "18-5",
     "kind": "code",
     "scale": 1,
-    "height": 377.8,
+    "height": 408.8,
     "available": 612.0,
     "title": "Dart: show dependency without blame"
   },
   {
-    "page": 265,
+    "page": 333,
     "id": "18-6",
     "kind": "code",
     "scale": 1,
-    "height": 529.4,
+    "height": 560.4,
     "available": 612.0,
     "title": "Attempts do not share confirmation"
   },
   {
-    "page": 266,
+    "page": 334,
     "id": "18-7",
     "kind": "code",
     "scale": 1,
-    "height": 469.7,
+    "height": 500.7,
     "available": 612.0,
     "title": "Reproduce the intercompany gap"
   },
   {
-    "page": 267,
+    "page": 335,
     "id": "18-8",
     "kind": "metrics",
     "scale": 1,
@@ -2376,7 +2988,7 @@
     "title": "Measure completion and limbo separately"
   },
   {
-    "page": 268,
+    "page": 336,
     "id": "18-9",
     "kind": "value",
     "scale": 1,
@@ -2385,7 +2997,7 @@
     "title": "Value of a genuinely activated line"
   },
   {
-    "page": 269,
+    "page": 337,
     "id": "18-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2394,7 +3006,7 @@
     "title": "Dependencies that determine the schedule"
   },
   {
-    "page": 270,
+    "page": 338,
     "id": "18-11",
     "kind": "essay",
     "scale": 1,
@@ -2403,7 +3015,7 @@
     "title": "Operate discrepancies without losing the customer"
   },
   {
-    "page": 271,
+    "page": 339,
     "id": "18-12",
     "kind": "essay",
     "scale": 1,
@@ -2412,7 +3024,7 @@
     "title": "My contribution: coordinate boundaries"
   },
   {
-    "page": 272,
+    "page": 340,
     "id": "18-13",
     "kind": "essay",
     "scale": 1,
@@ -2421,7 +3033,43 @@
     "title": "Handoff: show who may assert what"
   },
   {
-    "page": 273,
+    "page": 341,
+    "id": "18-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 511.5,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 342,
+    "id": "18-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 586.5,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 343,
+    "id": "18-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 344,
+    "id": "18-17",
+    "kind": "value",
+    "scale": 0.95,
+    "height": 507.9,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 345,
     "id": "19-1",
     "kind": "evidence",
     "scale": 1,
@@ -2430,7 +3078,7 @@
     "title": "A limitation, an acknowledged resolution"
   },
   {
-    "page": 274,
+    "page": 346,
     "id": "19-2",
     "kind": "essay",
     "scale": 1,
@@ -2439,7 +3087,7 @@
     "title": "Capability is product-specific"
   },
   {
-    "page": 275,
+    "page": 347,
     "id": "19-3",
     "kind": "architecture",
     "scale": 1,
@@ -2448,43 +3096,43 @@
     "title": "Capability travels with the quote"
   },
   {
-    "page": 276,
+    "page": 348,
     "id": "19-4",
     "kind": "code",
-    "scale": 1,
-    "height": 567.6,
+    "scale": 0.97,
+    "height": 580.7,
     "available": 586.5,
     "title": "A quote does not outlive policy"
   },
   {
-    "page": 277,
+    "page": 349,
     "id": "19-5",
     "kind": "code",
     "scale": 1,
-    "height": 423.7,
+    "height": 454.7,
     "available": 612.0,
     "title": "An explicit capability contract"
   },
   {
-    "page": 278,
+    "page": 350,
     "id": "19-6",
     "kind": "code",
     "scale": 1,
-    "height": 523.9,
+    "height": 554.9,
     "available": 612.0,
     "title": "Retain intent, minimize exposure"
   },
   {
-    "page": 279,
+    "page": 351,
     "id": "19-7",
     "kind": "code",
     "scale": 1,
-    "height": 458.2,
+    "height": 489.2,
     "available": 612.0,
     "title": "Reject before charging"
   },
   {
-    "page": 280,
+    "page": 352,
     "id": "19-8",
     "kind": "metrics",
     "scale": 1,
@@ -2493,7 +3141,7 @@
     "title": "Success means a compatible purpose"
   },
   {
-    "page": 281,
+    "page": 353,
     "id": "19-9",
     "kind": "value",
     "scale": 1,
@@ -2502,7 +3150,7 @@
     "title": "An avoided conversion also has a cost"
   },
   {
-    "page": 282,
+    "page": 354,
     "id": "19-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2511,7 +3159,7 @@
     "title": "Owners of capability and price"
   },
   {
-    "page": 283,
+    "page": 355,
     "id": "19-11",
     "kind": "essay",
     "scale": 1,
@@ -2520,7 +3168,7 @@
     "title": "Change the catalog safely"
   },
   {
-    "page": 284,
+    "page": 356,
     "id": "19-12",
     "kind": "essay",
     "scale": 1,
@@ -2529,7 +3177,7 @@
     "title": "My contribution: model the intent"
   },
   {
-    "page": 285,
+    "page": 357,
     "id": "19-13",
     "kind": "essay",
     "scale": 1,
@@ -2538,7 +3186,43 @@
     "title": "Handoff: follow a rejection without effect"
   },
   {
-    "page": 286,
+    "page": 358,
+    "id": "19-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 359,
+    "id": "19-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 360,
+    "id": "19-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 361,
+    "id": "19-17",
+    "kind": "value",
+    "scale": 1,
+    "height": 507.0,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 362,
     "id": "20-1",
     "kind": "evidence",
     "scale": 1,
@@ -2547,7 +3231,7 @@
     "title": "Refund completed, waiting time disputed"
   },
   {
-    "page": 287,
+    "page": 363,
     "id": "20-2",
     "kind": "essay",
     "scale": 1,
@@ -2556,7 +3240,7 @@
     "title": "Two systems can disagree without lying"
   },
   {
-    "page": 288,
+    "page": 364,
     "id": "20-3",
     "kind": "architecture",
     "scale": 1,
@@ -2565,43 +3249,43 @@
     "title": "Investigation does not create refund authority"
   },
   {
-    "page": 289,
+    "page": 365,
     "id": "20-4",
     "kind": "code",
-    "scale": 0.95,
-    "height": 534.1,
+    "scale": 0.93,
+    "height": 551.7,
     "available": 555.4,
     "title": "Timeout opens a case, not a money movement"
   },
   {
-    "page": 290,
+    "page": 366,
     "id": "20-5",
     "kind": "code",
     "scale": 1,
-    "height": 389.3,
+    "height": 420.3,
     "available": 612.0,
     "title": "SQL for uniqueness and traceability"
   },
   {
-    "page": 291,
+    "page": 367,
     "id": "20-6",
     "kind": "code",
     "scale": 1,
-    "height": 523.9,
+    "height": 554.9,
     "available": 580.9,
     "title": "Order and payment retain their identities"
   },
   {
-    "page": 292,
+    "page": 368,
     "id": "20-7",
     "kind": "code",
     "scale": 1,
-    "height": 458.2,
+    "height": 489.2,
     "available": 580.9,
     "title": "Prove the absence of an unauthorized credit"
   },
   {
-    "page": 293,
+    "page": 369,
     "id": "20-8",
     "kind": "metrics",
     "scale": 1,
@@ -2610,7 +3294,7 @@
     "title": "Resolve both the money and the wait"
   },
   {
-    "page": 294,
+    "page": 370,
     "id": "20-9",
     "kind": "value",
     "scale": 1,
@@ -2619,7 +3303,7 @@
     "title": "Capacity and exposure are different dimensions"
   },
   {
-    "page": 295,
+    "page": 371,
     "id": "20-10",
     "kind": "roadmap",
     "scale": 1,
@@ -2628,7 +3312,7 @@
     "title": "A joint plan with the merchant"
   },
   {
-    "page": 296,
+    "page": 372,
     "id": "20-11",
     "kind": "essay",
     "scale": 1,
@@ -2637,7 +3321,7 @@
     "title": "Operate aging cases"
   },
   {
-    "page": 297,
+    "page": 373,
     "id": "20-12",
     "kind": "essay",
     "scale": 1,
@@ -2646,7 +3330,7 @@
     "title": "My contribution: close the whole journey"
   },
   {
-    "page": 298,
+    "page": 374,
     "id": "20-13",
     "kind": "essay",
     "scale": 1,
@@ -2655,7 +3339,43 @@
     "title": "Handoff: track through the final receipt"
   },
   {
-    "page": 299,
+    "page": 375,
+    "id": "20-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 456.2,
+    "available": 499.0,
+    "title": "Patterns with proof"
+  },
+  {
+    "page": 376,
+    "id": "20-15",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 491.8,
+    "available": 574.0,
+    "title": "Execution sequence"
+  },
+  {
+    "page": 377,
+    "id": "20-16",
+    "kind": "essay",
+    "scale": 1,
+    "height": 362.7,
+    "available": 536.5,
+    "title": "Features, stories and acceptance"
+  },
+  {
+    "page": 378,
+    "id": "20-17",
+    "kind": "value",
+    "scale": 0.99,
+    "height": 515.6,
+    "available": 524.0,
+    "title": "Method and sensitivity"
+  },
+  {
+    "page": 379,
     "id": "lideranca-1",
     "kind": "essay",
     "scale": 1,
@@ -2664,7 +3384,7 @@
     "title": "The first 30 days: learn the system."
   },
   {
-    "page": 300,
+    "page": 380,
     "id": "lideranca-2",
     "kind": "essay",
     "scale": 1,
@@ -2673,7 +3393,7 @@
     "title": "Days 31–60: make the hypothesis testable."
   },
   {
-    "page": 301,
+    "page": 381,
     "id": "lideranca-3",
     "kind": "essay",
     "scale": 1,
@@ -2682,7 +3402,7 @@
     "title": "Days 61–90: decide what deserves to scale."
   },
   {
-    "page": 302,
+    "page": 382,
     "id": "lideranca-4",
     "kind": "essay",
     "scale": 1,
@@ -2691,7 +3411,7 @@
     "title": "Capacity is a design constraint."
   },
   {
-    "page": 303,
+    "page": 383,
     "id": "lideranca-5",
     "kind": "essay",
     "scale": 1,
@@ -2700,7 +3420,7 @@
     "title": "Delegation with explicit boundaries."
   },
   {
-    "page": 304,
+    "page": 384,
     "id": "lideranca-6",
     "kind": "essay",
     "scale": 1,
@@ -2709,7 +3429,7 @@
     "title": "An ADR resolves a concrete uncertainty."
   },
   {
-    "page": 305,
+    "page": 385,
     "id": "lideranca-7",
     "kind": "essay",
     "scale": 1,
@@ -2718,7 +3438,7 @@
     "title": "Incidents: restore, understand, improve."
   },
   {
-    "page": 306,
+    "page": 386,
     "id": "lideranca-8",
     "kind": "essay",
     "scale": 1,
@@ -2727,7 +3447,7 @@
     "title": "Influence across teams without centralizing everything."
   },
   {
-    "page": 307,
+    "page": 387,
     "id": "lideranca-9",
     "kind": "essay",
     "scale": 1,
@@ -2736,7 +3456,7 @@
     "title": "Value: start with the denominator."
   },
   {
-    "page": 308,
+    "page": 388,
     "id": "lideranca-10",
     "kind": "essay",
     "scale": 1,
@@ -2745,7 +3465,7 @@
     "title": "Opportunity cost is also a cost."
   },
   {
-    "page": 309,
+    "page": 389,
     "id": "lideranca-11",
     "kind": "essay",
     "scale": 1,
@@ -2754,7 +3474,7 @@
     "title": "Performance: measure the tail and the task."
   },
   {
-    "page": 310,
+    "page": 390,
     "id": "lideranca-12",
     "kind": "essay",
     "scale": 1,
@@ -2763,7 +3483,7 @@
     "title": "Risk: measure both types of error."
   },
   {
-    "page": 311,
+    "page": 391,
     "id": "lideranca-13",
     "kind": "code",
     "scale": 1,
@@ -2772,7 +3492,7 @@
     "title": "How to run the laboratories."
   },
   {
-    "page": 312,
+    "page": 392,
     "id": "lideranca-14",
     "kind": "essay",
     "scale": 1,
@@ -2781,7 +3501,7 @@
     "title": "From local proof to an integrated pilot."
   },
   {
-    "page": 313,
+    "page": 393,
     "id": "lideranca-15",
     "kind": "essay",
     "scale": 1,
@@ -2790,7 +3510,70 @@
     "title": "A proposal for contribution, in my own words."
   },
   {
-    "page": 314,
+    "page": 394,
+    "id": "repertorio-1",
+    "kind": "profile",
+    "scale": 1,
+    "height": 489.3,
+    "available": 536.0,
+    "title": "A public record of continued learning."
+  },
+  {
+    "page": 395,
+    "id": "repertorio-2",
+    "kind": "profile",
+    "scale": 1,
+    "height": 440.9,
+    "available": 570.5,
+    "title": "What I am studying now."
+  },
+  {
+    "page": 396,
+    "id": "repertorio-3",
+    "kind": "profile",
+    "scale": 1,
+    "height": 413.3,
+    "available": 570.5,
+    "title": "Continuity across disciplines."
+  },
+  {
+    "page": 397,
+    "id": "repertorio-4",
+    "kind": "profile",
+    "scale": 1,
+    "height": 445.6,
+    "available": 520.5,
+    "title": "Recent credentials, direct evidence."
+  },
+  {
+    "page": 398,
+    "id": "repertorio-5",
+    "kind": "profile",
+    "scale": 1,
+    "height": 500.8,
+    "available": 520.5,
+    "title": "Java, AI and practical integration."
+  },
+  {
+    "page": 399,
+    "id": "repertorio-6",
+    "kind": "profile",
+    "scale": 1,
+    "height": 447.7,
+    "available": 473.5,
+    "title": "Writing to make engineering discussable."
+  },
+  {
+    "page": 400,
+    "id": "repertorio-7",
+    "kind": "profile",
+    "scale": 1,
+    "height": 420.1,
+    "available": 473.5,
+    "title": "Writing to make engineering discussable."
+  },
+  {
+    "page": 401,
     "id": "fontes-1",
     "kind": "reference",
     "scale": 0.97,
@@ -2799,7 +3582,7 @@
     "title": "Sources for cases 01-05"
   },
   {
-    "page": 315,
+    "page": 402,
     "id": "fontes-2",
     "kind": "reference",
     "scale": 0.97,
@@ -2808,7 +3591,7 @@
     "title": "Sources for cases 06-10"
   },
   {
-    "page": 316,
+    "page": 403,
     "id": "fontes-3",
     "kind": "reference",
     "scale": 1,
@@ -2817,7 +3600,7 @@
     "title": "Sources for cases 11-15"
   },
   {
-    "page": 317,
+    "page": 404,
     "id": "fontes-4",
     "kind": "reference",
     "scale": 1,
@@ -2826,16 +3609,16 @@
     "title": "Sources for cases 16-20"
   },
   {
-    "page": 318,
+    "page": 405,
     "id": "fontes-5",
     "kind": "reference",
     "scale": 1,
     "height": 435.6,
-    "available": 499.0,
+    "available": 486.5,
     "title": "Image and brand credits"
   },
   {
-    "page": 319,
+    "page": 406,
     "id": "fontes-6",
     "kind": "reference",
     "scale": 1,
@@ -2844,12 +3627,21 @@
     "title": "Image and brand credits · continued"
   },
   {
-    "page": 320,
+    "page": 407,
     "id": "fontes-7",
     "kind": "reference",
     "scale": 1,
-    "height": 401.8,
-    "available": 549.0,
+    "height": 435.6,
+    "available": 536.5,
+    "title": "Image and brand credits · continued"
+  },
+  {
+    "page": 408,
+    "id": "fontes-8",
+    "kind": "reference",
+    "scale": 1,
+    "height": 165.2,
+    "available": 586.5,
     "title": "Image and brand credits · continued"
   }
 ]

@@ -1,5 +1,6 @@
 {
-  "accessed": "2026-10-23",
+  "case_evidence_accessed": "2026-10-23",
+  "profile_media_and_methods_accessed": "2026-10-25",
   "sources": [
     {
       "title": "Nubank: About Nu",
@@ -9,13 +10,13 @@
           4,
           5,
           6,
-          320
+          407
         ],
         "en": [
           4,
           5,
           6,
-          320
+          407
         ]
       }
     },
@@ -31,7 +32,8 @@
           9,
           10,
           17,
-          319
+          394,
+          406
         ],
         "en": [
           5,
@@ -41,7 +43,8 @@
           9,
           10,
           17,
-          319
+          394,
+          406
         ]
       }
     },
@@ -237,35 +240,35 @@
           29,
           42,
           45,
-          55,
-          58,
-          68,
-          71,
-          81,
-          84,
-          94,
-          97,
-          107,
+          59,
+          62,
+          76,
+          79,
+          93,
+          96,
           110,
-          120,
-          123
+          113,
+          127,
+          130,
+          144,
+          147
         ],
         "en": [
           29,
           42,
           45,
-          55,
-          58,
-          68,
-          71,
-          81,
-          84,
-          94,
-          97,
-          107,
+          59,
+          62,
+          76,
+          79,
+          93,
+          96,
           110,
-          120,
-          123
+          113,
+          127,
+          130,
+          144,
+          147
         ]
       }
     },
@@ -311,11 +314,11 @@
       "pages": {
         "pt": [
           33,
-          95
+          111
         ],
         "en": [
           33,
-          95
+          111
         ]
       }
     },
@@ -337,11 +340,13 @@
       "pages": {
         "pt": [
           39,
-          314
+          55,
+          401
         ],
         "en": [
           39,
-          314
+          55,
+          401
         ]
       }
     },
@@ -360,16 +365,182 @@
       }
     },
     {
+      "title": "P1 · Receipts.confirm",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L41",
+      "pages": {
+        "pt": [
+          52,
+          53
+        ],
+        "en": [
+          52,
+          53
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_concurrent_refund_replays_once",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L89",
+      "pages": {
+        "pt": [
+          52,
+          54
+        ],
+        "en": [
+          52,
+          54
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_refund_without_failure_is_rejected",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L109",
+      "pages": {
+        "pt": [
+          52
+        ],
+        "en": [
+          52
+        ]
+      }
+    },
+    {
+      "title": "read",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L68",
+      "pages": {
+        "pt": [
+          53
+        ],
+        "en": [
+          53
+        ]
+      }
+    },
+    {
+      "title": "Aceite F01.2",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py#L101",
+      "pages": {
+        "pt": [
+          54
+        ],
+        "en": [
+          54
+        ]
+      }
+    },
+    {
+      "title": "FinOps Foundation · Unit Economics",
+      "url": "https://www.finops.org/framework/capabilities/unit-economics/",
+      "pages": {
+        "pt": [
+          55,
+          72,
+          89,
+          106,
+          123,
+          140,
+          157,
+          174,
+          191,
+          208,
+          225,
+          242,
+          259,
+          276,
+          293,
+          310,
+          327,
+          344,
+          361,
+          378
+        ],
+        "en": [
+          55,
+          72,
+          89,
+          106,
+          123,
+          140,
+          157,
+          174,
+          191,
+          208,
+          225,
+          242,
+          259,
+          276,
+          293,
+          310,
+          327,
+          344,
+          361,
+          378
+        ]
+      }
+    },
+    {
+      "title": "Microsoft Research · Pre-experiment design",
+      "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+      "pages": {
+        "pt": [
+          55,
+          72,
+          89,
+          106,
+          123,
+          140,
+          157,
+          174,
+          191,
+          208,
+          225,
+          242,
+          259,
+          276,
+          293,
+          310,
+          327,
+          344,
+          361,
+          378
+        ],
+        "en": [
+          55,
+          72,
+          89,
+          106,
+          123,
+          140,
+          157,
+          174,
+          191,
+          208,
+          225,
+          242,
+          259,
+          276,
+          293,
+          310,
+          327,
+          344,
+          361,
+          378
+        ]
+      }
+    },
+    {
       "title": "Canaltech — incidente de 08/07/2026",
       "url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
       "pages": {
         "pt": [
-          52,
-          314
+          56,
+          72,
+          401
         ],
         "en": [
-          52,
-          314
+          56,
+          72,
+          401
         ]
       }
     },
@@ -378,12 +549,12 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py",
       "pages": {
         "pt": [
-          55,
-          64
+          59,
+          68
         ],
         "en": [
-          55,
-          64
+          59,
+          68
         ]
       }
     },
@@ -392,12 +563,78 @@
       "url": "https://dart.dev/language/branches",
       "pages": {
         "pt": [
-          56,
-          82
+          60,
+          94
         ],
         "en": [
-          56,
-          82
+          60,
+          94
+        ]
+      }
+    },
+    {
+      "title": "P1 · BalanceView.publish",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L27",
+      "pages": {
+        "pt": [
+          69,
+          70
+        ],
+        "en": [
+          69,
+          70
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_concurrent_versions_keep_newest",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L84",
+      "pages": {
+        "pt": [
+          69,
+          71
+        ],
+        "en": [
+          69,
+          71
+        ]
+      }
+    },
+    {
+      "title": "P2 · BalanceView.read",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L49",
+      "pages": {
+        "pt": [
+          69,
+          70
+        ],
+        "en": [
+          69,
+          70
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_exact_expiry_is_stale",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L93",
+      "pages": {
+        "pt": [
+          69
+        ],
+        "en": [
+          69
+        ]
+      }
+    },
+    {
+      "title": "Aceite F02.2",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L118",
+      "pages": {
+        "pt": [
+          71
+        ],
+        "en": [
+          71
         ]
       }
     },
@@ -406,12 +643,14 @@
       "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
       "pages": {
         "pt": [
-          65,
-          314
+          73,
+          89,
+          401
         ],
         "en": [
-          65,
-          314
+          73,
+          89,
+          401
         ]
       }
     },
@@ -420,10 +659,10 @@
       "url": "https://www.youtube.com/watch?v=f6zCNrN1T8Y&t=419s",
       "pages": {
         "pt": [
-          65
+          73
         ],
         "en": [
-          65
+          73
         ]
       }
     },
@@ -432,10 +671,10 @@
       "url": "https://www.youtube.com/watch?v=f6zCNrN1T8Y",
       "pages": {
         "pt": [
-          66
+          74
         ],
         "en": [
-          66
+          74
         ]
       }
     },
@@ -444,12 +683,12 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py",
       "pages": {
         "pt": [
-          68,
-          77
+          76,
+          85
         ],
         "en": [
-          68,
-          77
+          76,
+          85
         ]
       }
     },
@@ -458,10 +697,94 @@
       "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
       "pages": {
         "pt": [
-          69
+          77
         ],
         "en": [
-          69
+          77
+        ]
+      }
+    },
+    {
+      "title": "P1 · Restriction.execute_exit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L39",
+      "pages": {
+        "pt": [
+          86,
+          87
+        ],
+        "en": [
+          86,
+          87
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_review_role_cannot_execute",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L88",
+      "pages": {
+        "pt": [
+          86,
+          88
+        ],
+        "en": [
+          86,
+          88
+        ]
+      }
+    },
+    {
+      "title": "P2 · Restriction.decide",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L27",
+      "pages": {
+        "pt": [
+          86,
+          87
+        ],
+        "en": [
+          86,
+          87
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_stale_review_rejected",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L104",
+      "pages": {
+        "pt": [
+          86
+        ],
+        "en": [
+          86
+        ]
+      }
+    },
+    {
+      "title": "LangGraph · persistence",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "pages": {
+        "pt": [
+          86,
+          137,
+          341,
+          375
+        ],
+        "en": [
+          86,
+          137,
+          341,
+          375
+        ]
+      }
+    },
+    {
+      "title": "Aceite F03.2",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py#L74",
+      "pages": {
+        "pt": [
+          88
+        ],
+        "en": [
+          88
         ]
       }
     },
@@ -470,12 +793,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
       "pages": {
         "pt": [
-          78,
-          314
+          90,
+          106,
+          401
         ],
         "en": [
-          78,
-          314
+          90,
+          106,
+          401
         ]
       }
     },
@@ -484,12 +809,76 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py",
       "pages": {
         "pt": [
-          81,
-          90
+          93,
+          102
         ],
         "en": [
-          81,
-          90
+          93,
+          102
+        ]
+      }
+    },
+    {
+      "title": "P1 · Recovery.authorize",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L37",
+      "pages": {
+        "pt": [
+          103,
+          104
+        ],
+        "en": [
+          103,
+          104
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_parallel_authorization_consumes_once",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L63",
+      "pages": {
+        "pt": [
+          103,
+          105
+        ],
+        "en": [
+          103,
+          105
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_other_device_rejected",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L83",
+      "pages": {
+        "pt": [
+          103
+        ],
+        "en": [
+          103
+        ]
+      }
+    },
+    {
+      "title": "review",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L23",
+      "pages": {
+        "pt": [
+          104
+        ],
+        "en": [
+          104
+        ]
+      }
+    },
+    {
+      "title": "Aceite F04.1",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L74",
+      "pages": {
+        "pt": [
+          105
+        ],
+        "en": [
+          105
         ]
       }
     },
@@ -498,12 +887,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
       "pages": {
         "pt": [
-          91,
-          314
+          107,
+          123,
+          401
         ],
         "en": [
-          91,
-          314
+          107,
+          123,
+          401
         ]
       }
     },
@@ -512,12 +903,68 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py",
       "pages": {
         "pt": [
-          94,
-          103
+          110,
+          119
         ],
         "en": [
-          94,
-          103
+          110,
+          119
+        ]
+      }
+    },
+    {
+      "title": "P1 · ContactRecovery.change_contact",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L21",
+      "pages": {
+        "pt": [
+          120,
+          121
+        ],
+        "en": [
+          120,
+          121
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_contact_change_invalidates_old_code",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L78",
+      "pages": {
+        "pt": [
+          120,
+          122
+        ],
+        "en": [
+          120,
+          122
+        ]
+      }
+    },
+    {
+      "title": "P2 · ContactRecovery.verify",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L46",
+      "pages": {
+        "pt": [
+          120,
+          121
+        ],
+        "en": [
+          120,
+          121
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_budget_exhaustion",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py#L95",
+      "pages": {
+        "pt": [
+          120,
+          122
+        ],
+        "en": [
+          120,
+          122
         ]
       }
     },
@@ -526,12 +973,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
       "pages": {
         "pt": [
-          104,
-          315
+          124,
+          140,
+          402
         ],
         "en": [
-          104,
-          315
+          124,
+          140,
+          402
         ]
       }
     },
@@ -540,12 +989,12 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py",
       "pages": {
         "pt": [
-          107,
-          116
+          127,
+          136
         ],
         "en": [
-          107,
-          116
+          127,
+          136
         ]
       }
     },
@@ -554,10 +1003,66 @@
       "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
       "pages": {
         "pt": [
-          108
+          128
         ],
         "en": [
-          108
+          128
+        ]
+      }
+    },
+    {
+      "title": "P1 · Dossier.append",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L21",
+      "pages": {
+        "pt": [
+          137,
+          138
+        ],
+        "en": [
+          137,
+          138
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_reused_upload_id_cannot_replace_evidence",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L81",
+      "pages": {
+        "pt": [
+          137,
+          139
+        ],
+        "en": [
+          137,
+          139
+        ]
+      }
+    },
+    {
+      "title": "P2 · Dossier.submit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L55",
+      "pages": {
+        "pt": [
+          137,
+          138
+        ],
+        "en": [
+          137,
+          138
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_malware_cannot_submit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L91",
+      "pages": {
+        "pt": [
+          137,
+          139
+        ],
+        "en": [
+          137,
+          139
         ]
       }
     },
@@ -566,12 +1071,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
       "pages": {
         "pt": [
-          117,
-          315
+          141,
+          157,
+          402
         ],
         "en": [
-          117,
-          315
+          141,
+          157,
+          402
         ]
       }
     },
@@ -580,12 +1087,12 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py",
       "pages": {
         "pt": [
-          120,
-          129
+          144,
+          153
         ],
         "en": [
-          120,
-          129
+          144,
+          153
         ]
       }
     },
@@ -594,10 +1101,74 @@
       "url": "https://aprendervalor.bcb.gov.br/content/estabilidadefinanceira/pix/API-DICT.html",
       "pages": {
         "pt": [
-          121
+          145
         ],
         "en": [
-          121
+          145
+        ]
+      }
+    },
+    {
+      "title": "P1 · RecoveryTimeline.apply",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L22",
+      "pages": {
+        "pt": [
+          154,
+          155
+        ],
+        "en": [
+          154,
+          155
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_gap_retries_after_missing_event",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L73",
+      "pages": {
+        "pt": [
+          154,
+          156
+        ],
+        "en": [
+          154,
+          156
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_cannot_exceed_claim",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L83",
+      "pages": {
+        "pt": [
+          154
+        ],
+        "en": [
+          154
+        ]
+      }
+    },
+    {
+      "title": "read",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L52",
+      "pages": {
+        "pt": [
+          155
+        ],
+        "en": [
+          155
+        ]
+      }
+    },
+    {
+      "title": "Aceite F07.2",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L66",
+      "pages": {
+        "pt": [
+          156
+        ],
+        "en": [
+          156
         ]
       }
     },
@@ -606,12 +1177,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
       "pages": {
         "pt": [
-          130,
-          315
+          158,
+          174,
+          402
         ],
         "en": [
-          130,
-          315
+          158,
+          174,
+          402
         ]
       }
     },
@@ -620,12 +1193,78 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py",
       "pages": {
         "pt": [
-          133,
-          142
+          161,
+          170
         ],
         "en": [
-          133,
-          142
+          161,
+          170
+        ]
+      }
+    },
+    {
+      "title": "P1 · Dispute.append",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28",
+      "pages": {
+        "pt": [
+          171,
+          172
+        ],
+        "en": [
+          171,
+          172
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_restart_and_retry_preserve_one_evidence",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L110",
+      "pages": {
+        "pt": [
+          171,
+          173
+        ],
+        "en": [
+          171,
+          173
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_appeal_requires_independent_reviewer",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L101",
+      "pages": {
+        "pt": [
+          171,
+          173
+        ],
+        "en": [
+          171,
+          173
+        ]
+      }
+    },
+    {
+      "title": "LangChain4j · AI Services",
+      "url": "https://docs.langchain4j.dev/tutorials/ai-services/",
+      "pages": {
+        "pt": [
+          171
+        ],
+        "en": [
+          171
+        ]
+      }
+    },
+    {
+      "title": "history",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L23",
+      "pages": {
+        "pt": [
+          172
+        ],
+        "en": [
+          172
         ]
       }
     },
@@ -634,12 +1273,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
       "pages": {
         "pt": [
-          143,
-          315
+          175,
+          191,
+          402
         ],
         "en": [
-          143,
-          315
+          175,
+          191,
+          402
         ]
       }
     },
@@ -648,12 +1289,68 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py",
       "pages": {
         "pt": [
-          146,
-          155
+          178,
+          187
         ],
         "en": [
-          146,
-          155
+          178,
+          187
+        ]
+      }
+    },
+    {
+      "title": "P1 · Ledger.apply",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L34",
+      "pages": {
+        "pt": [
+          188,
+          189
+        ],
+        "en": [
+          188,
+          189
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_failure_after_first_write_rolls_everything_back",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L95",
+      "pages": {
+        "pt": [
+          188,
+          190
+        ],
+        "en": [
+          188,
+          190
+        ]
+      }
+    },
+    {
+      "title": "P2 · Ledger.receipt",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L66",
+      "pages": {
+        "pt": [
+          188,
+          189
+        ],
+        "en": [
+          188,
+          189
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_exact_conservation_across_two_targets",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py#L130",
+      "pages": {
+        "pt": [
+          188,
+          190
+        ],
+        "en": [
+          188,
+          190
         ]
       }
     },
@@ -662,12 +1359,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
       "pages": {
         "pt": [
-          156,
-          315
+          192,
+          208,
+          402
         ],
         "en": [
-          156,
-          315
+          192,
+          208,
+          402
         ]
       }
     },
@@ -676,12 +1375,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py",
       "pages": {
         "pt": [
-          159,
-          168
+          195,
+          204
         ],
         "en": [
-          159,
-          168
+          195,
+          204
+        ]
+      }
+    },
+    {
+      "title": "P1 · IntentClient.pay",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45",
+      "pages": {
+        "pt": [
+          205,
+          206
+        ],
+        "en": [
+          205,
+          206
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_timeout_restart_and_retry_produce_one_charge",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L92",
+      "pages": {
+        "pt": [
+          205,
+          207
+        ],
+        "en": [
+          205,
+          207
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_same_amount_can_be_two_explicit_purchases",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L104",
+      "pages": {
+        "pt": [
+          205,
+          207
+        ],
+        "en": [
+          205,
+          207
+        ]
+      }
+    },
+    {
+      "title": "state",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L69",
+      "pages": {
+        "pt": [
+          206
+        ],
+        "en": [
+          206
         ]
       }
     },
@@ -690,12 +1443,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
       "pages": {
         "pt": [
-          169,
-          316
+          209,
+          225,
+          403
         ],
         "en": [
-          169,
-          316
+          209,
+          225,
+          403
         ]
       }
     },
@@ -704,12 +1459,94 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py",
       "pages": {
         "pt": [
-          172,
-          181
+          212,
+          221
         ],
         "en": [
-          172,
-          181
+          212,
+          221
+        ]
+      }
+    },
+    {
+      "title": "P1 · Statement.snapshot",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L51",
+      "pages": {
+        "pt": [
+          222,
+          223
+        ],
+        "en": [
+          222,
+          223
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_old_snapshot_does_not_change_after_new_credit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L83",
+      "pages": {
+        "pt": [
+          222,
+          224
+        ],
+        "en": [
+          222,
+          224
+        ]
+      }
+    },
+    {
+      "title": "P2 · Statement.append",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L26",
+      "pages": {
+        "pt": [
+          222,
+          223
+        ],
+        "en": [
+          222,
+          223
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_orphan_refund_rejected_without_mutation",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L95",
+      "pages": {
+        "pt": [
+          222
+        ],
+        "en": [
+          222
+        ]
+      }
+    },
+    {
+      "title": "Spring AI · MCP integration",
+      "url": "https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html",
+      "pages": {
+        "pt": [
+          222,
+          307,
+          358
+        ],
+        "en": [
+          222,
+          307,
+          358
+        ]
+      }
+    },
+    {
+      "title": "Aceite F11.2",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L73",
+      "pages": {
+        "pt": [
+          224
+        ],
+        "en": [
+          224
         ]
       }
     },
@@ -718,12 +1555,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
       "pages": {
         "pt": [
-          182,
-          316
+          226,
+          242,
+          403
         ],
         "en": [
-          182,
-          316
+          226,
+          242,
+          403
         ]
       }
     },
@@ -732,12 +1571,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py",
       "pages": {
         "pt": [
-          185,
-          194
+          229,
+          238
         ],
         "en": [
-          185,
-          194
+          229,
+          238
+        ]
+      }
+    },
+    {
+      "title": "P1 · Delivery.event",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L29",
+      "pages": {
+        "pt": [
+          239,
+          240
+        ],
+        "en": [
+          239,
+          240
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_old_delivery_does_not_replace_new_generation",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L87",
+      "pages": {
+        "pt": [
+          239,
+          241
+        ],
+        "en": [
+          239,
+          241
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_carrier_cannot_activate",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L107",
+      "pages": {
+        "pt": [
+          239,
+          241
+        ],
+        "en": [
+          239,
+          241
+        ]
+      }
+    },
+    {
+      "title": "reissue",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py#L65",
+      "pages": {
+        "pt": [
+          240
+        ],
+        "en": [
+          240
         ]
       }
     },
@@ -746,12 +1639,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
       "pages": {
         "pt": [
-          195,
-          316
+          243,
+          259,
+          403
         ],
         "en": [
-          195,
-          316
+          243,
+          259,
+          403
         ]
       }
     },
@@ -760,12 +1655,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py",
       "pages": {
         "pt": [
-          198,
-          207
+          246,
+          255
         ],
         "en": [
-          198,
-          207
+          246,
+          255
+        ]
+      }
+    },
+    {
+      "title": "P1 · Credit.reserve",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L39",
+      "pages": {
+        "pt": [
+          256,
+          257
+        ],
+        "en": [
+          256,
+          257
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_stale_preview_cannot_authorize",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L126",
+      "pages": {
+        "pt": [
+          256,
+          258
+        ],
+        "en": [
+          256,
+          258
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_two_cards_cannot_overspend_shared_credit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L84",
+      "pages": {
+        "pt": [
+          256,
+          258
+        ],
+        "en": [
+          256,
+          258
+        ]
+      }
+    },
+    {
+      "title": "preview",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py#L30",
+      "pages": {
+        "pt": [
+          257
+        ],
+        "en": [
+          257
         ]
       }
     },
@@ -774,12 +1723,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
       "pages": {
         "pt": [
-          208,
-          316
+          260,
+          276,
+          403
         ],
         "en": [
-          208,
-          316
+          260,
+          276,
+          403
         ]
       }
     },
@@ -788,12 +1739,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py",
       "pages": {
         "pt": [
-          211,
-          220
+          263,
+          272
         ],
         "en": [
-          211,
-          220
+          263,
+          272
+        ]
+      }
+    },
+    {
+      "title": "P1 · Repayment.execute",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61",
+      "pages": {
+        "pt": [
+          273,
+          274
+        ],
+        "en": [
+          273,
+          274
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_received_is_not_executed_and_crash_rolls_back",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L99",
+      "pages": {
+        "pt": [
+          273,
+          275
+        ],
+        "en": [
+          273,
+          275
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_second_quote_becomes_stale_after_execution",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L137",
+      "pages": {
+        "pt": [
+          273,
+          275
+        ],
+        "en": [
+          273,
+          275
+        ]
+      }
+    },
+    {
+      "title": "quote",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L27",
+      "pages": {
+        "pt": [
+          274
+        ],
+        "en": [
+          274
         ]
       }
     },
@@ -802,12 +1807,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
       "pages": {
         "pt": [
-          221,
-          316
+          277,
+          293,
+          403
         ],
         "en": [
-          221,
-          316
+          277,
+          293,
+          403
         ]
       }
     },
@@ -816,10 +1823,10 @@
       "url": "https://olhardigital.com.br/2026/04/28/internet-e-redes-sociais/nubank-app-enfrenta-instabilidades-nesta-terca-feira-28/",
       "pages": {
         "pt": [
-          221
+          277
         ],
         "en": [
-          221
+          277
         ]
       }
     },
@@ -828,12 +1835,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py",
       "pages": {
         "pt": [
-          224,
-          233
+          280,
+          289
         ],
         "en": [
-          224,
-          233
+          280,
+          289
+        ]
+      }
+    },
+    {
+      "title": "P1 · Withdrawals.withdraw",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L39",
+      "pages": {
+        "pt": [
+          290,
+          291
+        ],
+        "en": [
+          290,
+          291
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_cache_does_not_authorize",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L77",
+      "pages": {
+        "pt": [
+          290,
+          292
+        ],
+        "en": [
+          290,
+          292
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_parallel_commands_cannot_spend_same_version",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L89",
+      "pages": {
+        "pt": [
+          290,
+          292
+        ],
+        "en": [
+          290,
+          292
+        ]
+      }
+    },
+    {
+      "title": "snapshot",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L34",
+      "pages": {
+        "pt": [
+          291
+        ],
+        "en": [
+          291
         ]
       }
     },
@@ -842,12 +1903,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
       "pages": {
         "pt": [
-          234,
-          317
+          294,
+          310,
+          404
         ],
         "en": [
-          234,
-          317
+          294,
+          310,
+          404
         ]
       }
     },
@@ -856,12 +1919,12 @@
       "url": "https://cdn.nubank.com.br/investments/portability/regulamento-campanha-cvm210.pdf",
       "pages": {
         "pt": [
-          234,
-          237
+          294,
+          297
         ],
         "en": [
-          234,
-          237
+          294,
+          297
         ]
       }
     },
@@ -870,12 +1933,68 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py",
       "pages": {
         "pt": [
-          237,
-          246
+          297,
+          306
         ],
         "en": [
-          237,
-          246
+          297,
+          306
+        ]
+      }
+    },
+    {
+      "title": "P1 · Campaign.schedule",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L49",
+      "pages": {
+        "pt": [
+          307,
+          308
+        ],
+        "en": [
+          307,
+          308
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_complaint_date_is_before_first_due_date",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L92",
+      "pages": {
+        "pt": [
+          307,
+          309
+        ],
+        "en": [
+          307,
+          309
+        ]
+      }
+    },
+    {
+      "title": "P2 · Campaign.pay",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L63",
+      "pages": {
+        "pt": [
+          307,
+          308
+        ],
+        "en": [
+          307,
+          308
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_concurrent_payment_is_once_per_installment",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L105",
+      "pages": {
+        "pt": [
+          307,
+          309
+        ],
+        "en": [
+          307,
+          309
         ]
       }
     },
@@ -884,12 +2003,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
       "pages": {
         "pt": [
-          247,
-          317
+          311,
+          327,
+          404
         ],
         "en": [
-          247,
-          317
+          311,
+          327,
+          404
         ]
       }
     },
@@ -898,10 +2019,10 @@
       "url": "https://nubank.com.br/contratos/termos-e-condicoes-nubank-ultravioleta",
       "pages": {
         "pt": [
-          247
+          311
         ],
         "en": [
-          247
+          311
         ]
       }
     },
@@ -910,12 +2031,66 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py",
       "pages": {
         "pt": [
-          250,
-          259
+          314,
+          323
         ],
         "en": [
-          250,
-          259
+          314,
+          323
+        ]
+      }
+    },
+    {
+      "title": "P1 · Benefits.redeem",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L53",
+      "pages": {
+        "pt": [
+          324,
+          325
+        ],
+        "en": [
+          324,
+          325
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_concurrent_choices_only_one_commit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L113",
+      "pages": {
+        "pt": [
+          324,
+          326
+        ],
+        "en": [
+          324,
+          326
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_expired_preview_has_no_financial_effect",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L105",
+      "pages": {
+        "pt": [
+          324,
+          326
+        ],
+        "en": [
+          324,
+          326
+        ]
+      }
+    },
+    {
+      "title": "issue",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py#L37",
+      "pages": {
+        "pt": [
+          325
+        ],
+        "en": [
+          325
         ]
       }
     },
@@ -924,12 +2099,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
       "pages": {
         "pt": [
-          260,
-          317
+          328,
+          344,
+          404
         ],
         "en": [
-          260,
-          317
+          328,
+          344,
+          404
         ]
       }
     },
@@ -938,10 +2115,10 @@
       "url": "https://www.youtube.com/watch?v=0-Sftqs-plI",
       "pages": {
         "pt": [
-          261
+          329
         ],
         "en": [
-          261
+          329
         ]
       }
     },
@@ -950,10 +2127,10 @@
       "url": "https://blog.nubank.com.br/portabilidade-celular-como-funciona/",
       "pages": {
         "pt": [
-          261
+          329
         ],
         "en": [
-          261
+          329
         ]
       }
     },
@@ -962,12 +2139,54 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py",
       "pages": {
         "pt": [
-          263,
-          272
+          331,
+          340
         ],
         "en": [
-          263,
-          272
+          331,
+          340
+        ]
+      }
+    },
+    {
+      "title": "P1 · Portability.apply",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L37",
+      "pages": {
+        "pt": [
+          341,
+          342
+        ],
+        "en": [
+          341,
+          342
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_late_activation_cannot_revive_cancelled_request",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L84",
+      "pages": {
+        "pt": [
+          341,
+          343
+        ],
+        "en": [
+          341,
+          343
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_user_sms_claim_cannot_authorize_donor",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py#L78",
+      "pages": {
+        "pt": [
+          341,
+          343
+        ],
+        "en": [
+          341,
+          343
         ]
       }
     },
@@ -976,12 +2195,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
       "pages": {
         "pt": [
-          273,
-          317
+          345,
+          361,
+          404
         ],
         "en": [
-          273,
-          317
+          345,
+          361,
+          404
         ]
       }
     },
@@ -990,10 +2211,10 @@
       "url": "https://blog.nubank.com.br/transferencia-internacional-o-que-e-e-como-fazer/",
       "pages": {
         "pt": [
-          274
+          346
         ],
         "en": [
-          274
+          346
         ]
       }
     },
@@ -1002,12 +2223,68 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py",
       "pages": {
         "pt": [
-          276,
-          285
+          348,
+          357
         ],
         "en": [
-          276,
-          285
+          348,
+          357
+        ]
+      }
+    },
+    {
+      "title": "P1 · GlobalWallet.issue",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L41",
+      "pages": {
+        "pt": [
+          358,
+          359
+        ],
+        "en": [
+          358,
+          359
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_unsupported_transfer_never_debits",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L107",
+      "pages": {
+        "pt": [
+          358,
+          360
+        ],
+        "en": [
+          358,
+          360
+        ]
+      }
+    },
+    {
+      "title": "P2 · GlobalWallet.commit",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L60",
+      "pages": {
+        "pt": [
+          358,
+          359
+        ],
+        "en": [
+          358,
+          359
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_capability_change_invalidates_old_preview",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L115",
+      "pages": {
+        "pt": [
+          358,
+          360
+        ],
+        "en": [
+          358,
+          360
         ]
       }
     },
@@ -1016,12 +2293,14 @@
       "url": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
       "pages": {
         "pt": [
-          286,
-          317
+          362,
+          378,
+          404
         ],
         "en": [
-          286,
-          317
+          362,
+          378,
+          404
         ]
       }
     },
@@ -1030,12 +2309,68 @@
       "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py",
       "pages": {
         "pt": [
-          289,
-          298
+          365,
+          374
         ],
         "en": [
-          289,
-          298
+          365,
+          374
+        ]
+      }
+    },
+    {
+      "title": "P1 · Reconciler.investigate",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L39",
+      "pages": {
+        "pt": [
+          375,
+          376
+        ],
+        "en": [
+          375,
+          376
+        ]
+      }
+    },
+    {
+      "title": "P1 · test_timeout_is_not_refund_authority",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L99",
+      "pages": {
+        "pt": [
+          375,
+          377
+        ],
+        "en": [
+          375,
+          377
+        ]
+      }
+    },
+    {
+      "title": "P2 · Reconciler.refund",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L72",
+      "pages": {
+        "pt": [
+          375,
+          376
+        ],
+        "en": [
+          375,
+          376
+        ]
+      }
+    },
+    {
+      "title": "P2 · test_concurrent_refunds_credit_once",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py#L110",
+      "pages": {
+        "pt": [
+          375,
+          377
+        ],
+        "en": [
+          375,
+          377
         ]
       }
     },
@@ -1044,22 +2379,366 @@
       "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-second-quarter-2026-financial-results",
       "pages": {
         "pt": [
-          307
+          387
         ],
         "en": [
-          307
+          387
+        ]
+      }
+    },
+    {
+      "title": "LinkedIn · profile",
+      "url": "https://www.linkedin.com/in/techvieira/",
+      "pages": {
+        "pt": [
+          394
+        ],
+        "en": [
+          394
+        ]
+      }
+    },
+    {
+      "title": "LinkedIn · formação atual",
+      "url": "https://www.linkedin.com/in/techvieira/details/education/",
+      "pages": {
+        "pt": [
+          395,
+          396
+        ],
+        "en": [
+          395,
+          396
+        ]
+      }
+    },
+    {
+      "title": "Portfólio · catálogo de formação datado",
+      "url": "https://wesleyvieira99.github.io/WVPortfolio/#learning",
+      "pages": {
+        "pt": [
+          395,
+          396
+        ],
+        "en": [
+          395,
+          396
+        ]
+      }
+    },
+    {
+      "title": "01 · IBM · Build RAG Applications",
+      "url": "https://www.coursera.org/account/accomplishments/records/CS50E1EEYZRK",
+      "pages": {
+        "pt": [
+          397
+        ],
+        "en": [
+          397
+        ]
+      }
+    },
+    {
+      "title": "02 · University of Cambridge · The Psychology of Emotions: an introduction to embodied cognition",
+      "url": "https://www.coursera.org/account/accomplishments/records/9419WI6ETGX3",
+      "pages": {
+        "pt": [
+          397
+        ],
+        "en": [
+          397
+        ]
+      }
+    },
+    {
+      "title": "03 · Red Hat · Kubernetes with Red Hat Cloud-native Development",
+      "url": "https://www.coursera.org/account/accomplishments/records/POARFJXWT6CE",
+      "pages": {
+        "pt": [
+          397
+        ],
+        "en": [
+          397
+        ]
+      }
+    },
+    {
+      "title": "04 · Google · Cybersecurity",
+      "url": "https://www.coursera.org/account/accomplishments/records/HO1VLH1SURTP",
+      "pages": {
+        "pt": [
+          397
+        ],
+        "en": [
+          397
+        ]
+      }
+    },
+    {
+      "title": "05 · University of Cambridge · The neuropsychology of decision making",
+      "url": "https://www.coursera.org/account/accomplishments/records/X93LYRQKN8VG",
+      "pages": {
+        "pt": [
+          397
+        ],
+        "en": [
+          397
+        ]
+      }
+    },
+    {
+      "title": "LinkedIn · credenciais",
+      "url": "https://www.linkedin.com/in/techvieira/details/certifications/",
+      "pages": {
+        "pt": [
+          397,
+          398
+        ],
+        "en": [
+          397,
+          398
+        ]
+      }
+    },
+    {
+      "title": "06 · Università degli Studi di Napoli Federico II · English Intermediate B1.1",
+      "url": "https://www.coursera.org/account/accomplishments/records/IY1J9I5FX65D",
+      "pages": {
+        "pt": [
+          398
+        ],
+        "en": [
+          398
+        ]
+      }
+    },
+    {
+      "title": "07 · DIO · Bootcamp Itaú - Java com Inteligência Artificial",
+      "url": "https://www.dio.me/certificate/M2KUVYMR/share",
+      "pages": {
+        "pt": [
+          398
+        ],
+        "en": [
+          398
+        ]
+      }
+    },
+    {
+      "title": "08 · DIO · Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot",
+      "url": "https://www.dio.me/certificate/5IKVYZK4/share",
+      "pages": {
+        "pt": [
+          398
+        ],
+        "en": [
+          398
+        ]
+      }
+    },
+    {
+      "title": "09 · DIO · Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI",
+      "url": "https://www.dio.me/certificate/0CI0DRQH/share",
+      "pages": {
+        "pt": [
+          398
+        ],
+        "en": [
+          398
+        ]
+      }
+    },
+    {
+      "title": "10 · DIO · Consumindo APIs Externas com o Spring Cloud OpenFeign",
+      "url": "https://www.dio.me/certificate/PLZZCOOK/share",
+      "pages": {
+        "pt": [
+          398
+        ],
+        "en": [
+          398
+        ]
+      }
+    },
+    {
+      "title": "01 · 🧬 A quântica que você usou antes de terminar o café. Da luz do LED ao computador quântico.",
+      "url": "https://www.linkedin.com/pulse/qu%C3%A2ntica-que-voc%C3%AA-usou-antes-de-terminar-o-caf%C3%A9-da-luz-wesley-vieira-phyyf/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "02 · LangChain + LangGraph para entender o DNA: quando o código da vida encontra agentes de IA",
+      "url": "https://www.linkedin.com/pulse/langchain-langgraph-para-entender-o-dna-quando-c%C3%B3digo-wesley-vieira-sw05f/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "03 · RAG vs. CAG: como dar à IA as informações certas",
+      "url": "https://www.linkedin.com/pulse/rag-vs-cag-como-dar-%C3%A0-ia-informa%C3%A7%C3%B5es-certas-wesley-vieira-2lu5f/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "04 · Javeiro pode criar agentes de IA? MCP, LLMs, LangChain, LangChain4j e métricas para criar agentes performáticos com Java",
+      "url": "https://www.linkedin.com/pulse/javeiro-pode-criar-agentes-de-ia-mcp-llms-langchain-e-wesley-vieira-uaocf/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "05 · Como um computador consegue “entender” sentimentos? A engenharia por trás da NLP",
+      "url": "https://www.linkedin.com/pulse/como-um-computador-consegue-entender-sentimentos-por-tr%C3%A1s-vieira-5lphf/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "06 · Redes Neurais? Usando seus próprios neurônios para aprender",
+      "url": "https://www.linkedin.com/pulse/redes-neurais-usando-seus-pr%C3%B3prios-neur%C3%B4nios-para-aprender-vieira-cpkbf/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "07 · DB2 ou NoSQL: entre a vanguarda e o moderno, qual caminho seguir?",
+      "url": "https://www.linkedin.com/pulse/db2-ou-nosql-entre-vanguarda-e-o-moderno-qual-caminho-wesley-vieira-phkwf/",
+      "pages": {
+        "pt": [
+          399
+        ],
+        "en": [
+          399
+        ]
+      }
+    },
+    {
+      "title": "08 · Demux: uma porta para milhares.",
+      "url": "https://www.linkedin.com/pulse/demux-uma-porta-para-milhares-wesley-vieira-xst1f/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "09 · Java threads: evoluindo um programa para ser multitask.",
+      "url": "https://www.linkedin.com/pulse/java-threads-evoluindo-um-programa-para-ser-multitask-wesley-vieira-i6k2f/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "10 · Kubernetes para Iniciantes: Entenda do Zero e Descomplique o Orquestrador de Containers",
+      "url": "https://www.linkedin.com/pulse/kubernetes-para-iniciantes-entenda-do-zero-e-o-de-wesley-vieira-4tfkc/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "11 · Segurança na Internet Descomplicada: Entendendo TLS, SSL, IPSec e DNSSEC",
+      "url": "https://www.linkedin.com/pulse/seguran%C3%A7a-na-internet-descomplicada-entendendo-tls-ssl-wesley-vieira-ixuwf/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "12 · TCP, HTTP, DNS? O frio chegou e, com isso, uma sopinha de letrinhas cai bem.",
+      "url": "https://www.linkedin.com/pulse/tcp-http-dns-o-frio-chegou-e-com-isso-uma-sopinha-de-letrinhas-m3dtf/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "13 · Feature Toggle: a troca de figurinhas da TI",
+      "url": "https://www.linkedin.com/pulse/feature-toggle-troca-de-figurinhas-da-ti-wesley-vieira-sybyf/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
+        ]
+      }
+    },
+    {
+      "title": "14 · A arte de observar: o que a Copa do Mundo de Clubes ensina sobre monitoramento de sistemas",
+      "url": "https://www.linkedin.com/pulse/arte-de-observar-o-que-copa-do-mundo-clubes-ensina-sobre-vieira-qvbbf/",
+      "pages": {
+        "pt": [
+          400
+        ],
+        "en": [
+          400
         ]
       }
     },
     {
       "title": "nubank · origem",
-      "url": "https://www.datomic.com/",
+      "url": "https://nu.com/en/about",
       "pages": {
         "pt": [
-          318
+          405,
+          408
         ],
         "en": [
-          318
+          405,
+          408
         ]
       }
     },
@@ -1068,22 +2747,34 @@
       "url": "https://clojure.org/",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
+        ]
+      }
+    },
+    {
+      "title": "datomic · origem",
+      "url": "https://www.datomic.com/",
+      "pages": {
+        "pt": [
+          405
+        ],
+        "en": [
+          405
         ]
       }
     },
     {
       "title": "kafka · origem",
-      "url": "https://kafka.apache.org/",
+      "url": "https://kafka.apache.org/logos/",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1092,10 +2783,10 @@
       "url": "https://prometheus.io/",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1104,10 +2795,10 @@
       "url": "https://flutter.dev/brand",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1116,10 +2807,10 @@
       "url": "https://dart.dev/",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1128,10 +2819,10 @@
       "url": "https://www.python.org/community/logos/",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1140,10 +2831,10 @@
       "url": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg",
       "pages": {
         "pt": [
-          318
+          405
         ],
         "en": [
-          318
+          405
         ]
       }
     },
@@ -1152,10 +2843,10 @@
       "url": "https://opentelemetry.io/",
       "pages": {
         "pt": [
-          319
+          406
         ],
         "en": [
-          319
+          406
         ]
       }
     },
@@ -1164,10 +2855,10 @@
       "url": "https://www.postgresql.org/",
       "pages": {
         "pt": [
-          319
+          406
         ],
         "en": [
-          319
+          406
         ]
       }
     },
@@ -1176,22 +2867,22 @@
       "url": "https://grafana.com/",
       "pages": {
         "pt": [
-          319
+          406
         ],
         "en": [
-          319
+          406
         ]
       }
     },
     {
       "title": "java · origem",
-      "url": "https://dev.java/",
+      "url": "https://dev.java/duke/",
       "pages": {
         "pt": [
-          319
+          406
         ],
         "en": [
-          319
+          406
         ]
       }
     },
@@ -1200,10 +2891,10 @@
       "url": "https://aws.amazon.com/",
       "pages": {
         "pt": [
-          319
+          406
         ],
         "en": [
-          319
+          406
         ]
       }
     },
@@ -1212,10 +2903,10 @@
       "url": "https://redis.io/",
       "pages": {
         "pt": [
-          320
+          407
         ],
         "en": [
-          320
+          407
         ]
       }
     },
@@ -1224,10 +2915,10 @@
       "url": "https://www.typescriptlang.org/branding/",
       "pages": {
         "pt": [
-          320
+          407
         ],
         "en": [
-          320
+          407
         ]
       }
     },
@@ -1236,10 +2927,22 @@
       "url": "https://github.com/hashicorp/design-system",
       "pages": {
         "pt": [
-          320
+          407
         ],
         "en": [
-          320
+          407
+        ]
+      }
+    },
+    {
+      "title": "sqlite · origem",
+      "url": "https://www.sqlite.org/src/dir?ci=trunk&name=art",
+      "pages": {
+        "pt": [
+          407
+        ],
+        "en": [
+          407
         ]
       }
     }

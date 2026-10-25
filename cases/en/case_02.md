@@ -40,6 +40,8 @@ Journey status combines two independent facts: freshness of that balance and pre
 
 ## Executable core
 
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]`
+
 ```python
     def read(self, owner, now):
         if owner != self.owner:
@@ -73,6 +75,8 @@ The model permits displaying the last amount with its timestamp but never recomm
 
 ## Stack implementation
 
+`Monotonic Versioning [proposal]` · `Freshness Envelope [proposal]`
+
 ```dart
 String balanceLabel(Map<String, Object?> view) {
   // Proposed presentation only; never authorizes a transfer.
@@ -97,6 +101,8 @@ I would check assistive-technology reading, localized time and reconnection beha
 - [Dart — Switch statements](https://dart.dev/language/branches)
 
 ## Contracts and ownership
+
+`Monotonic Versioning [proposal]` · `Freshness Envelope [proposal]`
 
 | Field / rule | Owner | Invariant |
 | --- | --- | --- |
@@ -124,6 +130,8 @@ The version belongs to the source, not to the number of client refreshes. Two sn
 Validity duration must reflect the data contract and be configured by the financial owner rather than chosen arbitrarily by the UI. Telemetry records aggregate age and state without account or amount labels. Reconciliation uses restricted access to investigate samples. Expiration of an incident notice never modifies these contracts.
 
 ## Adversarial verification
+
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]`
 
 ```python
     def test_incident_expiry_does_not_refresh_balance(self):
@@ -222,3 +230,95 @@ Integration must identify who issues the version, how time is obtained, the allo
 - Conflicting versions trigger investigation.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py)
+
+## Patterns with proof
+
+`Monotonic Versioning [lab]` · `Freshness Envelope [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Monotonic Versioning | BalanceView.publish | an older version cannot replace the newest one |
+| Freshness Envelope | BalanceView.read | at expiry, the snapshot is treated as stale |
+| CQRS / stale-aware projection | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + typed response DTO. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · BalanceView.publish](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L27)
+- [P1 · test_concurrent_versions_keep_newest](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L84)
+- [P2 · BalanceView.read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L49)
+- [P2 · test_exact_expiry_is_stale](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L93)
+
+## Execution sequence
+
+![Time and source are trusted; the lock covers one process. An incident never refreshes a balance.](../../evidence/sequence-en-02.svg)
+
+Time and source are trusted; the lock covers one process. An incident never refreshes a balance.
+
+**Authority and failure boundary**
+
+an older version cannot replace the newest one. without a snapshot, the read returns unknown.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [publish](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L27)
+- [read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L49)
+
+## Features, stories and acceptance
+
+**F02.1 · Balance with explicit freshness · D16–30**
+
+As a customer, I want to know when the source last confirmed the balance. Acceptance: an older version cannot replace the newest one.
+
+**F02.2 · Missing is not zero · D31–60**
+
+As a customer, I want to distinguish a failed query from an empty balance. Acceptance: without a snapshot, the read returns unknown.
+
+**F02.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F02.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L84)
+- [Acceptance F02.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py#L118)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 2800.00 | 0.00 | 5000.00 | 150000.00 |
+| Base | 16800.00 | 0.00 | 8000.00 | 150000.00 |
+| Ambitious | 50400.00 | 0.00 | 12000.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -2200.00 | -176400.00 | -193200.00 |
+| Base | 8800.00 | -44400.00 | -145200.00 |
+| Ambitious | 38400.00 | 310800.00 | 8400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: contacts per exposed session. Threat: comparing incidents of different severity. |
+| Unit economics | Incidents × affected sessions × contact reduction × cost; communication does not itself repair the balance. |
+| Proposed experiment | Compare similar episodes or cohorts; segment origin, version and freshness while keeping uncertainty visible. |
+| Stop rule | Stop for an unsupported fresh-balance label, amount mismatch or unsafe repeat instruction. |
+
+- [Canaltech](https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

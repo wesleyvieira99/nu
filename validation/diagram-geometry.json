@@ -1,3819 +1,796 @@
 {
   "status": "PASS",
-  "files": 48,
-  "pass": true,
+  "scope": "All48final architecture SVGs selected by assembled PT/EN book manifests. Sequence diagrams have a separate validator.",
+  "diagrams": 48,
+  "source_compositions": 24,
+  "unique_grid_layouts": 21,
+  "unique_routed_compositions": 24,
+  "shared_grid_layouts": [
+    [
+      "arquiteturas-4",
+      "07-3",
+      "19-3"
+    ],
+    [
+      "11-3",
+      "14-3"
+    ]
+  ],
+  "shared_routed_compositions": [],
+  "edge_crossings": 0,
+  "edge_node_intersections": 0,
+  "minimum_detail_contract_px": 18.5,
+  "minimum_projected_pt_at_345_height_scale_092": 7.18,
+  "source_arrays_preserved": true,
+  "reference_contract": "Every reference preserves a source out port, target in port, exact label and matching number in the full contract register; the empty route is intentional.",
   "results": [
     {
-      "file": "diagram-en-01-3-0.svg",
-      "sha256": "98a7cc9e4adb6a53517118d70f36b1f859a9fd3f8e32bba00c8486ca28d04fb7",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 572,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 847,
-            "y": 203.9199981689453,
-            "w": 228.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 847,
-            "y": 387.8399963378906,
-            "w": 228.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 572,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "arquiteturas-1",
+      "path": "work/v7/assets/diagram-pt-arquiteturas-1-0.svg",
+      "sha256": "a7b4d1805fb2d9ce0d7d82c03c6807218e934e595fe03780b98a8f9b4c8832c3",
+      "family": "command_and_read_authorities",
+      "nodes": 8,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-02-3-0.svg",
-      "sha256": "c22d7489609ee0828215654a8f3a1e51f03cb941584ed0c0c0d3f7c11a308141",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "arquiteturas-2",
+      "path": "work/v7/assets/diagram-pt-arquiteturas-2-0.svg",
+      "sha256": "304bdca90a2cf38e0013e48f41e6483919bbb796e30e1d67ae6f4ba40eb945dc",
+      "family": "recovery_decision_branch",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-03-3-0.svg",
-      "sha256": "85d2ecf488929db4926decac47945bb92b16d5b7c52403a149869900898f7e79",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 330,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 330,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 858,
-            "y": 203.9199981689453,
-            "w": 217.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 858,
-            "y": 387.8399963378906,
-            "w": 217.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 330,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "arquiteturas-3",
+      "path": "work/v7/assets/diagram-pt-arquiteturas-3-0.svg",
+      "sha256": "192545535a7f72ca99d8320c9c520a7c6b2724008fac1f684c8235f60642fe2f",
+      "family": "delivery_expansion_gate",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-04-3-0.svg",
-      "sha256": "4afad08565c04c069d6d912814cd03fcd7dc2bbd54df00c334e1cc8e5c00bf76",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 319,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 605,
-            "y": 203.9199981689453,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 605,
-            "y": 387.8399963378906,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 863.5,
-            "y": 387.8399963378906,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "arquiteturas-4",
+      "path": "work/v7/assets/diagram-pt-arquiteturas-4-0.svg",
+      "sha256": "e9980e79a26f51a1c55ff29be57a1d37e7460ac1f16850a1aa2a362f67ed39ae",
+      "family": "prediction_policy_feedback",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 7,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-05-3-0.svg",
-      "sha256": "18fe02bf6775925791a0475f80bf4fe20482f17e52f7e2d8fca57167b2b47db4",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 297,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 594,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "01-3",
+      "path": "work/v7/assets/diagram-pt-01-3-0.svg",
+      "sha256": "c20b390b5d45f59ff3bc18846839f933229ed472a15f3f961e544a6857804cc8",
+      "family": "receipt_backbone_support_branch",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-06-3-0.svg",
-      "sha256": "60b48191cf3db0c4293e6b42bab0b3768553925e450cabfea3b46e74a7959744",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "02-3",
+      "path": "work/v7/assets/diagram-pt-02-3-0.svg",
+      "sha256": "e3fe2fd6bbfd224bada3582382fb61f822f77ab1fa86ff00f8bf3c4eb1b73775",
+      "family": "freshness_reconciliation_cycle",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 8,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-07-3-0.svg",
-      "sha256": "fe9cf0acaf514e1136f2af5d06df09772600205a5b2a0ae621de88c75f979f28",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 319,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 605,
-            "y": 20,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 605,
-            "y": 387.8399963378906,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 319,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "03-3",
+      "path": "work/v7/assets/diagram-pt-03-3-0.svg",
+      "sha256": "6274da6b56d861ba582f3b58487079d1606e801d63e28345c62a905494c09893",
+      "family": "review_policy_audit_convergence",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-08-3-0.svg",
-      "sha256": "29b7d9b1322cf0d3892904ffd5a5836d94422be5bd00bc7efc80f72fa154db75",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "04-3",
+      "path": "work/v7/assets/diagram-pt-04-3-0.svg",
+      "sha256": "7e93a9d6c67e7f2ab14f3da9a45309c5f66c36e8637182317332cffbcb7fa8a1",
+      "family": "identity_alternative_and_revocation",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-09-3-0.svg",
-      "sha256": "2201126c5d73f236b419cdc0f8326bac69ba5e3a451add42fb7cb66339c6c99f",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "05-3",
+      "path": "work/v7/assets/diagram-pt-05-3-0.svg",
+      "sha256": "7127a40fed6b0d04ea5dd3d7f674d50378ff9098dcc7e15a9501313da37a74d5",
+      "family": "challenge_with_revalidation",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-10-3-0.svg",
-      "sha256": "56bd8ac62661898c62b14cf120203f3098aca90de5f7ee88ac2c6f3111c2f1a5",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 297,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "06-3",
+      "path": "work/v7/assets/diagram-pt-06-3-0.svg",
+      "sha256": "8703ce5f17fddb7ce169073ecdee6ff2ded68e4f4c42dbdda40191eb54a71be2",
+      "family": "evidence_intake_authority_split",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 7,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-11-3-0.svg",
-      "sha256": "61d969753bc2a557bfa58cc6748e483a087814e2ca34ca134379055227d19301",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 275,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 525,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 770,
-            "y": 110,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 295,
-            "y": 350,
-            "w": 220,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 145
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "07-3",
+      "path": "work/v7/assets/diagram-pt-07-3-0.svg",
+      "sha256": "a338d2101246d73d96f31ae28b8729929475b90d1703d483850a263a78887be0",
+      "family": "ordered_timeline_reconciliation",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-12-3-0.svg",
-      "sha256": "173eb4ca48df54fb835cc5d862aa3b096ec787029b3f97e60deec3a3c3395067",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 110,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 3
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 280,
-            "y": 70,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 535,
-            "y": 70,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 775,
-            "y": 110,
-            "w": 205,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 750,
-            "y": 350,
-            "w": 230,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 480,
-            "y": 350,
-            "w": 230,
-            "h": 150
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 150
-          },
-          "textCount": 3
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "08-3",
+      "path": "work/v7/assets/diagram-pt-08-3-0.svg",
+      "sha256": "d8f4e2fa76a9d30737a1f260f5370ba01894117c529ae282fa9a8a84375a7b18",
+      "family": "triage_exception_lane",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-13-3-0.svg",
-      "sha256": "7d1e256bd6b3b78de99674e17f4335f6294268c68ae0b104cfbbb59f4deb030d",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 65,
-            "w": 250,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 300,
-            "w": 250,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 370,
-            "y": 65,
-            "w": 260,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 715,
-            "y": 65,
-            "w": 260,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 715,
-            "y": 410,
-            "w": 260,
-            "h": 110
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 715,
-            "y": 255,
-            "w": 260,
-            "h": 125
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 375,
-            "y": 270,
-            "w": 260,
-            "h": 145
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "09-3",
+      "path": "work/v7/assets/diagram-pt-09-3-0.svg",
+      "sha256": "a76e50ac4ab44db90c95c29b933629ce5407aa2286ce17d5bc3b5c5078df97fd",
+      "family": "allocation_projection_consistency",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-14-3-0.svg",
-      "sha256": "5332a223f5a9a6668bac774272ed802365421abcc9671065b6941f0cf9a9a433",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 70,
-            "w": 220,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 285,
-            "y": 70,
-            "w": 220,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 545,
-            "y": 70,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 755,
-            "y": 280,
-            "w": 225,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 490,
-            "y": 350,
-            "w": 220,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 260,
-            "y": 245,
-            "w": 190,
-            "h": 140
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "10-3",
+      "path": "work/v7/assets/diagram-pt-10-3-0.svg",
+      "sha256": "69aa3aab36046ec538b819790eaa3c89445fbacac46ff1fa7d57d78ee1b79c23",
+      "family": "payment_intent_recovery_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-15-3-0.svg",
-      "sha256": "55eb7c50a392b7dcf0641918742f270aa55debd2656a0ea19f72edc599fb6f36",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 90,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 280,
-            "y": 65,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 540,
-            "y": 65,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 310,
-            "w": 225,
-            "h": 175
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 495,
-            "y": 340,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 245,
-            "y": 340,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 340,
-            "w": 180,
-            "h": 165
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "11-3",
+      "path": "work/v7/assets/diagram-pt-11-3-0.svg",
+      "sha256": "dd8fc9907fa1ffac38fbcef1b5a354cf5b0794ffbb050276b0652636a1aa7cf9",
+      "family": "statement_authority_fallback",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-16-3-0.svg",
-      "sha256": "fe66066c627f1bad64616ce577a0635a22fc8713d37060f8c0cb49cd04b06a30",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 65,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 280,
-            "y": 65,
-            "w": 230,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 550,
-            "y": 65,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 310,
-            "w": 225,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 495,
-            "y": 335,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 245,
-            "y": 335,
-            "w": 210,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 315,
-            "w": 170,
-            "h": 190
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "12-3",
+      "path": "work/v7/assets/diagram-pt-12-3-0.svg",
+      "sha256": "778b0d03bc38a14b4bc7d8004acc1bc24db78e382d2eb2527e2bdca4def6c822",
+      "family": "shipment_reissue_control_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-17-3-0.svg",
-      "sha256": "036e194dbc6cc13cab03556c30130093ef1dff3b487ae7266634222d9bcc2fa5",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 190,
-            "w": 215,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 285,
-            "y": 70,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 545,
-            "y": 70,
-            "w": 205,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 435,
-            "y": 335,
-            "w": 245,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 785,
-            "y": 95,
-            "w": 190,
-            "h": 170
-          },
-          "textCount": 6
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 385,
-            "w": 290,
-            "h": 125
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "13-3",
+      "path": "work/v7/assets/diagram-pt-13-3-0.svg",
+      "sha256": "8697da79f3aaccdab05c7f67f562d3c7b6191103a2e7d42bbd2241cb651d9d58",
+      "family": "authorization_multi_authority_hub",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-18-3-0.svg",
-      "sha256": "6cd9d00b0bb75f6253e3f8becdd679e846b91ee0b2689ecdce412a853ff5553d",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 90,
-            "w": 210,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 210,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 300,
-            "y": 75,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 300,
-            "y": 350,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 565,
-            "y": 215,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 805,
-            "y": 75,
-            "w": 175,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 795,
-            "y": 350,
-            "w": 185,
-            "h": 160
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "14-3",
+      "path": "work/v7/assets/diagram-pt-14-3-0.svg",
+      "sha256": "53092440e29d2a98332f4de7eab2d5d96a4d888b417f3af39ef0bc1553b51af1",
+      "family": "quote_consent_execution",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 8,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-19-3-0.svg",
-      "sha256": "50212b6f6cd3baad7dc9520f9a2ba0479e3b63bd8f7a2aa3d44f147bd5530d11",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 245,
-            "w": 175,
-            "h": 150
-          },
-          "textCount": 6
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 125,
-            "y": 65,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 410,
-            "y": 65,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 745,
-            "y": 90,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 470,
-            "y": 350,
-            "w": 245,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 225,
-            "y": 350,
-            "w": 205,
-            "h": 155
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "15-3",
+      "path": "work/v7/assets/diagram-pt-15-3-0.svg",
+      "sha256": "7009aca79a27f6946575a7af6556c63a0046e1bb0af318fff1195406ac8f5577",
+      "family": "withdrawal_commit_receipt",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-20-3-0.svg",
-      "sha256": "9f5cf245676e763dc0e73ca76c92b2f696c0dd368e971dd861dc7eff552822ac",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 70,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 300,
-            "y": 205,
-            "w": 245,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 575,
-            "y": 65,
-            "w": 225,
-            "h": 165
-          },
-          "textCount": 3
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 575,
-            "y": 350,
-            "w": 225,
-            "h": 160
-          },
-          "textCount": 3
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 825,
-            "y": 240,
-            "w": 155,
-            "h": 180
-          },
-          "textCount": 6
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 290,
-            "y": 385,
-            "w": 250,
-            "h": 132
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "16-3",
+      "path": "work/v7/assets/diagram-pt-16-3-0.svg",
+      "sha256": "00e3fae9e59a2a971794ef653d0624377402606cd519c5d52285a85e347996ec",
+      "family": "custody_campaign_schedule_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-arquiteturas-1-0.svg",
-      "sha256": "909bc2a53dfb50d7cd9b8c20ff72bf8e34616471c5a5b5f10ef90101da27d133",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 302.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "8",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "17-3",
+      "path": "work/v7/assets/diagram-pt-17-3-0.svg",
+      "sha256": "794e96e9800ab00e65b651a1f03eebd6f152ec234288f836562e3c881ce71f01",
+      "family": "redemption_confirmation_review_fork",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-arquiteturas-2-0.svg",
-      "sha256": "854315c5aaf800f006bd2c9b6baa7827af358dfb762d92de61e2f1223320cc11",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "18-3",
+      "path": "work/v7/assets/diagram-pt-18-3-0.svg",
+      "sha256": "147aeb15315bc5e3933823ca4abde654ecc3b0e47cfa1519000789dade28f88c",
+      "family": "portability_evidence_comparison",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 4,
+      "reference_edges": 4,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-arquiteturas-3-0.svg",
-      "sha256": "942d50d909881b477e962043535dda275aad3b00ff824c811587c4090bc1b040",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 302.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "19-3",
+      "path": "work/v7/assets/diagram-pt-19-3-0.svg",
+      "sha256": "487fd01c51f9862ace0e73d95881dfc0c5c120b14f688c0bb24a1287ad35eacc",
+      "family": "fx_capability_before_conversion",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-en-arquiteturas-4-0.svg",
-      "sha256": "5f1025c630115eb1f53a00424f7f7ac564d9a4eb5a834fbec34aed87f313511c",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 313.5,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 605,
-            "y": 20,
-            "w": 214.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 605,
-            "y": 203.9199981689453,
-            "w": 214.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 863.5,
-            "y": 387.8399963378906,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 313.5,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "pt",
+      "key": "20-3",
+      "path": "work/v7/assets/diagram-pt-20-3-0.svg",
+      "sha256": "2bb33fa19a0103258994a4c412ac63c2646c1fd90677c4d2925375cf7796dee7",
+      "family": "payment_order_exception_resolution",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-01-3-0.svg",
-      "sha256": "873c976a8d2178a169b613eb3e655dc233c1f8f43572bc2b867eb6b90f7e82a4",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 572,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 847,
-            "y": 203.9199981689453,
-            "w": 228.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 847,
-            "y": 387.8399963378906,
-            "w": 228.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 572,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "arquiteturas-1",
+      "path": "work/v7/assets/diagram-en-arquiteturas-1-0.svg",
+      "sha256": "d37c9efcf3516ccb7764735489159d8b56939824eff22a1a2cf7fb0d74ffdeea",
+      "family": "command_and_read_authorities",
+      "nodes": 8,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-02-3-0.svg",
-      "sha256": "33e32accf5029a4c72d845f0573767cecd8139e469a5e94fda4175271db2bd84",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "arquiteturas-2",
+      "path": "work/v7/assets/diagram-en-arquiteturas-2-0.svg",
+      "sha256": "0ca54bed71e33f4fa040276aec78ad694aa50eeb484be4aa92d4f43c35e1dcaf",
+      "family": "recovery_decision_branch",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-03-3-0.svg",
-      "sha256": "267252ab355587b5831707bc0e728fe26df9f0f4a3ba62fc7f2476a1941280bf",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 330,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 330,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 858,
-            "y": 203.9199981689453,
-            "w": 217.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 858,
-            "y": 387.8399963378906,
-            "w": 217.8000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 330,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "arquiteturas-3",
+      "path": "work/v7/assets/diagram-en-arquiteturas-3-0.svg",
+      "sha256": "e49d7a6c28543b638f64e94a912dc009cb6ecb5652facdffd80f807ed60e6a15",
+      "family": "delivery_expansion_gate",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-04-3-0.svg",
-      "sha256": "0b60f2e432968dc8d8e5025e9d783739d0822e1fb8e6a0def82124078d3e170e",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 319,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 605,
-            "y": 203.9199981689453,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 605,
-            "y": 387.8399963378906,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 863.5,
-            "y": 387.8399963378906,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "arquiteturas-4",
+      "path": "work/v7/assets/diagram-en-arquiteturas-4-0.svg",
+      "sha256": "7b8d454d399459ef5f9d43f9092a9c8387297ecbaf2b76a64103e58c23be1409",
+      "family": "prediction_policy_feedback",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 7,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-05-3-0.svg",
-      "sha256": "507836fecc6886122473f464bf5abedaddb6a170d213d32f3a561ca93f684524",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 297,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 594,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "01-3",
+      "path": "work/v7/assets/diagram-en-01-3-0.svg",
+      "sha256": "dcfdc6e6d051f578393639855094994e6fb18aed2c52f502f0e66455d45b5ae8",
+      "family": "receipt_backbone_support_branch",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-06-3-0.svg",
-      "sha256": "614d1731935f448f8b8d52e03e68094a924f9660f861d29c95d1f444362cb5b9",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "02-3",
+      "path": "work/v7/assets/diagram-en-02-3-0.svg",
+      "sha256": "2be416255f1e864d31372457aa21ac091ebbd0b7efde01b4d1baf034a8cadaa0",
+      "family": "freshness_reconciliation_cycle",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 8,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-07-3-0.svg",
-      "sha256": "dc3b7445073e0c4d8d5f1e60a97300db7f890bdfdb82b08bc846f72a51272194",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 319,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 605,
-            "y": 20,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 605,
-            "y": 387.8399963378906,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 319,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "03-3",
+      "path": "work/v7/assets/diagram-en-03-3-0.svg",
+      "sha256": "d692c540c8b76a664d4301fb2f02a7551b969c3c4f89a8cc7e61b7a06bf97484",
+      "family": "review_policy_audit_convergence",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-08-3-0.svg",
-      "sha256": "73c238c2c4a8fa0f47eed29dc47f1d7c500888a8007d8c97d493c9e150d15e0b",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "04-3",
+      "path": "work/v7/assets/diagram-en-04-3-0.svg",
+      "sha256": "70805e5ad1a3b9900334eb1f4e06d85979e6ec6708e5e7ac2998dff3a6262840",
+      "family": "identity_alternative_and_revocation",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-09-3-0.svg",
-      "sha256": "a552b781a5f45ab9916dbaeb3b190120839df2a3d3674d5a7d1bff4791f109a9",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "05-3",
+      "path": "work/v7/assets/diagram-en-05-3-0.svg",
+      "sha256": "60eb4d54e634967fd61b6ab7691b93f4f7a4e015a5481d168b59becb9fdece5d",
+      "family": "challenge_with_revalidation",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-10-3-0.svg",
-      "sha256": "91974591a726ff599ae5b78ffaf4d0aacc3c3cbe534e26901eb6dc4416a2b60f",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 297,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 297,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 297,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "06-3",
+      "path": "work/v7/assets/diagram-en-06-3-0.svg",
+      "sha256": "ca3d6b1e653ac5bd855cc5b5d590ee5e011ff83e5b66e5b602fba5e6c14bf6d0",
+      "family": "evidence_intake_authority_split",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 7,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-11-3-0.svg",
-      "sha256": "b11211895a5855cde23228c4128a94649b7492b73c02a1251d61c0579eafbb78",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 275,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 525,
-            "y": 75,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 770,
-            "y": 110,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 295,
-            "y": 350,
-            "w": 220,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 145
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "07-3",
+      "path": "work/v7/assets/diagram-en-07-3-0.svg",
+      "sha256": "1912f674244faaf21cd0171aafb880c234b47b5723eae708538664e55371a682",
+      "family": "ordered_timeline_reconciliation",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-12-3-0.svg",
-      "sha256": "384e5c0ef8cfa25d727e56a13b5e4f791985b82bdf16049b04fbfa1a08ef8d6c",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 110,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 3
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 280,
-            "y": 70,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 535,
-            "y": 70,
-            "w": 210,
-            "h": 145
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 775,
-            "y": 110,
-            "w": 205,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 750,
-            "y": 350,
-            "w": 230,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 480,
-            "y": 350,
-            "w": 230,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 150
-          },
-          "textCount": 3
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "08-3",
+      "path": "work/v7/assets/diagram-en-08-3-0.svg",
+      "sha256": "9aa48b15eb307db603aebdc98530877e0b9e4087258a66fc820e44c8c4f8dfe4",
+      "family": "triage_exception_lane",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-13-3-0.svg",
-      "sha256": "0dcfd591aa0b4baeb78233eebabd57adf7df2a1b871a6a7f69871bf9dc539030",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 65,
-            "w": 250,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 300,
-            "w": 250,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 370,
-            "y": 65,
-            "w": 260,
-            "h": 145
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 715,
-            "y": 65,
-            "w": 260,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 715,
-            "y": 410,
-            "w": 260,
-            "h": 110
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 715,
-            "y": 255,
-            "w": 260,
-            "h": 125
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 375,
-            "y": 270,
-            "w": 260,
-            "h": 145
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "09-3",
+      "path": "work/v7/assets/diagram-en-09-3-0.svg",
+      "sha256": "1879f89d519093e9540b3e2a0d43e2bb020f81b080521001953c01e0e8053512",
+      "family": "allocation_projection_consistency",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-14-3-0.svg",
-      "sha256": "e01071d2158dcbefa2c0347a1dfeb4764cf15acf188292ebd685d95f2571eb41",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "0",
-          "box": {
-            "x": 25,
-            "y": 70,
-            "w": 220,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "1",
-          "box": {
-            "x": 285,
-            "y": 70,
-            "w": 220,
-            "h": 140
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 545,
-            "y": 70,
-            "w": 210,
-            "h": 140
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 755,
-            "y": 280,
-            "w": 225,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 490,
-            "y": 350,
-            "w": 220,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 260,
-            "y": 245,
-            "w": 190,
-            "h": 140
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "10-3",
+      "path": "work/v7/assets/diagram-en-10-3-0.svg",
+      "sha256": "1e34641876135e85d528152e16f38406d46ecb5384819ee4c556c2fe185e342a",
+      "family": "payment_intent_recovery_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-15-3-0.svg",
-      "sha256": "1d3bb378f0b802d7b28857950affb00588024bcf511b46ac732ca5440362a15b",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 90,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 280,
-            "y": 65,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 540,
-            "y": 65,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 310,
-            "w": 225,
-            "h": 175
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 495,
-            "y": 340,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 245,
-            "y": 340,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 340,
-            "w": 180,
-            "h": 165
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "11-3",
+      "path": "work/v7/assets/diagram-en-11-3-0.svg",
+      "sha256": "3d3d0263970e620038123765b11ab33f5a896074d03484e22d774af894d8d2a0",
+      "family": "statement_authority_fallback",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-16-3-0.svg",
-      "sha256": "7b116b84fc0e654030a20edb2e8a2e394be11368e9a9acb36e1f98d6482291fe",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 65,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 280,
-            "y": 65,
-            "w": 230,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 550,
-            "y": 65,
-            "w": 220,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 755,
-            "y": 310,
-            "w": 225,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 495,
-            "y": 335,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 245,
-            "y": 335,
-            "w": 210,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 315,
-            "w": 170,
-            "h": 190
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "12-3",
+      "path": "work/v7/assets/diagram-en-12-3-0.svg",
+      "sha256": "b0aab52aab3c5bea8d269e51fd6ff66ffd7bf89209904e49fce6b918f95f8a81",
+      "family": "shipment_reissue_control_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-17-3-0.svg",
-      "sha256": "0850d0aebfccb7b0a39e09d28aa84c625ce2742c01b43ef53540393ab8e7f557",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 190,
-            "w": 215,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 285,
-            "y": 70,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 545,
-            "y": 70,
-            "w": 205,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 435,
-            "y": 335,
-            "w": 245,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 785,
-            "y": 95,
-            "w": 190,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 25,
-            "y": 385,
-            "w": 290,
-            "h": 125
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "13-3",
+      "path": "work/v7/assets/diagram-en-13-3-0.svg",
+      "sha256": "0bc92823e53a367cd1ee2925a9a4f5ab388782aeb64cbfdf149825c97dc05498",
+      "family": "authorization_multi_authority_hub",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-18-3-0.svg",
-      "sha256": "97c3395f53efb6910874a8b26c6864a19bc63b56282f7e0088066ead8d7a5025",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 90,
-            "w": 210,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 210,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 300,
-            "y": 75,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 300,
-            "y": 350,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 565,
-            "y": 215,
-            "w": 220,
-            "h": 170
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 805,
-            "y": 75,
-            "w": 175,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 795,
-            "y": 350,
-            "w": 185,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "14-3",
+      "path": "work/v7/assets/diagram-en-14-3-0.svg",
+      "sha256": "add5c24c8583a8fb1fc1631c6ed018dae985934cb11483c9d1b6daaa409c2511",
+      "family": "quote_consent_execution",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 8,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-19-3-0.svg",
-      "sha256": "aab6dc4ffab058a2390603cafe8bc552782070f7e674783bec0cb3e78df24484",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 245,
-            "w": 175,
-            "h": 150
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 125,
-            "y": 65,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 410,
-            "y": 65,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 745,
-            "y": 90,
-            "w": 235,
-            "h": 150
-          },
-          "textCount": 4
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 755,
-            "y": 350,
-            "w": 225,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 470,
-            "y": 350,
-            "w": 245,
-            "h": 155
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 225,
-            "y": 350,
-            "w": 205,
-            "h": 155
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "15-3",
+      "path": "work/v7/assets/diagram-en-15-3-0.svg",
+      "sha256": "f35abfd5fe00062a8b117fd3c6513e6b36652e364dba140cb4447bbff0d4152d",
+      "family": "withdrawal_commit_receipt",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-20-3-0.svg",
-      "sha256": "922110e9e28be306a7b0efe1c6abbbcdb281fc889725d195e024ecec56f12f96",
-      "width": 1000,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 25,
-            "y": 70,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 25,
-            "y": 350,
-            "w": 220,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 300,
-            "y": 205,
-            "w": 245,
-            "h": 165
-          },
-          "textCount": 4
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 575,
-            "y": 65,
-            "w": 225,
-            "h": 165
-          },
-          "textCount": 3
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 575,
-            "y": 350,
-            "w": 225,
-            "h": 160
-          },
-          "textCount": 3
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 825,
-            "y": 240,
-            "w": 155,
-            "h": 180
-          },
-          "textCount": 6
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 290,
-            "y": 385,
-            "w": 250,
-            "h": 132
-          },
-          "textCount": 4
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "16-3",
+      "path": "work/v7/assets/diagram-en-16-3-0.svg",
+      "sha256": "4d6f2b16d706e4e95d43dc5fad7677c52182e2e914dbef6cd4c7a30513d40c45",
+      "family": "custody_campaign_schedule_loop",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-arquiteturas-1-0.svg",
-      "sha256": "b0f3ba66371b7b8985f386ea4f227497f1a6f381afd1df956d8a8d625eca4ee8",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 302.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "8",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "17-3",
+      "path": "work/v7/assets/diagram-en-17-3-0.svg",
+      "sha256": "1720aeb668793ab5d52ae5ef3d7abdc2a29f066e03fd498acd75b3f42aabf1e2",
+      "family": "redemption_confirmation_review_fork",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 7,
+      "reference_edges": 0,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-arquiteturas-2-0.svg",
-      "sha256": "252fb7eb5bda7ec84a940535fc87266b4a02e0a4adb976636bb8ae706060d857",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 577.5,
-            "y": 203.9199981689453,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 852.5,
-            "y": 20,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 852.5,
-            "y": 387.8399963378906,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 387.8399963378906,
-            "w": 231,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "18-3",
+      "path": "work/v7/assets/diagram-en-18-3-0.svg",
+      "sha256": "1ec0318f04a122842b435e051c957519b8548d0a939ecc0e7c3f27b9ed54c3ab",
+      "family": "portability_evidence_comparison",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 4,
+      "reference_edges": 4,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-arquiteturas-3-0.svg",
-      "sha256": "7ca0c9c60af4639b5c29ff18a69d363b94be1fec125f113c51885a3f95a3c5b9",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 302.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 577.5,
-            "y": 20,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 852.5,
-            "y": 203.9199981689453,
-            "w": 223.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 577.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 302.5,
-            "y": 387.8399963378906,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 302.5,
-            "y": 203.9199981689453,
-            "w": 225.5,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "19-3",
+      "path": "work/v7/assets/diagram-en-19-3-0.svg",
+      "sha256": "7b3e1116ac5790f16eb2594d7c93b0d36aed054c68c345fbe34ccd9d7c58fb8e",
+      "family": "fx_capability_before_conversion",
+      "nodes": 7,
+      "edges": 7,
+      "direct_edges": 6,
+      "reference_edges": 1,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     },
     {
-      "file": "diagram-pt-arquiteturas-4-0.svg",
-      "sha256": "700d221a603e0692dd2ee681be957f7b88528de6c8bc3b23413c52001b4bae97",
-      "width": 1100,
-      "height": 700,
-      "nodes": [
-        {
-          "id": "1",
-          "box": {
-            "x": 24.200000762939453,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "2",
-          "box": {
-            "x": 313.5,
-            "y": 20,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "3",
-          "box": {
-            "x": 605,
-            "y": 20,
-            "w": 214.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "4",
-          "box": {
-            "x": 605,
-            "y": 203.9199981689453,
-            "w": 214.5,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "5",
-          "box": {
-            "x": 863.5,
-            "y": 203.9199981689453,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 5
-        },
-        {
-          "id": "6",
-          "box": {
-            "x": 863.5,
-            "y": 387.8399963378906,
-            "w": 212.3000030517578,
-            "h": 160
-          },
-          "textCount": 4
-        },
-        {
-          "id": "7",
-          "box": {
-            "x": 313.5,
-            "y": 387.8399963378906,
-            "w": 242,
-            "h": 160
-          },
-          "textCount": 5
-        }
-      ],
-      "issues": []
+      "lang": "en",
+      "key": "20-3",
+      "path": "work/v7/assets/diagram-en-20-3-0.svg",
+      "sha256": "9c5e9d16946cc3f0c40cf073c93b1e614d293380da44400939ae80ba2addcd1b",
+      "family": "payment_order_exception_resolution",
+      "nodes": 7,
+      "edges": 8,
+      "direct_edges": 6,
+      "reference_edges": 2,
+      "edge_crossings": 0,
+      "edge_node_intersections": 0,
+      "text_budget": "PASS",
+      "source_nodes_edges_ids": "PRESERVED",
+      "reference_ports": "PAIRED"
     }
   ]
 }

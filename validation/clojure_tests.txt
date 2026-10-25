@@ -1,5 +1,3 @@
-Validation run: 23 October 2026, local Java 17 / Clojure 1.12.0.
-Command: java -cp work/v2/vendor/* clojure.main work/v6/labs/decision_core.clj
 
 Testing decision-core
 

@@ -40,6 +40,8 @@ A consulta canônica é o caminho para dados ausentes ou divergentes, não licen
 
 ## Núcleo: identidade e limite do estorno
 
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]`
+
 ```python
     def append(self, entry):
         if not isinstance(entry.id, str) or not entry.id.strip():
@@ -81,6 +83,8 @@ Essa limitação é deliberada: compensação adicional, juros e outras categori
 
 ## Uma função de soma compartilhada
 
+`Immutable Snapshot [proposal]` · `Referenced Credit [proposal]`
+
 ```clojure
 (defn explain-statement [entries]
   (let [sum-kind (fn [kind]
@@ -104,6 +108,8 @@ O redutor separa compras, estornos e pagamentos. Quando o saldo assinado fica ne
 App, PDF e atendimento deveriam consumir a mesma projeção ou um contrato comum de cálculo, com versão declarada. Copiar a fórmula em três clientes aumenta o risco de divergência. A implementação real deve acrescentar categorias aprovadas por contabilidade e manter testes de paridade entre canais. A função não decide data de lançamento nem se o estabelecimento efetivamente devolveu dinheiro.
 
 ## Proveniência é parte do contrato
+
+`Immutable Snapshot [proposal]` · `Referenced Credit [proposal]`
 
 | Elemento | Regra | Privacidade |
 | --- | --- | --- |
@@ -131,6 +137,8 @@ Exemplo sintético de três estornos; nenhum valor foi extraído da conta do rec
 Uma relação muitos-para-um é necessária quando a devolução chega em partes. O total da compra e seus créditos não devem ser duplicados apenas porque aparecem no resumo e no detalhamento. No atendimento, uma referência curta permite localizar a mesma versão sem pedir ao cliente que envie novamente todos os documentos ou exponha informações de outras compras.
 
 ## Testar soma, versão e concorrência
+
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]`
 
 ```python
     def test_three_refunds_reduce_exactly_once(self):
@@ -226,3 +234,96 @@ O revisor deve conseguir explicar por que um crédito reduz o saldo e por que um
 Avançar apenas se a projeção conciliar, a linguagem melhorar compreensão e os guardrails assistivos forem preservados. Se houver erro financeiro, a correção do razão tem prioridade. Se houver apenas dúvida interpretativa, o experimento pode validar uma melhoria menor. A força do caso está em respeitar essa distinção, inclusive quando a reclamação histórica já foi resolvida.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py)
+
+## Padrões com prova no código
+
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Immutable Snapshot | Statement.snapshot | crédito novo não altera snapshot antigo |
+| Referenced Credit | Statement.append | um estorno sem compra de origem é rejeitado |
+| CQRS / explainable statement read model | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + immutable records. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · Spring AI**
+
+Experimento proposto: Spring AI para explicar lançamentos já reconciliados, citando suas referências. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Statement.snapshot](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L51)
+- [P1 · test_old_snapshot_does_not_change_after_new_credit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L83)
+- [P2 · Statement.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L26)
+- [P2 · test_orphan_refund_rejected_without_mutation](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L95)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Sequência de execução
+
+![Não calcula juros, impostos, câmbio ou parcelas. Imutabilidade e lock são locais ao processo.](../../evidence/sequence-pt-11.svg)
+
+Não calcula juros, impostos, câmbio ou parcelas. Imutabilidade e lock são locais ao processo.
+
+**Autoridade e fronteira de falha**
+
+crédito novo não altera snapshot antigo. os três estornos reduzem o total uma única vez.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L26)
+- [snapshot](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L51)
+
+## Features, histórias e aceite
+
+**F11.1 · Fatura reproduzível · D16–30**
+
+Como cliente, quero reabrir uma composição de fatura e encontrar o mesmo total. Aceite: crédito novo não altera snapshot antigo.
+
+**F11.2 · Estorno com origem · D31–60**
+
+Como cliente, quero rastrear cada crédito até sua compra. Aceite: os três estornos reduzem o total uma única vez.
+
+**F11.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F11.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L83)
+- [Aceite F11.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L73)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 16000.00 | 0.00 | 24000.00 | 120000.00 |
+| Base | 120000.00 | 0.00 | 24000.00 | 120000.00 |
+| Ambicioso | 400000.00 | 0.00 | 24000.00 | 120000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -8000.00 | -128000.00 | -136000.00 |
+| Base | 96000.00 | -24000.00 | -84000.00 |
+| Ambicioso | 376000.00 | 256000.00 | 56000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: contato interpretativo por estorno. Ameaça: chamar erro financeiro de dúvida do cliente. |
+| Economia por unidade | Estornos elegíveis × contatos evitados × custo; não monetiza o crédito que já é devido. |
+| Experimento proposto | Tarefas equivalentes com o mesmo cálculo; verificar compreensão, paridade e grupos assistivos. |
+| Critério de parada | Parar por soma divergente, mistura de versões ou piora de compreensão. |
+
+- [Reclame AQUI · ID 213597411](https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

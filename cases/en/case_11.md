@@ -40,6 +40,8 @@ Canonical lookup handles missing or inconsistent data; it is not permission to m
 
 ## Core: identity and refund boundaries
 
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]`
+
 ```python
     def append(self, entry):
         if not isinstance(entry.id, str) or not entry.id.strip():
@@ -81,6 +83,8 @@ That boundary is deliberate: additional compensation, interest and other categor
 
 ## One shared sum function
 
+`Immutable Snapshot [proposal]` · `Referenced Credit [proposal]`
+
 ```clojure
 (defn explain-statement [entries]
   (let [sum-kind (fn [kind]
@@ -104,6 +108,8 @@ The reducer separates purchases, refunds and payments. When the signed balance i
 App, PDF and support should consume the same projection or a shared calculation contract with an explicit revision. Copying the formula across three clients increases divergence risk. Real implementation must add accounting-approved categories and cross-channel parity tests. The function does not decide posting dates or whether a merchant actually returned funds.
 
 ## Provenance is part of the contract
+
+`Immutable Snapshot [proposal]` · `Referenced Credit [proposal]`
 
 | Element | Rule | Privacy |
 | --- | --- | --- |
@@ -131,6 +137,8 @@ Synthetic three-refund example; no amount was extracted from the complainant’s
 A many-to-one relationship is necessary when money returns in parts. Purchase and credit totals must not be duplicated merely because they appear in both summary and detail. A short support reference locates the same revision without asking customers to resend every document or expose unrelated purchase information.
 
 ## Test sums, revisions and concurrency
+
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]`
 
 ```python
     def test_three_refunds_reduce_exactly_once(self):
@@ -226,3 +234,96 @@ A reviewer should explain why a credit reduces balance and why an old revision r
 Proceed only if the projection reconciles, language improves understanding and assistive guardrails hold. Financial error requires ledger correction first. If the issue is interpretive, an experiment can validate a smaller improvement. The case is stronger when it respects that distinction, including the fact that the historical complaint was resolved.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py)
+
+## Patterns with proof
+
+`Immutable Snapshot [lab]` · `Referenced Credit [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Immutable Snapshot | Statement.snapshot | a new credit cannot mutate an old snapshot |
+| Referenced Credit | Statement.append | a refund without its originating purchase is rejected |
+| CQRS / explainable statement read model | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + immutable records. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · Spring AI**
+
+Proposed experiment: Spring AI to explain already-reconciled entries with references. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Statement.snapshot](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L51)
+- [P1 · test_old_snapshot_does_not_change_after_new_credit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L83)
+- [P2 · Statement.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L26)
+- [P2 · test_orphan_refund_rejected_without_mutation](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L95)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Execution sequence
+
+![Interest, tax, FX and installments are excluded. Immutability and locking are process-local.](../../evidence/sequence-en-11.svg)
+
+Interest, tax, FX and installments are excluded. Immutability and locking are process-local.
+
+**Authority and failure boundary**
+
+a new credit cannot mutate an old snapshot. the three refunds reduce the total only once.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L26)
+- [snapshot](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L51)
+
+## Features, stories and acceptance
+
+**F11.1 · Reproducible statement · D16–30**
+
+As a customer, I want to reopen a statement composition and find the same total. Acceptance: a new credit cannot mutate an old snapshot.
+
+**F11.2 · Refund provenance · D31–60**
+
+As a customer, I want to trace every credit to its purchase. Acceptance: the three refunds reduce the total only once.
+
+**F11.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F11.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L83)
+- [Acceptance F11.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py#L73)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 16000.00 | 0.00 | 24000.00 | 120000.00 |
+| Base | 120000.00 | 0.00 | 24000.00 | 120000.00 |
+| Ambitious | 400000.00 | 0.00 | 24000.00 | 120000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -8000.00 | -128000.00 | -136000.00 |
+| Base | 96000.00 | -24000.00 | -84000.00 |
+| Ambitious | 376000.00 | 256000.00 | 56000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: interpretation contacts per refund. Threat: relabeling financial errors as customer confusion. |
+| Unit economics | Eligible refunds × avoided contacts × cost; an already owed credit is not monetized. |
+| Proposed experiment | Use equivalent tasks with identical arithmetic; check understanding, parity and assistive-access groups. |
+| Stop rule | Stop for a divergent sum, mixed versions or worse understanding. |
+
+- [Reclame AQUI · ID 213597411](https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

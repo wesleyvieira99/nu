@@ -40,6 +40,8 @@ Observability signals pending work and discrepancies to the responsible operatio
 
 ## Core: revalidate before applying
 
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]`
+
 ```python
     def execute(self, ident, now, crash=False):
         with self.db:
@@ -76,6 +78,8 @@ Funds received against an expired or insufficiently funded quote remain recorded
 
 ## Pure calculation does not replace a transaction
 
+`Quote / Commit [proposal]` · `Versioned Aggregate [proposal]`
+
 ```clojure
 (defn executable? [quote contract now received]
   (let [required (+ (:bill-cents quote)
@@ -97,6 +101,8 @@ The function expresses execution conditions, but evaluating it outside the trans
 A material price or plan change requires renewed confirmation. Revalidation does not mean silently recalculating and debiting. History retains the accepted quote, cancellation reason and application receipt. Clojure can keep calculation deterministic; financial integration and event publication remain responsible for atomicity, durability and reconciliation.
 
 ## Separate plan, funding and receipt
+
+`Quote / Commit [proposal]` · `Versioned Aggregate [proposal]`
 
 | Object | Identity | Invariant |
 | --- | --- | --- |
@@ -125,6 +131,8 @@ Synthetic example: R$ 50 current bill + R$ 100 principal −R$ 10 discount = R$ 
 The discount is not a bank saving to maximize; it is part of the contractual obligation to the customer. Presentation should separate principal, charges, discount and required total. Identifiers support investigation without exposing a complete contract in logs. The financial owner defines retention and compensation; support receives an accessible calculation and next action.
 
 ## Crash and expiry challenge the plan
+
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]`
 
 ```python
     def test_received_is_not_executed_and_crash_rolls_back(self):
@@ -217,3 +225,95 @@ Reviewers should inspect both the happy path and an operation that cannot comple
 Proceed only when plan, execution and receipt reconcile, the customer understands the required total and operations can handle expiry and insufficiency. If automation is unsupported, retain traceable human assistance. The desired result is a financial promise that can be explained and fulfilled, and an exception that does not disappear between teams.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py)
+
+## Patterns with proof
+
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]` · `Transactional orchestration [proposal]` · `Spring Boot [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Quote / Commit | Repayment.execute | execution failure preserves funds for resolution |
+| Versioned Aggregate | Repayment.execute | a concurrent quote becomes stale after execution |
+| Transactional orchestration / quote contract | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + transactional command handler. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Repayment.execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+- [P1 · test_received_is_not_executed_and_crash_rolls_back](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L99)
+- [P2 · Repayment.execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+- [P2 · test_second_quote_becomes_stale_after_execution](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L137)
+
+## Execution sequence
+
+![The discount is an approved input, not an interest calculation. Refunds need a separate authorized flow.](../../evidence/sequence-en-14.svg)
+
+The discount is an approved input, not an interest calculation. Refunds need a separate authorized flow.
+
+**Authority and failure boundary**
+
+a concurrent quote becomes stale after execution. execution failure preserves funds for resolution.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [quote](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L27)
+- [execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+
+## Features, stories and acceptance
+
+**F14.1 · Verifiable quote · D16–30**
+
+As a customer, I want to confirm discount, installments and validity before repayment. Acceptance: a concurrent quote becomes stale after execution.
+
+**F14.2 · Receipt is not execution · D31–60**
+
+As a customer, I want to know whether funds arrived and installments were settled. Acceptance: execution failure preserves funds for resolution.
+
+**F14.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F14.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L137)
+- [Acceptance F14.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L99)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 14400.00 | 0.00 | 30000.00 | 150000.00 |
+| Base | 67200.00 | 0.00 | 30000.00 | 150000.00 |
+| Ambitious | 192000.00 | 0.00 | 30000.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -15600.00 | -165600.00 | -172800.00 |
+| Base | 37200.00 | -112800.00 | -146400.00 |
+| Ambitious | 162000.00 | 12000.00 | -84000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: incidents per eligible early repayment. Threat: mixing expired quotes and delayed execution. |
+| Unit economics | Avoided incidents × (rework + support cost); a correct contractual discount is not new revenue. |
+| Proposed experiment | Compare tracking with an explicit plan/receipt, retaining calculation; independently validate execution. |
+| Stop rule | Stop for double application, an incorrect discount or funds without a traceable destination. |
+
+- [Reclame AQUI · ID 238574883](https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

@@ -46,6 +46,8 @@ O modelo usa dois bancos para representar a fronteira entre serviço e provedor.
 
 ## Núcleo: persistir antes de despachar
 
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]`
+
 ```python
     def pay(self, key, amount, merchant, timeout_after_provider=False):
         if not isinstance(key, str) or not key.strip():
@@ -87,6 +89,8 @@ Não se deve manter uma transação local aberta enquanto espera a rede: isso cr
 
 ## O estado deve orientar a próxima ação
 
+`Idempotency Key [proposal]` · `Intent / Effect Separation [proposal]`
+
 ```dart
 sealed class PaymentState {}
 class Unknown extends PaymentState {
@@ -113,6 +117,8 @@ Persistência local ajuda o aplicativo a retomar, mas o servidor continua sendo 
 
 ## Identidade antes de heurística
 
+`Idempotency Key [proposal]` · `Intent / Effect Separation [proposal]`
+
 | Contrato | Invariante | Limite |
 | --- | --- | --- |
 | Mesma chave | Mesmo conteúdo e recibo | Escopo e retenção definidos |
@@ -138,6 +144,8 @@ Contrato sintético em centavos; não é uma captura do NuPay.
 O digest não substitui validação dos campos e não deve ser usado como única autorização. Uma correção financeira é outra operação, vinculada ao efeito original; ela não apaga a intenção nem transforma uma tentativa confirmada em nunca ocorrida. Juros e principal exigem trilhas separadas para que a resolução seja completa e auditável.
 
 ## Falhar depois do efeito externo
+
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]`
 
 ```python
     def test_timeout_restart_and_retry_produce_one_charge(self):
@@ -234,3 +242,95 @@ A garantia demonstrada depende de o provedor sintético deduplicar corretamente.
 Avançar somente quando o contrato externo estiver confirmado, a mensagem orientar a ação correta e o piloto demonstrar redução de repetição sem bloquear compras válidas. Caso contrário, limitar a mudança à recuperação de informações e à operação assistida. O valor desta contribuição está em tornar a incerteza administrável e impedir que uma resposta perdida vire uma nova obrigação financeira.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py)
+
+## Padrões com prova no código
+
+`Idempotency Key [lab]` · `Intent / Effect Separation [lab]` · `Ports & Adapters [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Idempotency Key | IntentClient.pay | reinício e retry preservam um efeito no provedor |
+| Intent / Effect Separation | IntentClient.pay | chaves distintas representam intenções distintas |
+| Ports & Adapters / payment provider | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + resilient HTTP adapter. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · IntentClient.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [P1 · test_timeout_restart_and_retry_produce_one_charge](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L92)
+- [P2 · IntentClient.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [P2 · test_same_amount_can_be_two_explicit_purchases](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L104)
+
+## Sequência de execução
+
+![Dois bancos locais. Idempotência do provedor é premissa explícita; não existe exactly-once de rede.](../../evidence/sequence-pt-10.svg)
+
+Dois bancos locais. Idempotência do provedor é premissa explícita; não existe exactly-once de rede.
+
+**Autoridade e fronteira de falha**
+
+reinício e retry preservam um efeito no provedor. chaves distintas representam intenções distintas.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L45)
+- [state](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L69)
+
+## Features, histórias e aceite
+
+**F10.1 · Intenção persistida · D16–30**
+
+Como cliente, quero repetir uma consulta após timeout sem cobrar novamente. Aceite: reinício e retry preservam um efeito no provedor.
+
+**F10.2 · Compras distintas explícitas · D31–60**
+
+Como cliente, quero realizar duas compras legítimas de mesmo valor. Aceite: chaves distintas representam intenções distintas.
+
+**F10.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F10.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L92)
+- [Aceite F10.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py#L104)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 4050.00 | 0.00 | 36000.00 | 180000.00 |
+| Base | 27000.00 | 0.00 | 36000.00 | 180000.00 |
+| Ambicioso | 108000.00 | 0.00 | 36000.00 | 180000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -31950.00 | -211950.00 | -213975.00 |
+| Base | -9000.00 | -189000.00 | -202500.00 |
+| Ambicioso | 72000.00 | -108000.00 | -162000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: duplicidades confirmadas por intenção. Ameaça: classificar toda exceção de rede como duplicação. |
+| Economia por unidade | Intenções ambíguas × taxa confirmada × prevenção × custo de incidente; não conta principal como ganho. |
+| Experimento proposto | Recuperação em sombra e testes de falha antes do canário por app/parceiro, mantendo autorização. |
+| Critério de parada | Parar por nova duplicidade, bloqueio de compra legítima ou perda de rastreabilidade. |
+
+- [Reclame AQUI · ID 241843991](https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

@@ -40,6 +40,8 @@ The design does not create international remittances. It prevents a remittance i
 
 ## A quote does not outlive policy
 
+`Capability Preflight [lab]` · `Version-bound Quote [lab]`
+
 ```python
     def commit(self, actor, quote_id, key, now):
         with self.lock:
@@ -83,6 +85,8 @@ Test values are synthetic and represent neither a historical exchange rate nor t
 
 ## An explicit capability contract
 
+`Capability Preflight [proposal]` · `Version-bound Quote [proposal]`
+
 ```typescript
 type Purpose = "card_spend" | "cash_withdrawal" | "external_transfer";
 
@@ -109,6 +113,8 @@ The contract makes rejection specific: this product does not support this purpos
 Product owns capability; Pricing owns quotation; financial authority owns the effect. These boundaries allow a feature to change without rewriting FX calculations. The service must treat missing responses as unknown, not permission. Compile-time typing helps development, but external data requires its own validation and authentication.
 
 ## Retain intent, minimize exposure
+
+`Capability Preflight [proposal]` · `Version-bound Quote [proposal]`
 
 | Record | Minimum fields | Use |
 | --- | --- | --- |
@@ -137,6 +143,8 @@ Purpose should support the decision without collecting unnecessary family histor
 The contract evolves through explicit revisions. An incompatible change can invalidate an open preview and require new confirmation; it does not change an issued receipt. I would retain the version used to explain historical decisions without indefinitely freezing a permission the product no longer offers.
 
 ## Reject before charging
+
+`Capability Preflight [lab]` · `Version-bound Quote [lab]`
 
 ```python
     def test_unsupported_transfer_never_debits(self):
@@ -221,3 +229,96 @@ Acceptance: explicit purpose, rejection before cost, revalidated version, a quot
 I would proceed if someone understands the limitation before committing funds and the backend preserves it during an update race. I would stop if the catalog lacks an owner or depends on inferences about another product. Final review must show both an allowed path and a useful rejection without a debit.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py)
+
+## Patterns with proof
+
+`Capability Preflight [lab]` · `Version-bound Quote [lab]` · `Policy boundary [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Capability Preflight | GlobalWallet.issue | an unsupported purpose cannot cause a debit |
+| Version-bound Quote | GlobalWallet.commit | a capability change invalidates the previous quote |
+| Policy boundary / capability catalog | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + versioned capability service. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · Spring AI**
+
+Proposed experiment: Spring AI to present approved catalog capabilities without inventing functions. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · GlobalWallet.issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L41)
+- [P1 · test_unsupported_transfer_never_debits](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L107)
+- [P2 · GlobalWallet.commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L60)
+- [P2 · test_capability_change_invalidates_old_preview](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L115)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Execution sequence
+
+![No FX, tax or remittance is executed. A synthetic capability does not prove a Nubank product offering.](../../evidence/sequence-en-19.svg)
+
+No FX, tax or remittance is executed. A synthetic capability does not prove a Nubank product offering.
+
+**Authority and failure boundary**
+
+an unsupported purpose cannot cause a debit. a capability change invalidates the previous quote.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L41)
+- [commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L60)
+
+## Features, stories and acceptance
+
+**F19.1 · Purpose before conversion · D16–30**
+
+As a customer, I want to confirm whether the intended operation is supported. Acceptance: an unsupported purpose cannot cause a debit.
+
+**F19.2 · Revalidated capability · D31–60**
+
+As a customer, I want to commit against the capability shown in the preview. Acceptance: a capability change invalidates the previous quote.
+
+**F19.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F19.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L107)
+- [Acceptance F19.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L115)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate. Variable cost is the assumed forgone contribution; it also remains fixed in this stress test.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 2500.00 | 150.00 | 3000.00 | 80000.00 |
+| Base | 5000.00 | 300.00 | 3000.00 | 80000.00 |
+| Ambitious | 7500.00 | 450.00 | 3000.00 | 80000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -650.00 | -87800.00 | -102800.00 |
+| Base | 1700.00 | -59600.00 | -89600.00 |
+| Ambitious | 4050.00 | -31400.00 | -76400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: mismatches identified before exchange. Threat: improving the metric by blocking every operation. |
+| Unit economics | Avoidable cost minus forgone contribution and operation; the converted amount is not profit. |
+| Proposed experiment | Change information order, not price or rights; measure understanding, false negatives and completion. |
+| Stop rule | Stop for a debit after capability denial or exposed data. |
+
+- [Reclame AQUI · ID 243002037](https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

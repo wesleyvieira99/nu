@@ -1,40 +1,263 @@
 {
   "status": "PASS",
-  "verified_at_utc": "2026-10-25T12:51:31.860396+00:00",
-  "pdfs": {
-    "pt": {
-      "path": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
-      "sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4"
-    },
-    "en": {
-      "path": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
-      "sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90"
-    }
-  },
-  "reports": [
+  "reviewed_at": "2026-10-25",
+  "scope": "Focused visual inspection of 14 final-PDF pages: seven selected IDs in each language. This is not a claim of visual review of every page in both books.",
+  "rendering": "Poppler pdftoppm at 120 dpi; actual saved final PDF files after the integrator’s final freeze. No browser screenshots used.",
+  "pdfs": [
     {
-      "path": "pdf-visual-01-07.json",
-      "sha256": "45b643cb0614fa7cc7048330beac7faaa2e271c26e19e42150e537a3a49fb13a",
-      "status": "PASS"
+      "language": "pt",
+      "path": "Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "3b5cb403f1786176b566f9f9d34d98fa1ebb351632e1aaece810041ea4c7b6c3",
+      "bytes": 19648066,
+      "pages": 408
     },
     {
-      "path": "pdf-visual-08-14.json",
-      "sha256": "f3f9688cab1c0c43545808d0823f37815311d8a9b194ea5df69f20c8cc02acea",
-      "status": "PASS"
-    },
-    {
-      "path": "pdf-visual-15-20.json",
-      "sha256": "7abd16de32a5160e0cc1fb4f432fdbc258843494c87511d157dcfc44839ba11f",
-      "status": "PASS"
-    },
-    {
-      "path": "pdf-visual-root.json",
-      "sha256": "893d6c6e920ffb70381b18a5cc2635b64c6b7408f1a2e8034e71c25caac5b9e1",
-      "status": "PASS"
+      "language": "en",
+      "path": "Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "cbc4b6b5eb545a367bf9902be63fce25cd048f026f5d357ee01fc7dbddc3e7f0",
+      "bytes": 19605713,
+      "pages": 408
     }
   ],
-  "pages_rendered": 640,
-  "case_contact_sheets_reviewed": 40,
-  "scope": "All 20 cases in both languages reviewed in contact sheets with detailed page inspections. Editorial corrections were rechecked; unchanged reviewed renders were hash-compared. Root reviewed updated non-case pages and final HTML screenshots. Current reader and code hashes match their recorded passing checks.",
-  "unresolved_visual_findings": []
+  "pages_reviewed": [
+    {
+      "language": "pt",
+      "page": 121,
+      "id": "05-15",
+      "title": "Sequência de execução",
+      "png": "qa/pdf-visual-final/pt-05-15.png",
+      "png_sha256": "2e10a1ad902b2fd0bd9d1d0f6ff3208baaf89ee26c0a93e971b420e5e4e03317",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 172,
+      "id": "08-15",
+      "title": "Sequência de execução",
+      "png": "qa/pdf-visual-final/pt-08-15.png",
+      "png_sha256": "3c0b7ecf595504652c9da590814ed18e4eaa9fd70ea5c9288ad250c34fe544c1",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 274,
+      "id": "14-15",
+      "title": "Sequência de execução",
+      "png": "qa/pdf-visual-final/pt-14-15.png",
+      "png_sha256": "d6dbde8f1d80ff9a687e40e86f826cb6670e72d5fc05f57a8b99b7fabce985d6",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 376,
+      "id": "20-15",
+      "title": "Sequência de execução",
+      "png": "qa/pdf-visual-final/pt-20-15.png",
+      "png_sha256": "783c9dab1c49e01500e3149ccd41f92d647a6bc6fba35271fb85a02d322d1fa9",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 109,
+      "id": "05-3",
+      "title": "Fronteiras da arquitetura",
+      "png": "qa/pdf-visual-final/pt-05-3.png",
+      "png_sha256": "fc03472f27a4090b7bdfab54af18f255ebd8b169d52af40876d0fe09c3c0b73b",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 296,
+      "id": "16-3",
+      "title": "Uma projeção explicável de benefício",
+      "png": "qa/pdf-visual-final/pt-16-3.png",
+      "png_sha256": "25fe32fbe179bcf5f426ec06fc4eae286ccb41d6b86ab4627056fae0678ec852",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    },
+    {
+      "language": "pt",
+      "page": 330,
+      "id": "18-3",
+      "title": "Comparar o ocorrido e o confirmado",
+      "png": "qa/pdf-visual-final/pt-18-3.png",
+      "png_sha256": "f968f79067cb541dd38752e6de9c27334278d962dd7b927f471f34e831199780",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 121,
+      "id": "05-15",
+      "title": "Execution sequence",
+      "png": "qa/pdf-visual-final/en-05-15.png",
+      "png_sha256": "656e718217ac582cdeddf8b684fc7ee58caa85720335374ad803a4098e25749b",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 172,
+      "id": "08-15",
+      "title": "Execution sequence",
+      "png": "qa/pdf-visual-final/en-08-15.png",
+      "png_sha256": "6c1122622cb18b7f3c98fbf499bcdaec3ecf0f175462d327b92f573cd5afe7ad",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 274,
+      "id": "14-15",
+      "title": "Execution sequence",
+      "png": "qa/pdf-visual-final/en-14-15.png",
+      "png_sha256": "c139bcc9a7e4927e164d144ee20bbbdb6ee41b64196e78f8858b5ae0f1420ea8",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 376,
+      "id": "20-15",
+      "title": "Execution sequence",
+      "png": "qa/pdf-visual-final/en-20-15.png",
+      "png_sha256": "d78f90c0600f3d18bbdf128e5848496a6b48e9a0ee78dd5aee201368b5a26811",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "All 10 messages, alternative branches and arrowheads are visible; final message does not overlap the legend.",
+        "Official Python symbol replaces the small horizontal wordmark."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 109,
+      "id": "05-3",
+      "title": "Architecture boundaries",
+      "png": "qa/pdf-visual-final/en-05-3.png",
+      "png_sha256": "1aade40ca9a3a93b20104063e6f27e9fe4503c9763b9cc68bc72c7c1ab638b25",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 296,
+      "id": "16-3",
+      "title": "An explainable benefit projection",
+      "png": "qa/pdf-visual-final/en-16-3.png",
+      "png_sha256": "ff33c8e32a41ba536720b084ea63049239d8ccf19389056b317513b0bb085005",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    },
+    {
+      "language": "en",
+      "page": 330,
+      "id": "18-3",
+      "title": "Compare occurrence and confirmation",
+      "png": "qa/pdf-visual-final/en-18-3.png",
+      "png_sha256": "fd2eed346635b5e287c6803eb3374315a484a5d91ced56c3c3f69ffa73cb3961",
+      "status": "PASS",
+      "observed": [
+        "Title, captions, footer and navigation fit the page.",
+        "Labels and body text are legible at the inspected 120 dpi rendering.",
+        "Official technology marks render with correct proportions and no black alpha artifacts.",
+        "Component cards and connection labels have no material overlap; numbered reference ports match the legend."
+      ]
+    }
+  ],
+  "sample_ids": [
+    "05-15",
+    "08-15",
+    "14-15",
+    "20-15",
+    "05-3",
+    "16-3",
+    "18-3"
+  ],
+  "issues": [],
+  "corrections_verified": [
+    "Sequence footer anchored below the alt frame.",
+    "Explicit polygon arrowheads survive PDF rendering.",
+    "Python official device-only mark is recognizable.",
+    "Latest architecture 16 included in the post-freeze sample."
+  ],
+  "not_reviewed_in_this_report": [
+    "Profile pages and financial page 05-17, separately reviewed by the integrator.",
+    "Pages outside the 14-page focused sample."
+  ],
+  "production_files_modified": false
 }

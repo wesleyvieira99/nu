@@ -39,6 +39,8 @@ Kafka e Datomic são escolhas ilustrativas. Uma implementação existente pode r
 
 ## Calendário antes da cobrança
 
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]`
+
 ```python
     def schedule(self, actor, active_subscription):
         with self.lock:
@@ -86,6 +88,8 @@ Após o primeiro crédito, mudança no total calculado bloqueia parcela nova e e
 
 ## Uma explicação comum aos canais
 
+`Specification-like Predicate [proposal]` · `Idempotent Installment [proposal]`
+
 ```clojure
 (defn explain-installment [{:keys [eligible due paid today]}]
   (cond
@@ -106,6 +110,8 @@ A explicação precisa mostrar o motivo e a próxima ação, não apenas uma cor
 Eu implantaria essa função na camada de apresentação de domínio, consumida por app e console autorizado de atendimento. A autoridade financeira continuaria separada. Textos seriam localizados e testados com cenários de ainda não vencido, abaixo do mínimo e em revisão. A interface não deve inferir fraude, descumprimento ou erro do cliente a partir de dado incompleto.
 
 ## Regra, evento e parcela identificáveis
+
+`Specification-like Predicate [proposal]` · `Idempotent Installment [proposal]`
 
 | Registro | Identidade | Proteção |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ Cada decisão registra a data de corte dos fatos. Eventos atrasados não são si
 O regulamento disponível hoje pode diferir de uma comunicação histórica. Eu arquivaria a revisão efetivamente aplicável e seu hash, com acesso jurídico apropriado. Este capítulo restringe o exemplo ao Nu+, evitando misturar os números Ultravioleta divergentes entre a resposta e versões públicas do material.
 
 ## Testar a data, não só a soma
+
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]`
 
 ```python
     def test_complaint_date_is_before_first_due_date(self):
@@ -218,3 +226,96 @@ O aceite inclui origem autenticada, deduplicação de evento, janela inclusiva d
 Eu avançaria se os donos de campanha e Finanças aceitarem a matriz e conseguirem reproduzir uma decisão contestada. Pararia se a equipe só puder explicar o saldo atual, sem reconstruir a regra aplicada. A capacidade de responder por que uma decisão ocorreu é parte do produto, especialmente quando uma oferta tem prazo e pagamento parcelado.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py)
+
+## Padrões com prova no código
+
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]` · `Policy versioning [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Specification-like Predicate | Campaign.schedule | pedido antes do vencimento não representa atraso |
+| Idempotent Installment | Campaign.pay | concorrência não duplica a parcela |
+| Policy versioning / campaign boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + explicit policy predicates. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · Spring AI**
+
+Experimento proposto: Spring AI para explicar a decisão do motor de regras e o calendário aplicável. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Campaign.schedule](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L49)
+- [P1 · test_complaint_date_is_before_first_due_date](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L92)
+- [P2 · Campaign.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L63)
+- [P2 · test_concurrent_payment_is_once_per_installment](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L105)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Sequência de execução
+
+![signed_cents é valor com sinal, não assinatura digital. Campanha é ilustração limitada; não paga dinheiro real.](../../evidence/sequence-pt-16.svg)
+
+signed_cents é valor com sinal, não assinatura digital. Campanha é ilustração limitada; não paga dinheiro real.
+
+**Autoridade e fronteira de falha**
+
+pedido antes do vencimento não representa atraso. concorrência não duplica a parcela.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [schedule](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L49)
+- [pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L63)
+
+## Features, histórias e aceite
+
+**F16.1 · Elegibilidade explicável · D16–30**
+
+Como cliente, quero ver regra, data e próxima parcela aplicáveis. Aceite: pedido antes do vencimento não representa atraso.
+
+**F16.2 · Parcela conciliada · D31–60**
+
+Como cliente, quero receber cada benefício elegível uma única vez. Aceite: concorrência não duplica a parcela.
+
+**F16.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F16.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L92)
+- [Aceite F16.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L105)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 3240.00 | 0.00 | 4000.00 | 90000.00 |
+| Base | 9720.00 | 0.00 | 4000.00 | 90000.00 |
+| Ambicioso | 19440.00 | 0.00 | 4000.00 | 90000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -760.00 | -99120.00 | -118560.00 |
+| Base | 5720.00 | -21360.00 | -79680.00 |
+| Ambicioso | 15440.00 | 95280.00 | -21360.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: recontato por decisão contestada. Ameaça: confundir elegibilidade e parcela vencida. |
+| Economia por unidade | Participantes × redução absoluta de disputa × contatos repetidos × custo; crédito do benefício não é ganho do banco. |
+| Experimento proposto | Pesquisa com datas sintéticas e sombra entre canais; medir concordância e pontualidade em parcelas vencidas. |
+| Critério de parada | Parar por crédito duplicado; não expandir só porque a tela concorda ou ninguém reclama. |
+
+- [Reclame AQUI · ID 250210183](https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

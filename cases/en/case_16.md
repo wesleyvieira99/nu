@@ -39,6 +39,8 @@ Kafka and Datomic are illustrative choices. An existing implementation may fulfi
 
 ## Calendar before the complaint
 
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]`
+
 ```python
     def schedule(self, actor, active_subscription):
         with self.lock:
@@ -86,6 +88,8 @@ After the first credit, a change in the calculated total blocks a new installmen
 
 ## One explanation shared by channels
 
+`Specification-like Predicate [proposal]` · `Idempotent Installment [proposal]`
+
 ```clojure
 (defn explain-installment [{:keys [eligible due paid today]}]
   (cond
@@ -106,6 +110,8 @@ The explanation should show the reason and next action, not just a green or red 
 I would deploy this function in a domain presentation layer consumed by the app and an authorized support console. Financial authority would remain separate. Copy would be localized and tested for not-yet-due, below-minimum and under-review scenarios. The interface must not infer fraud, noncompliance or customer error from incomplete data.
 
 ## Identifiable rule, event and installment
+
+`Specification-like Predicate [proposal]` · `Idempotent Installment [proposal]`
 
 | Record | Identity | Protection |
 | --- | --- | --- |
@@ -133,6 +139,8 @@ Each decision records the factual cutoff. Late events are not silently backdated
 The rules available today may differ from historical communication. I would archive the applicable revision and its hash with appropriate legal access. This chapter restricts its example to Nu+, avoiding mixed Ultravioleta figures that differ between the response and public material versions.
 
 ## Test the date, not only the sum
+
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]`
 
 ```python
     def test_complaint_date_is_before_first_due_date(self):
@@ -218,3 +226,96 @@ Acceptance includes authenticated origin, event deduplication, a defined inclusi
 I would proceed if the campaign and Finance owners accept the matrix and can reproduce a challenged decision. I would stop if the team can explain only the current balance without reconstructing the applied rule. The ability to answer why a decision occurred is part of the product, especially when an offer has a deadline and installment payments.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py)
+
+## Patterns with proof
+
+`Specification-like Predicate [lab]` · `Idempotent Installment [lab]` · `Policy versioning [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Specification-like Predicate | Campaign.schedule | a request before the due date is not a late payment |
+| Idempotent Installment | Campaign.pay | concurrency cannot duplicate an installment |
+| Policy versioning / campaign boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + explicit policy predicates. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · Spring AI**
+
+Proposed experiment: Spring AI to explain the rules engine decision and applicable calendar. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Campaign.schedule](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L49)
+- [P1 · test_complaint_date_is_before_first_due_date](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L92)
+- [P2 · Campaign.pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L63)
+- [P2 · test_concurrent_payment_is_once_per_installment](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L105)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Execution sequence
+
+![signed_cents is a signed amount, not a digital signature. This bounded illustration sends no real money.](../../evidence/sequence-en-16.svg)
+
+signed_cents is a signed amount, not a digital signature. This bounded illustration sends no real money.
+
+**Authority and failure boundary**
+
+a request before the due date is not a late payment. concurrency cannot duplicate an installment.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [schedule](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L49)
+- [pay](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L63)
+
+## Features, stories and acceptance
+
+**F16.1 · Explainable eligibility · D16–30**
+
+As a customer, I want to see the applicable rule, date and next installment. Acceptance: a request before the due date is not a late payment.
+
+**F16.2 · Reconciled installment · D31–60**
+
+As a customer, I want to receive each eligible benefit exactly once. Acceptance: concurrency cannot duplicate an installment.
+
+**F16.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F16.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L92)
+- [Acceptance F16.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py#L105)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 3240.00 | 0.00 | 4000.00 | 90000.00 |
+| Base | 9720.00 | 0.00 | 4000.00 | 90000.00 |
+| Ambitious | 19440.00 | 0.00 | 4000.00 | 90000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -760.00 | -99120.00 | -118560.00 |
+| Base | 5720.00 | -21360.00 | -79680.00 |
+| Ambitious | 15440.00 | 95280.00 | -21360.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: repeat contacts per disputed decision. Threat: confusing eligibility with a due installment. |
+| Unit economics | Participants × absolute dispute reduction × repeat contacts × cost; the credited benefit is not bank profit. |
+| Proposed experiment | Test comprehension with synthetic dates and cross-channel shadowing; measure agreement and due-installment timing. |
+| Stop rule | Stop for a duplicate credit; matching screens or absent complaints alone do not justify expansion. |
+
+- [Reclame AQUI · ID 250210183](https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

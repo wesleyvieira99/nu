@@ -40,6 +40,8 @@ O retorno ao aplicativo distingue recebido, em verificação, disponível para a
 
 ## Núcleo executável
 
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]`
+
 ```python
     def append(self, owner, upload_id, content, now):
         if owner != self.owner:
@@ -76,6 +78,8 @@ Material recebido após o corte é preservado como tardio, mas submit não prome
 
 ## Implementação na stack
 
+`Append-only Evidence [proposal]` · `Quarantine Gate [proposal]`
+
 ```typescript
 // Proposed metadata only; no storage permissions implemented here.
 type EvidenceRecord = {
@@ -101,6 +105,8 @@ O serviço de disputa decide admissibilidade e prazo; o armazenamento não assum
 - [Amazon S3 — User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
 ## Contratos e propriedade
+
+`Append-only Evidence [proposal]` · `Quarantine Gate [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -129,6 +135,8 @@ O contrato associa upload_id, versão do dossiê, digest e momento de recebiment
 O modelo não aceita substituir silenciosamente um anexo. Correções são novas versões com relação explícita à anterior. Prazos precisam de origem, fuso e regra aplicável, revisados com operação da bandeira. Privacidade exige separar quem vê o recibo de quem pode abrir documentos. Retenção deve considerar disputa, contestação e obrigações pertinentes, sem adotar armazenamento ilimitado como padrão.
 
 ## Verificação adversarial
+
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]`
 
 ```python
     def test_late_evidence_is_retained_without_submission_promise(self):
@@ -224,3 +232,96 @@ Para produção, o handoff requer armazenamento protegido, scanner real, valida�
 - Documento em quarentena não é submetido.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py)
+
+## Padrões com prova no código
+
+`Append-only Evidence [lab]` · `Quarantine Gate [lab]` · `Event-driven dossier [proposal]` · `Spring Boot [proposal]` · `LangGraph [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Append-only Evidence | Dossier.append | reutilizar o identificador com outro conteúdo gera conflito |
+| Quarantine Gate | Dossier.submit | arquivo inseguro não atravessa o gate de submissão |
+| Event-driven dossier / anti-corruption layer | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + object-storage adapter. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · LangGraph**
+
+Experimento proposto: LangGraph para extrair e resumir documentos já admitidos, com referência à origem. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Dossier.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L21)
+- [P1 · test_reused_upload_id_cannot_replace_evidence](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L81)
+- [P2 · Dossier.submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L55)
+- [P2 · test_malware_cannot_submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L91)
+- [LangGraph · persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+
+## Sequência de execução
+
+![clean é fixture confiada, não antivírus. Hash não prova admissibilidade nem decisão favorável.](../../evidence/sequence-pt-06.svg)
+
+clean é fixture confiada, não antivírus. Hash não prova admissibilidade nem decisão favorável.
+
+**Autoridade e fronteira de falha**
+
+reutilizar o identificador com outro conteúdo gera conflito. arquivo inseguro não atravessa o gate de submissão.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L21)
+- [submit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L55)
+
+## Features, histórias e aceite
+
+**F06.1 · Evidência adicional preservada · D16–30**
+
+Como cliente, quero adicionar um documento sem apagar a versão anterior. Aceite: reutilizar o identificador com outro conteúdo gera conflito.
+
+**F06.2 · Admissibilidade antes do envio · D31–60**
+
+Como cliente, quero saber se o documento foi recebido ou realmente submetido. Aceite: arquivo inseguro não atravessa o gate de submissão.
+
+**F06.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F06.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L81)
+- [Aceite F06.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py#L91)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal. O fator original de capacidade realizável já está incluído; o controle aplica um estresse adicional.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 2500.00 | 600.00 | 3000.00 | 140000.00 |
+| Base | 18000.00 | 1800.00 | 6000.00 | 140000.00 |
+| Ambicioso | 60000.00 | 3600.00 | 10000.00 | 140000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -1100.00 | -153200.00 | -168200.00 |
+| Base | 10200.00 | -17600.00 | -125600.00 |
+| Ambicioso | 46400.00 | 416800.00 | 56800.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: minutos por dossiê elegível. Ameaça: mais anexos irrelevantes parecerem sucesso. |
+| Economia por unidade | Capacidade realizável de triagem menos varredura de uploads e operação; não modela vitória no chargeback. |
+| Experimento proposto | Comparar disputas de mesmo estágio e motivo, admissibilidade e recontato em sete dias. |
+| Critério de parada | Parar por documento exposto, troca de prova ou prazo perdido. |
+
+- [Reclame AQUI · ID 240394695](https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

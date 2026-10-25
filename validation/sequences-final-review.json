@@ -1,0 +1,456 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-10-25",
+  "scope": "40 authored SVGs, 20 cases × PT/EN; no lab or book source modified.",
+  "geometry": {
+    "status": "PASS",
+    "svg_count": 40,
+    "checks": [
+      "All actual browser text boxes within canvas",
+      "All pairs of text boxes checked for overlap",
+      "All arrow segments checked against every text box",
+      "5–6 participants and 10 messages per diagram",
+      "Every L message method exists in lab AST"
+    ],
+    "issues": []
+  },
+  "visual": {
+    "contact_sheets": [
+      {
+        "path": "qa/sequences/contact-01-02.png",
+        "sha256": "f6911433b95b9d1a5e5f5e882120ef75ec935604552463c7d6fe50efaeb3c516"
+      },
+      {
+        "path": "qa/sequences/contact-03-04.png",
+        "sha256": "694bad30fda1ea5b6a66c8903f3b711c0a113095693ca3b8909875bce910e117"
+      },
+      {
+        "path": "qa/sequences/contact-05-06.png",
+        "sha256": "38e92247529687c9a134a4995878335828faa64a9f194997c544ab723887211f"
+      },
+      {
+        "path": "qa/sequences/contact-07-08.png",
+        "sha256": "ddaf5014d442809e88058812f9ccb20e1f7c32f7b99283e2d7629bfd4150a834"
+      },
+      {
+        "path": "qa/sequences/contact-09-10.png",
+        "sha256": "659cafaddf27586572425bb0b12baa27dc06eaa62c13372bdd2bb8f41875fc82"
+      },
+      {
+        "path": "qa/sequences/contact-11-12.png",
+        "sha256": "b5af4c4efecd59fb3cc6c2fb010d8ff9fc735d8367e3e4620d1de7163d1f9ca3"
+      },
+      {
+        "path": "qa/sequences/contact-13-14.png",
+        "sha256": "b04287ac10c7374a5a48286cf50fedf6dd5f809b297a5e883c7c88469ad63319"
+      },
+      {
+        "path": "qa/sequences/contact-15-16.png",
+        "sha256": "391f66aa6a33493a5c20e5701cfecb7b9e9475053969caa81b7454535aeb6307"
+      },
+      {
+        "path": "qa/sequences/contact-17-18.png",
+        "sha256": "4f4b09a533e9964572687d103649450edcb27a8c79adb399117379ce3698dc5f"
+      },
+      {
+        "path": "qa/sequences/contact-19-20.png",
+        "sha256": "75a04b41a3335ae0645cfc56a24536565d15bc554240ab19a32d7ca0a6775ecf"
+      }
+    ],
+    "coverage": "All 40 diagrams inspected in 10 contact sheets; updated replay flows 07/18/20 reinspected after refinement.",
+    "pdf_proofs": [
+      {
+        "path": "qa/sequences/proof-1.png",
+        "sha256": "948efcd53db8a375c5dff06eb00a8652446dbd1d96f01d77bce023573e56cf18"
+      },
+      {
+        "path": "qa/sequences/proof-2.png",
+        "sha256": "15bf91fca4aeeb83803f895515a90a421b961cad079b78f7a5b906d6a08ef51a"
+      },
+      {
+        "path": "qa/sequences/proof-3.png",
+        "sha256": "83c64ce17bb8cadbb281f760fd758a1cb5096bde920dcc30489f8443b18de46b"
+      },
+      {
+        "path": "qa/sequences/proof-4.png",
+        "sha256": "4d428508db4a32ea95e374c883cf2129b5c356ec4e7035a5d0198b97f589c429"
+      }
+    ],
+    "pdf_proof_cases": [
+      "pt-05",
+      "en-08",
+      "pt-14",
+      "en-20"
+    ],
+    "observations": [
+      "No clipped messages, participant labels or footer text.",
+      "Final message and footer have separate vertical space.",
+      "Explicit polygon arrowheads render in svglib/ReportLab PDF.",
+      "Official logos retain colors and aspect ratio; no black alpha artifacts.",
+      "L/P distinguishes local-model contracts from proposed interaction; no production-test claim."
+    ],
+    "limits": "Overview coverage of all 40; detailed PDF rendering inspected for four representative diagrams. Final whole-book layout remains the integrator’s QA scope.",
+    "pdf_proofs_before_python_symbol": [
+      {
+        "path": "qa/sequences/proof-1.png",
+        "sha256": "79f68591b560cf753299dfb032a92102cdb2af0e756ca5a3ea02fdd54ec5358b"
+      },
+      {
+        "path": "qa/sequences/proof-2.png",
+        "sha256": "3b6ee206f962dc7ec8535bc4019d85ccc79893e0a74ea1248405efd4b7e45b74"
+      },
+      {
+        "path": "qa/sequences/proof-3.png",
+        "sha256": "49873152bea9cad26139e5e317caca42f64abb47f23310c6daf21e4667080554"
+      },
+      {
+        "path": "qa/sequences/proof-4.png",
+        "sha256": "eebf0bac306f9782536b69621b755c53dd7c4ddcfe6d4db327eee866c8027fa6"
+      }
+    ]
+  },
+  "semantic_review": {
+    "source": "All 20 lab implementations read; source AST method references and hashes recorded in research/sequences.json.",
+    "checks": [
+      "Financial confirmation remains separate from timeout.",
+      "Retries in 07/18/20 occur after the first confirmed effect.",
+      "Financial writer and merchant authority remain distinct in 20.",
+      "Human decisions, identity flags and adapters remain trusted lab inputs where applicable.",
+      "In-memory and SQLite boundaries match corresponding labs."
+    ],
+    "tests_rerun": false,
+    "reason": "No executable lab implementation changed."
+  },
+  "svg_manifest": [
+    {
+      "path": "assets/sequence-en-01.svg",
+      "sha256": "ff3142fe2e754e470bf7b549c6a5d4441d8e898ebb132258b10dd5065a52aae0"
+    },
+    {
+      "path": "assets/sequence-en-02.svg",
+      "sha256": "2d10aa524c8a1f43782ea6f70aef1e31ed80c85925abdcc51b3658ba76caf1e6"
+    },
+    {
+      "path": "assets/sequence-en-03.svg",
+      "sha256": "d54ab372e4f5f4fe2976b5a0170cb689ebaf0649479e66a4b925c6bc8f19d190"
+    },
+    {
+      "path": "assets/sequence-en-04.svg",
+      "sha256": "09466bff20c76e320be18b5c003bc0a6098d9e0e2ad3549a40aba683d36fcc83"
+    },
+    {
+      "path": "assets/sequence-en-05.svg",
+      "sha256": "872eb320e0754223a8361222472acf27c0e3d7d7ced20ff3c077168067f3052c"
+    },
+    {
+      "path": "assets/sequence-en-06.svg",
+      "sha256": "1e3de369066f47006773bb3c78769dbfd9b9d673e0f44cc1108ee7f272bf8ebb"
+    },
+    {
+      "path": "assets/sequence-en-07.svg",
+      "sha256": "f6b26a09598f2d9ad04f5f62564f66caf3ad911a58e7027384c04672d49a057d"
+    },
+    {
+      "path": "assets/sequence-en-08.svg",
+      "sha256": "3995022c990529d6e239e0e6425e19d9b8015de393bf71d3463ebd016751657b"
+    },
+    {
+      "path": "assets/sequence-en-09.svg",
+      "sha256": "6141258bf9d969d46fdc654cad00870dc136878f3da3c6a4ff7cb9d260cae59b"
+    },
+    {
+      "path": "assets/sequence-en-10.svg",
+      "sha256": "8654fcf776f38da074a43e27c1aaa2d5b81585e2604ada9aab345ae24791ee57"
+    },
+    {
+      "path": "assets/sequence-en-11.svg",
+      "sha256": "5337a01a2267b29f57dc7046ac4f0746740be7118537c5f50ae129120ed35c63"
+    },
+    {
+      "path": "assets/sequence-en-12.svg",
+      "sha256": "b7b1e365fd5f751b5949cbdf31f0a2343ed8ad3483b7f3dfbaf73c95e77673f1"
+    },
+    {
+      "path": "assets/sequence-en-13.svg",
+      "sha256": "5aea818827f0361154976039d83dd98302abf9ce8321ef8d7d06dd1f771d27d4"
+    },
+    {
+      "path": "assets/sequence-en-14.svg",
+      "sha256": "4d89ddd9d7e895e74c970dc1b4bd4b584ae2ca94fd1e51df36615b8a0f32b9e9"
+    },
+    {
+      "path": "assets/sequence-en-15.svg",
+      "sha256": "029707536830468da8e1e44599ef28ac560d954ea0ad79be4d5463f769311656"
+    },
+    {
+      "path": "assets/sequence-en-16.svg",
+      "sha256": "b243cfc951c19f0cf5f9605e8f1769ab88137065cf1ab5057bc510431aa4ca3d"
+    },
+    {
+      "path": "assets/sequence-en-17.svg",
+      "sha256": "334a6de761073c8a64c1b21ee6ec899dbe63e7cab1a54beee106d55991ad5a82"
+    },
+    {
+      "path": "assets/sequence-en-18.svg",
+      "sha256": "7ca357ba83494a2132c33db420f2f7c24fd2bf51f6769fac1028bfed0afe83ab"
+    },
+    {
+      "path": "assets/sequence-en-19.svg",
+      "sha256": "8ece2e1fdc779f79bc3d4a173ff84e0cee023f6dee42f34261c7bd560ecfe0ed"
+    },
+    {
+      "path": "assets/sequence-en-20.svg",
+      "sha256": "d7b52b01182c2db221055fcd6ec34ac4875147011361cdfefb6d5f01e6052d99"
+    },
+    {
+      "path": "assets/sequence-pt-01.svg",
+      "sha256": "f774fd55f7a545153f89ba1451e8cd3f3393cfcef735565f7791ad66c8290713"
+    },
+    {
+      "path": "assets/sequence-pt-02.svg",
+      "sha256": "7ec4309205132110546c5bfa53bae5569ac2e1689b8049f31553c23ad2c31baa"
+    },
+    {
+      "path": "assets/sequence-pt-03.svg",
+      "sha256": "1574a49906bde29f4e2d4f18766dfefb2e81c1551da565cade826d662c5aa1d7"
+    },
+    {
+      "path": "assets/sequence-pt-04.svg",
+      "sha256": "cbe9a057f7367b3d928c60359b2e2fee149325c9a59cfd344ccebcf63c3c4985"
+    },
+    {
+      "path": "assets/sequence-pt-05.svg",
+      "sha256": "dd03dfdf29682f1bfd174c5fed2324674cfac58fff921cadd385a37f7d380b08"
+    },
+    {
+      "path": "assets/sequence-pt-06.svg",
+      "sha256": "b179628a496f5cb3ecbaab188ef9497e404d707495774dd89d338ac079f3b3cb"
+    },
+    {
+      "path": "assets/sequence-pt-07.svg",
+      "sha256": "4aac9188cebcf4511b97f191614795397e275f03bc282e20816992b9e6278895"
+    },
+    {
+      "path": "assets/sequence-pt-08.svg",
+      "sha256": "e40c3fd771612e0bb954439a73c94aef3561e6661c3ed0afc0d559771c71127d"
+    },
+    {
+      "path": "assets/sequence-pt-09.svg",
+      "sha256": "d7b1dc9e19298f9b1f99749c5155059e4264fbbbe70d1ce3f9b4ef502809f076"
+    },
+    {
+      "path": "assets/sequence-pt-10.svg",
+      "sha256": "6083ddb49cb7429840a3f65ff774eb46e12572f4f1991093de6b0f8349205689"
+    },
+    {
+      "path": "assets/sequence-pt-11.svg",
+      "sha256": "71eb17d4b64a697ee75044b7fc1c842e2e077154448a1daf966e20e6c8ae96da"
+    },
+    {
+      "path": "assets/sequence-pt-12.svg",
+      "sha256": "693ae9214e3256b00a49b7a0800744b8ef2fb0c7f6dd06660ac797bbcb0e7cfc"
+    },
+    {
+      "path": "assets/sequence-pt-13.svg",
+      "sha256": "86a39c8cfea62f4e69e693926f6bca688ba07c6702e25aa05fb2b246359490cc"
+    },
+    {
+      "path": "assets/sequence-pt-14.svg",
+      "sha256": "c4f30d5645b7421f65cd0ed984766a83794da3e76600100b9398cdb728233253"
+    },
+    {
+      "path": "assets/sequence-pt-15.svg",
+      "sha256": "a175dc667f6a3135ab69405e8ee977e34f87162c81a41c881cba861fcc84bb7c"
+    },
+    {
+      "path": "assets/sequence-pt-16.svg",
+      "sha256": "c3f7b4384dbe869775603cf5fe52a66d29594ad94977d341bebc13ca1738e3a3"
+    },
+    {
+      "path": "assets/sequence-pt-17.svg",
+      "sha256": "804f6ab394688e8d2fbe8146c43a21323bab82912c2a6c6780e3892eed7aeba7"
+    },
+    {
+      "path": "assets/sequence-pt-18.svg",
+      "sha256": "db1cea5de949c6ebb030a31c026049a9bf70d2f4fb45d91e6f58c55b7a72efef"
+    },
+    {
+      "path": "assets/sequence-pt-19.svg",
+      "sha256": "52524486cfed01b6ad7de4214edf5a560e4f7178b5e616275a85583ac90b8947"
+    },
+    {
+      "path": "assets/sequence-pt-20.svg",
+      "sha256": "d1194ef15cf9e808cb31085250dbecea11afc1414543128fc5824ba7992e61a3"
+    }
+  ],
+  "source_sha256": "f7505c35fe41f2924002abd0bd0b5d0f026c0fe3023b2c0a16f17e7dacc9ede4",
+  "svg_manifest_before_python_symbol": [
+    {
+      "path": "assets/sequence-en-01.svg",
+      "sha256": "d7d6437a7e294f8eee4bb256b5675e7e8dc4b073690cec02b8fd1a71cee8d465"
+    },
+    {
+      "path": "assets/sequence-en-02.svg",
+      "sha256": "1673bfcfb337648a912f71cfa4b69a13ed14b1e254e3484d7979baa9e978fb9e"
+    },
+    {
+      "path": "assets/sequence-en-03.svg",
+      "sha256": "db7b17448c8d7ca5fb0378c0689b0cb093baf8c2e3bd5b0911ca8bcce34535c5"
+    },
+    {
+      "path": "assets/sequence-en-04.svg",
+      "sha256": "7feefeedd75ff35d6d90f72d9f04fc963bbcff965b6ee482d4619093ee306f42"
+    },
+    {
+      "path": "assets/sequence-en-05.svg",
+      "sha256": "78eed35d2fbd0283de171128390cfd4a90c53b2ff709ac0fbc1db9aa4f2ee8e6"
+    },
+    {
+      "path": "assets/sequence-en-06.svg",
+      "sha256": "e93a9f5f41af73de01f5b530f951f674989b942afd562ec732198b6c3d070150"
+    },
+    {
+      "path": "assets/sequence-en-07.svg",
+      "sha256": "b0f481a67036781d75be352007f886346e6ae22a7fc9745f78e1db58a216348d"
+    },
+    {
+      "path": "assets/sequence-en-08.svg",
+      "sha256": "2ecba49d32e3e05b32ae59c65cf00437debd365606415b4384b79ac62ff9764a"
+    },
+    {
+      "path": "assets/sequence-en-09.svg",
+      "sha256": "02a32b4b48c4033fcc106995c5ed038a41daf843edeca52fdd1cd70fe3ee6767"
+    },
+    {
+      "path": "assets/sequence-en-10.svg",
+      "sha256": "0002c631a588ae67640a0e3527f0f171ff85c9e406f618af915a0a6239c0d807"
+    },
+    {
+      "path": "assets/sequence-en-11.svg",
+      "sha256": "1bf28ad70a089707b7ecd9f519549c2bc74cfb12b8388a4e797112a7bb0b3eda"
+    },
+    {
+      "path": "assets/sequence-en-12.svg",
+      "sha256": "269d8ed1dbcd8918811798e1508d7cb782f47047c2a05e36fe5ae6e800d93eec"
+    },
+    {
+      "path": "assets/sequence-en-13.svg",
+      "sha256": "8c404198b9fa64f115c1decfa3a3c96b610dbc761ca1d797d39bd3808066633c"
+    },
+    {
+      "path": "assets/sequence-en-14.svg",
+      "sha256": "61abdce270bc6b28460fc8207f898a0bde4c29220337815c2363a11b4d44bff1"
+    },
+    {
+      "path": "assets/sequence-en-15.svg",
+      "sha256": "72391bf51c6d003bb4d4e6b662ab7bc776536e1756ddc4de62b8950292f8f412"
+    },
+    {
+      "path": "assets/sequence-en-16.svg",
+      "sha256": "e02c88adcbe2f708d391e69119d7357fcde73075ac2167d5cf5f3f3cc2fbdb0e"
+    },
+    {
+      "path": "assets/sequence-en-17.svg",
+      "sha256": "d572d6dfb23a0fac0dcba57b6c627b418795ad37dfd6c3fb8d62d244d427ff97"
+    },
+    {
+      "path": "assets/sequence-en-18.svg",
+      "sha256": "df652f62f9526f16b7cae310d4c76a9a952d882f2effe54b7f926e5de8e019f6"
+    },
+    {
+      "path": "assets/sequence-en-19.svg",
+      "sha256": "a0430c658c0b6fc1b48f71e13cee0387b3746b0952a9ce9921eb081c5eb6f4dc"
+    },
+    {
+      "path": "assets/sequence-en-20.svg",
+      "sha256": "cb516e249c88e0f569342ce4447b5b1f7be7ae36f83e3704f0120c1ac6934de6"
+    },
+    {
+      "path": "assets/sequence-pt-01.svg",
+      "sha256": "94b47ec52a9f76f8e29404d23066714dd65c709ac111445122b3324af9eaf75f"
+    },
+    {
+      "path": "assets/sequence-pt-02.svg",
+      "sha256": "92c5c32e6b03b2cb0618fc1f6b36a7770ef66a286ed0bb616e307ae93077fe9a"
+    },
+    {
+      "path": "assets/sequence-pt-03.svg",
+      "sha256": "d3ec4e164ad4167c17e2138d46f92009e538db95ed23aa821c4ba76162630fd6"
+    },
+    {
+      "path": "assets/sequence-pt-04.svg",
+      "sha256": "80b021e14024ee001a8eefacba0f0544626ae01cd0b53e7e8ad87095e69f1716"
+    },
+    {
+      "path": "assets/sequence-pt-05.svg",
+      "sha256": "ae5e38bdd466b0aa1249678bee61adda92ebcc7f2f5e3c17ffa5ae486690c77a"
+    },
+    {
+      "path": "assets/sequence-pt-06.svg",
+      "sha256": "5fb87347434db106735438af818f8c9ab39c43c0bcfceb9acc182c931e041447"
+    },
+    {
+      "path": "assets/sequence-pt-07.svg",
+      "sha256": "b93fb7a9bb939fcacaddc7cba6a645a7175a8eb6296f77d99fa16c8a1d347bd4"
+    },
+    {
+      "path": "assets/sequence-pt-08.svg",
+      "sha256": "a85d3c19cfec40d588d6efb5d2575b3e881f8051c85e586c460ffdcd0b7eb79d"
+    },
+    {
+      "path": "assets/sequence-pt-09.svg",
+      "sha256": "5aa1e2d3662f20d63b088def2fb0d4379c4cdd90e5c4d68621a8882ca608c0c4"
+    },
+    {
+      "path": "assets/sequence-pt-10.svg",
+      "sha256": "ec413c5452cebb3826823cfb98f4c7b93ae23dfe9d6b82e5122f6b7258dee4b3"
+    },
+    {
+      "path": "assets/sequence-pt-11.svg",
+      "sha256": "133a5b1da9f70e57f092f2015ac68c95a56a8c9dea3e94b28530bc5c61465d9f"
+    },
+    {
+      "path": "assets/sequence-pt-12.svg",
+      "sha256": "e1f8f6ed823df2d4961b62d40ee710721ab5e24662769b4bcf69ec0240932a48"
+    },
+    {
+      "path": "assets/sequence-pt-13.svg",
+      "sha256": "a59e530b7587f3bd3dfafa18aa298f6d32f42bdd83e3e4afbf4eaa801bd682e1"
+    },
+    {
+      "path": "assets/sequence-pt-14.svg",
+      "sha256": "1974376970ebb28f24d5d22fa8efce46bf60c30e8667ca815e13ca6f97f8166b"
+    },
+    {
+      "path": "assets/sequence-pt-15.svg",
+      "sha256": "9b4c77072036a528f8deb9ed053f02d7d37523b771581eca3927631ea5adbf08"
+    },
+    {
+      "path": "assets/sequence-pt-16.svg",
+      "sha256": "87e7b38704941d077b8ce8aa2e0e9a5016f1fcc7a5cfb161ac2917d9d8b6b989"
+    },
+    {
+      "path": "assets/sequence-pt-17.svg",
+      "sha256": "25b019607272742951472abd8e83156bbb633fb934ebdfc27857ea6c406c0f94"
+    },
+    {
+      "path": "assets/sequence-pt-18.svg",
+      "sha256": "b82e9bc21b6f9cc8bb3f5931a82f682b68fe98995931e0a3eb2e73a3150cb9aa"
+    },
+    {
+      "path": "assets/sequence-pt-19.svg",
+      "sha256": "291ca24cd354180d1a2dfa35f7e0e7e640fbc6696a6865c5e16fd213fda2476c"
+    },
+    {
+      "path": "assets/sequence-pt-20.svg",
+      "sha256": "961307bd9185dbd14118d777d05bf9399bb9d989e709207731a4d80cbbbd016d"
+    }
+  ],
+  "python_symbol_update": {
+    "geometry_and_text_byte_identical_excluding_image_data": true,
+    "svg_count": 40,
+    "source": "https://www.python.org/community/logos/",
+    "pdf_proof_review": "PASS: pt-05, en-08, pt-14 and en-20 reinspected after replacement; recognizable official symbol, no clipping or alpha artifact."
+  },
+  "digest_scope_note": "The original svg_manifest and svg_manifest_before_python_symbol retain the exact hashes recorded at those earlier reviews. They do not retroactively review the final delivered files. Final delivered hashes are in research/sequences.json and checksums.json; final PDF visual validation is a separate report."
+}

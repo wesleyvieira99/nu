@@ -40,6 +40,8 @@ The authorizer does not interpret a photograph or a support message; it consumes
 
 ## Executable core
 
+`One-time Capability [lab]` · `Device Binding [lab]`
+
 ```python
     def authorize(self, owner, device, challenge, now):
         with self.lock:
@@ -69,6 +71,8 @@ The code neither recognizes faces nor decides whether a person is legitimate. re
 
 ## Stack implementation
 
+`One-time Capability [proposal]` · `Device Binding [proposal]`
+
 ```dart
 String nextStep(String capability, String verification) {
   // Proposed copy routing; never grants account access.
@@ -94,6 +98,8 @@ I would review accessibility from the first screen: predictable focus, spoken in
 - [Dart — Branches](https://dart.dev/language/branches)
 
 ## Contracts and ownership
+
+`One-time Capability [proposal]` · `Device Binding [proposal]`
 
 | Field / rule | Owner | Invariant |
 | --- | --- | --- |
@@ -121,6 +127,8 @@ A challenge needs identity, validity, intended device and a decision reference. 
 Retention policy distinguishes biometric material, review decisions and operational logs. Each category needs appropriate access and duration. Evidence storage should not become a permanent archive for technical convenience. Ownership comes from a verified session, not a value chosen in a public request body, even though the lab accepts strings directly.
 
 ## Adversarial verification
+
+`One-time Capability [lab]` · `Device Binding [lab]`
 
 ```python
     def test_parallel_authorization_consumes_once(self):
@@ -217,3 +225,95 @@ Handoff requires an approved alternative-method policy, session service, restric
 - Sensitive material stays out of analytics.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py)
+
+## Patterns with proof
+
+`One-time Capability [lab]` · `Device Binding [lab]` · `Ports & Adapters [proposal]` · `Spring Security [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| One-time Capability | Recovery.authorize | two concurrent attempts consume authorization once |
+| Device Binding | Recovery.authorize | another device cannot consume the approval |
+| Ports & Adapters / identity boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Security + Bean Validation. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · deterministic core**
+
+No agent framework is implemented in this lab. Monetary state, authorization and version checks remain deterministic. An assistant would be evaluated separately against a proven support need, without authority to alter balances or identity.
+
+- [P1 · Recovery.authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L37)
+- [P1 · test_parallel_authorization_consumes_once](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L63)
+- [P2 · Recovery.authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L37)
+- [P2 · test_other_device_rejected](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L83)
+
+## Execution sequence
+
+![No biometrics are performed; approval comes from the reviewer. State and consumption are in memory.](../../evidence/sequence-en-04.svg)
+
+No biometrics are performed; approval comes from the reviewer. State and consumption are in memory.
+
+**Authority and failure boundary**
+
+a camera problem is not identity proof. two concurrent attempts consume authorization once.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [review](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L23)
+- [authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L37)
+
+## Features, stories and acceptance
+
+**F04.1 · Accessible assisted recovery · D16–30**
+
+As a customer, I want to recover access when the camera does not work. Acceptance: a camera problem is not identity proof.
+
+**F04.2 · Single-use authorization · D31–60**
+
+As a customer, I want to use the authorization bound to my device exactly once. Acceptance: two concurrent attempts consume authorization once.
+
+**F04.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F04.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L74)
+- [Acceptance F04.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py#L63)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = 12 × period_net − build_cost
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 5400.00 | 5400.00 | 3000.00 | 110000.00 |
+| Base | 28800.00 | 11520.00 | 6000.00 | 110000.00 |
+| Ambitious | 81000.00 | 13500.00 | 10000.00 | 110000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | -3000.00 | -146000.00 | -178400.00 |
+| Base | 11280.00 | 25360.00 | -147440.00 |
+| Ambitious | 57500.00 | 580000.00 | 94000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: contacts and review per eligible recovery. Threat: shifting work to specialists. |
+| Unit economics | Avoided contacts minus additional reviews and operation; improper authorization is harm, not conversion. |
+| Proposed experiment | Match capture limitations; follow seven-day repeat contacts and the identity-fraud observation window. |
+| Stop rule | Stop for improper authorization; investigate a longer queue before expanding. |
+
+- [Reclame AQUI · ID 230743513](https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

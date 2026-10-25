@@ -40,6 +40,8 @@ A conciliação compara o histórico esperado com o estado explicado ao cliente.
 
 ## Núcleo executável
 
+`Ordered Event Processing [lab]` · `Monetary Conservation [lab]`
+
 ```python
     def apply(self, event_id, sequence, state, cents=0, trusted=False):
         if trusted is not True:
@@ -82,6 +84,8 @@ A função valida autoridade antes de reconhecer replay e rejeita booleanos como
 
 ## Implementação na stack
 
+`Ordered Event Processing [proposal]` · `Monetary Conservation [proposal]`
+
 ```clojure
 (defn recovery-event [current event]
   ;; Proposed local rule, not a DICT payload specification.
@@ -106,6 +110,8 @@ O adaptador real exige autenticação e mapeamento do contrato oficial vigente, 
 - [Banco Central — API do DICT, referência de integração](https://aprendervalor.bcb.gov.br/content/estabilidadefinanceira/pix/API-DICT.html)
 
 ## Contratos e propriedade
+
+`Ordered Event Processing [proposal]` · `Monetary Conservation [proposal]`
 
 | Campo / regra | Responsável | Invariante |
 | --- | --- | --- |
@@ -134,6 +140,8 @@ O contrato declara versão de schema e vigência da regra, além de identidade, 
 Para devoluções parciais, o total precisa ser reconciliado com a fonte financeira e com eventos anteriores. Uma mensagem duplicada não aumenta o recuperado; uma correção de valor deve ter semântica própria e aprovação, em vez de simplesmente enviar um número negativo. Prazos e estados oficiais seriam validados antes de qualquer integração; o laboratório é independente dessa homologação.
 
 ## Verificação adversarial
+
+`Ordered Event Processing [lab]` · `Monetary Conservation [lab]`
 
 ```python
     def test_partial_refund_replay_never_doubles_money(self):
@@ -228,3 +236,95 @@ O handoff depende de contrato oficial validado, autenticação de eventos, persi
 - Contrato histórico e atual ficam separados.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py)
+
+## Padrões com prova no código
+
+`Ordered Event Processing [lab]` · `Monetary Conservation [lab]` · `Event-driven projection [proposal]` · `Spring Kafka [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Ordered Event Processing | RecoveryTimeline.apply | lacuna na sequência exige reconciliação antes de avançar |
+| Monetary Conservation | RecoveryTimeline.apply | o total recuperado não excede o montante reclamado |
+| Event-driven projection / reconciliation | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Kafka + transactional consumer. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · RecoveryTimeline.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L22)
+- [P1 · test_gap_retries_after_missing_event](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L73)
+- [P2 · RecoveryTimeline.apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L22)
+- [P2 · test_cannot_exceed_claim](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L83)
+
+## Sequência de execução
+
+![É uma projeção sintética; não implementa DICT. Lacunas exigem reconciliação, sem promessa de devolução.](../../evidence/sequence-pt-07.svg)
+
+É uma projeção sintética; não implementa DICT. Lacunas exigem reconciliação, sem promessa de devolução.
+
+**Autoridade e fronteira de falha**
+
+lacuna na sequência exige reconciliação antes de avançar. replay não duplica crédito nem excede a reclamação.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [apply](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L22)
+- [read](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L52)
+
+## Features, histórias e aceite
+
+**F07.1 · Linha do tempo MED · D16–30**
+
+Como cliente, quero acompanhar investigação e devolução parcial separadamente. Aceite: lacuna na sequência exige reconciliação antes de avançar.
+
+**F07.2 · Devolução parcial sem duplicação · D31–60**
+
+Como cliente, quero consultar o montante confirmado de cada devolução. Aceite: replay não duplica crédito nem excede a reclamação.
+
+**F07.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F07.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L73)
+- [Aceite F07.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py#L66)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 8100.00 | 0.00 | 5000.00 | 160000.00 |
+| Base | 43200.00 | 0.00 | 10000.00 | 160000.00 |
+| Ambicioso | 108000.00 | 0.00 | 18000.00 | 160000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 3100.00 | -122800.00 | -171400.00 |
+| Base | 33200.00 | 238400.00 | -20800.00 |
+| Ambicioso | 90000.00 | 920000.00 | 272000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: dúvidas por processo ativo. Ameaça: confundir transparência com recuperação financeira. |
+| Economia por unidade | Processos × contatos evitados × custo; nenhuma devolução adicional é atribuída à timeline. |
+| Experimento proposto | Comparar processos por etapa, perfil e recuperabilidade; acompanhar latência evento→consulta. |
+| Critério de parada | Parar por promessa falsa, exposição de dados ou total divergente. |
+
+- [Reclame AQUI · ID 228360515](https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

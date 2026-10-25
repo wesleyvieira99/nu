@@ -39,6 +39,8 @@ A posição datada da interface permanece consultiva e não atravessa essa front
 
 ## Uma tentativa, um compromisso
 
+`Authority Gate [lab]` · `Compare-and-Set Version [lab]`
+
 ```python
     def withdraw(self, actor, key, cents, snapshot, now, ledger_online=True):
         with self.lock:
@@ -81,6 +83,8 @@ A trava cobre um processo. Em produção, eu substituiria esse trecho por transa
 
 ## Dart para um estado compreensível
 
+`Authority Gate [proposal]` · `Compare-and-Set Version [proposal]`
+
 ```dart
 enum WithdrawalState { loading, datedPosition, unavailable, confirmed }
 
@@ -104,6 +108,8 @@ A interface pode oferecer nova tentativa de autorização sem afirmar que o resg
 O serviço Clojure proposto mantém a decisão, enquanto Flutter apresenta o contrato. Eu avaliaria os componentes já disponíveis antes de introduzir qualquer tecnologia. A implantação começa pelo estado desconhecido e pelo recibo consultável, porque uma nova tela sem contrato financeiro consistente apenas desloca a confusão para outro ponto da jornada.
 
 ## Identidades que sobrevivem ao retry
+
+`Authority Gate [proposal]` · `Compare-and-Set Version [proposal]`
 
 | Campo | Regra | Dono |
 | --- | --- | --- |
@@ -131,6 +137,8 @@ UNKNOWN não é recusa nem confirmação. O consumidor pode consultar o mesmo id
 O titular é resolvido pela identidade autenticada, não enviado como autoridade no JSON. Logs guardam referência opaca, classe do erro e versão. A conciliação compara comandos comprometidos e eventos publicados, com permissão restrita para investigar divergências e sem copiar saldos para painéis de operação.
 
 ## Falhas que não podem virar débito
+
+`Authority Gate [lab]` · `Compare-and-Set Version [lab]`
 
 ```python
     def test_cache_does_not_authorize(self):
@@ -218,3 +226,95 @@ O checklist de aceite inclui: nenhum débito sem autoridade atual; nenhuma dupla
 Eu recomendaria avançar apenas para protótipo integrado se o dono da autoridade aceitar esse contrato e os testes de falha forem reproduzíveis. Se a consulta datada induzir pessoas a acreditar que o saque está garantido, o desenho de comunicação volta à pesquisa. A qualidade da entrega inclui saber interromper uma melhoria aparente que cria interpretação financeira incorreta.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py)
+
+## Padrões com prova no código
+
+`Authority Gate [lab]` · `Compare-and-Set Version [lab]` · `CQRS [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Authority Gate | Withdrawals.withdraw | fonte indisponível impede débito |
+| Compare-and-Set Version | Withdrawals.withdraw | apenas um comando consome a mesma versão |
+| CQRS / authoritative command boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + transactional version check. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Withdrawals.withdraw](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L39)
+- [P1 · test_cache_does_not_authorize](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L77)
+- [P2 · Withdrawals.withdraw](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L39)
+- [P2 · test_parallel_commands_cannot_spend_same_version](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L89)
+
+## Sequência de execução
+
+![ledger_online é sinal injetado; o débito e os recibos ficam em memória, não em um banco real.](../../evidence/sequence-pt-15.svg)
+
+ledger_online é sinal injetado; o débito e os recibos ficam em memória, não em um banco real.
+
+**Autoridade e fronteira de falha**
+
+fonte indisponível impede débito. apenas um comando consome a mesma versão.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [snapshot](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L34)
+- [withdraw](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L39)
+
+## Features, histórias e aceite
+
+**F15.1 · Resgate com autoridade · D16–30**
+
+Como cliente, quero consultar a Caixinha sem confundir cache com autorização. Aceite: fonte indisponível impede débito.
+
+**F15.2 · Concorrência sem gasto duplo · D31–60**
+
+Como cliente, quero retomar um resgate sem consumir o saldo duas vezes. Aceite: apenas um comando consome a mesma versão.
+
+**F15.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F15.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L77)
+- [Aceite F15.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py#L89)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 3200.00 | 0.00 | 5000.00 | 120000.00 |
+| Base | 8000.00 | 0.00 | 5000.00 | 120000.00 |
+| Ambicioso | 16000.00 | 0.00 | 5000.00 | 120000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -1800.00 | -141600.00 | -160800.00 |
+| Base | 3000.00 | -84000.00 | -132000.00 |
+| Ambicioso | 11000.00 | 12000.00 | -84000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: recontato em 24 horas por intenção afetada. Ameaça: esconder desconhecidos do denominador. |
+| Economia por unidade | Intenções × redução absoluta de contato × minutos / 60 × custo-hora; tempo liberado não garante caixa. |
+| Experimento proposto | Falhas simuladas e depois coorte pequena; medir recibo confirmado e orientação útil sem induzir falha real. |
+| Critério de parada | Parar por conflito financeiro ou melhora aparente causada por desistência de pedir ajuda. |
+
+- [Reclame AQUI · ID 247218209](https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

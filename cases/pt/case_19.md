@@ -40,6 +40,8 @@ O desenho não cria remessas internacionais. Ele impede que a intenção de reme
 
 ## Uma cotação não sobrevive à política
 
+`Capability Preflight [lab]` · `Version-bound Quote [lab]`
+
 ```python
     def commit(self, actor, quote_id, key, now):
         with self.lock:
@@ -83,6 +85,8 @@ Os valores de teste são sintéticos e não representam taxa cambial ou tributa�
 
 ## Um contrato de capacidade explícito
 
+`Capability Preflight [proposal]` · `Version-bound Quote [proposal]`
+
 ```typescript
 type Purpose = "card_spend" | "cash_withdrawal" | "external_transfer";
 
@@ -109,6 +113,8 @@ O contrato torna a negativa específica: este produto não atende a esta finalid
 Produto é dono da capacidade; Pricing é dono da cotação; a autoridade financeira é dona do efeito. Essas fronteiras permitem revisar uma funcionalidade sem reescrever o cálculo cambial. O serviço precisa tratar respostas ausentes como desconhecidas, não como permissão. Tipagem de compilação ajuda desenvolvimento, mas dados externos precisam validação e autenticação próprias.
 
 ## Guardar a intenção, minimizar exposição
+
+`Capability Preflight [proposal]` · `Version-bound Quote [proposal]`
 
 | Registro | Campos mínimos | Uso |
 | --- | --- | --- |
@@ -137,6 +143,8 @@ A finalidade precisa ser útil para decisão sem coletar história familiar, via
 O contrato evolui com revisão explícita. Uma mudança incompatível pode invalidar uma prévia ainda aberta e exigir nova confirmação; não muda um recibo já emitido. Eu manteria um registro da versão utilizada para explicar decisões históricas, sem congelar indefinidamente uma permissão que o produto deixou de oferecer.
 
 ## Rejeitar antes de cobrar
+
+`Capability Preflight [lab]` · `Version-bound Quote [lab]`
 
 ```python
     def test_unsupported_transfer_never_debits(self):
@@ -221,3 +229,96 @@ Aceite: finalidade explícita, negativa antes de custo, versão revalidada, cota
 Eu avançaria se uma pessoa entende a limitação antes de comprometer recursos e se o backend consegue preservá-la durante a corrida de atualização. Pararia se o catálogo não tiver dono ou depender de inferências sobre outro produto. A revisão final precisa mostrar tanto um caminho permitido quanto uma recusa útil e sem débito.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py)
+
+## Padrões com prova no código
+
+`Capability Preflight [lab]` · `Version-bound Quote [lab]` · `Policy boundary [proposal]` · `Spring Boot [proposal]` · `Spring AI [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Capability Preflight | GlobalWallet.issue | finalidade não suportada não gera débito |
+| Version-bound Quote | GlobalWallet.commit | mudança no catálogo invalida a cotação anterior |
+| Policy boundary / capability catalog | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + versioned capability service. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · Spring AI**
+
+Experimento proposto: Spring AI para apresentar capacidades do catálogo aprovado sem inventar funções. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · GlobalWallet.issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L41)
+- [P1 · test_unsupported_transfer_never_debits](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L107)
+- [P2 · GlobalWallet.commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L60)
+- [P2 · test_capability_change_invalidates_old_preview](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L115)
+- [Spring AI · MCP integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html)
+
+## Sequência de execução
+
+![Não executa câmbio, impostos ou remessa. A capacidade sintética não comprova oferta comercial do Nubank.](../../evidence/sequence-pt-19.svg)
+
+Não executa câmbio, impostos ou remessa. A capacidade sintética não comprova oferta comercial do Nubank.
+
+**Autoridade e fronteira de falha**
+
+finalidade não suportada não gera débito. mudança no catálogo invalida a cotação anterior.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [issue](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L41)
+- [commit](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L60)
+
+## Features, histórias e aceite
+
+**F19.1 · Finalidade antes do câmbio · D16–30**
+
+Como cliente, quero confirmar se a operação desejada é suportada. Aceite: finalidade não suportada não gera débito.
+
+**F19.2 · Capacidade revalidada · D31–60**
+
+Como cliente, quero confirmar a mesma capacidade que vi na prévia. Aceite: mudança no catálogo invalida a cotação anterior.
+
+**F19.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F19.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L107)
+- [Aceite F19.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py#L115)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal. O custo variável é a contribuição renunciada assumida; ela também permanece fixa neste estresse.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = 12 × líquido_período − implementação
+
+Period / Período: `month`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 2500.00 | 150.00 | 3000.00 | 80000.00 |
+| Base | 5000.00 | 300.00 | 3000.00 | 80000.00 |
+| Ambicioso | 7500.00 | 450.00 | 3000.00 | 80000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -650.00 | -87800.00 | -102800.00 |
+| Base | 1700.00 | -59600.00 | -89600.00 |
+| Ambicioso | 4050.00 | -31400.00 | -76400.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: incompatibilidades identificadas antes do câmbio. Ameaça: melhorar só por bloquear toda operação. |
+| Economia por unidade | Custo evitável menos contribuição renunciada e operação; valor convertido não é lucro. |
+| Experimento proposto | Alterar ordem da informação, sem preço ou direitos; medir compreensão, falsa negativa e conclusão. |
+| Critério de parada | Parar por débito após negativa de capacidade ou vazamento de dados. |
+
+- [Reclame AQUI · ID 243002037](https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

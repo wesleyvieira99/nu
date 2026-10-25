@@ -40,6 +40,8 @@ Human review records the decision and policy in history. An appeal adds a stage 
 
 ## Core: revision and action identity
 
+`Append-only Journal [lab]` · `Independent Review [lab]`
+
 ```python
     def append(self, action_id, expected, actor, role, kind, evidence):
         if not isinstance(action_id, str) or not action_id.strip():
@@ -80,6 +82,8 @@ The laboratory represents one case and receives roles from trusted context. It n
 
 ## Make the policy explicit
 
+`Append-only Journal [proposal]` · `Independent Review [proposal]`
+
 ```clojure
 (defn reviewable? [{:keys [evidence decision policy]}]
   (and (seq evidence)
@@ -101,6 +105,8 @@ A pure function can check structural completeness before routing the dossier. It
 In the service, the reviewer identifier must come from authenticated identity rather than the customer’s request body. Policy has an immutable version, effective period and owner. Policy changes need approved examples and operational review, because a technically correct deployment can still produce inappropriate decisions. Kafka would carry minimized references; sensitive attachments would remain in restricted storage.
 
 ## Evidence and access contracts
+
+`Append-only Journal [proposal]` · `Independent Review [proposal]`
 
 | Object | Owner | Rule |
 | --- | --- | --- |
@@ -125,6 +131,8 @@ Synthetic illustrative contract; not a payload captured from the app.
 A hash helps identify evidence but does not prove its truth or replace chain of custody. Retention policy determines how long the object can be consulted; the projection should not retain unnecessary copies. Administrative access needs a recorded purpose and must be auditable by an independent team.
 
 ## Test appeal and recovery
+
+`Append-only Journal [lab]` · `Independent Review [lab]`
 
 ```python
     def test_appeal_requires_independent_reviewer(self):
@@ -221,3 +229,96 @@ The laboratory supports a joint review: engineering explains the contract; opera
 The final gate is straightforward: proceed only if the sample shows a correctable gap, independent review maintains quality and released capacity has a destination. Otherwise retain the learning and choose another intervention. The intended result is a better-grounded decision that is easier to review, without promising automatic resolution of financial disputes.
 
 - [Executable case lab on GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py)
+
+## Patterns with proof
+
+`Append-only Journal [lab]` · `Independent Review [lab]` · `Hexagonal Architecture [proposal]` · `Spring Boot [proposal]` · `LangChain4j [proposal]`
+
+| Mechanism | Implementation | Evidence |
+| --- | --- | --- |
+| Append-only Journal | Dispute.append | a retry with the same identity preserves one record |
+| Independent Review | Dispute.append | an appeal requires an independent reviewer |
+| Hexagonal Architecture / evidence boundary | Production proposal | Adapters keep authority outside the UI. |
+
+**Java integration · proposed**
+
+Spring Boot + optimistic locking. Port the invariants and contract tests before replacing the Python model. A process lock is not distributed concurrency control; persistence, authorization and recovery need integration tests.
+
+**AI assessment · LangChain4j**
+
+Proposed experiment: LangChain4j to locate dossier excerpts for the independent reviewer. Read-only tools, source citations, a token budget and human approval are required. It cannot authorize money, eligibility or identity. No LLM integration is claimed by the Python tests.
+
+- [P1 · Dispute.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [P1 · test_restart_and_retry_preserve_one_evidence](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L110)
+- [P2 · Dispute.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [P2 · test_appeal_requires_independent_reviewer](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L101)
+- [LangChain4j · AI Services](https://docs.langchain4j.dev/tutorials/ai-services/)
+
+## Execution sequence
+
+![Roles are trusted context. Device evidence does not decide consent; there is no fraud classifier.](../../evidence/sequence-en-08.svg)
+
+Roles are trusted context. Device evidence does not decide consent; there is no fraud classifier.
+
+**Authority and failure boundary**
+
+an appeal requires an independent reviewer. a retry with the same identity preserves one record.
+
+The sequence describes the proposed integration. The linked lab verifies the domain invariant with synthetic data; external services, network retries and deployment remain integration work.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [history](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L23)
+
+## Features, stories and acceptance
+
+**F08.1 · Reviewable dossier · D16–30**
+
+As a customer, I want to dispute a contract while retaining its history. Acceptance: an appeal requires an independent reviewer.
+
+**F08.2 · Durable history · D31–60**
+
+As a dossier reviewer, I want to resume review after restart without duplicating evidence. Acceptance: a retry with the same identity preserves one record.
+
+**F08.3 · Measured rollout · D61–90**
+
+As the product owner, I want an eligible cohort with a comparable control. Acceptance: the case metric, denominator, cost and safety barrier are registered before exposure; reconciliation failures stop expansion.
+
+Linked tests exercise the stated domain acceptance condition, not the complete interface or production integration. D0–15 is discovery: confirm the public report against authorized internal samples, map dependencies and approve contracts. These are incremental planning windows, not a delivery commitment. EM owns coordination; Staff owns cross-domain contracts; Product and the domain owner accept outcomes.
+
+- [Acceptance F08.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L101)
+- [Acceptance F08.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L110)
+
+## Method and sensitivity
+
+**Scenario sensitivity · BRL**
+
+All inputs are scenario assumptions, not measured Nubank effects. Capacity equivalent is not cash saved. The realization slider reduces benefit only; all costs remain at their scenario values. This is sensitivity analysis, not a probability or a causal estimate.
+
+period_net = benefit × realization − variable_cost − run_cost; first_year = period_net − build_cost
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservative | 144000.00 | 0.00 | 60000.00 | 240000.00 |
+| Base | 504000.00 | 0.00 | 90000.00 | 240000.00 |
+| Ambitious | 1080000.00 | 0.00 | 120000.00 | 240000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservative | 84000.00 | -156000.00 | -228000.00 |
+| Base | 414000.00 | 174000.00 | -78000.00 |
+| Ambitious | 960000.00 | 720000.00 | 180000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decision | Case-specific method |
+| --- | --- |
+| Baseline / threat | Baseline: rework per dossier. Threat: selecting easy cases or treating queue time as working time. |
+| Unit economics | Annual dossiers × minutes released / 60 × hourly cost; capacity remains distinct from cash. |
+| Proposed experiment | Compare matched teams or periods, with independent sample review in both groups. |
+| Stop rule | Stop for exposed data, lost evidence or less consistent decisions. |
+
+- [Reclame AQUI · ID 237674561](https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

@@ -6,7 +6,7 @@ Wesley Vieira · Engineering Manager / Staff Software Engineer
 
 ![Reader preview](docs/preview.png)
 
-320 páginas por idioma, 20 novos estudos de problemas públicos, 24 arquiteturas com marcas oficiais, 98 blocos de código e 11 linguagens/formatos. Menu de capítulos no computador e celular; PDF com marcadores e cinco controles de navegação em cada página.
+408 páginas por idioma, 20 novos estudos de problemas públicos, 24 arquiteturas + 20 diagramas de sequência com marcas oficiais, 98 blocos de código, 20 simuladores, tags de padrões e 11 linguagens/formatos. Menu de capítulos no computador e celular; PDF com marcadores e cinco controles de navegação em cada página.
 
 Os vinte casos anteriores foram substituídos. Esta edição parte de 18 reclamações no Reclame AQUI e 2 reportagens, com capturas reais, resposta da empresa e desfecho disponível. Cada estudo propõe uma solução específica, implementação, indicadores, cenários financeiros e roadmap com responsáveis e critérios de saída. Vídeos de reportagem e tutorial oficial são identificados como fontes com finalidades diferentes.
 
@@ -47,7 +47,17 @@ clojure -M decision_core.clj
 
 Local validation: **241 Python tests** and **11 Clojure tests / 22 assertions** passed. Labs use synthetic data and never access bank accounts. Integration snippets are not all executable applications; the book labels unexecuted examples and production gaps. Clojure is pinned in `deps.edn`; dependency resolution needs internet.
 
-[GitHub Actions workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml). The prior remote run could not start because GitHub reported an account billing lock; local validation records are in `validation/`. Pages publication is verified separately.
+[GitHub Actions workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml). Remote Actions validation has not completed; local validation records are in `validation/`. Pages publication is verified separately.
+
+## Reproduce a financial scenario / Reproduzir um cenário
+
+From the repository root / Da raiz do repositório:
+
+```bash
+python3 models/simulate.py 04 --scenario 1 --realization 50
+```
+
+`--scenario` selects 0 (conservative), 1 (base), or 2 (ambitious). `--realization` accepts 0–100 percent. The standard-library Decimal CLI reads `models/normalized-scenarios.json`, retains scenario costs and reproduces the reader's monthly, annual or six-month-cohort horizon. Capacity equivalent is not cash saved; all proposal returns remain hypothetical. Invalid, negative or non-finite inputs are rejected.
 
 ## Evidence and value / Evidência e valor
 
@@ -57,7 +67,7 @@ Financial outputs are **conditional scenarios**, with assumptions and sensitivit
 
 `labs/` executable models · `snippets/` literal book code · `cases/` full chapters · `manuscripts/` editable bilingual content · `evidence/` captures, logos and diagrams with provenance · `models/` financial assumptions · `sources.json` references · `checksums.json` file hashes.
 
-Research date: 23 October 2026. Brands and photographs belong to their respective owners. Official font sources and OFL licenses are in `fonts/`.
+Case research: 23 October 2026. LinkedIn, official media and method references checked on 25 October 2026. Brands and photographs belong to their respective owners. Official font sources and OFL licenses are in `fonts/`.
 
 ## Autor · Author
 

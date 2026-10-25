@@ -40,6 +40,8 @@ A revisão humana grava decisão e política no histórico. Um recurso acrescent
 
 ## Núcleo: revisão e identidade da ação
 
+`Append-only Journal [lab]` · `Independent Review [lab]`
+
 ```python
     def append(self, action_id, expected, actor, role, kind, evidence):
         if not isinstance(action_id, str) or not action_id.strip():
@@ -80,6 +82,8 @@ O laboratório representa um único caso e recebe papéis de um contexto confiá
 
 ## A política deve ser explícita
 
+`Append-only Journal [proposal]` · `Independent Review [proposal]`
+
 ```clojure
 (defn reviewable? [{:keys [evidence decision policy]}]
   (and (seq evidence)
@@ -101,6 +105,8 @@ Uma função pura pode verificar completude estrutural antes de encaminhar o dos
 No serviço, o identificador do revisor deve vir da identidade autenticada, e não do corpo enviado pelo cliente. A política possui versão imutável, vigência e responsável. Mudanças de política precisam de exemplos aprovados e revisão operacional, porque um deploy tecnicamente correto ainda pode produzir decisões inadequadas. Kafka transportaria referências minimizadas; anexos sensíveis permaneceriam em armazenamento restrito.
 
 ## Contrato de evidência e de acesso
+
+`Append-only Journal [proposal]` · `Independent Review [proposal]`
 
 | Objeto | Responsável | Regra |
 | --- | --- | --- |
@@ -125,6 +131,8 @@ Contrato sintético e ilustrativo; não é payload capturado do aplicativo.
 O hash ajuda a identificar a evidência, mas não prova que ela é verdadeira nem substitui cadeia de custódia. A política de retenção define por quanto tempo o objeto pode ser consultado; a projeção não deve manter cópia desnecessária. Acesso administrativo exige finalidade registrada e deve ser auditável por uma equipe independente.
 
 ## Testar o recurso e a retomada
+
+`Append-only Journal [lab]` · `Independent Review [lab]`
 
 ```python
     def test_appeal_requires_independent_reviewer(self):
@@ -221,3 +229,96 @@ O laboratório cabe em uma revisão conjunta: engenharia explica o contrato; ope
 A porta final é simples: prosseguir apenas se a amostra demonstrar lacuna corrigível, a revisão independente mantiver qualidade e a capacidade liberada tiver destino. Caso contrário, preservar o aprendizado e escolher outra intervenção. O resultado esperado desta proposta é uma decisão melhor fundamentada e mais fácil de revisar, sem promessa de resolver automaticamente disputas financeiras.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py)
+
+## Padrões com prova no código
+
+`Append-only Journal [lab]` · `Independent Review [lab]` · `Hexagonal Architecture [proposal]` · `Spring Boot [proposal]` · `LangChain4j [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Append-only Journal | Dispute.append | retry com a mesma identidade preserva um registro |
+| Independent Review | Dispute.append | recurso exige revisor independente |
+| Hexagonal Architecture / evidence boundary | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + optimistic locking. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · LangChain4j**
+
+Experimento proposto: LangChain4j para localizar trechos do dossiê para o revisor independente. Ferramentas de leitura, citações, orçamento de tokens e aprovação humana são requisitos. Não autoriza dinheiro, elegibilidade ou identidade. Os testes Python não comprovam integração com LLM.
+
+- [P1 · Dispute.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [P1 · test_restart_and_retry_preserve_one_evidence](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L110)
+- [P2 · Dispute.append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [P2 · test_appeal_requires_independent_reviewer](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L101)
+- [LangChain4j · AI Services](https://docs.langchain4j.dev/tutorials/ai-services/)
+
+## Sequência de execução
+
+![Papéis são contexto confiado. Evidência de aparelho não decide consentimento; não há classificador de fraude.](../../evidence/sequence-pt-08.svg)
+
+Papéis são contexto confiado. Evidência de aparelho não decide consentimento; não há classificador de fraude.
+
+**Autoridade e fronteira de falha**
+
+recurso exige revisor independente. retry com a mesma identidade preserva um registro.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [append](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L28)
+- [history](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L23)
+
+## Features, histórias e aceite
+
+**F08.1 · Dossiê contestável · D16–30**
+
+Como cliente, quero contestar uma contratação mantendo o histórico. Aceite: recurso exige revisor independente.
+
+**F08.2 · Histórico durável · D31–60**
+
+Como revisor do dossiê, quero retomar a análise após reinício sem duplicar evidência. Aceite: retry com a mesma identidade preserva um registro.
+
+**F08.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F08.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L101)
+- [Aceite F08.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py#L110)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 144000.00 | 0.00 | 60000.00 | 240000.00 |
+| Base | 504000.00 | 0.00 | 90000.00 | 240000.00 |
+| Ambicioso | 1080000.00 | 0.00 | 120000.00 | 240000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | 84000.00 | -156000.00 | -228000.00 |
+| Base | 414000.00 | 174000.00 | -78000.00 |
+| Ambicioso | 960000.00 | 720000.00 | 180000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: retrabalho por dossiê. Ameaça: selecionar só casos simples ou confundir fila com trabalho. |
+| Economia por unidade | Dossiês anuais × minutos liberados / 60 × custo-hora; capacidade permanece distinta de caixa. |
+| Experimento proposto | Comparar equipes ou períodos equivalentes, com revisão independente de amostras dos dois grupos. |
+| Critério de parada | Parar por dados expostos, perda de evidência ou piora da consistência das decisões. |
+
+- [Reclame AQUI · ID 237674561](https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)

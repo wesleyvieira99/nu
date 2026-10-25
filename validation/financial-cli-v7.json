@@ -1,0 +1,1498 @@
+{
+  "status": "PASS",
+  "source_sha256": "4c1df37fa6660fc46bd87c079e4be460f9af6209ea249fced6a1d5e71729ab62",
+  "normalized_cases": 20,
+  "scenario_rate_comparisons": 180,
+  "period_types": [
+    "month",
+    "year",
+    "cohort"
+  ],
+  "invalid_values_rejected": 11,
+  "cli_rejections": 4,
+  "default_adjacent_json_verified": true,
+  "production_package_executed": false,
+  "cli_examples": [
+    {
+      "case": "01",
+      "scenario": 1,
+      "scenario_name": "Base",
+      "currency": "BRL",
+      "realization_percent": "50",
+      "period": "month",
+      "period_net_BRL": "12000.00",
+      "horizon": "first_year",
+      "horizon_net_after_build_BRL": "24000.00",
+      "assumptions_not_observed_returns": true,
+      "note": "Capacity equivalent is not cash saved. Realization scales benefit only; costs stay fixed. Cohort benefit already covers six active months per extra line."
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "scenario_name": "Base",
+      "currency": "BRL",
+      "realization_percent": "50",
+      "period": "year",
+      "period_net_BRL": "162000.00",
+      "horizon": "first_year",
+      "horizon_net_after_build_BRL": "-78000.00",
+      "assumptions_not_observed_returns": true,
+      "note": "Capacity equivalent is not cash saved. Realization scales benefit only; costs stay fixed. Cohort benefit already covers six active months per extra line."
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "scenario_name": "Base",
+      "currency": "BRL",
+      "realization_percent": "50",
+      "period": "cohort",
+      "period_net_BRL": "4000.00",
+      "horizon": "six_month_cohort",
+      "horizon_net_after_build_BRL": "-16000.00",
+      "assumptions_not_observed_returns": true,
+      "note": "Capacity equivalent is not cash saved. Realization scales benefit only; costs stay fixed. Cohort benefit already covers six active months per extra line."
+    }
+  ],
+  "checks": [
+    {
+      "case": "01",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-4000.00",
+      "horizon": "-168000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "0.00",
+      "horizon": "-120000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "4000.00",
+      "horizon": "-72000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-8000.00",
+      "horizon": "-216000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "12000.00",
+      "horizon": "24000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "32000.00",
+      "horizon": "264000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-15000.00",
+      "horizon": "-300000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "45000.00",
+      "horizon": "420000.00"
+    },
+    {
+      "case": "01",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "105000.00",
+      "horizon": "1140000.00"
+    },
+    {
+      "case": "02",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-210000.00"
+    },
+    {
+      "case": "02",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-3600.00",
+      "horizon": "-193200.00"
+    },
+    {
+      "case": "02",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-2200.00",
+      "horizon": "-176400.00"
+    },
+    {
+      "case": "02",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-8000.00",
+      "horizon": "-246000.00"
+    },
+    {
+      "case": "02",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "400.00",
+      "horizon": "-145200.00"
+    },
+    {
+      "case": "02",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "8800.00",
+      "horizon": "-44400.00"
+    },
+    {
+      "case": "02",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-12000.00",
+      "horizon": "-294000.00"
+    },
+    {
+      "case": "02",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "13200.00",
+      "horizon": "8400.00"
+    },
+    {
+      "case": "02",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "38400.00",
+      "horizon": "310800.00"
+    },
+    {
+      "case": "03",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-240000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-3125.00",
+      "horizon": "-217500.00"
+    },
+    {
+      "case": "03",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-1250.00",
+      "horizon": "-195000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-10000.00",
+      "horizon": "-300000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "1250.00",
+      "horizon": "-165000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "12500.00",
+      "horizon": "-30000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-18000.00",
+      "horizon": "-396000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "12000.00",
+      "horizon": "-36000.00"
+    },
+    {
+      "case": "03",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "42000.00",
+      "horizon": "324000.00"
+    },
+    {
+      "case": "04",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-8400.00",
+      "horizon": "-210800.00"
+    },
+    {
+      "case": "04",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-5700.00",
+      "horizon": "-178400.00"
+    },
+    {
+      "case": "04",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-3000.00",
+      "horizon": "-146000.00"
+    },
+    {
+      "case": "04",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-17520.00",
+      "horizon": "-320240.00"
+    },
+    {
+      "case": "04",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "-3120.00",
+      "horizon": "-147440.00"
+    },
+    {
+      "case": "04",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "11280.00",
+      "horizon": "25360.00"
+    },
+    {
+      "case": "04",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-23500.00",
+      "horizon": "-392000.00"
+    },
+    {
+      "case": "04",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "17000.00",
+      "horizon": "94000.00"
+    },
+    {
+      "case": "04",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "57500.00",
+      "horizon": "580000.00"
+    },
+    {
+      "case": "05",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-4450.00",
+      "horizon": "-153400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-2450.00",
+      "horizon": "-129400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-450.00",
+      "horizon": "-105400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-8350.00",
+      "horizon": "-200200.00"
+    },
+    {
+      "case": "05",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "6050.00",
+      "horizon": "-27400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "20450.00",
+      "horizon": "145400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-14700.00",
+      "horizon": "-276400.00"
+    },
+    {
+      "case": "05",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "28500.00",
+      "horizon": "242000.00"
+    },
+    {
+      "case": "05",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "71700.00",
+      "horizon": "760400.00"
+    },
+    {
+      "case": "06",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-3600.00",
+      "horizon": "-183200.00"
+    },
+    {
+      "case": "06",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-2350.00",
+      "horizon": "-168200.00"
+    },
+    {
+      "case": "06",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-1100.00",
+      "horizon": "-153200.00"
+    },
+    {
+      "case": "06",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-7800.00",
+      "horizon": "-233600.00"
+    },
+    {
+      "case": "06",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "1200.00",
+      "horizon": "-125600.00"
+    },
+    {
+      "case": "06",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "10200.00",
+      "horizon": "-17600.00"
+    },
+    {
+      "case": "06",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-13600.00",
+      "horizon": "-303200.00"
+    },
+    {
+      "case": "06",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "16400.00",
+      "horizon": "56800.00"
+    },
+    {
+      "case": "06",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "46400.00",
+      "horizon": "416800.00"
+    },
+    {
+      "case": "07",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-220000.00"
+    },
+    {
+      "case": "07",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-950.00",
+      "horizon": "-171400.00"
+    },
+    {
+      "case": "07",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "3100.00",
+      "horizon": "-122800.00"
+    },
+    {
+      "case": "07",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-10000.00",
+      "horizon": "-280000.00"
+    },
+    {
+      "case": "07",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "11600.00",
+      "horizon": "-20800.00"
+    },
+    {
+      "case": "07",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "33200.00",
+      "horizon": "238400.00"
+    },
+    {
+      "case": "07",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-18000.00",
+      "horizon": "-376000.00"
+    },
+    {
+      "case": "07",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "36000.00",
+      "horizon": "272000.00"
+    },
+    {
+      "case": "07",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "90000.00",
+      "horizon": "920000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-60000.00",
+      "horizon": "-300000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "12000.00",
+      "horizon": "-228000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "84000.00",
+      "horizon": "-156000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-90000.00",
+      "horizon": "-330000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "162000.00",
+      "horizon": "-78000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "414000.00",
+      "horizon": "174000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-120000.00",
+      "horizon": "-360000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "420000.00",
+      "horizon": "180000.00"
+    },
+    {
+      "case": "08",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "960000.00",
+      "horizon": "720000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-60000.00",
+      "horizon": "-320000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-24600.00",
+      "horizon": "-284600.00"
+    },
+    {
+      "case": "09",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "10800.00",
+      "horizon": "-249200.00"
+    },
+    {
+      "case": "09",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-60000.00",
+      "horizon": "-320000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "60000.00",
+      "horizon": "-200000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "180000.00",
+      "horizon": "-80000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-60000.00",
+      "horizon": "-320000.00"
+    },
+    {
+      "case": "09",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "278400.00",
+      "horizon": "18400.00"
+    },
+    {
+      "case": "09",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "616800.00",
+      "horizon": "356800.00"
+    },
+    {
+      "case": "10",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-36000.00",
+      "horizon": "-216000.00"
+    },
+    {
+      "case": "10",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-33975.00",
+      "horizon": "-213975.00"
+    },
+    {
+      "case": "10",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "-31950.00",
+      "horizon": "-211950.00"
+    },
+    {
+      "case": "10",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-36000.00",
+      "horizon": "-216000.00"
+    },
+    {
+      "case": "10",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "-22500.00",
+      "horizon": "-202500.00"
+    },
+    {
+      "case": "10",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "-9000.00",
+      "horizon": "-189000.00"
+    },
+    {
+      "case": "10",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-36000.00",
+      "horizon": "-216000.00"
+    },
+    {
+      "case": "10",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "18000.00",
+      "horizon": "-162000.00"
+    },
+    {
+      "case": "10",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "72000.00",
+      "horizon": "-108000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-144000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-16000.00",
+      "horizon": "-136000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "-8000.00",
+      "horizon": "-128000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-144000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "36000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "96000.00",
+      "horizon": "-24000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-144000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "176000.00",
+      "horizon": "56000.00"
+    },
+    {
+      "case": "11",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "376000.00",
+      "horizon": "256000.00"
+    },
+    {
+      "case": "12",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-114000.00"
+    },
+    {
+      "case": "12",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-22050.00",
+      "horizon": "-112050.00"
+    },
+    {
+      "case": "12",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "-20100.00",
+      "horizon": "-110100.00"
+    },
+    {
+      "case": "12",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-114000.00"
+    },
+    {
+      "case": "12",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "-16200.00",
+      "horizon": "-106200.00"
+    },
+    {
+      "case": "12",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "-8400.00",
+      "horizon": "-98400.00"
+    },
+    {
+      "case": "12",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-24000.00",
+      "horizon": "-114000.00"
+    },
+    {
+      "case": "12",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "-600.00",
+      "horizon": "-90600.00"
+    },
+    {
+      "case": "12",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "22800.00",
+      "horizon": "-67200.00"
+    },
+    {
+      "case": "13",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-12000.00",
+      "horizon": "-72000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-8800.00",
+      "horizon": "-68800.00"
+    },
+    {
+      "case": "13",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "-5600.00",
+      "horizon": "-65600.00"
+    },
+    {
+      "case": "13",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-12000.00",
+      "horizon": "-72000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "4000.00",
+      "horizon": "-56000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "20000.00",
+      "horizon": "-40000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-12000.00",
+      "horizon": "-72000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "36000.00",
+      "horizon": "-24000.00"
+    },
+    {
+      "case": "13",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "84000.00",
+      "horizon": "24000.00"
+    },
+    {
+      "case": "14",
+      "scenario": 0,
+      "realization": 0,
+      "period": "year",
+      "net": "-30000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "14",
+      "scenario": 0,
+      "realization": 50,
+      "period": "year",
+      "net": "-22800.00",
+      "horizon": "-172800.00"
+    },
+    {
+      "case": "14",
+      "scenario": 0,
+      "realization": 100,
+      "period": "year",
+      "net": "-15600.00",
+      "horizon": "-165600.00"
+    },
+    {
+      "case": "14",
+      "scenario": 1,
+      "realization": 0,
+      "period": "year",
+      "net": "-30000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "14",
+      "scenario": 1,
+      "realization": 50,
+      "period": "year",
+      "net": "3600.00",
+      "horizon": "-146400.00"
+    },
+    {
+      "case": "14",
+      "scenario": 1,
+      "realization": 100,
+      "period": "year",
+      "net": "37200.00",
+      "horizon": "-112800.00"
+    },
+    {
+      "case": "14",
+      "scenario": 2,
+      "realization": 0,
+      "period": "year",
+      "net": "-30000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "14",
+      "scenario": 2,
+      "realization": 50,
+      "period": "year",
+      "net": "66000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "14",
+      "scenario": 2,
+      "realization": 100,
+      "period": "year",
+      "net": "162000.00",
+      "horizon": "12000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-3400.00",
+      "horizon": "-160800.00"
+    },
+    {
+      "case": "15",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-1800.00",
+      "horizon": "-141600.00"
+    },
+    {
+      "case": "15",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "-1000.00",
+      "horizon": "-132000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "3000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-5000.00",
+      "horizon": "-180000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "3000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "15",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "11000.00",
+      "horizon": "12000.00"
+    },
+    {
+      "case": "16",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-4000.00",
+      "horizon": "-138000.00"
+    },
+    {
+      "case": "16",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-2380.00",
+      "horizon": "-118560.00"
+    },
+    {
+      "case": "16",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-760.00",
+      "horizon": "-99120.00"
+    },
+    {
+      "case": "16",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-4000.00",
+      "horizon": "-138000.00"
+    },
+    {
+      "case": "16",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "860.00",
+      "horizon": "-79680.00"
+    },
+    {
+      "case": "16",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "5720.00",
+      "horizon": "-21360.00"
+    },
+    {
+      "case": "16",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-4000.00",
+      "horizon": "-138000.00"
+    },
+    {
+      "case": "16",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "5720.00",
+      "horizon": "-21360.00"
+    },
+    {
+      "case": "16",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "15440.00",
+      "horizon": "95280.00"
+    },
+    {
+      "case": "17",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-4500.00",
+      "horizon": "-204000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-1500.00",
+      "horizon": "-168000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "1500.00",
+      "horizon": "-132000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-4500.00",
+      "horizon": "-204000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "1500.00",
+      "horizon": "-132000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "7500.00",
+      "horizon": "-60000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-4500.00",
+      "horizon": "-204000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "4500.00",
+      "horizon": "-96000.00"
+    },
+    {
+      "case": "17",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "13500.00",
+      "horizon": "12000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 0,
+      "realization": 0,
+      "period": "cohort",
+      "net": "-5000.00",
+      "horizon": "-25000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 0,
+      "realization": 50,
+      "period": "cohort",
+      "net": "-1400.00",
+      "horizon": "-21400.00"
+    },
+    {
+      "case": "18",
+      "scenario": 0,
+      "realization": 100,
+      "period": "cohort",
+      "net": "2200.00",
+      "horizon": "-17800.00"
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "realization": 0,
+      "period": "cohort",
+      "net": "-5000.00",
+      "horizon": "-25000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "realization": 50,
+      "period": "cohort",
+      "net": "4000.00",
+      "horizon": "-16000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 1,
+      "realization": 100,
+      "period": "cohort",
+      "net": "13000.00",
+      "horizon": "-7000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 2,
+      "realization": 0,
+      "period": "cohort",
+      "net": "-5000.00",
+      "horizon": "-25000.00"
+    },
+    {
+      "case": "18",
+      "scenario": 2,
+      "realization": 50,
+      "period": "cohort",
+      "net": "9400.00",
+      "horizon": "-10600.00"
+    },
+    {
+      "case": "18",
+      "scenario": 2,
+      "realization": 100,
+      "period": "cohort",
+      "net": "23800.00",
+      "horizon": "3800.00"
+    },
+    {
+      "case": "19",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-3150.00",
+      "horizon": "-117800.00"
+    },
+    {
+      "case": "19",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "-1900.00",
+      "horizon": "-102800.00"
+    },
+    {
+      "case": "19",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "-650.00",
+      "horizon": "-87800.00"
+    },
+    {
+      "case": "19",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-3300.00",
+      "horizon": "-119600.00"
+    },
+    {
+      "case": "19",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "-800.00",
+      "horizon": "-89600.00"
+    },
+    {
+      "case": "19",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "1700.00",
+      "horizon": "-59600.00"
+    },
+    {
+      "case": "19",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-3450.00",
+      "horizon": "-121400.00"
+    },
+    {
+      "case": "19",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "300.00",
+      "horizon": "-76400.00"
+    },
+    {
+      "case": "19",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "4050.00",
+      "horizon": "-31400.00"
+    },
+    {
+      "case": "20",
+      "scenario": 0,
+      "realization": 0,
+      "period": "month",
+      "net": "-2000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 0,
+      "realization": 50,
+      "period": "month",
+      "net": "500.00",
+      "horizon": "-54000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 0,
+      "realization": 100,
+      "period": "month",
+      "net": "3000.00",
+      "horizon": "-24000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 1,
+      "realization": 0,
+      "period": "month",
+      "net": "-2000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 1,
+      "realization": 50,
+      "period": "month",
+      "net": "1750.00",
+      "horizon": "-39000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 1,
+      "realization": 100,
+      "period": "month",
+      "net": "5500.00",
+      "horizon": "6000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 2,
+      "realization": 0,
+      "period": "month",
+      "net": "-2000.00",
+      "horizon": "-84000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 2,
+      "realization": 50,
+      "period": "month",
+      "net": "3000.00",
+      "horizon": "-24000.00"
+    },
+    {
+      "case": "20",
+      "scenario": 2,
+      "realization": 100,
+      "period": "month",
+      "net": "8000.00",
+      "horizon": "36000.00"
+    }
+  ]
+}

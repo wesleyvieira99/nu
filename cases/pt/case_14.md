@@ -40,6 +40,8 @@ Observabilidade sinaliza pendências e divergências para a operação responsá
 
 ## Núcleo: revalidar antes de aplicar
 
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]`
+
 ```python
     def execute(self, ident, now, crash=False):
         with self.db:
@@ -76,6 +78,8 @@ Dinheiro recebido em cotação expirada ou insuficiente permanece registrado par
 
 ## Cálculo puro não dispensa a transação
 
+`Quote / Commit [proposal]` · `Versioned Aggregate [proposal]`
+
 ```clojure
 (defn executable? [quote contract now received]
   (let [required (+ (:bill-cents quote)
@@ -97,6 +101,8 @@ A função expressa as condições de execução, mas avaliá-la fora da transa�
 Mudança material de preço ou plano exige nova confirmação. Revalidar não significa recalcular e debitar silenciosamente. O histórico conserva cotação aceita, motivo de cancelamento e recibo de aplicação. Uma implementação em Clojure pode manter o cálculo determinístico; integração financeira e publicação de eventos continuam responsáveis por atomicidade, durabilidade e reconciliação.
 
 ## Plano, recebimento e recibo separados
+
+`Quote / Commit [proposal]` · `Versioned Aggregate [proposal]`
 
 | Objeto | Identidade | Invariante |
 | --- | --- | --- |
@@ -125,6 +131,8 @@ Exemplo sintético: R$ 50 de fatura + R$ 100 de principal −R$ 10 de desconto =
 O desconto não é uma economia do banco a ser maximizada: é parte da obrigação contratual com o cliente. A apresentação deve separar principal, encargos, desconto e total requerido. Identificadores permitem investigação sem expor contrato completo em logs. O responsável financeiro define retenção e compensações; atendimento recebe uma memória de cálculo acessível e uma próxima ação.
 
 ## Crash e validade atacam o plano
+
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]`
 
 ```python
     def test_received_is_not_executed_and_crash_rolls_back(self):
@@ -217,3 +225,95 @@ O revisor deve verificar tanto o caminho feliz quanto a operação que não pode
 Avançar somente quando plano, execução e recibo conciliam, o cliente entende o total necessário e a operação sabe tratar expiração e insuficiência. Se não houver base para automatizar, manter assistência humana com rastreabilidade. O resultado desejado é uma promessa financeira que pode ser explicada e cumprida, e uma exceção que não desaparece entre equipes.
 
 - [Laboratório executável do caso no GitHub](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py)
+
+## Padrões com prova no código
+
+`Quote / Commit [lab]` · `Versioned Aggregate [lab]` · `Transactional orchestration [proposal]` · `Spring Boot [proposal]`
+
+| Mecanismo | Implementação | Evidência |
+| --- | --- | --- |
+| Quote / Commit | Repayment.execute | falha na execução conserva recursos para resolução |
+| Versioned Aggregate | Repayment.execute | cotação concorrente perde validade após execução |
+| Transactional orchestration / quote contract | Proposta para produção | Adaptadores preservam a autoridade fora da interface. |
+
+**Integração Java · proposta**
+
+Spring Boot + transactional command handler. Portar invariantes e testes de contrato antes de substituir o modelo Python. Lock de processo não controla concorrência distribuída; persistência, autorização e recuperação exigem testes de integração.
+
+**Avaliação de IA · núcleo determinístico**
+
+Nenhum framework de agentes está implementado neste laboratório. Estado financeiro, autorização e versões permanecem determinísticos. Um assistente só seria avaliado diante de necessidade comprovada de atendimento, sem autoridade sobre saldo ou identidade.
+
+- [P1 · Repayment.execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+- [P1 · test_received_is_not_executed_and_crash_rolls_back](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L99)
+- [P2 · Repayment.execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+- [P2 · test_second_quote_becomes_stale_after_execution](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L137)
+
+## Sequência de execução
+
+![O desconto é dado de entrada aprovado, não cálculo de juros. Devolver fundos requer outro fluxo autorizado.](../../evidence/sequence-pt-14.svg)
+
+O desconto é dado de entrada aprovado, não cálculo de juros. Devolver fundos requer outro fluxo autorizado.
+
+**Autoridade e fronteira de falha**
+
+cotação concorrente perde validade após execução. falha na execução conserva recursos para resolução.
+
+A sequência descreve a integração proposta. O laboratório vinculado verifica a invariante do domínio com dados sintéticos; serviços externos, retries de rede e implantação permanecem trabalho de integração.
+
+- [quote](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L27)
+- [execute](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L61)
+
+## Features, histórias e aceite
+
+**F14.1 · Cotação verificável · D16–30**
+
+Como cliente, quero confirmar desconto, parcelas e validade antes de antecipar. Aceite: cotação concorrente perde validade após execução.
+
+**F14.2 · Recebimento não é execução · D31–60**
+
+Como cliente, quero saber se o dinheiro chegou e se as parcelas foram liquidadas. Aceite: falha na execução conserva recursos para resolução.
+
+**F14.3 · Expansão medida · D61–90**
+
+Como responsável de produto, quero uma coorte elegível com controle comparável. Aceite: métrica do caso, denominador, custo e barreira de segurança registrados antes da exposição; falhas de conciliação interrompem expansão.
+
+Os testes vinculados exercitam o aceite declarado do domínio, não a interface completa nem a integração de produção. D0–15 é descoberta: confrontar o relato público com amostras internas autorizadas, mapear dependências e aprovar contratos. São janelas incrementais de planejamento, não promessa de prazo. EM coordena dependências; Staff responde pelos contratos; Produto e o domínio aceitam o resultado.
+
+- [Aceite F14.1](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L137)
+- [Aceite F14.2](https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py#L99)
+
+## Método e sensibilidade
+
+**Sensibilidade do cenário · BRL**
+
+Todos os inputs são hipóteses de cenário, não efeitos medidos no Nubank. Capacidade equivalente não é economia de caixa. A realização reduz apenas o benefício; todos os custos permanecem nos valores do cenário. É análise de sensibilidade, não probabilidade nem estimativa causal.
+
+líquido_período = benefício × realização − custo_variável − operação; primeiro_ano = líquido_período − implementação
+
+Period / Período: `year`. Values / Valores: BRL.
+
+| Scenario / Cenário | Benefit / Benefício | Variable cost / Variável | Run cost / Operação | Build / Implementação |
+| --- | ---: | ---: | ---: | ---: |
+| Conservador | 14400.00 | 0.00 | 30000.00 | 150000.00 |
+| Base | 67200.00 | 0.00 | 30000.00 | 150000.00 |
+| Ambicioso | 192000.00 | 0.00 | 30000.00 | 150000.00 |
+
+| Scenario / Cenário | Period net at 100% / Líquido | Horizon after build / Horizonte | Horizon at 50% / Estresse |
+| --- | ---: | ---: | ---: |
+| Conservador | -15600.00 | -165600.00 | -172800.00 |
+| Base | 37200.00 | -112800.00 | -146400.00 |
+| Ambicioso | 162000.00 | 12000.00 | -84000.00 |
+
+[Reproducible scenario inputs](../../models/normalized-scenarios.json) · [Decimal simulator](../../models/simulate.py)
+
+| Decisão | Método específico do caso |
+| --- | --- |
+| Baseline / ameaça | Baseline: incidentes por antecipação elegível. Ameaça: juntar cotação expirada e execução atrasada. |
+| Economia por unidade | Incidentes evitados × (retrabalho + suporte); desconto contratual correto não é receita nova. |
+| Experimento proposto | Comparar acompanhamento com plano/recibo, preservando cálculo; validar execução financeiramente. |
+| Critério de parada | Parar por dupla aplicação, desconto incorreto ou dinheiro sem destino rastreável. |
+
+- [Reclame AQUI · ID 238574883](https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/)
+- [FinOps Foundation · Unit Economics](https://www.finops.org/framework/capabilities/unit-economics/)
+- [Microsoft Research · Pre-experiment design](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)
