@@ -1,33 +1,13 @@
-enum JourneyOutcome { completed, failed, unknown }
+enum WithdrawalState { loading, datedPosition, unavailable, confirmed }
 
-class JourneySignal {
-  final String attemptId;
-  final String release;
-  final JourneyOutcome outcome;
-  final int elapsedMs;
-  const JourneySignal(this.attemptId, this.release,
-      this.outcome, this.elapsedMs);
+String guidance(WithdrawalState state, String observedAt) {
+  return switch (state) {
+    WithdrawalState.loading => 'Loading current position',
+    WithdrawalState.datedPosition => 'Last verified: $observedAt',
+    WithdrawalState.unavailable => 'Withdrawal unavailable; track status',
+    WithdrawalState.confirmed => 'Withdrawal confirmed; view receipt',
+  };
 }
 
-abstract class BoundedTelemetry {
-  bool offer(JourneySignal signal);
-}
-
-Future<T> observed<T>(
-  Future<T> Function() task,
-  BoundedTelemetry telemetry,
-  String attemptId,
-  String release,
-) async {
-  final watch = Stopwatch()..start();
-  try {
-    final result = await task();
-    telemetry.offer(JourneySignal(attemptId, release,
-        JourneyOutcome.completed, watch.elapsedMilliseconds));
-    return result;
-  } catch (_) {
-    telemetry.offer(JourneySignal(attemptId, release,
-        JourneyOutcome.unknown, watch.elapsedMilliseconds));
-    rethrow;
-  }
-}
+bool mayRequestFreshAuthorization(WithdrawalState state) =>
+    state == WithdrawalState.datedPosition;

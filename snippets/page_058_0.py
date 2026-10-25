@@ -1,18 +1,14 @@
-# Validação dos limites de autoridade e validade.
-def test_restore_requires_two_distinct_reviewers(self):
-    verified = self.store.transition("case", 0, "verify", "reviewer-a", 101)
-    self.assertEqual(verified["state"], "verified")
-    with self.assertRaises(ValueError):
-        self.store.transition("case", 1, "restore", "reviewer-a", 102)
-    result = self.store.transition("case", 1, "restore", "reviewer-b", 102)
-    self.assertEqual((result["state"], result["epoch"]), ("restored", 1))
+    def test_incident_expiry_does_not_refresh_balance(self):
+        self.view.incident(125, True)
+        result = self.view.read("a", 130)
+        self.assertFalse(result["incident"])
+        self.assertEqual(result["state"], "stale")
+        self.assertFalse(result["may_resend"])
 
-def test_owner_cannot_verify(self):
-    with self.assertRaises(ValueError):
-        self.store.transition("case", 0, "verify", "customer", 101)
-    self.assertEqual(self.store.read("case")["revision"], 0)
-
-def test_expired_case_cannot_restore(self):
-    self.store.transition("case", 0, "verify", "a", 101)
-    with self.assertRaisesRegex(ValueError, "expired"):
-        self.store.transition("case", 1, "restore", "b", 400)
+    def test_concurrent_versions_keep_newest(self):
+        def publish(version):
+            return self.view.publish(version, version * 100, 110, 140, True)
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            list(pool.map(publish, (5, 2, 4, 3)))
+        self.assertEqual(self.view.read("a", 115)["version"], 5)
+        self.assertEqual(self.view.read("a", 115)["balance_cents"], 500)

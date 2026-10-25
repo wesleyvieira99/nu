@@ -1,0 +1,1011 @@
+{
+  "status": "PASS",
+  "scope": "Final directed visual recheck after punctuation-spacing rebuild, combined with prior complete182-page case08–14 sheet inspection. No production content modified.",
+  "pdfs": {
+    "pt": {
+      "file": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4",
+      "size_bytes": 29537555
+    },
+    "en": {
+      "file": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90",
+      "size_bytes": 29503794
+    }
+  },
+  "contact_sheets_reviewed": [
+    {
+      "case": "08",
+      "lang": "pt",
+      "pages": [
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-08.png",
+      "sha256": "f7ce820977e646246edecb5502a72e7b99b63380d8f92c11427c5fd0d45d3a6a",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "08",
+      "lang": "en",
+      "pages": [
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-08.png",
+      "sha256": "d38b556b932f7011916fa8b02d556da8dbdb77b546020e58137c9e7148ef3b6a",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "09",
+      "lang": "pt",
+      "pages": [
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-09.png",
+      "sha256": "7f1c03c407aae714451919f05d236e487bf209ce9d150779c283ae895420ea3a",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "09",
+      "lang": "en",
+      "pages": [
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-09.png",
+      "sha256": "d50b5272058bb6b52c6fe09f5ec5410a9a6f6f49c0937919948434be9e7b9e42",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "10",
+      "lang": "pt",
+      "pages": [
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-10.png",
+      "sha256": "628835f7176584c70bc4342fdce770cd7e755db9f026b1340ad6fe98ff40f1b6",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "10",
+      "lang": "en",
+      "pages": [
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-10.png",
+      "sha256": "9ac0b5f739b89fbff399e1107d344757b092e38eef6ddd6c827ee45aa74ba49c",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "11",
+      "lang": "pt",
+      "pages": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-11.png",
+      "sha256": "1b3660282aee74a30fe938dd4e4904230eb6eebfc8ace2aa533e342302519159",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "11",
+      "lang": "en",
+      "pages": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-11.png",
+      "sha256": "f38ae877434d331f8a96cbcdce9b2d12bf39e79c5b7b385e543405d21bb1afc7",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "12",
+      "lang": "pt",
+      "pages": [
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-12.png",
+      "sha256": "f36e4849a51650cbd6b2b317c4488ff871d4ffca3c0c221e041363bc3bbae560",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "12",
+      "lang": "en",
+      "pages": [
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-12.png",
+      "sha256": "b9793b6b0ab3b7d248cb75e39e60748246790168ab2f69d137e48ccbc38020aa",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "13",
+      "lang": "pt",
+      "pages": [
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-13.png",
+      "sha256": "767e5305fdfa758b6dfd527ca12a1e0ad236b7e121df5d329c17c357ca9ded19",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "13",
+      "lang": "en",
+      "pages": [
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-13.png",
+      "sha256": "fd296e8dbef3d91813ebd2ced749a56409e4c34183eb739e3b56f96de329bdf1",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "14",
+      "lang": "pt",
+      "pages": [
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-pt-14.png",
+      "sha256": "4a3de60411a98c8099bb7d12b560d94411d42a4bb263324a21866399052c2292",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    },
+    {
+      "case": "14",
+      "lang": "en",
+      "pages": [
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220
+      ],
+      "sheet": "work/v6/qa/pdf-book-review/case-sheet-en-14.png",
+      "sha256": "1f0129c2c676810688063c440f2d555e4192c6dd10a2ac5a48ede7f44bb27183",
+      "layout": "PASS",
+      "visual_checks": [
+        "No blank pages or cropped content",
+        "Header, footer and navigation remain within page",
+        "Evidence header image and attribution visible",
+        "Architecture nodes/links/legend intact",
+        "Code indentation and last lines retained",
+        "Financial table columns and row boundaries intact"
+      ]
+    }
+  ],
+  "total_pages_observed_in_sheets": 182,
+  "full_size_pages_reviewed": [
+    {
+      "file": "work/v6/qa/pdf-book-review/en-130.png",
+      "lang": "en",
+      "page": 130,
+      "sha256": "efa9715ac710def11ef802a0be0830a61188d88b87926f39b149d2b9d5383ac4"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-156.png",
+      "lang": "en",
+      "page": 156,
+      "sha256": "1f18cff10f8a2e2b4031ce47cad7d392c4dfb48b6dc897d33d814be00969254f"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-138.png",
+      "lang": "pt",
+      "page": 138,
+      "sha256": "6c64d682815512c61fee5e15199a516803f7d85ca29c4eb2cb9cef64b9466cb9"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-151.png",
+      "lang": "en",
+      "page": 151,
+      "sha256": "6e3b2d1824227d1345febdf2855ac61b350fca5b118ec543ce9cb7442f1ce21b"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-132.png",
+      "lang": "pt",
+      "page": 132,
+      "sha256": "78751ae2463cbf1fccd36252c9ff1aefdf12f3a422fc8f3e8802712044ce6601"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-185.png",
+      "lang": "en",
+      "page": 185,
+      "sha256": "6ccc7f0b2d9e88fc5794f0a9eb109d93f81281081996ff8bfd7912cd7443a061"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-208.png",
+      "lang": "pt",
+      "page": 208,
+      "sha256": "ea1de5e5d8504ecec3bedb5c9f5ce6bebfbd5733c5db895fe40d2e8d61ce3b08"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-216.png",
+      "lang": "en",
+      "page": 216,
+      "sha256": "f2b0bfd425a7f40f4868479f19e05dd34886ec6a2cd13fb26738417a8acc8552"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-210.png",
+      "lang": "en",
+      "page": 210,
+      "sha256": "062a3e0b99659a4cf5653843f0da6e0c558eac13a5099b808e896b6698d4c721"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-184.png",
+      "lang": "pt",
+      "page": 184,
+      "sha256": "aa726ef37405ecaadaf94c29805536b15068e5f99a8a2eb7f550f781f3b1bcad"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-146.png",
+      "lang": "pt",
+      "page": 146,
+      "sha256": "c8baecfad2b673fceb51d43865d8341ddeab901e6140af47d1d93e2c2de8a157"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-198.png",
+      "lang": "en",
+      "page": 198,
+      "sha256": "c6c2cb5bd3256b61bd3f2e6ab27ee96b92adf585d6505304c98002c50d74410b"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/pt-203.png",
+      "lang": "pt",
+      "page": 203,
+      "sha256": "5c315ce132600458aeb6c1817285b0d5ad00d21d425f7e7309e718c89254500a"
+    },
+    {
+      "file": "work/v6/qa/pdf-book-review/en-164.png",
+      "lang": "en",
+      "page": 164,
+      "sha256": "b40673b4f9629184cf7fec94abefbfe9e5291ee29e4b2c0c6b01ebedcb8f1c6b"
+    }
+  ],
+  "layout_findings": [],
+  "editorial_findings": [
+    {
+      "priority": 2,
+      "id": "financial-punctuation-spacing",
+      "status": "RESOLVED: corrected financial, roadmap and caption pages visually verified in final render.",
+      "examples": [
+        {
+          "lang": "pt",
+          "page": 138,
+          "text": "assumidos:12 mil,24 mil; evitados;R$90; base,24.000"
+        },
+        {
+          "lang": "en",
+          "page": 151,
+          "text": "hypothetical:60,000,120,000; per payment;R$18; Implementation:R$260,000"
+        },
+        {
+          "lang": "en",
+          "page": 156,
+          "text": "Stated sum:R$981.16"
+        },
+        {
+          "lang": "pt",
+          "page": 203,
+          "text": "anuais:100 mil,250 mil; 0,004,0,008; 32.000-12.000-60.000"
+        }
+      ],
+      "impact": "Crowded financial prose makes scenario boundaries harder to read; code, numeric values and formulas must remain unchanged.",
+      "requested_fix": "Add human spacing after punctuation and between scenario values/operators while preserving localized thousands/decimal separators, URLs, code and identifiers."
+    }
+  ],
+  "notes": [
+    "Initial review covered all182 case08–14 pages in14 contact sheets and14 full-size samples.",
+    "Final rebuild rechecked36 full-size pages: all14 financial pages, all14 roadmaps and8 changed caption/source-table samples.",
+    "Final PDF hashes recorded above; earlier sheet/full-size hashes remain associated with the previous snapshot.",
+    "Standalone diagrams08–14 were independently inspected in visual-diagrams-08-14.json."
+  ],
+  "previous_snapshot_review": {
+    "pdfs": {
+      "pt": {
+        "file": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+        "sha256": "f524daf2481581b9c889c05f9953ba4508ea3f4da06dac0e31ffb1468cc92244",
+        "size_bytes": 29537469
+      },
+      "en": {
+        "file": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+        "sha256": "178bd8da605b99a2704720485fbd0fcddaa380612cbd4ae6fb29d0c17dccb857",
+        "size_bytes": 29503727
+      }
+    },
+    "scope": "Read-only visual review of final PDF cases08–14, both languages, before the requested punctuation-spacing rebuild.",
+    "full_size_pages_reviewed": [
+      {
+        "file": "work/v6/qa/pdf-book-review/en-130.png",
+        "lang": "en",
+        "page": 130,
+        "sha256": "efa9715ac710def11ef802a0be0830a61188d88b87926f39b149d2b9d5383ac4"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-156.png",
+        "lang": "en",
+        "page": 156,
+        "sha256": "1f18cff10f8a2e2b4031ce47cad7d392c4dfb48b6dc897d33d814be00969254f"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-138.png",
+        "lang": "pt",
+        "page": 138,
+        "sha256": "6c64d682815512c61fee5e15199a516803f7d85ca29c4eb2cb9cef64b9466cb9"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-151.png",
+        "lang": "en",
+        "page": 151,
+        "sha256": "6e3b2d1824227d1345febdf2855ac61b350fca5b118ec543ce9cb7442f1ce21b"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-132.png",
+        "lang": "pt",
+        "page": 132,
+        "sha256": "78751ae2463cbf1fccd36252c9ff1aefdf12f3a422fc8f3e8802712044ce6601"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-185.png",
+        "lang": "en",
+        "page": 185,
+        "sha256": "6ccc7f0b2d9e88fc5794f0a9eb109d93f81281081996ff8bfd7912cd7443a061"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-208.png",
+        "lang": "pt",
+        "page": 208,
+        "sha256": "ea1de5e5d8504ecec3bedb5c9f5ce6bebfbd5733c5db895fe40d2e8d61ce3b08"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-216.png",
+        "lang": "en",
+        "page": 216,
+        "sha256": "f2b0bfd425a7f40f4868479f19e05dd34886ec6a2cd13fb26738417a8acc8552"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-210.png",
+        "lang": "en",
+        "page": 210,
+        "sha256": "062a3e0b99659a4cf5653843f0da6e0c558eac13a5099b808e896b6698d4c721"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-184.png",
+        "lang": "pt",
+        "page": 184,
+        "sha256": "aa726ef37405ecaadaf94c29805536b15068e5f99a8a2eb7f550f781f3b1bcad"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-146.png",
+        "lang": "pt",
+        "page": 146,
+        "sha256": "c8baecfad2b673fceb51d43865d8341ddeab901e6140af47d1d93e2c2de8a157"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-198.png",
+        "lang": "en",
+        "page": 198,
+        "sha256": "c6c2cb5bd3256b61bd3f2e6ab27ee96b92adf585d6505304c98002c50d74410b"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/pt-203.png",
+        "lang": "pt",
+        "page": 203,
+        "sha256": "5c315ce132600458aeb6c1817285b0d5ad00d21d425f7e7309e718c89254500a"
+      },
+      {
+        "file": "work/v6/qa/pdf-book-review/en-164.png",
+        "lang": "en",
+        "page": 164,
+        "sha256": "b40673b4f9629184cf7fec94abefbfe9e5291ee29e4b2c0c6b01ebedcb8f1c6b"
+      }
+    ],
+    "notes": [
+      "Fourteen contact sheets and fourteen selected full-size pages inspected via view_image.",
+      "Standalone diagrams08–14 had also been inspected at full resolution in visual-diagrams-08-14.json.",
+      "No production artifact modified during this PDF review.",
+      "Report hashes identify the inspected snapshot; after spacing rebuild, changed pages need a directed recheck and final hash update."
+    ]
+  },
+  "final_directed_recheck": {
+    "reviewed_at_utc": "2026-10-25T12:51:16.276995+00:00",
+    "pages": [
+      {
+        "lang": "pt",
+        "page": 138,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-138.png",
+        "sha256": "7c41ef2c47efeda426d5f51db0c270e1b5e3dc4f478b5aeb1e6697f6d0172f5c",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 138,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-138.png",
+        "sha256": "3221c712e09b8c990318b142e0cb845fcb6672740de353cec4ee3e4c0e40be76",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 151,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-151.png",
+        "sha256": "798d0249a32a31562048fef1668bf721853581e608c880ed2bb733d60bc0ee4b",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 151,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-151.png",
+        "sha256": "87c037c00be5287456549f604ffe3dc10ed158962299a8d554b872ab64d3ff64",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 164,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-164.png",
+        "sha256": "ebc50b83d374224576ecd1578cf370b173d14f953961d290c5d3246738e76f23",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 164,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-164.png",
+        "sha256": "c46e80f4adfed9fcea6b6316c54ecb7cff4ff5c3a8c576f6cc47acf0cfe800f4",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 177,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-177.png",
+        "sha256": "5c7594b521417277aa9adfff99d101f6835b0c3aebda032a20829180d556e536",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 177,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-177.png",
+        "sha256": "a4a98cf4576cdc2ad305c0fe8c6003e4ab84dc6204dd526a4b2f158914e4eb1d",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 190,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-190.png",
+        "sha256": "4bfa5457255b5f862f1d846deb42e3b22aefa9607ba71c3676a607caac312430",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 190,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-190.png",
+        "sha256": "a2dce742a8815f23dd70fa7ff404ade04c8af5e0ef0ad0c9f39672874f362616",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 203,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-203.png",
+        "sha256": "cb8c6875424da54269204b05443bedb9c532fbf2bd81377f1385c87f7d5f9dcd",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 203,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-203.png",
+        "sha256": "6ba446e4e9d1725672b07d990d639b7b847646b20c8e552d994b5c1c48c48c2b",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 216,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/pt-216.png",
+        "sha256": "0b39b19feaff38c4d476c1deb12bf8cd5f62cf0a13522304551f9ab8772d1dbf",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 216,
+        "kind": "financial",
+        "file": "work/v6/qa/pdf-book-review/en-216.png",
+        "sha256": "b20889e442ae6e4112caa2358ab24f0b35fb5a7942fd913d023b5918a047a8f7",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 139,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-139.png",
+        "sha256": "fac4c111118681b95792edc34a8eafdb8fd8f6b2367846aae5198e7340d22cd9",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 139,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-139.png",
+        "sha256": "89efebed2602088139bf77b942b0d32cc3f360f4921ec2abe1f1eee0eb419339",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 152,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-152.png",
+        "sha256": "ae552c00ca51b589620cb30d317e30d9f1b390a0c97641924c508dccfa5c1210",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 152,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-152.png",
+        "sha256": "05e10064bed20fbb3be7939a2c875a4e0ba3f3e333dbb37be99deae8097587e9",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 165,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-165.png",
+        "sha256": "2640d76823e11e33db21cf11dd6f3fe594f6f7cdd46e6bcfb75c95008f5eef92",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 165,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-165.png",
+        "sha256": "a49831bd5e256b5e43b125276112befb6daf41a270d2e1a3b27fd9098d8b3c4e",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 178,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-178.png",
+        "sha256": "10459fcca2d64ffa8f0e3522650f5fa6db4dd4cf366d13acb0d06eda69740135",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 178,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-178.png",
+        "sha256": "674f0d85959646530f273af2d6beca0876a9f563e5c3911526657265d2fb80ca",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 191,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-191.png",
+        "sha256": "21bef79ac5bd587b03ce7927c8fc0bae04b1d876a0058d46e9916ae992ac37a4",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 191,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-191.png",
+        "sha256": "3771535526c399456d1c3aa3f303921c3e344f7ea9d32f70165edb0527a0beb4",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 204,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-204.png",
+        "sha256": "45ff8dee00eef5b35f9370c9f17d2ab2890a74e962d71bdab210d7a30e7f6160",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 204,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-204.png",
+        "sha256": "134c1ead4808dc2f3cc8ec35b0d3ceb4ee99ada74ed9b053cbd8d2210a11ff90",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 217,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/pt-217.png",
+        "sha256": "494500c32292da5415f0ded705b2014d2dba799230e765eff1a5a634a3d70b6b",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 217,
+        "kind": "roadmap",
+        "file": "work/v6/qa/pdf-book-review/en-217.png",
+        "sha256": "14afb74ce31549f7b612f7f6aeef859c608c6e25103881583507bd975754df6e",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 136,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/pt-136.png",
+        "sha256": "20f9b8f23cadac21504a21709811db962e5e2d88acdf5ab95bfa8d99acdd6c7e",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 136,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/en-136.png",
+        "sha256": "0d8c9d31f9e67adb1f0e17c4b431d3b683fe3742b71a841cdc58ce0b8197cbb0",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 148,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/pt-148.png",
+        "sha256": "01a2272b842b0b884afaf6c61e4a0d8451c66691fbaa16765febfe854f3234b7",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 148,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/en-148.png",
+        "sha256": "7b7f7b47d56031a019b1cd730c83cc61dd7cf38e1357c2f93c251ad29b5fd9d2",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 156,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/pt-156.png",
+        "sha256": "b458f8fa53da91a4217c368576ae0b16f7eae3a8026e93e19cd7eaf7dba9aff0",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 156,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/en-156.png",
+        "sha256": "51aa9f8395d109ec3c04d516631dde9bf6cc88acf4ab9f55f82c55daace671ca",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "pt",
+        "page": 214,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/pt-214.png",
+        "sha256": "a4eafa6acbb6accc66d37d7dfd2d686d148e4af40edbff663d4dec44956ee98b",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      },
+      {
+        "lang": "en",
+        "page": 214,
+        "kind": "caption_or_source_table",
+        "file": "work/v6/qa/pdf-book-review/en-214.png",
+        "sha256": "ea2a0e0a8d797410ca4effb77dd2c2301dcec56bf27906fb1f1647f7d49e6380",
+        "status": "PASS",
+        "method": "Actual full-size rendered PNG inspected with view_image"
+      }
+    ],
+    "pages_count": 36,
+    "financial_pages": 14,
+    "roadmap_pages": 14,
+    "caption_and_table_samples": 8,
+    "checks": [
+      "Punctuation and scenario enumeration spacing corrected in both languages.",
+      "Operators retain intended formula grouping and localized numeric separators.",
+      "Roadmap plus signs and responsibilities separated clearly; table wrapping stays within cells.",
+      "Sampled literal-code captions and evidence table labels have corrected spacing.",
+      "No clipping, overlap, broken glyph or missing content introduced by reflow."
+    ]
+  },
+  "unresolved_findings": []
+}

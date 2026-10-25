@@ -1,149 +1,183 @@
-"""Synthetic support routing with event-time windows and abstention."""
+"""Versioned Nu+ campaign model. External proposal, not the bank's policy engine.
+Rules are a deliberately bounded illustration of the cited campaign: full
+eligibility, custody exceptions and maintenance checks require integration.
+Signed custody events, durable transactions and real payment rails are absent.
+"""
 from dataclasses import dataclass
-import json
-import math
+from datetime import date
+from threading import RLock
+from concurrent.futures import ThreadPoolExecutor
 import unittest
+
+def identifier(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('nonblank string identity required')
+    return value
+
 
 
 @dataclass(frozen=True)
-class Event:
-    id: str
-    at: int
-    received: int
-    intent: str
-    weight: int
+class Transfer:
+    event_id: str
+    owner: str
+    settled: date
+    signed_cents: int
 
 
-def evidence(events, now, window=180, max_age=30):
-    if any(type(x) is not int for x in (now, window, max_age)):
-        raise ValueError("integer synthetic time required")
-    if window <= 0 or max_age < 0:
-        raise ValueError("invalid time bounds")
-    unique = {}
-    for event in events:
-        if type(event.weight) is not int or event.weight < 0:
-            raise ValueError("non-negative integer weight required")
-        if type(event.at) is not int or type(event.received) is not int:
-            raise ValueError("integer synthetic timestamps required")
-        if event.received > now or event.at > now:
-            continue
-        if not now - window < event.at <= now:
-            continue
-        if now - event.received > max_age:
-            continue
-        previous = unique.get(event.id)
-        if previous is not None and previous != event:
-            raise ValueError("conflicting event")
-        unique[event.id] = event
-    scores = {}
-    for event in unique.values():
-        scores[event.intent] = scores.get(event.intent, 0) + event.weight
-    return scores
+class Campaign:
+    def __init__(self, owner):
+        identifier(owner)
+        self.owner, self.events, self.paid = owner, {}, {}
+        self.rule_version, self.lock = 'nuplus-demo-v1', RLock()
+        self.frozen_total = None
+
+    def record(self, event, authenticated_source):
+        with self.lock:
+            identifier(event.event_id)
+            identifier(event.owner)
+            if type(event.settled) is not date:
+                raise ValueError('invalid settlement date')
+            if authenticated_source != 'custody' or event.owner != self.owner:
+                raise PermissionError('custody scope')
+            if not event.event_id or type(event.signed_cents) is not int:
+                raise ValueError('invalid event')
+            if event.event_id in self.events and self.events[event.event_id] != event:
+                raise ValueError('event identity conflict')
+            self.events[event.event_id] = event
+
+    # BOOK CORE START
+    def schedule(self, actor, active_subscription):
+        with self.lock:
+            identifier(actor)
+            if actor != self.owner:
+                raise PermissionError('account scope')
+            if active_subscription is not True:
+                return {'state': 'INELIGIBLE', 'total_cents': 0, 'dues': ()}
+            net = sum(e.signed_cents for e in self.events.values()
+                      if date(2026, 3, 1) <= e.settled <= date(2026, 5, 29))
+            total = min(max(net, 0) // 3_000_000 * 18_000, 180_000)
+            dues = tuple(date(2026 + (5 + i) // 12, (5 + i) % 12 + 1, 10)
+                         for i in range(10)) if total else ()
+            return {'state': 'ELIGIBLE' if total else 'BELOW_THRESHOLD',
+                    'total_cents': total, 'dues': dues}
+    def pay(self, actor, installment, today, balance_maintained=True,
+            active_subscription=True):
+        with self.lock:
+            plan = self.schedule(actor, active_subscription)
+            if type(installment) is not int or not 0 <= installment < 10:
+                raise ValueError('installment range')
+            if installment in self.paid:
+                return self.paid[installment]
+            if type(today) is not date or not plan['dues']:
+                raise ValueError('date or eligibility invalid')
+            if today < plan['dues'][installment]:
+                raise ValueError('not due')
+            if balance_maintained is not True:
+                raise ValueError('maintenance review required')
+            if self.frozen_total not in (None, plan['total_cents']):
+                raise ValueError('plan changed; reconcile')
+            self.frozen_total = plan['total_cents']
+            self.paid[installment] = self.frozen_total // 10
+            return self.paid[installment]
+    # BOOK CORE END
 
 
-def route(scores, available, urgent=False, threshold=0.75, min_weight=4):
-    if type(urgent) is not bool:
-        raise ValueError("urgent must be boolean")
-    if urgent:
-        return {"queue": "human_urgent", "reason": "declared_urgency"}
-    validate_ranking(scores, threshold, min_weight)
-    total = sum(scores.values())
-    if total < min_weight:
-        return {"queue": "human_general", "reason": "insufficient"}
-    ranked = sorted(scores.items(), key=lambda x: (-x[1], x[0]))
-    intent, weight = ranked[0]
-    confidence = weight / total
-    if confidence < threshold or intent not in available:
-        return {"queue": "human_general", "reason": "abstention"}
-    return {"queue": intent, "reason": "ranked", "share": confidence}
+class CampaignTests(unittest.TestCase):
+    def setUp(self):
+        self.c = Campaign('owner')
+        self.e = Transfer('in', 'owner', date(2026, 5, 29), 3_000_000)
+        self.c.record(self.e, 'custody')
 
-
-def validate_ranking(scores, threshold, min_weight):
-    if (type(threshold) not in (int, float)
-            or not math.isfinite(threshold) or not 0 <= threshold <= 1):
-        raise ValueError("invalid threshold")
-    if type(min_weight) is not int or min_weight <= 0:
-        raise ValueError("positive minimum evidence required")
-    if any(type(x) is not int or x < 0 for x in scores.values()):
-        raise ValueError("non-negative integer weights required")
-
-
-class RoutingTests(unittest.TestCase):
-    def test_clear(self):
-        self.assertEqual(route({"card": 8, "pix": 1}, {"card"})[
-            "queue"], "card")
-
-    def test_uncertain(self):
-        self.assertEqual(route({"card": 5, "pix": 5}, {"card"})[
-            "queue"], "human_general")
-
-    def test_empty(self):
-        self.assertEqual(route({}, {"card"})["reason"], "insufficient")
-
-    def test_urgent_overrides_prediction(self):
-        self.assertEqual(route({"card": 99}, {"card"}, True)[
-            "queue"], "human_urgent")
-
-    def test_unavailable(self):
-        self.assertEqual(route({"card": 8}, set())["reason"],
-                         "abstention")
-
-    def test_duplicate(self):
-        e = Event("a", 99, 99, "pix", 4)
-        self.assertEqual(evidence([e, e], 100), {"pix": 4})
-
-    def test_conflict(self):
+    # BOOK TEST START
+    def test_complaint_date_is_before_first_due_date(self):
+        plan = self.c.schedule('owner', True)
+        self.assertEqual(plan['state'], 'ELIGIBLE')
+        self.assertEqual(plan['dues'][0], date(2026, 6, 10))
         with self.assertRaises(ValueError):
-            evidence([Event("a", 99, 99, "pix", 4),
-                      Event("a", 99, 99, "card", 4)], 100)
+            self.c.pay('owner', 0, date(2026, 6, 1))
+        self.assertEqual(self.c.paid, {})
 
-    def test_future(self):
-        self.assertEqual(evidence([Event("a", 101, 101, "pix", 4)],
-                                  100), {})
+    def test_outflow_changes_net_eligibility(self):
+        out = Transfer('out', 'owner', date(2026, 5, 29), -1)
+        self.c.record(out, 'custody')
+        self.assertEqual(self.c.schedule('owner', True)['total_cents'], 0)
 
-    def test_old_event_arriving_now(self):
-        self.assertEqual(evidence([Event("a", 1, 200, "pix", 4)],
-                                  200), {})
+    def test_concurrent_payment_is_once_per_installment(self):
+        def pay(_):
+            return self.c.pay('owner', 0, date(2026, 6, 10))
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(pay, range(20)))
+        self.assertEqual(set(results), {1800})
+        self.assertEqual(sum(self.c.paid.values()), 1800)
+    # BOOK TEST END
 
-    def test_old_receipt(self):
-        self.assertEqual(evidence([Event("a", 90, 90, "pix", 4)],
-                                  150), {})
+    def test_duplicate_custody_event(self):
+        self.c.record(self.e, 'custody')
+        self.assertEqual(self.c.schedule('owner', True)['total_cents'], 18_000)
 
-    def test_negative_weight(self):
+    def test_conflicting_event_rejected(self):
         with self.assertRaises(ValueError):
-            evidence([Event("a", 99, 99, "pix", -1)], 100)
+            self.c.record(Transfer('in', 'owner', self.e.settled, 1), 'custody')
 
-    def test_low_support(self):
-        self.assertEqual(route({"card": 1}, {"card"})["reason"],
-                         "insufficient")
+    def test_wrong_owner_and_source(self):
+        for event, source in [(self.e, 'app'),
+                              (Transfer('x', 'other', self.e.settled, 1), 'custody')]:
+            with self.assertRaises(PermissionError):
+                self.c.record(event, source)
+        with self.assertRaises(PermissionError):
+            self.c.schedule('other', True)
 
-    def test_nonfinite_or_fractional_weights(self):
-        for value in (float("nan"), float("inf"), -1, 1.5, True):
+    def test_campaign_bounds_and_cap(self):
+        self.c.record(Transfer('early', 'owner', date(2026, 2, 28), 90_000_000), 'custody')
+        self.assertEqual(self.c.schedule('owner', True)['total_cents'], 18_000)
+        self.c.record(Transfer('valid', 'owner', date(2026, 3, 1), 90_000_000), 'custody')
+        self.assertEqual(self.c.schedule('owner', True)['total_cents'], 180_000)
+
+    def test_subscription_and_maintenance(self):
+        self.assertEqual(self.c.schedule('owner', False)['state'], 'INELIGIBLE')
+        with self.assertRaises(ValueError):
+            self.c.pay('owner', 0, date(2026, 6, 10), False)
+        self.assertEqual(self.c.paid, {})
+
+    def test_inactive_subscription_cannot_create_payment(self):
+        with self.assertRaises(ValueError):
+            self.c.pay('owner', 0, date(2026, 6, 10), active_subscription=False)
+        self.assertEqual(self.c.paid, {})
+
+    def test_late_custody_change_requires_plan_review(self):
+        self.c.pay('owner', 0, date(2026, 6, 10))
+        self.c.record(Transfer('late', 'owner', self.e.settled, 3_000_000), 'custody')
+        with self.assertRaises(ValueError):
+            self.c.pay('owner', 1, date(2026, 7, 10))
+        self.assertEqual(sum(self.c.paid.values()), 1800)
+
+    def test_reads_and_writes_share_lock(self):
+        def action(i):
+            self.c.record(Transfer(str(i), 'owner', self.e.settled, 1), 'custody')
+            return self.c.schedule('owner', True)['total_cents']
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            self.assertEqual(set(pool.map(action, range(100))), {18_000})
+
+    def test_final_due_in_march(self):
+        self.assertEqual(self.c.schedule('owner', True)['dues'][-1], date(2027, 3, 10))
+
+    def test_negative_net_cannot_create_debt(self):
+        self.c.record(Transfer('out', 'owner', self.e.settled, -9_000_000), 'custody')
+        self.assertEqual(self.c.schedule('owner', True)['total_cents'], 0)
+
+
+    def test_missing_owner_rejected_before_state(self):
+        for value in (None, '', '  ', True, 1):
             with self.assertRaises(ValueError):
-                route({"card": value}, {"card"})
+                Campaign(value)
+
+    def test_invalid_transfer_identity_preserves_events(self):
+        for value in (None, '', '  ', True, 1):
+            event = Transfer(value, 'owner', self.e.settled, 3_000_000)
             with self.assertRaises(ValueError):
-                evidence([Event("a", 99, 99, "card", value)], 100)
+                self.c.record(event, 'custody')
+        self.assertEqual(len(self.c.events), 1)
+        self.assertEqual(self.c.paid, {})
 
-    def test_invalid_policy(self):
-        for threshold in (float("nan"), -0.1, 1.1):
-            with self.assertRaises(ValueError):
-                route({"card": 8}, {"card"}, threshold=threshold)
-        with self.assertRaises(ValueError):
-            route({}, set(), min_weight=0)
-        with self.assertRaises(ValueError):
-            route({}, set(), urgent="false")
-
-    def test_invalid_timestamps(self):
-        with self.assertRaises(ValueError):
-            evidence([Event("a", float("nan"), 99, "card", 4)], 100)
-        with self.assertRaises(ValueError):
-            evidence([], 100, window=0)
-
-
-if __name__ == "__main__":
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(RoutingTests)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    print(json.dumps({"clear": route({"card": 8, "pix": 1}, {"card"}),
-                      "uncertain": route({"card": 5, "pix": 5},
-                                         {"card", "pix"})}, indent=2))
-    raise SystemExit(not result.wasSuccessful())
+if __name__ == '__main__':
+    unittest.main()

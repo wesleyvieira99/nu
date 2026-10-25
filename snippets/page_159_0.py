@@ -1,22 +1,28 @@
-def export_record(purchase, subject, secret):
-    if purchase.owner != subject:
-        raise PermissionError('objeto não autorizado')
-    if purchase.status not in LABELS:
-        raise ValueError('estado desconhecido')
-    if type(purchase.amount_cents) is not int or purchase.amount_cents <= 0:
-        raise ValueError('centavos inteiros positivos')
-    if purchase.revision < 1:
-        raise ValueError('revisão inválida')
-    body = {
-        'kind': 'synthetic-purchase-record',
-        'purchase_id': purchase.purchase_id,
-        'revision': purchase.revision,
-        'amount_cents': purchase.amount_cents,
-        'currency': 'BRL',
-        'merchant': purchase.merchant,
-        'status': purchase.status,
-        'label': LABELS[purchase.status],
-        'notice': 'Não é recibo fiscal nem prova de quitação da fatura.'
-    }
-    signature = hmac.new(secret, canonical(body), hashlib.sha256).hexdigest()
-    return {'body': body, 'integrity_tag': signature}
+    def pay(self, key, amount, merchant, timeout_after_provider=False):
+        if not isinstance(key, str) or not key.strip():
+            raise ValueError('nonempty intent identity required')
+        if type(amount) is not int or amount <= 0 or not merchant:
+            raise ValueError('invalid intent')
+        payload = json.dumps([amount, merchant])
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            old = self.db.execute('SELECT payload,receipt FROM intents WHERE key=?',
+                                  (key,)).fetchone()
+            if old and old[0] != payload:
+                raise ValueError('intent conflict')
+            if old and old[1]:
+                return old[1]
+            self.db.execute('INSERT OR IGNORE INTO intents VALUES(?,?,NULL)',
+                            (key, payload))
+        receipt = self.provider.charge(key, payload)
+        if timeout_after_provider:
+            raise TimeoutError('provider committed; local outcome unknown')
+        with self.db:
+            self.db.execute('UPDATE intents SET receipt=? WHERE key=?',
+                            (receipt, key))
+        return receipt
+
+    def state(self, key):
+        row = self.db.execute('SELECT receipt FROM intents WHERE key=?',
+                              (key,)).fetchone()
+        return 'absent' if row is None else ('confirmed' if row[0] else 'unknown')

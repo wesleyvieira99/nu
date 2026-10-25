@@ -1,167 +1,158 @@
-"""Independent synthetic release gate. No mobile SDK or production data."""
+"""Caixinha withdrawal model, external proposal; synthetic data only.
+No bank integration. RLock protects one process, not distributed writers.
+Production needs an authorized ledger transaction, durable idempotency,
+account-level access control, reconciliation and bounded snapshot retention.
+"""
 from dataclasses import dataclass
-import json
-import math
+from threading import RLock
+from concurrent.futures import ThreadPoolExecutor
 import unittest
+
+def identifier(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('nonblank string identity required')
+    return value
+
 
 
 @dataclass(frozen=True)
-class Attempt:
-    session: str
-    cohort: str
-    version: str
-    completed: bool
-    latency_ms: int
+class Snapshot:
+    owner: str
+    balance_cents: int
+    version: int
+    observed_at: int
 
 
-def summarize(attempts):
-    unique = {}
-    for row in attempts:
-        if type(row.latency_ms) is not int or row.latency_ms < 0:
-            raise ValueError("latency must be non-negative integer ms")
-        if type(row.completed) is not bool:
-            raise ValueError("completed must be boolean")
-        key = (row.session, row.cohort, row.version)
-        previous = unique.get(key)
-        if previous is not None and previous != row:
-            raise ValueError("conflicting terminal event")
-        unique[key] = row
-    rows = list(unique.values())
-    if not rows:
-        return {"n": 0, "rate": None, "p95": None}
-    delays = sorted(row.latency_ms for row in rows)
-    rank = max(0, (95 * len(delays) + 99) // 100 - 1)
-    return {"n": len(rows),
-            "rate": sum(row.completed for row in rows) / len(rows),
-            "p95": delays[rank]}
+class Withdrawals:
+    def __init__(self, owner, balance_cents):
+        identifier(owner)
+        if type(balance_cents) is not int or balance_cents < 0:
+            raise ValueError('invalid balance')
+        self.owner, self.balance = owner, balance_cents
+        self.version, self.receipts, self.lock = 1, {}, RLock()
+
+    def snapshot(self, now):
+        with self.lock:
+            return Snapshot(self.owner, self.balance, self.version, now)
+
+    # BOOK CORE START
+    def withdraw(self, actor, key, cents, snapshot, now, ledger_online=True):
+        with self.lock:
+            for value in (actor, key, snapshot.owner):
+                identifier(value)
+            if type(now) is not int or now < 0:
+                raise ValueError('invalid clock')
+            if actor != self.owner or snapshot.owner != actor:
+                raise PermissionError('account scope')
+            if not key or type(cents) is not int or cents <= 0:
+                raise ValueError('invalid command')
+            command = (actor, cents)
+            if key in self.receipts:
+                prior_command, receipt = self.receipts[key]
+                if prior_command != command:
+                    raise ValueError('idempotency conflict')
+                return receipt
+            if not ledger_online:
+                raise RuntimeError('authority unavailable')
+            if not 0 <= now - snapshot.observed_at <= 30:
+                raise ValueError('snapshot expired')
+            if snapshot.version != self.version:
+                raise ValueError('refresh required')
+            if cents > self.balance:
+                raise ValueError('insufficient funds')
+            self.balance -= cents
+            self.version += 1
+            receipt = (key, cents, self.version)
+            self.receipts[key] = (command, receipt)
+            return receipt
+    # BOOK CORE END
 
 
-def validate_stats(stats):
-    if type(stats["n"]) is not int or stats["n"] < 0:
-        raise ValueError("invalid sample size")
-    if stats["n"] == 0:
-        if stats["rate"] is not None or stats["p95"] is not None:
-            raise ValueError("empty sample must have absent metrics")
-        return
-    for name in ("rate", "p95"):
-        value = stats[name]
-        if type(value) not in (int, float) or not math.isfinite(value):
-            raise ValueError("metrics must be finite numbers")
-    if not 0 <= stats["rate"] <= 1 or stats["p95"] < 0:
-        raise ValueError("metrics outside domain")
-
-
-def gate(baseline, candidate, telemetry_complete=True, min_n=50):
-    if type(min_n) is not int or min_n <= 0:
-        raise ValueError("min_n must be positive integer")
-    if type(telemetry_complete) is not bool:
-        raise ValueError("telemetry_complete must be boolean")
-    validate_stats(baseline)
-    validate_stats(candidate)
-    if not telemetry_complete:
-        return "HOLD_TELEMETRY"
-    if baseline["n"] < min_n or candidate["n"] < min_n:
-        return "HOLD_SAMPLE"
-    if candidate["rate"] < baseline["rate"] - 0.03:
-        return "PAUSE_SUCCESS"
-    if candidate["p95"] > baseline["p95"] * 1.25:
-        return "PAUSE_LATENCY"
-    return "ELIGIBLE_FOR_REVIEW"
-
-
-def fixture(version, successes=98, latency=300):
-    return [Attempt(str(i), "wifi-mid", version,
-                    i < successes, latency) for i in range(100)]
-
-
-class ReleaseTests(unittest.TestCase):
+class WithdrawalTests(unittest.TestCase):
     def setUp(self):
-        self.base = summarize(fixture("stable"))
+        self.w = Withdrawals('synthetic-owner', 10_000)
+        self.s = self.w.snapshot(100)
 
-    def test_healthy(self):
-        self.assertEqual(gate(self.base, self.base),
-                         "ELIGIBLE_FOR_REVIEW")
+    # BOOK TEST START
+    def test_cache_does_not_authorize(self):
+        with self.assertRaises(RuntimeError):
+            self.w.withdraw(self.s.owner, 'a', 1000, self.s, 101, False)
+        self.assertEqual(self.w.balance, 10_000)
+        self.assertEqual(self.w.receipts, {})
 
-    def test_success_regression(self):
-        bad = summarize(fixture("next", successes=90))
-        self.assertEqual(gate(self.base, bad), "PAUSE_SUCCESS")
+    def test_retry_after_commit_returns_receipt(self):
+        first = self.w.withdraw(self.s.owner, 'a', 1000, self.s, 101)
+        retry = self.w.withdraw(self.s.owner, 'a', 1000, self.s, 900, False)
+        self.assertEqual(first, retry)
+        self.assertEqual(self.w.balance, 9000)
 
-    def test_tail_regression(self):
-        bad = summarize(fixture("next", latency=500))
-        self.assertEqual(gate(self.base, bad), "PAUSE_LATENCY")
+    def test_parallel_commands_cannot_spend_same_version(self):
+        def attempt(key):
+            try:
+                return self.w.withdraw(self.s.owner, key, 7000, self.s, 101)
+            except ValueError:
+                return None
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            results = list(pool.map(attempt, ['a', 'b']))
+        self.assertEqual(sum(x is not None for x in results), 1)
+        self.assertEqual(self.w.balance, 3000)
+    # BOOK TEST END
 
-    def test_missing_telemetry(self):
-        self.assertEqual(gate(self.base, self.base, False),
-                         "HOLD_TELEMETRY")
+    def test_scope_checked_before_receipt(self):
+        self.w.withdraw(self.s.owner, 'a', 1000, self.s, 101)
+        with self.assertRaises(PermissionError):
+            self.w.withdraw('other', 'a', 1000, self.s, 102)
 
-    def test_small_sample(self):
-        tiny = summarize(fixture("next")[:10])
-        self.assertEqual(gate(self.base, tiny), "HOLD_SAMPLE")
-
-    def test_empty(self):
-        self.assertIsNone(summarize([])["rate"])
-
-    def test_duplicate(self):
-        rows = fixture("next")
-        self.assertEqual(summarize(rows + rows), summarize(rows))
-
-    def test_conflict(self):
-        rows = fixture("next")
-        rows.append(Attempt("0", "wifi-mid", "next", False, 300))
+    def test_conflicting_retry(self):
+        self.w.withdraw(self.s.owner, 'a', 1000, self.s, 101)
         with self.assertRaises(ValueError):
-            summarize(rows)
+            self.w.withdraw(self.s.owner, 'a', 2000, self.s, 101)
 
-    def test_negative_latency(self):
-        with self.assertRaises(ValueError):
-            summarize([Attempt("x", "a", "v", True, -1)])
-
-    def test_nearest_rank(self):
-        rows = [Attempt(str(i), "a", "v", True, i)
-                for i in range(1, 101)]
-        self.assertEqual(summarize(rows)["p95"], 95)
+    def test_expired_and_future_snapshot(self):
+        for now in (99, 131):
+            with self.assertRaises(ValueError):
+                self.w.withdraw(self.s.owner, str(now), 1000, self.s, now)
+        self.assertEqual(self.w.balance, 10_000)
 
     def test_exact_boundary(self):
-        next_stats = dict(self.base, rate=0.95, p95=375)
-        self.assertEqual(gate(self.base, next_stats),
-                         "ELIGIBLE_FOR_REVIEW")
+        self.w.withdraw(self.s.owner, 'a', 10_000, self.s, 130)
+        self.assertEqual(self.w.balance, 0)
 
-    def test_versions_are_distinct(self):
-        rows = fixture("a") + fixture("b")
-        self.assertEqual(summarize(rows)["n"], 200)
-
-    def test_nonfinite_stats_fail_closed(self):
-        for name in ("rate", "p95"):
-            for value in (float("nan"), float("inf"), -float("inf")):
-                with self.subTest(name=name, value=value):
-                    with self.assertRaises(ValueError):
-                        gate(self.base, dict(self.base, **{name: value}))
-
-    def test_invalid_raw_types(self):
-        for done, delay in (("false", 2), (1, 2),
-                            (True, float("nan")), (True, True)):
+    def test_invalid_amounts_never_mutate(self):
+        for cents in (True, 1.1, 0, -1, 10_001):
             with self.assertRaises(ValueError):
-                summarize([Attempt("a", "b", "v", done, delay)])
+                self.w.withdraw(self.s.owner, 'a', cents, self.s, 101)
+        self.assertEqual(self.w.balance, 10_000)
 
-    def test_invalid_sample_and_policy(self):
-        for stats in (dict(self.base, n=-1), dict(self.base, rate=1.1),
-                      dict(self.base, p95=-1), dict(self.base, n=True)):
+    def test_unavailable_retry_can_later_succeed(self):
+        with self.assertRaises(RuntimeError):
+            self.w.withdraw(self.s.owner, 'a', 1000, self.s, 101, False)
+        self.w.withdraw(self.s.owner, 'a', 1000, self.s, 102)
+        self.assertEqual(len(self.w.receipts), 1)
+
+    def test_other_snapshot_owner(self):
+        wrong = Snapshot('other', 10_000, 1, 100)
+        with self.assertRaises(PermissionError):
+            self.w.withdraw(self.s.owner, 'a', 1000, wrong, 101)
+
+
+    def test_invalid_clock_has_no_effect(self):
+        for now in (float('nan'), float('inf'), True, -1):
             with self.assertRaises(ValueError):
-                gate(self.base, stats)
-        with self.assertRaises(ValueError):
-            gate(self.base, self.base, min_n=0)
-        with self.assertRaises(ValueError):
-            gate(self.base, self.base, telemetry_complete="false")
+                self.w.withdraw(self.s.owner, 'a', 1000, self.s, now)
+        self.assertEqual(self.w.balance, 10_000)
 
-    def test_empty_sample_holds(self):
-        self.assertEqual(gate(self.base, summarize([])), "HOLD_SAMPLE")
+    def test_missing_owner_rejected_before_state(self):
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                Withdrawals(value, 100)
 
+    def test_invalid_command_key_has_no_effect(self):
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                self.w.withdraw(self.s.owner, value, 100, self.s, 101)
+        self.assertEqual(self.w.balance, 10_000)
+        self.assertEqual(self.w.receipts, {})
 
-if __name__ == "__main__":
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(ReleaseTests)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    base = summarize(fixture("stable"))
-    print(json.dumps({"baseline": base,
-                      "healthy": gate(base, base),
-                      "regression": gate(base, summarize(
-                          fixture("next", successes=90)))}, indent=2))
-    raise SystemExit(not result.wasSuccessful())
+if __name__ == '__main__':
+    unittest.main()

@@ -1,0 +1,10 @@
+{
+  "schema": "redemption-preview.v1",
+  "quote_id": "synthetic-quote",
+  "choice": "cash",
+  "points_consumed_minor": 1907136,
+  "cash_received_cents": 57791,
+  "points_remaining_minor": 0,
+  "balance_version": 1,
+  "irreversible_after_confirmation": true
+}

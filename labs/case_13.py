@@ -1,109 +1,158 @@
-"""Caso 13: governança sintética; não cria nem apaga bancos de dados."""
-from dataclasses import dataclass, replace
+"""Synthetic global credit and per-card budget; not a Nubank risk engine.
+
+Budgets here are lifetime synthetic limits, not a claim about product periods.
+SQLite serializes global reservations. Owner is trusted authenticated context.
+Production needs fraud controls, issuer/network integration and reserve expiry.
+"""
+import sqlite3
+import tempfile
 import threading
 import unittest
+from pathlib import Path
 
 
-@dataclass(frozen=True)
-class Resource:
-    owner: str
-    revision: int = 1
-    hold: bool = False
-    archived: bool = False
+class Credit:
+    def __init__(self, path):
+        self.db = sqlite3.connect(path, timeout=5)
+        self.db.executescript('''
+          CREATE TABLE IF NOT EXISTS account(owner TEXT PRIMARY KEY NOT NULL, free INTEGER);
+          CREATE TABLE IF NOT EXISTS cards(id TEXT PRIMARY KEY NOT NULL,owner TEXT,
+            cap INTEGER,spent INTEGER);
+          CREATE TABLE IF NOT EXISTS holds(id TEXT PRIMARY KEY NOT NULL,card TEXT,cents INTEGER);
+        ''')
+
+    def seed(self):
+        with self.db:
+            self.db.execute("INSERT INTO account VALUES('owner',50000)")
+            self.db.executemany('INSERT INTO cards VALUES(?,?,?,0)',
+                                [('a', 'owner', 80000), ('b', 'owner', 80000)])
+
+    def preview(self, owner, card):
+        row = self.db.execute('SELECT a.free,c.cap-c.spent FROM cards c '
+            'JOIN account a ON a.owner=c.owner WHERE c.id=? AND c.owner=?',
+            (card, owner)).fetchone()
+        if not row:
+            raise PermissionError('not owned')
+        return max(0, min(row))
+
+    # BOOK_CORE_BEGIN
+    def reserve(self, owner, ident, card, cents):
+        if not isinstance(ident, str) or not ident.strip():
+            raise ValueError('nonempty reservation identity required')
+        if type(cents) is not int or cents <= 0:
+            raise ValueError('integer cents required')
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            available = self.preview(owner, card)
+            old = self.db.execute('SELECT card,cents FROM holds WHERE id=?',
+                                  (ident,)).fetchone()
+            if old:
+                if old != (card, cents):
+                    raise ValueError('reservation conflict')
+                return ident
+            if cents > available:
+                raise ValueError('insufficient global credit or card budget')
+            self.db.execute('UPDATE account SET free=free-? WHERE owner=?',
+                            (cents, owner))
+            self.db.execute('UPDATE cards SET spent=spent+? WHERE id=?',
+                            (cents, card))
+            self.db.execute('INSERT INTO holds VALUES(?,?,?)', (ident, card, cents))
+        return ident
+
+    def set_cap(self, owner, card, cap):
+        if type(cap) is not int or cap < 0:
+            raise ValueError('integer cap required')
+        with self.db:
+            if self.db.execute('UPDATE cards SET cap=? WHERE id=? AND owner=?',
+                               (cap, card, owner)).rowcount != 1:
+                raise PermissionError('not owned')
+    # BOOK_CORE_END
 
 
-class Registry:
-    def __init__(self):
-        self.resource = Resource('team-a')
-        self.lock = threading.Lock()
-
-    def transfer(self, expected, destination, accepting_team):
-        with self.lock:
-            current = self.resource
-            if current.revision != expected:
-                raise ValueError('revisão obsoleta')
-            if not destination or accepting_team != destination:
-                raise PermissionError('aceite do destino obrigatório')
-            if current.archived:
-                raise ValueError('recurso arquivado')
-            self.resource = replace(current, owner=destination,
-                                    revision=current.revision + 1)
-            return self.resource
-
-    def set_hold(self):
-        with self.lock:
-            self.resource = replace(self.resource, hold=True,
-                                    revision=self.resource.revision + 1)
-
-    def archive(self, expected, *, inactive, retention_elapsed,
-                no_dependencies, restore_verified):
-        evidence = (inactive, retention_elapsed,
-                    no_dependencies, restore_verified)
-        if any(type(value) is not bool for value in evidence):
-            raise ValueError('evidências devem ser booleanas neste modelo')
-        with self.lock:
-            current = self.resource
-            if expected != current.revision:
-                raise ValueError('evidência de revisão antiga')
-            if current.hold or not all((inactive, retention_elapsed,
-                                       no_dependencies, restore_verified)):
-                raise PermissionError('barreiras não satisfeitas')
-            if current.archived:
-                return current
-            self.resource = replace(current, archived=True,
-                                    revision=current.revision + 1)
-            return self.resource
-
-
-class Tests(unittest.TestCase):
+class CreditTests(unittest.TestCase):
     def setUp(self):
-        self.registry = Registry()
-        self.evidence = dict(inactive=True, retention_elapsed=True,
-                             no_dependencies=True, restore_verified=True)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name) / 'credit.db'
+        self.c = Credit(self.path)
+        self.c.seed()
 
-    def test_destination_must_accept(self):
+    def tearDown(self):
+        self.c.db.close()
+        self.tmp.cleanup()
+
+    # BOOK_TEST_BEGIN
+    def test_two_cards_cannot_overspend_shared_credit(self):
+        barrier = threading.Barrier(2)
+        results = []
+        def attempt(card):
+            client = Credit(self.path)
+            barrier.wait()
+            try:
+                client.reserve('owner', 'hold-' + card, card, 30000)
+                results.append('ok')
+            except ValueError:
+                results.append('declined')
+            finally:
+                client.db.close()
+        threads = [threading.Thread(target=attempt, args=(c,)) for c in ('a', 'b')]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        self.assertCountEqual(results, ['ok', 'declined'])
+        self.assertEqual(self.c.preview('owner', 'a'), 20000)
+    # BOOK_TEST_END
+
+    def test_raising_virtual_cap_does_not_create_credit(self):
+        self.c.set_cap('owner', 'a', 1000000)
+        self.assertEqual(self.c.preview('owner', 'a'), 50000)
+
+    def test_lower_card_cap_restricts_global_credit(self):
+        self.c.set_cap('owner', 'a', 10000)
+        with self.assertRaises(ValueError):
+            self.c.reserve('owner', 'h', 'a', 10001)
+        self.assertEqual(self.c.preview('owner', 'b'), 50000)
+
+    def test_retry_does_not_reserve_twice(self):
+        self.c.reserve('owner', 'h', 'a', 30000)
+        self.c.reserve('owner', 'h', 'a', 30000)
+        self.assertEqual(self.c.preview('owner', 'b'), 20000)
+
+    def test_other_owner_denied_before_idempotent_receipt(self):
+        self.c.reserve('owner', 'h', 'a', 10000)
         with self.assertRaises(PermissionError):
-            self.registry.transfer(1, 'team-b', 'team-a')
-        self.assertEqual(self.registry.resource.owner, 'team-a')
+            self.c.reserve('intruder', 'h', 'a', 10000)
 
-    def test_stale_transfer_cannot_override(self):
-        self.registry.transfer(1, 'team-b', 'team-b')
+    def test_stale_preview_cannot_authorize(self):
+        self.assertEqual(self.c.preview('owner', 'a'), 50000)
+        self.c.reserve('owner', 'h1', 'b', 40000)
         with self.assertRaises(ValueError):
-            self.registry.transfer(1, 'team-c', 'team-c')
-        self.assertEqual(self.registry.resource.owner, 'team-b')
+            self.c.reserve('owner', 'h2', 'a', 30000)
 
-    def test_hold_blocks_archive(self):
-        self.registry.set_hold()
-        with self.assertRaises(PermissionError):
-            self.registry.archive(2, **self.evidence)
-
-    def test_each_missing_barrier_blocks(self):
-        for key in self.evidence:
-            args = dict(self.evidence, **{key: False})
-            with self.subTest(key=key), self.assertRaises(PermissionError):
-                self.registry.archive(1, **args)
-
-    def test_old_evidence_blocks_after_transfer(self):
-        self.registry.transfer(1, 'team-b', 'team-b')
+    def test_conflicting_retry_rejected(self):
+        self.c.reserve('owner', 'h', 'a', 10000)
         with self.assertRaises(ValueError):
-            self.registry.archive(1, **self.evidence)
+            self.c.reserve('owner', 'h', 'b', 10000)
 
-    def test_safe_archive_keeps_resource_record(self):
-        value = self.registry.archive(1, **self.evidence)
-        self.assertTrue(value.archived)
-        self.assertEqual(value.owner, 'team-a')
-        self.assertEqual(value.revision, 2)
+    def test_restart_preserves_reservation(self):
+        self.c.reserve('owner', 'h', 'a', 10000)
+        self.c.db.close()
+        self.c = Credit(self.path)
+        self.assertEqual(self.c.preview('owner', 'a'), 40000)
 
-    def test_archived_resource_cannot_transfer(self):
-        self.registry.archive(1, **self.evidence)
-        with self.assertRaises(ValueError):
-            self.registry.transfer(2, 'team-b', 'team-b')
+    def test_invalid_cents_rejected(self):
+        for amount in (0, -1, True, 1.1):
+            with self.assertRaises(ValueError):
+                self.c.reserve('owner', 'h', 'a', amount)
 
-    def test_untyped_evidence_rejected(self):
-        args = dict(self.evidence, inactive='false')
-        with self.assertRaises(ValueError):
-            self.registry.archive(1, **args)
+    def test_invalid_identity_cannot_reserve_credit(self):
+        for ident in (None, '', ' ', 0):
+            with self.assertRaises(ValueError):
+                self.c.reserve('owner', ident, 'a', 10000)
+        self.assertEqual(self.c.preview('owner', 'a'), 50000)
+        self.assertEqual(self.c.db.execute(
+            'SELECT COUNT(*) FROM holds').fetchone()[0], 0)
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

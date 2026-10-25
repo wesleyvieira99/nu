@@ -105,409 +105,481 @@
     "file": "page_042_0.py",
     "page": 42,
     "language": "python",
-    "caption": "Excerpt from the pay method; setup and writes omitted. The complete file was executed and verified."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
     "file": "page_043_0.clj",
     "page": 43,
     "language": "clojure",
-    "caption": "Proposed teaching function; this Clojure excerpt was not executed."
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_044_1.json",
+    "page": 44,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_045_0.py",
     "page": 45,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_046_0.py",
-    "page": 46,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_055_0.py",
     "page": 55,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
-    "file": "page_056_0.clj",
+    "file": "page_056_0.dart",
     "page": 56,
-    "language": "clojure",
-    "caption": "Datomic/Clojure sketch with proposed attributes; not executed."
+    "language": "dart",
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_057_1.json",
+    "page": 57,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_058_0.py",
     "page": 58,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_059_0.py",
-    "page": 59,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_068_0.py",
     "page": 68,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
-    "file": "page_069_0.clj",
+    "file": "page_069_0.sql",
     "page": 69,
-    "language": "clojure",
-    "caption": "Proposed catalog and function; Clojure not executed."
+    "language": "sql",
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_070_1.json",
+    "page": 70,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_071_0.py",
     "page": 71,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_072_0.py",
-    "page": 72,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_081_0.py",
     "page": 81,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
-    "file": "page_082_0.clj",
+    "file": "page_082_0.dart",
     "page": 82,
-    "language": "clojure",
-    "caption": "Proposed teaching contract and functions; Clojure not executed."
+    "language": "dart",
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_083_1.json",
+    "page": 83,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_084_0.py",
     "page": 84,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_085_0.py",
-    "page": 85,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_094_0.py",
     "page": 94,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
-    "file": "page_095_0.dart",
+    "file": "page_095_0.ts",
     "page": 95,
-    "language": "dart",
-    "caption": "Proposed presentation model; Dart/Flutter not executed."
+    "language": "typescript",
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_096_1.json",
+    "page": 96,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_097_0.py",
     "page": 97,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_098_0.py",
-    "page": 98,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_107_0.py",
     "page": 107,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
-    "file": "page_108_0.dart",
+    "file": "page_108_0.ts",
     "page": 108,
-    "language": "dart",
-    "caption": "Proposed message mapping; Dart/Flutter not executed."
+    "language": "typescript",
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_109_1.json",
+    "page": 109,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_110_0.py",
     "page": 110,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_111_0.py",
-    "page": 111,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_120_0.py",
     "page": 120,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal excerpt from the executed independent lab; remaining validation is in the complete file."
   },
   {
     "file": "page_121_0.clj",
     "page": 121,
     "language": "clojure",
-    "caption": "Proposed serializer; Clojure not executed."
+    "caption": "Proposed integration example, not executed; this is not Nubank internal code."
+  },
+  {
+    "file": "page_122_1.json",
+    "page": 122,
+    "language": "json",
+    "caption": "Illustrative proposed contract; synthetic values, not customer data."
   },
   {
     "file": "page_123_0.py",
     "page": 123,
     "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
-  },
-  {
-    "file": "page_124_0.py",
-    "page": 124,
-    "language": "python",
-    "caption": "Excerpt from the synthetic lab; execution verified in the complete file."
+    "caption": "Literal lab tests; count and result come from an actual run."
   },
   {
     "file": "page_133_0.py",
     "page": 133,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_08.py. Python executed locally; synthetic data and contracts."
+    "caption": "Literal excerpt from labs/case_08.py; exercised by local tests."
   },
   {
     "file": "page_134_0.clj",
     "page": 134,
     "language": "clojure",
-    "caption": "Unexecuted educational Clojure excerpt; independently proposed function and contract."
+    "caption": "Illustrative Clojure example, not executed; integration and policy require validation."
   },
   {
-    "file": "page_135_0.json",
+    "file": "page_135_1.json",
     "page": 135,
     "language": "json",
-    "caption": "Independent synthetic JSON contract, not integrated; additional fields are not implemented by the lab."
+    "caption": "Synthetic illustrative contract; not a payload captured from the app."
   },
   {
-    "file": "page_137_0.py",
-    "page": 137,
+    "file": "page_136_0.py",
+    "page": 136,
     "language": "python",
-    "caption": "Test excerpt from labs/case_08.py. Result: 8 tests passed; see results_08.txt."
+    "caption": "Literal excerpts; the complete local suite passed 9 tests."
   },
   {
     "file": "page_146_0.py",
     "page": 146,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_09.py. Executed local Python model; not an app implementation."
+    "caption": "Literal excerpt from labs/case_09.py; SQLite represents one local authority."
   },
   {
-    "file": "page_147_0.dart",
+    "file": "page_147_0.clj",
     "page": 147,
-    "language": "dart",
-    "caption": "Educational Flutter/Dart excerpt, not executed. Independent component with no dependency on internal NuDS."
+    "language": "clojure",
+    "caption": "Illustrative Clojure example, not executed; the Python laboratory is the tested artifact."
   },
   {
-    "file": "page_148_0.json",
+    "file": "page_148_1.json",
     "page": 148,
     "language": "json",
-    "caption": "Proposed JSON contract with synthetic data; only the Invoice subset is executed in the lab."
+    "caption": "Synthetic example: 15,001 received, 15,000 applied and 1 unapplied."
   },
   {
-    "file": "page_150_0.py",
-    "page": 150,
+    "file": "page_149_0.py",
+    "page": 149,
     "language": "python",
-    "caption": "Excerpt from labs/case_09.py. Local result: 8 tests passed; see results_09.txt."
+    "caption": "Literal suite excerpts; 9 tests passed."
   },
   {
     "file": "page_159_0.py",
     "page": 159,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_10.py. Local HMAC with a test key; neither a legally valid signature nor real infrastructure."
+    "caption": "Literal excerpt from labs/case_10.py; two local databases and a synthetic provider."
   },
   {
-    "file": "page_160_0.clj",
+    "file": "page_160_0.dart",
     "page": 160,
-    "language": "clojure",
-    "caption": "Illustrative Clojure excerpt, not executed; names and contracts proposed by the author."
+    "language": "dart",
+    "caption": "Illustrative Dart, not executed; states and copy require product and accessibility review."
   },
   {
-    "file": "page_161_0.sql",
+    "file": "page_161_1.json",
     "page": 161,
-    "language": "sql",
-    "caption": "Proposed reference SQL. Not executed; the lab uses immutable Python objects."
+    "language": "json",
+    "caption": "Synthetic contract in cents; not a NuPay capture."
   },
   {
-    "file": "page_163_0.py",
-    "page": 163,
+    "file": "page_162_0.py",
+    "page": 162,
     "language": "python",
-    "caption": "Excerpt from labs/case_10.py. Result: 7 tests passed; see results_10.txt."
+    "caption": "Literal excerpts; 9 tests passed, including recovery after timeout."
   },
   {
     "file": "page_172_0.py",
     "page": 172,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_11.py. Executed Python; synthetic projection without financial authorization."
+    "caption": "Literal excerpt from labs/case_11.py; an in-memory model with a local lock."
   },
   {
     "file": "page_173_0.clj",
     "page": 173,
     "language": "clojure",
-    "caption": "Proposed Clojure excerpt, not executed; canonical-reader is an independent abstract dependency."
+    "caption": "Illustrative, unexecuted Clojure; simplified rules equivalent to the laboratory."
   },
   {
-    "file": "page_174_0.json",
+    "file": "page_174_1.json",
     "page": 174,
     "language": "json",
-    "caption": "Independently proposed envelope and topic name. Not executed in Kafka; the lab uses local calls."
+    "caption": "Synthetic three-refund example; no amount was extracted from the complainant’s account."
   },
   {
-    "file": "page_176_0.py",
-    "page": 176,
+    "file": "page_175_0.py",
+    "page": 175,
     "language": "python",
-    "caption": "Excerpt from labs/case_11.py. Result: 7 tests passed; see results_11.txt. No benchmark."
+    "caption": "Literal excerpts; 9 local tests passed."
   },
   {
     "file": "page_185_0.py",
     "page": 185,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_12.py. Synthetic in-memory reservation; provisions neither AWS nor Kubernetes."
+    "caption": "Literal excerpt from labs/case_12.py; synthetic local state for one account."
   },
   {
-    "file": "page_186_0.yaml",
+    "file": "page_186_0.clj",
     "page": 186,
-    "language": "yaml",
-    "caption": "Reference YAML, not executed. Metrics and names are proposed, not internal Nubank telemetry."
+    "language": "clojure",
+    "caption": "Illustrative Clojure, not executed; not carrier or Nubank code."
   },
   {
-    "file": "page_187_0.json",
+    "file": "page_187_1.json",
     "page": 187,
     "language": "json",
-    "caption": "Entirely synthetic contract and numbers; linear arithmetic covered by the forecast test."
+    "caption": "Synthetic state: declared delivery, open dispute and inactive card."
   },
   {
-    "file": "page_189_0.py",
-    "page": 189,
+    "file": "page_188_0.py",
+    "page": 188,
     "language": "python",
-    "caption": "Excerpt from labs/case_12.py. Result: 9 tests passed; see results_12.txt."
+    "caption": "Literal excerpts; 10 laboratory tests passed."
   },
   {
     "file": "page_198_0.py",
     "page": 198,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_13.py. Logical in-memory archival only; no real database is changed."
+    "caption": "Literal excerpt from labs/case_13.py; local SQLite reservations with integer cents."
   },
   {
-    "file": "page_199_0.clj",
+    "file": "page_199_0.dart",
     "page": 199,
-    "language": "clojure",
-    "caption": "Reference Clojure/Datomic excerpt, not executed; proposed schema and function. :db/cas is a documented operation."
+    "language": "dart",
+    "caption": "Illustrative, unexecuted Dart; the Python laboratory validates authority, not this component."
   },
   {
-    "file": "page_200_0.json",
+    "file": "page_200_1.json",
     "page": 200,
     "language": "json",
-    "caption": "Proposed governance contract; neither Nubank's retention policy nor authorization to dispose of data."
+    "caption": "Synthetic values; not the private balance from the complaint."
   },
   {
-    "file": "page_202_0.py",
-    "page": 202,
+    "file": "page_201_0.py",
+    "page": 201,
     "language": "python",
-    "caption": "Excerpt from labs/case_13.py. Result: 8 tests passed; see results_13.txt."
+    "caption": "Literal test; the full suite passed 10 tests."
   },
   {
     "file": "page_211_0.py",
     "page": 211,
     "language": "python",
-    "caption": "Literal excerpt from labs/case_14.py. Executed Python model; does not implement real BDC/NuDS."
+    "caption": "Literal excerpt from labs/case_14.py; transactional execution in cents."
   },
   {
-    "file": "page_212_0.dart",
+    "file": "page_212_0.clj",
     "page": 212,
-    "language": "dart",
-    "caption": "Independent Flutter/Dart, not executed. dispatch and node types are proposed contracts, not Nubank APIs."
+    "language": "clojure",
+    "caption": "Illustrative, unexecuted Clojure; synthetic rules for contract review."
   },
   {
-    "file": "page_213_0.json",
+    "file": "page_213_1.json",
     "page": 213,
     "language": "json",
-    "caption": "Independently proposed manifest and action names; synthetic data. Not the official BDC schema."
+    "caption": "Synthetic example: R$ 50 current bill + R$ 100 principal −R$ 10 discount = R$ 140."
   },
   {
-    "file": "page_215_0.py",
-    "page": 215,
+    "file": "page_214_0.py",
+    "page": 214,
     "language": "python",
-    "caption": "Excerpt from labs/case_14.py. Result: 11 tests passed; see results_14.txt."
+    "caption": "Literal test; the complete suite passed 9 tests."
   },
   {
     "file": "page_224_0.py",
     "page": 224,
     "language": "python",
-    "caption": "Excerpt from case_15.py; Python execution verified. Illustrative rule without statistical inference. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
     "file": "page_225_0.dart",
     "page": 225,
     "language": "dart",
-    "caption": "Illustrative Dart, not executed. Proposed interfaces and names; not an internal Nubank SDK."
+    "caption": "Illustrative Dart example, unexecuted; demonstration copy requires localization."
+  },
+  {
+    "file": "page_226_1.json",
+    "page": 226,
+    "language": "json",
+    "caption": "Proposed contract, synthetic data; schema unexecuted."
+  },
+  {
+    "file": "page_227_0.py",
+    "page": 227,
+    "language": "python",
+    "caption": "Literal test excerpt; all 13 lab tests passed locally."
   },
   {
     "file": "page_237_0.py",
     "page": 237,
     "language": "python",
-    "caption": "Executed excerpt from case_16.py. Ranking uses invented weights; it does not implement Precog. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
     "file": "page_238_0.clj",
     "page": 238,
     "language": "clojure",
-    "caption": "Illustrative Clojure, not executed; namespaces, queues, and policy are external proposals."
+    "caption": "Illustrative Clojure, unexecuted; not Nubank’s rules engine."
+  },
+  {
+    "file": "page_239_1.json",
+    "page": 239,
+    "language": "json",
+    "caption": "Proposed contract; synthetic fixture, not a real API response."
+  },
+  {
+    "file": "page_240_0.py",
+    "page": 240,
+    "language": "python",
+    "caption": "Literal test excerpt; all 15 lab tests passed locally."
   },
   {
     "file": "page_250_0.py",
     "page": 250,
     "language": "python",
-    "caption": "Executed excerpt from case_17.py. Fixed, untrained toy logistic model. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
-    "file": "page_251_0.py",
+    "file": "page_251_0.dart",
     "page": 251,
+    "language": "dart",
+    "caption": "Illustrative Dart, unexecuted; monetary formatting and localization omitted."
+  },
+  {
+    "file": "page_252_1.json",
+    "page": 252,
+    "language": "json",
+    "caption": "Explanatory fixture of reported quantities; proposed contract unexecuted."
+  },
+  {
+    "file": "page_253_0.py",
+    "page": 253,
     "language": "python",
-    "caption": "Function and scenario executed in case_17.py; synthetic costs, not a projection for Nubank. Types, imports, and validators are in the complete file."
+    "caption": "Literal test excerpt; all 13 lab tests passed locally."
   },
   {
     "file": "page_263_0.py",
     "page": 263,
     "language": "python",
-    "caption": "Executed excerpt from case_18.py; synthetic events and clocks. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
-    "file": "page_264_0.py",
+    "file": "page_264_0.dart",
     "page": 264,
+    "language": "dart",
+    "caption": "Illustrative Dart, unexecuted; final copy requires research and localization."
+  },
+  {
+    "file": "page_265_1.json",
+    "page": 265,
+    "language": "json",
+    "caption": "Illustrative contract, unexecuted; no phone number or SMS content."
+  },
+  {
+    "file": "page_266_0.py",
+    "page": 266,
     "language": "python",
-    "caption": "Functions and examples executed in case_18.py. The hash identifies parameters; it does not certify implementation. Types, imports, and validators are in the complete file."
+    "caption": "Literal test excerpt; all 12 lab tests passed locally."
   },
   {
     "file": "page_276_0.py",
     "page": 276,
     "language": "python",
-    "caption": "Excerpt from case_19.py executed with Python; synthetic pairings, with no app screenshots. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
-    "file": "page_277_0.dart",
+    "file": "page_277_0.ts",
     "page": 277,
-    "language": "dart",
-    "caption": "Proposed Flutter component; this is not Nubank code and was not executed in this environment."
+    "language": "typescript",
+    "caption": "Illustrative TypeScript, unexecuted; types do not replace runtime validation."
+  },
+  {
+    "file": "page_278_1.json",
+    "page": 278,
+    "language": "json",
+    "caption": "Proposed synthetic contract; no conversion should originate from this rejection."
+  },
+  {
+    "file": "page_279_0.py",
+    "page": 279,
+    "language": "python",
+    "caption": "Literal test excerpt; all 14 lab tests passed locally."
   },
   {
     "file": "page_289_0.py",
     "page": 289,
     "language": "python",
-    "caption": "Excerpt from case_20.py executed locally; an educational model, not an authentication implementation. Types, imports, and validators are in the complete file."
+    "caption": "Literal excerpt from the executed lab; imports and initialization are in the full file."
   },
   {
-    "file": "page_290_0.dart",
+    "file": "page_290_0.sql",
     "page": 290,
-    "language": "dart",
-    "caption": "Independent, illustrative Flutter/Dart; verify with TalkBack, VoiceOver, and users before any use."
+    "language": "sql",
+    "caption": "Illustrative SQL, unexecuted; this model allows one full refund only."
+  },
+  {
+    "file": "page_291_1.json",
+    "page": 291,
+    "language": "json",
+    "caption": "Proposed synthetic contract, unexecuted; absent authorization is not permission."
+  },
+  {
+    "file": "page_292_0.py",
+    "page": 292,
+    "language": "python",
+    "caption": "Literal test excerpt; all 13 lab tests passed locally."
   },
   {
     "file": "page_311_1.sh",

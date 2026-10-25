@@ -1,116 +1,140 @@
-"""Modelo sintético: recuperação por estados, revisão e prazo. Sem biometria real."""
-import sqlite3
-import tempfile
+"""Independent balance freshness model. No ledger writes or real Pix calls.
+The lock protects one process only. Production needs durable source versions,
+authoritative time, authenticated events and account-scoped APIs. An expired
+incident never makes an expired balance authoritative. Values are integer cents.
+Incident notices are unversioned here; an old notice can replace a new one.
+This does not refresh the balance. Versioned incident events belong in integration.
+"""
+import threading
 import unittest
-from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 
-class Recovery:
-    def __init__(self, path):
-        self.path = str(path)
-        with sqlite3.connect(self.path) as db:
-            db.execute("""CREATE TABLE IF NOT EXISTS cases(
-                id TEXT PRIMARY KEY, state TEXT NOT NULL, revision INTEGER,
-                expires INTEGER, owner TEXT, verifier TEXT, epoch INTEGER)""")
-
-    def open(self, case_id, owner, now, ttl=300):
-        if type(now) is not int or type(ttl) is not int or ttl <= 0:
-            raise ValueError("ttl")
-        with sqlite3.connect(self.path) as db:
-            db.execute("INSERT INTO cases VALUES(?, 'review', 0, ?, ?, '', 0)",
-                       (case_id, now + ttl, owner))
-
-    def read(self, case_id):
-        with sqlite3.connect(self.path) as db:
-            row = db.execute("SELECT * FROM cases WHERE id=?", (case_id,)).fetchone()
-        if row is None:
-            raise KeyError(case_id)
-        return dict(zip(("id", "state", "revision", "expires", "owner",
-                         "verifier", "epoch"), row))
-
-    def transition(self, case_id, expected, action, actor, now):
-        if type(now) is not int or type(expected) is not int:
-            raise ValueError("integer_clock_and_revision_required")
-        with sqlite3.connect(self.path, isolation_level=None) as db:
-            db.execute("BEGIN IMMEDIATE")
-            row = db.execute("SELECT * FROM cases WHERE id=?", (case_id,)).fetchone()
-            if row is None:
-                raise KeyError(case_id)
-            _, state, revision, expires, owner, verifier, epoch = row
-            if expected != revision:
-                raise ValueError("stale_revision")
-            if now >= expires:
-                raise ValueError("expired")
-            if action == "verify" and state == "review" and actor != owner:
-                state, verifier = "verified", actor
-            elif (action == "restore" and state == "verified"
-                  and actor not in (owner, verifier)):
-                state, epoch = "restored", epoch + 1
-            else:
-                raise ValueError("invalid_transition_or_actor")
-            db.execute("UPDATE cases SET state=?, revision=?, verifier=?, epoch=? "
-                       "WHERE id=?", (state, revision + 1, verifier, epoch, case_id))
-            db.commit()
-        return self.read(case_id)
+def integer(value, minimum=0):
+    if type(value) is not int or value < minimum:
+        raise ValueError("invalid integer")
 
 
-class Tests(unittest.TestCase):
+class BalanceView:
+    def __init__(self, owner):
+        if not isinstance(owner, str) or not owner.strip():
+            raise ValueError("nonempty owner identity required")
+        self.owner = owner
+        self.snapshot = None
+        self.incident_until = 0
+        self.lock = threading.Lock()
+
+    def publish(self, version, cents, observed_at, valid_until, trusted=False):
+        if trusted is not True: raise PermissionError("source authority")
+        for value in (version, cents, observed_at, valid_until): integer(value)
+        if version == 0 or valid_until <= observed_at:
+            raise ValueError("invalid validity window")
+        candidate = (version, cents, observed_at, valid_until)
+        with self.lock:
+            if self.snapshot and version == self.snapshot[0]:
+                if candidate != self.snapshot: raise ValueError("version conflict")
+                return False
+            if self.snapshot and version < self.snapshot[0]: return False
+            if self.snapshot and observed_at < self.snapshot[2]:
+                raise ValueError("source clock regressed")
+            self.snapshot = candidate
+            return True
+
+    def incident(self, until, trusted=False):
+        if trusted is not True: raise PermissionError("incident authority")
+        integer(until)
+        with self.lock: self.incident_until = until
+
+    # BEGIN CORE
+    def read(self, owner, now):
+        if owner != self.owner:
+            raise PermissionError("account scope")
+        integer(now)
+        with self.lock:
+            snapshot = self.snapshot
+            active_incident = now < self.incident_until
+            if snapshot is None:
+                return {"state": "unknown", "balance_cents": None,
+                        "incident": active_incident, "may_resend": False}
+            version, cents, observed, valid_until = snapshot
+            if now < observed:
+                return {"state": "unknown", "balance_cents": None,
+                        "incident": active_incident, "may_resend": False}
+            fresh = now < valid_until
+            return {"state": "fresh" if fresh else "stale",
+                    "balance_cents": cents, "version": version,
+                    "as_of": observed, "incident": active_incident,
+                    "may_resend": False}
+    # END CORE
+
+
+class BalanceTests(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.tmp.cleanup)
-        self.path = Path(self.tmp.name) / "recovery.db"
-        self.store = Recovery(self.path)
-        self.store.open("case", "customer", 100)
+        self.view = BalanceView("a")
+        self.view.publish(1, 12000, 100, 120, True)
 
-    def test_restore_requires_two_distinct_reviewers(self):
-        verified = self.store.transition("case", 0, "verify", "reviewer-a", 101)
-        self.assertEqual(verified["state"], "verified")
-        with self.assertRaises(ValueError):
-            self.store.transition("case", 1, "restore", "reviewer-a", 102)
-        result = self.store.transition("case", 1, "restore", "reviewer-b", 102)
-        self.assertEqual((result["state"], result["epoch"]), ("restored", 1))
+    # BEGIN TESTS
+    def test_incident_expiry_does_not_refresh_balance(self):
+        self.view.incident(125, True)
+        result = self.view.read("a", 130)
+        self.assertFalse(result["incident"])
+        self.assertEqual(result["state"], "stale")
+        self.assertFalse(result["may_resend"])
 
-    def test_owner_cannot_verify(self):
-        with self.assertRaises(ValueError):
-            self.store.transition("case", 0, "verify", "customer", 101)
-        self.assertEqual(self.store.read("case")["revision"], 0)
+    def test_concurrent_versions_keep_newest(self):
+        def publish(version):
+            return self.view.publish(version, version * 100, 110, 140, True)
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            list(pool.map(publish, (5, 2, 4, 3)))
+        self.assertEqual(self.view.read("a", 115)["version"], 5)
+        self.assertEqual(self.view.read("a", 115)["balance_cents"], 500)
+    # END TESTS
 
-    def test_expired_case_cannot_restore(self):
-        self.store.transition("case", 0, "verify", "a", 101)
-        with self.assertRaisesRegex(ValueError, "expired"):
-            self.store.transition("case", 1, "restore", "b", 400)
+    def test_exact_expiry_is_stale(self):
+        self.assertEqual(self.view.read("a", 120)["state"], "stale")
 
-    def test_stale_revision_cannot_repeat_verification(self):
-        self.store.transition("case", 0, "verify", "a", 101)
-        with self.assertRaisesRegex(ValueError, "stale_revision"):
-            self.store.transition("case", 0, "verify", "b", 102)
+    def test_future_snapshot_is_unknown(self):
+        self.assertEqual(self.view.read("a", 99)["state"], "unknown")
 
-    def test_reopen_preserves_case_and_epoch(self):
-        self.store.transition("case", 0, "verify", "a", 101)
-        reopened = Recovery(self.path)
-        self.assertEqual(reopened.read("case")["revision"], 1)
-        reopened.transition("case", 1, "restore", "b", 102)
-        self.assertEqual(Recovery(self.path).read("case")["epoch"], 1)
+    def test_scope_checked_without_snapshot(self):
+        with self.assertRaises(PermissionError): BalanceView("a").read("b", 1)
 
-    def test_cannot_skip_review_or_restore_twice(self):
-        with self.assertRaises(ValueError):
-            self.store.transition("case", 0, "restore", "b", 101)
-        self.store.transition("case", 0, "verify", "a", 101)
-        self.store.transition("case", 1, "restore", "b", 102)
-        with self.assertRaises(ValueError):
-            self.store.transition("case", 2, "restore", "c", 103)
-        self.assertEqual(self.store.read("case")["epoch"], 1)
+    def test_untrusted_source_rejected(self):
+        with self.assertRaises(PermissionError): self.view.publish(2, 1, 110, 140, 1)
 
-    def test_invalid_clock_cannot_bypass_expiry(self):
-        for now in (float("nan"), float("inf"), True, "101"):
-            with self.subTest(now=now), self.assertRaises(ValueError):
-                self.store.transition("case", 0, "verify", "a", now)
-        self.assertEqual(self.store.read("case")["revision"], 0)
-        self.store.transition("case", 0, "verify", "a", 101)
-        with self.assertRaises(ValueError):
-            self.store.transition("case", True, "restore", "b", 102)
+    def test_invalid_time_rejected(self):
+        for value in (True, -1, float("nan"), float("inf")):
+            with self.assertRaises(ValueError): self.view.read("a", value)
+
+    def test_conflicting_same_version_rejected(self):
+        with self.assertRaises(ValueError): self.view.publish(1, 1, 100, 120, True)
+
+    def test_replay_is_harmless(self):
+        self.assertFalse(self.view.publish(1, 12000, 100, 120, True))
+
+    def test_clock_regression_rejected(self):
+        with self.assertRaises(ValueError): self.view.publish(2, 1, 90, 120, True)
+
+    def test_empty_view_never_claims_zero(self):
+        self.assertIsNone(BalanceView("a").read("a", 0)["balance_cents"])
+
+    def test_incident_does_not_change_money(self):
+        self.view.incident(200, True)
+        self.assertEqual(self.view.read("a", 110)["balance_cents"], 12000)
+
+    def test_invalid_owner_rejected_before_state_exists(self):
+        for owner in (None, "", " \t\n", 0, True):
+            with self.subTest(owner=owner):
+                candidate = BalanceView.__new__(BalanceView)
+                with self.assertRaises(ValueError): candidate.__init__(owner)
+                self.assertEqual(vars(candidate), {})
+
+    def test_missing_read_identity_cannot_access_balance(self):
+        for owner in (None, "", " \t\n"):
+            with self.subTest(owner=owner), self.assertRaises(PermissionError):
+                self.view.read(owner, 110)
+        self.assertEqual(self.view.read("a", 110)["balance_cents"], 12000)
 
 
-if __name__ == "__main__":
-    print("LAB SINTÉTICO 02: não verifica identidade ou risco real.")
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main()

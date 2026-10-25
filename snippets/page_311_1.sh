@@ -1,4 +1,4 @@
-# Dentro da pasta laboratorios do pacote extraído:
+# Dentro da pasta labs do pacote extraído:
 python3 case_01.py
 python3 case_17.py
 

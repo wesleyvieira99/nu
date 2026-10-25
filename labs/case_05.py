@@ -1,120 +1,138 @@
-"""Agenda sintética por data civil: não paga boletos nem usa infraestrutura real."""
-from datetime import datetime, date, time, timedelta, timezone
-from zoneinfo import ZoneInfo
+"""Independent contact-recovery challenge model; no email or banking calls.
+Production requires verified identity, rate limits across accounts/devices,
+encrypted persistent storage, delivery events and signed device sessions.
+Test code is supplied explicitly; real issuers must generate random secrets.
+"""
+import hashlib
+import hmac
+import threading
 import unittest
 
 
-UTC = timezone.utc
+class ContactRecovery:
+    def __init__(self, owner):
+        if not isinstance(owner, str) or not owner.strip():
+            raise ValueError("nonempty owner identity required")
+        self.owner, self.generation = owner, 0
+        self.challenge, self.contact = None, None
+        self.verified, self.device_authorized = False, False
+        self.lock = threading.Lock()
+
+    def change_contact(self, owner, contact, identity_verified=False):
+        with self.lock:
+            if owner != self.owner or identity_verified is not True:
+                raise PermissionError("identity review required")
+            if not isinstance(contact, str) or "@" not in contact:
+                raise ValueError("contact")
+            self.generation += 1
+            self.contact, self.challenge = contact, None
+            self.verified, self.device_authorized = False, False
+            return self.generation
+
+    def issue(self, owner, code, now, ttl):
+        if owner != self.owner: raise PermissionError("scope")
+        if not isinstance(code, str) or len(code) < 6: raise ValueError("code")
+        if any(type(x) is not int or x < 0 for x in (now, ttl)) or ttl == 0:
+            raise ValueError("clock")
+        with self.lock:
+            if not self.contact: raise ValueError("contact first")
+            if self.challenge and now < self.challenge[2] + 30:
+                raise ValueError("resend cooldown")
+            digest = hashlib.sha256(code.encode()).digest()
+            self.challenge = [self.generation, digest, now, now + ttl, 0]
+            return self.generation
+
+    # BEGIN CORE
+    def verify(self, owner, generation, code, now):
+        if owner != self.owner:
+            raise PermissionError("recovery scope")
+        if type(now) is not int or now < 0 or not isinstance(code, str):
+            raise ValueError("invalid request")
+        with self.lock:
+            current = self.challenge
+            if current is None:
+                raise ValueError("challenge unavailable")
+            issued_generation, digest, issued_at, expiry, attempts = current
+            if type(generation) is not int or generation != self.generation:
+                raise ValueError("obsolete contact generation")
+            if generation != issued_generation or not issued_at <= now < expiry:
+                raise ValueError("challenge expired or not yet valid")
+            if attempts >= 3:
+                raise ValueError("attempt budget exhausted")
+            current[4] += 1
+            candidate = hashlib.sha256(code.encode()).digest()
+            if not hmac.compare_digest(candidate, digest):
+                raise PermissionError("invalid code")
+            self.verified, self.challenge = True, None
+            return True
+    # END CORE
 
 
-def local_instant(day, hour, minute, zone):
-    # Política proposta: primeiro instante válido; na dobra, primeiro UTC.
-    naive = datetime.combine(day, time(hour, minute))
-    for shift in range(181):
-        candidate = naive + timedelta(minutes=shift)
-        valid = []
-        for fold in (0, 1):
-            instant = candidate.replace(tzinfo=zone, fold=fold).astimezone(UTC)
-            roundtrip = instant.astimezone(zone).replace(tzinfo=None)
-            if roundtrip == candidate:
-                valid.append(instant)
-        if valid:
-            return min(valid)
-    raise ValueError("no_valid_instant")
-
-
-class Planner:
-    def __init__(self, zone="America/Sao_Paulo"):
-        self.zone = ZoneInfo(zone)
-        self.bills, self.sent = {}, set()
-
-    def upsert(self, bill_id, due, cents, version, paid=False):
-        if type(cents) is not int or cents <= 0:
-            raise ValueError("amount")
-        if type(version) is not int or version <= 0:
-            raise ValueError("positive_integer_version_required")
-        old = self.bills.get(bill_id)
-        if old and version <= old["version"]:
-            return False
-        self.bills[bill_id] = dict(due=due, cents=cents, version=version, paid=paid)
-        return True
-
-    def upcoming(self):
-        return sorted(((key, value) for key, value in self.bills.items()
-                       if not value["paid"]), key=lambda pair: (pair[1]["due"], pair[0]))
-
-    def dispatch(self, bill_id, expected_version, now, hour=9, minute=0):
-        if now.tzinfo is None:
-            raise ValueError("timezone_required")
-        bill = self.bills[bill_id]
-        if bill["version"] != expected_version or bill["paid"]:
-            return "obsolete"
-        target = local_instant(bill["due"], hour, minute, self.zone)
-        key = (bill_id, expected_version, bill["due"].isoformat())
-        if key in self.sent:
-            return "duplicate"
-        if now < target:
-            return "not_due"
-        # Não entregar lembrete que ficou preso até outro dia civil.
-        if now.astimezone(self.zone).date() != bill["due"]:
-            return "expired"
-        self.sent.add(key)
-        return "sent_locally"
-
-
-class Tests(unittest.TestCase):
+class ContactTests(unittest.TestCase):
     def setUp(self):
-        self.p = Planner()
-        self.p.upsert("b", date(2026, 11, 1), 1234, 1)
+        self.r = ContactRecovery("a")
+        self.r.change_contact("a", "new@example.test", True)
+        self.r.issue("a", "123456", 100, 60)
 
-    def test_orders_across_month_boundaries(self):
-        self.p.upsert("a", date(2026, 10, 31), 999, 1)
-        self.assertEqual([key for key, _ in self.p.upcoming()], ["a", "b"])
-
-    def test_sao_paulo_preference_is_utc_12(self):
-        self.assertEqual(self.p.dispatch("b", 1, datetime(2026, 11, 1, 11, tzinfo=UTC)),
-                         "not_due")
-        self.assertEqual(self.p.dispatch("b", 1, datetime(2026, 11, 1, 12, tzinfo=UTC)),
-                         "sent_locally")
-
-    def test_paid_before_dispatch_suppresses_reminder(self):
-        self.p.upsert("b", date(2026, 11, 1), 1234, 2, paid=True)
-        self.assertEqual(self.p.dispatch("b", 1, datetime(2026, 11, 1, 12, tzinfo=UTC)),
-                         "obsolete")
-        self.assertEqual(self.p.upcoming(), [])
-
-    def test_repeated_dispatch_is_deduplicated(self):
-        now = datetime(2026, 11, 1, 12, tzinfo=UTC)
-        self.assertEqual(self.p.dispatch("b", 1, now), "sent_locally")
-        self.assertEqual(self.p.dispatch("b", 1, now), "duplicate")
-
-    def test_delayed_previous_day_notification_expires(self):
-        self.assertEqual(self.p.dispatch("b", 1, datetime(2026, 11, 2, 12, tzinfo=UTC)),
-                         "expired")
-
-    def test_gap_advances_to_first_valid_minute(self):
-        zone = ZoneInfo("Europe/Berlin")
-        value = local_instant(date(2026, 3, 29), 2, 30, zone)
-        self.assertEqual(value.astimezone(zone).strftime("%H:%M"), "03:00")
-
-    def test_fold_selects_first_occurrence(self):
-        zone = ZoneInfo("Europe/Berlin")
-        value = local_instant(date(2026, 10, 25), 2, 30, zone)
-        self.assertEqual(value, datetime(2026, 10, 25, 0, 30, tzinfo=UTC))
-
-    def test_old_version_and_naive_clock_rejected(self):
-        self.assertFalse(self.p.upsert("b", date(2026, 12, 1), 1234, 1))
+    # BEGIN TESTS
+    def test_contact_change_invalidates_old_code(self):
+        self.r.change_contact("a", "other@example.test", True)
+        self.r.issue("a", "654321", 110, 60)
         with self.assertRaises(ValueError):
-            self.p.dispatch("b", 1, datetime(2026, 11, 1, 12))
+            self.r.verify("a", 1, "123456", 120)
+        self.assertTrue(self.r.verify("a", 2, "654321", 120))
 
-    def test_invalid_version_cannot_replace_a_bill(self):
-        before = dict(self.p.bills["b"])
-        for version in (float("nan"), float("inf"), 1.0, True, 0):
-            with self.subTest(version=version), self.assertRaises(ValueError):
-                self.p.upsert("b", date(2026, 12, 1), 999, version)
-        self.assertEqual(self.p.bills["b"], before)
+    def test_contact_proof_does_not_authorize_device(self):
+        self.assertTrue(self.r.verify("a", 1, "123456", 120))
+        self.assertTrue(self.r.verified)
+        self.assertFalse(self.r.device_authorized)
+    # END TESTS
+
+    def test_expiry_boundary(self):
+        with self.assertRaises(ValueError): self.r.verify("a", 1, "123456", 160)
+    def test_future_clock(self):
+        with self.assertRaises(ValueError): self.r.verify("a", 1, "123456", 99)
+    def test_budget_exhaustion(self):
+        for _ in range(3):
+            with self.assertRaises(PermissionError): self.r.verify("a", 1, "bad", 120)
+        with self.assertRaises(ValueError): self.r.verify("a", 1, "123456", 120)
+    def test_resend_cooldown(self):
+        with self.assertRaises(ValueError): self.r.issue("a", "654321", 110, 60)
+    def test_resend_invalidates_previous_code(self):
+        self.r.issue("a", "654321", 130, 60)
+        with self.assertRaises(PermissionError): self.r.verify("a", 1, "123456", 140)
+    def test_replay_rejected(self):
+        self.r.verify("a", 1, "123456", 120)
+        with self.assertRaises(ValueError): self.r.verify("a", 1, "123456", 121)
+    def test_other_owner_rejected(self):
+        with self.assertRaises(PermissionError): self.r.verify("b", 1, "123456", 120)
+    def test_truthy_identity_rejected(self):
+        with self.assertRaises(PermissionError):
+            self.r.change_contact("a", "x@y.test", 1)
+    def test_nan_time(self):
+        with self.assertRaises(ValueError): self.r.verify("a", 1, "123456", float("nan"))
+    def test_boolean_generation(self):
+        with self.assertRaises(ValueError): self.r.verify("a", True, "123456", 120)
+
+    def test_invalid_owner_rejected_before_state_exists(self):
+        for owner in (None, "", " \t\n", 0, True):
+            with self.subTest(owner=owner):
+                candidate = ContactRecovery.__new__(ContactRecovery)
+                with self.assertRaises(ValueError): candidate.__init__(owner)
+                self.assertEqual(vars(candidate), {})
+
+    def test_missing_identity_cannot_change_issue_or_verify(self):
+        for owner in (None, "", " \t\n"):
+            with self.subTest(owner=owner):
+                with self.assertRaises(PermissionError):
+                    self.r.change_contact(owner, "other@example.test", True)
+                with self.assertRaises(PermissionError):
+                    self.r.issue(owner, "654321", 140, 60)
+                with self.assertRaises(PermissionError):
+                    self.r.verify(owner, 1, "123456", 120)
+        self.assertEqual(self.r.contact, "new@example.test")
+        self.assertTrue(self.r.verify("a", 1, "123456", 120))
 
 
-if __name__ == "__main__":
-    print("LAB SINTÉTICO 05: usa tzdata do sistema; envio somente em memória.")
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main()

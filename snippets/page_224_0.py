@@ -1,24 +1,29 @@
-def gate(baseline, candidate, telemetry_complete=True, min_n=50):
-    if type(min_n) is not int or min_n <= 0:
-        raise ValueError("min_n must be positive integer")
-    if type(telemetry_complete) is not bool:
-        raise ValueError("telemetry_complete must be boolean")
-    validate_stats(baseline)
-    validate_stats(candidate)
-    if not telemetry_complete:
-        return "HOLD_TELEMETRY"
-    if baseline["n"] < min_n or candidate["n"] < min_n:
-        return "HOLD_SAMPLE"
-    if candidate["rate"] < baseline["rate"] - 0.03:
-        return "PAUSE_SUCCESS"
-    if candidate["p95"] > baseline["p95"] * 1.25:
-        return "PAUSE_LATENCY"
-    return "ELIGIBLE_FOR_REVIEW"
-
-baseline = {"n": 100, "rate": 0.98, "p95": 300}
-candidate = {"n": 100, "rate": 0.90, "p95": 300}
-assert gate(baseline, candidate) == "PAUSE_SUCCESS"
-assert gate(baseline, baseline) == "ELIGIBLE_FOR_REVIEW"
-assert gate(baseline, baseline, False) == "HOLD_TELEMETRY"
-small = {"n": 10, "rate": 1.0, "p95": 100}
-assert gate(baseline, small) == "HOLD_SAMPLE"
+    def withdraw(self, actor, key, cents, snapshot, now, ledger_online=True):
+        with self.lock:
+            for value in (actor, key, snapshot.owner):
+                identifier(value)
+            if type(now) is not int or now < 0:
+                raise ValueError('invalid clock')
+            if actor != self.owner or snapshot.owner != actor:
+                raise PermissionError('account scope')
+            if not key or type(cents) is not int or cents <= 0:
+                raise ValueError('invalid command')
+            command = (actor, cents)
+            if key in self.receipts:
+                prior_command, receipt = self.receipts[key]
+                if prior_command != command:
+                    raise ValueError('idempotency conflict')
+                return receipt
+            if not ledger_online:
+                raise RuntimeError('authority unavailable')
+            if not 0 <= now - snapshot.observed_at <= 30:
+                raise ValueError('snapshot expired')
+            if snapshot.version != self.version:
+                raise ValueError('refresh required')
+            if cents > self.balance:
+                raise ValueError('insufficient funds')
+            self.balance -= cents
+            self.version += 1
+            receipt = (key, cents, self.version)
+            self.receipts[key] = (command, receipt)
+            return receipt

@@ -1,0 +1,8 @@
+{
+  "case_id": "synthetic-08",
+  "revision": 3,
+  "evidence": [{"category": "device_access", "digest": "sha256:..."}],
+  "decision": {"policy": "v1", "reviewer_ref": "reviewer-1"},
+  "appeal": {"status": "pending", "independent_reviewer": true},
+  "customer_projection": {"stage": "under_review"}
+}

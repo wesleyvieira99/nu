@@ -1,0 +1,9 @@
+{
+  "schema": "withdrawal-status.v1",
+  "operation_id": "synthetic-operation",
+  "state": "UNKNOWN",
+  "position_version": 42,
+  "observed_at": "2026-01-01T12:00:00Z",
+  "receipt_id": null,
+  "next_action": "QUERY_RECEIPT"
+}

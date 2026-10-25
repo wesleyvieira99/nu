@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "dossier_id": "synthetic-dispute",
+  "upload_id": "synthetic-upload",
+  "dossier_version": 2,
+  "digest": "sha256-reference",
+  "state": "quarantined",
+  "late": false,
+  "provisional_credit_is_final": false
+}

@@ -1,102 +1,131 @@
-"""Modelo de decisão contextual; a prova HMAC é fictícia, não atesta Wi-Fi real."""
+"""Independent dispute evidence model, no card-network or storage integration.
+Hashes bind immutable bytes; scan flags are trusted adapter test fixtures, not
+an antivirus. Production needs secure upload, actual scanning, retention,
+admissibility rules per network and durable owner-scoped transactions.
+"""
 import hashlib
-import hmac
-import json
+import threading
 import unittest
 
 
-def canonical(data):
-    return json.dumps(data, sort_keys=True, separators=(",", ":")).encode()
+class Dossier:
+    def __init__(self, owner, cutoff):
+        if not isinstance(owner, str) or not owner.strip():
+            raise ValueError("nonempty owner identity required")
+        if type(cutoff) is not int or cutoff < 0: raise ValueError("cutoff")
+        self.owner, self.cutoff = owner, cutoff
+        self.items, self.seen = [], {}
+        self.lock = threading.Lock()
+
+    # BEGIN CORE
+    def append(self, owner, upload_id, content, now):
+        if owner != self.owner:
+            raise PermissionError("dispute scope")
+        if not upload_id or type(content) is not bytes:
+            raise ValueError("upload identity and bytes required")
+        if not 0 < len(content) <= 1024 * 1024:
+            raise ValueError("attachment size")
+        if type(now) is not int or now < 0:
+            raise ValueError("clock")
+        digest = hashlib.sha256(content).hexdigest()
+        with self.lock:
+            if upload_id in self.seen:
+                previous = self.items[self.seen[upload_id]]
+                if previous["digest"] != digest:
+                    raise ValueError("upload identity conflict")
+                return dict(previous)
+            item = dict(version=len(self.items) + 1, digest=digest,
+                        received_at=now, state="quarantined",
+                        late=now >= self.cutoff)
+            self.seen[upload_id] = len(self.items)
+            self.items.append(item)
+            return dict(item)
+    # END CORE
+
+    def scan(self, version, clean=False, trusted=False):
+        if trusted is not True or type(clean) is not bool:
+            raise PermissionError("verified scanner verdict required")
+        with self.lock:
+            if type(version) is not int or not 1 <= version <= len(self.items):
+                raise ValueError("version")
+            item = self.items[version - 1]
+            if item["state"] != "quarantined": raise ValueError("already scanned")
+            item["state"] = "reviewable" if clean else "rejected"
+
+    def submit(self, version, role, admissible=False):
+        with self.lock:
+            if role != "dispute-analyst": raise PermissionError("analyst scope")
+            if type(version) is not int or not 1 <= version <= len(self.items):
+                raise ValueError("version")
+            item = self.items[version - 1]
+            if item["state"] != "reviewable" or item["late"]:
+                raise ValueError("not eligible for this submission window")
+            if admissible is not True: raise ValueError("admissibility required")
+            item["state"] = "submitted"
 
 
-class ContextPolicy:
-    def __init__(self, key):
-        self.key = key
-        self.epoch = 1
-        self.approved = {"device-demo": {"network-demo"}}
+class DossierTests(unittest.TestCase):
+    def setUp(self): self.d = Dossier("a", 100)
+    def upload(self, key="u1", data=b"synthetic document", now=50):
+        return self.d.append("a", key, data, now)
 
-    def issue_demo_proof(self, device, network, now, ttl=30):
-        body = dict(device=device, network=network, issued=now,
-                    expires=now + ttl, epoch=self.epoch)
-        signature = hmac.new(self.key, canonical(body), hashlib.sha256).hexdigest()
-        return dict(body=body, signature=signature)
+    # BEGIN TESTS
+    def test_late_evidence_is_retained_without_submission_promise(self):
+        item = self.upload(now=101)
+        self.d.scan(item["version"], True, True)
+        with self.assertRaises(ValueError):
+            self.d.submit(item["version"], "dispute-analyst", True)
+        self.assertEqual(len(self.d.items), 1)
+        self.assertEqual(self.d.items[0]["state"], "reviewable")
 
-    def decide(self, device, amount_cents, street_limit_cents, proof, now,
-               permission=True):
-        if type(permission) is not bool:
-            raise ValueError("boolean_permission_required")
-        if (type(amount_cents) is not int or amount_cents <= 0
-                or type(street_limit_cents) is not int or street_limit_cents < 0):
-            raise ValueError("invalid_money")
-        reason = "context_missing"
-        trusted = False
-        if not permission:
-            reason = "permission_missing"
-        elif proof:
-            body = proof["body"]
-            expected = hmac.new(self.key, canonical(body), hashlib.sha256).hexdigest()
-            valid = hmac.compare_digest(expected, proof["signature"])
-            valid = valid and body["device"] == device
-            valid = valid and body["epoch"] == self.epoch
-            valid = valid and body["issued"] <= now < body["expires"]
-            valid = valid and body["network"] in self.approved.get(device, set())
-            trusted, reason = valid, "verified_context" if valid else "context_invalid"
-        # Contexto apenas decide este desafio; não autoriza pagamento.
-        challenge = amount_cents > street_limit_cents and not trusted
-        return dict(challenge=challenge, context_trusted=trusted, reason=reason,
-                    payment_authorized=False)
+    def test_reused_upload_id_cannot_replace_evidence(self):
+        original = self.upload()
+        with self.assertRaises(ValueError):
+            self.upload(data=b"replacement")
+        self.assertEqual(self.d.items[0]["digest"], original["digest"])
+    # END TESTS
 
+    def test_upload_is_not_submission(self):
+        self.upload()
+        with self.assertRaises(ValueError): self.d.submit(1, "dispute-analyst", True)
+    def test_malware_cannot_submit(self):
+        self.upload(); self.d.scan(1, False, True)
+        with self.assertRaises(ValueError): self.d.submit(1, "dispute-analyst", True)
+    def test_owner_scope(self):
+        with self.assertRaises(PermissionError): self.d.append("b", "u", b"x", 1)
+    def test_duplicate_upload_returns_same_version(self):
+        self.assertEqual(self.upload(), self.upload()); self.assertEqual(len(self.d.items), 1)
+    def test_return_value_cannot_mutate_record(self):
+        item = self.upload(); item["state"] = "submitted"
+        self.assertEqual(self.d.items[0]["state"], "quarantined")
+    def test_truthy_scanner_rejected(self):
+        self.upload()
+        with self.assertRaises(PermissionError): self.d.scan(1, True, 1)
+    def test_exact_cutoff_is_late(self):
+        self.assertTrue(self.upload(now=100)["late"])
+    def test_nan_time_rejected(self):
+        with self.assertRaises(ValueError): self.upload(now=float("nan"))
+    def test_clean_admissible_can_submit(self):
+        self.upload(); self.d.scan(1, True, True)
+        self.d.submit(1, "dispute-analyst", True)
+        self.assertEqual(self.d.items[0]["state"], "submitted")
+    def test_empty_content_rejected(self):
+        with self.assertRaises(ValueError): self.upload(data=b"")
 
-class Tests(unittest.TestCase):
-    def setUp(self):
-        self.p = ContextPolicy(b"synthetic-test-key-never-production")
-        self.proof = self.p.issue_demo_proof("device-demo", "network-demo", 100)
+    def test_invalid_owner_rejected_before_state_exists(self):
+        for owner in (None, "", " \t\n", 0, True):
+            with self.subTest(owner=owner):
+                candidate = Dossier.__new__(Dossier)
+                with self.assertRaises(ValueError): candidate.__init__(owner, 100)
+                self.assertEqual(vars(candidate), {})
 
-    def decide(self, **changes):
-        args = dict(device="device-demo", amount_cents=2000,
-                    street_limit_cents=1000, proof=self.proof, now=110)
-        args.update(changes)
-        return self.p.decide(**args)
-
-    def test_valid_context_removes_only_this_challenge(self):
-        result = self.decide()
-        self.assertFalse(result["challenge"])
-        self.assertFalse(result["payment_authorized"])
-
-    def test_missing_permission_keeps_conservative_state(self):
-        result = self.decide(permission=False)
-        self.assertTrue(result["challenge"])
-        self.assertEqual(result["reason"], "permission_missing")
-
-    def test_expired_and_future_proofs_are_rejected(self):
-        for now in (99, 130, 1000):
-            self.assertTrue(self.decide(now=now)["challenge"])
-
-    def test_tampered_signature_is_rejected(self):
-        proof = json.loads(json.dumps(self.proof))
-        proof["body"]["expires"] = 9999
-        self.assertTrue(self.decide(proof=proof)["challenge"])
-
-    def test_proof_is_bound_to_device_and_approved_network(self):
-        self.assertTrue(self.decide(device="other")["challenge"])
-        other = self.p.issue_demo_proof("device-demo", "same-name-fake", 100)
-        self.assertTrue(self.decide(proof=other)["challenge"])
-
-    def test_recovery_invalidates_old_context(self):
-        self.p.epoch += 1
-        self.assertTrue(self.decide()["challenge"])
-
-    def test_below_limit_is_not_automatic_payment_authorization(self):
-        result = self.decide(amount_cents=500, proof=None)
-        self.assertFalse(result["challenge"])
-        self.assertFalse(result["payment_authorized"])
-
-    def test_permission_requires_an_explicit_boolean(self):
-        for permission in ("false", "true", 0, 1, None):
-            with self.subTest(permission=permission), self.assertRaises(ValueError):
-                self.decide(permission=permission)
+    def test_missing_upload_identity_cannot_add_evidence(self):
+        for owner in (None, "", " \t\n"):
+            with self.subTest(owner=owner), self.assertRaises(PermissionError):
+                self.d.append(owner, "u", b"x", 1)
+        self.assertEqual(self.d.items, [])
+        self.assertEqual(self.d.seen, {})
 
 
-if __name__ == "__main__":
-    print("LAB SINTÉTICO 06: não detecta redes, fraude ou identidade real.")
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main()

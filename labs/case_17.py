@@ -1,150 +1,174 @@
-"""Toy logistic scoring and cost accounting; no trained or bank model."""
+"""One benefit balance, explicit redemption preview. Synthetic executable model.
+Points use hundredths of a point; BRL uses cents. Rates are supplied quotations,
+never inferred from the individual public complaint. In-memory locking is not
+production atomicity. Quote issuance requires an authenticated pricing service.
+"""
 from dataclasses import dataclass
-import json
-import math
+from threading import RLock
+from concurrent.futures import ThreadPoolExecutor
 import unittest
+
+def identifier(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('nonblank string identity required')
+    return value
+
 
 
 @dataclass(frozen=True)
-class Features:
-    amount_cents: int
-    velocity: int
-    device_change: bool
-    age_seconds: int
+class Quote:
+    quote_id: str
+    owner: str
+    points_minor: int
+    cash_cents: int
+    balance_version: int
+    expires_at: int
 
 
-def validate_features(features):
-    values = (features.amount_cents, features.velocity, features.age_seconds)
-    if any(type(value) is not int or value < 0 for value in values):
-        raise ValueError("non-negative integer features required")
-    if type(features.device_change) is not bool:
-        raise ValueError("device_change must be boolean")
+class Benefits:
+    def __init__(self, owner, points_minor):
+        identifier(owner)
+        if type(points_minor) is not int or points_minor < 0:
+            raise ValueError('invalid points')
+        self.owner, self.points = owner, points_minor
+        self.version, self.cash = 1, 0
+        self.quotes, self.receipts, self.lock = {}, {}, RLock()
+
+    def issue(self, quote, source):
+        with self.lock:
+            identifier(quote.quote_id)
+            identifier(quote.owner)
+            if type(quote.balance_version) is not int or quote.balance_version < 1:
+                raise ValueError('invalid balance version')
+            if source != 'pricing' or quote.owner != self.owner:
+                raise PermissionError('quote issuer')
+            if any(type(v) is not int or v <= 0 for v in
+                   (quote.points_minor, quote.cash_cents, quote.expires_at)):
+                raise ValueError('invalid units')
+            if quote.quote_id in self.quotes:
+                raise ValueError('quote already issued')
+            self.quotes[quote.quote_id] = quote
+
+    # BOOK CORE START
+    def redeem(self, actor, quote_id, choice, key, now):
+        with self.lock:
+            for value in (actor, quote_id, key):
+                identifier(value)
+            if type(now) is not int or now < 0:
+                raise ValueError('invalid clock')
+            if actor != self.owner:
+                raise PermissionError('account scope')
+            if choice != 'cash' or not key:
+                raise ValueError('explicit supported choice required')
+            command = (quote_id, choice)
+            if key in self.receipts:
+                old, receipt = self.receipts[key]
+                if old != command:
+                    raise ValueError('idempotency conflict')
+                return receipt
+            quote = self.quotes[quote_id]
+            if now >= quote.expires_at:
+                raise ValueError('quote expired')
+            if quote.balance_version != self.version:
+                raise ValueError('balance changed; preview again')
+            if quote.points_minor > self.points:
+                raise ValueError('insufficient points')
+            self.points -= quote.points_minor
+            self.cash += quote.cash_cents
+            self.version += 1
+            receipt = (quote_id, quote.points_minor, quote.cash_cents)
+            self.receipts[key] = (command, receipt)
+            return receipt
+    # BOOK CORE END
 
 
-def toy_score(features):
-    validate_features(features)
-    amount = min(features.amount_cents / 100000, 4)
-    velocity = min(features.velocity, 10)
-    z = -4 + 0.5 * amount + 0.7 * velocity
-    z += 1.2 * int(features.device_change)
-    return 1 / (1 + math.exp(-z))
+class BenefitTests(unittest.TestCase):
+    def setUp(self):
+        self.b = Benefits('owner', 1_907_136)
+        self.q = Quote('q1', 'owner', 1_907_136, 57_791, 1, 200)
+        self.b.issue(self.q, 'pricing')
 
-
-def decide(features, allow_below=0.30, block_from=0.85):
-    if not 0 <= allow_below < block_from <= 1:
-        raise ValueError("invalid thresholds")
-    if features is None:
-        return "REVIEW_MISSING"
-    validate_features(features)
-    if features.age_seconds > 60:
-        return "REVIEW_STALE"
-    probability_like = toy_score(features)
-    if probability_like >= block_from:
-        return "BLOCK"
-    if probability_like >= allow_below:
-        return "REVIEW"
-    return "ALLOW"
-
-
-def realized_cost(rows, fp_cents=500, review_cents=100):
-    if any(type(x) is not int or x < 0 for x in (fp_cents, review_cents)):
-        raise ValueError("costs must be non-negative integer cents")
-    totals = {"missed_fraud": 0, "false_positive": 0, "review": 0}
-    for action, fraud, amount_cents in rows:
-        if type(amount_cents) is not int or amount_cents < 0:
-            raise ValueError("amount must be non-negative integer cents")
-        if type(fraud) is not bool:
-            raise ValueError("fraud label must be boolean")
-        if action == "ALLOW" and fraud:
-            totals["missed_fraud"] += amount_cents
-        elif action == "BLOCK" and not fraud:
-            totals["false_positive"] += fp_cents
-        elif action in {"REVIEW", "REVIEW_MISSING", "REVIEW_STALE"}:
-            totals["review"] += review_cents
-        elif action not in {"ALLOW", "BLOCK"}:
-            raise ValueError("unknown action")
-    totals["total"] = sum(totals.values())
-    return totals
-
-
-class FraudTests(unittest.TestCase):
-    def test_low(self):
-        self.assertEqual(decide(Features(100, 0, False, 1)), "ALLOW")
-
-    def test_high(self):
-        self.assertEqual(decide(Features(400000, 10, True, 1)), "BLOCK")
-
-    def test_middle(self):
-        self.assertEqual(decide(Features(100000, 4, True, 1)), "REVIEW")
-
-    def test_missing(self):
-        self.assertEqual(decide(None), "REVIEW_MISSING")
-
-    def test_stale(self):
-        self.assertEqual(decide(Features(100, 0, False, 61)), "REVIEW_STALE")
-
-    def test_future(self):
+    # BOOK TEST START
+    def test_same_balance_cannot_be_spent_twice(self):
+        self.b.redeem('owner', 'q1', 'cash', 'a', 100)
         with self.assertRaises(ValueError):
-            decide(Features(100, 0, False, -1))
+            self.b.redeem('owner', 'q1', 'cash', 'b', 101)
+        self.assertEqual(self.b.points, 0)
+        self.assertEqual(self.b.cash, 57_791)
 
-    def test_negative(self):
+    def test_retry_preserves_original_receipt(self):
+        first = self.b.redeem('owner', 'q1', 'cash', 'a', 100)
+        retry = self.b.redeem('owner', 'q1', 'cash', 'a', 900)
+        self.assertEqual(first, retry)
+        self.assertEqual(self.b.cash, 57_791)
+
+    def test_expired_preview_has_no_financial_effect(self):
         with self.assertRaises(ValueError):
-            toy_score(Features(-1, 0, False, 1))
+            self.b.redeem('owner', 'q1', 'cash', 'a', 200)
+        self.assertEqual(self.b.points, 1_907_136)
+        self.assertEqual(self.b.cash, 0)
+        self.assertEqual(self.b.receipts, {})
+    # BOOK TEST END
 
-    def test_threshold_order(self):
+    def test_concurrent_choices_only_one_commit(self):
+        def commit(key):
+            try:
+                return self.b.redeem('owner', 'q1', 'cash', key, 100)
+            except ValueError:
+                return None
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            results = list(pool.map(commit, ['a', 'b']))
+        self.assertEqual(sum(x is not None for x in results), 1)
+
+    def test_wrong_owner_cannot_read_receipt(self):
+        self.b.redeem('owner', 'q1', 'cash', 'a', 100)
+        with self.assertRaises(PermissionError):
+            self.b.redeem('other', 'q1', 'cash', 'a', 100)
+
+    def test_unsupported_choice(self):
         with self.assertRaises(ValueError):
-            decide(None, 0.9, 0.1)
+            self.b.redeem('owner', 'q1', 'miles', 'a', 100)
+        self.assertEqual(self.b.cash, 0)
 
-    def test_monotonic_velocity(self):
-        low = toy_score(Features(10000, 1, False, 1))
-        high = toy_score(Features(10000, 5, False, 1))
-        self.assertLess(low, high)
+    def test_unsigned_quote(self):
+        with self.assertRaises(PermissionError):
+            self.b.issue(Quote('q2', 'owner', 1, 999_999, 1, 200), 'app')
 
-    def test_costs(self):
-        costs = realized_cost([("ALLOW", True, 10000),
-                               ("BLOCK", False, 10000),
-                               ("REVIEW", True, 10000)])
-        self.assertEqual(costs["total"], 10600)
-
-    def test_zero_loss_when_correct(self):
-        self.assertEqual(realized_cost([("ALLOW", False, 100),
-                                        ("BLOCK", True, 100)])["total"], 0)
-
-    def test_unknown_action(self):
+    def test_quote_not_replaced(self):
         with self.assertRaises(ValueError):
-            realized_cost([("SKIP", False, 10)])
+            self.b.issue(self.q, 'pricing')
 
-    def test_nonfinite_features_cannot_allow(self):
-        for value in (float("nan"), float("inf"), 1.5, True):
-            for feature in (Features(value, 0, False, 1),
-                            Features(1, value, False, 1),
-                            Features(1, 0, False, value)):
-                with self.assertRaises(ValueError):
-                    decide(feature)
-
-    def test_device_flag_is_boolean(self):
+    def test_conflicting_retry(self):
+        self.b.redeem('owner', 'q1', 'cash', 'a', 100)
         with self.assertRaises(ValueError):
-            decide(Features(1, 0, "false", 1))
+            self.b.redeem('owner', 'q2', 'cash', 'a', 100)
 
-    def test_cost_domains(self):
-        for value in (float("nan"), float("inf"), -1, 0.5, True):
+    def test_amount_type_validation(self):
+        for value in (True, 0, -1, 1.1):
             with self.assertRaises(ValueError):
-                realized_cost([("ALLOW", True, value)])
+                self.b.issue(Quote('bad', 'owner', value, 1, 1, 200), 'pricing')
+
+
+    def test_invalid_clock_has_no_effect(self):
+        for now in (float('nan'), float('inf'), True, -1):
             with self.assertRaises(ValueError):
-                realized_cost([], fp_cents=value)
-        with self.assertRaises(ValueError):
-            realized_cost([("ALLOW", "false", 1)])
+                self.b.redeem('owner', 'q1', 'cash', 'a', now)
+        self.assertEqual(self.b.cash, 0)
 
-    def test_unknown_review_action(self):
-        with self.assertRaises(ValueError):
-            realized_cost([("REVIEW_BOGUS", False, 10)])
+    def test_missing_owner_and_quote_identity_rejected(self):
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                Benefits(value, 100)
+            with self.assertRaises(ValueError):
+                self.b.issue(Quote(value, 'owner', 1, 1, 1, 200), 'pricing')
+        self.assertEqual(set(self.b.quotes), {'q1'})
 
+    def test_invalid_key_cannot_consume_quote(self):
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                self.b.redeem('owner', 'q1', 'cash', value, 100)
+        self.assertEqual(self.b.cash, 0)
+        self.assertEqual(self.b.points, 1_907_136)
 
-if __name__ == "__main__":
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(FraudTests)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    rows = [("ALLOW", True, 10000), ("BLOCK", False, 10000),
-            ("REVIEW", True, 10000)]
-    print(json.dumps({"synthetic_cost_cents": realized_cost(rows),
-                      "model": "fixed toy weights; not calibrated"}, indent=2))
-    raise SystemExit(not result.wasSuccessful())
+if __name__ == '__main__':
+    unittest.main()

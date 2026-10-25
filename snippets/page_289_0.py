@@ -1,25 +1,31 @@
-def accept_proof(session, receipt, consumed):
-    if session.stage not in ('VERIFYING', 'ASSISTED'):
-        raise ValueError('Verification is not expected')
-    if receipt.get('verified') is not True or receipt.get('card') != session.card:
-        raise ValueError('Proof does not authorize this card')
-    if not isinstance(receipt.get('id'), str) or not receipt['id'].strip():
-        raise ValueError('Non-empty receipt identifier required')
-    if receipt['id'] in consumed:
-        raise ValueError('Receipt already consumed')
-    consumed.add(receipt['id'])
-    return replace(session, stage='VERIFIED')
+    def authorize_refund(self, merchant, payment_id, authorization_id):
+        with self.lock:
+            for value in (merchant, payment_id, authorization_id):
+                identifier(value)
+            if merchant != self.p.merchant or payment_id != self.p.payment_id:
+                raise PermissionError('merchant/payment scope')
+            if not authorization_id:
+                raise ValueError('authorization required')
+            if self.refund_authority not in (None, authorization_id):
+                raise ValueError('conflicting authority')
+            self.refund_authority = authorization_id
 
-
-def activate(session):
-    if session.stage != 'VERIFIED':
-        raise ValueError('Verified identity required')
-    return replace(session, stage='ACTIVE')
-
-session = advance(ready(), 'camera_unavailable')
-assert session.stage == 'ASSISTED'
-consumed = set()
-verified = accept_proof(session, proof(), consumed)
-assert verified.stage == 'VERIFIED'
-assert activate(verified).stage == 'ACTIVE'
-assert 'fixture-1' in consumed
+    def refund(self, actor, authorization_id, key):
+        with self.lock:
+            identifier(authorization_id)
+            identifier(key)
+            if actor != 'financial-writer':
+                raise PermissionError('financial writer required')
+            if not key or not authorization_id:
+                raise ValueError('identity required')
+            if self.refund_authority != authorization_id:
+                raise PermissionError('merchant authorization missing')
+            if self.credits:
+                old_key, receipt = next(iter(self.credits.items()))
+                if old_key != key:
+                    raise ValueError('payment already refunded')
+                return receipt
+            receipt = (self.p.payment_id, self.p.cents, authorization_id)
+            self.credits[key] = receipt
+            self.state = 'REFUNDED'
+            return receipt

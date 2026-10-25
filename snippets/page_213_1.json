@@ -1,0 +1,12 @@
+{
+  "quote_id": "synthetic-quote-14",
+  "contract_revision": 1,
+  "currency": "BRL",
+  "current_bill_cents": 5000,
+  "principal_cents": 10000,
+  "discount_cents": 1000,
+  "required_cents": 14000,
+  "received_cents": 14000,
+  "execution_state": "pending",
+  "expires_at": 100
+}

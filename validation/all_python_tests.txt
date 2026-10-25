@@ -1,210 +1,380 @@
-test_concurrent_distinct_payments_cannot_overdraw (case_01.TrustInvariantTests.test_concurrent_distinct_payments_cannot_overdraw) ... ok
-test_concurrent_same_operation_has_one_receipt_and_one_debit (case_01.TrustInvariantTests.test_concurrent_same_operation_has_one_receipt_and_one_debit) ... ok
-test_insufficient_funds_has_no_partial_side_effects (case_01.TrustInvariantTests.test_insufficient_funds_has_no_partial_side_effects) ... ok
-test_integer_cents_rejects_float_bool_zero_negative_and_overflow (case_01.TrustInvariantTests.test_integer_cents_rejects_float_bool_zero_negative_and_overflow) ... ok
-test_process_crash_after_commit_preserves_receipt_and_resume_replays (case_01.TrustInvariantTests.test_process_crash_after_commit_preserves_receipt_and_resume_replays) ... ok
-test_process_crash_before_commit_rolls_back_and_resume_executes_once (case_01.TrustInvariantTests.test_process_crash_before_commit_rolls_back_and_resume_executes_once) ... ok
-test_recovery_does_not_reexecute_a_previously_committed_operation (case_01.TrustInvariantTests.test_recovery_does_not_reexecute_a_previously_committed_operation) ... ok
-test_recovery_epoch_rejects_old_commands_and_accepts_new_session (case_01.TrustInvariantTests.test_recovery_epoch_rejects_old_commands_and_accepts_new_session) ... ok
-test_same_id_different_payload_conflicts_without_mutation (case_01.TrustInvariantTests.test_same_id_different_payload_conflicts_without_mutation) ... ok
-test_same_id_same_payload_returns_identical_persisted_receipt (case_01.TrustInvariantTests.test_same_id_same_payload_returns_identical_persisted_receipt) ... ok
-test_timeout_after_commit_retry_does_not_debit_twice (case_01.TrustInvariantTests.test_timeout_after_commit_retry_does_not_debit_twice) ... ok
-test_unknown_account_has_no_effect (case_01.TrustInvariantTests.test_unknown_account_has_no_effect) ... ok
-test_cannot_skip_review_or_restore_twice (case_02.Tests.test_cannot_skip_review_or_restore_twice) ... ok
-test_expired_case_cannot_restore (case_02.Tests.test_expired_case_cannot_restore) ... ok
-test_invalid_clock_cannot_bypass_expiry (case_02.Tests.test_invalid_clock_cannot_bypass_expiry) ... ok
-test_owner_cannot_verify (case_02.Tests.test_owner_cannot_verify) ... ok
-test_reopen_preserves_case_and_epoch (case_02.Tests.test_reopen_preserves_case_and_epoch) ... ok
-test_restore_requires_two_distinct_reviewers (case_02.Tests.test_restore_requires_two_distinct_reviewers) ... ok
-test_stale_revision_cannot_repeat_verification (case_02.Tests.test_stale_revision_cannot_repeat_verification) ... ok
-test_default_hides_values (case_03.Tests.test_default_hides_values) ... ok
-test_explicit_opt_in_formats_integer_cents (case_03.Tests.test_explicit_opt_in_formats_integer_cents) ... ok
-test_opt_out_suppresses_delivery (case_03.Tests.test_opt_out_suppresses_delivery) ... ok
-test_payload_conflict_is_rejected (case_03.Tests.test_payload_conflict_is_rejected) ... ok
-test_preferences_and_version_have_strict_types (case_03.Tests.test_preferences_and_version_have_strict_types) ... ok
-test_privacy_changed_while_queued_is_respected (case_03.Tests.test_privacy_changed_while_queued_is_respected) ... ok
-test_replay_is_identical (case_03.Tests.test_replay_is_identical) ... ok
-test_unsupported_schema_and_float_are_rejected (case_03.Tests.test_unsupported_schema_and_float_are_rejected) ... ok
-test_future_observation_is_not_trusted (case_04.Tests.test_future_observation_is_not_trusted) ... ok
-test_invalid_sequence_cannot_overwrite_newer_resource (case_04.Tests.test_invalid_sequence_cannot_overwrite_newer_resource) ... ok
-test_old_or_duplicate_events_do_not_overwrite (case_04.Tests.test_old_or_duplicate_events_do_not_overwrite) ... ok
-test_partial_is_not_complete (case_04.Tests.test_partial_is_not_complete) ... ok
-test_revocation_fences_inflight_events (case_04.Tests.test_revocation_fences_inflight_events) ... ok
-test_stale_position_is_excluded_and_flagged (case_04.Tests.test_stale_position_is_excluded_and_flagged) ... ok
-test_unsupported_requires_none (case_04.Tests.test_unsupported_requires_none) ... ok
-test_zero_is_a_real_complete_position (case_04.Tests.test_zero_is_a_real_complete_position) ... ok
-test_delayed_previous_day_notification_expires (case_05.Tests.test_delayed_previous_day_notification_expires) ... ok
-test_fold_selects_first_occurrence (case_05.Tests.test_fold_selects_first_occurrence) ... ok
-test_gap_advances_to_first_valid_minute (case_05.Tests.test_gap_advances_to_first_valid_minute) ... ok
-test_invalid_version_cannot_replace_a_bill (case_05.Tests.test_invalid_version_cannot_replace_a_bill) ... ok
-test_old_version_and_naive_clock_rejected (case_05.Tests.test_old_version_and_naive_clock_rejected) ... ok
-test_orders_across_month_boundaries (case_05.Tests.test_orders_across_month_boundaries) ... ok
-test_paid_before_dispatch_suppresses_reminder (case_05.Tests.test_paid_before_dispatch_suppresses_reminder) ... ok
-test_repeated_dispatch_is_deduplicated (case_05.Tests.test_repeated_dispatch_is_deduplicated) ... ok
-test_sao_paulo_preference_is_utc_12 (case_05.Tests.test_sao_paulo_preference_is_utc_12) ... ok
-test_below_limit_is_not_automatic_payment_authorization (case_06.Tests.test_below_limit_is_not_automatic_payment_authorization) ... ok
-test_expired_and_future_proofs_are_rejected (case_06.Tests.test_expired_and_future_proofs_are_rejected) ... ok
-test_missing_permission_keeps_conservative_state (case_06.Tests.test_missing_permission_keeps_conservative_state) ... ok
-test_permission_requires_an_explicit_boolean (case_06.Tests.test_permission_requires_an_explicit_boolean) ... ok
-test_proof_is_bound_to_device_and_approved_network (case_06.Tests.test_proof_is_bound_to_device_and_approved_network) ... ok
-test_recovery_invalidates_old_context (case_06.Tests.test_recovery_invalidates_old_context) ... ok
-test_tampered_signature_is_rejected (case_06.Tests.test_tampered_signature_is_rejected) ... ok
-test_valid_context_removes_only_this_challenge (case_06.Tests.test_valid_context_removes_only_this_challenge) ... ok
-test_conflicting_reissue_is_atomic (case_07.Tests.test_conflicting_reissue_is_atomic) ... ok
-test_duplicate_source_identity_fails (case_07.Tests.test_duplicate_source_identity_fails) ... ok
-test_invalid_formats_and_float_are_rejected (case_07.Tests.test_invalid_formats_and_float_are_rejected) ... ok
-test_negative_cent_and_integers (case_07.Tests.test_negative_cent_and_integers) ... ok
-test_reissue_does_not_duplicate_import (case_07.Tests.test_reissue_does_not_duplicate_import) ... ok
-test_roundtrip_range_of_integer_cents (case_07.Tests.test_roundtrip_range_of_integer_cents) ... ok
-test_xml_escapes_memo_and_preserves_identity (case_07.Tests.test_xml_escapes_memo_and_preserves_identity) ... ok
-test_atomic_failure_and_retry (case_08.Tests.test_atomic_failure_and_retry) ... ok
-test_conflicting_identity (case_08.Tests.test_conflicting_identity) ... ok
-test_duplicate (case_08.Tests.test_duplicate) ... ok
-test_independent_connections_preserve_highest_sequence (case_08.Tests.test_independent_connections_preserve_highest_sequence) ... ok
-test_out_of_order (case_08.Tests.test_out_of_order) ... ok
-test_reopen (case_08.Tests.test_reopen) ... ok
-test_terminal_guard (case_08.Tests.test_terminal_guard) ... ok
-test_write_transaction_precedes_reads (case_08.Tests.test_write_transaction_precedes_reads) ... ok
-test_conflicting_revision_rejected (case_09.Tests.test_conflicting_revision_rejected) ... ok
-test_empty_period (case_09.Tests.test_empty_period) ... ok
-test_hide_chart_keeps_financial_information (case_09.Tests.test_hide_chart_keeps_financial_information) ... ok
-test_mutable_entries_rejected (case_09.Tests.test_mutable_entries_rejected) ... ok
-test_partial_snapshot_rejected (case_09.Tests.test_partial_snapshot_rejected) ... ok
-test_refund_is_signed (case_09.Tests.test_refund_is_signed) ... ok
-test_stale_revision_ignored (case_09.Tests.test_stale_revision_ignored) ... ok
-test_wrong_period_not_silently_applied (case_09.Tests.test_wrong_period_not_silently_applied) ... ok
-test_invalid_amount_rejected (case_10.Tests.test_invalid_amount_rejected) ... ok
-test_owner_not_in_shareable_body (case_10.Tests.test_owner_not_in_shareable_body) ... ok
-test_pending_has_no_paid_claim (case_10.Tests.test_pending_has_no_paid_claim) ... ok
-test_reversed_has_explicit_status (case_10.Tests.test_reversed_has_explicit_status) ... ok
-test_same_snapshot_same_document (case_10.Tests.test_same_snapshot_same_document) ... ok
-test_tampering_detected (case_10.Tests.test_tampering_detected) ... ok
-test_wrong_subject_is_denied (case_10.Tests.test_wrong_subject_is_denied) ... ok
-test_conflicting_version_rejected (case_11.Tests.test_conflicting_version_rejected) ... ok
-test_fresh_projection_used (case_11.Tests.test_fresh_projection_used) ... ok
-test_future_timestamp_rejected (case_11.Tests.test_future_timestamp_rejected) ... ok
-test_missing_component_forces_fallback (case_11.Tests.test_missing_component_forces_fallback) ... ok
-test_old_component_forces_fallback (case_11.Tests.test_old_component_forces_fallback) ... ok
-test_old_version_does_not_replace (case_11.Tests.test_old_version_does_not_replace) ... ok
-test_unavailable_projection_forces_fallback (case_11.Tests.test_unavailable_projection_forces_fallback) ... ok
-test_concurrent_demands_cannot_overbook (case_12.Tests.test_concurrent_demands_cannot_overbook) ... ok
-test_conflicting_token (case_12.Tests.test_conflicting_token) ... ok
-test_forecast (case_12.Tests.test_forecast) ... ok
-test_multidimensional_reservation_is_atomic (case_12.Tests.test_multidimensional_reservation_is_atomic) ... ok
-test_release_is_idempotent (case_12.Tests.test_release_is_idempotent) ... ok
-test_replay_after_release_cannot_resurrect_reservation (case_12.Tests.test_replay_after_release_cannot_resurrect_reservation) ... ok
-test_same_token_not_reserved_twice (case_12.Tests.test_same_token_not_reserved_twice) ... ok
-test_token_remains_bound_to_payload_after_release (case_12.Tests.test_token_remains_bound_to_payload_after_release) ... ok
-test_unknown_resource_rejected (case_12.Tests.test_unknown_resource_rejected) ... ok
-test_archived_resource_cannot_transfer (case_13.Tests.test_archived_resource_cannot_transfer) ... ok
-test_destination_must_accept (case_13.Tests.test_destination_must_accept) ... ok
-test_each_missing_barrier_blocks (case_13.Tests.test_each_missing_barrier_blocks) ... ok
-test_hold_blocks_archive (case_13.Tests.test_hold_blocks_archive) ... ok
-test_old_evidence_blocks_after_transfer (case_13.Tests.test_old_evidence_blocks_after_transfer) ... ok
-test_safe_archive_keeps_resource_record (case_13.Tests.test_safe_archive_keeps_resource_record) ... ok
-test_stale_transfer_cannot_override (case_13.Tests.test_stale_transfer_cannot_override) ... ok
-test_untyped_evidence_rejected (case_13.Tests.test_untyped_evidence_rejected) ... ok
-test_arbitrary_action_rejected (case_14.Tests.test_arbitrary_action_rejected) ... ok
-test_capable_client_gets_active_revision (case_14.Tests.test_capable_client_gets_active_revision) ... ok
-test_cohort_boundaries (case_14.Tests.test_cohort_boundaries) ... ok
-test_cohort_is_stable_and_monotonic (case_14.Tests.test_cohort_is_stable_and_monotonic) ... ok
-test_incompatible_fallback_is_not_returned (case_14.Tests.test_incompatible_fallback_is_not_returned) ... ok
-test_missing_accessibility_rejected (case_14.Tests.test_missing_accessibility_rejected) ... ok
-test_mutable_components_rejected (case_14.Tests.test_mutable_components_rejected) ... ok
-test_old_client_gets_fallback (case_14.Tests.test_old_client_gets_fallback) ... ok
-test_revision_cannot_change (case_14.Tests.test_revision_cannot_change) ... ok
-test_rollback_selects_old_revision (case_14.Tests.test_rollback_selects_old_revision) ... ok
-test_unpublished_fallback_rejected (case_14.Tests.test_unpublished_fallback_rejected) ... ok
-test_conflict (case_15.ReleaseTests.test_conflict) ... ok
-test_duplicate (case_15.ReleaseTests.test_duplicate) ... ok
-test_empty (case_15.ReleaseTests.test_empty) ... ok
-test_empty_sample_holds (case_15.ReleaseTests.test_empty_sample_holds) ... ok
-test_exact_boundary (case_15.ReleaseTests.test_exact_boundary) ... ok
-test_healthy (case_15.ReleaseTests.test_healthy) ... ok
-test_invalid_raw_types (case_15.ReleaseTests.test_invalid_raw_types) ... ok
-test_invalid_sample_and_policy (case_15.ReleaseTests.test_invalid_sample_and_policy) ... ok
-test_missing_telemetry (case_15.ReleaseTests.test_missing_telemetry) ... ok
-test_nearest_rank (case_15.ReleaseTests.test_nearest_rank) ... ok
-test_negative_latency (case_15.ReleaseTests.test_negative_latency) ... ok
-test_nonfinite_stats_fail_closed (case_15.ReleaseTests.test_nonfinite_stats_fail_closed) ... ok
-test_small_sample (case_15.ReleaseTests.test_small_sample) ... ok
-test_success_regression (case_15.ReleaseTests.test_success_regression) ... ok
-test_tail_regression (case_15.ReleaseTests.test_tail_regression) ... ok
-test_versions_are_distinct (case_15.ReleaseTests.test_versions_are_distinct) ... ok
-test_clear (case_16.RoutingTests.test_clear) ... ok
-test_conflict (case_16.RoutingTests.test_conflict) ... ok
-test_duplicate (case_16.RoutingTests.test_duplicate) ... ok
-test_empty (case_16.RoutingTests.test_empty) ... ok
-test_future (case_16.RoutingTests.test_future) ... ok
-test_invalid_policy (case_16.RoutingTests.test_invalid_policy) ... ok
-test_invalid_timestamps (case_16.RoutingTests.test_invalid_timestamps) ... ok
-test_low_support (case_16.RoutingTests.test_low_support) ... ok
-test_negative_weight (case_16.RoutingTests.test_negative_weight) ... ok
-test_nonfinite_or_fractional_weights (case_16.RoutingTests.test_nonfinite_or_fractional_weights) ... ok
-test_old_event_arriving_now (case_16.RoutingTests.test_old_event_arriving_now) ... ok
-test_old_receipt (case_16.RoutingTests.test_old_receipt) ... ok
-test_unavailable (case_16.RoutingTests.test_unavailable) ... ok
-test_uncertain (case_16.RoutingTests.test_uncertain) ... ok
-test_urgent_overrides_prediction (case_16.RoutingTests.test_urgent_overrides_prediction) ... ok
-test_cost_domains (case_17.FraudTests.test_cost_domains) ... ok
-test_costs (case_17.FraudTests.test_costs) ... ok
-test_device_flag_is_boolean (case_17.FraudTests.test_device_flag_is_boolean) ... ok
-test_future (case_17.FraudTests.test_future) ... ok
-test_high (case_17.FraudTests.test_high) ... ok
-test_low (case_17.FraudTests.test_low) ... ok
-test_middle (case_17.FraudTests.test_middle) ... ok
-test_missing (case_17.FraudTests.test_missing) ... ok
-test_monotonic_velocity (case_17.FraudTests.test_monotonic_velocity) ... ok
-test_negative (case_17.FraudTests.test_negative) ... ok
-test_nonfinite_features_cannot_allow (case_17.FraudTests.test_nonfinite_features_cannot_allow) ... ok
-test_stale (case_17.FraudTests.test_stale) ... ok
-test_threshold_order (case_17.FraudTests.test_threshold_order) ... ok
-test_unknown_action (case_17.FraudTests.test_unknown_action) ... ok
-test_unknown_review_action (case_17.FraudTests.test_unknown_review_action) ... ok
-test_zero_loss_when_correct (case_17.FraudTests.test_zero_loss_when_correct) ... ok
-test_boundary_open_left (case_18.SkewTests.test_boundary_open_left) ... ok
-test_conflict (case_18.SkewTests.test_conflict) ... ok
-test_contract_difference (case_18.SkewTests.test_contract_difference) ... ok
-test_duplicate (case_18.SkewTests.test_duplicate) ... ok
-test_future_occurrence (case_18.SkewTests.test_future_occurrence) ... ok
-test_integer_event_contract (case_18.SkewTests.test_integer_event_contract) ... ok
-test_invalid_tolerance (case_18.SkewTests.test_invalid_tolerance) ... ok
-test_invalid_window (case_18.SkewTests.test_invalid_window) ... ok
-test_late_knowledge (case_18.SkewTests.test_late_knowledge) ... ok
-test_matching (case_18.SkewTests.test_matching) ... ok
-test_missing_agreement (case_18.SkewTests.test_missing_agreement) ... ok
-test_missing_is_not_zero (case_18.SkewTests.test_missing_is_not_zero) ... ok
-test_nonfinite_comparison_cannot_match (case_18.SkewTests.test_nonfinite_comparison_cannot_match) ... ok
-test_tolerance (case_18.SkewTests.test_tolerance) ... ok
-test_unavailable_source (case_18.SkewTests.test_unavailable_source) ... ok
-test_black_white (case_19.ContrastTests.test_black_white) ... ok
-test_color_alone_fails (case_19.ContrastTests.test_color_alone_fails) ... ok
-test_composite_endpoints (case_19.ContrastTests.test_composite_endpoints) ... ok
-test_invalid_alpha (case_19.ContrastTests.test_invalid_alpha) ... ok
-test_invalid_channels (case_19.ContrastTests.test_invalid_channels) ... ok
-test_invalid_hex (case_19.ContrastTests.test_invalid_hex) ... ok
-test_large_text (case_19.ContrastTests.test_large_text) ... ok
-test_same_color (case_19.ContrastTests.test_same_color) ... ok
-test_small_text_boundary (case_19.ContrastTests.test_small_text_boundary) ... ok
-test_status_cues (case_19.ContrastTests.test_status_cues) ... ok
-test_symmetry (case_19.ContrastTests.test_symmetry) ... ok
-test_transparency_lowers_this_contrast (case_19.ContrastTests.test_transparency_lowers_this_contrast) ... ok
-test_assisted_path (case_20.JourneyTests.test_assisted_path) ... ok
-test_camera_path (case_20.JourneyTests.test_camera_path) ... ok
-test_duplicate_identity_and_order (case_20.JourneyTests.test_duplicate_identity_and_order) ... ok
-test_invalid_transition (case_20.JourneyTests.test_invalid_transition) ... ok
-test_missing_label (case_20.JourneyTests.test_missing_label) ... ok
-test_no_available_action (case_20.JourneyTests.test_no_available_action) ... ok
-test_no_proof_no_activation (case_20.JourneyTests.test_no_proof_no_activation) ... ok
-test_receipt_identifier_is_nonempty (case_20.JourneyTests.test_receipt_identifier_is_nonempty) ... ok
-test_replay (case_20.JourneyTests.test_replay) ... ok
-test_retry_preserves_card (case_20.JourneyTests.test_retry_preserves_card) ... ok
-test_unverified_proof (case_20.JourneyTests.test_unverified_proof) ... ok
-test_valid_semantics (case_20.JourneyTests.test_valid_semantics) ... ok
-test_verification_requires_exact_true (case_20.JourneyTests.test_verification_requires_exact_true) ... ok
-test_wrong_card (case_20.JourneyTests.test_wrong_card) ... ok
+case_01.py
+test_concurrent_refund_replays_once (case_01.ReceiptTests.test_concurrent_refund_replays_once) ... ok
+test_duplicate_event_payload_conflicts (case_01.ReceiptTests.test_duplicate_event_payload_conflicts) ... ok
+test_duplicate_intent_conflicts (case_01.ReceiptTests.test_duplicate_intent_conflicts) ... ok
+test_invalid_money_fails (case_01.ReceiptTests.test_invalid_money_fails) ... ok
+test_refund_without_failure_is_rejected (case_01.ReceiptTests.test_refund_without_failure_is_rejected) ... ok
+test_rejected_transition_rolls_back_event (case_01.ReceiptTests.test_rejected_transition_rolls_back_event) ... ok
+test_reopen_preserves_refund (case_01.ReceiptTests.test_reopen_preserves_refund) ... ok
+test_settled_cannot_use_failure_refund (case_01.ReceiptTests.test_settled_cannot_use_failure_refund) ... ok
+test_timeout_is_not_refund_authority (case_01.ReceiptTests.test_timeout_is_not_refund_authority) ... ok
+test_unknown_operation_has_no_event (case_01.ReceiptTests.test_unknown_operation_has_no_event) ... ok
+test_untrusted_cannot_change_state (case_01.ReceiptTests.test_untrusted_cannot_change_state) ... ok
+test_wrong_owner_cannot_read (case_01.ReceiptTests.test_wrong_owner_cannot_read) ... ok
 
 ----------------------------------------------------------------------
-Ran 205 tests in 0.447s
+Ran 12 tests in 0.037s
+
+OK
+
+case_02.py
+test_clock_regression_rejected (case_02.BalanceTests.test_clock_regression_rejected) ... ok
+test_concurrent_versions_keep_newest (case_02.BalanceTests.test_concurrent_versions_keep_newest) ... ok
+test_conflicting_same_version_rejected (case_02.BalanceTests.test_conflicting_same_version_rejected) ... ok
+test_empty_view_never_claims_zero (case_02.BalanceTests.test_empty_view_never_claims_zero) ... ok
+test_exact_expiry_is_stale (case_02.BalanceTests.test_exact_expiry_is_stale) ... ok
+test_future_snapshot_is_unknown (case_02.BalanceTests.test_future_snapshot_is_unknown) ... ok
+test_incident_does_not_change_money (case_02.BalanceTests.test_incident_does_not_change_money) ... ok
+test_incident_expiry_does_not_refresh_balance (case_02.BalanceTests.test_incident_expiry_does_not_refresh_balance) ... ok
+test_invalid_owner_rejected_before_state_exists (case_02.BalanceTests.test_invalid_owner_rejected_before_state_exists) ... ok
+test_invalid_time_rejected (case_02.BalanceTests.test_invalid_time_rejected) ... ok
+test_missing_read_identity_cannot_access_balance (case_02.BalanceTests.test_missing_read_identity_cannot_access_balance) ... ok
+test_replay_is_harmless (case_02.BalanceTests.test_replay_is_harmless) ... ok
+test_scope_checked_without_snapshot (case_02.BalanceTests.test_scope_checked_without_snapshot) ... ok
+test_untrusted_source_rejected (case_02.BalanceTests.test_untrusted_source_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
+
+case_03.py
+test_active_hold_blocks (case_03.RestrictionTests.test_active_hold_blocks) ... ok
+test_evidence_required (case_03.RestrictionTests.test_evidence_required) ... ok
+test_invalid_amount (case_03.RestrictionTests.test_invalid_amount) ... ok
+test_invalid_owner_rejected_before_state_exists (case_03.RestrictionTests.test_invalid_owner_rejected_before_state_exists) ... ok
+test_missing_destination_identity_never_releases_money (case_03.RestrictionTests.test_missing_destination_identity_never_releases_money) ... ok
+test_overdue_review_does_not_release_money (case_03.RestrictionTests.test_overdue_review_does_not_release_money) ... ok
+test_owner_mismatch (case_03.RestrictionTests.test_owner_mismatch) ... ok
+test_reconciliation_failure_preserves_approval (case_03.RestrictionTests.test_reconciliation_failure_preserves_approval) ... ok
+test_repeat_cannot_transfer_twice (case_03.RestrictionTests.test_repeat_cannot_transfer_twice) ... ok
+test_review_is_not_release (case_03.RestrictionTests.test_review_is_not_release) ... ok
+test_review_role_cannot_execute (case_03.RestrictionTests.test_review_role_cannot_execute) ... ok
+test_stale_review_rejected (case_03.RestrictionTests.test_stale_review_rejected) ... ok
+test_timer_nan_rejected (case_03.RestrictionTests.test_timer_nan_rejected) ... ok
+test_truthy_hold_clearance_is_rejected (case_03.RestrictionTests.test_truthy_hold_clearance_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.000s
+
+OK
+
+case_04.py
+test_bad_challenge_preserves_valid_attempt (case_04.RecoveryTests.test_bad_challenge_preserves_valid_attempt) ... ok
+test_camera_problem_is_not_identity_proof (case_04.RecoveryTests.test_camera_problem_is_not_identity_proof) ... ok
+test_duplicate_review_rejected (case_04.RecoveryTests.test_duplicate_review_rejected) ... ok
+test_exact_expiry_rejected (case_04.RecoveryTests.test_exact_expiry_rejected) ... ok
+test_invalid_bindings_rejected_before_state_exists (case_04.RecoveryTests.test_invalid_bindings_rejected_before_state_exists) ... ok
+test_missing_authorization_bindings_preserve_challenge (case_04.RecoveryTests.test_missing_authorization_bindings_preserve_challenge) ... ok
+test_missing_evidence_rejected (case_04.RecoveryTests.test_missing_evidence_rejected) ... ok
+test_nonfinite_time_rejected (case_04.RecoveryTests.test_nonfinite_time_rejected) ... ok
+test_other_device_rejected (case_04.RecoveryTests.test_other_device_rejected) ... ok
+test_other_owner_rejected (case_04.RecoveryTests.test_other_owner_rejected) ... ok
+test_parallel_authorization_consumes_once (case_04.RecoveryTests.test_parallel_authorization_consumes_once) ... ok
+test_revoke_prevents_authorization (case_04.RecoveryTests.test_revoke_prevents_authorization) ... ok
+test_truthy_approval_rejected (case_04.RecoveryTests.test_truthy_approval_rejected) ... ok
+test_truthy_review_not_trusted (case_04.RecoveryTests.test_truthy_review_not_trusted) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
+
+case_05.py
+test_boolean_generation (case_05.ContactTests.test_boolean_generation) ... ok
+test_budget_exhaustion (case_05.ContactTests.test_budget_exhaustion) ... ok
+test_contact_change_invalidates_old_code (case_05.ContactTests.test_contact_change_invalidates_old_code) ... ok
+test_contact_proof_does_not_authorize_device (case_05.ContactTests.test_contact_proof_does_not_authorize_device) ... ok
+test_expiry_boundary (case_05.ContactTests.test_expiry_boundary) ... ok
+test_future_clock (case_05.ContactTests.test_future_clock) ... ok
+test_invalid_owner_rejected_before_state_exists (case_05.ContactTests.test_invalid_owner_rejected_before_state_exists) ... ok
+test_missing_identity_cannot_change_issue_or_verify (case_05.ContactTests.test_missing_identity_cannot_change_issue_or_verify) ... ok
+test_nan_time (case_05.ContactTests.test_nan_time) ... ok
+test_other_owner_rejected (case_05.ContactTests.test_other_owner_rejected) ... ok
+test_replay_rejected (case_05.ContactTests.test_replay_rejected) ... ok
+test_resend_cooldown (case_05.ContactTests.test_resend_cooldown) ... ok
+test_resend_invalidates_previous_code (case_05.ContactTests.test_resend_invalidates_previous_code) ... ok
+test_truthy_identity_rejected (case_05.ContactTests.test_truthy_identity_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.000s
+
+OK
+
+case_06.py
+test_clean_admissible_can_submit (case_06.DossierTests.test_clean_admissible_can_submit) ... ok
+test_duplicate_upload_returns_same_version (case_06.DossierTests.test_duplicate_upload_returns_same_version) ... ok
+test_empty_content_rejected (case_06.DossierTests.test_empty_content_rejected) ... ok
+test_exact_cutoff_is_late (case_06.DossierTests.test_exact_cutoff_is_late) ... ok
+test_invalid_owner_rejected_before_state_exists (case_06.DossierTests.test_invalid_owner_rejected_before_state_exists) ... ok
+test_late_evidence_is_retained_without_submission_promise (case_06.DossierTests.test_late_evidence_is_retained_without_submission_promise) ... ok
+test_malware_cannot_submit (case_06.DossierTests.test_malware_cannot_submit) ... ok
+test_missing_upload_identity_cannot_add_evidence (case_06.DossierTests.test_missing_upload_identity_cannot_add_evidence) ... ok
+test_nan_time_rejected (case_06.DossierTests.test_nan_time_rejected) ... ok
+test_owner_scope (case_06.DossierTests.test_owner_scope) ... ok
+test_return_value_cannot_mutate_record (case_06.DossierTests.test_return_value_cannot_mutate_record) ... ok
+test_reused_upload_id_cannot_replace_evidence (case_06.DossierTests.test_reused_upload_id_cannot_replace_evidence) ... ok
+test_truthy_scanner_rejected (case_06.DossierTests.test_truthy_scanner_rejected) ... ok
+test_upload_is_not_submission (case_06.DossierTests.test_upload_is_not_submission) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
+
+case_07.py
+test_boolean_money (case_07.TimelineTests.test_boolean_money) ... ok
+test_cannot_exceed_claim (case_07.TimelineTests.test_cannot_exceed_claim) ... ok
+test_close_does_not_imply_refund (case_07.TimelineTests.test_close_does_not_imply_refund) ... ok
+test_closed_cannot_reopen_without_new_contract (case_07.TimelineTests.test_closed_cannot_reopen_without_new_contract) ... ok
+test_conflicting_event (case_07.TimelineTests.test_conflicting_event) ... ok
+test_gap_retries_after_missing_event (case_07.TimelineTests.test_gap_retries_after_missing_event) ... ok
+test_invalid_owner_rejected_before_state_exists (case_07.TimelineTests.test_invalid_owner_rejected_before_state_exists) ... ok
+test_missing_read_identity_cannot_access_case (case_07.TimelineTests.test_missing_read_identity_cannot_access_case) ... ok
+test_nan_money (case_07.TimelineTests.test_nan_money) ... ok
+test_partial_refund_replay_never_doubles_money (case_07.TimelineTests.test_partial_refund_replay_never_doubles_money) ... ok
+test_silence_does_not_close_case (case_07.TimelineTests.test_silence_does_not_close_case) ... ok
+test_unknown_owner (case_07.TimelineTests.test_unknown_owner) ... ok
+test_untrusted_event (case_07.TimelineTests.test_untrusted_event) ... ok
+test_zero_refund_not_progress (case_07.TimelineTests.test_zero_refund_not_progress) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.000s
+
+OK
+
+case_08.py
+test_appeal_requires_independent_reviewer (case_08.DisputeTests.test_appeal_requires_independent_reviewer) ... ok
+test_conflicting_retry_rejected (case_08.DisputeTests.test_conflicting_retry_rejected) ... ok
+test_decision_without_evidence_rejected (case_08.DisputeTests.test_decision_without_evidence_rejected) ... ok
+test_invalid_identity_cannot_bypass_deduplication (case_08.DisputeTests.test_invalid_identity_cannot_bypass_deduplication) ... ok
+test_repeated_initial_decision_rejected (case_08.DisputeTests.test_repeated_initial_decision_rejected) ... ok
+test_restart_and_retry_preserve_one_evidence (case_08.DisputeTests.test_restart_and_retry_preserve_one_evidence) ... ok
+test_sensitive_payload_rejected (case_08.DisputeTests.test_sensitive_payload_rejected) ... ok
+test_stale_revision_rejected (case_08.DisputeTests.test_stale_revision_rejected) ... ok
+test_wrong_role_rejected (case_08.DisputeTests.test_wrong_role_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.012s
+
+OK
+
+case_09.py
+test_changed_plan_conflicts (case_09.AllocationTests.test_changed_plan_conflicts) ... ok
+test_crash_before_commit_has_no_effect (case_09.AllocationTests.test_crash_before_commit_has_no_effect) ... ok
+test_exact_conservation_across_two_targets (case_09.AllocationTests.test_exact_conservation_across_two_targets) ... ok
+test_failure_after_first_write_rolls_everything_back (case_09.AllocationTests.test_failure_after_first_write_rolls_everything_back) ... ok
+test_fractional_cents_rejected (case_09.AllocationTests.test_fractional_cents_rejected) ... ok
+test_invalid_identity_never_commits_an_allocation (case_09.AllocationTests.test_invalid_identity_never_commits_an_allocation) ... ok
+test_over_allocation_rejected (case_09.AllocationTests.test_over_allocation_rejected) ... ok
+test_restart_retry_does_not_apply_twice (case_09.AllocationTests.test_restart_retry_does_not_apply_twice) ... ok
+test_second_payment_cannot_overpay_settled_target (case_09.AllocationTests.test_second_payment_cannot_overpay_settled_target) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.024s
+
+OK
+
+case_10.py
+test_confirmed_retry_returns_original_receipt (case_10.IntentTests.test_confirmed_retry_returns_original_receipt) ... ok
+test_invalid_amount_has_no_intent (case_10.IntentTests.test_invalid_amount_has_no_intent) ... ok
+test_invalid_identity_does_not_persist_or_charge (case_10.IntentTests.test_invalid_identity_does_not_persist_or_charge) ... ok
+test_provider_enforces_its_own_payload_binding (case_10.IntentTests.test_provider_enforces_its_own_payload_binding) ... ok
+test_repeated_timeout_keeps_single_provider_effect (case_10.IntentTests.test_repeated_timeout_keeps_single_provider_effect) ... ok
+test_same_amount_can_be_two_explicit_purchases (case_10.IntentTests.test_same_amount_can_be_two_explicit_purchases) ... ok
+test_same_key_different_amount_conflicts (case_10.IntentTests.test_same_key_different_amount_conflicts) ... ok
+test_same_key_different_merchant_conflicts (case_10.IntentTests.test_same_key_different_merchant_conflicts) ... ok
+test_timeout_restart_and_retry_produce_one_charge (case_10.IntentTests.test_timeout_restart_and_retry_produce_one_charge) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.022s
+
+OK
+
+case_11.py
+test_cents_must_not_be_float_or_bool (case_11.StatementTests.test_cents_must_not_be_float_or_bool) ... ok
+test_concurrent_refunds_cannot_exceed_purchase (case_11.StatementTests.test_concurrent_refunds_cannot_exceed_purchase) ... ok
+test_conflicting_identity_rejected (case_11.StatementTests.test_conflicting_identity_rejected) ... ok
+test_credit_balance_is_not_negative_amount_due (case_11.StatementTests.test_credit_balance_is_not_negative_amount_due) ... ok
+test_invalid_identity_does_not_change_snapshot (case_11.StatementTests.test_invalid_identity_does_not_change_snapshot) ... ok
+test_old_snapshot_does_not_change_after_new_credit (case_11.StatementTests.test_old_snapshot_does_not_change_after_new_credit) ... ok
+test_orphan_refund_rejected_without_mutation (case_11.StatementTests.test_orphan_refund_rejected_without_mutation) ... ok
+test_over_refund_rejected (case_11.StatementTests.test_over_refund_rejected) ... ok
+test_three_refunds_reduce_exactly_once (case_11.StatementTests.test_three_refunds_reduce_exactly_once) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK
+
+case_12.py
+test_carrier_cannot_activate (case_12.DeliveryTests.test_carrier_cannot_activate) ... ok
+test_conflicting_event_id_rejected (case_12.DeliveryTests.test_conflicting_event_id_rejected) ... ok
+test_delivery_is_not_activation (case_12.DeliveryTests.test_delivery_is_not_activation) ... ok
+test_future_event_can_be_retried_after_generation_exists (case_12.DeliveryTests.test_future_event_can_be_retried_after_generation_exists) ... ok
+test_invalid_event_identity_cannot_be_consumed (case_12.DeliveryTests.test_invalid_event_identity_cannot_be_consumed) ... ok
+test_new_generation_cancels_old_activation (case_12.DeliveryTests.test_new_generation_cancels_old_activation) ... ok
+test_old_delivery_does_not_replace_new_generation (case_12.DeliveryTests.test_old_delivery_does_not_replace_new_generation) ... ok
+test_replayed_delivery_cannot_clear_dispute (case_12.DeliveryTests.test_replayed_delivery_cannot_clear_dispute) ... ok
+test_restart_keeps_dispute (case_12.DeliveryTests.test_restart_keeps_dispute) ... ok
+test_stale_reissue_does_not_create_extra_generation (case_12.DeliveryTests.test_stale_reissue_does_not_create_extra_generation) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.020s
+
+OK
+
+case_13.py
+test_conflicting_retry_rejected (case_13.CreditTests.test_conflicting_retry_rejected) ... ok
+test_invalid_cents_rejected (case_13.CreditTests.test_invalid_cents_rejected) ... ok
+test_invalid_identity_cannot_reserve_credit (case_13.CreditTests.test_invalid_identity_cannot_reserve_credit) ... ok
+test_lower_card_cap_restricts_global_credit (case_13.CreditTests.test_lower_card_cap_restricts_global_credit) ... ok
+test_other_owner_denied_before_idempotent_receipt (case_13.CreditTests.test_other_owner_denied_before_idempotent_receipt) ... ok
+test_raising_virtual_cap_does_not_create_credit (case_13.CreditTests.test_raising_virtual_cap_does_not_create_credit) ... ok
+test_restart_preserves_reservation (case_13.CreditTests.test_restart_preserves_reservation) ... ok
+test_retry_does_not_reserve_twice (case_13.CreditTests.test_retry_does_not_reserve_twice) ... ok
+test_stale_preview_cannot_authorize (case_13.CreditTests.test_stale_preview_cannot_authorize) ... ok
+test_two_cards_cannot_overspend_shared_credit (case_13.CreditTests.test_two_cards_cannot_overspend_shared_credit) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.024s
+
+OK
+
+case_14.py
+test_conflicting_payment_rejected (case_14.RepaymentTests.test_conflicting_payment_rejected) ... ok
+test_expiry_preserves_received_money_for_resolution (case_14.RepaymentTests.test_expiry_preserves_received_money_for_resolution) ... ok
+test_invalid_discount_rejected (case_14.RepaymentTests.test_invalid_discount_rejected) ... ok
+test_invalid_identity_cannot_duplicate_funding (case_14.RepaymentTests.test_invalid_identity_cannot_duplicate_funding) ... ok
+test_overpayment_is_explicit_remainder (case_14.RepaymentTests.test_overpayment_is_explicit_remainder) ... ok
+test_partial_funding_is_not_silently_applied (case_14.RepaymentTests.test_partial_funding_is_not_silently_applied) ... ok
+test_payment_retry_is_idempotent (case_14.RepaymentTests.test_payment_retry_is_idempotent) ... ok
+test_received_is_not_executed_and_crash_rolls_back (case_14.RepaymentTests.test_received_is_not_executed_and_crash_rolls_back) ... ok
+test_second_quote_becomes_stale_after_execution (case_14.RepaymentTests.test_second_quote_becomes_stale_after_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.026s
+
+OK
+
+case_15.py
+test_cache_does_not_authorize (case_15.WithdrawalTests.test_cache_does_not_authorize) ... ok
+test_conflicting_retry (case_15.WithdrawalTests.test_conflicting_retry) ... ok
+test_exact_boundary (case_15.WithdrawalTests.test_exact_boundary) ... ok
+test_expired_and_future_snapshot (case_15.WithdrawalTests.test_expired_and_future_snapshot) ... ok
+test_invalid_amounts_never_mutate (case_15.WithdrawalTests.test_invalid_amounts_never_mutate) ... ok
+test_invalid_clock_has_no_effect (case_15.WithdrawalTests.test_invalid_clock_has_no_effect) ... ok
+test_invalid_command_key_has_no_effect (case_15.WithdrawalTests.test_invalid_command_key_has_no_effect) ... ok
+test_missing_owner_rejected_before_state (case_15.WithdrawalTests.test_missing_owner_rejected_before_state) ... ok
+test_other_snapshot_owner (case_15.WithdrawalTests.test_other_snapshot_owner) ... ok
+test_parallel_commands_cannot_spend_same_version (case_15.WithdrawalTests.test_parallel_commands_cannot_spend_same_version) ... ok
+test_retry_after_commit_returns_receipt (case_15.WithdrawalTests.test_retry_after_commit_returns_receipt) ... ok
+test_scope_checked_before_receipt (case_15.WithdrawalTests.test_scope_checked_before_receipt) ... ok
+test_unavailable_retry_can_later_succeed (case_15.WithdrawalTests.test_unavailable_retry_can_later_succeed) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK
+
+case_16.py
+test_campaign_bounds_and_cap (case_16.CampaignTests.test_campaign_bounds_and_cap) ... ok
+test_complaint_date_is_before_first_due_date (case_16.CampaignTests.test_complaint_date_is_before_first_due_date) ... ok
+test_concurrent_payment_is_once_per_installment (case_16.CampaignTests.test_concurrent_payment_is_once_per_installment) ... ok
+test_conflicting_event_rejected (case_16.CampaignTests.test_conflicting_event_rejected) ... ok
+test_duplicate_custody_event (case_16.CampaignTests.test_duplicate_custody_event) ... ok
+test_final_due_in_march (case_16.CampaignTests.test_final_due_in_march) ... ok
+test_inactive_subscription_cannot_create_payment (case_16.CampaignTests.test_inactive_subscription_cannot_create_payment) ... ok
+test_invalid_transfer_identity_preserves_events (case_16.CampaignTests.test_invalid_transfer_identity_preserves_events) ... ok
+test_late_custody_change_requires_plan_review (case_16.CampaignTests.test_late_custody_change_requires_plan_review) ... ok
+test_missing_owner_rejected_before_state (case_16.CampaignTests.test_missing_owner_rejected_before_state) ... ok
+test_negative_net_cannot_create_debt (case_16.CampaignTests.test_negative_net_cannot_create_debt) ... ok
+test_outflow_changes_net_eligibility (case_16.CampaignTests.test_outflow_changes_net_eligibility) ... ok
+test_reads_and_writes_share_lock (case_16.CampaignTests.test_reads_and_writes_share_lock) ... ok
+test_subscription_and_maintenance (case_16.CampaignTests.test_subscription_and_maintenance) ... ok
+test_wrong_owner_and_source (case_16.CampaignTests.test_wrong_owner_and_source) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.004s
+
+OK
+
+case_17.py
+test_amount_type_validation (case_17.BenefitTests.test_amount_type_validation) ... ok
+test_concurrent_choices_only_one_commit (case_17.BenefitTests.test_concurrent_choices_only_one_commit) ... ok
+test_conflicting_retry (case_17.BenefitTests.test_conflicting_retry) ... ok
+test_expired_preview_has_no_financial_effect (case_17.BenefitTests.test_expired_preview_has_no_financial_effect) ... ok
+test_invalid_clock_has_no_effect (case_17.BenefitTests.test_invalid_clock_has_no_effect) ... ok
+test_invalid_key_cannot_consume_quote (case_17.BenefitTests.test_invalid_key_cannot_consume_quote) ... ok
+test_missing_owner_and_quote_identity_rejected (case_17.BenefitTests.test_missing_owner_and_quote_identity_rejected) ... ok
+test_quote_not_replaced (case_17.BenefitTests.test_quote_not_replaced) ... ok
+test_retry_preserves_original_receipt (case_17.BenefitTests.test_retry_preserves_original_receipt) ... ok
+test_same_balance_cannot_be_spent_twice (case_17.BenefitTests.test_same_balance_cannot_be_spent_twice) ... ok
+test_unsigned_quote (case_17.BenefitTests.test_unsigned_quote) ... ok
+test_unsupported_choice (case_17.BenefitTests.test_unsupported_choice) ... ok
+test_wrong_owner_cannot_read_receipt (case_17.BenefitTests.test_wrong_owner_cannot_read_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.001s
+
+OK
+
+case_18.py
+test_conflicting_duplicate (case_18.PortabilityTests.test_conflicting_duplicate) ... ok
+test_cross_request_rejected (case_18.PortabilityTests.test_cross_request_rejected) ... ok
+test_duplicate_does_not_append (case_18.PortabilityTests.test_duplicate_does_not_append) ... ok
+test_early_activation_requires_reconciliation (case_18.PortabilityTests.test_early_activation_requires_reconciliation) ... ok
+test_happy_path (case_18.PortabilityTests.test_happy_path) ... ok
+test_invalid_event_identity_preserves_state (case_18.PortabilityTests.test_invalid_event_identity_preserves_state) ... ok
+test_late_activation_cannot_revive_cancelled_request (case_18.PortabilityTests.test_late_activation_cannot_revive_cancelled_request) ... ok
+test_missing_request_identity_rejected (case_18.PortabilityTests.test_missing_request_identity_rejected) ... ok
+test_replay_after_donor_confirmation (case_18.PortabilityTests.test_replay_after_donor_confirmation) ... ok
+test_spoofed_issuer (case_18.PortabilityTests.test_spoofed_issuer) ... ok
+test_stale_sequence_rejected (case_18.PortabilityTests.test_stale_sequence_rejected) ... ok
+test_user_sms_claim_cannot_authorize_donor (case_18.PortabilityTests.test_user_sms_claim_cannot_authorize_donor) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.000s
+
+OK
+
+case_19.py
+test_capability_change_invalidates_old_preview (case_19.GlobalTests.test_capability_change_invalidates_old_preview) ... ok
+test_conflicting_retry (case_19.GlobalTests.test_conflicting_retry) ... ok
+test_expiry_does_not_trigger_reverse_conversion (case_19.GlobalTests.test_expiry_does_not_trigger_reverse_conversion) ... ok
+test_insufficient_balance (case_19.GlobalTests.test_insufficient_balance) ... ok
+test_invalid_clock_has_no_effect (case_19.GlobalTests.test_invalid_clock_has_no_effect) ... ok
+test_invalid_initial_balance (case_19.GlobalTests.test_invalid_initial_balance) ... ok
+test_invalid_key_cannot_convert (case_19.GlobalTests.test_invalid_key_cannot_convert) ... ok
+test_missing_owner_or_quote_id_rejected (case_19.GlobalTests.test_missing_owner_or_quote_id_rejected) ... ok
+test_parallel_duplicate (case_19.GlobalTests.test_parallel_duplicate) ... ok
+test_receipt_retry_after_policy_change (case_19.GlobalTests.test_receipt_retry_after_policy_change) ... ok
+test_second_key_cannot_reuse_quote (case_19.GlobalTests.test_second_key_cannot_reuse_quote) ... ok
+test_unsupported_transfer_never_debits (case_19.GlobalTests.test_unsupported_transfer_never_debits) ... ok
+test_untrusted_pricing_or_policy (case_19.GlobalTests.test_untrusted_pricing_or_policy) ... ok
+test_wrong_owner (case_19.GlobalTests.test_wrong_owner) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
+
+case_20.py
+test_acknowledged_order_can_be_merchant_cancelled (case_20.ReconciliationTests.test_acknowledged_order_can_be_merchant_cancelled) ... ok
+test_alternative_key_cannot_credit_twice (case_20.ReconciliationTests.test_alternative_key_cannot_credit_twice) ... ok
+test_concurrent_refunds_credit_once (case_20.ReconciliationTests.test_concurrent_refunds_credit_once) ... ok
+test_conflicting_order_identity (case_20.ReconciliationTests.test_conflicting_order_identity) ... ok
+test_cross_merchant_authority_is_rejected (case_20.ReconciliationTests.test_cross_merchant_authority_is_rejected) ... ok
+test_customer_cannot_post_credit (case_20.ReconciliationTests.test_customer_cannot_post_credit) ... ok
+test_grace_boundary (case_20.ReconciliationTests.test_grace_boundary) ... ok
+test_invalid_authorization_and_key_have_no_credit (case_20.ReconciliationTests.test_invalid_authorization_and_key_have_no_credit) ... ok
+test_invalid_clock_has_no_effect (case_20.ReconciliationTests.test_invalid_clock_has_no_effect) ... ok
+test_late_order_after_refund_is_not_fulfilled (case_20.ReconciliationTests.test_late_order_after_refund_is_not_fulfilled) ... ok
+test_missing_payment_identity_rejected (case_20.ReconciliationTests.test_missing_payment_identity_rejected) ... ok
+test_timeout_is_not_refund_authority (case_20.ReconciliationTests.test_timeout_is_not_refund_authority) ... ok
+test_wrong_payment_cannot_authorize (case_20.ReconciliationTests.test_wrong_payment_cannot_authorize) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.001s
 
 OK

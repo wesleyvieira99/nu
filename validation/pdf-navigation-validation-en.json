@@ -5,11 +5,11 @@
   "pages": 320,
   "menu_links": 1600,
   "internal_links": 1629,
-  "external_links": 136,
+  "external_links": 161,
   "outline_roots": 27,
   "chapter_subtopics": 317,
   "outline_open_on_load": true,
-  "rounded_images_with_verified_clip": 57,
+  "rounded_images_with_verified_clip": 56,
   "per_page": [
     {
       "page": 1,
@@ -399,13 +399,13 @@
       "page": 65,
       "native_menu_links": 5,
       "internal_links": 5,
-      "rounded_images": 2
+      "rounded_images": 1
     },
     {
       "page": 66,
       "native_menu_links": 5,
       "internal_links": 5,
-      "rounded_images": 0
+      "rounded_images": 1
     },
     {
       "page": 67,
@@ -555,7 +555,7 @@
       "page": 91,
       "native_menu_links": 5,
       "internal_links": 5,
-      "rounded_images": 2
+      "rounded_images": 1
     },
     {
       "page": 92,
@@ -633,7 +633,7 @@
       "page": 104,
       "native_menu_links": 5,
       "internal_links": 5,
-      "rounded_images": 2
+      "rounded_images": 1
     },
     {
       "page": 105,
@@ -1575,7 +1575,7 @@
       "page": 261,
       "native_menu_links": 5,
       "internal_links": 5,
-      "rounded_images": 0
+      "rounded_images": 1
     },
     {
       "page": 262,

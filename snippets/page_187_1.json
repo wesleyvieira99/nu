@@ -1,0 +1,10 @@
+{
+  "card_generation": 2,
+  "shipment_ref": "synthetic-shipment-12",
+  "carrier_state": "delivered",
+  "customer_disputed": true,
+  "card_active": false,
+  "event_id": "carrier-event-17",
+  "evidence_ref": null,
+  "next_action": "investigate_delivery"
+}

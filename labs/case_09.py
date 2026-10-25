@@ -1,100 +1,153 @@
-"""Caso 09: projeção de fatura sintética; nenhuma API Nubank."""
-from dataclasses import dataclass, replace
+"""Synthetic allocation ledger; not Nubank's financial rules.
+
+One SQLite database models received payments and obligations in BRL cents.
+Production requires authorized account scope, true settlement evidence,
+contractual allocation order, outbox delivery and independent reconciliation.
+"""
+import json
+import sqlite3
+import tempfile
 import unittest
+from pathlib import Path
 
 
-@dataclass(frozen=True)
-class Invoice:
-    period: str
-    revision: int
-    total_cents: int
-    due_date: str
-    entries: tuple
+class Ledger:
+    def __init__(self, path):
+        self.db = sqlite3.connect(path, timeout=5)
+        self.db.executescript('''
+          CREATE TABLE IF NOT EXISTS obligations(id TEXT PRIMARY KEY NOT NULL, due INTEGER);
+          CREATE TABLE IF NOT EXISTS payments(id TEXT PRIMARY KEY NOT NULL, amount INTEGER,
+            plan TEXT, remainder INTEGER);
+          CREATE TABLE IF NOT EXISTS allocations(payment TEXT, obligation TEXT,
+            amount INTEGER, PRIMARY KEY(payment, obligation));
+        ''')
 
-    def validate(self):
-        if type(self.entries) is not tuple:
-            raise ValueError('lançamentos devem ser tupla imutável')
-        values = [self.total_cents, *self.entries]
-        if any(type(value) is not int for value in values):
-            raise ValueError('centavos inteiros obrigatórios')
-        if sum(self.entries) != self.total_cents:
-            raise ValueError('snapshot inconsistente')
-        if self.revision < 1 or not self.due_date:
-            raise ValueError('metadados ausentes')
-        return self
+    def add(self, ident, due):
+        if not isinstance(ident, str) or not ident.strip():
+            raise ValueError('nonempty obligation identity required')
+        if type(due) is not int or due < 0:
+            raise ValueError('integer cents required')
+        with self.db:
+            self.db.execute('INSERT INTO obligations VALUES(?,?)', (ident, due))
+
+    # BOOK_CORE_BEGIN
+    def apply(self, ident, amount, plan, crash=False):
+        if not isinstance(ident, str) or not ident.strip():
+            raise ValueError('nonempty payment identity required')
+        if type(amount) is not int or amount <= 0:
+            raise ValueError('positive integer cents required')
+        if any(type(v) is not int or v <= 0 for v in plan.values()):
+            raise ValueError('invalid allocation')
+        encoded = json.dumps(plan, sort_keys=True)
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            old = self.db.execute('SELECT amount,plan FROM payments WHERE id=?',
+                                  (ident,)).fetchone()
+            if old:
+                if old != (amount, encoded):
+                    raise ValueError('payment conflict')
+                return self.receipt(ident)
+            if sum(plan.values()) > amount:
+                raise ValueError('allocation exceeds received amount')
+            for target, value in plan.items():
+                changed = self.db.execute('UPDATE obligations SET due=due-? '
+                    'WHERE id=? AND due>=?', (value, target, value)).rowcount
+                if changed != 1:
+                    raise ValueError('unknown or overpaid obligation')
+                self.db.execute('INSERT INTO allocations VALUES(?,?,?)',
+                                (ident, target, value))
+            if crash:
+                raise RuntimeError('crash before commit')
+            self.db.execute('INSERT INTO payments VALUES(?,?,?,?)',
+                            (ident, amount, encoded, amount - sum(plan.values())))
+        return self.receipt(ident)
+    # BOOK_CORE_END
+
+    def receipt(self, ident):
+        row = self.db.execute('SELECT amount,remainder FROM payments WHERE id=?',
+                              (ident,)).fetchone()
+        applied = self.db.execute('SELECT COALESCE(SUM(amount),0) FROM allocations '
+                                 'WHERE payment=?', (ident,)).fetchone()[0]
+        assert row[0] == applied + row[1]
+        return dict(received=row[0], applied=applied, unapplied=row[1])
+
+    def due(self, ident):
+        return self.db.execute('SELECT due FROM obligations WHERE id=?',
+                               (ident,)).fetchone()[0]
+
+    def close(self):
+        self.db.close()
 
 
-class Screen:
-    def __init__(self, invoice):
-        self.invoice = invoice.validate()
-        self.show_chart = True
-
-    def apply(self, invoice):
-        invoice.validate()
-        if invoice.period != self.invoice.period:
-            raise ValueError('seleção explícita de período necessária')
-        if invoice.revision < self.invoice.revision:
-            return False
-        if invoice.revision == self.invoice.revision:
-            if invoice != self.invoice:
-                raise ValueError('mesma revisão com conteúdo diferente')
-            return False
-        self.invoice = invoice
-        return True
-
-    def select_period(self, invoice):
-        self.invoice = invoice.validate()
-
-    def view(self):
-        return dict(period=self.invoice.period,
-                    total_cents=self.invoice.total_cents,
-                    due_date=self.invoice.due_date,
-                    chart=self.invoice.entries if self.show_chart else None)
-
-
-class Tests(unittest.TestCase):
+class AllocationTests(unittest.TestCase):
     def setUp(self):
-        self.invoice = Invoice('2026-10', 1, 900, '2026-11-10', (1000, -100))
-        self.screen = Screen(self.invoice)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name) / 'ledger.db'
+        self.l = Ledger(self.path)
+        self.l.add('bill', 10000)
+        self.l.add('installment', 5000)
 
-    def test_hide_chart_keeps_financial_information(self):
-        before = self.screen.view()
-        self.screen.show_chart = False
-        after = self.screen.view()
-        for key in ('period', 'total_cents', 'due_date'):
-            self.assertEqual(before[key], after[key])
-        self.assertIsNone(after['chart'])
+    def tearDown(self):
+        self.l.close()
+        self.tmp.cleanup()
 
-    def test_empty_period(self):
-        self.screen.select_period(Invoice('2026-11', 1, 0, '2026-12-10', ()))
-        self.assertEqual(self.screen.view()['total_cents'], 0)
-
-    def test_refund_is_signed(self):
-        self.assertEqual(self.screen.view()['total_cents'], 900)
-
-    def test_stale_revision_ignored(self):
-        self.screen.apply(replace(self.invoice, revision=2))
-        self.assertFalse(self.screen.apply(self.invoice))
-        self.assertEqual(self.screen.invoice.revision, 2)
-
-    def test_conflicting_revision_rejected(self):
+    # BOOK_TEST_BEGIN
+    def test_failure_after_first_write_rolls_everything_back(self):
         with self.assertRaises(ValueError):
-            self.screen.apply(replace(self.invoice, due_date='2026-11-15'))
+            self.l.apply('p', 20000, {'bill': 10000, 'installment': 6000})
+        self.assertEqual(self.l.due('bill'), 10000)
+        self.assertEqual(self.l.due('installment'), 5000)
+        self.assertEqual(self.l.db.execute(
+            'SELECT COUNT(*) FROM allocations').fetchone()[0], 0)
 
-    def test_partial_snapshot_rejected(self):
-        with self.assertRaises(ValueError):
-            Screen(replace(self.invoice, total_cents=1000))
+    def test_restart_retry_does_not_apply_twice(self):
+        first = self.l.apply('p', 12000, {'bill': 10000})
+        self.l.close()
+        self.l = Ledger(self.path)
+        self.assertEqual(self.l.apply('p', 12000, {'bill': 10000}), first)
+        self.assertEqual(first['unapplied'], 2000)
+        self.assertEqual(self.l.due('bill'), 0)
+    # BOOK_TEST_END
 
-    def test_wrong_period_not_silently_applied(self):
-        with self.assertRaises(ValueError):
-            self.screen.apply(replace(self.invoice, period='2026-11'))
+    def test_crash_before_commit_has_no_effect(self):
+        with self.assertRaises(RuntimeError):
+            self.l.apply('p', 10000, {'bill': 10000}, crash=True)
+        self.assertEqual(self.l.due('bill'), 10000)
 
-    def test_mutable_entries_rejected(self):
-        entries = [1000, -100]
+    def test_changed_plan_conflicts(self):
+        self.l.apply('p', 1000, {'bill': 1000})
         with self.assertRaises(ValueError):
-            Screen(replace(self.invoice, entries=entries))
-        self.assertEqual(self.screen.view()['total_cents'], 900)
+            self.l.apply('p', 1000, {'installment': 1000})
+
+    def test_over_allocation_rejected(self):
+        with self.assertRaises(ValueError):
+            self.l.apply('p', 100, {'bill': 101})
+
+    def test_fractional_cents_rejected(self):
+        with self.assertRaises(ValueError):
+            self.l.apply('p', 100.0, {'bill': 100})
+
+    def test_exact_conservation_across_two_targets(self):
+        r = self.l.apply('p', 15001, {'bill': 10000, 'installment': 5000})
+        self.assertEqual(r, {'received': 15001, 'applied': 15000, 'unapplied': 1})
+
+    def test_second_payment_cannot_overpay_settled_target(self):
+        self.l.apply('p1', 10000, {'bill': 10000})
+        with self.assertRaises(ValueError):
+            self.l.apply('p2', 10000, {'bill': 10000})
+
+    def test_invalid_identity_never_commits_an_allocation(self):
+        for ident in (None, '', ' ', 0):
+            with self.assertRaises(ValueError):
+                self.l.apply(ident, 100, {'bill': 100})
+        self.assertEqual(self.l.due('bill'), 10000)
+        self.assertEqual(self.l.db.execute(
+            'SELECT COUNT(*) FROM payments').fetchone()[0], 0)
+        with self.assertRaises(sqlite3.IntegrityError):
+            with self.l.db:
+                self.l.db.execute('INSERT INTO payments VALUES(NULL,100,?,0)',
+                                  ('{}',))
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

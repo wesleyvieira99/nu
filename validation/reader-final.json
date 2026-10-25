@@ -1,6 +1,6 @@
 {
-  "started": "2026-10-24T00:43:54.881Z",
-  "scope": "Targeted re-test after reader usability rebuild",
+  "started": "2026-10-24T01:31:38.918Z",
+  "scope": "Bilingual evidence edition: desktop, mobile, finance, metrics, roadmap and reader controls",
   "pages": [
     1,
     2,
@@ -9,6 +9,9 @@
     39,
     41,
     42,
+    46,
+    47,
+    48,
     54,
     65,
     91,
@@ -30,10 +33,10 @@
     {
       "lang": "pt",
       "input": {
-        "file": "work/v5/Nubank_Confianca_em_Escala_PT.html",
-        "bytes": 22297869,
-        "mtime": "2026-10-24T00:38:01.508Z",
-        "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
+        "file": "work/v6/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 27108043,
+        "mtime": "2026-10-24T01:30:41.702Z",
+        "sha256": "f0eed2126a310b7f3971309ac7fcfc8f3c9c628413c4bdad95a06ee8cb093143"
       },
       "viewports": [
         {
@@ -113,7 +116,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2113,
+              "scrollHeight": 2110,
               "clientHeight": 650,
               "images": [
                 {
@@ -137,7 +140,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1813,
+              "scrollHeight": 1880,
               "clientHeight": 650,
               "images": [
                 {
@@ -191,12 +194,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2185,
+              "scrollHeight": 1742,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -207,9 +216,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -219,14 +228,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -237,9 +240,15 @@
                   "complete": true
                 },
                 {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
                   "asset": "source-01",
-                  "width": 271,
-                  "height": 30,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -257,12 +266,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2028,
+              "scrollHeight": 1290,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -273,9 +288,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -285,14 +300,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -300,6 +309,12 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -323,12 +338,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1985,
+              "scrollHeight": 1894,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -339,9 +360,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -351,14 +372,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -366,6 +381,210 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 46,
+              "id": "01-8",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1507,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 47,
+              "id": "01-9",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1706,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 48,
+              "id": "01-10",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1575,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 }
               ],
@@ -383,7 +602,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1766,
+              "scrollHeight": 1196,
               "clientHeight": 650,
               "images": [
                 {
@@ -393,27 +612,45 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
-                  "complete": true
-                },
-                {
                   "asset": "flutter",
                   "width": 121,
                   "height": 150,
                   "complete": true
                 },
                 {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
@@ -437,7 +674,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2360,
+              "scrollHeight": 1865,
               "clientHeight": 650,
               "images": [
                 {
@@ -447,9 +684,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -459,15 +696,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
                   "height": 150,
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -478,14 +721,8 @@
                 },
                 {
                   "asset": "source-03",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-03-1",
-                  "width": 344,
-                  "height": 110,
+                  "width": 624,
+                  "height": 162,
                   "complete": true
                 }
               ],
@@ -503,7 +740,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2376,
+              "scrollHeight": 1744,
               "clientHeight": 650,
               "images": [
                 {
@@ -519,15 +756,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "redis",
+                  "width": 300,
+                  "height": 95,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -537,21 +786,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
                   "asset": "source-05",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-05-1",
-                  "width": 689,
-                  "height": 204,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -569,7 +812,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2530,
+              "scrollHeight": 1716,
               "clientHeight": 650,
               "images": [
                 {
@@ -585,15 +828,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -603,21 +858,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
                   "asset": "source-06",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-06-1",
-                  "width": 349,
-                  "height": 499,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -635,73 +878,13 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1664,
+              "scrollHeight": 1259,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
-                  "complete": true
-                },
-                {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
-                  "asset": "diagram-pt-08-3-0",
-                  "width": 1100,
-                  "height": 700,
-                  "complete": true
-                }
-              ],
-              "issues": []
-            },
-            {
-              "page": 171,
-              "id": "11-3",
-              "globalWidth": 390,
-              "viewportWidth": 390,
-              "mainWidth": 390,
-              "mainScrollWidth": 390,
-              "mainTop": 118,
-              "mainBottom": 768,
-              "dockTop": 779,
-              "dockBottom": 831,
-              "scrollTop": 0,
-              "scrollHeight": 1728,
-              "clientHeight": 650,
-              "images": [
-                {
-                  "asset": "nubank",
-                  "width": 276,
-                  "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -729,6 +912,78 @@
                   "complete": true
                 },
                 {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-08-3-0",
+                  "width": 1100,
+                  "height": 700,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1382,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
                   "asset": "diagram-pt-11-3-0",
                   "width": 1000,
                   "height": 700,
@@ -749,7 +1004,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1725,
+              "scrollHeight": 1382,
               "clientHeight": 650,
               "images": [
                 {
@@ -759,15 +1014,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
                   "complete": true
                 },
                 {
@@ -777,9 +1032,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -803,7 +1064,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1606,
+              "scrollHeight": 1406,
               "clientHeight": 650,
               "images": [
                 {
@@ -813,9 +1074,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -825,9 +1086,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "aws",
-                  "width": 255,
-                  "height": 150,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -851,19 +1124,13 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1606,
+              "scrollHeight": 1375,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -876,6 +1143,30 @@
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -899,7 +1190,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1764,
+              "scrollHeight": 1477,
               "clientHeight": 650,
               "images": [
                 {
@@ -915,9 +1206,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -947,7 +1256,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1732,
+              "scrollHeight": 1414,
               "clientHeight": 650,
               "images": [
                 {
@@ -957,15 +1266,33 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
-                  "height": 150,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -1013,7 +1340,7 @@
               "name": "scrollable reading viewport and dock separation at top and bottom",
               "status": "PASS",
               "detail": {
-                "pages": 19,
+                "pages": 22,
                 "minGap": 11,
                 "allScrollResets": true
               }
@@ -1026,7 +1353,7 @@
                   "font": "12px",
                   "whiteSpace": "pre",
                   "width": 338,
-                  "scrollWidth": 629
+                  "scrollWidth": 572
                 },
                 "wrapped": {
                   "whiteSpace": "pre-wrap",
@@ -1239,7 +1566,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1100,
+              "scrollHeight": 1055,
               "clientHeight": 946,
               "images": [
                 {
@@ -1317,12 +1644,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1337,
+              "scrollHeight": 1273,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -1333,9 +1666,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -1345,14 +1678,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -1363,9 +1690,15 @@
                   "complete": true
                 },
                 {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
                   "asset": "source-01",
-                  "width": 271,
-                  "height": 30,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -1383,12 +1716,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1711,
+              "scrollHeight": 1349,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -1399,9 +1738,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -1411,14 +1750,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -1426,6 +1759,12 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -1449,12 +1788,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1564,
+              "scrollHeight": 1541,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -1465,9 +1810,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -1477,14 +1822,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -1492,6 +1831,210 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 46,
+              "id": "01-8",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 958,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 47,
+              "id": "01-9",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1017,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 48,
+              "id": "01-10",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 989,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 }
               ],
@@ -1509,7 +2052,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1599,
+              "scrollHeight": 1319,
               "clientHeight": 946,
               "images": [
                 {
@@ -1519,27 +2062,45 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
-                  "complete": true
-                },
-                {
                   "asset": "flutter",
                   "width": 121,
                   "height": 150,
                   "complete": true
                 },
                 {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
@@ -1563,7 +2124,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1368,
+              "scrollHeight": 1346,
               "clientHeight": 946,
               "images": [
                 {
@@ -1573,9 +2134,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -1585,15 +2146,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
                   "height": 150,
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -1604,14 +2171,8 @@
                 },
                 {
                   "asset": "source-03",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-03-1",
-                  "width": 344,
-                  "height": 110,
+                  "width": 624,
+                  "height": 162,
                   "complete": true
                 }
               ],
@@ -1629,7 +2190,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1368,
+              "scrollHeight": 1273,
               "clientHeight": 946,
               "images": [
                 {
@@ -1645,15 +2206,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "redis",
+                  "width": 300,
+                  "height": 95,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -1663,21 +2236,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
                   "asset": "source-05",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-05-1",
-                  "width": 689,
-                  "height": 204,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -1695,7 +2262,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1366,
+              "scrollHeight": 1273,
               "clientHeight": 946,
               "images": [
                 {
@@ -1711,15 +2278,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -1729,21 +2308,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
                   "asset": "source-06",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-06-1",
-                  "width": 349,
-                  "height": 499,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -1761,73 +2328,13 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1497,
+              "scrollHeight": 1349,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
-                  "complete": true
-                },
-                {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
-                  "asset": "diagram-pt-08-3-0",
-                  "width": 1100,
-                  "height": 700,
-                  "complete": true
-                }
-              ],
-              "issues": []
-            },
-            {
-              "page": 171,
-              "id": "11-3",
-              "globalWidth": 1440,
-              "viewportWidth": 1440,
-              "mainWidth": 1160,
-              "mainScrollWidth": 1160,
-              "mainTop": 72,
-              "mainBottom": 1018,
-              "dockTop": 1026,
-              "dockBottom": 1083,
-              "scrollTop": 0,
-              "scrollHeight": 1611,
-              "clientHeight": 946,
-              "images": [
-                {
-                  "asset": "nubank",
-                  "width": 276,
-                  "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -1855,6 +2362,78 @@
                   "complete": true
                 },
                 {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-pt-08-3-0",
+                  "width": 1100,
+                  "height": 700,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1444,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
                   "asset": "diagram-pt-11-3-0",
                   "width": 1000,
                   "height": 700,
@@ -1875,7 +2454,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1592,
+              "scrollHeight": 1414,
               "clientHeight": 946,
               "images": [
                 {
@@ -1885,15 +2464,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
                   "complete": true
                 },
                 {
@@ -1903,9 +2482,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -1929,7 +2514,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1759,
+              "scrollHeight": 1444,
               "clientHeight": 946,
               "images": [
                 {
@@ -1939,9 +2524,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -1951,9 +2536,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "aws",
-                  "width": 255,
-                  "height": 150,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -1977,19 +2574,13 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1710,
+              "scrollHeight": 1473,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -2002,6 +2593,30 @@
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -2025,7 +2640,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1799,
+              "scrollHeight": 1473,
               "clientHeight": 946,
               "images": [
                 {
@@ -2041,9 +2656,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -2073,7 +2706,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1847,
+              "scrollHeight": 1492,
               "clientHeight": 946,
               "images": [
                 {
@@ -2083,15 +2716,33 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
-                  "height": 150,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -2139,7 +2790,7 @@
               "name": "scrollable reading viewport and dock separation at top and bottom",
               "status": "PASS",
               "detail": {
-                "pages": 19,
+                "pages": 22,
                 "minGap": 8,
                 "allScrollResets": true
               }
@@ -2291,20 +2942,20 @@
       ],
       "errors": [],
       "finalInput": {
-        "file": "work/v5/Nubank_Confianca_em_Escala_PT.html",
-        "bytes": 22297869,
-        "mtime": "2026-10-24T00:38:01.508Z",
-        "sha256": "fab143724ea71ae92489b04e170e0768ae6db8dab96525d7c45b078ac674d753"
+        "file": "work/v6/Nubank_Confianca_em_Escala_PT.html",
+        "bytes": 27108043,
+        "mtime": "2026-10-24T01:30:41.702Z",
+        "sha256": "f0eed2126a310b7f3971309ac7fcfc8f3c9c628413c4bdad95a06ee8cb093143"
       },
       "inputChangedDuringRun": false
     },
     {
       "lang": "en",
       "input": {
-        "file": "work/v5/Nubank_Trust_at_Scale_EN.html",
-        "bytes": 22268606,
-        "mtime": "2026-10-24T00:38:01.783Z",
-        "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
+        "file": "work/v6/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 27081743,
+        "mtime": "2026-10-24T01:30:42.075Z",
+        "sha256": "4732cfad15008682249a30b3aee956c98056f58f0a0d22a3672f632aadbe46a4"
       },
       "viewports": [
         {
@@ -2384,7 +3035,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2177,
+              "scrollHeight": 2050,
               "clientHeight": 650,
               "images": [
                 {
@@ -2408,7 +3059,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1857,
+              "scrollHeight": 1898,
               "clientHeight": 650,
               "images": [
                 {
@@ -2462,12 +3113,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2121,
+              "scrollHeight": 1815,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -2478,9 +3135,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -2490,14 +3147,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -2508,9 +3159,15 @@
                   "complete": true
                 },
                 {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
                   "asset": "source-01",
-                  "width": 271,
-                  "height": 30,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -2528,12 +3185,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1925,
+              "scrollHeight": 1227,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -2544,9 +3207,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -2556,14 +3219,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -2571,6 +3228,12 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -2594,12 +3257,18 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1948,
+              "scrollHeight": 1862,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -2610,9 +3279,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -2622,14 +3291,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -2637,6 +3300,210 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 46,
+              "id": "01-8",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1480,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 47,
+              "id": "01-9",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1804,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 48,
+              "id": "01-10",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1476,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 }
               ],
@@ -2654,7 +3521,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1703,
+              "scrollHeight": 1227,
               "clientHeight": 650,
               "images": [
                 {
@@ -2664,27 +3531,45 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
-                  "complete": true
-                },
-                {
                   "asset": "flutter",
                   "width": 121,
                   "height": 150,
                   "complete": true
                 },
                 {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
@@ -2708,7 +3593,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2377,
+              "scrollHeight": 1850,
               "clientHeight": 650,
               "images": [
                 {
@@ -2718,9 +3603,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -2730,15 +3615,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
                   "height": 150,
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -2749,14 +3640,8 @@
                 },
                 {
                   "asset": "source-03",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-03-1",
-                  "width": 344,
-                  "height": 110,
+                  "width": 624,
+                  "height": 162,
                   "complete": true
                 }
               ],
@@ -2774,7 +3659,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2322,
+              "scrollHeight": 1701,
               "clientHeight": 650,
               "images": [
                 {
@@ -2790,15 +3675,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "redis",
+                  "width": 300,
+                  "height": 95,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -2808,21 +3705,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
                   "asset": "source-05",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-05-1",
-                  "width": 689,
-                  "height": 204,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -2840,7 +3731,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 2453,
+              "scrollHeight": 1673,
               "clientHeight": 650,
               "images": [
                 {
@@ -2856,15 +3747,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -2874,21 +3777,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
                   "asset": "source-06",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-06-1",
-                  "width": 349,
-                  "height": 499,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -2906,73 +3797,13 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1664,
+              "scrollHeight": 1273,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
-                  "complete": true
-                },
-                {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
-                  "asset": "diagram-en-08-3-0",
-                  "width": 1100,
-                  "height": 700,
-                  "complete": true
-                }
-              ],
-              "issues": []
-            },
-            {
-              "page": 171,
-              "id": "11-3",
-              "globalWidth": 390,
-              "viewportWidth": 390,
-              "mainWidth": 390,
-              "mainScrollWidth": 390,
-              "mainTop": 118,
-              "mainBottom": 768,
-              "dockTop": 779,
-              "dockBottom": 831,
-              "scrollTop": 0,
-              "scrollHeight": 1634,
-              "clientHeight": 650,
-              "images": [
-                {
-                  "asset": "nubank",
-                  "width": 276,
-                  "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -3000,6 +3831,78 @@
                   "complete": true
                 },
                 {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-08-3-0",
+                  "width": 1100,
+                  "height": 700,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 390,
+              "viewportWidth": 390,
+              "mainWidth": 390,
+              "mainScrollWidth": 390,
+              "mainTop": 118,
+              "mainBottom": 768,
+              "dockTop": 779,
+              "dockBottom": 831,
+              "scrollTop": 0,
+              "scrollHeight": 1263,
+              "clientHeight": 650,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
                   "asset": "diagram-en-11-3-0",
                   "width": 1000,
                   "height": 700,
@@ -3020,7 +3923,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1654,
+              "scrollHeight": 1340,
               "clientHeight": 650,
               "images": [
                 {
@@ -3030,15 +3933,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
                   "complete": true
                 },
                 {
@@ -3048,9 +3951,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -3074,7 +3983,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1544,
+              "scrollHeight": 1375,
               "clientHeight": 650,
               "images": [
                 {
@@ -3084,9 +3993,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -3096,9 +4005,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "aws",
-                  "width": 255,
-                  "height": 150,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -3122,19 +4043,13 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1544,
+              "scrollHeight": 1445,
               "clientHeight": 650,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -3147,6 +4062,30 @@
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -3170,7 +4109,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1732,
+              "scrollHeight": 1375,
               "clientHeight": 650,
               "images": [
                 {
@@ -3186,9 +4125,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -3218,7 +4175,7 @@
               "dockTop": 779,
               "dockBottom": 831,
               "scrollTop": 0,
-              "scrollHeight": 1701,
+              "scrollHeight": 1414,
               "clientHeight": 650,
               "images": [
                 {
@@ -3228,15 +4185,33 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
-                  "height": 150,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -3284,7 +4259,7 @@
               "name": "scrollable reading viewport and dock separation at top and bottom",
               "status": "PASS",
               "detail": {
-                "pages": 19,
+                "pages": 22,
                 "minGap": 11,
                 "allScrollResets": true
               }
@@ -3297,7 +4272,7 @@
                   "font": "12px",
                   "whiteSpace": "pre",
                   "width": 338,
-                  "scrollWidth": 629
+                  "scrollWidth": 572
                 },
                 "wrapped": {
                   "whiteSpace": "pre-wrap",
@@ -3588,12 +4563,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1368,
+              "scrollHeight": 1292,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -3604,9 +4585,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -3616,14 +4597,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -3634,9 +4609,15 @@
                   "complete": true
                 },
                 {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
                   "asset": "source-01",
-                  "width": 271,
-                  "height": 30,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -3654,12 +4635,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1711,
+              "scrollHeight": 1319,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -3670,9 +4657,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -3682,14 +4669,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -3697,6 +4678,12 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -3720,12 +4707,18 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1583,
+              "scrollHeight": 1512,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
                   "height": 150,
                   "complete": true
                 },
@@ -3736,9 +4729,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -3748,14 +4741,8 @@
                   "complete": true
                 },
                 {
-                  "asset": "kubernetes",
-                  "width": 777,
-                  "height": 754,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
+                  "asset": "opentelemetry",
+                  "width": 300,
                   "height": 113,
                   "complete": true
                 },
@@ -3763,6 +4750,210 @@
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 46,
+              "id": "01-8",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 958,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 47,
+              "id": "01-9",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1048,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 48,
+              "id": "01-10",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 958,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 }
               ],
@@ -3780,7 +4971,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1599,
+              "scrollHeight": 1319,
               "clientHeight": 946,
               "images": [
                 {
@@ -3790,27 +4981,45 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "datomic",
-                  "width": 300,
-                  "height": 72,
-                  "complete": true
-                },
-                {
                   "asset": "flutter",
                   "width": 121,
                   "height": 150,
                   "complete": true
                 },
                 {
+                  "asset": "dart",
+                  "width": 192,
+                  "height": 192,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
                   "asset": "python",
                   "width": 518,
                   "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
@@ -3834,7 +5043,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1335,
+              "scrollHeight": 1364,
               "clientHeight": 946,
               "images": [
                 {
@@ -3844,9 +5053,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
                   "complete": true
                 },
                 {
@@ -3856,15 +5065,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
                   "height": 150,
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -3875,14 +5090,8 @@
                 },
                 {
                   "asset": "source-03",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-03-1",
-                  "width": 344,
-                  "height": 110,
+                  "width": 624,
+                  "height": 162,
                   "complete": true
                 }
               ],
@@ -3900,7 +5109,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1312,
+              "scrollHeight": 1292,
               "clientHeight": 946,
               "images": [
                 {
@@ -3916,15 +5125,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "redis",
+                  "width": 300,
+                  "height": 95,
+                  "complete": true
+                },
+                {
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -3934,21 +5155,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
                   "asset": "source-05",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-05-1",
-                  "width": 689,
-                  "height": 204,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -3966,7 +5181,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1248,
+              "scrollHeight": 1292,
               "clientHeight": 946,
               "images": [
                 {
@@ -3982,15 +5197,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "typescript",
+                  "width": 512,
+                  "height": 512,
                   "complete": true
                 },
                 {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
+                  "asset": "aws",
+                  "width": 255,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "java",
+                  "width": 424,
+                  "height": 224,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
                   "complete": true
                 },
                 {
@@ -4000,21 +5227,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
                   "asset": "source-06",
-                  "width": 875,
-                  "height": 32,
-                  "complete": true
-                },
-                {
-                  "asset": "app-06-1",
-                  "width": 349,
-                  "height": 499,
+                  "width": 1280,
+                  "height": 266,
                   "complete": true
                 }
               ],
@@ -4032,73 +5247,13 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1497,
+              "scrollHeight": 1349,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
-                  "asset": "kafka",
-                  "width": 117,
-                  "height": 65,
-                  "complete": true
-                },
-                {
-                  "asset": "clojure",
-                  "width": 120,
-                  "height": 120,
-                  "complete": true
-                },
-                {
-                  "asset": "prometheus",
-                  "width": 113,
-                  "height": 113,
-                  "complete": true
-                },
-                {
-                  "asset": "diagram-en-08-3-0",
-                  "width": 1100,
-                  "height": 700,
-                  "complete": true
-                }
-              ],
-              "issues": []
-            },
-            {
-              "page": 171,
-              "id": "11-3",
-              "globalWidth": 1440,
-              "viewportWidth": 1440,
-              "mainWidth": 1160,
-              "mainScrollWidth": 1160,
-              "mainTop": 72,
-              "mainBottom": 1018,
-              "dockTop": 1026,
-              "dockBottom": 1083,
-              "scrollTop": 0,
-              "scrollHeight": 1532,
-              "clientHeight": 946,
-              "images": [
-                {
-                  "asset": "nubank",
-                  "width": 276,
-                  "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -4126,6 +5281,78 @@
                   "complete": true
                 },
                 {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
+                  "asset": "diagram-en-08-3-0",
+                  "width": 1100,
+                  "height": 700,
+                  "complete": true
+                }
+              ],
+              "issues": []
+            },
+            {
+              "page": 171,
+              "id": "11-3",
+              "globalWidth": 1440,
+              "viewportWidth": 1440,
+              "mainWidth": 1160,
+              "mainScrollWidth": 1160,
+              "mainTop": 72,
+              "mainBottom": 1018,
+              "dockTop": 1026,
+              "dockBottom": 1083,
+              "scrollTop": 0,
+              "scrollHeight": 1414,
+              "clientHeight": 946,
+              "images": [
+                {
+                  "asset": "nubank",
+                  "width": 276,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
+                  "complete": true
+                },
+                {
                   "asset": "diagram-en-11-3-0",
                   "width": 1000,
                   "height": 700,
@@ -4146,7 +5373,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1562,
+              "scrollHeight": 1414,
               "clientHeight": 946,
               "images": [
                 {
@@ -4156,15 +5383,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
-                  "complete": true
-                },
-                {
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
                   "complete": true
                 },
                 {
@@ -4174,9 +5401,15 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "prometheus",
+                  "width": 113,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -4200,7 +5433,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1759,
+              "scrollHeight": 1444,
               "clientHeight": 946,
               "images": [
                 {
@@ -4210,9 +5443,9 @@
                   "complete": true
                 },
                 {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
                   "complete": true
                 },
                 {
@@ -4222,9 +5455,21 @@
                   "complete": true
                 },
                 {
-                  "asset": "aws",
-                  "width": 255,
-                  "height": 150,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -4248,19 +5493,13 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1729,
+              "scrollHeight": 1444,
               "clientHeight": 946,
               "images": [
                 {
                   "asset": "nubank",
                   "width": 276,
                   "height": 150,
-                  "complete": true
-                },
-                {
-                  "asset": "python",
-                  "width": 518,
-                  "height": 153,
                   "complete": true
                 },
                 {
@@ -4273,6 +5512,30 @@
                   "asset": "clojure",
                   "width": 120,
                   "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "flutter",
+                  "width": 121,
+                  "height": 150,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
+                  "complete": true
+                },
+                {
+                  "asset": "python",
+                  "width": 518,
+                  "height": 153,
                   "complete": true
                 },
                 {
@@ -4296,7 +5559,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1799,
+              "scrollHeight": 1444,
               "clientHeight": 946,
               "images": [
                 {
@@ -4312,9 +5575,27 @@
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
+                  "complete": true
+                },
+                {
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -4344,7 +5625,7 @@
               "dockTop": 1026,
               "dockBottom": 1083,
               "scrollTop": 0,
-              "scrollHeight": 1818,
+              "scrollHeight": 1492,
               "clientHeight": 946,
               "images": [
                 {
@@ -4354,15 +5635,33 @@
                   "complete": true
                 },
                 {
-                  "asset": "flutter",
-                  "width": 121,
-                  "height": 150,
+                  "asset": "clojure",
+                  "width": 120,
+                  "height": 120,
                   "complete": true
                 },
                 {
-                  "asset": "dart",
-                  "width": 192,
-                  "height": 192,
+                  "asset": "datomic",
+                  "width": 300,
+                  "height": 72,
+                  "complete": true
+                },
+                {
+                  "asset": "postgresql",
+                  "width": 540,
+                  "height": 557,
+                  "complete": true
+                },
+                {
+                  "asset": "kafka",
+                  "width": 117,
+                  "height": 65,
+                  "complete": true
+                },
+                {
+                  "asset": "opentelemetry",
+                  "width": 300,
+                  "height": 113,
                   "complete": true
                 },
                 {
@@ -4410,7 +5709,7 @@
               "name": "scrollable reading viewport and dock separation at top and bottom",
               "status": "PASS",
               "detail": {
-                "pages": 19,
+                "pages": 22,
                 "minGap": 8,
                 "allScrollResets": true
               }
@@ -4562,56 +5861,56 @@
       ],
       "errors": [],
       "finalInput": {
-        "file": "work/v5/Nubank_Trust_at_Scale_EN.html",
-        "bytes": 22268606,
-        "mtime": "2026-10-24T00:38:01.783Z",
-        "sha256": "0a866fcee96f9f357b415269c9853324183f3a67701e09376df0759e0569fddd"
+        "file": "work/v6/Nubank_Trust_at_Scale_EN.html",
+        "bytes": 27081743,
+        "mtime": "2026-10-24T01:30:42.075Z",
+        "sha256": "4732cfad15008682249a30b3aee956c98056f58f0a0d22a3672f632aadbe46a4"
       },
       "inputChangedDuringRun": false
     }
   ],
   "screenshots": [
-    "work/v5/qa/final-reader-pt-390-cover.png",
-    "work/v5/qa/final-reader-pt-390-page-39.png",
-    "work/v5/qa/final-reader-pt-390-page-41.png",
-    "work/v5/qa/final-reader-pt-390-page-42.png",
-    "work/v5/qa/final-reader-pt-390-wrapped-code.png",
-    "work/v5/qa/final-reader-pt-390-zoom-fit.png",
-    "work/v5/qa/final-reader-pt-390-zoom-detail.png",
-    "work/v5/qa/final-reader-pt-390-settings.png",
-    "work/v5/qa/final-reader-pt-390-focus.png",
-    "work/v5/qa/final-reader-pt-1440-cover.png",
-    "work/v5/qa/final-reader-pt-1440-page-39.png",
-    "work/v5/qa/final-reader-pt-1440-page-41.png",
-    "work/v5/qa/final-reader-pt-1440-page-42.png",
-    "work/v5/qa/final-reader-pt-1440-wrapped-code.png",
-    "work/v5/qa/final-reader-pt-1440-zoom-fit.png",
-    "work/v5/qa/final-reader-pt-1440-zoom-detail.png",
-    "work/v5/qa/final-reader-pt-1440-settings.png",
-    "work/v5/qa/final-reader-pt-1440-focus.png",
-    "work/v5/qa/final-reader-en-390-cover.png",
-    "work/v5/qa/final-reader-en-390-page-39.png",
-    "work/v5/qa/final-reader-en-390-page-41.png",
-    "work/v5/qa/final-reader-en-390-page-42.png",
-    "work/v5/qa/final-reader-en-390-wrapped-code.png",
-    "work/v5/qa/final-reader-en-390-zoom-fit.png",
-    "work/v5/qa/final-reader-en-390-zoom-detail.png",
-    "work/v5/qa/final-reader-en-390-settings.png",
-    "work/v5/qa/final-reader-en-390-focus.png",
-    "work/v5/qa/final-reader-en-1440-cover.png",
-    "work/v5/qa/final-reader-en-1440-page-39.png",
-    "work/v5/qa/final-reader-en-1440-page-41.png",
-    "work/v5/qa/final-reader-en-1440-page-42.png",
-    "work/v5/qa/final-reader-en-1440-wrapped-code.png",
-    "work/v5/qa/final-reader-en-1440-zoom-fit.png",
-    "work/v5/qa/final-reader-en-1440-zoom-detail.png",
-    "work/v5/qa/final-reader-en-1440-settings.png",
-    "work/v5/qa/final-reader-en-1440-focus.png"
+    "work/v6/qa/final-reader-pt-390-cover.png",
+    "work/v6/qa/final-reader-pt-390-page-39.png",
+    "work/v6/qa/final-reader-pt-390-page-41.png",
+    "work/v6/qa/final-reader-pt-390-page-42.png",
+    "work/v6/qa/final-reader-pt-390-wrapped-code.png",
+    "work/v6/qa/final-reader-pt-390-zoom-fit.png",
+    "work/v6/qa/final-reader-pt-390-zoom-detail.png",
+    "work/v6/qa/final-reader-pt-390-settings.png",
+    "work/v6/qa/final-reader-pt-390-focus.png",
+    "work/v6/qa/final-reader-pt-1440-cover.png",
+    "work/v6/qa/final-reader-pt-1440-page-39.png",
+    "work/v6/qa/final-reader-pt-1440-page-41.png",
+    "work/v6/qa/final-reader-pt-1440-page-42.png",
+    "work/v6/qa/final-reader-pt-1440-wrapped-code.png",
+    "work/v6/qa/final-reader-pt-1440-zoom-fit.png",
+    "work/v6/qa/final-reader-pt-1440-zoom-detail.png",
+    "work/v6/qa/final-reader-pt-1440-settings.png",
+    "work/v6/qa/final-reader-pt-1440-focus.png",
+    "work/v6/qa/final-reader-en-390-cover.png",
+    "work/v6/qa/final-reader-en-390-page-39.png",
+    "work/v6/qa/final-reader-en-390-page-41.png",
+    "work/v6/qa/final-reader-en-390-page-42.png",
+    "work/v6/qa/final-reader-en-390-wrapped-code.png",
+    "work/v6/qa/final-reader-en-390-zoom-fit.png",
+    "work/v6/qa/final-reader-en-390-zoom-detail.png",
+    "work/v6/qa/final-reader-en-390-settings.png",
+    "work/v6/qa/final-reader-en-390-focus.png",
+    "work/v6/qa/final-reader-en-1440-cover.png",
+    "work/v6/qa/final-reader-en-1440-page-39.png",
+    "work/v6/qa/final-reader-en-1440-page-41.png",
+    "work/v6/qa/final-reader-en-1440-page-42.png",
+    "work/v6/qa/final-reader-en-1440-wrapped-code.png",
+    "work/v6/qa/final-reader-en-1440-zoom-fit.png",
+    "work/v6/qa/final-reader-en-1440-zoom-detail.png",
+    "work/v6/qa/final-reader-en-1440-settings.png",
+    "work/v6/qa/final-reader-en-1440-focus.png"
   ],
-  "finished": "2026-10-24T00:44:24.710Z",
+  "finished": "2026-10-24T01:32:04.526Z",
   "status": "PASS",
   "summary": {
-    "pageViewportChecks": 76,
+    "pageViewportChecks": 88,
     "failedControls": [],
     "inputChangedDuringRun": false
   }

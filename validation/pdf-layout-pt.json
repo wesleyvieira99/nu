@@ -1,0 +1,2855 @@
+[
+  {
+    "page": 4,
+    "id": "abertura-1",
+    "kind": "profile",
+    "scale": 1,
+    "height": 501.6,
+    "available": 583.0,
+    "title": "O trabalho que quero construir."
+  },
+  {
+    "page": 5,
+    "id": "abertura-2",
+    "kind": "profile",
+    "scale": 1,
+    "height": 566.0,
+    "available": 570.5,
+    "title": "Time Nubank,"
+  },
+  {
+    "page": 6,
+    "id": "abertura-3",
+    "kind": "profile",
+    "scale": 0.95,
+    "height": 534.0,
+    "available": 536.0,
+    "title": "Uma conversa técnica antes da entrevista."
+  },
+  {
+    "page": 7,
+    "id": "abertura-4",
+    "kind": "profile",
+    "scale": 1,
+    "height": 491.6,
+    "available": 583.0,
+    "title": "Sou Wesley Vieira."
+  },
+  {
+    "page": 8,
+    "id": "abertura-5",
+    "kind": "profile",
+    "scale": 1,
+    "height": 460.1,
+    "available": 583.0,
+    "title": "Trajetória com escopos claros."
+  },
+  {
+    "page": 9,
+    "id": "abertura-6",
+    "kind": "profile",
+    "scale": 1,
+    "height": 491.6,
+    "available": 583.0,
+    "title": "Reconhecimento é trabalho coletivo."
+  },
+  {
+    "page": 10,
+    "id": "abertura-7",
+    "kind": "profile",
+    "scale": 1,
+    "height": 443.2,
+    "available": 583.0,
+    "title": "Impacto com atribuição honesta."
+  },
+  {
+    "page": 11,
+    "id": "abertura-8",
+    "kind": "profile",
+    "scale": 1,
+    "height": 543.0,
+    "available": 583.0,
+    "title": "Por que me contratar como EM."
+  },
+  {
+    "page": 12,
+    "id": "abertura-9",
+    "kind": "profile",
+    "scale": 1,
+    "height": 407.8,
+    "available": 583.0,
+    "title": "Por que me contratar como Staff."
+  },
+  {
+    "page": 13,
+    "id": "abertura-10",
+    "kind": "profile",
+    "scale": 1,
+    "height": 473.9,
+    "available": 574.0,
+    "title": "Como reconhecer cada tipo de evidência."
+  },
+  {
+    "page": 14,
+    "id": "abertura-11",
+    "kind": "profile",
+    "scale": 1,
+    "height": 429.4,
+    "available": 548.5,
+    "title": "O app: promessa pública e experiência."
+  },
+  {
+    "page": 15,
+    "id": "abertura-12",
+    "kind": "profile",
+    "scale": 1,
+    "height": 460.1,
+    "available": 608.5,
+    "title": "Vinte perguntas, uma disciplina."
+  },
+  {
+    "page": 16,
+    "id": "abertura-13",
+    "kind": "profile",
+    "scale": 1,
+    "height": 387.9,
+    "available": 536.0,
+    "title": "Stack documentada, escolhas justificadas."
+  },
+  {
+    "page": 17,
+    "id": "abertura-14",
+    "kind": "profile",
+    "scale": 1,
+    "height": 463.2,
+    "available": 583.0,
+    "title": "Do meu repertório à stack do time."
+  },
+  {
+    "page": 18,
+    "id": "fundamentos-1",
+    "kind": "code",
+    "scale": 1,
+    "height": 418.3,
+    "available": 586.5,
+    "title": "Clojure: decisões como dados."
+  },
+  {
+    "page": 19,
+    "id": "fundamentos-2",
+    "kind": "code",
+    "scale": 1,
+    "height": 469.7,
+    "available": 555.4,
+    "title": "Clojure: repetição não cria outra intenção."
+  },
+  {
+    "page": 20,
+    "id": "fundamentos-3",
+    "kind": "code",
+    "scale": 1,
+    "height": 418.3,
+    "available": 555.4,
+    "title": "Datomic: identidade e histórico de decisão."
+  },
+  {
+    "page": 21,
+    "id": "fundamentos-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 406.8,
+    "available": 586.5,
+    "title": "Kafka: contrato antes de tópico."
+  },
+  {
+    "page": 22,
+    "id": "fundamentos-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 429.8,
+    "available": 555.4,
+    "title": "AWS / DynamoDB: arbitrar a primeira escrita."
+  },
+  {
+    "page": 23,
+    "id": "fundamentos-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 515.6,
+    "available": 555.4,
+    "title": "Kubernetes: disponibilidade durante mudança."
+  },
+  {
+    "page": 24,
+    "id": "fundamentos-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 492.6,
+    "available": 586.5,
+    "title": "Flutter: o estado dirige a interface."
+  },
+  {
+    "page": 25,
+    "id": "fundamentos-8",
+    "kind": "code",
+    "scale": 1,
+    "height": 492.6,
+    "available": 586.5,
+    "title": "Dart: estados que não se contradizem."
+  },
+  {
+    "page": 26,
+    "id": "fundamentos-9",
+    "kind": "code",
+    "scale": 1,
+    "height": 435.2,
+    "available": 586.5,
+    "title": "Prometheus: medir uma promessa."
+  },
+  {
+    "page": 27,
+    "id": "fundamentos-10",
+    "kind": "code",
+    "scale": 1,
+    "height": 418.3,
+    "available": 586.5,
+    "title": "OpenTelemetry: seguir a causalidade."
+  },
+  {
+    "page": 28,
+    "id": "fundamentos-11",
+    "kind": "code",
+    "scale": 1,
+    "height": 469.7,
+    "available": 586.5,
+    "title": "Java / JVM: orçamentos explícitos."
+  },
+  {
+    "page": 29,
+    "id": "fundamentos-12",
+    "kind": "code",
+    "scale": 1,
+    "height": 515.6,
+    "available": 555.4,
+    "title": "Python: um experimento deve poder falhar."
+  },
+  {
+    "page": 30,
+    "id": "fundamentos-13",
+    "kind": "code",
+    "scale": 1,
+    "height": 441.3,
+    "available": 555.4,
+    "title": "PostgreSQL: integridade no armazenamento."
+  },
+  {
+    "page": 31,
+    "id": "fundamentos-14",
+    "kind": "code",
+    "scale": 1,
+    "height": 418.3,
+    "available": 586.5,
+    "title": "Redis: cache com validade de domínio."
+  },
+  {
+    "page": 32,
+    "id": "fundamentos-15",
+    "kind": "code",
+    "scale": 1,
+    "height": 498.7,
+    "available": 586.5,
+    "title": "Terraform: mudanças revisáveis."
+  },
+  {
+    "page": 33,
+    "id": "fundamentos-16",
+    "kind": "code",
+    "scale": 1,
+    "height": 441.3,
+    "available": 586.5,
+    "title": "TypeScript: validar a fronteira."
+  },
+  {
+    "page": 34,
+    "id": "fundamentos-17",
+    "kind": "code",
+    "scale": 1,
+    "height": 406.8,
+    "available": 586.5,
+    "title": "Grafana: um painel que orienta ação."
+  },
+  {
+    "page": 35,
+    "id": "arquiteturas-1",
+    "kind": "architecture",
+    "scale": 0.99,
+    "height": 595.4,
+    "available": 612.0,
+    "title": "Uma jornada, duas autoridades."
+  },
+  {
+    "page": 36,
+    "id": "arquiteturas-2",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 581.1,
+    "available": 612.0,
+    "title": "Recuperação como parte do produto."
+  },
+  {
+    "page": 37,
+    "id": "arquiteturas-3",
+    "kind": "architecture",
+    "scale": 0.96,
+    "height": 577.8,
+    "available": 580.9,
+    "title": "Plataforma de experiência com contratos."
+  },
+  {
+    "page": 38,
+    "id": "arquiteturas-4",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 598.0,
+    "available": 612.0,
+    "title": "ML: separar previsão de decisão."
+  },
+  {
+    "page": 39,
+    "id": "01-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 350.7,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 40,
+    "id": "01-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 41,
+    "id": "01-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 42,
+    "id": "01-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 527.1,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 43,
+    "id": "01-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 360.9,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 44,
+    "id": "01-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 512.5,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 45,
+    "id": "01-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 446.7,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 46,
+    "id": "01-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 47,
+    "id": "01-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 48,
+    "id": "01-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 49,
+    "id": "01-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 178.1,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 50,
+    "id": "01-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 292.5,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 51,
+    "id": "01-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 301.5,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 52,
+    "id": "02-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 332.1,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 53,
+    "id": "02-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 54,
+    "id": "02-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 55,
+    "id": "02-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 441.3,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 56,
+    "id": "02-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 360.9,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 57,
+    "id": "02-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 512.5,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 58,
+    "id": "02-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 383.9,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 59,
+    "id": "02-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 381.0,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 60,
+    "id": "02-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 61,
+    "id": "02-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 62,
+    "id": "02-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 208.0,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 63,
+    "id": "02-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 64,
+    "id": "02-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 318.4,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 65,
+    "id": "03-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 366.1,
+    "available": 504.6,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 66,
+    "id": "03-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 436.5,
+    "available": 549.0,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 67,
+    "id": "03-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 68,
+    "id": "03-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 504.1,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 69,
+    "id": "03-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 354.8,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 70,
+    "id": "03-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 512.5,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 71,
+    "id": "03-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 377.8,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 72,
+    "id": "03-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 364.1,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 73,
+    "id": "03-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 377.1,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 74,
+    "id": "03-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 330.3,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 75,
+    "id": "03-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 144.3,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 76,
+    "id": "03-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 77,
+    "id": "03-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 318.4,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 78,
+    "id": "04-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 350.7,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 79,
+    "id": "04-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 80,
+    "id": "04-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 81,
+    "id": "04-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 395.4,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 82,
+    "id": "04-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 389.3,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 83,
+    "id": "04-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 529.4,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 84,
+    "id": "04-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 412.3,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 85,
+    "id": "04-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 86,
+    "id": "04-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 435.4,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 87,
+    "id": "04-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 88,
+    "id": "04-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 144.3,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 89,
+    "id": "04-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 90,
+    "id": "04-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 318.4,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 91,
+    "id": "05-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 366.1,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 92,
+    "id": "05-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 93,
+    "id": "05-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 94,
+    "id": "05-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 492.6,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 95,
+    "id": "05-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 360.9,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 96,
+    "id": "05-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 529.4,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 97,
+    "id": "05-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 366.3,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 98,
+    "id": "05-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 381.0,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 99,
+    "id": "05-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 435.4,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 100,
+    "id": "05-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 101,
+    "id": "05-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 144.3,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 102,
+    "id": "05-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 103,
+    "id": "05-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 301.5,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 104,
+    "id": "06-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 366.1,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 105,
+    "id": "06-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 106,
+    "id": "06-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 107,
+    "id": "06-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 475.7,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 108,
+    "id": "06-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 389.3,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 109,
+    "id": "06-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 540.8,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 110,
+    "id": "06-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 372.4,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 111,
+    "id": "06-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 364.1,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 112,
+    "id": "06-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 113,
+    "id": "06-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 330.3,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 114,
+    "id": "06-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 161.2,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 115,
+    "id": "06-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 116,
+    "id": "06-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 301.5,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 117,
+    "id": "07-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 366.1,
+    "available": 517.1,
+    "title": "O registro e seu desfecho"
+  },
+  {
+    "page": 118,
+    "id": "07-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Diagnóstico antes da solução"
+  },
+  {
+    "page": 119,
+    "id": "07-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Fronteiras da arquitetura"
+  },
+  {
+    "page": 120,
+    "id": "07-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 561.6,
+    "available": 574.0,
+    "title": "Núcleo executável"
+  },
+  {
+    "page": 121,
+    "id": "07-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 377.8,
+    "available": 586.5,
+    "title": "Implementação na stack"
+  },
+  {
+    "page": 122,
+    "id": "07-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 540.8,
+    "available": 612.0,
+    "title": "Contratos e propriedade"
+  },
+  {
+    "page": 123,
+    "id": "07-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 360.9,
+    "available": 586.5,
+    "title": "Verificação adversarial"
+  },
+  {
+    "page": 124,
+    "id": "07-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 397.9,
+    "available": 574.5,
+    "title": "Medir a jornada certa"
+  },
+  {
+    "page": 125,
+    "id": "07-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 377.1,
+    "available": 574.5,
+    "title": "Valor financeiro com premissas"
+  },
+  {
+    "page": 126,
+    "id": "07-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap com responsáveis"
+  },
+  {
+    "page": 127,
+    "id": "07-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 161.2,
+    "available": 574.5,
+    "title": "Rollout e operação"
+  },
+  {
+    "page": 128,
+    "id": "07-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Minha contribuição"
+  },
+  {
+    "page": 129,
+    "id": "07-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 301.5,
+    "available": 549.0,
+    "title": "Handoff e decisão"
+  },
+  {
+    "page": 130,
+    "id": "08-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 330.5,
+    "available": 483.8,
+    "title": "08 · A contestação e o contraponto"
+  },
+  {
+    "page": 131,
+    "id": "08-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 292.5,
+    "available": 540.0,
+    "title": "Acesso observado não resolve consentimento"
+  },
+  {
+    "page": 132,
+    "id": "08-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Dossiê com revisão independente"
+  },
+  {
+    "page": 133,
+    "id": "08-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 533.2,
+    "available": 586.5,
+    "title": "Núcleo: revisão e identidade da ação"
+  },
+  {
+    "page": 134,
+    "id": "08-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 383.2,
+    "available": 612.0,
+    "title": "A política deve ser explícita"
+  },
+  {
+    "page": 135,
+    "id": "08-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 437.3,
+    "available": 612.0,
+    "title": "Contrato de evidência e de acesso"
+  },
+  {
+    "page": 136,
+    "id": "08-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 406.8,
+    "available": 612.0,
+    "title": "Testar o recurso e a retomada"
+  },
+  {
+    "page": 137,
+    "id": "08-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 374.8,
+    "available": 574.5,
+    "title": "Medir revisão útil e custo humano"
+  },
+  {
+    "page": 138,
+    "id": "08-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 434.1,
+    "available": 540.0,
+    "title": "Valor: capacidade recuperada, não lucro"
+  },
+  {
+    "page": 139,
+    "id": "08-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 371.7,
+    "available": 574.5,
+    "title": "Plano de 90 dias com responsáveis"
+  },
+  {
+    "page": 140,
+    "id": "08-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Operar sem transformar fila em abandono"
+  },
+  {
+    "page": 141,
+    "id": "08-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Minha contribuição para a decisão"
+  },
+  {
+    "page": 142,
+    "id": "08-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 287.7,
+    "available": 514.5,
+    "title": "Entrega para revisão técnica e operacional"
+  },
+  {
+    "page": 143,
+    "id": "09-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 315.1,
+    "available": 517.1,
+    "title": "09 · Pago não explica a alocação"
+  },
+  {
+    "page": 144,
+    "id": "09-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 540.0,
+    "title": "Três estados com consequências diferentes"
+  },
+  {
+    "page": 145,
+    "id": "09-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Um recibo ligado ao razão"
+  },
+  {
+    "page": 146,
+    "id": "09-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 567.6,
+    "available": 586.5,
+    "title": "Núcleo: alocar ou não alterar nada"
+  },
+  {
+    "page": 147,
+    "id": "09-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 383.2,
+    "available": 612.0,
+    "title": "Função pura, escrita transacional"
+  },
+  {
+    "page": 148,
+    "id": "09-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 460.2,
+    "available": 612.0,
+    "title": "Conservar dinheiro e identidade"
+  },
+  {
+    "page": 149,
+    "id": "09-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 395.4,
+    "available": 612.0,
+    "title": "Falha parcial não pode virar meia baixa"
+  },
+  {
+    "page": 150,
+    "id": "09-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 374.8,
+    "available": 574.5,
+    "title": "Métricas que seguem o pagamento"
+  },
+  {
+    "page": 151,
+    "id": "09-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 401.8,
+    "available": 540.0,
+    "title": "Conta financeira com duas parcelas de custo"
+  },
+  {
+    "page": 152,
+    "id": "09-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap orientado à reconciliação"
+  },
+  {
+    "page": 153,
+    "id": "09-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Rollback preserva a escrita financeira"
+  },
+  {
+    "page": 154,
+    "id": "09-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Minha contribuição em duas frentes"
+  },
+  {
+    "page": 155,
+    "id": "09-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 254.9,
+    "available": 549.0,
+    "title": "Roteiro de revisão do recibo"
+  },
+  {
+    "page": 156,
+    "id": "10-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 438.3,
+    "available": 483.8,
+    "title": "10 · Duplicidade com desfecho confirmado"
+  },
+  {
+    "page": 157,
+    "id": "10-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Timeout não equivale a falha definitiva"
+  },
+  {
+    "page": 158,
+    "id": "10-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 500.5,
+    "available": 612.0,
+    "title": "Uma intenção atravessa a incerteza"
+  },
+  {
+    "page": 159,
+    "id": "10-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 544.7,
+    "available": 586.5,
+    "title": "Núcleo: persistir antes de despachar"
+  },
+  {
+    "page": 160,
+    "id": "10-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 412.3,
+    "available": 612.0,
+    "title": "O estado deve orientar a próxima ação"
+  },
+  {
+    "page": 161,
+    "id": "10-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 460.2,
+    "available": 612.0,
+    "title": "Identidade antes de heurística"
+  },
+  {
+    "page": 162,
+    "id": "10-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 406.8,
+    "available": 612.0,
+    "title": "Falhar depois do efeito externo"
+  },
+  {
+    "page": 163,
+    "id": "10-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 361.0,
+    "available": 540.0,
+    "title": "Medir ambiguidade e efeito confirmado"
+  },
+  {
+    "page": 164,
+    "id": "10-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 434.1,
+    "available": 574.5,
+    "title": "Um caso forte não prova ROI elevado"
+  },
+  {
+    "page": 165,
+    "id": "10-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap condicionado ao parceiro"
+  },
+  {
+    "page": 166,
+    "id": "10-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Operar o desconhecido sem repetir"
+  },
+  {
+    "page": 167,
+    "id": "10-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Minha contribuição para o contrato"
+  },
+  {
+    "page": 168,
+    "id": "10-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 254.9,
+    "available": 514.5,
+    "title": "Revisão do efeito único sob uma hipótese"
+  },
+  {
+    "page": 169,
+    "id": "11-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 313.6,
+    "available": 483.8,
+    "title": "11 · Crédito visível, saldo questionado"
+  },
+  {
+    "page": 170,
+    "id": "11-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 540.0,
+    "title": "Um total correto pode continuar opaco"
+  },
+  {
+    "page": 171,
+    "id": "11-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "Total e detalhe viajam na mesma versão"
+  },
+  {
+    "page": 172,
+    "id": "11-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 544.7,
+    "available": 586.5,
+    "title": "Núcleo: identidade e limite do estorno"
+  },
+  {
+    "page": 173,
+    "id": "11-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 372.4,
+    "available": 612.0,
+    "title": "Uma função de soma compartilhada"
+  },
+  {
+    "page": 174,
+    "id": "11-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 471.7,
+    "available": 612.0,
+    "title": "Proveniência é parte do contrato"
+  },
+  {
+    "page": 175,
+    "id": "11-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 395.4,
+    "available": 612.0,
+    "title": "Testar soma, versão e concorrência"
+  },
+  {
+    "page": 176,
+    "id": "11-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 402.4,
+    "available": 540.0,
+    "title": "O sucesso é compreensão demonstrada"
+  },
+  {
+    "page": 177,
+    "id": "11-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 400.3,
+    "available": 540.0,
+    "title": "Economia depende de dúvidas evitadas"
+  },
+  {
+    "page": 178,
+    "id": "11-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 574.5,
+    "title": "Roadmap de cálculo e linguagem"
+  },
+  {
+    "page": 179,
+    "id": "11-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Operação com fallback identificável"
+  },
+  {
+    "page": 180,
+    "id": "11-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Minha contribuição para confiança na soma"
+  },
+  {
+    "page": 181,
+    "id": "11-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 288.2,
+    "available": 549.0,
+    "title": "Handoff: reproduzir a explicação"
+  },
+  {
+    "page": 182,
+    "id": "12-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 303.0,
+    "available": 483.8,
+    "title": "12 · A resposta posterior muda o contexto"
+  },
+  {
+    "page": 183,
+    "id": "12-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "O fornecedor afirma um fato; o produto decide um estado"
+  },
+  {
+    "page": 184,
+    "id": "12-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "A via antiga não manda na nova"
+  },
+  {
+    "page": 185,
+    "id": "12-4",
+    "kind": "code",
+    "scale": 0.95,
+    "height": 582.9,
+    "available": 586.5,
+    "title": "Núcleo: geração e disputa persistente"
+  },
+  {
+    "page": 186,
+    "id": "12-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 389.3,
+    "available": 612.0,
+    "title": "Normalizar sem apagar procedência"
+  },
+  {
+    "page": 187,
+    "id": "12-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 460.2,
+    "available": 612.0,
+    "title": "Contrato entre físico e digital"
+  },
+  {
+    "page": 188,
+    "id": "12-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 383.9,
+    "available": 612.0,
+    "title": "Replays não encerram a exceção"
+  },
+  {
+    "page": 189,
+    "id": "12-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 344.1,
+    "available": 540.0,
+    "title": "Medir posse e exceção, não só expedição"
+  },
+  {
+    "page": 190,
+    "id": "12-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 384.9,
+    "available": 540.0,
+    "title": "Frete evitado tem um limite econômico"
+  },
+  {
+    "page": 191,
+    "id": "12-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 330.3,
+    "available": 540.0,
+    "title": "Roadmap com fornecedor e operação"
+  },
+  {
+    "page": 192,
+    "id": "12-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 540.0,
+    "title": "Runbook para uma entrega contestada"
+  },
+  {
+    "page": 193,
+    "id": "12-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Minha contribuição atravessa a fronteira física"
+  },
+  {
+    "page": 194,
+    "id": "12-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 271.8,
+    "available": 549.0,
+    "title": "Handoff: revisar a geração atual"
+  },
+  {
+    "page": 195,
+    "id": "13-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 313.6,
+    "available": 483.8,
+    "title": "13 · Dois valores, interpretações diferentes"
+  },
+  {
+    "page": 196,
+    "id": "13-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Configurar um teto não concede crédito"
+  },
+  {
+    "page": 197,
+    "id": "13-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 504.4,
+    "available": 580.9,
+    "title": "O crédito é compartilhado; a reserva é atômica"
+  },
+  {
+    "page": 198,
+    "id": "13-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 567.6,
+    "available": 586.5,
+    "title": "Núcleo: duas vias, um saldo"
+  },
+  {
+    "page": 199,
+    "id": "13-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 423.7,
+    "available": 612.0,
+    "title": "Uma prévia honesta no aplicativo"
+  },
+  {
+    "page": 200,
+    "id": "13-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 471.7,
+    "available": 612.0,
+    "title": "Contrato de limite e de orçamento"
+  },
+  {
+    "page": 201,
+    "id": "13-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 452.8,
+    "available": 612.0,
+    "title": "Concorrência ataca a autoridade"
+  },
+  {
+    "page": 202,
+    "id": "13-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 388.6,
+    "available": 540.0,
+    "title": "Compreensão sem afrouxar controles"
+  },
+  {
+    "page": 203,
+    "id": "13-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 400.3,
+    "available": 540.0,
+    "title": "Valor calculado sem contar compras negadas como receita"
+  },
+  {
+    "page": 204,
+    "id": "13-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 361.0,
+    "available": 540.0,
+    "title": "Roadmap de terminologia e consistência"
+  },
+  {
+    "page": 205,
+    "id": "13-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Leitura atrasada não deve virar crédito fictício"
+  },
+  {
+    "page": 206,
+    "id": "13-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Minha contribuição: clareza com autoridade"
+  },
+  {
+    "page": 207,
+    "id": "13-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 271.3,
+    "available": 514.5,
+    "title": "Handoff: provar que o teto não cria saldo"
+  },
+  {
+    "page": 208,
+    "id": "14-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 298.1,
+    "available": 483.8,
+    "title": "14 · A empresa reconhece a execução tardia"
+  },
+  {
+    "page": 209,
+    "id": "14-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Receber não é efetivar a antecipação"
+  },
+  {
+    "page": 210,
+    "id": "14-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "A cotação é um contrato com validade"
+  },
+  {
+    "page": 211,
+    "id": "14-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 487.2,
+    "available": 586.5,
+    "title": "Núcleo: revalidar antes de aplicar"
+  },
+  {
+    "page": 212,
+    "id": "14-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 366.3,
+    "available": 612.0,
+    "title": "Cálculo puro não dispensa a transação"
+  },
+  {
+    "page": 213,
+    "id": "14-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 497.0,
+    "available": 612.0,
+    "title": "Plano, recebimento e recibo separados"
+  },
+  {
+    "page": 214,
+    "id": "14-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 360.9,
+    "available": 612.0,
+    "title": "Crash e validade atacam o plano"
+  },
+  {
+    "page": 215,
+    "id": "14-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 402.4,
+    "available": 540.0,
+    "title": "Medir o intervalo que o cliente não vê"
+  },
+  {
+    "page": 216,
+    "id": "14-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 417.2,
+    "available": 540.0,
+    "title": "Valor do retrabalho, não do desconto retirado"
+  },
+  {
+    "page": 217,
+    "id": "14-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 347.2,
+    "available": 540.0,
+    "title": "Roadmap com contabilidade no início"
+  },
+  {
+    "page": 218,
+    "id": "14-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Operação de uma cotação que não concluiu"
+  },
+  {
+    "page": 219,
+    "id": "14-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Minha contribuição: tornar a promessa executável"
+  },
+  {
+    "page": 220,
+    "id": "14-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 271.3,
+    "available": 514.5,
+    "title": "Handoff: dinheiro recebido tem um destino"
+  },
+  {
+    "page": 221,
+    "id": "15-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 312.1,
+    "available": 504.6,
+    "title": "O incidente e o desfecho"
+  },
+  {
+    "page": 222,
+    "id": "15-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Ler saldo não é autorizar resgate"
+  },
+  {
+    "page": 223,
+    "id": "15-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "O recibo fecha o ciclo"
+  },
+  {
+    "page": 224,
+    "id": "15-4",
+    "kind": "code",
+    "scale": 0.99,
+    "height": 584.0,
+    "available": 586.5,
+    "title": "Uma tentativa, um compromisso"
+  },
+  {
+    "page": 225,
+    "id": "15-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 389.3,
+    "available": 612.0,
+    "title": "Dart para um estado compreensível"
+  },
+  {
+    "page": 226,
+    "id": "15-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 529.4,
+    "available": 612.0,
+    "title": "Identidades que sobrevivem ao retry"
+  },
+  {
+    "page": 227,
+    "id": "15-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 492.6,
+    "available": 612.0,
+    "title": "Falhas que não podem virar débito"
+  },
+  {
+    "page": 228,
+    "id": "15-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Métricas com estado desconhecido"
+  },
+  {
+    "page": 229,
+    "id": "15-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 410.9,
+    "available": 540.0,
+    "title": "Valor sem transformar saldo em receita"
+  },
+  {
+    "page": 230,
+    "id": "15-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Plano de 90 dias com saídas verificáveis"
+  },
+  {
+    "page": 231,
+    "id": "15-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Operar quando a dependência cai"
+  },
+  {
+    "page": 232,
+    "id": "15-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Minha contribuição: confiança sob falha"
+  },
+  {
+    "page": 233,
+    "id": "15-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 549.0,
+    "title": "Handoff: do laboratório à decisão"
+  },
+  {
+    "page": 234,
+    "id": "16-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 312.1,
+    "available": 471.3,
+    "title": "Uma resposta contraditória, um calendário"
+  },
+  {
+    "page": 235,
+    "id": "16-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Três perguntas antes de declarar erro"
+  },
+  {
+    "page": 236,
+    "id": "16-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 538.2,
+    "available": 612.0,
+    "title": "Uma projeção explicável de benefício"
+  },
+  {
+    "page": 237,
+    "id": "16-4",
+    "kind": "code",
+    "scale": 0.92,
+    "height": 569.5,
+    "available": 574.0,
+    "title": "Calendário antes da cobrança"
+  },
+  {
+    "page": 238,
+    "id": "16-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 354.8,
+    "available": 612.0,
+    "title": "Uma explicação comum aos canais"
+  },
+  {
+    "page": 239,
+    "id": "16-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 529.4,
+    "available": 612.0,
+    "title": "Regra, evento e parcela identificáveis"
+  },
+  {
+    "page": 240,
+    "id": "16-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 486.6,
+    "available": 612.0,
+    "title": "Testar a data, não só a soma"
+  },
+  {
+    "page": 241,
+    "id": "16-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Concordância e pontualidade observáveis"
+  },
+  {
+    "page": 242,
+    "id": "16-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 540.0,
+    "title": "Benefício prometido é obrigação, não ganho"
+  },
+  {
+    "page": 243,
+    "id": "16-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Entregar uma decisão que possa ser revisada"
+  },
+  {
+    "page": 244,
+    "id": "16-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Mudança de regra sem reescrever o passado"
+  },
+  {
+    "page": 245,
+    "id": "16-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Minha contribuição: reduzir interpretações"
+  },
+  {
+    "page": 246,
+    "id": "16-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 549.0,
+    "title": "Revisão guiada do benefício"
+  },
+  {
+    "page": 247,
+    "id": "17-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 295.2,
+    "available": 471.3,
+    "title": "Conversão confirmada, compreensão contestada"
+  },
+  {
+    "page": 248,
+    "id": "17-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Duas unidades não criam dois ativos"
+  },
+  {
+    "page": 249,
+    "id": "17-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "A prévia é parte do compromisso"
+  },
+  {
+    "page": 250,
+    "id": "17-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 573.0,
+    "available": 586.5,
+    "title": "Consumir exatamente a prévia aceita"
+  },
+  {
+    "page": 251,
+    "id": "17-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 400.8,
+    "available": 612.0,
+    "title": "Dart: consequência antes do botão"
+  },
+  {
+    "page": 252,
+    "id": "17-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 540.8,
+    "available": 612.0,
+    "title": "Unidades que o contrato não confunde"
+  },
+  {
+    "page": 253,
+    "id": "17-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 458.2,
+    "available": 580.9,
+    "title": "O teste não confunde UX com atomicidade"
+  },
+  {
+    "page": 254,
+    "id": "17-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Medir entendimento, preservar escolha"
+  },
+  {
+    "page": 255,
+    "id": "17-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 377.1,
+    "available": 540.0,
+    "title": "Custo de compreensão, não valor dos pontos"
+  },
+  {
+    "page": 256,
+    "id": "17-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Da hipótese de linguagem à integração"
+  },
+  {
+    "page": 257,
+    "id": "17-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 540.0,
+    "title": "Falhar antes do consumo, explicar depois"
+  },
+  {
+    "page": 258,
+    "id": "17-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Minha contribuição: precisão e empatia"
+  },
+  {
+    "page": 259,
+    "id": "17-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 514.5,
+    "title": "Handoff: revisar a consequência completa"
+  },
+  {
+    "page": 260,
+    "id": "18-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 295.2,
+    "available": 483.8,
+    "title": "Cancelamento não resolveu a portabilidade"
+  },
+  {
+    "page": 261,
+    "id": "18-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.1,
+    "available": 502.0,
+    "title": "O que cada confirmação realmente comprova"
+  },
+  {
+    "page": 262,
+    "id": "18-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "Comparar o ocorrido e o confirmado"
+  },
+  {
+    "page": 263,
+    "id": "18-4",
+    "kind": "code",
+    "scale": 0.95,
+    "height": 566.2,
+    "available": 586.5,
+    "title": "A origem faz parte do evento"
+  },
+  {
+    "page": 264,
+    "id": "18-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 377.8,
+    "available": 612.0,
+    "title": "Dart: mostrar dependência sem culpar"
+  },
+  {
+    "page": 265,
+    "id": "18-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 546.3,
+    "available": 580.9,
+    "title": "Tentativas não compartilham confirmação"
+  },
+  {
+    "page": 266,
+    "id": "18-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 486.6,
+    "available": 612.0,
+    "title": "Reproduzir a lacuna entre empresas"
+  },
+  {
+    "page": 267,
+    "id": "18-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Medir conclusão e limbo separadamente"
+  },
+  {
+    "page": 268,
+    "id": "18-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 574.5,
+    "title": "Valor de uma linha realmente ativada"
+  },
+  {
+    "page": 269,
+    "id": "18-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Dependências que definem o prazo"
+  },
+  {
+    "page": 270,
+    "id": "18-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 540.0,
+    "title": "Operar a divergência sem perder o cliente"
+  },
+  {
+    "page": 271,
+    "id": "18-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Minha contribuição: coordenar fronteiras"
+  },
+  {
+    "page": 272,
+    "id": "18-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 514.5,
+    "title": "Handoff: mostrar quem pode afirmar o quê"
+  },
+  {
+    "page": 273,
+    "id": "19-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 295.2,
+    "available": 483.8,
+    "title": "Uma limitação, uma solução reconhecida"
+  },
+  {
+    "page": 274,
+    "id": "19-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 549.0,
+    "title": "Capacidade é específica do produto"
+  },
+  {
+    "page": 275,
+    "id": "19-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 612.0,
+    "title": "A capacidade acompanha a cotação"
+  },
+  {
+    "page": 276,
+    "id": "19-4",
+    "kind": "code",
+    "scale": 1,
+    "height": 584.5,
+    "available": 586.5,
+    "title": "Uma cotação não sobrevive à política"
+  },
+  {
+    "page": 277,
+    "id": "19-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 423.7,
+    "available": 612.0,
+    "title": "Um contrato de capacidade explícito"
+  },
+  {
+    "page": 278,
+    "id": "19-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 540.8,
+    "available": 612.0,
+    "title": "Guardar a intenção, minimizar exposição"
+  },
+  {
+    "page": 279,
+    "id": "19-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 458.2,
+    "available": 612.0,
+    "title": "Rejeitar antes de cobrar"
+  },
+  {
+    "page": 280,
+    "id": "19-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 258.7,
+    "available": 574.5,
+    "title": "Sucesso é a finalidade compatível"
+  },
+  {
+    "page": 281,
+    "id": "19-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 540.0,
+    "title": "A conversão evitada também tem custo"
+  },
+  {
+    "page": 282,
+    "id": "19-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 540.0,
+    "title": "Responsáveis por capacidade e preço"
+  },
+  {
+    "page": 283,
+    "id": "19-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Mudar o catálogo com segurança"
+  },
+  {
+    "page": 284,
+    "id": "19-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 224.9,
+    "available": 540.0,
+    "title": "Minha contribuição: modelar a intenção"
+  },
+  {
+    "page": 285,
+    "id": "19-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 514.5,
+    "title": "Handoff: seguir uma negativa sem efeito"
+  },
+  {
+    "page": 286,
+    "id": "20-1",
+    "kind": "evidence",
+    "scale": 1,
+    "height": 295.2,
+    "available": 483.8,
+    "title": "Estorno realizado, espera contestada"
+  },
+  {
+    "page": 287,
+    "id": "20-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 540.0,
+    "title": "Dois sistemas podem discordar sem mentir"
+  },
+  {
+    "page": 288,
+    "id": "20-3",
+    "kind": "architecture",
+    "scale": 1,
+    "height": 521.3,
+    "available": 580.9,
+    "title": "A investigação não cria autoridade de estorno"
+  },
+  {
+    "page": 289,
+    "id": "20-4",
+    "kind": "code",
+    "scale": 0.93,
+    "height": 554.3,
+    "available": 555.4,
+    "title": "Timeout abre caso, não movimenta dinheiro"
+  },
+  {
+    "page": 290,
+    "id": "20-5",
+    "kind": "code",
+    "scale": 1,
+    "height": 389.3,
+    "available": 612.0,
+    "title": "SQL para unicidade e rastreabilidade"
+  },
+  {
+    "page": 291,
+    "id": "20-6",
+    "kind": "code",
+    "scale": 1,
+    "height": 540.8,
+    "available": 580.9,
+    "title": "O pedido e o pagamento mantêm identidades"
+  },
+  {
+    "page": 292,
+    "id": "20-7",
+    "kind": "code",
+    "scale": 1,
+    "height": 458.2,
+    "available": 612.0,
+    "title": "Provar ausência de crédito indevido"
+  },
+  {
+    "page": 293,
+    "id": "20-8",
+    "kind": "metrics",
+    "scale": 1,
+    "height": 275.6,
+    "available": 574.5,
+    "title": "Resolver o dinheiro e a espera"
+  },
+  {
+    "page": 294,
+    "id": "20-9",
+    "kind": "value",
+    "scale": 1,
+    "height": 394.0,
+    "available": 540.0,
+    "title": "Capacidade e exposição são dimensões diferentes"
+  },
+  {
+    "page": 295,
+    "id": "20-10",
+    "kind": "roadmap",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Um plano conjunto com o lojista"
+  },
+  {
+    "page": 296,
+    "id": "20-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 241.8,
+    "available": 574.5,
+    "title": "Operar os casos que envelhecem"
+  },
+  {
+    "page": 297,
+    "id": "20-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 275.6,
+    "available": 540.0,
+    "title": "Minha contribuição: fechar a jornada inteira"
+  },
+  {
+    "page": 298,
+    "id": "20-13",
+    "kind": "essay",
+    "scale": 1,
+    "height": 258.7,
+    "available": 514.5,
+    "title": "Handoff: acompanhar até o recibo final"
+  },
+  {
+    "page": 299,
+    "id": "lideranca-1",
+    "kind": "essay",
+    "scale": 1,
+    "height": 415.6,
+    "available": 574.0,
+    "title": "Primeiros 30 dias: aprender o sistema."
+  },
+  {
+    "page": 300,
+    "id": "lideranca-2",
+    "kind": "essay",
+    "scale": 1,
+    "height": 401.8,
+    "available": 574.0,
+    "title": "Dias 31–60: tornar a hipótese testável."
+  },
+  {
+    "page": 301,
+    "id": "lideranca-3",
+    "kind": "essay",
+    "scale": 1,
+    "height": 429.4,
+    "available": 574.0,
+    "title": "Dias 61–90: decidir o que merece escala."
+  },
+  {
+    "page": 302,
+    "id": "lideranca-4",
+    "kind": "essay",
+    "scale": 1,
+    "height": 390.9,
+    "available": 574.0,
+    "title": "Capacidade é uma restrição de projeto."
+  },
+  {
+    "page": 303,
+    "id": "lideranca-5",
+    "kind": "essay",
+    "scale": 1,
+    "height": 429.4,
+    "available": 608.5,
+    "title": "Delegação com fronteiras explícitas."
+  },
+  {
+    "page": 304,
+    "id": "lideranca-6",
+    "kind": "essay",
+    "scale": 1,
+    "height": 452.3,
+    "available": 574.0,
+    "title": "Um ADR resolve uma dúvida concreta."
+  },
+  {
+    "page": 305,
+    "id": "lideranca-7",
+    "kind": "essay",
+    "scale": 1,
+    "height": 443.2,
+    "available": 574.0,
+    "title": "Incidentes: restaurar, compreender, melhorar."
+  },
+  {
+    "page": 306,
+    "id": "lideranca-8",
+    "kind": "essay",
+    "scale": 1,
+    "height": 377.1,
+    "available": 574.0,
+    "title": "Influência entre times sem centralizar tudo."
+  },
+  {
+    "page": 307,
+    "id": "lideranca-9",
+    "kind": "essay",
+    "scale": 1,
+    "height": 507.7,
+    "available": 583.0,
+    "title": "Valor: começar pelo denominador."
+  },
+  {
+    "page": 308,
+    "id": "lideranca-10",
+    "kind": "essay",
+    "scale": 1,
+    "height": 407.8,
+    "available": 574.0,
+    "title": "Custo de oportunidade também é custo."
+  },
+  {
+    "page": 309,
+    "id": "lideranca-11",
+    "kind": "essay",
+    "scale": 1,
+    "height": 435.6,
+    "available": 574.0,
+    "title": "Desempenho: medir a cauda e a tarefa."
+  },
+  {
+    "page": 310,
+    "id": "lideranca-12",
+    "kind": "essay",
+    "scale": 1,
+    "height": 424.7,
+    "available": 608.5,
+    "title": "Risco: medir os dois tipos de erro."
+  },
+  {
+    "page": 311,
+    "id": "lideranca-13",
+    "kind": "code",
+    "scale": 1,
+    "height": 431.8,
+    "available": 612.0,
+    "title": "Como executar os laboratórios."
+  },
+  {
+    "page": 312,
+    "id": "lideranca-14",
+    "kind": "essay",
+    "scale": 1,
+    "height": 492.4,
+    "available": 608.5,
+    "title": "Da prova local ao piloto integrado."
+  },
+  {
+    "page": 313,
+    "id": "lideranca-15",
+    "kind": "essay",
+    "scale": 1,
+    "height": 471.6,
+    "available": 574.0,
+    "title": "Uma proposta de contribuição, em primeira pessoa."
+  },
+  {
+    "page": 314,
+    "id": "fontes-1",
+    "kind": "reference",
+    "scale": 1,
+    "height": 524.0,
+    "available": 536.5,
+    "title": "Fontes dos casos 01-05"
+  },
+  {
+    "page": 315,
+    "id": "fontes-2",
+    "kind": "reference",
+    "scale": 1,
+    "height": 524.0,
+    "available": 536.5,
+    "title": "Fontes dos casos 06-10"
+  },
+  {
+    "page": 316,
+    "id": "fontes-3",
+    "kind": "reference",
+    "scale": 1,
+    "height": 524.0,
+    "available": 536.5,
+    "title": "Fontes dos casos 11-15"
+  },
+  {
+    "page": 317,
+    "id": "fontes-4",
+    "kind": "reference",
+    "scale": 1,
+    "height": 524.0,
+    "available": 536.5,
+    "title": "Fontes dos casos 16-20"
+  },
+  {
+    "page": 318,
+    "id": "fontes-5",
+    "kind": "reference",
+    "scale": 1,
+    "height": 435.6,
+    "available": 499.0,
+    "title": "Créditos de imagens e marcas"
+  },
+  {
+    "page": 319,
+    "id": "fontes-6",
+    "kind": "reference",
+    "scale": 1,
+    "height": 435.6,
+    "available": 492.9,
+    "title": "Créditos de imagens e marcas · continuação"
+  },
+  {
+    "page": 320,
+    "id": "fontes-7",
+    "kind": "reference",
+    "scale": 1,
+    "height": 401.8,
+    "available": 517.9,
+    "title": "Créditos de imagens e marcas · continuação"
+  }
+]

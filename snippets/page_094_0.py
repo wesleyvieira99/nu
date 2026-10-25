@@ -1,18 +1,22 @@
-# day é uma data civil já validada.
-# zone usa regras IANA, não um offset fixo.
-# A ida e volta detecta horários inexistentes.
-# fold considera as duas ocorrências de uma dobra.
-def local_instant(day, hour, minute, zone):
-    # Política proposta: primeiro instante válido; na dobra, primeiro UTC.
-    naive = datetime.combine(day, time(hour, minute))
-    for shift in range(181):
-        candidate = naive + timedelta(minutes=shift)
-        valid = []
-        for fold in (0, 1):
-            instant = candidate.replace(tzinfo=zone, fold=fold).astimezone(UTC)
-            roundtrip = instant.astimezone(zone).replace(tzinfo=None)
-            if roundtrip == candidate:
-                valid.append(instant)
-        if valid:
-            return min(valid)
-    raise ValueError("no_valid_instant")
+    def verify(self, owner, generation, code, now):
+        if owner != self.owner:
+            raise PermissionError("recovery scope")
+        if type(now) is not int or now < 0 or not isinstance(code, str):
+            raise ValueError("invalid request")
+        with self.lock:
+            current = self.challenge
+            if current is None:
+                raise ValueError("challenge unavailable")
+            issued_generation, digest, issued_at, expiry, attempts = current
+            if type(generation) is not int or generation != self.generation:
+                raise ValueError("obsolete contact generation")
+            if generation != issued_generation or not issued_at <= now < expiry:
+                raise ValueError("challenge expired or not yet valid")
+            if attempts >= 3:
+                raise ValueError("attempt budget exhausted")
+            current[4] += 1
+            candidate = hashlib.sha256(code.encode()).digest()
+            if not hmac.compare_digest(candidate, digest):
+                raise PermissionError("invalid code")
+            self.verified, self.challenge = True, None
+            return True

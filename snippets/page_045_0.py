@@ -1,23 +1,18 @@
-def test_concurrent_distinct_payments_cannot_overdraw(self):
-    barrier = threading.Barrier(2)
-    def attempt(operation_id):
-        barrier.wait(timeout=10)
-        try:
-            return self.bank.pay(**self.command(operation_id=operation_id))
-        except InsufficientFunds:
-            return "insufficient"
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        results = list(pool.map(attempt, ("parallel-a", "parallel-b")))
-    self.assertEqual(sum(isinstance(value, dict) for value in results), 1)
-    self.assertEqual(results.count("insufficient"), 1)
-    self.assert_invariants(balance=300, payments=1)
+    def test_concurrent_refund_replays_once(self):
+        self.apply("failed", "refund_pending")
+        barrier = threading.Barrier(4)
+        def retry(_):
+            barrier.wait(timeout=5)
+            return self.apply("refund", "refunded")
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(retry, range(4)))
+        self.assertEqual(results.count(True), 1)
+        self.assertEqual(self.bank.read("pix-a", "owner-a")[
+            "returned_cents"], 30000)
 
-def test_concurrent_same_operation_has_one_receipt_and_one_debit(self):
-    barrier = threading.Barrier(8)
-    def retry(_):
-        barrier.wait(timeout=10)
-        return self.bank.pay(**self.command())
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        results = list(pool.map(retry, range(8)))
-    self.assertTrue(all(receipt == results[0] for receipt in results))
-    self.assert_invariants(balance=300, payments=1)
+    def test_timeout_is_not_refund_authority(self):
+        for _ in range(10):
+            self.bank.read("pix-a", "owner-a")
+        receipt = self.bank.read("pix-a", "owner-a")
+        self.assertEqual(receipt["state"], "pending")
+        self.assertEqual(receipt["returned_cents"], 0)

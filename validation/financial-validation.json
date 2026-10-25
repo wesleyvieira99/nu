@@ -1,0 +1,1576 @@
+{
+  "status": "PASS",
+  "cases": 20,
+  "scenarios": 60,
+  "numeric_checks": 261,
+  "method": "Independent Decimal recalculation from explicit author inputs",
+  "checks": [
+    {
+      "case": "01",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "8000.00",
+      "recalculated": "8000.00"
+    },
+    {
+      "case": "01",
+      "field": "monthly_net_BRL",
+      "reported": "4000.00",
+      "recalculated": "4000.00"
+    },
+    {
+      "case": "01",
+      "field": "annual_net_BRL",
+      "reported": "48000.00",
+      "recalculated": "48000.00"
+    },
+    {
+      "case": "01",
+      "field": "first_year_after_build_BRL",
+      "reported": "-72000.00",
+      "recalculated": "-72000.00"
+    },
+    {
+      "case": "01",
+      "field": "break_even_months",
+      "reported": "30.00",
+      "recalculated": "3E+1"
+    },
+    {
+      "case": "01",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "40000.00",
+      "recalculated": "40000.0"
+    },
+    {
+      "case": "01",
+      "field": "monthly_net_BRL",
+      "reported": "32000.00",
+      "recalculated": "32000.0"
+    },
+    {
+      "case": "01",
+      "field": "annual_net_BRL",
+      "reported": "384000.00",
+      "recalculated": "384000.0"
+    },
+    {
+      "case": "01",
+      "field": "first_year_after_build_BRL",
+      "reported": "264000.00",
+      "recalculated": "264000.0"
+    },
+    {
+      "case": "01",
+      "field": "break_even_months",
+      "reported": "3.75",
+      "recalculated": "3.75"
+    },
+    {
+      "case": "01",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "120000.00",
+      "recalculated": "120000.00"
+    },
+    {
+      "case": "01",
+      "field": "monthly_net_BRL",
+      "reported": "105000.00",
+      "recalculated": "105000.00"
+    },
+    {
+      "case": "01",
+      "field": "annual_net_BRL",
+      "reported": "1260000.00",
+      "recalculated": "1260000.00"
+    },
+    {
+      "case": "01",
+      "field": "first_year_after_build_BRL",
+      "reported": "1140000.00",
+      "recalculated": "1140000.00"
+    },
+    {
+      "case": "01",
+      "field": "break_even_months",
+      "reported": "1.14",
+      "recalculated": "1.142857142857142857142857143"
+    },
+    {
+      "case": "02",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "2800.00",
+      "recalculated": "2800.00"
+    },
+    {
+      "case": "02",
+      "field": "monthly_net_BRL",
+      "reported": "-2200.00",
+      "recalculated": "-2200.00"
+    },
+    {
+      "case": "02",
+      "field": "annual_net_BRL",
+      "reported": "-26400.00",
+      "recalculated": "-26400.00"
+    },
+    {
+      "case": "02",
+      "field": "first_year_after_build_BRL",
+      "reported": "-176400.00",
+      "recalculated": "-176400.00"
+    },
+    {
+      "case": "02",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "16800.00",
+      "recalculated": "16800.00"
+    },
+    {
+      "case": "02",
+      "field": "monthly_net_BRL",
+      "reported": "8800.00",
+      "recalculated": "8800.00"
+    },
+    {
+      "case": "02",
+      "field": "annual_net_BRL",
+      "reported": "105600.00",
+      "recalculated": "105600.00"
+    },
+    {
+      "case": "02",
+      "field": "first_year_after_build_BRL",
+      "reported": "-44400.00",
+      "recalculated": "-44400.00"
+    },
+    {
+      "case": "02",
+      "field": "break_even_months",
+      "reported": "17.05",
+      "recalculated": "17.04545454545454545454545455"
+    },
+    {
+      "case": "02",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "50400.00",
+      "recalculated": "50400.00"
+    },
+    {
+      "case": "02",
+      "field": "monthly_net_BRL",
+      "reported": "38400.00",
+      "recalculated": "38400.00"
+    },
+    {
+      "case": "02",
+      "field": "annual_net_BRL",
+      "reported": "460800.00",
+      "recalculated": "460800.00"
+    },
+    {
+      "case": "02",
+      "field": "first_year_after_build_BRL",
+      "reported": "310800.00",
+      "recalculated": "310800.00"
+    },
+    {
+      "case": "02",
+      "field": "break_even_months",
+      "reported": "3.91",
+      "recalculated": "3.90625"
+    },
+    {
+      "case": "03",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "3750.00",
+      "recalculated": "3750.00"
+    },
+    {
+      "case": "03",
+      "field": "monthly_net_BRL",
+      "reported": "-1250.00",
+      "recalculated": "-1250.00"
+    },
+    {
+      "case": "03",
+      "field": "annual_net_BRL",
+      "reported": "-15000.00",
+      "recalculated": "-15000.00"
+    },
+    {
+      "case": "03",
+      "field": "first_year_after_build_BRL",
+      "reported": "-195000.00",
+      "recalculated": "-195000.00"
+    },
+    {
+      "case": "03",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "22500.00",
+      "recalculated": "22500.0"
+    },
+    {
+      "case": "03",
+      "field": "monthly_net_BRL",
+      "reported": "12500.00",
+      "recalculated": "12500.0"
+    },
+    {
+      "case": "03",
+      "field": "annual_net_BRL",
+      "reported": "150000.00",
+      "recalculated": "150000.0"
+    },
+    {
+      "case": "03",
+      "field": "first_year_after_build_BRL",
+      "reported": "-30000.00",
+      "recalculated": "-30000.0"
+    },
+    {
+      "case": "03",
+      "field": "break_even_months",
+      "reported": "14.40",
+      "recalculated": "14.4"
+    },
+    {
+      "case": "03",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "60000.00",
+      "recalculated": "60000.0"
+    },
+    {
+      "case": "03",
+      "field": "monthly_net_BRL",
+      "reported": "42000.00",
+      "recalculated": "42000.0"
+    },
+    {
+      "case": "03",
+      "field": "annual_net_BRL",
+      "reported": "504000.00",
+      "recalculated": "504000.0"
+    },
+    {
+      "case": "03",
+      "field": "first_year_after_build_BRL",
+      "reported": "324000.00",
+      "recalculated": "324000.0"
+    },
+    {
+      "case": "03",
+      "field": "break_even_months",
+      "reported": "4.29",
+      "recalculated": "4.285714285714285714285714286"
+    },
+    {
+      "case": "04",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "0.00",
+      "recalculated": "0.0"
+    },
+    {
+      "case": "04",
+      "field": "monthly_net_BRL",
+      "reported": "-3000.00",
+      "recalculated": "-3000.0"
+    },
+    {
+      "case": "04",
+      "field": "annual_net_BRL",
+      "reported": "-36000.00",
+      "recalculated": "-36000.0"
+    },
+    {
+      "case": "04",
+      "field": "first_year_after_build_BRL",
+      "reported": "-146000.00",
+      "recalculated": "-146000.0"
+    },
+    {
+      "case": "04",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "17280.00",
+      "recalculated": "17280.00"
+    },
+    {
+      "case": "04",
+      "field": "monthly_net_BRL",
+      "reported": "11280.00",
+      "recalculated": "11280.00"
+    },
+    {
+      "case": "04",
+      "field": "annual_net_BRL",
+      "reported": "135360.00",
+      "recalculated": "135360.00"
+    },
+    {
+      "case": "04",
+      "field": "first_year_after_build_BRL",
+      "reported": "25360.00",
+      "recalculated": "25360.00"
+    },
+    {
+      "case": "04",
+      "field": "break_even_months",
+      "reported": "9.75",
+      "recalculated": "9.751773049645390070921985816"
+    },
+    {
+      "case": "04",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "67500.00",
+      "recalculated": "67500.00"
+    },
+    {
+      "case": "04",
+      "field": "monthly_net_BRL",
+      "reported": "57500.00",
+      "recalculated": "57500.00"
+    },
+    {
+      "case": "04",
+      "field": "annual_net_BRL",
+      "reported": "690000.00",
+      "recalculated": "690000.00"
+    },
+    {
+      "case": "04",
+      "field": "first_year_after_build_BRL",
+      "reported": "580000.00",
+      "recalculated": "580000.00"
+    },
+    {
+      "case": "04",
+      "field": "break_even_months",
+      "reported": "1.91",
+      "recalculated": "1.913043478260869565217391304"
+    },
+    {
+      "case": "05",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "3550.00",
+      "recalculated": "3550.00"
+    },
+    {
+      "case": "05",
+      "field": "monthly_net_BRL",
+      "reported": "-450.00",
+      "recalculated": "-450.00"
+    },
+    {
+      "case": "05",
+      "field": "annual_net_BRL",
+      "reported": "-5400.00",
+      "recalculated": "-5400.00"
+    },
+    {
+      "case": "05",
+      "field": "first_year_after_build_BRL",
+      "reported": "-105400.00",
+      "recalculated": "-105400.00"
+    },
+    {
+      "case": "05",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "27450.00",
+      "recalculated": "27450.00"
+    },
+    {
+      "case": "05",
+      "field": "monthly_net_BRL",
+      "reported": "20450.00",
+      "recalculated": "20450.00"
+    },
+    {
+      "case": "05",
+      "field": "annual_net_BRL",
+      "reported": "245400.00",
+      "recalculated": "245400.00"
+    },
+    {
+      "case": "05",
+      "field": "first_year_after_build_BRL",
+      "reported": "145400.00",
+      "recalculated": "145400.00"
+    },
+    {
+      "case": "05",
+      "field": "break_even_months",
+      "reported": "4.89",
+      "recalculated": "4.889975550122249388753056235"
+    },
+    {
+      "case": "05",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "83700.00",
+      "recalculated": "83700.00"
+    },
+    {
+      "case": "05",
+      "field": "monthly_net_BRL",
+      "reported": "71700.00",
+      "recalculated": "71700.00"
+    },
+    {
+      "case": "05",
+      "field": "annual_net_BRL",
+      "reported": "860400.00",
+      "recalculated": "860400.00"
+    },
+    {
+      "case": "05",
+      "field": "first_year_after_build_BRL",
+      "reported": "760400.00",
+      "recalculated": "760400.00"
+    },
+    {
+      "case": "05",
+      "field": "break_even_months",
+      "reported": "1.39",
+      "recalculated": "1.394700139470013947001394700"
+    },
+    {
+      "case": "06",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "1900.00",
+      "recalculated": "1900.00"
+    },
+    {
+      "case": "06",
+      "field": "monthly_net_BRL",
+      "reported": "-1100.00",
+      "recalculated": "-1100.00"
+    },
+    {
+      "case": "06",
+      "field": "annual_net_BRL",
+      "reported": "-13200.00",
+      "recalculated": "-13200.00"
+    },
+    {
+      "case": "06",
+      "field": "first_year_after_build_BRL",
+      "reported": "-153200.00",
+      "recalculated": "-153200.00"
+    },
+    {
+      "case": "06",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "16200.00",
+      "recalculated": "16200.0"
+    },
+    {
+      "case": "06",
+      "field": "monthly_net_BRL",
+      "reported": "10200.00",
+      "recalculated": "10200.0"
+    },
+    {
+      "case": "06",
+      "field": "annual_net_BRL",
+      "reported": "122400.00",
+      "recalculated": "122400.0"
+    },
+    {
+      "case": "06",
+      "field": "first_year_after_build_BRL",
+      "reported": "-17600.00",
+      "recalculated": "-17600.0"
+    },
+    {
+      "case": "06",
+      "field": "break_even_months",
+      "reported": "13.73",
+      "recalculated": "13.72549019607843137254901961"
+    },
+    {
+      "case": "06",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "56400.00",
+      "recalculated": "56400.0"
+    },
+    {
+      "case": "06",
+      "field": "monthly_net_BRL",
+      "reported": "46400.00",
+      "recalculated": "46400.0"
+    },
+    {
+      "case": "06",
+      "field": "annual_net_BRL",
+      "reported": "556800.00",
+      "recalculated": "556800.0"
+    },
+    {
+      "case": "06",
+      "field": "first_year_after_build_BRL",
+      "reported": "416800.00",
+      "recalculated": "416800.0"
+    },
+    {
+      "case": "06",
+      "field": "break_even_months",
+      "reported": "3.02",
+      "recalculated": "3.017241379310344827586206897"
+    },
+    {
+      "case": "07",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "8100.00",
+      "recalculated": "8100.0"
+    },
+    {
+      "case": "07",
+      "field": "monthly_net_BRL",
+      "reported": "3100.00",
+      "recalculated": "3100.0"
+    },
+    {
+      "case": "07",
+      "field": "annual_net_BRL",
+      "reported": "37200.00",
+      "recalculated": "37200.0"
+    },
+    {
+      "case": "07",
+      "field": "first_year_after_build_BRL",
+      "reported": "-122800.00",
+      "recalculated": "-122800.0"
+    },
+    {
+      "case": "07",
+      "field": "break_even_months",
+      "reported": "51.61",
+      "recalculated": "51.61290322580645161290322581"
+    },
+    {
+      "case": "07",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "43200.00",
+      "recalculated": "43200.0"
+    },
+    {
+      "case": "07",
+      "field": "monthly_net_BRL",
+      "reported": "33200.00",
+      "recalculated": "33200.0"
+    },
+    {
+      "case": "07",
+      "field": "annual_net_BRL",
+      "reported": "398400.00",
+      "recalculated": "398400.0"
+    },
+    {
+      "case": "07",
+      "field": "first_year_after_build_BRL",
+      "reported": "238400.00",
+      "recalculated": "238400.0"
+    },
+    {
+      "case": "07",
+      "field": "break_even_months",
+      "reported": "4.82",
+      "recalculated": "4.819277108433734939759036145"
+    },
+    {
+      "case": "07",
+      "field": "gross_after_variable_cost_BRL",
+      "reported": "108000.00",
+      "recalculated": "108000.0"
+    },
+    {
+      "case": "07",
+      "field": "monthly_net_BRL",
+      "reported": "90000.00",
+      "recalculated": "90000.0"
+    },
+    {
+      "case": "07",
+      "field": "annual_net_BRL",
+      "reported": "1080000.00",
+      "recalculated": "1080000.0"
+    },
+    {
+      "case": "07",
+      "field": "first_year_after_build_BRL",
+      "reported": "920000.00",
+      "recalculated": "920000.0"
+    },
+    {
+      "case": "07",
+      "field": "break_even_months",
+      "reported": "1.78",
+      "recalculated": "1.777777777777777777777777778"
+    },
+    {
+      "case": "08",
+      "field": "break_even_dossiers_year1",
+      "reported": 25000.0,
+      "recalculated": "25000"
+    },
+    {
+      "case": "08",
+      "field": "gross",
+      "reported": 144000,
+      "recalculated": "144000"
+    },
+    {
+      "case": "08",
+      "field": "year_one_net",
+      "reported": -156000,
+      "recalculated": "-156000"
+    },
+    {
+      "case": "08",
+      "field": "break_even_dossiers_year1",
+      "reported": 15714.285714285714,
+      "recalculated": "15714.28571428571428571428571"
+    },
+    {
+      "case": "08",
+      "field": "gross",
+      "reported": 504000,
+      "recalculated": "504000"
+    },
+    {
+      "case": "08",
+      "field": "year_one_net",
+      "reported": 174000,
+      "recalculated": "174000"
+    },
+    {
+      "case": "08",
+      "field": "break_even_dossiers_year1",
+      "reported": 13333.333333333334,
+      "recalculated": "13333.33333333333333333333333"
+    },
+    {
+      "case": "08",
+      "field": "gross",
+      "reported": 1080000,
+      "recalculated": "1080000"
+    },
+    {
+      "case": "08",
+      "field": "year_one_net",
+      "reported": 720000,
+      "recalculated": "720000"
+    },
+    {
+      "case": "09",
+      "field": "break_even_payments_year1",
+      "reported": 271186.4406779661,
+      "recalculated": "271186.4406779661016949152542"
+    },
+    {
+      "case": "09",
+      "field": "gross",
+      "reported": 70800,
+      "recalculated": "70800.00"
+    },
+    {
+      "case": "09",
+      "field": "year_one_net",
+      "reported": -249200,
+      "recalculated": "-249200.00"
+    },
+    {
+      "case": "09",
+      "field": "break_even_payments_year1",
+      "reported": 160000.0,
+      "recalculated": "1.600E+5"
+    },
+    {
+      "case": "09",
+      "field": "gross",
+      "reported": 240000,
+      "recalculated": "240000.00"
+    },
+    {
+      "case": "09",
+      "field": "year_one_net",
+      "reported": -80000,
+      "recalculated": "-80000.00"
+    },
+    {
+      "case": "09",
+      "field": "break_even_payments_year1",
+      "reported": 113475.17730496454,
+      "recalculated": "113475.1773049645390070921986"
+    },
+    {
+      "case": "09",
+      "field": "gross",
+      "reported": 676800,
+      "recalculated": "676800.00"
+    },
+    {
+      "case": "09",
+      "field": "year_one_net",
+      "reported": 356800,
+      "recalculated": "356800.00"
+    },
+    {
+      "case": "10",
+      "field": "avoided_incidents",
+      "reported": 45,
+      "recalculated": "45.00000"
+    },
+    {
+      "case": "10",
+      "field": "break_even_avoided_incidents_year1",
+      "reported": 2400,
+      "recalculated": "2400"
+    },
+    {
+      "case": "10",
+      "field": "gross",
+      "reported": 4050,
+      "recalculated": "4050.00000"
+    },
+    {
+      "case": "10",
+      "field": "year_one_net",
+      "reported": -211950,
+      "recalculated": "-211950.00000"
+    },
+    {
+      "case": "10",
+      "field": "avoided_incidents",
+      "reported": 300,
+      "recalculated": "300.0000"
+    },
+    {
+      "case": "10",
+      "field": "break_even_avoided_incidents_year1",
+      "reported": 2400,
+      "recalculated": "2400"
+    },
+    {
+      "case": "10",
+      "field": "gross",
+      "reported": 27000,
+      "recalculated": "27000.0000"
+    },
+    {
+      "case": "10",
+      "field": "year_one_net",
+      "reported": -189000,
+      "recalculated": "-189000.0000"
+    },
+    {
+      "case": "10",
+      "field": "avoided_incidents",
+      "reported": 1200,
+      "recalculated": "1200.0000"
+    },
+    {
+      "case": "10",
+      "field": "break_even_avoided_incidents_year1",
+      "reported": 2400,
+      "recalculated": "2400"
+    },
+    {
+      "case": "10",
+      "field": "gross",
+      "reported": 108000,
+      "recalculated": "108000.0000"
+    },
+    {
+      "case": "10",
+      "field": "year_one_net",
+      "reported": -108000,
+      "recalculated": "-108000.0000"
+    },
+    {
+      "case": "11",
+      "field": "break_even_refunds_year1",
+      "reported": 1800000.0,
+      "recalculated": "1.800E+6"
+    },
+    {
+      "case": "11",
+      "field": "gross",
+      "reported": 16000,
+      "recalculated": "16000.000"
+    },
+    {
+      "case": "11",
+      "field": "year_one_net",
+      "reported": -128000,
+      "recalculated": "-128000.000"
+    },
+    {
+      "case": "11",
+      "field": "break_even_refunds_year1",
+      "reported": 600000.0,
+      "recalculated": "6.00E+5"
+    },
+    {
+      "case": "11",
+      "field": "gross",
+      "reported": 120000,
+      "recalculated": "120000.000"
+    },
+    {
+      "case": "11",
+      "field": "year_one_net",
+      "reported": -24000,
+      "recalculated": "-24000.000"
+    },
+    {
+      "case": "11",
+      "field": "break_even_refunds_year1",
+      "reported": 360000.0,
+      "recalculated": "3.60E+5"
+    },
+    {
+      "case": "11",
+      "field": "gross",
+      "reported": 400000,
+      "recalculated": "400000.000"
+    },
+    {
+      "case": "11",
+      "field": "year_one_net",
+      "reported": 256000,
+      "recalculated": "256000.000"
+    },
+    {
+      "case": "12",
+      "field": "avoided_reissues",
+      "reported": 100,
+      "recalculated": "100.000"
+    },
+    {
+      "case": "12",
+      "field": "break_even_avoided_reissues_year1",
+      "reported": 2923.076923076923,
+      "recalculated": "2923.076923076923076923076923"
+    },
+    {
+      "case": "12",
+      "field": "gross",
+      "reported": 3900,
+      "recalculated": "3900.000"
+    },
+    {
+      "case": "12",
+      "field": "year_one_net",
+      "reported": -110100,
+      "recalculated": "-110100.000"
+    },
+    {
+      "case": "12",
+      "field": "avoided_reissues",
+      "reported": 400,
+      "recalculated": "400.000"
+    },
+    {
+      "case": "12",
+      "field": "break_even_avoided_reissues_year1",
+      "reported": 2923.076923076923,
+      "recalculated": "2923.076923076923076923076923"
+    },
+    {
+      "case": "12",
+      "field": "gross",
+      "reported": 15600,
+      "recalculated": "15600.000"
+    },
+    {
+      "case": "12",
+      "field": "year_one_net",
+      "reported": -98400,
+      "recalculated": "-98400.000"
+    },
+    {
+      "case": "12",
+      "field": "avoided_reissues",
+      "reported": 1200,
+      "recalculated": "1200.000"
+    },
+    {
+      "case": "12",
+      "field": "break_even_avoided_reissues_year1",
+      "reported": 2923.076923076923,
+      "recalculated": "2923.076923076923076923076923"
+    },
+    {
+      "case": "12",
+      "field": "gross",
+      "reported": 46800,
+      "recalculated": "46800.000"
+    },
+    {
+      "case": "12",
+      "field": "year_one_net",
+      "reported": -67200,
+      "recalculated": "-67200.000"
+    },
+    {
+      "case": "13",
+      "field": "break_even_users_year1",
+      "reported": 1125000.0,
+      "recalculated": "1.125E+6"
+    },
+    {
+      "case": "13",
+      "field": "gross",
+      "reported": 6400,
+      "recalculated": "6400.000"
+    },
+    {
+      "case": "13",
+      "field": "year_one_net",
+      "reported": -65600,
+      "recalculated": "-65600.000"
+    },
+    {
+      "case": "13",
+      "field": "break_even_users_year1",
+      "reported": 562500.0,
+      "recalculated": "5.625E+5"
+    },
+    {
+      "case": "13",
+      "field": "gross",
+      "reported": 32000,
+      "recalculated": "32000.000"
+    },
+    {
+      "case": "13",
+      "field": "year_one_net",
+      "reported": -40000,
+      "recalculated": "-40000.000"
+    },
+    {
+      "case": "13",
+      "field": "break_even_users_year1",
+      "reported": 375000.0,
+      "recalculated": "3.75E+5"
+    },
+    {
+      "case": "13",
+      "field": "gross",
+      "reported": 96000,
+      "recalculated": "96000.000"
+    },
+    {
+      "case": "13",
+      "field": "year_one_net",
+      "reported": 24000,
+      "recalculated": "24000.000"
+    },
+    {
+      "case": "14",
+      "field": "avoided_incidents",
+      "reported": 90,
+      "recalculated": "90.000"
+    },
+    {
+      "case": "14",
+      "field": "break_even_anticipations_year1",
+      "reported": 375000.0,
+      "recalculated": "3.75E+5"
+    },
+    {
+      "case": "14",
+      "field": "gross",
+      "reported": 14400,
+      "recalculated": "14400.000"
+    },
+    {
+      "case": "14",
+      "field": "year_one_net",
+      "reported": -165600,
+      "recalculated": "-165600.000"
+    },
+    {
+      "case": "14",
+      "field": "avoided_incidents",
+      "reported": 420,
+      "recalculated": "420.000"
+    },
+    {
+      "case": "14",
+      "field": "break_even_anticipations_year1",
+      "reported": 187500.0,
+      "recalculated": "1.875E+5"
+    },
+    {
+      "case": "14",
+      "field": "gross",
+      "reported": 67200,
+      "recalculated": "67200.000"
+    },
+    {
+      "case": "14",
+      "field": "year_one_net",
+      "reported": -112800,
+      "recalculated": "-112800.000"
+    },
+    {
+      "case": "14",
+      "field": "avoided_incidents",
+      "reported": 1200,
+      "recalculated": "1200.00"
+    },
+    {
+      "case": "14",
+      "field": "break_even_anticipations_year1",
+      "reported": 112500.0,
+      "recalculated": "1.125E+5"
+    },
+    {
+      "case": "14",
+      "field": "gross",
+      "reported": 192000,
+      "recalculated": "192000.00"
+    },
+    {
+      "case": "14",
+      "field": "year_one_net",
+      "reported": 12000,
+      "recalculated": "12000.00"
+    },
+    {
+      "case": "15",
+      "field": "break_even_reduction",
+      "reported": 0.03125,
+      "recalculated": "0.03125"
+    },
+    {
+      "case": "15",
+      "field": "break_even_contacts",
+      "reported": 625,
+      "recalculated": "625"
+    },
+    {
+      "case": "15",
+      "field": "avoided_contacts",
+      "reported": 400,
+      "recalculated": "400.00"
+    },
+    {
+      "case": "15",
+      "field": "capacity_hours",
+      "reported": 53.33,
+      "recalculated": "53.33333333333333333333333333"
+    },
+    {
+      "case": "15",
+      "field": "capacity_value_brl",
+      "reported": 3200.0,
+      "recalculated": "3200.000000000000000000000000"
+    },
+    {
+      "case": "15",
+      "field": "net_capacity_value_brl",
+      "reported": -1800.0,
+      "recalculated": "-1800.000000000000000000000000"
+    },
+    {
+      "case": "15",
+      "field": "avoided_contacts",
+      "reported": 1000,
+      "recalculated": "1000.00"
+    },
+    {
+      "case": "15",
+      "field": "capacity_hours",
+      "reported": 133.33,
+      "recalculated": "133.3333333333333333333333333"
+    },
+    {
+      "case": "15",
+      "field": "capacity_value_brl",
+      "reported": 8000.0,
+      "recalculated": "7999.999999999999999999999998"
+    },
+    {
+      "case": "15",
+      "field": "net_capacity_value_brl",
+      "reported": 3000.0,
+      "recalculated": "2999.999999999999999999999998"
+    },
+    {
+      "case": "15",
+      "field": "payback_months_if_cash_realized",
+      "reported": 40.0,
+      "recalculated": "40.00000000000000000000000003"
+    },
+    {
+      "case": "15",
+      "field": "avoided_contacts",
+      "reported": 2000,
+      "recalculated": "2000.0"
+    },
+    {
+      "case": "15",
+      "field": "capacity_hours",
+      "reported": 266.67,
+      "recalculated": "266.6666666666666666666666667"
+    },
+    {
+      "case": "15",
+      "field": "capacity_value_brl",
+      "reported": 16000.0,
+      "recalculated": "16000.00000000000000000000000"
+    },
+    {
+      "case": "15",
+      "field": "net_capacity_value_brl",
+      "reported": 11000.0,
+      "recalculated": "11000.00000000000000000000000"
+    },
+    {
+      "case": "15",
+      "field": "payback_months_if_cash_realized",
+      "reported": 10.91,
+      "recalculated": "10.90909090909090909090909091"
+    },
+    {
+      "case": "16",
+      "field": "break_even_dispute_reduction",
+      "reported": 0.012345679012345678,
+      "recalculated": "0.01234567901234567901234567901"
+    },
+    {
+      "case": "16",
+      "field": "break_even_cases",
+      "reported": 148.14814814814815,
+      "recalculated": "148.1481481481481481481481481"
+    },
+    {
+      "case": "16",
+      "field": "avoided_cases",
+      "reported": 120.0,
+      "recalculated": "120.00"
+    },
+    {
+      "case": "16",
+      "field": "avoided_contacts",
+      "reported": 180.0,
+      "recalculated": "180.000"
+    },
+    {
+      "case": "16",
+      "field": "gross_capacity_value_brl",
+      "reported": 3240.0,
+      "recalculated": "3240.000"
+    },
+    {
+      "case": "16",
+      "field": "net_capacity_value_brl",
+      "reported": -760.0,
+      "recalculated": "-760.000"
+    },
+    {
+      "case": "16",
+      "field": "avoided_cases",
+      "reported": 360.0,
+      "recalculated": "360.00"
+    },
+    {
+      "case": "16",
+      "field": "avoided_contacts",
+      "reported": 540.0,
+      "recalculated": "540.000"
+    },
+    {
+      "case": "16",
+      "field": "gross_capacity_value_brl",
+      "reported": 9720.0,
+      "recalculated": "9720.000"
+    },
+    {
+      "case": "16",
+      "field": "net_capacity_value_brl",
+      "reported": 5720.0,
+      "recalculated": "5720.000"
+    },
+    {
+      "case": "16",
+      "field": "payback_months_if_cash_realized",
+      "reported": 15.73,
+      "recalculated": "15.73426573426573426573426573"
+    },
+    {
+      "case": "16",
+      "field": "avoided_cases",
+      "reported": 720.0,
+      "recalculated": "720.00"
+    },
+    {
+      "case": "16",
+      "field": "avoided_contacts",
+      "reported": 1080.0,
+      "recalculated": "1080.000"
+    },
+    {
+      "case": "16",
+      "field": "gross_capacity_value_brl",
+      "reported": 19440.0,
+      "recalculated": "19440.000"
+    },
+    {
+      "case": "16",
+      "field": "net_capacity_value_brl",
+      "reported": 15440.0,
+      "recalculated": "15440.000"
+    },
+    {
+      "case": "16",
+      "field": "payback_months_if_cash_realized",
+      "reported": 5.83,
+      "recalculated": "5.829015544041450777202072539"
+    },
+    {
+      "case": "17",
+      "field": "break_even_prevented_cases",
+      "reported": 75,
+      "recalculated": "75"
+    },
+    {
+      "case": "17",
+      "field": "break_even_prevention_fraction",
+      "reported": 0.1875,
+      "recalculated": "0.1875"
+    },
+    {
+      "case": "17",
+      "field": "prevented_cases",
+      "reported": 100.0,
+      "recalculated": "100.0000"
+    },
+    {
+      "case": "17",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 6000.0,
+      "recalculated": "6000.000000"
+    },
+    {
+      "case": "17",
+      "field": "net_potential_brl",
+      "reported": 1500.0,
+      "recalculated": "1500.000000"
+    },
+    {
+      "case": "17",
+      "field": "payback_months_if_realized",
+      "reported": 100.0,
+      "recalculated": "1E+2"
+    },
+    {
+      "case": "17",
+      "field": "prevented_cases",
+      "reported": 200.0,
+      "recalculated": "200.000"
+    },
+    {
+      "case": "17",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 12000.0,
+      "recalculated": "12000.00000"
+    },
+    {
+      "case": "17",
+      "field": "net_potential_brl",
+      "reported": 7500.0,
+      "recalculated": "7500.00000"
+    },
+    {
+      "case": "17",
+      "field": "payback_months_if_realized",
+      "reported": 20.0,
+      "recalculated": "2E+1"
+    },
+    {
+      "case": "17",
+      "field": "prevented_cases",
+      "reported": 300.0,
+      "recalculated": "300.0000"
+    },
+    {
+      "case": "17",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 18000.0,
+      "recalculated": "18000.000000"
+    },
+    {
+      "case": "17",
+      "field": "net_potential_brl",
+      "reported": 13500.0,
+      "recalculated": "13500.000000"
+    },
+    {
+      "case": "17",
+      "field": "payback_months_if_realized",
+      "reported": 11.11,
+      "recalculated": "11.11111111111111111111111111"
+    },
+    {
+      "case": "18",
+      "field": "break_even_extra_lines",
+      "reported": 347.22222222222223,
+      "recalculated": "347.2222222222222222222222222"
+    },
+    {
+      "case": "18",
+      "field": "break_even_activation_uplift",
+      "reported": 0.06944444444444445,
+      "recalculated": "0.06944444444444444444444444444"
+    },
+    {
+      "case": "18",
+      "field": "extra_activations",
+      "reported": 100.0,
+      "recalculated": "100.00"
+    },
+    {
+      "case": "18",
+      "field": "six_month_contribution_brl",
+      "reported": 7200.0,
+      "recalculated": "7200.00"
+    },
+    {
+      "case": "18",
+      "field": "net_after_pilot_costs_brl",
+      "reported": -17800.0,
+      "recalculated": "-17800.00"
+    },
+    {
+      "case": "18",
+      "field": "extra_activations",
+      "reported": 250.0,
+      "recalculated": "250.00"
+    },
+    {
+      "case": "18",
+      "field": "six_month_contribution_brl",
+      "reported": 18000.0,
+      "recalculated": "18000.00"
+    },
+    {
+      "case": "18",
+      "field": "net_after_pilot_costs_brl",
+      "reported": -7000.0,
+      "recalculated": "-7000.00"
+    },
+    {
+      "case": "18",
+      "field": "extra_activations",
+      "reported": 400.0,
+      "recalculated": "400.00"
+    },
+    {
+      "case": "18",
+      "field": "six_month_contribution_brl",
+      "reported": 28800.0,
+      "recalculated": "28800.00"
+    },
+    {
+      "case": "18",
+      "field": "net_after_pilot_costs_brl",
+      "reported": 3800.0,
+      "recalculated": "3800.00"
+    },
+    {
+      "case": "19",
+      "field": "break_even_mismatches",
+      "reported": 63.829787234042556,
+      "recalculated": "63.82978723404255319148936170"
+    },
+    {
+      "case": "19",
+      "field": "break_even_prevention_fraction",
+      "reported": 0.3191489361702128,
+      "recalculated": "0.3191489361702127659574468085"
+    },
+    {
+      "case": "19",
+      "field": "avoided_mismatches",
+      "reported": 50.0,
+      "recalculated": "50.0000"
+    },
+    {
+      "case": "19",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 2500.0,
+      "recalculated": "2500.00000"
+    },
+    {
+      "case": "19",
+      "field": "forgone_contribution_brl",
+      "reported": 150.0,
+      "recalculated": "150.0000"
+    },
+    {
+      "case": "19",
+      "field": "net_potential_brl",
+      "reported": -650.0,
+      "recalculated": "-650.00000"
+    },
+    {
+      "case": "19",
+      "field": "avoided_mismatches",
+      "reported": 100.0,
+      "recalculated": "100.000"
+    },
+    {
+      "case": "19",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 5000.0,
+      "recalculated": "5000.0000"
+    },
+    {
+      "case": "19",
+      "field": "forgone_contribution_brl",
+      "reported": 300.0,
+      "recalculated": "300.000"
+    },
+    {
+      "case": "19",
+      "field": "net_potential_brl",
+      "reported": 1700.0,
+      "recalculated": "1700.0000"
+    },
+    {
+      "case": "19",
+      "field": "payback_months_if_realized",
+      "reported": 47.06,
+      "recalculated": "47.05882352941176470588235294"
+    },
+    {
+      "case": "19",
+      "field": "avoided_mismatches",
+      "reported": 150.0,
+      "recalculated": "150.0000"
+    },
+    {
+      "case": "19",
+      "field": "gross_avoidable_cost_brl",
+      "reported": 7500.0,
+      "recalculated": "7500.00000"
+    },
+    {
+      "case": "19",
+      "field": "forgone_contribution_brl",
+      "reported": 450.0,
+      "recalculated": "450.0000"
+    },
+    {
+      "case": "19",
+      "field": "net_potential_brl",
+      "reported": 4050.0,
+      "recalculated": "4050.00000"
+    },
+    {
+      "case": "19",
+      "field": "payback_months_if_realized",
+      "reported": 19.75,
+      "recalculated": "19.75308641975308641975308642"
+    },
+    {
+      "case": "20",
+      "field": "break_even_minutes",
+      "reported": 4,
+      "recalculated": "4"
+    },
+    {
+      "case": "20",
+      "field": "freed_hours",
+      "reported": 83.33,
+      "recalculated": "83.33333333333333333333333333"
+    },
+    {
+      "case": "20",
+      "field": "gross_capacity_value_brl",
+      "reported": 5000,
+      "recalculated": "5000.000000000000000000000000"
+    },
+    {
+      "case": "20",
+      "field": "net_capacity_value_brl",
+      "reported": 3000,
+      "recalculated": "3000.000000000000000000000000"
+    },
+    {
+      "case": "20",
+      "field": "exposure_brl_days_reduced",
+      "reported": 120000,
+      "recalculated": "120000"
+    },
+    {
+      "case": "20",
+      "field": "payback_months_if_cash_realized",
+      "reported": 20.0,
+      "recalculated": "2E+1"
+    },
+    {
+      "case": "20",
+      "field": "freed_hours",
+      "reported": 125.0,
+      "recalculated": "125"
+    },
+    {
+      "case": "20",
+      "field": "gross_capacity_value_brl",
+      "reported": 7500,
+      "recalculated": "7500"
+    },
+    {
+      "case": "20",
+      "field": "net_capacity_value_brl",
+      "reported": 5500,
+      "recalculated": "5500"
+    },
+    {
+      "case": "20",
+      "field": "exposure_brl_days_reduced",
+      "reported": 300000,
+      "recalculated": "300000"
+    },
+    {
+      "case": "20",
+      "field": "payback_months_if_cash_realized",
+      "reported": 10.91,
+      "recalculated": "10.90909090909090909090909091"
+    },
+    {
+      "case": "20",
+      "field": "freed_hours",
+      "reported": 166.67,
+      "recalculated": "166.6666666666666666666666667"
+    },
+    {
+      "case": "20",
+      "field": "gross_capacity_value_brl",
+      "reported": 10000,
+      "recalculated": "10000.00000000000000000000000"
+    },
+    {
+      "case": "20",
+      "field": "net_capacity_value_brl",
+      "reported": 8000,
+      "recalculated": "8000.00000000000000000000000"
+    },
+    {
+      "case": "20",
+      "field": "exposure_brl_days_reduced",
+      "reported": 480000,
+      "recalculated": "480000"
+    },
+    {
+      "case": "20",
+      "field": "payback_months_if_cash_realized",
+      "reported": 7.5,
+      "recalculated": "7.5"
+    }
+  ],
+  "public_baseline_source": "financial-baselines.json"
+}

@@ -43,65 +43,65 @@
     },
     "01-3": {
       "1": "flutter",
-      "2": "clojure",
+      "2": "java",
       "3": "clojure",
-      "4": "datomic",
+      "4": "postgresql",
       "5": "kafka",
-      "6": "clojure",
+      "6": "java",
       "7": "flutter"
     },
     "02-3": {
       "1": "flutter",
-      "2": "clojure",
-      "3": "flutter",
-      "4": null,
-      "5": "datomic",
-      "6": "clojure",
+      "2": "java",
+      "3": "clojure",
+      "4": "java",
+      "5": "postgresql",
+      "6": "python",
       "7": "flutter"
     },
     "03-3": {
-      "1": "clojure",
+      "1": "java",
       "2": "kafka",
-      "3": "clojure",
-      "4": "flutter",
-      "5": null,
+      "3": "postgresql",
+      "4": null,
+      "5": "java",
       "6": "flutter",
-      "7": "datomic"
+      "7": "postgresql"
     },
     "04-3": {
-      "1": "clojure",
+      "1": "java",
       "2": null,
-      "3": "clojure",
-      "4": "clojure",
-      "5": "datomic",
-      "6": "clojure",
+      "3": "aws",
+      "4": null,
+      "5": "postgresql",
+      "6": "java",
       "7": "flutter"
     },
     "05-3": {
-      "1": null,
-      "2": "datomic",
-      "3": "flutter",
-      "4": "python",
-      "5": "kafka",
-      "6": "clojure",
+      "1": "flutter",
+      "2": "postgresql",
+      "3": "java",
+      "4": "java",
+      "5": "redis",
+      "6": "java",
       "7": "flutter"
     },
     "06-3": {
       "1": "flutter",
-      "2": "dart",
-      "3": "clojure",
-      "4": "clojure",
-      "5": "clojure",
-      "6": "clojure",
+      "2": "aws",
+      "3": "java",
+      "4": "postgresql",
+      "5": "java",
+      "6": "java",
       "7": "flutter"
     },
     "07-3": {
-      "1": null,
-      "2": "datomic",
+      "1": "java",
+      "2": "postgresql",
       "3": "clojure",
-      "4": "python",
-      "5": null,
-      "6": null,
+      "4": "clojure",
+      "5": "postgresql",
+      "6": "flutter",
       "7": "python"
     },
     "08-3": {
@@ -111,115 +111,115 @@
       "3": "clojure",
       "4": "datomic",
       "5": "flutter",
-      "6": "python"
+      "6": null
     },
     "09-3": {
-      "0": null,
+      "0": "datomic",
       "1": "clojure",
-      "2": "redis",
-      "3": "dart",
+      "2": "datomic",
+      "3": "flutter",
       "4": "flutter",
-      "5": "flutter",
-      "6": "flutter"
+      "5": "clojure",
+      "6": "clojure"
     },
     "10-3": {
-      "0": null,
+      "0": "flutter",
       "1": "clojure",
-      "2": null,
-      "3": "python",
-      "4": "postgresql",
-      "5": "flutter",
+      "2": "datomic",
+      "3": "clojure",
+      "4": null,
+      "5": "clojure",
       "6": "clojure"
     },
     "11-3": {
-      "0": "clojure",
+      "0": "datomic",
       "1": "kafka",
       "2": "clojure",
       "3": "datomic",
       "4": "clojure",
       "5": "clojure",
-      "6": null
-    },
-    "12-3": {
-      "0": "aws",
-      "1": "python",
-      "2": "datomic",
-      "3": "python",
-      "4": "kubernetes",
-      "5": "terraform",
       "6": "flutter"
     },
-    "13-3": {
+    "12-3": {
       "0": null,
-      "1": "datomic",
-      "2": null,
-      "3": null,
+      "1": "clojure",
+      "2": "datomic",
+      "3": "clojure",
       "4": "clojure",
-      "5": "aws",
+      "5": "clojure",
+      "6": null
+    },
+    "13-3": {
+      "0": "datomic",
+      "1": "datomic",
+      "2": "clojure",
+      "3": "flutter",
+      "4": "clojure",
+      "5": "kafka",
       "6": "clojure"
     },
     "14-3": {
-      "0": null,
-      "1": "dart",
+      "0": "datomic",
+      "1": "clojure",
       "2": "datomic",
       "3": "clojure",
       "4": "flutter",
       "5": "clojure",
-      "6": "opentelemetry"
+      "6": "prometheus"
     },
     "15-3": {
       "1": "flutter",
-      "2": "dart",
-      "3": "opentelemetry",
-      "4": "python",
-      "5": "grafana",
-      "6": "python",
-      "7": null
+      "2": "clojure",
+      "3": "clojure",
+      "4": "datomic",
+      "5": "opentelemetry",
+      "6": "kafka",
+      "7": "clojure"
     },
     "16-3": {
-      "1": "kafka",
+      "1": "clojure",
       "2": "kafka",
-      "3": "redis",
-      "4": "python",
-      "5": "clojure",
-      "6": null,
-      "7": null
+      "3": "datomic",
+      "4": "clojure",
+      "5": "postgresql",
+      "6": "clojure",
+      "7": "datomic"
     },
     "17-3": {
       "1": "flutter",
-      "2": "python",
-      "3": "python",
+      "2": "datomic",
+      "3": "clojure",
       "4": "clojure",
-      "5": "clojure",
-      "6": null,
-      "7": "python"
+      "5": "datomic",
+      "6": "clojure",
+      "7": "datomic"
     },
     "18-3": {
       "1": "kafka",
       "2": "clojure",
-      "3": "python",
-      "4": "python",
-      "5": "python",
-      "6": "datomic",
+      "3": "clojure",
+      "4": "postgresql",
+      "5": "clojure",
+      "6": "postgresql",
       "7": null
     },
     "19-3": {
-      "1": "clojure",
-      "2": "dart",
-      "3": "dart",
+      "1": "flutter",
+      "2": "clojure",
+      "3": "clojure",
       "4": "flutter",
-      "5": "flutter",
-      "6": "python",
-      "7": null
+      "5": "datomic",
+      "6": "clojure",
+      "7": "postgresql"
     },
     "20-3": {
-      "1": "nubank",
-      "2": "flutter",
+      "1": "datomic",
+      "2": "clojure",
       "3": "clojure",
-      "4": "clojure",
+      "4": null,
       "5": null,
       "6": "clojure",
-      "7": "datomic"
+      "7": "postgresql"
     }
   },
   "official_marks": {
@@ -243,21 +243,13 @@
       "name": "Flutter",
       "source": "https://flutter.dev/brand"
     },
-    "grafana": {
-      "name": "Grafana",
-      "source": "https://grafana.com/"
+    "java": {
+      "name": "Java",
+      "source": "https://dev.java/"
     },
     "kafka": {
       "name": "Apache Kafka",
       "source": "https://kafka.apache.org/"
-    },
-    "kubernetes": {
-      "name": "Kubernetes",
-      "source": "https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg"
-    },
-    "nubank": {
-      "name": "Nubank",
-      "source": "https://www.datomic.com/"
     },
     "opentelemetry": {
       "name": "OpenTelemetry",
@@ -278,10 +270,6 @@
     "redis": {
       "name": "Redis",
       "source": "https://redis.io/"
-    },
-    "terraform": {
-      "name": "Terraform",
-      "source": "https://github.com/hashicorp/design-system"
     },
     "typescript": {
       "name": "TypeScript",

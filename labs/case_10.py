@@ -1,100 +1,152 @@
-"""Caso 10: registro compartilhável sintético; não é recibo fiscal."""
-from dataclasses import dataclass, replace
-import hashlib
-import hmac
+"""Synthetic two-database payment intent and idempotent provider.
+
+Not a NuPay reproduction. Provider idempotency is an explicit assumption,
+not a claim of exactly-once networking. No interest, bank calls, credentials
+or merchant cancellation is modeled. Each process uses its own connection.
+"""
 import json
+import sqlite3
+import tempfile
 import unittest
+from pathlib import Path
 
 
-@dataclass(frozen=True)
-class Purchase:
-    purchase_id: str
-    owner: str
-    revision: int
-    amount_cents: int
-    merchant: str
-    status: str
+class Provider:
+    def __init__(self, path):
+        self.db = sqlite3.connect(path)
+        self.db.execute('CREATE TABLE IF NOT EXISTS charges('
+                        'key TEXT PRIMARY KEY NOT NULL,payload TEXT,receipt TEXT)')
+
+    def charge(self, key, payload):
+        if not isinstance(key, str) or not key.strip():
+            raise ValueError('nonempty provider identity required')
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            old = self.db.execute('SELECT payload,receipt FROM charges WHERE key=?',
+                                  (key,)).fetchone()
+            if old:
+                if old[0] != payload:
+                    raise ValueError('provider conflict')
+                return old[1]
+            receipt = 'provider:' + key
+            self.db.execute('INSERT INTO charges VALUES(?,?,?)',
+                            (key, payload, receipt))
+            return receipt
 
 
-LABELS = {'pending': 'Autorização pendente',
-          'confirmed': 'Registro de compra confirmada',
-          'reversed': 'Compra estornada'}
+class IntentClient:
+    def __init__(self, path, provider):
+        self.db = sqlite3.connect(path)
+        self.provider = provider
+        self.db.execute('CREATE TABLE IF NOT EXISTS intents('
+                        'key TEXT PRIMARY KEY NOT NULL,payload TEXT,receipt TEXT)')
+
+    # BOOK_CORE_BEGIN
+    def pay(self, key, amount, merchant, timeout_after_provider=False):
+        if not isinstance(key, str) or not key.strip():
+            raise ValueError('nonempty intent identity required')
+        if type(amount) is not int or amount <= 0 or not merchant:
+            raise ValueError('invalid intent')
+        payload = json.dumps([amount, merchant])
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            old = self.db.execute('SELECT payload,receipt FROM intents WHERE key=?',
+                                  (key,)).fetchone()
+            if old and old[0] != payload:
+                raise ValueError('intent conflict')
+            if old and old[1]:
+                return old[1]
+            self.db.execute('INSERT OR IGNORE INTO intents VALUES(?,?,NULL)',
+                            (key, payload))
+        receipt = self.provider.charge(key, payload)
+        if timeout_after_provider:
+            raise TimeoutError('provider committed; local outcome unknown')
+        with self.db:
+            self.db.execute('UPDATE intents SET receipt=? WHERE key=?',
+                            (receipt, key))
+        return receipt
+
+    def state(self, key):
+        row = self.db.execute('SELECT receipt FROM intents WHERE key=?',
+                              (key,)).fetchone()
+        return 'absent' if row is None else ('confirmed' if row[0] else 'unknown')
+    # BOOK_CORE_END
 
 
-def canonical(data):
-    return json.dumps(data, sort_keys=True, ensure_ascii=False).encode()
-
-
-def export_record(purchase, subject, secret):
-    if purchase.owner != subject:
-        raise PermissionError('objeto não autorizado')
-    if purchase.status not in LABELS:
-        raise ValueError('estado desconhecido')
-    if type(purchase.amount_cents) is not int or purchase.amount_cents <= 0:
-        raise ValueError('centavos inteiros positivos')
-    if purchase.revision < 1:
-        raise ValueError('revisão inválida')
-    body = {
-        'kind': 'synthetic-purchase-record',
-        'purchase_id': purchase.purchase_id,
-        'revision': purchase.revision,
-        'amount_cents': purchase.amount_cents,
-        'currency': 'BRL',
-        'merchant': purchase.merchant,
-        'status': purchase.status,
-        'label': LABELS[purchase.status],
-        'notice': 'Não é recibo fiscal nem prova de quitação da fatura.'
-    }
-    signature = hmac.new(secret, canonical(body), hashlib.sha256).hexdigest()
-    return {'body': body, 'integrity_tag': signature}
-
-
-def verify(document, secret):
-    expected = hmac.new(secret, canonical(document['body']),
-                        hashlib.sha256).hexdigest()
-    return hmac.compare_digest(document['integrity_tag'], expected)
-
-
-class Tests(unittest.TestCase):
+class IntentTests(unittest.TestCase):
     def setUp(self):
-        self.purchase = Purchase('demo-p1', 'alice', 1, 700,
-                                 'loja sintética', 'pending')
-        self.secret = b'local-test-only-not-a-production-key'
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name)
+        self.p = Provider(self.path / 'provider.db')
+        self.c = IntentClient(self.path / 'client.db', self.p)
 
-    def make(self, **changes):
-        return export_record(replace(self.purchase, **changes),
-                             'alice', self.secret)
+    def tearDown(self):
+        self.c.db.close()
+        self.p.db.close()
+        self.tmp.cleanup()
 
-    def test_pending_has_no_paid_claim(self):
-        self.assertEqual(self.make()['body']['label'], 'Autorização pendente')
+    def charges(self):
+        return self.p.db.execute('SELECT COUNT(*) FROM charges').fetchone()[0]
 
-    def test_reversed_has_explicit_status(self):
-        doc = self.make(status='reversed', revision=2)
-        self.assertEqual(doc['body']['label'], 'Compra estornada')
-        self.assertEqual(doc['body']['revision'], 2)
+    # BOOK_TEST_BEGIN
+    def test_timeout_restart_and_retry_produce_one_charge(self):
+        with self.assertRaises(TimeoutError):
+            self.c.pay('intent1', 90000, 'merchant', True)
+        self.assertEqual(self.c.state('intent1'), 'unknown')
+        self.assertEqual(self.charges(), 1)
+        self.c.db.close()
+        self.c = IntentClient(self.path / 'client.db', self.p)
+        self.assertEqual(self.c.pay('intent1', 90000, 'merchant'),
+                         'provider:intent1')
+        self.assertEqual(self.charges(), 1)
+        self.assertEqual(self.c.state('intent1'), 'confirmed')
 
-    def test_owner_not_in_shareable_body(self):
-        self.assertNotIn('owner', self.make()['body'])
-        self.assertNotIn('alice', canonical(self.make()).decode())
+    def test_same_amount_can_be_two_explicit_purchases(self):
+        self.c.pay('intent1', 90000, 'merchant')
+        self.c.pay('intent2', 90000, 'merchant')
+        self.assertEqual(self.charges(), 2)
+    # BOOK_TEST_END
 
-    def test_wrong_subject_is_denied(self):
-        with self.assertRaises(PermissionError):
-            export_record(self.purchase, 'bob', self.secret)
+    def test_same_key_different_amount_conflicts(self):
+        self.c.pay('i', 100, 'm')
+        with self.assertRaises(ValueError):
+            self.c.pay('i', 101, 'm')
+        self.assertEqual(self.charges(), 1)
 
-    def test_same_snapshot_same_document(self):
-        self.assertEqual(self.make(), self.make())
+    def test_same_key_different_merchant_conflicts(self):
+        self.c.pay('i', 100, 'm')
+        with self.assertRaises(ValueError):
+            self.c.pay('i', 100, 'other')
 
-    def test_tampering_detected(self):
-        doc = self.make()
-        self.assertTrue(verify(doc, self.secret))
-        doc['body']['amount_cents'] = 1
-        self.assertFalse(verify(doc, self.secret))
+    def test_repeated_timeout_keeps_single_provider_effect(self):
+        for _ in range(3):
+            with self.assertRaises(TimeoutError):
+                self.c.pay('i', 100, 'm', True)
+        self.assertEqual(self.charges(), 1)
 
-    def test_invalid_amount_rejected(self):
-        for amount in (True, 1.5, 0, -1):
+    def test_invalid_amount_has_no_intent(self):
+        for amount in (True, 1.2, 0, -1):
             with self.assertRaises(ValueError):
-                self.make(amount_cents=amount)
+                self.c.pay('i', amount, 'm')
+        self.assertEqual(self.c.state('i'), 'absent')
+
+    def test_provider_enforces_its_own_payload_binding(self):
+        self.p.charge('i', '[100,"m"]')
+        with self.assertRaises(ValueError):
+            self.p.charge('i', '[101,"m"]')
+
+    def test_confirmed_retry_returns_original_receipt(self):
+        self.assertEqual(self.c.pay('i', 100, 'm'), self.c.pay('i', 100, 'm'))
+        self.assertEqual(self.charges(), 1)
+
+    def test_invalid_identity_does_not_persist_or_charge(self):
+        for ident in (None, '', ' ', 1):
+            with self.assertRaises(ValueError):
+                self.c.pay(ident, 100, 'm')
+        self.assertEqual(self.charges(), 0)
+        self.assertEqual(self.c.db.execute(
+            'SELECT COUNT(*) FROM intents').fetchone()[0], 0)
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

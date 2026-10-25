@@ -1,0 +1,10 @@
+{
+  "intent_id": "synthetic-intent-10",
+  "currency": "BRL",
+  "amount_cents": 90000,
+  "merchant_ref": "synthetic-merchant",
+  "payload_digest": "sha256:...",
+  "provider_key": "synthetic-intent-10",
+  "state": "unknown",
+  "next_action": "query_existing_intent"
+}

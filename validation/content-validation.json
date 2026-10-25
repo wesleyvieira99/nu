@@ -1,0 +1,318 @@
+{
+  "status": "PASS",
+  "editions": {
+    "pt": {
+      "pages": 320,
+      "stats": {
+        "cases": 20,
+        "diagrams": 24,
+        "code_blocks": 98,
+        "tests": 252,
+        "languages": 11
+      },
+      "pdf_sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4",
+      "empty_pages": [],
+      "broken_glyph_pages": []
+    },
+    "en": {
+      "pages": 320,
+      "stats": {
+        "cases": 20,
+        "diagrams": 24,
+        "code_blocks": 98,
+        "tests": 252,
+        "languages": 11
+      },
+      "pdf_sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90",
+      "empty_pages": [],
+      "broken_glyph_pages": []
+    }
+  },
+  "cases": [
+    {
+      "lang": "pt",
+      "id": "01",
+      "prose_words": 1768,
+      "source": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "02",
+      "prose_words": 1747,
+      "source": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "03",
+      "prose_words": 1759,
+      "source": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "04",
+      "prose_words": 1730,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "05",
+      "prose_words": 1738,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "06",
+      "prose_words": 1691,
+      "source": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "07",
+      "prose_words": 1727,
+      "source": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "08",
+      "prose_words": 1733,
+      "source": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "09",
+      "prose_words": 1714,
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "10",
+      "prose_words": 1712,
+      "source": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "11",
+      "prose_words": 1686,
+      "source": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "12",
+      "prose_words": 1670,
+      "source": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "13",
+      "prose_words": 1723,
+      "source": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "14",
+      "prose_words": 1705,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "15",
+      "prose_words": 1857,
+      "source": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "16",
+      "prose_words": 1851,
+      "source": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "17",
+      "prose_words": 1802,
+      "source": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "18",
+      "prose_words": 1795,
+      "source": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "19",
+      "prose_words": 1831,
+      "source": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "pt",
+      "id": "20",
+      "prose_words": 1836,
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "01",
+      "prose_words": 1751,
+      "source": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "02",
+      "prose_words": 1672,
+      "source": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "03",
+      "prose_words": 1691,
+      "source": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "04",
+      "prose_words": 1634,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "05",
+      "prose_words": 1621,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "06",
+      "prose_words": 1627,
+      "source": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "07",
+      "prose_words": 1699,
+      "source": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "08",
+      "prose_words": 1608,
+      "source": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "09",
+      "prose_words": 1583,
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "10",
+      "prose_words": 1586,
+      "source": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "11",
+      "prose_words": 1575,
+      "source": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "12",
+      "prose_words": 1531,
+      "source": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "13",
+      "prose_words": 1559,
+      "source": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "14",
+      "prose_words": 1572,
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "15",
+      "prose_words": 1825,
+      "source": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "16",
+      "prose_words": 1793,
+      "source": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "17",
+      "prose_words": 1752,
+      "source": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "18",
+      "prose_words": 1737,
+      "source": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "19",
+      "prose_words": 1729,
+      "source": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
+      "literal_python_excerpts": true
+    },
+    {
+      "lang": "en",
+      "id": "20",
+      "prose_words": 1763,
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
+      "literal_python_excerpts": true
+    }
+  ],
+  "unique_compositions": 24,
+  "prior_collision_free_routes_preserved": true,
+  "all_code_byte_identical_between_languages": true,
+  "evidence_headers": 20,
+  "source_videos": 2
+}

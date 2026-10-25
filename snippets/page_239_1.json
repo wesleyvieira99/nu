@@ -1,0 +1,9 @@
+{
+  "schema": "campaign-decision.v1",
+  "rule_version": "nuplus-demo-v1",
+  "eligibility": "ELIGIBLE",
+  "installment": 0,
+  "due_date": "2026-06-10",
+  "payment_state": "NOT_YET_DUE",
+  "receipt_id": null
+}

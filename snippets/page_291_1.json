@@ -1,0 +1,10 @@
+{
+  "schema": "order-reconciliation.v1",
+  "payment_id": "synthetic-payment",
+  "merchant_ref": "synthetic-merchant",
+  "order_ref": "synthetic-order",
+  "payment_state": "CAPTURED",
+  "order_state": "UNCONFIRMED",
+  "case_state": "INVESTIGATING",
+  "refund_authorization": null
+}

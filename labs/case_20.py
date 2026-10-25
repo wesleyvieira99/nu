@@ -1,155 +1,184 @@
-"""Synthetic assistive journey and semantics contract, not authentication.
-Run: python3 work/v2/labs/case_20.py
-The proof receipt is a trusted test fixture, not cryptographic verification.
+"""NuPay-style orphan-order reconciliation model; external, synthetic proposal.
+A timeout opens investigation and never creates refund authority. Production
+needs signed merchant evidence, card-ledger settlement, durable idempotency,
+chargeback policy and tenant-scoped authorization; no real payment is sent.
 """
-from dataclasses import dataclass, replace
-import json
+from dataclasses import dataclass
+from threading import RLock
+from concurrent.futures import ThreadPoolExecutor
 import unittest
 
+def identifier(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('nonblank string identity required')
+    return value
 
-@dataclass(frozen=True)
-class Session:
-    card: str
-    stage: str = 'NEW'
-
-
-MOVES = {
-    ('NEW', 'identify'): 'IDENTIFIED',
-    ('IDENTIFIED', 'read_instructions'): 'INSTRUCTIONS',
-    ('INSTRUCTIONS', 'start_verification'): 'VERIFYING',
-    ('VERIFYING', 'camera_unavailable'): 'ASSISTED',
-    ('ASSISTED', 'retry_camera'): 'VERIFYING',
-}
-
-
-def advance(session, action):
-    target = MOVES.get((session.stage, action))
-    if target is None:
-        raise ValueError('Transition is not permitted')
-    return replace(session, stage=target)
-
-
-def accept_proof(session, receipt, consumed):
-    if session.stage not in ('VERIFYING', 'ASSISTED'):
-        raise ValueError('Verification is not expected')
-    if receipt.get('verified') is not True or receipt.get('card') != session.card:
-        raise ValueError('Proof does not authorize this card')
-    if not isinstance(receipt.get('id'), str) or not receipt['id'].strip():
-        raise ValueError('Non-empty receipt identifier required')
-    if receipt['id'] in consumed:
-        raise ValueError('Receipt already consumed')
-    consumed.add(receipt['id'])
-    return replace(session, stage='VERIFIED')
-
-
-def activate(session):
-    if session.stage != 'VERIFIED':
-        raise ValueError('Verified identity required')
-    return replace(session, stage='ACTIVE')
 
 
 @dataclass(frozen=True)
-class Element:
-    key: str
-    label: str
-    order: int
-    actionable: bool = False
+class Payment:
+    merchant: str
+    payment_id: str
+    order_ref: str
+    cents: int
+    captured_at: int
 
 
-def semantics_errors(elements):
-    errors, orders, keys = [], set(), set()
-    for item in elements:
-        if not item.label.strip():
-            errors.append(f'{item.key}:missing_label')
-        if item.order in orders:
-            errors.append(f'{item.key}:duplicate_order')
-        if item.key in keys:
-            errors.append(f'{item.key}:duplicate_key')
-        orders.add(item.order)
-        keys.add(item.key)
-    if not any(item.actionable for item in elements):
-        errors.append('screen:no_action')
-    return errors
+class Reconciler:
+    def __init__(self, payment):
+        for value in (payment.merchant, payment.payment_id, payment.order_ref):
+            identifier(value)
+        if type(payment.captured_at) is not int or payment.captured_at < 0:
+            raise ValueError('invalid capture time')
+        if type(payment.cents) is not int or payment.cents <= 0:
+            raise ValueError('positive integer cents required')
+        self.p, self.state = payment, 'CAPTURED_UNACKNOWLEDGED'
+        self.refund_authority, self.credits = None, {}
+        self.lock = RLock()
+
+    def investigate(self, now, grace=900):
+        with self.lock:
+            if type(now) is not int or now < 0:
+                raise ValueError('invalid clock')
+            if type(grace) is not int or grace < 0:
+                raise ValueError('invalid grace')
+            if self.state == 'CAPTURED_UNACKNOWLEDGED' and now - self.p.captured_at >= grace:
+                self.state = 'INVESTIGATING'
+            return self.state
+
+    def acknowledge_order(self, merchant, order_ref):
+        with self.lock:
+            identifier(merchant)
+            identifier(order_ref)
+            if merchant != self.p.merchant or order_ref != self.p.order_ref:
+                raise PermissionError('merchant/order scope')
+            if self.state == 'REFUNDED' or self.refund_authority:
+                raise ValueError('refund conflict; reconcile')
+            self.state = 'ORDER_ACKNOWLEDGED'
+
+    # BOOK CORE START
+    def authorize_refund(self, merchant, payment_id, authorization_id):
+        with self.lock:
+            for value in (merchant, payment_id, authorization_id):
+                identifier(value)
+            if merchant != self.p.merchant or payment_id != self.p.payment_id:
+                raise PermissionError('merchant/payment scope')
+            if not authorization_id:
+                raise ValueError('authorization required')
+            if self.refund_authority not in (None, authorization_id):
+                raise ValueError('conflicting authority')
+            self.refund_authority = authorization_id
+
+    def refund(self, actor, authorization_id, key):
+        with self.lock:
+            identifier(authorization_id)
+            identifier(key)
+            if actor != 'financial-writer':
+                raise PermissionError('financial writer required')
+            if not key or not authorization_id:
+                raise ValueError('identity required')
+            if self.refund_authority != authorization_id:
+                raise PermissionError('merchant authorization missing')
+            if self.credits:
+                old_key, receipt = next(iter(self.credits.items()))
+                if old_key != key:
+                    raise ValueError('payment already refunded')
+                return receipt
+            receipt = (self.p.payment_id, self.p.cents, authorization_id)
+            self.credits[key] = receipt
+            self.state = 'REFUNDED'
+            return receipt
+    # BOOK CORE END
 
 
-def ready():
-    session = Session('synthetic-card-A')
-    for action in ('identify', 'read_instructions', 'start_verification'):
-        session = advance(session, action)
-    return session
+class ReconciliationTests(unittest.TestCase):
+    def setUp(self):
+        self.r = Reconciler(Payment('shop-a', 'payment-a', 'order-a', 5000, 100))
 
+    # BOOK TEST START
+    def test_timeout_is_not_refund_authority(self):
+        self.assertEqual(self.r.investigate(1000), 'INVESTIGATING')
+        with self.assertRaises(PermissionError):
+            self.r.refund('financial-writer', 'invented', 'a')
+        self.assertEqual(self.r.credits, {})
 
-def proof(card='synthetic-card-A', verified=True, identifier='fixture-1'):
-    return {'id': identifier, 'card': card, 'verified': verified}
+    def test_cross_merchant_authority_is_rejected(self):
+        with self.assertRaises(PermissionError):
+            self.r.authorize_refund('shop-b', 'payment-a', 'grant')
+        self.assertIsNone(self.r.refund_authority)
 
+    def test_concurrent_refunds_credit_once(self):
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        def refund(_):
+            return self.r.refund('financial-writer', 'grant', 'a')
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(refund, range(20)))
+        self.assertEqual(len(set(results)), 1)
+        self.assertEqual(sum(v[1] for v in self.r.credits.values()), 5000)
+    # BOOK TEST END
 
-class JourneyTests(unittest.TestCase):
-    def test_camera_path(self):
-        self.assertEqual(activate(accept_proof(ready(), proof(), set()))
-                         .stage, 'ACTIVE')
-    def test_assisted_path(self):
-        session = advance(ready(), 'camera_unavailable')
-        self.assertEqual(activate(accept_proof(session, proof(), set()))
-                         .stage, 'ACTIVE')
-    def test_no_proof_no_activation(self):
+    def test_late_order_after_refund_is_not_fulfilled(self):
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        self.r.refund('financial-writer', 'grant', 'a')
         with self.assertRaises(ValueError):
-            activate(advance(ready(), 'camera_unavailable'))
-    def test_unverified_proof(self):
-        with self.assertRaises(ValueError):
-            accept_proof(ready(), proof(verified=False), set())
-    def test_wrong_card(self):
-        with self.assertRaises(ValueError):
-            accept_proof(ready(), proof(card='other-card'), set())
-    def test_replay(self):
-        consumed = set()
-        accept_proof(ready(), proof(), consumed)
-        with self.assertRaises(ValueError):
-            accept_proof(ready(), proof(), consumed)
-    def test_invalid_transition(self):
-        with self.assertRaises(ValueError):
-            advance(Session('synthetic-card-A'), 'start_verification')
-    def test_retry_preserves_card(self):
-        session = advance(ready(), 'camera_unavailable')
-        self.assertEqual(advance(session, 'retry_camera'), ready())
-    def test_valid_semantics(self):
-        self.assertEqual(semantics_errors([
-            Element('heading', 'Ativar cartão', 0),
-            Element('help', 'Obter ajuda para continuar', 1, True)]), [])
-    def test_missing_label(self):
-        self.assertIn('help:missing_label', semantics_errors([
-            Element('help', '', 0, True)]))
-    def test_duplicate_identity_and_order(self):
-        errors = semantics_errors([Element('a', 'Um', 0, True),
-                                   Element('a', 'Dois', 0)])
-        self.assertIn('a:duplicate_order', errors)
-        self.assertIn('a:duplicate_key', errors)
-    def test_no_available_action(self):
-        self.assertIn('screen:no_action', semantics_errors([
-            Element('error', 'Câmera indisponível', 0)]))
+            self.r.acknowledge_order('shop-a', 'order-a')
+        self.assertEqual(self.r.state, 'REFUNDED')
 
-    def test_verification_requires_exact_true(self):
-        for value in ('false', 'true', 1, None):
-            consumed = set()
+    def test_acknowledged_order_can_be_merchant_cancelled(self):
+        self.r.acknowledge_order('shop-a', 'order-a')
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        self.r.refund('financial-writer', 'grant', 'a')
+        self.assertEqual(self.r.state, 'REFUNDED')
+
+    def test_grace_boundary(self):
+        self.assertEqual(self.r.investigate(999), 'CAPTURED_UNACKNOWLEDGED')
+        self.assertEqual(self.r.investigate(1000), 'INVESTIGATING')
+
+    def test_wrong_payment_cannot_authorize(self):
+        with self.assertRaises(PermissionError):
+            self.r.authorize_refund('shop-a', 'other', 'grant')
+
+    def test_customer_cannot_post_credit(self):
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        with self.assertRaises(PermissionError):
+            self.r.refund('customer', 'grant', 'a')
+
+    def test_alternative_key_cannot_credit_twice(self):
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        self.r.refund('financial-writer', 'grant', 'a')
+        with self.assertRaises(ValueError):
+            self.r.refund('financial-writer', 'grant', 'b')
+
+    def test_conflicting_order_identity(self):
+        with self.assertRaises(PermissionError):
+            self.r.acknowledge_order('shop-a', 'other-order')
+        self.assertEqual(self.r.state, 'CAPTURED_UNACKNOWLEDGED')
+
+
+    def test_invalid_clock_has_no_effect(self):
+        for now in (float('nan'), float('inf'), True, -1):
             with self.assertRaises(ValueError):
-                accept_proof(ready(), proof(verified=value), consumed)
-            self.assertEqual(consumed, set())
+                self.r.investigate(now)
+        self.assertEqual(self.r.state, 'CAPTURED_UNACKNOWLEDGED')
 
-    def test_receipt_identifier_is_nonempty(self):
-        for value in ('', '   ', None, 42):
-            consumed = set()
+    def test_missing_payment_identity_rejected(self):
+        for value in (None, '', '  ', True, 1):
+            for field in range(3):
+                ids = ['merchant', 'payment', 'order']
+                ids[field] = value
+                with self.assertRaises(ValueError):
+                    Reconciler(Payment(*ids, 100, 0))
+
+    def test_invalid_authorization_and_key_have_no_credit(self):
+        for value in (None, '', '  ', True, 1):
             with self.assertRaises(ValueError):
-                accept_proof(ready(), proof(identifier=value), consumed)
-            self.assertEqual(consumed, set())
-
+                self.r.authorize_refund('shop-a', 'payment-a', value)
+        self.assertIsNone(self.r.refund_authority)
+        self.r.authorize_refund('shop-a', 'payment-a', 'grant')
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                self.r.refund('financial-writer', 'grant', value)
+        self.assertEqual(self.r.credits, {})
 
 if __name__ == '__main__':
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(JourneyTests)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    assisted = advance(ready(), 'camera_unavailable')
-    active = activate(accept_proof(assisted, proof(), set()))
-    print(json.dumps({'fallback_before_proof': assisted.stage,
-                      'after_trusted_test_receipt': active.stage,
-                      'semantics_errors': semantics_errors([
-                          Element('error', 'Câmera indisponível', 0)])},
-                     ensure_ascii=False, indent=2))
-    raise SystemExit(not result.wasSuccessful())
+    unittest.main()

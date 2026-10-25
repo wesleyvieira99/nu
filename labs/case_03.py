@@ -1,111 +1,132 @@
-"""Modelo local de conteúdo, privacidade tardia e deduplicação. Sem push real."""
-import json
+"""Independent restriction review model, not legal advice or banking software.
+Roles/verified flags are test boundaries; production needs authenticated roles,
+case-specific legal rules, durable transactions and independent reconciliation.
+Review dates trigger work, never automatic fund release. One-process lock only.
+"""
+import threading
 import unittest
 
 
-class Notifications:
-    def __init__(self):
-        self.events, self.preferences, self.sent = {}, {}, {}
+class Restriction:
+    def __init__(self, owner, cents, review_at):
+        if not isinstance(owner, str) or not owner.strip():
+            raise ValueError("nonempty owner identity required")
+        if type(cents) is not int or cents <= 0:
+            raise ValueError("positive integer cents")
+        if type(review_at) is not int or review_at < 0:
+            raise ValueError("review time")
+        self.owner, self.cents, self.review_at = owner, cents, review_at
+        self.version, self.state, self.reason = 1, "restricted", None
+        self.released = 0
+        self.lock = threading.Lock()
 
-    def configure(self, user, show_values=False, enabled=True):
-        if type(show_values) is not bool or type(enabled) is not bool:
-            raise ValueError("boolean_preferences_required")
-        old = self.preferences.get(user, {"version": 0})
-        self.preferences[user] = dict(show_values=show_values, enabled=enabled,
-                                      version=old["version"] + 1)
+    def due(self, now):
+        if type(now) is not int or now < 0: raise ValueError("time")
+        return self.state == "restricted" and now >= self.review_at
 
-    def enqueue(self, event):
-        if set(event) != {"id", "user", "version", "kind", "amount_cents"}:
-            raise ValueError("schema")
-        if (type(event["version"]) is not int or event["version"] != 1
-                or event["kind"] not in ("cashback", "income")):
-            raise ValueError("unsupported")
-        cents = event["amount_cents"]
-        if type(cents) is not int or cents < 0:
-            raise ValueError("money")
-        payload = json.dumps(event, sort_keys=True)
-        old = self.events.get(event["id"])
-        if old is not None and old != payload:
-            raise ValueError("id_conflict")
-        self.events[event["id"]] = payload
+    def decide(self, expected, role, evidence_ref, release_eligible=False):
+        with self.lock:
+            if role != "reviewer": raise PermissionError("review scope")
+            if type(expected) is not int or expected != self.version:
+                raise ValueError("stale decision")
+            if not evidence_ref or release_eligible is not True:
+                raise ValueError("documented eligibility required")
+            if self.state != "restricted": raise ValueError("state")
+            self.reason, self.state = evidence_ref, "exit_approved"
+            self.version += 1
 
-    def deliver(self, event_id):
-        if event_id in self.sent:
-            return self.sent[event_id]
-        event = json.loads(self.events[event_id])
-        pref = self.preferences.get(event["user"],
-                                    dict(show_values=False, enabled=True, version=0))
-        if not pref["enabled"]:
-            return {"status": "suppressed"}
-        # A política é aplicada agora, não no instante de enfileirar.
-        message = {"title": "Atualização financeira",
-                   "body": "Consulte os detalhes no aplicativo.",
-                   "preference_version": pref["version"]}
-        if pref["show_values"]:
-            whole, cents = divmod(event["amount_cents"], 100)
-            message["body"] = f"Crédito disponível: R$ {whole},{cents:02d}."
-        # Aceitação local pelo provedor simulado, sem garantia de leitura.
-        self.sent[event_id] = {"status": "accepted", "message": message}
-        return self.sent[event_id]
+    # BEGIN CORE
+    def execute_exit(self, expected, role, destination_owner,
+                     reconciled_cents, no_active_hold=False):
+        with self.lock:
+            if role != "executor":
+                raise PermissionError("execution scope")
+            if type(expected) is not int or expected != self.version:
+                raise ValueError("stale execution")
+            if self.state != "exit_approved":
+                raise ValueError("review required")
+            if (not isinstance(destination_owner, str)
+                    or not destination_owner.strip()
+                    or destination_owner != self.owner):
+                raise PermissionError("destination ownership")
+            if type(reconciled_cents) is not int:
+                raise ValueError("integer cents required")
+            if reconciled_cents != self.cents:
+                raise ValueError("reconcile before transfer")
+            if no_active_hold is not True:
+                raise ValueError("legal and risk holds unresolved")
+            self.state = "transferred"
+            self.released = self.cents
+            self.version += 1
+            return self.released
+    # END CORE
 
 
-class Tests(unittest.TestCase):
-    def setUp(self):
-        self.n = Notifications()
-        self.event = dict(id="e1", user="u", version=1, kind="income",
-                          amount_cents=12345)
+class RestrictionTests(unittest.TestCase):
+    def setUp(self): self.case = Restriction("company", 200000100, 10)
+    def approve(self): self.case.decide(1, "reviewer", "review-1", True)
+    def execute(self, **kw):
+        args = dict(expected=2, role="executor", destination_owner="company",
+                    reconciled_cents=200000100, no_active_hold=True)
+        args.update(kw); return self.case.execute_exit(**args)
 
-    def test_default_hides_values(self):
-        self.n.enqueue(self.event)
-        result = self.n.deliver("e1")
-        self.assertNotIn("123", str(result))
-        self.assertNotIn("amount_cents", str(result))
+    # BEGIN TESTS
+    def test_overdue_review_does_not_release_money(self):
+        self.assertTrue(self.case.due(999))
+        self.assertEqual(self.case.state, "restricted")
+        self.assertEqual(self.case.released, 0)
 
-    def test_explicit_opt_in_formats_integer_cents(self):
-        self.n.configure("u", show_values=True)
-        self.n.enqueue(self.event)
-        self.assertIn("123,45", self.n.deliver("e1")["message"]["body"])
-
-    def test_privacy_changed_while_queued_is_respected(self):
-        self.n.configure("u", show_values=True)
-        self.n.enqueue(self.event)
-        self.n.configure("u", show_values=False)
-        self.assertNotIn("123", str(self.n.deliver("e1")))
-
-    def test_opt_out_suppresses_delivery(self):
-        self.n.enqueue(self.event)
-        self.n.configure("u", enabled=False)
-        self.assertEqual(self.n.deliver("e1"), {"status": "suppressed"})
-        self.assertEqual(len(self.n.sent), 0)
-
-    def test_replay_is_identical(self):
-        self.n.enqueue(self.event)
-        first = self.n.deliver("e1")
-        self.n.enqueue(self.event)
-        self.assertEqual(self.n.deliver("e1"), first)
-        self.assertEqual(len(self.n.sent), 1)
-
-    def test_payload_conflict_is_rejected(self):
-        self.n.enqueue(self.event)
+    def test_reconciliation_failure_preserves_approval(self):
+        self.approve()
         with self.assertRaises(ValueError):
-            self.n.enqueue(dict(self.event, amount_cents=999))
+            self.execute(reconciled_cents=1)
+        self.assertEqual(self.case.state, "exit_approved")
+        self.assertEqual(self.case.released, 0)
+        self.assertEqual(self.execute(), 200000100)
+    # END TESTS
 
-    def test_unsupported_schema_and_float_are_rejected(self):
-        for change in ({"version": 2}, {"amount_cents": 12.3}, {"kind": "other"}):
-            with self.subTest(change=change), self.assertRaises(ValueError):
-                self.n.enqueue(dict(self.event, **change))
+    def test_review_role_cannot_execute(self):
+        self.approve()
+        with self.assertRaises(PermissionError): self.execute(role="reviewer")
+    def test_owner_mismatch(self):
+        self.approve()
+        with self.assertRaises(PermissionError): self.execute(destination_owner="x")
+    def test_active_hold_blocks(self):
+        self.approve()
+        with self.assertRaises(ValueError): self.execute(no_active_hold=False)
+    def test_truthy_hold_clearance_is_rejected(self):
+        self.approve()
+        with self.assertRaises(ValueError): self.execute(no_active_hold="yes")
+    def test_repeat_cannot_transfer_twice(self):
+        self.approve(); self.execute()
+        with self.assertRaises(ValueError): self.execute(expected=3)
+        self.assertEqual(self.case.released, 200000100)
+    def test_stale_review_rejected(self):
+        with self.assertRaises(ValueError): self.case.decide(0, "reviewer", "r", True)
+    def test_evidence_required(self):
+        with self.assertRaises(ValueError): self.case.decide(1, "reviewer", "", True)
+    def test_timer_nan_rejected(self):
+        with self.assertRaises(ValueError): self.case.due(float("nan"))
+    def test_review_is_not_release(self):
+        self.approve(); self.assertEqual(self.case.released, 0)
+    def test_invalid_amount(self):
+        with self.assertRaises(ValueError): Restriction("x", True, 1)
 
-    def test_preferences_and_version_have_strict_types(self):
-        for change in ({"show_values": "false"}, {"show_values": 1},
-                       {"enabled": "false"}, {"enabled": None}):
-            with self.subTest(change=change), self.assertRaises(ValueError):
-                self.n.configure("u", **change)
-        self.assertNotIn("u", self.n.preferences)
-        for version in (True, 1.0):
-            with self.subTest(version=version), self.assertRaises(ValueError):
-                self.n.enqueue(dict(self.event, version=version))
+    def test_invalid_owner_rejected_before_state_exists(self):
+        for owner in (None, "", " \t\n", 0, True):
+            with self.subTest(owner=owner):
+                candidate = Restriction.__new__(Restriction)
+                with self.assertRaises(ValueError): candidate.__init__(owner, 100, 1)
+                self.assertEqual(vars(candidate), {})
+
+    def test_missing_destination_identity_never_releases_money(self):
+        self.approve()
+        for owner in (None, "", " \t\n", 0, True):
+            with self.subTest(owner=owner), self.assertRaises(PermissionError):
+                self.execute(destination_owner=owner)
+            self.assertEqual((self.case.state, self.case.released, self.case.version),
+                             ("exit_approved", 0, 2))
 
 
-if __name__ == "__main__":
-    print("LAB SINTÉTICO 03: fila e provedor em memória; não envia mensagens.")
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main()

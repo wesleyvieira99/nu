@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "Root visual inspection of cover, two contents pages, research methodology, official app context, reading map, leadership economics, lab guide and bibliography/credits in both languages; final HTML media/finance/Java views and final preview also visually inspected. Previous V5 foundation and profile page layouts retained.",
+  "root_pdf_pages_each_language": [
+    1,
+    2,
+    3,
+    13,
+    14,
+    15,
+    307,
+    311,
+    314,
+    315,
+    319,
+    320
+  ],
+  "pdfs": {
+    "pt": {
+      "path": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4"
+    },
+    "en": {
+      "path": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90"
+    }
+  },
+  "findings": [],
+  "preview_sha256": "bd5e1d7aa2b1685cb851a42ead930e6b26e1301bdf168e0d764b1088458c1fd3",
+  "root_html_views": [
+    "review-03-2.png",
+    "review-01-9.png",
+    "review-18-9.png",
+    "java-review.png"
+  ]
+}

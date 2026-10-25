@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "operation_id": "synthetic-pix-a",
+  "event_id": "synthetic-return-a",
+  "state": "refunded",
+  "amount_cents": 30000,
+  "returned_cents": 30000,
+  "owner_scope": "authenticated-subject"
+}

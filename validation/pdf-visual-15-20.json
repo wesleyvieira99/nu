@@ -1,0 +1,1717 @@
+{
+  "status": "PASS",
+  "reviewer": "research_complaints — independent reviewer of cases 15–20",
+  "review_completed_at": "2026-10-23T22:31:55.754427-03:00",
+  "pdfs": [
+    {
+      "path": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4",
+      "bytes": 29537555
+    },
+    {
+      "path": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90",
+      "bytes": 29503794
+    }
+  ],
+  "scope": {
+    "languages": [
+      "pt",
+      "en"
+    ],
+    "cases": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "overview_pages_each_language": [
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "contact_sheets_observed": 12,
+    "overview_page_total": 156,
+    "full_page_images_observed": 60,
+    "full_page_resolution": "72 dpi; 640 × 840 pixels, one PDF page per image. All 1/3/4/9/10 pages in all six chapters were opened individually in both languages.",
+    "previous_architecture_inspection": "qa/visual-diagrams-15-20.json contains inspection of all 12 original 1000 × 700 architecture renders.",
+    "revision_note": "The final PDF hashes are bound to the previous visual approval through byte-identical hashes for all 60 recorded page PNGs and all 12 recorded contact sheets. Original PDF hashes remain under original_visually_reviewed_pdfs. No new inspection is claimed."
+  },
+  "checks": {
+    "no_empty_pages_in_reviewed_overviews": true,
+    "no_content_clipping_observed": true,
+    "no_text_or_node_overlap_observed": true,
+    "code_indentation_and_line_ends_visible": true,
+    "source_capture_headlines_legible": true,
+    "architecture_labels_and_numbered_edges_legible": true,
+    "technology_marks_have_no_black_background_or_distortion": true,
+    "tables_headers_and_values_visible": true,
+    "roadmap_paragraphs_do_not_reach_footer": true,
+    "header_navigation_footer_remain_separated": true
+  },
+  "observations": [
+    "Source header crops remain in their original Portuguese in both editions; the surrounding explanation is translated. Capture title and public status can be read at page scale.",
+    "Architecture labels, official technology tiles and numbered edge legends fit. Original diagrams were also checked separately at native resolution; no connector crosses a node.",
+    "Code pages contain dense but readable monospaced excerpts with visible indentation and full right-hand line endings. The full executable source remains linked.",
+    "Financial tables and assumptions are visible without collisions. Evidence amounts and hypothetical economics remain separated in the sampled pages.",
+    "Several prose and roadmap pages intentionally leave generous lower white space. They are not blank, truncated or unexpectedly spilled onto another page."
+  ],
+  "material_findings": [],
+  "limits": [
+    "This report approves visual layout for cases 15–20 only: 156 pages at overview scale and the specified 60 full-page samples. It does not claim all 640 pages were personally inspected by this reviewer.",
+    "Final-revision equivalence was checked through recorded SHA-256 values. This resumption performed hash verification only; it did not edit content or rerun tests."
+  ],
+  "cases": [
+    {
+      "case": "15",
+      "status": "PASS",
+      "overview_pages": [
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-15.png",
+          "sha256": "51c10425c6e99ac55724dce5add224f8c28e559f6a10fc221e56b6c228294f96",
+          "bytes": 502680,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-15.png",
+          "sha256": "16504de475778b90a32573ea16b47cf7f18822f6a5f07c85a6577b667ee5e792",
+          "bytes": 488055,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-221.png",
+          "sha256": "ebefadf7ea73dafeebfefced3edb851b728fdac6bd2d318801751e08f9c8cbe9",
+          "bytes": 85489,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 221,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-223.png",
+          "sha256": "c8d63f1e725a617d1f1c8863a7cdcec09b335217780d76b8949876940402d9d0",
+          "bytes": 84194,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 223,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-224.png",
+          "sha256": "6018ef788be297d66b0f73f51fa6ec22d810180bcca261b7871cbdf0228ccb27",
+          "bytes": 108923,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 224,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-229.png",
+          "sha256": "dc415ceac3723ed4cb59294eca84f2ead80a19be8447f18a1002bc7442d4779a",
+          "bytes": 80054,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 229,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-230.png",
+          "sha256": "e20109fa1fc1cda7b1f32b28d09870394d9d4f70cc3d8dd6b7e9b7456e2b1b47",
+          "bytes": 71930,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 230,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-221.png",
+          "sha256": "f6acc4010dd17b0fc4bfecc13d5686536a1a3b2537fa7c8bede528d4f7ae1be7",
+          "bytes": 87192,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 221,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-223.png",
+          "sha256": "639785cfd68ac171f88694586b356404ce274c2a4a49ea774b877b18aaef7ecd",
+          "bytes": 83041,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 223,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-224.png",
+          "sha256": "e82184019d35c66c73bc3113e54ce673edb756993d329b20105b0a3a380769fb",
+          "bytes": 106350,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 224,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-229.png",
+          "sha256": "1d87a74170148c04977676192a9f9b7d008251f3ea2a5d2fd2f36fb370d35ed6",
+          "bytes": 81894,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 229,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-230.png",
+          "sha256": "9ee1ea876a2fb8536a10c51e8bfa154e089f4a7814ace4e03b109d28040d4bce",
+          "bytes": 67531,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 230,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case": "16",
+      "status": "PASS",
+      "overview_pages": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-16.png",
+          "sha256": "67b6654d0d300bb3c862051904dc22c81b6dda6e033f5a981d2940616dbd774f",
+          "bytes": 494426,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-16.png",
+          "sha256": "bf7349e3e1385ec7af7c046695c0c5e64f2d8605a2c615f8f40737892a3a55ce",
+          "bytes": 478206,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-234.png",
+          "sha256": "fda7efbae4c75ff710f6b3e1e6c3c74fb78bfb260fc102e80efb0e6541690b5b",
+          "bytes": 89275,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 234,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-236.png",
+          "sha256": "670c631184f25a64ba2ff3294679ae2360a0bbc55d4725105cab85e68a796200",
+          "bytes": 88441,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 236,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-237.png",
+          "sha256": "11fdc296b492d7194e1bbbe50cf70d042a8ab2944891494ee8fa3ab56d4d2e92",
+          "bytes": 118332,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 237,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-242.png",
+          "sha256": "17539f5f71d5ae72de93b27a2987dc424b5331a36a182b96adae70c2dd637c6d",
+          "bytes": 79674,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 242,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-243.png",
+          "sha256": "e37e09b30cfb6502f944d5ffe31b53fb93ca84eb06e730e73d06c46692f6eb87",
+          "bytes": 69807,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 243,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-234.png",
+          "sha256": "f5915740633f4d79d02e2bef8a6e38f666e87638fa4a3ed5968580796bca5ed4",
+          "bytes": 86516,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 234,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-236.png",
+          "sha256": "9d50e424d610c84668a48d34181d5c37265f3740d913480aa1c048f124f47cc3",
+          "bytes": 84284,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 236,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-237.png",
+          "sha256": "fc709efb852501c06d3d59ccc1fb4f8df16ee21017d92022aa496ef9432861af",
+          "bytes": 116825,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 237,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-242.png",
+          "sha256": "c3738fee13f6e8be2871065254931f6eb36fca9f11abd56f561c782813300537",
+          "bytes": 78739,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 242,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-243.png",
+          "sha256": "0f245f26bf7d19eeb1a1c076990bfad2f4cfafbe6ae6c71d06f87270406ab343",
+          "bytes": 66839,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 243,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case": "17",
+      "status": "PASS",
+      "overview_pages": [
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-17.png",
+          "sha256": "9b184c46fd068ff019e7f96770cbe96b1ca98c69f9a5a48da3d709fffbeb4940",
+          "bytes": 483707,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-17.png",
+          "sha256": "41dfa88762117085e1da128ada585eace6c225c68469666d21244e0342ccd942",
+          "bytes": 475613,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-247.png",
+          "sha256": "6c4e7551a4a237e22edae885eb34b3702f53c5c4a294521f8062e62f10559102",
+          "bytes": 91851,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 247,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-249.png",
+          "sha256": "3c70c29139e3182a00ab90a3ca8e0a00934e0e729fe95f5b7b371f795c79a18a",
+          "bytes": 88309,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 249,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-250.png",
+          "sha256": "9b1074d985ca0713f34665a3186fc9c636d22187edb90707a7198a19ce412571",
+          "bytes": 105717,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 250,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-255.png",
+          "sha256": "9d58ea6e4671f7fa6fad26f754f22b0b6b1b7bd101ebde98e5ab69453dcd73ab",
+          "bytes": 76406,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 255,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-256.png",
+          "sha256": "f1970e962662ea8b62d012d99e954dcbc093277e00dc8bc648f822d0c56bf821",
+          "bytes": 65514,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 256,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-247.png",
+          "sha256": "26ce2f10a283e5e9d644d99cb403dd3b93e4970fa2da9bf40870a0ce0d3a975f",
+          "bytes": 91315,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 247,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-249.png",
+          "sha256": "135ea54912c735e6cb5a47d2cf9b62b4064a6bd72692d64ddcb3be4b30cdc6eb",
+          "bytes": 85342,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 249,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-250.png",
+          "sha256": "9b26c2c7a8fb20bdb6aea47f92b0afb787a2fe496c2a7e6f070dd93e91449729",
+          "bytes": 105700,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 250,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-255.png",
+          "sha256": "b6beaedd04944a305fa7422cea1a1b8175a0f3a160cb8536fcf836ff6b95e647",
+          "bytes": 74897,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 255,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-256.png",
+          "sha256": "7e654a2e6b5880fe9bbe5d2b1689ac8f6dd7dd7446d278e987e68baedd8242f6",
+          "bytes": 65100,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 256,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case": "18",
+      "status": "PASS",
+      "overview_pages": [
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-18.png",
+          "sha256": "7a19349bb63d0527b0bef507ca4404820e5eedca4888e19bc32a6d60161d5333",
+          "bytes": 497423,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-18.png",
+          "sha256": "5c786e52e10b6bffa67e89d3dd4f471d2fcd1e1f256eaa6c52ceb98150cf6cb4",
+          "bytes": 484941,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-260.png",
+          "sha256": "6790d4d2e63d14c18a9a01b7f08dc33ddfced4d5bdef335bf8f393ae4d411d60",
+          "bytes": 89463,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 260,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-262.png",
+          "sha256": "ba4cdda3ff6f00d18b0fa8b081186f96b5d29512815011479a12d04cbfefc22e",
+          "bytes": 89453,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 262,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-263.png",
+          "sha256": "3b424178bb7e138c3eea89e45c4ecc106d393036805d8d95db05e2bee7a84ade",
+          "bytes": 116801,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 263,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-268.png",
+          "sha256": "d8769ffd7032396aa4b0e8a183faae816d26ec453ae585a0e5b4aec2ac273078",
+          "bytes": 75753,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 268,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-269.png",
+          "sha256": "41cdf318b36c0e28e55c33fbcd6452d799a8d97e0549e7cc14b1175648f14633",
+          "bytes": 67342,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 269,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-260.png",
+          "sha256": "d54e5c097b828c10b96880ed03feaab6d46016586c6311702f86f684a4795fe7",
+          "bytes": 86997,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 260,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-262.png",
+          "sha256": "02482976d55b39c46769bd0e644c67934688c73b06de86bd6fdbd1dfd8aa5855",
+          "bytes": 88147,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 262,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-263.png",
+          "sha256": "91fa9f062c7f88b2b4b139451e9fe49ee8ef96ca1db7b1fc650939a84ef5d394",
+          "bytes": 116036,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 263,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-268.png",
+          "sha256": "cb47380ad9dcf01fef4b8814a23bcf2653c69c8588a4fbcdf98eeaec92aa2683",
+          "bytes": 74330,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 268,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-269.png",
+          "sha256": "1b6784d71b25868db15e2f5d70198c8d4bc72fc9070a92772a36562b9af655a9",
+          "bytes": 65253,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 269,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case": "19",
+      "status": "PASS",
+      "overview_pages": [
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-19.png",
+          "sha256": "a42127d1fa2f4a9e6562249d7aa8939dcbef00e8b07cd5713aebbad62081e7cc",
+          "bytes": 487788,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-19.png",
+          "sha256": "5ef768e1f08dea1f01a7a69c9dc9a214323c54e87135bf0f08d86436c5efb067",
+          "bytes": 471442,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-273.png",
+          "sha256": "249652f5977ec181ad160cd6c6037b9e337807bae1ee812506fde279c6286233",
+          "bytes": 93945,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 273,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-275.png",
+          "sha256": "034f34ca49b99c820268fd119355109257a81f33042c071e8c082c84af9d903b",
+          "bytes": 86815,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 275,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-276.png",
+          "sha256": "da830d14a5dee62cec22c9b2ea296db4dcafa0f670e2f44a30af6ab1d63e6bbf",
+          "bytes": 113448,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 276,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-281.png",
+          "sha256": "88cb1f260059ec19e252945d3dcbbfae1135958fad1bcfdc224485c1287e985f",
+          "bytes": 80554,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 281,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-282.png",
+          "sha256": "e4a54dbe10bd9d7c8211d882a0518176b19adef5994026aa89892efb7c3b0db0",
+          "bytes": 66503,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 282,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-273.png",
+          "sha256": "c51e9062233f523f0581ee364769c2f8d7ff1d313649584c7fc4478add6006cc",
+          "bytes": 90308,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 273,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-275.png",
+          "sha256": "70b12d67bf3722128c63b3c2be918af664cdca633bc262cecd5b72c51171a419",
+          "bytes": 86642,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 275,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-276.png",
+          "sha256": "6c522311b965ee7a859dbde652bf386373bf672b9663b64a9a04e1cd11e1e278",
+          "bytes": 110562,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 276,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-281.png",
+          "sha256": "407052f59ca7df6e551e7de0dce2909fefa7f4c2efcf1867fc5c41f00becaaa0",
+          "bytes": 78951,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 281,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-282.png",
+          "sha256": "7c7eb0238d40bf6182914e68e828f79db2bf937445fd5c041835c6a05c638fb7",
+          "bytes": 65035,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 282,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    },
+    {
+      "case": "20",
+      "status": "PASS",
+      "overview_pages": [
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298
+      ],
+      "contact_sheets_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-pt-20.png",
+          "sha256": "8784c4a4a43530db4d1d94833cd2581b707fb2825b1012dd2cd7c170f51127a9",
+          "bytes": 498959,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/case-sheet-en-20.png",
+          "sha256": "40ca350151d45d16c43acb6885dbf530404556ca41422e88420f3170c8f4c6b1",
+          "bytes": 487562,
+          "dimensions_px": [
+            1400,
+            1190
+          ]
+        }
+      ],
+      "full_page_images_observed": [
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-286.png",
+          "sha256": "ec0ebe0a341df278a9217136357efebd8431b69b406ab726c60e10047bc327a0",
+          "bytes": 86956,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 286,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-288.png",
+          "sha256": "02fde891d3e5fa3f4d11df913953a074e26d2df052227eba1bcfbf34f9df9c5f",
+          "bytes": 93848,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 288,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-289.png",
+          "sha256": "9c1512332f67f21f9657b232ebb19a9654e79be0324a4477f303f3b0ba06c672",
+          "bytes": 108674,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 289,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-294.png",
+          "sha256": "7e40579e13acd4c77870666ed94cf32f2491937232eca938cee639314da5ee4d",
+          "bytes": 80164,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 294,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/pt-295.png",
+          "sha256": "f8c89886a935636c658811a7d41c8e2fa2ef5d23da2d39bdd41b1ac0416d0e0b",
+          "bytes": 64522,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "pt",
+          "pdf_page": 295,
+          "chapter_page": 10
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-286.png",
+          "sha256": "e776ffea0f4b357a4152fb0e5a1a30a3a43a8d1b198d4b8dd9e35e2d31b7898f",
+          "bytes": 87136,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 286,
+          "chapter_page": 1
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-288.png",
+          "sha256": "b47136f7e06095bbe37e4975d1e3be160150cd1169ae39efce6029af22eaef28",
+          "bytes": 92708,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 288,
+          "chapter_page": 3
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-289.png",
+          "sha256": "71538b6f1f50d7fb79bf9ccde470e3c3819517a902cb30bd8a1148dc1099db05",
+          "bytes": 109316,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 289,
+          "chapter_page": 4
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-294.png",
+          "sha256": "52715a88566b5e9f7349fa11b68e5f4c53f84dc96d5da3212885ecf58a8a8d6c",
+          "bytes": 83148,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 294,
+          "chapter_page": 9
+        },
+        {
+          "path": "work/v6/qa/pdf-book-review/en-295.png",
+          "sha256": "95d294b4d235936aa7d753341ddacf03dba11e65427296db9810b9d3713d86a0",
+          "bytes": 61899,
+          "dimensions_px": [
+            640,
+            840
+          ],
+          "language": "en",
+          "pdf_page": 295,
+          "chapter_page": 10
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "original_visually_reviewed_pdfs": [
+    {
+      "path": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "f524daf2481581b9c889c05f9953ba4508ea3f4da06dac0e31ffb1468cc92244",
+      "bytes": 29537469
+    },
+    {
+      "path": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "178bd8da605b99a2704720485fbd0fcddaa380612cbd4ae6fb29d0c17dccb857",
+      "bytes": 29503727
+    }
+  ],
+  "nochangeverification": {
+    "status": "PASS",
+    "verified_at": "2026-10-25T09:49:30.643372-03:00",
+    "method": "SHA-256 byte comparison against hashes captured during the previous actual visual inspection. No new visual inspection and no tests rerun.",
+    "compared_artifacts": 72,
+    "identical_artifacts": 72,
+    "full_page_pngs_compared": 60,
+    "contact_sheets_compared": 12,
+    "contact_sheet_page_coverage": 156,
+    "scope_precision": "60 individual page PNGs are byte-identical. Twelve contact sheets covering all 156 chapter pages are byte-identical at the previously reviewed overview scale; this does not claim full-resolution hash comparisons for the other 96 page PNGs.",
+    "mismatches": [],
+    "comparisons": [
+      {
+        "case": "15",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-15.png",
+        "previous_sha256": "51c10425c6e99ac55724dce5add224f8c28e559f6a10fc221e56b6c228294f96",
+        "current_sha256": "51c10425c6e99ac55724dce5add224f8c28e559f6a10fc221e56b6c228294f96",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-15.png",
+        "previous_sha256": "16504de475778b90a32573ea16b47cf7f18822f6a5f07c85a6577b667ee5e792",
+        "current_sha256": "16504de475778b90a32573ea16b47cf7f18822f6a5f07c85a6577b667ee5e792",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-221.png",
+        "previous_sha256": "ebefadf7ea73dafeebfefced3edb851b728fdac6bd2d318801751e08f9c8cbe9",
+        "current_sha256": "ebefadf7ea73dafeebfefced3edb851b728fdac6bd2d318801751e08f9c8cbe9",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-223.png",
+        "previous_sha256": "c8d63f1e725a617d1f1c8863a7cdcec09b335217780d76b8949876940402d9d0",
+        "current_sha256": "c8d63f1e725a617d1f1c8863a7cdcec09b335217780d76b8949876940402d9d0",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-224.png",
+        "previous_sha256": "6018ef788be297d66b0f73f51fa6ec22d810180bcca261b7871cbdf0228ccb27",
+        "current_sha256": "6018ef788be297d66b0f73f51fa6ec22d810180bcca261b7871cbdf0228ccb27",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-229.png",
+        "previous_sha256": "dc415ceac3723ed4cb59294eca84f2ead80a19be8447f18a1002bc7442d4779a",
+        "current_sha256": "dc415ceac3723ed4cb59294eca84f2ead80a19be8447f18a1002bc7442d4779a",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-230.png",
+        "previous_sha256": "e20109fa1fc1cda7b1f32b28d09870394d9d4f70cc3d8dd6b7e9b7456e2b1b47",
+        "current_sha256": "e20109fa1fc1cda7b1f32b28d09870394d9d4f70cc3d8dd6b7e9b7456e2b1b47",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-221.png",
+        "previous_sha256": "f6acc4010dd17b0fc4bfecc13d5686536a1a3b2537fa7c8bede528d4f7ae1be7",
+        "current_sha256": "f6acc4010dd17b0fc4bfecc13d5686536a1a3b2537fa7c8bede528d4f7ae1be7",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-223.png",
+        "previous_sha256": "639785cfd68ac171f88694586b356404ce274c2a4a49ea774b877b18aaef7ecd",
+        "current_sha256": "639785cfd68ac171f88694586b356404ce274c2a4a49ea774b877b18aaef7ecd",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-224.png",
+        "previous_sha256": "e82184019d35c66c73bc3113e54ce673edb756993d329b20105b0a3a380769fb",
+        "current_sha256": "e82184019d35c66c73bc3113e54ce673edb756993d329b20105b0a3a380769fb",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-229.png",
+        "previous_sha256": "1d87a74170148c04977676192a9f9b7d008251f3ea2a5d2fd2f36fb370d35ed6",
+        "current_sha256": "1d87a74170148c04977676192a9f9b7d008251f3ea2a5d2fd2f36fb370d35ed6",
+        "identical": true
+      },
+      {
+        "case": "15",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-230.png",
+        "previous_sha256": "9ee1ea876a2fb8536a10c51e8bfa154e089f4a7814ace4e03b109d28040d4bce",
+        "current_sha256": "9ee1ea876a2fb8536a10c51e8bfa154e089f4a7814ace4e03b109d28040d4bce",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-16.png",
+        "previous_sha256": "67b6654d0d300bb3c862051904dc22c81b6dda6e033f5a981d2940616dbd774f",
+        "current_sha256": "67b6654d0d300bb3c862051904dc22c81b6dda6e033f5a981d2940616dbd774f",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-16.png",
+        "previous_sha256": "bf7349e3e1385ec7af7c046695c0c5e64f2d8605a2c615f8f40737892a3a55ce",
+        "current_sha256": "bf7349e3e1385ec7af7c046695c0c5e64f2d8605a2c615f8f40737892a3a55ce",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-234.png",
+        "previous_sha256": "fda7efbae4c75ff710f6b3e1e6c3c74fb78bfb260fc102e80efb0e6541690b5b",
+        "current_sha256": "fda7efbae4c75ff710f6b3e1e6c3c74fb78bfb260fc102e80efb0e6541690b5b",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-236.png",
+        "previous_sha256": "670c631184f25a64ba2ff3294679ae2360a0bbc55d4725105cab85e68a796200",
+        "current_sha256": "670c631184f25a64ba2ff3294679ae2360a0bbc55d4725105cab85e68a796200",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-237.png",
+        "previous_sha256": "11fdc296b492d7194e1bbbe50cf70d042a8ab2944891494ee8fa3ab56d4d2e92",
+        "current_sha256": "11fdc296b492d7194e1bbbe50cf70d042a8ab2944891494ee8fa3ab56d4d2e92",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-242.png",
+        "previous_sha256": "17539f5f71d5ae72de93b27a2987dc424b5331a36a182b96adae70c2dd637c6d",
+        "current_sha256": "17539f5f71d5ae72de93b27a2987dc424b5331a36a182b96adae70c2dd637c6d",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-243.png",
+        "previous_sha256": "e37e09b30cfb6502f944d5ffe31b53fb93ca84eb06e730e73d06c46692f6eb87",
+        "current_sha256": "e37e09b30cfb6502f944d5ffe31b53fb93ca84eb06e730e73d06c46692f6eb87",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-234.png",
+        "previous_sha256": "f5915740633f4d79d02e2bef8a6e38f666e87638fa4a3ed5968580796bca5ed4",
+        "current_sha256": "f5915740633f4d79d02e2bef8a6e38f666e87638fa4a3ed5968580796bca5ed4",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-236.png",
+        "previous_sha256": "9d50e424d610c84668a48d34181d5c37265f3740d913480aa1c048f124f47cc3",
+        "current_sha256": "9d50e424d610c84668a48d34181d5c37265f3740d913480aa1c048f124f47cc3",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-237.png",
+        "previous_sha256": "fc709efb852501c06d3d59ccc1fb4f8df16ee21017d92022aa496ef9432861af",
+        "current_sha256": "fc709efb852501c06d3d59ccc1fb4f8df16ee21017d92022aa496ef9432861af",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-242.png",
+        "previous_sha256": "c3738fee13f6e8be2871065254931f6eb36fca9f11abd56f561c782813300537",
+        "current_sha256": "c3738fee13f6e8be2871065254931f6eb36fca9f11abd56f561c782813300537",
+        "identical": true
+      },
+      {
+        "case": "16",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-243.png",
+        "previous_sha256": "0f245f26bf7d19eeb1a1c076990bfad2f4cfafbe6ae6c71d06f87270406ab343",
+        "current_sha256": "0f245f26bf7d19eeb1a1c076990bfad2f4cfafbe6ae6c71d06f87270406ab343",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-17.png",
+        "previous_sha256": "9b184c46fd068ff019e7f96770cbe96b1ca98c69f9a5a48da3d709fffbeb4940",
+        "current_sha256": "9b184c46fd068ff019e7f96770cbe96b1ca98c69f9a5a48da3d709fffbeb4940",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-17.png",
+        "previous_sha256": "41dfa88762117085e1da128ada585eace6c225c68469666d21244e0342ccd942",
+        "current_sha256": "41dfa88762117085e1da128ada585eace6c225c68469666d21244e0342ccd942",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-247.png",
+        "previous_sha256": "6c4e7551a4a237e22edae885eb34b3702f53c5c4a294521f8062e62f10559102",
+        "current_sha256": "6c4e7551a4a237e22edae885eb34b3702f53c5c4a294521f8062e62f10559102",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-249.png",
+        "previous_sha256": "3c70c29139e3182a00ab90a3ca8e0a00934e0e729fe95f5b7b371f795c79a18a",
+        "current_sha256": "3c70c29139e3182a00ab90a3ca8e0a00934e0e729fe95f5b7b371f795c79a18a",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-250.png",
+        "previous_sha256": "9b1074d985ca0713f34665a3186fc9c636d22187edb90707a7198a19ce412571",
+        "current_sha256": "9b1074d985ca0713f34665a3186fc9c636d22187edb90707a7198a19ce412571",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-255.png",
+        "previous_sha256": "9d58ea6e4671f7fa6fad26f754f22b0b6b1b7bd101ebde98e5ab69453dcd73ab",
+        "current_sha256": "9d58ea6e4671f7fa6fad26f754f22b0b6b1b7bd101ebde98e5ab69453dcd73ab",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-256.png",
+        "previous_sha256": "f1970e962662ea8b62d012d99e954dcbc093277e00dc8bc648f822d0c56bf821",
+        "current_sha256": "f1970e962662ea8b62d012d99e954dcbc093277e00dc8bc648f822d0c56bf821",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-247.png",
+        "previous_sha256": "26ce2f10a283e5e9d644d99cb403dd3b93e4970fa2da9bf40870a0ce0d3a975f",
+        "current_sha256": "26ce2f10a283e5e9d644d99cb403dd3b93e4970fa2da9bf40870a0ce0d3a975f",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-249.png",
+        "previous_sha256": "135ea54912c735e6cb5a47d2cf9b62b4064a6bd72692d64ddcb3be4b30cdc6eb",
+        "current_sha256": "135ea54912c735e6cb5a47d2cf9b62b4064a6bd72692d64ddcb3be4b30cdc6eb",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-250.png",
+        "previous_sha256": "9b26c2c7a8fb20bdb6aea47f92b0afb787a2fe496c2a7e6f070dd93e91449729",
+        "current_sha256": "9b26c2c7a8fb20bdb6aea47f92b0afb787a2fe496c2a7e6f070dd93e91449729",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-255.png",
+        "previous_sha256": "b6beaedd04944a305fa7422cea1a1b8175a0f3a160cb8536fcf836ff6b95e647",
+        "current_sha256": "b6beaedd04944a305fa7422cea1a1b8175a0f3a160cb8536fcf836ff6b95e647",
+        "identical": true
+      },
+      {
+        "case": "17",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-256.png",
+        "previous_sha256": "7e654a2e6b5880fe9bbe5d2b1689ac8f6dd7dd7446d278e987e68baedd8242f6",
+        "current_sha256": "7e654a2e6b5880fe9bbe5d2b1689ac8f6dd7dd7446d278e987e68baedd8242f6",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-18.png",
+        "previous_sha256": "7a19349bb63d0527b0bef507ca4404820e5eedca4888e19bc32a6d60161d5333",
+        "current_sha256": "7a19349bb63d0527b0bef507ca4404820e5eedca4888e19bc32a6d60161d5333",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-18.png",
+        "previous_sha256": "5c786e52e10b6bffa67e89d3dd4f471d2fcd1e1f256eaa6c52ceb98150cf6cb4",
+        "current_sha256": "5c786e52e10b6bffa67e89d3dd4f471d2fcd1e1f256eaa6c52ceb98150cf6cb4",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-260.png",
+        "previous_sha256": "6790d4d2e63d14c18a9a01b7f08dc33ddfced4d5bdef335bf8f393ae4d411d60",
+        "current_sha256": "6790d4d2e63d14c18a9a01b7f08dc33ddfced4d5bdef335bf8f393ae4d411d60",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-262.png",
+        "previous_sha256": "ba4cdda3ff6f00d18b0fa8b081186f96b5d29512815011479a12d04cbfefc22e",
+        "current_sha256": "ba4cdda3ff6f00d18b0fa8b081186f96b5d29512815011479a12d04cbfefc22e",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-263.png",
+        "previous_sha256": "3b424178bb7e138c3eea89e45c4ecc106d393036805d8d95db05e2bee7a84ade",
+        "current_sha256": "3b424178bb7e138c3eea89e45c4ecc106d393036805d8d95db05e2bee7a84ade",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-268.png",
+        "previous_sha256": "d8769ffd7032396aa4b0e8a183faae816d26ec453ae585a0e5b4aec2ac273078",
+        "current_sha256": "d8769ffd7032396aa4b0e8a183faae816d26ec453ae585a0e5b4aec2ac273078",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-269.png",
+        "previous_sha256": "41cdf318b36c0e28e55c33fbcd6452d799a8d97e0549e7cc14b1175648f14633",
+        "current_sha256": "41cdf318b36c0e28e55c33fbcd6452d799a8d97e0549e7cc14b1175648f14633",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-260.png",
+        "previous_sha256": "d54e5c097b828c10b96880ed03feaab6d46016586c6311702f86f684a4795fe7",
+        "current_sha256": "d54e5c097b828c10b96880ed03feaab6d46016586c6311702f86f684a4795fe7",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-262.png",
+        "previous_sha256": "02482976d55b39c46769bd0e644c67934688c73b06de86bd6fdbd1dfd8aa5855",
+        "current_sha256": "02482976d55b39c46769bd0e644c67934688c73b06de86bd6fdbd1dfd8aa5855",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-263.png",
+        "previous_sha256": "91fa9f062c7f88b2b4b139451e9fe49ee8ef96ca1db7b1fc650939a84ef5d394",
+        "current_sha256": "91fa9f062c7f88b2b4b139451e9fe49ee8ef96ca1db7b1fc650939a84ef5d394",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-268.png",
+        "previous_sha256": "cb47380ad9dcf01fef4b8814a23bcf2653c69c8588a4fbcdf98eeaec92aa2683",
+        "current_sha256": "cb47380ad9dcf01fef4b8814a23bcf2653c69c8588a4fbcdf98eeaec92aa2683",
+        "identical": true
+      },
+      {
+        "case": "18",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-269.png",
+        "previous_sha256": "1b6784d71b25868db15e2f5d70198c8d4bc72fc9070a92772a36562b9af655a9",
+        "current_sha256": "1b6784d71b25868db15e2f5d70198c8d4bc72fc9070a92772a36562b9af655a9",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-19.png",
+        "previous_sha256": "a42127d1fa2f4a9e6562249d7aa8939dcbef00e8b07cd5713aebbad62081e7cc",
+        "current_sha256": "a42127d1fa2f4a9e6562249d7aa8939dcbef00e8b07cd5713aebbad62081e7cc",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-19.png",
+        "previous_sha256": "5ef768e1f08dea1f01a7a69c9dc9a214323c54e87135bf0f08d86436c5efb067",
+        "current_sha256": "5ef768e1f08dea1f01a7a69c9dc9a214323c54e87135bf0f08d86436c5efb067",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-273.png",
+        "previous_sha256": "249652f5977ec181ad160cd6c6037b9e337807bae1ee812506fde279c6286233",
+        "current_sha256": "249652f5977ec181ad160cd6c6037b9e337807bae1ee812506fde279c6286233",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-275.png",
+        "previous_sha256": "034f34ca49b99c820268fd119355109257a81f33042c071e8c082c84af9d903b",
+        "current_sha256": "034f34ca49b99c820268fd119355109257a81f33042c071e8c082c84af9d903b",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-276.png",
+        "previous_sha256": "da830d14a5dee62cec22c9b2ea296db4dcafa0f670e2f44a30af6ab1d63e6bbf",
+        "current_sha256": "da830d14a5dee62cec22c9b2ea296db4dcafa0f670e2f44a30af6ab1d63e6bbf",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-281.png",
+        "previous_sha256": "88cb1f260059ec19e252945d3dcbbfae1135958fad1bcfdc224485c1287e985f",
+        "current_sha256": "88cb1f260059ec19e252945d3dcbbfae1135958fad1bcfdc224485c1287e985f",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-282.png",
+        "previous_sha256": "e4a54dbe10bd9d7c8211d882a0518176b19adef5994026aa89892efb7c3b0db0",
+        "current_sha256": "e4a54dbe10bd9d7c8211d882a0518176b19adef5994026aa89892efb7c3b0db0",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-273.png",
+        "previous_sha256": "c51e9062233f523f0581ee364769c2f8d7ff1d313649584c7fc4478add6006cc",
+        "current_sha256": "c51e9062233f523f0581ee364769c2f8d7ff1d313649584c7fc4478add6006cc",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-275.png",
+        "previous_sha256": "70b12d67bf3722128c63b3c2be918af664cdca633bc262cecd5b72c51171a419",
+        "current_sha256": "70b12d67bf3722128c63b3c2be918af664cdca633bc262cecd5b72c51171a419",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-276.png",
+        "previous_sha256": "6c522311b965ee7a859dbde652bf386373bf672b9663b64a9a04e1cd11e1e278",
+        "current_sha256": "6c522311b965ee7a859dbde652bf386373bf672b9663b64a9a04e1cd11e1e278",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-281.png",
+        "previous_sha256": "407052f59ca7df6e551e7de0dce2909fefa7f4c2efcf1867fc5c41f00becaaa0",
+        "current_sha256": "407052f59ca7df6e551e7de0dce2909fefa7f4c2efcf1867fc5c41f00becaaa0",
+        "identical": true
+      },
+      {
+        "case": "19",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-282.png",
+        "previous_sha256": "7c7eb0238d40bf6182914e68e828f79db2bf937445fd5c041835c6a05c638fb7",
+        "current_sha256": "7c7eb0238d40bf6182914e68e828f79db2bf937445fd5c041835c6a05c638fb7",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-pt-20.png",
+        "previous_sha256": "8784c4a4a43530db4d1d94833cd2581b707fb2825b1012dd2cd7c170f51127a9",
+        "current_sha256": "8784c4a4a43530db4d1d94833cd2581b707fb2825b1012dd2cd7c170f51127a9",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "contact_sheets_observed",
+        "path": "work/v6/qa/pdf-book-review/case-sheet-en-20.png",
+        "previous_sha256": "40ca350151d45d16c43acb6885dbf530404556ca41422e88420f3170c8f4c6b1",
+        "current_sha256": "40ca350151d45d16c43acb6885dbf530404556ca41422e88420f3170c8f4c6b1",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-286.png",
+        "previous_sha256": "ec0ebe0a341df278a9217136357efebd8431b69b406ab726c60e10047bc327a0",
+        "current_sha256": "ec0ebe0a341df278a9217136357efebd8431b69b406ab726c60e10047bc327a0",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-288.png",
+        "previous_sha256": "02fde891d3e5fa3f4d11df913953a074e26d2df052227eba1bcfbf34f9df9c5f",
+        "current_sha256": "02fde891d3e5fa3f4d11df913953a074e26d2df052227eba1bcfbf34f9df9c5f",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-289.png",
+        "previous_sha256": "9c1512332f67f21f9657b232ebb19a9654e79be0324a4477f303f3b0ba06c672",
+        "current_sha256": "9c1512332f67f21f9657b232ebb19a9654e79be0324a4477f303f3b0ba06c672",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-294.png",
+        "previous_sha256": "7e40579e13acd4c77870666ed94cf32f2491937232eca938cee639314da5ee4d",
+        "current_sha256": "7e40579e13acd4c77870666ed94cf32f2491937232eca938cee639314da5ee4d",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/pt-295.png",
+        "previous_sha256": "f8c89886a935636c658811a7d41c8e2fa2ef5d23da2d39bdd41b1ac0416d0e0b",
+        "current_sha256": "f8c89886a935636c658811a7d41c8e2fa2ef5d23da2d39bdd41b1ac0416d0e0b",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-286.png",
+        "previous_sha256": "e776ffea0f4b357a4152fb0e5a1a30a3a43a8d1b198d4b8dd9e35e2d31b7898f",
+        "current_sha256": "e776ffea0f4b357a4152fb0e5a1a30a3a43a8d1b198d4b8dd9e35e2d31b7898f",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-288.png",
+        "previous_sha256": "b47136f7e06095bbe37e4975d1e3be160150cd1169ae39efce6029af22eaef28",
+        "current_sha256": "b47136f7e06095bbe37e4975d1e3be160150cd1169ae39efce6029af22eaef28",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-289.png",
+        "previous_sha256": "71538b6f1f50d7fb79bf9ccde470e3c3819517a902cb30bd8a1148dc1099db05",
+        "current_sha256": "71538b6f1f50d7fb79bf9ccde470e3c3819517a902cb30bd8a1148dc1099db05",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-294.png",
+        "previous_sha256": "52715a88566b5e9f7349fa11b68e5f4c53f84dc96d5da3212885ecf58a8a8d6c",
+        "current_sha256": "52715a88566b5e9f7349fa11b68e5f4c53f84dc96d5da3212885ecf58a8a8d6c",
+        "identical": true
+      },
+      {
+        "case": "20",
+        "kind": "full_page_images_observed",
+        "path": "work/v6/qa/pdf-book-review/en-295.png",
+        "previous_sha256": "95d294b4d235936aa7d753341ddacf03dba11e65427296db9810b9d3713d86a0",
+        "current_sha256": "95d294b4d235936aa7d753341ddacf03dba11e65427296db9810b9d3713d86a0",
+        "identical": true
+      }
+    ]
+  }
+}

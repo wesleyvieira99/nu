@@ -1,19 +1,28 @@
-def apply(self, component, version, cents, observed_at, now):
-    if component not in {'balance', 'limit'}:
-        raise ValueError('componente desconhecido')
-    if type(cents) is not int or cents < 0:
-        raise ValueError('centavos inválidos')
-    if type(version) is not int or version < 1:
-        raise ValueError('versão inválida')
-    if observed_at > now:
-        raise ValueError('timestamp futuro')
-    candidate = (version, cents, observed_at)
-    previous = self.parts.get(component)
-    if previous and version < previous[0]:
-        return False
-    if previous and version == previous[0]:
-        if previous != candidate:
-            raise ValueError('versão conflitante')
-        return False
-    self.parts[component] = candidate
-    return True
+    def append(self, entry):
+        if not isinstance(entry.id, str) or not entry.id.strip():
+            raise ValueError('nonempty entry identity required')
+        if type(entry.cents) is not int or entry.cents <= 0:
+            raise ValueError('positive integer cents required')
+        if entry.kind not in {'purchase', 'refund', 'payment'}:
+            raise ValueError('unknown entry type')
+        with self.lock:
+            old = self.entries.get(entry.id)
+            if old:
+                if old != entry:
+                    raise ValueError('entry identity conflict')
+                return
+            if entry.kind == 'refund':
+                purchase = self.entries.get(entry.parent)
+                if not purchase or purchase.kind != 'purchase':
+                    raise ValueError('missing purchase provenance')
+                used = sum(e.cents for e in self.entries.values()
+                           if e.kind == 'refund' and e.parent == entry.parent)
+                if used + entry.cents > purchase.cents:
+                    raise ValueError('refund exceeds purchase')
+            elif entry.parent:
+                raise ValueError('unexpected parent')
+            self.entries[entry.id] = entry
+
+    def snapshot(self):
+        with self.lock:
+            return tuple(self.entries.values())

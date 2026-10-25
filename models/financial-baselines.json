@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-10-23",
+  "official_source": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-second-quarter-2026-financial-results",
+  "publication": "2026-08-13",
+  "period": "Q2 2026 ended June 30",
+  "data": [
+    {
+      "metric": "Monthly ARPAC",
+      "value": 17,
+      "currency": "USD",
+      "precision": "approximately",
+      "scope": "Nu global active customer average, revenue not profit; not marginal revenue or NuCel ARPU"
+    },
+    {
+      "metric": "Customers",
+      "value": 139000000,
+      "precision": "rounded",
+      "scope": "Nu global; not affected population for any case"
+    },
+    {
+      "metric": "Monthly activity",
+      "value": 83.5,
+      "unit": "percent",
+      "scope": "Nu global; not a baseline for a case"
+    }
+  ],
+  "rules": [
+    "Case incidence, causal uplift and marginal costs are not public. Every such number below must be labeled explicit scenario assumption.",
+    "Never multiply a complaint value by all139m customers. No financial result has been observed from these proposals.",
+    "Report customer money released separately from bank revenue and operating savings. Never call principal a gain.",
+    "No total across cases: cohorts overlap. Separate currencies; no invented exchange rate.",
+    "Break-even = one-off build cost / positive monthly net operating contribution. Show no break-even when <=0.",
+    "Do not apply global ARPAC to NuCel or infer cost/contact from monthly cost-to-serve.",
+    "Reduced handling time is capacity freed, not cash saved unless scheduling/cost actually changes."
+  ]
+}

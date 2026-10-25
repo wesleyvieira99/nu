@@ -1,0 +1,9 @@
+{
+  "schema": "portability-event.v1",
+  "event_id": "synthetic-donor-confirmation",
+  "request_id": "synthetic-attempt-2",
+  "issuer": "donor",
+  "kind": "donor_authorized",
+  "sequence": 7,
+  "billing_effect": "NONE"
+}

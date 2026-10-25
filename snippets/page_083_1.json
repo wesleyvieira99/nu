@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "challenge_id": "synthetic-one-use",
+  "device_binding": "synthetic-device",
+  "evidence_ref": "restricted-reference",
+  "expires_at": 100,
+  "state": "approved",
+  "authorized": false
+}

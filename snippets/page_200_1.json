@@ -1,0 +1,11 @@
+{
+  "account_ref": "synthetic-account-13",
+  "card_ref": "virtual-a",
+  "currency": "BRL",
+  "global_available_cents": 20000,
+  "virtual_cap_cents": 80000,
+  "virtual_spent_cents": 30000,
+  "preview_cents": 20000,
+  "as_of": "synthetic-revision-2",
+  "authorization_guaranteed": false
+}

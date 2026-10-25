@@ -1,0 +1,10 @@
+{
+  "payment_id": "synthetic-payment-09",
+  "currency": "BRL",
+  "received_cents": 15001,
+  "allocations": {"bill": 10000, "installment": 5000},
+  "unapplied_cents": 1,
+  "ledger_revision": 42,
+  "limit_projection_revision": 41,
+  "limit_state": "updating"
+}

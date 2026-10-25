@@ -1,0 +1,211 @@
+{
+  "status": "PASS",
+  "tests": 252,
+  "python_tests": 241,
+  "clojure_tests": 11,
+  "clojure_assertions": 22,
+  "python_runtime": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "synthetic_data_only": true,
+  "cases": [
+    {
+      "case": "01",
+      "file": "case_01.py",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "f3698c41746e90a5e170b98f4a93729df20f47e50dd59e57fe125bed105a96d6",
+      "status": "PASS"
+    },
+    {
+      "case": "02",
+      "file": "case_02.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "24218bd7c719ce3ef4f583d1ce0c5e098915be7ae4906a1d457f7dd691ea335f",
+      "status": "PASS"
+    },
+    {
+      "case": "03",
+      "file": "case_03.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "554a4f9e88570e9c1c2f320ff37bd35bd1fa6836bf71581852c568ba0f66ed3e",
+      "status": "PASS"
+    },
+    {
+      "case": "04",
+      "file": "case_04.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "fc1058291cd34abcfa29b1fe6e9435094d2166103b95143c796dd51cc333b6e7",
+      "status": "PASS"
+    },
+    {
+      "case": "05",
+      "file": "case_05.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "3fd47dfcfdd99ce9cd28724fc935256b58f2fca1ce032c29ae9102ce7c2a8d28",
+      "status": "PASS"
+    },
+    {
+      "case": "06",
+      "file": "case_06.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "2b51e973afd6003298307fa2f72d90b8a964d8529b07161e3ed8eb210ad19b04",
+      "status": "PASS"
+    },
+    {
+      "case": "07",
+      "file": "case_07.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "6e0592e6490dbdf47e0981011ee13fcb7150cc4a923f8d17f91b41ff33fe25fd",
+      "status": "PASS"
+    },
+    {
+      "case": "08",
+      "file": "case_08.py",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "708660421d6cd1e04693ddaed49b1611ac56dd27a82fdb53924be3f36d052877",
+      "status": "PASS"
+    },
+    {
+      "case": "09",
+      "file": "case_09.py",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "6d846c9125a6b78f32e2f6a003d159c4b6fd3b40fa15221769c5b25bb2e31140",
+      "status": "PASS"
+    },
+    {
+      "case": "10",
+      "file": "case_10.py",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "27563ef277179745f862e777c91186dfa1b6a9b6c0de32562b227be2390c3167",
+      "status": "PASS"
+    },
+    {
+      "case": "11",
+      "file": "case_11.py",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "6180cd64653d8a0bb94b79ad0ef8b428c7ef19e30737ccf79dd2c99388104b19",
+      "status": "PASS"
+    },
+    {
+      "case": "12",
+      "file": "case_12.py",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "782b4e7a102afbe78cd7e7fa48520e5dd263569ce0280c406a5d2e881049eb64",
+      "status": "PASS"
+    },
+    {
+      "case": "13",
+      "file": "case_13.py",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "88727e6cbe80749399be60b0fd2e24d31a1a7f23d8a3db8bd1a36804777670c4",
+      "status": "PASS"
+    },
+    {
+      "case": "14",
+      "file": "case_14.py",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "e85e916866d33ccb54fa270783be29906dac97975e01f2d90ef672b0226f6762",
+      "status": "PASS"
+    },
+    {
+      "case": "15",
+      "file": "case_15.py",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "019553dbd297cc54721338f7e027de5ad96fd30e2244bf7855821fbaf9d18c03",
+      "status": "PASS"
+    },
+    {
+      "case": "16",
+      "file": "case_16.py",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "6a01963948bbb381fbf0ee9059b4067476ae8448b5f57a1eb6f92fe50be02918",
+      "status": "PASS"
+    },
+    {
+      "case": "17",
+      "file": "case_17.py",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "9d7bc22505243b3c290e9441853577b7b91afec45654ce9e4e1fdfdaebaeb742",
+      "status": "PASS"
+    },
+    {
+      "case": "18",
+      "file": "case_18.py",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "8612cb4796d5c7d1a5afe1aaf45621d5e7c2b283696613ca36492279f6670122",
+      "status": "PASS"
+    },
+    {
+      "case": "19",
+      "file": "case_19.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "f780f7fe460308b054136ff26d2c1c85057d287e0a186cceaafb4a46ec6dcee2",
+      "status": "PASS"
+    },
+    {
+      "case": "20",
+      "file": "case_20.py",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "4adf6bb9d97fe6b05bdc2b0d75558d900d3fb896febeed5289c3b119d713d73e",
+      "status": "PASS"
+    }
+  ]
+}

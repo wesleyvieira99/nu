@@ -1,154 +1,149 @@
-"""Point-in-time feature replay with event and knowledge timestamps."""
+"""Portability evidence journal, not a telecom implementation.
+Synthetic actors stand for already authenticated integrations. Production
+requires signed callbacks, partner agreements, durable compare-and-swap,
+number-holder verification and a separate billing-adjustment authority.
+"""
 from dataclasses import dataclass
-import hashlib
-import json
-import math
+from threading import RLock
 import unittest
+
+def identifier(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('nonblank string identity required')
+    return value
+
 
 
 @dataclass(frozen=True)
 class Event:
-    id: str
-    occurred: int
-    known: int
-    amount_cents: int
+    event_id: str
+    request_id: str
+    kind: str
+    source: str
+    sequence: int
 
 
-def window_sum(events, at, known_at, seconds=60, available=True):
-    validate_window(at, known_at, seconds, available)
-    if not available:
-        return None
-    unique = {}
-    for event in events:
-        values = (event.occurred, event.known, event.amount_cents)
-        if any(type(value) is not int for value in values):
-            raise ValueError("integer times and cents required")
-        if event.known > known_at or event.occurred > at:
-            continue
-        if not at - seconds < event.occurred <= at:
-            continue
-        if event.id in unique and unique[event.id] != event:
-            raise ValueError("conflicting event")
-        unique[event.id] = event
-    return sum(event.amount_cents for event in unique.values())
+class Portability:
+    SOURCES = {'sms_sent': 'recipient', 'donor_authorized': 'donor',
+               'activated': 'recipient', 'cancelled': 'owner'}
+
+    def __init__(self, request_id):
+        identifier(request_id)
+        self.request_id, self.state = request_id, 'REQUESTED'
+        self.seen, self.journal, self.sequences = {}, [], {}
+        self.lock = RLock()
+
+    # BOOK CORE START
+    def apply(self, event, authenticated_source):
+        with self.lock:
+            for value in (event.event_id, event.request_id, event.kind, event.source):
+                identifier(value)
+            if event.request_id != self.request_id:
+                raise ValueError('request scope')
+            if event.source != authenticated_source:
+                raise PermissionError('untrusted source')
+            if self.SOURCES.get(event.kind) != event.source:
+                raise PermissionError('event authority')
+            if type(event.sequence) is not int or event.sequence < 1:
+                raise ValueError('invalid sequence')
+            if event.event_id in self.seen:
+                if self.seen[event.event_id] != event:
+                    raise ValueError('event identity conflict')
+                return self.state
+            if event.sequence <= self.sequences.get(event.source, 0):
+                raise ValueError('out-of-order; reconcile')
+            allowed = {'sms_sent': ('REQUESTED',),
+                       'donor_authorized': ('WAIT_DONOR',),
+                       'activated': ('AUTHORIZED',),
+                       'cancelled': ('REQUESTED', 'WAIT_DONOR', 'AUTHORIZED')}
+            if self.state not in allowed[event.kind]:
+                raise ValueError('invalid transition; reconcile')
+            self.state = {'sms_sent': 'WAIT_DONOR', 'donor_authorized':
+                          'AUTHORIZED', 'activated': 'ACTIVE',
+                          'cancelled': 'CANCELLED'}[event.kind]
+            self.seen[event.event_id] = event
+            self.sequences[event.source] = event.sequence
+            self.journal.append(event)
+            return self.state
+    # BOOK CORE END
 
 
-def validate_window(at, known_at, seconds, available):
-    if any(type(value) is not int for value in (at, known_at, seconds)):
-        raise ValueError("integer synthetic timestamps required")
-    if seconds <= 0 or type(available) is not bool:
-        raise ValueError("invalid window or availability")
-
-
-def validate_comparison(batch, online, tolerance):
-    for value in (batch, online, tolerance):
-        if value is None:
-            continue
-        if type(value) not in (int, float) or not math.isfinite(value):
-            raise ValueError("finite comparison values required")
-    if tolerance is None or tolerance < 0:
-        raise ValueError("non-negative tolerance required")
-
-
-def contract_id(window_seconds=60, missing="null", unit="cents"):
-    contract = {"window": window_seconds, "missing": missing,
-                "unit": unit, "bound": "(at-window, at]", "version": 1}
-    encoded = json.dumps(contract, sort_keys=True, separators=(",", ":"))
-    return hashlib.sha256(encoded.encode()).hexdigest()[:16]
-
-
-def compare(batch, online, batch_contract, online_contract, tolerance=0):
-    validate_comparison(batch, online, tolerance)
-    if batch_contract != online_contract:
-        return "CONTRACT_MISMATCH"
-    if batch is None or online is None:
-        return "MATCH_MISSING" if batch is online else "MISSING_MISMATCH"
-    if abs(batch - online) > tolerance:
-        return "VALUE_MISMATCH"
-    return "MATCH"
-
-
-class SkewTests(unittest.TestCase):
+class PortabilityTests(unittest.TestCase):
     def setUp(self):
-        self.events = [Event("a", 50, 50, 100), Event("b", 90, 90, 200)]
-        self.contract = contract_id()
+        self.p = Portability('request-a')
+        self.sms = Event('s', 'request-a', 'sms_sent', 'recipient', 1)
+        self.p.apply(self.sms, 'recipient')
 
-    def test_matching(self):
-        value = window_sum(self.events, 100, 100)
-        self.assertEqual(compare(value, 300, self.contract, self.contract),
-                         "MATCH")
+    # BOOK TEST START
+    def test_user_sms_claim_cannot_authorize_donor(self):
+        event = Event('d', 'request-a', 'donor_authorized', 'owner', 1)
+        with self.assertRaises(PermissionError):
+            self.p.apply(event, 'owner')
+        self.assertEqual(self.p.state, 'WAIT_DONOR')
 
-    def test_future_occurrence(self):
-        rows = self.events + [Event("future", 101, 99, 900)]
-        self.assertEqual(window_sum(rows, 100, 100), 300)
-
-    def test_late_knowledge(self):
-        rows = self.events + [Event("late", 95, 110, 900)]
-        self.assertEqual(window_sum(rows, 100, 100), 300)
-        self.assertEqual(window_sum(rows, 100, 120), 1200)
-
-    def test_boundary_open_left(self):
-        self.assertEqual(window_sum([Event("a", 40, 40, 10)], 100, 100), 0)
-
-    def test_duplicate(self):
-        self.assertEqual(window_sum(self.events * 2, 100, 100), 300)
-
-    def test_conflict(self):
+    def test_late_activation_cannot_revive_cancelled_request(self):
+        cancel = Event('c', 'request-a', 'cancelled', 'owner', 1)
+        self.p.apply(cancel, 'owner')
+        late = Event('a', 'request-a', 'activated', 'recipient', 2)
         with self.assertRaises(ValueError):
-            window_sum(self.events + [Event("a", 50, 50, 999)], 100, 100)
+            self.p.apply(late, 'recipient')
+        self.assertEqual(self.p.state, 'CANCELLED')
 
-    def test_missing_is_not_zero(self):
-        self.assertEqual(compare(None, 0, self.contract, self.contract),
-                         "MISSING_MISMATCH")
-
-    def test_missing_agreement(self):
-        self.assertEqual(compare(None, None, self.contract, self.contract),
-                         "MATCH_MISSING")
-
-    def test_contract_difference(self):
-        self.assertNotEqual(contract_id(60), contract_id(30))
-        self.assertEqual(compare(0, 0, contract_id(60), contract_id(30)),
-                         "CONTRACT_MISMATCH")
-
-    def test_tolerance(self):
-        self.assertEqual(compare(100, 101, self.contract, self.contract, 1),
-                         "MATCH")
-
-    def test_unavailable_source(self):
-        self.assertIsNone(window_sum([], 100, 100, available=False))
-
-    def test_invalid_window(self):
+    def test_early_activation_requires_reconciliation(self):
+        event = Event('a', 'request-a', 'activated', 'recipient', 2)
         with self.assertRaises(ValueError):
-            window_sum([], 100, 100, seconds=0)
+            self.p.apply(event, 'recipient')
+        self.assertNotIn('a', self.p.seen)
+        self.assertEqual(self.p.state, 'WAIT_DONOR')
+    # BOOK TEST END
 
-    def test_nonfinite_comparison_cannot_match(self):
-        for value in (float("nan"), float("inf"), -float("inf"), True):
-            with self.assertRaises(ValueError):
-                compare(value, 300, self.contract, self.contract)
-            with self.assertRaises(ValueError):
-                compare(300, value, self.contract, self.contract)
+    def test_happy_path(self):
+        self.p.apply(Event('d', 'request-a', 'donor_authorized', 'donor', 1), 'donor')
+        self.p.apply(Event('a', 'request-a', 'activated', 'recipient', 2), 'recipient')
+        self.assertEqual(self.p.state, 'ACTIVE')
+        self.assertEqual(len(self.p.journal), 3)
 
-    def test_invalid_tolerance(self):
-        for value in (float("nan"), float("inf"), -1, None, True):
-            with self.assertRaises(ValueError):
-                compare(1, 1, self.contract, self.contract, value)
+    def test_duplicate_does_not_append(self):
+        self.p.apply(self.sms, 'recipient')
+        self.assertEqual(len(self.p.journal), 1)
 
-    def test_integer_event_contract(self):
-        for row in (Event("a", 90, 90, float("nan")),
-                    Event("a", 90, 90, 1.5),
-                    Event("a", float("nan"), 90, 1),
-                    Event("a", 90, True, 1)):
-            with self.assertRaises(ValueError):
-                window_sum([row], 100, 100)
+    def test_cross_request_rejected(self):
         with self.assertRaises(ValueError):
-            window_sum([], float("nan"), 100)
+            self.p.apply(Event('d', 'request-b', 'donor_authorized', 'donor', 1), 'donor')
+
+    def test_spoofed_issuer(self):
+        with self.assertRaises(PermissionError):
+            self.p.apply(Event('d', 'request-a', 'donor_authorized', 'donor', 1), 'app')
+
+    def test_stale_sequence_rejected(self):
+        self.p.apply(Event('d', 'request-a', 'donor_authorized', 'donor', 1), 'donor')
+        with self.assertRaises(ValueError):
+            self.p.apply(Event('a', 'request-a', 'activated', 'recipient', 1), 'recipient')
+
+    def test_conflicting_duplicate(self):
+        with self.assertRaises(ValueError):
+            self.p.apply(Event('s', 'request-a', 'activated', 'recipient', 2), 'recipient')
+
+    def test_replay_after_donor_confirmation(self):
+        early = Event('a', 'request-a', 'activated', 'recipient', 2)
+        with self.assertRaises(ValueError):
+            self.p.apply(early, 'recipient')
+        self.p.apply(Event('d', 'request-a', 'donor_authorized', 'donor', 1), 'donor')
+        self.assertEqual(self.p.apply(early, 'recipient'), 'ACTIVE')
 
 
-if __name__ == "__main__":
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(SkewTests)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    rows = [Event("a", 90, 90, 200), Event("late", 95, 110, 900)]
-    print(json.dumps({"known_at_decision_cents": window_sum(rows, 100, 100),
-                      "known_later_cents": window_sum(rows, 100, 120),
-                      "contract": contract_id()}, indent=2))
-    raise SystemExit(not result.wasSuccessful())
+    def test_missing_request_identity_rejected(self):
+        for value in (None, '', '  ', True, 1):
+            with self.assertRaises(ValueError):
+                Portability(value)
+
+    def test_invalid_event_identity_preserves_state(self):
+        for value in (None, '', '  ', True, 1):
+            event = Event(value, 'request-a', 'donor_authorized', 'donor', 1)
+            with self.assertRaises(ValueError):
+                self.p.apply(event, 'donor')
+        self.assertEqual(self.p.state, 'WAIT_DONOR')
+        self.assertEqual(len(self.p.journal), 1)
+
+if __name__ == '__main__':
+    unittest.main()

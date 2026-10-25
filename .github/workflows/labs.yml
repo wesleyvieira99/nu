@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   python-labs:
-    name: Existing Python case tests
+    name: Evidence case tests
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -28,5 +28,5 @@ jobs:
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
-      - name: Run the existing 205 Python tests
+      - name: Run the 241 Python case tests
         run: python -m unittest discover -s labs -p 'case_*.py' -v

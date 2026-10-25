@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-restriction",
+  "restriction_scope": "account_exit",
+  "decision_version": 2,
+  "evidence_ref": "restricted-object-reference",
+  "state": "exit_approved",
+  "execution_confirmed": false
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "capability-check.v1",
+  "product": "global-demo",
+  "purpose": "external_transfer",
+  "currency": "EUR",
+  "country": "IE",
+  "revision": 1,
+  "allowed": false,
+  "quote_id": null
+}

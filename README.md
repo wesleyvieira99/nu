@@ -1,119 +1,63 @@
-# Confiança em escala · Trust at Scale
+# Confiança em escala · Trust at scale
 
-**Wesley Vieira — Engineering Manager / Staff Software Engineer**
+Wesley Vieira · Engineering Manager / Staff Software Engineer
 
-[Leia em português](https://wesleyvieira99.github.io/nu/) · [Read in English](https://wesleyvieira99.github.io/nu/en.html) · [PDF português](docs/pdf/Nubank_Confianca_em_Escala_PT.pdf) · [English PDF](docs/pdf/Nubank_Trust_at_Scale_EN.pdf)
+[Ler em português](https://wesleyvieira99.github.io/nu/) · [Read in English](https://wesleyvieira99.github.io/nu/en.html) · [PDF PT](docs/pdf/Nubank_Confianca_em_Escala_PT.pdf) · [PDF EN](docs/pdf/Nubank_Trust_at_Scale_EN.pdf)
 
-[Automação dos testes Python · Python test workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml)
+![Reader preview](docs/preview.png)
 
-![Menu de capítulos e diagramas da edição V5 / V5 chapter navigation and diagram preview](docs/preview.png)
+320 páginas por idioma, 20 novos estudos de problemas públicos, 24 arquiteturas com marcas oficiais, 98 blocos de código e 11 linguagens/formatos. Menu de capítulos no computador e celular; PDF com marcadores e cinco controles de navegação em cada página.
 
-## Português
+Os vinte casos anteriores foram substituídos. Esta edição parte de 18 reclamações no Reclame AQUI e 2 reportagens, com capturas reais, resposta da empresa e desfecho disponível. Cada estudo propõe uma solução específica, implementação, indicadores, cenários financeiros e roadmap com responsáveis e critérios de saída. Vídeos de reportagem e tutorial oficial são identificados como fontes com finalidades diferentes.
 
-Uma candidatura apresentada como trabalho examinável: vinte estudos sobre jornadas, engenharia e experiência do Nubank, com fontes públicas, propostas de arquitetura, decisões, código e critérios de execução. As duas edições completas têm **320 páginas cada**, **24 desenhos de arquitetura** e **86 blocos de código**.
+The twenty previous cases have been replaced by specific, evidence-led studies. All cases include source provenance, company replies, available outcomes, distinct engineering proposals, executable labs, metrics, financial scenarios and staged roadmaps. The publication is independent application material, without Nubank endorsement or access to its internal systems.
 
-Este é um estudo independente de Wesley Vieira. Não é uma publicação oficial do Nubank e não representa acesso a sistemas, incidentes ou prioridades internas. Relatos públicos de clientes são sinais para investigação, não reproduções controladas ou diagnósticos confirmados. As propostas e os laboratórios são externos; as fontes, datas e limitações aparecem junto às análises no livro. Logos e fotografias são atribuídos aos respectivos titulares e fontes.
+## Cases / Casos
 
-A edição **V5** mantém os capítulos visíveis: menu lateral no computador e seletor fixo no celular e tablet. O capítulo atual fica destacado, e o índice completo reúne a busca e os subtópicos. Os **24 diagramas** usam composições específicas, conexões organizadas e **logos oficiais das tecnologias propostas**, com [mapeamento e fontes](evidence/diagram-technology-map.json). O leitor também oferece alternância PT/EN preservando a página, código copiável, tema escuro e ampliação de imagens. Os PDFs incluem sumário clicável, marcadores por capítulo e subtópico, além de um menu de navegação em todas as páginas. As capturas originais permanecem no idioma da fonte, inclusive na edição em inglês.
-
-### Reproduzir os laboratórios
-
-Os **20 arquivos Python** usam a biblioteca padrão e contêm **205 testes existentes**. Execute a partir da raiz do repositório, com Python 3.12:
-
-```sh
-python3 -m unittest discover -s labs -p 'case_*.py' -v
-```
-
-Para executar um único caso:
-
-```sh
-python3 labs/case_07.py
-```
-
-O [núcleo funcional em Clojure](labs/decision_core.clj) contém **11 testes e 22 asserções**. Com Java e Clojure CLI instalados:
-
-```sh
-cd labs
-clojure -M decision_core.clj
-```
-
-O [deps.edn](labs/deps.edn) fixa Clojure 1.12.0; a primeira execução pode baixar a dependência. O conjunto validado contém **216 testes: 205 Python + 11 Clojure**. O workflow deste repositório executa apenas os 205 testes Python; o resultado de Clojure depende do comando separado acima.
-
-São laboratórios didáticos com dados sintéticos. Eles exercitam contratos e invariantes específicos, sem conexão com serviços bancários. Os demais trechos do livro são exemplos ilustrativos e precisam de integração, revisão de segurança e validação no contexto real antes de qualquer uso em produção. A aprovação dos testes não demonstra desempenho nem garantias de sistemas do Nubank.
-
-## English
-
-A candidacy presented as reviewable work: twenty studies of Nubank customer journeys, engineering and experience, with public sources, proposed architectures, decisions, code and delivery criteria. Both complete editions contain **320 pages**, **24 architecture drawings** and **86 code blocks**.
-
-This is an independent study by Wesley Vieira, not an official Nubank publication. It does not imply access to internal systems, incidents or priorities. Public customer reports are investigative signals, not controlled reproductions or confirmed diagnoses. Proposals and labs are external; sources, dates and limitations accompany the analysis in the book. Logos and photographs are credited to their respective owners and sources.
-
-Edition **V5** keeps chapters visible: a persistent desktop rail and a fixed chapter selector on phones and tablets. The current chapter is highlighted, and the full contents menu includes search and subtopics. The **24 diagrams** use distinct compositions, organized connections and **official marks for the proposed technologies**, with a [mapping and sources](evidence/diagram-technology-map.json). The reader also supports PT/EN switching while preserving the current page, copyable code, dark mode and image zoom. The PDFs contain a clickable contents page, chapter and subtopic bookmarks, and navigation controls on every page. Original source screenshots retain their original language in the English edition.
-
-### Run the labs
-
-The **20 Python files** use the standard library and contain **205 existing tests**. Run from the repository root with Python 3.12:
-
-```sh
-python3 -m unittest discover -s labs -p 'case_*.py' -v
-```
-
-Run an individual case with `python3 labs/case_07.py`.
-
-The [Clojure functional core](labs/decision_core.clj) contains **11 tests and 22 assertions**. With Java and the Clojure CLI installed:
-
-```sh
-cd labs
-clojure -M decision_core.clj
-```
-
-The [deps.edn](labs/deps.edn) pins Clojure 1.12.0; the first run may download the dependency. The validated suite totals **216 tests: 205 Python + 11 Clojure**. This repository's workflow runs only the 205 Python tests; Clojure is checked separately with the command above.
-
-These educational labs use synthetic data to exercise specific contracts and invariants, without connecting to banking services. Other book snippets are illustrative and require integration, security review and validation in their real context before production use. Passing tests do not establish Nubank system performance or guarantees.
-
-## 20 casos · 20 cases
-
-Each book link opens the corresponding case. Cada link abre o caso correspondente no livro.
-
-| # | Livro em português | Book in English | Executable Python lab |
+| # | Português | English | Implementation |
 | --- | --- | --- | --- |
-| 01 | [Pix falha e a ajuda falha junto](https://wesleyvieira99.github.io/nu/#01-1) | [When Pix fails, help fails too](https://wesleyvieira99.github.io/nu/en.html#01-1) | [case_01.py](labs/case_01.py) |
-| 02 | [Recuperar o acesso quando a câmera frontal não funciona](https://wesleyvieira99.github.io/nu/#02-1) | [Recovering access when the front camera does not work](https://wesleyvieira99.github.io/nu/en.html#02-1) | [case_02.py](labs/case_02.py) |
-| 03 | [Uma notificação deve ajudar a decidir](https://wesleyvieira99.github.io/nu/#03-1) | [A notification should help someone decide](https://wesleyvieira99.github.io/nu/en.html#03-1) | [case_03.py](labs/case_03.py) |
-| 04 | [Open Finance precisa mostrar o que ainda não está completo](https://wesleyvieira99.github.io/nu/#04-1) | [Open Finance must show what is still incomplete](https://wesleyvieira99.github.io/nu/en.html#04-1) | [case_04.py](labs/case_04.py) |
-| 05 | [Próximo vencimento, sem procurar entre meses](https://wesleyvieira99.github.io/nu/#05-1) | [The next due date, without searching across months](https://wesleyvieira99.github.io/nu/en.html#05-1) | [case_05.py](labs/case_05.py) |
-| 06 | [Modo Rua: explicar a permissão sem enfraquecer a proteção](https://wesleyvieira99.github.io/nu/#06-1) | [Modo Rua: explain permissions without weakening protection](https://wesleyvieira99.github.io/nu/en.html#06-1) | [case_06.py](labs/case_06.py) |
-| 07 | [Um centavo pode quebrar uma integração inteira](https://wesleyvieira99.github.io/nu/#07-1) | [One cent can break an entire integration](https://wesleyvieira99.github.io/nu/en.html#07-1) | [case_07.py](labs/case_07.py) |
-| 08 | [A experiência digital também termina na entrega do cartão](https://wesleyvieira99.github.io/nu/#08-1) | [The digital experience also ends with card delivery](https://wesleyvieira99.github.io/nu/en.html#08-1) | [case_08.py](labs/case_08.py) |
-| 09 | [Evoluir a fatura sem perder a tarefa principal](https://wesleyvieira99.github.io/nu/#09-1) | [Evolve the statement without losing the primary task](https://wesleyvieira99.github.io/nu/en.html#09-1) | [case_09.py](labs/case_09.py) |
-| 10 | [Comprovante no contexto da compra, com significado correto](https://wesleyvieira99.github.io/nu/#10-1) | [A purchase record in context, with the right meaning](https://wesleyvieira99.github.io/nu/en.html#10-1) | [case_10.py](labs/case_10.py) |
-| 11 | [Pagamento rápido, sem trocar correção por velocidade](https://wesleyvieira99.github.io/nu/#11-1) | [Fast payments without trading correctness for speed](https://wesleyvieira99.github.io/nu/en.html#11-1) | [case_11.py](labs/case_11.py) |
-| 12 | [Capacidade cloud como compromisso de produto](https://wesleyvieira99.github.io/nu/#12-1) | [Cloud capacity as a product commitment](https://wesleyvieira99.github.io/nu/en.html#12-1) | [case_12.py](labs/case_12.py) |
-| 13 | [Ownership que sobrevive à reorganização](https://wesleyvieira99.github.io/nu/#13-1) | [Ownership that survives reorganization](https://wesleyvieira99.github.io/nu/en.html#13-1) | [case_13.py](labs/case_13.py) |
-| 14 | [BDC: velocidade com contrato de experiência](https://wesleyvieira99.github.io/nu/#14-1) | [BDC: speed with an experience contract](https://wesleyvieira99.github.io/nu/en.html#14-1) | [case_14.py](labs/case_14.py) |
-| 15 | [Release mobile guiado pela jornada real](https://wesleyvieira99.github.io/nu/#15-1) | [Mobile releases guided by the actual customer journey](https://wesleyvieira99.github.io/nu/en.html#15-1) | [case_15.py](labs/case_15.py) |
-| 16 | [Precog: chegar ao especialista certo](https://wesleyvieira99.github.io/nu/#16-1) | [Precog: reaching the right specialist](https://wesleyvieira99.github.io/nu/en.html#16-1) | [case_16.py](labs/case_16.py) |
-| 17 | [Antifraude que responde dentro da jornada](https://wesleyvieira99.github.io/nu/#17-1) | [Fraud prevention that responds within the journey](https://wesleyvieira99.github.io/nu/en.html#17-1) | [case_17.py](labs/case_17.py) |
-| 18 | [A mesma feature no treino e na decisão](https://wesleyvieira99.github.io/nu/#18-1) | [The same feature in training and at decision time](https://wesleyvieira99.github.io/nu/en.html#18-1) | [case_18.py](labs/case_18.py) |
-| 19 | [Dark Mode: consistência que inclui legibilidade](https://wesleyvieira99.github.io/nu/#19-1) | [Dark Mode: consistency that includes readability](https://wesleyvieira99.github.io/nu/en.html#19-1) | [case_19.py](labs/case_19.py) |
-| 20 | [NuBraille: autonomia de ponta a ponta](https://wesleyvieira99.github.io/nu/#20-1) | [NuBraille: end-to-end autonomy](https://wesleyvieira99.github.io/nu/en.html#20-1) | [case_20.py](labs/case_20.py) |
+| 01 | [Pix de R$ 300 falha; estorno e estado precisam ficar claros](cases/pt/case_01.md) | [A BRL 300 Pix fails: make the refund and state visible](cases/en/case_01.md) | [Python](labs/case_01.py) |
+| 02 | [Pix recebido sem atualização do saldo: incidente de 8 de julho](cases/pt/case_02.md) | [Incoming Pix missing from the displayed balance: July 8 incident](cases/en/case_02.md) | [Python](labs/case_02.py) |
+| 03 | [Mais de R$ 2 milhões retidos: revisão e saída de conta com evidência](cases/pt/case_03.md) | [More than BRL 2 million held: evidence-based review and account exit](cases/en/case_03.md) | [Python](labs/case_03.py) |
+| 04 | [Câmera quebrada impede autorização facial: recuperação assistida](cases/pt/case_04.md) | [Broken camera blocks facial authorization: assisted recovery](cases/en/case_04.md) | [Python](labs/case_04.py) |
+| 05 | [Telefone novo, e-mail antigo: código que não chega](cases/pt/case_05.md) | [New phone, old email: an authorization code that never arrives](cases/en/case_05.md) | [Python](labs/case_05.py) |
+| 06 | [Contestação Airbnb em análise não permite anexar nova evidência](cases/pt/case_06.md) | [Airbnb dispute under review blocks additional evidence](cases/en/case_06.md) | [Python](labs/case_06.py) |
+| 07 | [Três Pix somam R$ 478,55; cliente pede clareza sobre o MED](cases/pt/case_07.md) | [Three Pix transfers totaling BRL 478.55: make MED progress explicit](cases/en/case_07.md) | [Python](labs/case_07.py) |
+| 08 | [Empréstimo contestado: evidência de acesso e decisão revisável](cases/pt/case_08.md) | [Disputed loan: access evidence and a reviewable decision](cases/en/case_08.md) | [Python](labs/case_08.py) |
+| 09 | [Fatura paga, limite incerto: rastrear a alocação do pagamento](cases/pt/case_09.md) | [Paid statement, uncertain credit: trace payment allocation](cases/en/case_09.md) | [Python](labs/case_09.py) |
+| 10 | [NuPay após erro exibido: repetição, duplicidade e juros](cases/pt/case_10.md) | [NuPay after an error message: retry, duplication and interest](cases/en/case_10.md) | [Python](labs/case_10.py) |
+| 11 | [Estorno em três lançamentos: tornar a fatura explicável](cases/pt/case_11.md) | [A refund in three entries: make the statement explain itself](cases/en/case_11.md) | [Python](labs/case_11.py) |
+| 12 | [Entregue no rastreio, ausente na mão: comprovar posse do cartão](cases/pt/case_12.md) | [Delivered in tracking, missing in hand: establish card possession](cases/en/case_12.md) | [Python](labs/case_12.py) |
+| 13 | [Teto do cartão virtual não é crédito disponível](cases/pt/case_13.md) | [A virtual card cap is not available credit](cases/en/case_13.md) | [Python](labs/case_13.py) |
+| 14 | [Antecipação paga fora da data: cotação, execução e desconto](cases/pt/case_14.md) | [An early repayment applied late: quote, execution and discount](cases/en/case_14.md) | [Python](labs/case_14.py) |
+| 15 | [Caixinhas: resgate indisponível e estado de serviço invisível](cases/pt/case_15.md) | [Money Boxes: unavailable withdrawals and an invisible service state](cases/en/case_15.md) | [Python](labs/case_15.py) |
+| 16 | [Portabilidade de investimentos: elegibilidade contraditória no cashback](cases/pt/case_16.md) | [Investment transfers: conflicting cashback eligibility answers](cases/en/case_16.md) | [Python](labs/case_16.py) |
+| 17 | [Ultravioleta: um saldo, duas unidades, uma escolha irreversível](cases/pt/case_17.md) | [Ultravioleta: one balance, two units, one irreversible choice](cases/en/case_17.md) | [Python](labs/case_17.py) |
+| 18 | [NuCel: portabilidade sem conclusão entre duas operadoras](cases/pt/case_18.md) | [NuCel: number portability stalled between two carriers](cases/en/case_18.md) | [Python](labs/case_18.py) |
+| 19 | [Conta Global: validar o objetivo antes de converter](cases/pt/case_19.md) | [Global Account: validate the goal before exchanging currency](cases/en/case_19.md) | [Python](labs/case_19.py) |
+| 20 | [NuPay: pagamento aprovado, pedido sem confirmação](cases/pt/case_20.md) | [NuPay: payment approved, order unconfirmed](cases/en/case_20.md) | [Python](labs/case_20.py) |
 
-## Organização · Repository layout
+## Run / Executar
 
-| Path | Português | English |
-| --- | --- | --- |
-| `docs/index.html` | Livro completo em português | Complete Portuguese reader |
-| `docs/en.html` | Livro completo em inglês | Complete English reader |
-| `docs/pdf/` | PDFs das duas edições | PDFs of both editions |
-| `labs/case_01.py` … `case_20.py` | Laboratórios Python e testes | Python labs and tests |
-| `labs/decision_core.clj` | Núcleo funcional e testes Clojure | Functional core and Clojure tests |
-| `labs/deps.edn` | Dependência Clojure fixada | Pinned Clojure dependency |
-| `snippets/` | 86 trechos, índices PT/EN | 86 snippets, PT/EN indexes |
-| `evidence/` e `sources.json` | Imagens, diagramas e proveniência | Images, diagrams and provenance |
-| `manuscripts/` | Conteúdo editável PT/EN | Editable PT/EN content |
-| `fonts/` | Fontes e licenças OFL | Typefaces and OFL licenses |
-| `evidence/diagram-technology-map.json` | Tecnologias propostas e fontes das marcas | Proposed technologies and official mark sources |
-| `validation/` | Revisão dos PDFs, menu de capítulos e geometria dos diagramas | PDF review, chapter navigation and diagram geometry checks |
-| `.github/workflows/labs.yml` | Validação dos testes Python | Python test validation |
+```bash
+cd labs
+python3 -m unittest discover -p "case_*.py" -v
+clojure -M decision_core.clj
+```
+
+Local validation: **241 Python tests** and **11 Clojure tests / 22 assertions** passed. Labs use synthetic data and never access bank accounts. Integration snippets are not all executable applications; the book labels unexecuted examples and production gaps. Clojure is pinned in `deps.edn`; dependency resolution needs internet.
+
+[GitHub Actions workflow](https://github.com/wesleyvieira99/nu/actions/workflows/labs.yml). The prior remote run could not start because GitHub reported an account billing lock; local validation records are in `validation/`. Pages publication is verified separately.
+
+## Evidence and value / Evidência e valor
+
+Public complaints establish reported experiences, not incidence, technical cause or a current generalized defect. Resolved outcomes and conflicting accounts are preserved. Screenshots are real cropped source captures. Official product photos and tutorials are context, not proof of an incident.
+
+Financial outputs are **conditional scenarios**, with assumptions and sensitivity, not realized Nubank returns. Customer principal is not bank revenue; released capacity is not automatically cash savings. Do not sum overlapping cases. Public financial context, model inputs and calculation checks are in `models/` and `validation/`.
+
+`labs/` executable models · `snippets/` literal book code · `cases/` full chapters · `manuscripts/` editable bilingual content · `evidence/` captures, logos and diagrams with provenance · `models/` financial assumptions · `sources.json` references · `checksums.json` file hashes.
+
+Research date: 23 October 2026. Brands and photographs belong to their respective owners. Official font sources and OFL licenses are in `fonts/`.
 
 ## Autor · Author
 

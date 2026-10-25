@@ -1,0 +1,11 @@
+{
+  "statement_id": "synthetic-statement-11",
+  "revision": 4,
+  "currency": "BRL",
+  "purchases_cents": 10000,
+  "refunds_cents": 10000,
+  "payments_cents": 0,
+  "amount_due_cents": 0,
+  "refund_entries": ["r0", "r1", "r2"],
+  "source_purchase": "p"
+}

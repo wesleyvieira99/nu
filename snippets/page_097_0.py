@@ -1,18 +1,11 @@
-# Validar a versão antes de registrar uma entrega.
-def dispatch(self, bill_id, expected_version, now, hour=9, minute=0):
-    if now.tzinfo is None:
-        raise ValueError("timezone_required")
-    bill = self.bills[bill_id]
-    if bill["version"] != expected_version or bill["paid"]:
-        return "obsolete"
-    target = local_instant(bill["due"], hour, minute, self.zone)
-    key = (bill_id, expected_version, bill["due"].isoformat())
-    if key in self.sent:
-        return "duplicate"
-    if now < target:
-        return "not_due"
-    # Não entregar lembrete que ficou preso até outro dia civil.
-    if now.astimezone(self.zone).date() != bill["due"]:
-        return "expired"
-    self.sent.add(key)
-    return "sent_locally"
+    def test_contact_change_invalidates_old_code(self):
+        self.r.change_contact("a", "other@example.test", True)
+        self.r.issue("a", "654321", 110, 60)
+        with self.assertRaises(ValueError):
+            self.r.verify("a", 1, "123456", 120)
+        self.assertTrue(self.r.verify("a", 2, "654321", 120))
+
+    def test_contact_proof_does_not_authorize_device(self):
+        self.assertTrue(self.r.verify("a", 1, "123456", 120))
+        self.assertTrue(self.r.verified)
+        self.assertFalse(self.r.device_authorized)

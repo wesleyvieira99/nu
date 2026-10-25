@@ -1,0 +1,1024 @@
+{
+  "as_of": "2026-10-23",
+  "currency": "BRL unless explicitly stated otherwise",
+  "realized_proposal_returns": false,
+  "aggregate_total_intentionally_absent": true,
+  "cases": [
+    {
+      "case": "01",
+      "model": {
+        "mode": "contact",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 120000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "volume": 20000,
+              "contact_delta": 0.05,
+              "unit_cost": 8,
+              "monthly_run_cost": 4000
+            },
+            "gross_after_variable_cost_BRL": "8000.00",
+            "monthly_net_BRL": "4000.00",
+            "annual_net_BRL": "48000.00",
+            "first_year_after_build_BRL": "-72000.00",
+            "break_even_months": "30.00"
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "volume": 50000,
+              "contact_delta": 0.1,
+              "unit_cost": 8,
+              "monthly_run_cost": 8000
+            },
+            "gross_after_variable_cost_BRL": "40000.00",
+            "monthly_net_BRL": "32000.00",
+            "annual_net_BRL": "384000.00",
+            "first_year_after_build_BRL": "264000.00",
+            "break_even_months": "3.75"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "volume": 100000,
+              "contact_delta": 0.15,
+              "unit_cost": 8,
+              "monthly_run_cost": 15000
+            },
+            "gross_after_variable_cost_BRL": "120000.00",
+            "monthly_net_BRL": "105000.00",
+            "annual_net_BRL": "1260000.00",
+            "first_year_after_build_BRL": "1140000.00",
+            "break_even_months": "1.14"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "02",
+      "model": {
+        "mode": "incident",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 150000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "incidents": 2,
+              "sessions": 20000,
+              "contact_delta": 0.01,
+              "unit_cost": 7,
+              "monthly_run_cost": 5000
+            },
+            "gross_after_variable_cost_BRL": "2800.00",
+            "monthly_net_BRL": "-2200.00",
+            "annual_net_BRL": "-26400.00",
+            "first_year_after_build_BRL": "-176400.00",
+            "break_even_months": null
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "incidents": 3,
+              "sessions": 40000,
+              "contact_delta": 0.02,
+              "unit_cost": 7,
+              "monthly_run_cost": 8000
+            },
+            "gross_after_variable_cost_BRL": "16800.00",
+            "monthly_net_BRL": "8800.00",
+            "annual_net_BRL": "105600.00",
+            "first_year_after_build_BRL": "-44400.00",
+            "break_even_months": "17.05"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "incidents": 4,
+              "sessions": 60000,
+              "contact_delta": 0.03,
+              "unit_cost": 7,
+              "monthly_run_cost": 12000
+            },
+            "gross_after_variable_cost_BRL": "50400.00",
+            "monthly_net_BRL": "38400.00",
+            "annual_net_BRL": "460800.00",
+            "first_year_after_build_BRL": "310800.00",
+            "break_even_months": "3.91"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "03",
+      "model": {
+        "mode": "review",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 180000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "cases": 1000,
+              "minutes_saved": 10,
+              "hour_cost": 90,
+              "realizable": 0.25,
+              "monthly_run_cost": 5000
+            },
+            "gross_after_variable_cost_BRL": "3750.00",
+            "monthly_net_BRL": "-1250.00",
+            "annual_net_BRL": "-15000.00",
+            "first_year_after_build_BRL": "-195000.00",
+            "break_even_months": null
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "cases": 2500,
+              "minutes_saved": 15,
+              "hour_cost": 90,
+              "realizable": 0.4,
+              "monthly_run_cost": 10000
+            },
+            "gross_after_variable_cost_BRL": "22500.00",
+            "monthly_net_BRL": "12500.00",
+            "annual_net_BRL": "150000.00",
+            "first_year_after_build_BRL": "-30000.00",
+            "break_even_months": "14.40"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "cases": 4000,
+              "minutes_saved": 20,
+              "hour_cost": 90,
+              "realizable": 0.5,
+              "monthly_run_cost": 18000
+            },
+            "gross_after_variable_cost_BRL": "60000.00",
+            "monthly_net_BRL": "42000.00",
+            "annual_net_BRL": "504000.00",
+            "first_year_after_build_BRL": "324000.00",
+            "break_even_months": "4.29"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "04",
+      "model": {
+        "mode": "assisted",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 110000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "journeys": 3000,
+              "contacts_saved": 0.2,
+              "contact_cost": 9,
+              "extra_reviews": 0.1,
+              "review_cost": 18,
+              "monthly_run_cost": 3000
+            },
+            "gross_after_variable_cost_BRL": "0.00",
+            "monthly_net_BRL": "-3000.00",
+            "annual_net_BRL": "-36000.00",
+            "first_year_after_build_BRL": "-146000.00",
+            "break_even_months": null
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "journeys": 8000,
+              "contacts_saved": 0.4,
+              "contact_cost": 9,
+              "extra_reviews": 0.08,
+              "review_cost": 18,
+              "monthly_run_cost": 6000
+            },
+            "gross_after_variable_cost_BRL": "17280.00",
+            "monthly_net_BRL": "11280.00",
+            "annual_net_BRL": "135360.00",
+            "first_year_after_build_BRL": "25360.00",
+            "break_even_months": "9.75"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "journeys": 15000,
+              "contacts_saved": 0.6,
+              "contact_cost": 9,
+              "extra_reviews": 0.05,
+              "review_cost": 18,
+              "monthly_run_cost": 10000
+            },
+            "gross_after_variable_cost_BRL": "67500.00",
+            "monthly_net_BRL": "57500.00",
+            "annual_net_BRL": "690000.00",
+            "first_year_after_build_BRL": "580000.00",
+            "break_even_months": "1.91"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "05",
+      "model": {
+        "mode": "delivery",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 100000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "journeys": 10000,
+              "contact_delta": 0.05,
+              "contact_cost": 8,
+              "messages": 15000,
+              "message_cost": 0.03,
+              "monthly_run_cost": 4000
+            },
+            "gross_after_variable_cost_BRL": "3550.00",
+            "monthly_net_BRL": "-450.00",
+            "annual_net_BRL": "-5400.00",
+            "first_year_after_build_BRL": "-105400.00",
+            "break_even_months": null
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "journeys": 30000,
+              "contact_delta": 0.12,
+              "contact_cost": 8,
+              "messages": 45000,
+              "message_cost": 0.03,
+              "monthly_run_cost": 7000
+            },
+            "gross_after_variable_cost_BRL": "27450.00",
+            "monthly_net_BRL": "20450.00",
+            "annual_net_BRL": "245400.00",
+            "first_year_after_build_BRL": "145400.00",
+            "break_even_months": "4.89"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "journeys": 60000,
+              "contact_delta": 0.18,
+              "contact_cost": 8,
+              "messages": 90000,
+              "message_cost": 0.03,
+              "monthly_run_cost": 12000
+            },
+            "gross_after_variable_cost_BRL": "83700.00",
+            "monthly_net_BRL": "71700.00",
+            "annual_net_BRL": "860400.00",
+            "first_year_after_build_BRL": "760400.00",
+            "break_even_months": "1.39"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "06",
+      "model": {
+        "mode": "evidence",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 140000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "dossiers": 2000,
+              "minutes_saved": 4,
+              "hour_cost": 75,
+              "realizable": 0.25,
+              "uploads": 3000,
+              "scan_cost": 0.2,
+              "monthly_run_cost": 3000
+            },
+            "gross_after_variable_cost_BRL": "1900.00",
+            "monthly_net_BRL": "-1100.00",
+            "annual_net_BRL": "-13200.00",
+            "first_year_after_build_BRL": "-153200.00",
+            "break_even_months": null
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "dossiers": 6000,
+              "minutes_saved": 6,
+              "hour_cost": 75,
+              "realizable": 0.4,
+              "uploads": 9000,
+              "scan_cost": 0.2,
+              "monthly_run_cost": 6000
+            },
+            "gross_after_variable_cost_BRL": "16200.00",
+            "monthly_net_BRL": "10200.00",
+            "annual_net_BRL": "122400.00",
+            "first_year_after_build_BRL": "-17600.00",
+            "break_even_months": "13.73"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "dossiers": 12000,
+              "minutes_saved": 8,
+              "hour_cost": 75,
+              "realizable": 0.5,
+              "uploads": 18000,
+              "scan_cost": 0.2,
+              "monthly_run_cost": 10000
+            },
+            "gross_after_variable_cost_BRL": "56400.00",
+            "monthly_net_BRL": "46400.00",
+            "annual_net_BRL": "556800.00",
+            "first_year_after_build_BRL": "416800.00",
+            "break_even_months": "3.02"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "07",
+      "model": {
+        "mode": "med",
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "build_cost_assumed_BRL": 160000,
+        "results": [
+          {
+            "name": "conservative",
+            "inputs_assumed": {
+              "active_cases": 3000,
+              "contacts_saved": 0.3,
+              "unit_cost": 9,
+              "monthly_run_cost": 5000
+            },
+            "gross_after_variable_cost_BRL": "8100.00",
+            "monthly_net_BRL": "3100.00",
+            "annual_net_BRL": "37200.00",
+            "first_year_after_build_BRL": "-122800.00",
+            "break_even_months": "51.61"
+          },
+          {
+            "name": "base",
+            "inputs_assumed": {
+              "active_cases": 8000,
+              "contacts_saved": 0.6,
+              "unit_cost": 9,
+              "monthly_run_cost": 10000
+            },
+            "gross_after_variable_cost_BRL": "43200.00",
+            "monthly_net_BRL": "33200.00",
+            "annual_net_BRL": "398400.00",
+            "first_year_after_build_BRL": "238400.00",
+            "break_even_months": "4.82"
+          },
+          {
+            "name": "ambitious",
+            "inputs_assumed": {
+              "active_cases": 15000,
+              "contacts_saved": 0.8,
+              "unit_cost": 9,
+              "monthly_run_cost": 18000
+            },
+            "gross_after_variable_cost_BRL": "108000.00",
+            "monthly_net_BRL": "90000.00",
+            "annual_net_BRL": "1080000.00",
+            "first_year_after_build_BRL": "920000.00",
+            "break_even_months": "1.78"
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "08",
+      "model": {
+        "currency": "BRL",
+        "period": "annual steady-state capacity; implementation charged in year1",
+        "all_inputs_assumed": true,
+        "implementation": 240000,
+        "formula": "N * minutes_saved / 60 * hourly_cost",
+        "hourly_cost": 90,
+        "scenarios": [
+          {
+            "dossiers": 12000,
+            "minutes_saved": 8,
+            "gross": 144000,
+            "opex": 60000,
+            "year_one_net": -156000,
+            "break_even_dossiers_year1": 25000.0
+          },
+          {
+            "dossiers": 24000,
+            "minutes_saved": 14,
+            "gross": 504000,
+            "opex": 90000,
+            "year_one_net": 174000,
+            "break_even_dossiers_year1": 15714.285714285714
+          },
+          {
+            "dossiers": 40000,
+            "minutes_saved": 18,
+            "gross": 1080000,
+            "opex": 120000,
+            "year_one_net": 720000,
+            "break_even_dossiers_year1": 13333.333333333334
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "09",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 260000,
+        "annual_opex": 60000,
+        "contact_cost": 18,
+        "reconciliation_hour_cost": 100,
+        "formula": "payments * contact_reduction *18 + payments/1000 * hours_saved_per_1000 *100",
+        "scenarios": [
+          {
+            "payments": 60000,
+            "contact_reduction_per_payment": "0.06",
+            "hours_saved_per_1000": 1,
+            "gross": 70800,
+            "opex": 60000,
+            "year_one_net": -249200,
+            "break_even_payments_year1": 271186.4406779661
+          },
+          {
+            "payments": 120000,
+            "contact_reduction_per_payment": "0.10",
+            "hours_saved_per_1000": 2,
+            "gross": 240000,
+            "opex": 60000,
+            "year_one_net": -80000,
+            "break_even_payments_year1": 160000.0
+          },
+          {
+            "payments": 240000,
+            "contact_reduction_per_payment": "0.14",
+            "hours_saved_per_1000": 3,
+            "gross": 676800,
+            "opex": 60000,
+            "year_one_net": 356800,
+            "break_even_payments_year1": 113475.17730496454
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "10",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 180000,
+        "annual_opex": 36000,
+        "handling_cost_per_incident": 50,
+        "irrecoverable_charge_cost_per_incident": 40,
+        "formula": "ambiguous_intents * confirmed_duplicate_rate * prevention_rate *90",
+        "scenarios": [
+          {
+            "ambiguous_intents": 30000,
+            "confirmed_duplicate_rate": "0.005",
+            "prevention_rate": "0.30",
+            "avoided_incidents": 45,
+            "gross": 4050,
+            "opex": 36000,
+            "year_one_net": -211950,
+            "break_even_avoided_incidents_year1": 2400
+          },
+          {
+            "ambiguous_intents": 60000,
+            "confirmed_duplicate_rate": "0.01",
+            "prevention_rate": "0.50",
+            "avoided_incidents": 300,
+            "gross": 27000,
+            "opex": 36000,
+            "year_one_net": -189000,
+            "break_even_avoided_incidents_year1": 2400
+          },
+          {
+            "ambiguous_intents": 100000,
+            "confirmed_duplicate_rate": "0.02",
+            "prevention_rate": "0.60",
+            "avoided_incidents": 1200,
+            "gross": 108000,
+            "opex": 36000,
+            "year_one_net": -108000,
+            "break_even_avoided_incidents_year1": 2400
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "11",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 120000,
+        "annual_opex": 24000,
+        "contact_cost": 16,
+        "formula": "eligible_refunds * avoided_contacts_per_refund *16",
+        "scenarios": [
+          {
+            "eligible_refunds": 200000,
+            "avoided_contacts_per_refund": "0.005",
+            "gross": 16000,
+            "opex": 24000,
+            "year_one_net": -128000,
+            "break_even_refunds_year1": 1800000.0
+          },
+          {
+            "eligible_refunds": 500000,
+            "avoided_contacts_per_refund": "0.015",
+            "gross": 120000,
+            "opex": 24000,
+            "year_one_net": -24000,
+            "break_even_refunds_year1": 600000.0
+          },
+          {
+            "eligible_refunds": 1000000,
+            "avoided_contacts_per_refund": "0.025",
+            "gross": 400000,
+            "opex": 24000,
+            "year_one_net": 256000,
+            "break_even_refunds_year1": 360000.0
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "12",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 90000,
+        "annual_opex": 24000,
+        "card_unit_cost": 9,
+        "shipping_unit_cost": 18,
+        "incremental_support_unit_cost": 12,
+        "formula": "shipments * avoided_reissue_rate *39",
+        "scenarios": [
+          {
+            "shipments": 50000,
+            "avoided_reissue_rate": "0.002",
+            "avoided_reissues": 100,
+            "gross": 3900,
+            "opex": 24000,
+            "year_one_net": -110100,
+            "break_even_avoided_reissues_year1": 2923.076923076923
+          },
+          {
+            "shipments": 100000,
+            "avoided_reissue_rate": "0.004",
+            "avoided_reissues": 400,
+            "gross": 15600,
+            "opex": 24000,
+            "year_one_net": -98400,
+            "break_even_avoided_reissues_year1": 2923.076923076923
+          },
+          {
+            "shipments": 150000,
+            "avoided_reissue_rate": "0.008",
+            "avoided_reissues": 1200,
+            "gross": 46800,
+            "opex": 24000,
+            "year_one_net": -67200,
+            "break_even_avoided_reissues_year1": 2923.076923076923
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "13",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 60000,
+        "annual_opex": 12000,
+        "contact_cost": 16,
+        "formula": "eligible_users * avoided_contacts_per_user *16",
+        "excluded": "Transaction volume and credit principal are not revenue; no transaction contribution modeled.",
+        "scenarios": [
+          {
+            "eligible_users": 100000,
+            "avoided_contacts_per_user": "0.004",
+            "gross": 6400,
+            "opex": 12000,
+            "year_one_net": -65600,
+            "break_even_users_year1": 1125000.0
+          },
+          {
+            "eligible_users": 250000,
+            "avoided_contacts_per_user": "0.008",
+            "gross": 32000,
+            "opex": 12000,
+            "year_one_net": -40000,
+            "break_even_users_year1": 562500.0
+          },
+          {
+            "eligible_users": 500000,
+            "avoided_contacts_per_user": "0.012",
+            "gross": 96000,
+            "opex": 12000,
+            "year_one_net": 24000,
+            "break_even_users_year1": 375000.0
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "14",
+      "model": {
+        "currency": "BRL",
+        "all_inputs_assumed": true,
+        "implementation": 150000,
+        "annual_opex": 30000,
+        "rework_cost_per_incident": 140,
+        "incremental_support_per_incident": 20,
+        "formula": "eligible_anticipations * avoided_incident_rate *160",
+        "scenarios": [
+          {
+            "eligible_anticipations": 30000,
+            "avoided_incident_rate": "0.003",
+            "avoided_incidents": 90,
+            "gross": 14400,
+            "opex": 30000,
+            "year_one_net": -165600,
+            "break_even_anticipations_year1": 375000.0
+          },
+          {
+            "eligible_anticipations": 70000,
+            "avoided_incident_rate": "0.006",
+            "avoided_incidents": 420,
+            "gross": 67200,
+            "opex": 30000,
+            "year_one_net": -112800,
+            "break_even_anticipations_year1": 187500.0
+          },
+          {
+            "eligible_anticipations": 120000,
+            "avoided_incident_rate": "0.01",
+            "avoided_incidents": 1200,
+            "gross": 192000,
+            "opex": 30000,
+            "year_one_net": 12000,
+            "break_even_anticipations_year1": 112500.0
+          }
+        ]
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "15",
+      "model": {
+        "name": "avoided support capacity",
+        "currency": "BRL",
+        "period": "month",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "affected_intents": 20000,
+          "minutes_per_contact": 8,
+          "loaded_brl_per_hour": 60,
+          "monthly_operation_brl": 5000,
+          "implementation_brl": 120000
+        },
+        "formula": "gross = affected_intents * absolute_contact_reduction * minutes/60 * loaded_hour; net = gross - monthly_operation; break_even_reduction = monthly_operation / (affected_intents * minutes/60 * loaded_hour)",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_contact_reduction_fraction": 0.02,
+            "avoided_contacts": 400,
+            "capacity_hours": 53.33,
+            "capacity_value_brl": 3200.0,
+            "net_capacity_value_brl": -1800.0,
+            "payback_months_if_cash_realized": null
+          },
+          {
+            "name": "base",
+            "assumed_contact_reduction_fraction": 0.05,
+            "avoided_contacts": 1000,
+            "capacity_hours": 133.33,
+            "capacity_value_brl": 8000.0,
+            "net_capacity_value_brl": 3000.0,
+            "payback_months_if_cash_realized": 40.0
+          },
+          {
+            "name": "ambitious",
+            "assumed_contact_reduction_fraction": 0.1,
+            "avoided_contacts": 2000,
+            "capacity_hours": 266.67,
+            "capacity_value_brl": 16000.0,
+            "net_capacity_value_brl": 11000.0,
+            "payback_months_if_cash_realized": 10.91
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "absolute_contact_reduction": 0.03125,
+          "avoided_contacts": 625
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "16",
+      "model": {
+        "name": "avoidable campaign support workload",
+        "currency": "BRL",
+        "period": "month",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "participants": 12000,
+          "repeat_contacts_per_case": 1.5,
+          "loaded_cost_per_contact_brl": 18,
+          "monthly_operation_brl": 4000,
+          "implementation_brl": 90000
+        },
+        "formula": "gross = participants * absolute_dispute_reduction * repeat_contacts * loaded_contact_cost; net = gross - operating_cost; break_even_reduction = operating_cost / (participants * repeat_contacts * loaded_contact_cost)",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_dispute_reduction_fraction": 0.01,
+            "avoided_cases": 120.0,
+            "avoided_contacts": 180.0,
+            "gross_capacity_value_brl": 3240.0,
+            "net_capacity_value_brl": -760.0,
+            "payback_months_if_cash_realized": null
+          },
+          {
+            "name": "base",
+            "assumed_dispute_reduction_fraction": 0.03,
+            "avoided_cases": 360.0,
+            "avoided_contacts": 540.0,
+            "gross_capacity_value_brl": 9720.0,
+            "net_capacity_value_brl": 5720.0,
+            "payback_months_if_cash_realized": 15.73
+          },
+          {
+            "name": "ambitious",
+            "assumed_dispute_reduction_fraction": 0.06,
+            "avoided_cases": 720.0,
+            "avoided_contacts": 1080.0,
+            "gross_capacity_value_brl": 19440.0,
+            "net_capacity_value_brl": 15440.0,
+            "payback_months_if_cash_realized": 5.83
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "absolute_dispute_reduction": 0.012345679012345678,
+          "avoided_cases": 148.14814814814815
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "17",
+      "model": {
+        "name": "avoided misunderstanding handling",
+        "currency": "BRL",
+        "period": "month",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "redemptions": 40000,
+          "assumed_misunderstanding_rate": 0.01,
+          "handling_cost_brl": 45,
+          "assumed_discretionary_remediation_fraction": 0.15,
+          "remediation_cost_brl": 100,
+          "monthly_operation_brl": 4500,
+          "implementation_brl": 150000
+        },
+        "formula": "cases = redemptions * assumed_misunderstanding_rate; gross = cases * prevented_fraction * (handling_cost + remediation_fraction * remediation_cost); net = gross - operation; break_even_prevention = operation / (cases * unit_cost)",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_prevented_fraction": 0.25,
+            "prevented_cases": 100.0,
+            "gross_avoidable_cost_brl": 6000.0,
+            "net_potential_brl": 1500.0,
+            "payback_months_if_realized": 100.0
+          },
+          {
+            "name": "base",
+            "assumed_prevented_fraction": 0.5,
+            "prevented_cases": 200.0,
+            "gross_avoidable_cost_brl": 12000.0,
+            "net_potential_brl": 7500.0,
+            "payback_months_if_realized": 20.0
+          },
+          {
+            "name": "ambitious",
+            "assumed_prevented_fraction": 0.75,
+            "prevented_cases": 300.0,
+            "gross_avoidable_cost_brl": 18000.0,
+            "net_potential_brl": 13500.0,
+            "payback_months_if_realized": 11.11
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "prevented_cases": 75,
+          "prevention_fraction": 0.1875
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "18",
+      "model": {
+        "name": "incremental activated lines pilot cohort",
+        "currency": "BRL",
+        "period": "one pilot cohort, six active months per incremental line",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "eligible_requests": 5000,
+          "assumed_active_months_per_extra_line": 6,
+          "assumed_contribution_brl_per_active_month": 12,
+          "pilot_operating_cost_brl": 5000,
+          "incremental_pilot_implementation_brl": 20000
+        },
+        "formula": "cohort_contribution = eligible_requests * activation_uplift * active_months * monthly_contribution; net = cohort_contribution - pilot_operation - pilot_implementation; break_even_uplift = total_cost / (requests * active_months * contribution)",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_activation_uplift_fraction": 0.02,
+            "extra_activations": 100.0,
+            "six_month_contribution_brl": 7200.0,
+            "net_after_pilot_costs_brl": -17800.0
+          },
+          {
+            "name": "base",
+            "assumed_activation_uplift_fraction": 0.05,
+            "extra_activations": 250.0,
+            "six_month_contribution_brl": 18000.0,
+            "net_after_pilot_costs_brl": -7000.0
+          },
+          {
+            "name": "ambitious",
+            "assumed_activation_uplift_fraction": 0.08,
+            "extra_activations": 400.0,
+            "six_month_contribution_brl": 28800.0,
+            "net_after_pilot_costs_brl": 3800.0
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "extra_line_equivalents": 347.22222222222223,
+          "minimum_whole_lines": 348,
+          "activation_uplift": 0.06944444444444445
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "19",
+      "model": {
+        "name": "avoided capability remediation net of forgone contribution",
+        "currency": "BRL",
+        "period": "month",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "conversion_intents": 10000,
+          "assumed_mismatch_rate": 0.02,
+          "handling_cost_brl": 30,
+          "assumed_remediation_fraction": 0.2,
+          "remediation_cost_brl": 100,
+          "forgone_contribution_brl": 3,
+          "monthly_operation_brl": 3000,
+          "implementation_brl": 80000
+        },
+        "formula": "net = intents * mismatch_rate * prevention * (handling_cost + remediation_fraction * remediation_cost - forgone_contribution) - operation; break_even_prevention = operation / (intents * mismatch_rate * net_unit_value)",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_prevention_fraction": 0.25,
+            "avoided_mismatches": 50.0,
+            "gross_avoidable_cost_brl": 2500.0,
+            "forgone_contribution_brl": 150.0,
+            "net_potential_brl": -650.0,
+            "payback_months_if_realized": null
+          },
+          {
+            "name": "base",
+            "assumed_prevention_fraction": 0.5,
+            "avoided_mismatches": 100.0,
+            "gross_avoidable_cost_brl": 5000.0,
+            "forgone_contribution_brl": 300.0,
+            "net_potential_brl": 1700.0,
+            "payback_months_if_realized": 47.06
+          },
+          {
+            "name": "ambitious",
+            "assumed_prevention_fraction": 0.75,
+            "avoided_mismatches": 150.0,
+            "gross_avoidable_cost_brl": 7500.0,
+            "forgone_contribution_brl": 450.0,
+            "net_potential_brl": 4050.0,
+            "payback_months_if_realized": 19.75
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "avoided_mismatches": 63.829787234042556,
+          "prevention_fraction": 0.3191489361702128
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    },
+    {
+      "case": "20",
+      "model": {
+        "name": "reconciliation capacity and unresolved exposure",
+        "currency": "BRL",
+        "period": "month",
+        "all_nonpublic_inputs": "assumed, not Nubank data",
+        "parameters": {
+          "monthly_cases": 500,
+          "assumed_manual_minutes_baseline": 25,
+          "loaded_hour_brl": 60,
+          "monthly_operation_brl": 2000,
+          "implementation_brl": 60000,
+          "assumed_average_disputed_amount_brl": 120
+        },
+        "formula": "capacity_value = cases * saved_minutes / 60 * loaded_hour; net = capacity_value - operation; break_even_minutes = operation / (cases * loaded_hour/60); exposure_brl_days = cases * assumed_average_amount * pending_days_reduced, not profit",
+        "scenarios": [
+          {
+            "name": "conservative",
+            "assumed_minutes_saved": 10,
+            "freed_hours": 83.33,
+            "gross_capacity_value_brl": 5000,
+            "net_capacity_value_brl": 3000,
+            "payback_months_if_cash_realized": 20.0,
+            "assumed_pending_days_reduced": 2,
+            "exposure_brl_days_reduced": 120000
+          },
+          {
+            "name": "base",
+            "assumed_minutes_saved": 15,
+            "freed_hours": 125.0,
+            "gross_capacity_value_brl": 7500,
+            "net_capacity_value_brl": 5500,
+            "payback_months_if_cash_realized": 10.91,
+            "assumed_pending_days_reduced": 5,
+            "exposure_brl_days_reduced": 300000
+          },
+          {
+            "name": "ambitious",
+            "assumed_minutes_saved": 20,
+            "freed_hours": 166.67,
+            "gross_capacity_value_brl": 10000,
+            "net_capacity_value_brl": 8000,
+            "payback_months_if_cash_realized": 7.5,
+            "assumed_pending_days_reduced": 8,
+            "exposure_brl_days_reduced": 480000
+          }
+        ],
+        "realized_roi": false,
+        "break_even": {
+          "minutes_saved_per_case": 4
+        },
+        "fraction_unit": "All input fields ending in fraction are dimensionless; 0.02 means 2 percentage points when absolute uplift/reduction is described.",
+        "arithmetic_check": "PASS: independently recomputed with decimal.Decimal; rounded payback checked to 2 places."
+      },
+      "interpretation": "All nonpublic inputs are assumptions. Outputs are conditional; capacity is not automatically cash savings. Do not aggregate overlapping cases."
+    }
+  ]
+}

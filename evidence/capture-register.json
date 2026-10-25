@@ -1,0 +1,387 @@
+{
+  "captured_local_date": "2026-10-23",
+  "timezone": "America/Sao_Paulo",
+  "captures": [
+    {
+      "case": "01",
+      "source": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+      "url": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "d60bc8d8f50137477c952a1c02d053fa5351e236d2b3e4cec8fec1fc6bb57f41",
+      "sha256": "9124d5da42beb1caa0743975b9d7faaf379e7a006ab9578da570fd151495ceb3",
+      "bytes": 117717,
+      "file": "source-01.png"
+    },
+    {
+      "case": "02",
+      "source": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+      "url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+      "publisher": "Canaltech",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        240,
+        310,
+        1140,
+        450
+      ],
+      "raw_capture_sha256": "a1e41fb015b5672524ed2b2ed5b4302bb2f7cdbcda2f95f07a97f6d23b35092d",
+      "sha256": "26ca480e7b721c2712576d1a04e6106771442ba3e8c7864368000614cb43fad6",
+      "bytes": 79029,
+      "file": "source-02.png"
+    },
+    {
+      "case": "03",
+      "source": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+      "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+      "publisher": "Metrópoles",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        8,
+        450,
+        632,
+        612
+      ],
+      "raw_capture_sha256": "b7182a8d22e0e04929e75780116adbab6c47ab7fcde155c260f284a3c8b2bfe4",
+      "sha256": "f2ab79d8952f28eef3a21cd1989b81547e627ebb0dbd9f3932aad260e4eaf258",
+      "bytes": 90764,
+      "file": "source-03.png"
+    },
+    {
+      "case": "04",
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "3d852ec30d6df9091879aa459d450637a465fffb2e31713342e501c6b6a32d93",
+      "sha256": "2757c7e743debcc67fa8a3cb17b51cf78b91c0288021a6e6af58ae1804413a54",
+      "bytes": 132093,
+      "file": "source-04.png"
+    },
+    {
+      "case": "05",
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "42b389828191fad809e4708a34a505e4bccb2ddac7789a3833379fbbcc0bd160",
+      "sha256": "d810e95d8af2f0ed86f5185f30826cf8f1449cfb26943dc2d54d7d88166afc1b",
+      "bytes": 153453,
+      "file": "source-05.png"
+    },
+    {
+      "case": "06",
+      "source": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+      "url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "c89456769f82150217640640504f9e3a38c7ccce6d54ce82a7a65aecfa64dcdb",
+      "sha256": "7dfa2c57915015dc49220acd6728f90c892ba2cfe5ae26199345409c8a9f415a",
+      "bytes": 135718,
+      "file": "source-06.png"
+    },
+    {
+      "case": "07",
+      "source": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+      "url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "54af3392764e0404cece7e37bceb35e1d4e4d36f095242744f7ab630f0414840",
+      "sha256": "b22f6abf671f4b0a92047b40ce62d94806fd6e13898f572256b895c1e3058cfe",
+      "bytes": 160836,
+      "file": "source-07.png"
+    },
+    {
+      "case": "08",
+      "source": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        302
+      ],
+      "raw_capture_sha256": "fabfa81c506e822a66eec0e99b306952fd2864f0bc925f0424a995b8b8fc65dc",
+      "sha256": "f5cc9dd9d92bcce34ad86354482cbecc7d77bee8a9414451190d92c14eb6badb",
+      "bytes": 112730,
+      "file": "source-08.png"
+    },
+    {
+      "case": "09",
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        302
+      ],
+      "raw_capture_sha256": "6c3ad6df36f199603ca0b48c27842a2af1eba76ab7a56d9907ebcb7060a1cad9",
+      "sha256": "f4a1759861f43a38762fd1e13ea820f943e49b9c9f3b66ca4b3cd55700beaa8d",
+      "bytes": 95767,
+      "file": "source-09.png"
+    },
+    {
+      "case": "10",
+      "source": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "d1eb57ce1d5c340abdf6c7a5d51c1f3d70368cbdfb80287b4f4ed82bf8a8d5c0",
+      "sha256": "22a6ec10d1a6993eb41c78bbfef9647ed29fd2df4f2a1038497ba9af6d1cd74e",
+      "bytes": 95209,
+      "file": "source-10.png"
+    },
+    {
+      "case": "11",
+      "source": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
+      "url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        302
+      ],
+      "raw_capture_sha256": "342c2ba1394c2e9dd1a86eac72d65dcc75eb95bd9586e0d38ab1a4dfec998f5e",
+      "sha256": "d7d5f8319e112c8ce0c24ab973c1eac960b877086a50107310c9b983a4a13f82",
+      "bytes": 65750,
+      "file": "source-11.png"
+    },
+    {
+      "case": "12",
+      "source": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
+      "url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "07aa52409a6000d69ca242d82770a5be4fbc25fc1743217c32f1d1d6d1e3c740",
+      "sha256": "15b1f323eea38690d6bb82490792f9ea437b8d48df423f1e2ffbc7c6637e6cd9",
+      "bytes": 144582,
+      "file": "source-12.png"
+    },
+    {
+      "case": "13",
+      "source": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
+      "url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        302
+      ],
+      "raw_capture_sha256": "b17638855c38b58928dfad9cc16c4a6c542cbc13c1caced31e116b42c1b6037d",
+      "sha256": "1a9bec7504909d6dec507dd5cf1125934e72094d5af5ed5773a24f65dd0f33f0",
+      "bytes": 97364,
+      "file": "source-13.png"
+    },
+    {
+      "case": "14",
+      "source": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        302
+      ],
+      "raw_capture_sha256": "94480e125a51ef95d0e131d6fb6b96e29ed60ddc24ee0c5fc7d54822b6302d14",
+      "sha256": "0225672e5e5867113c05c81920f0f6b7fd960ea151362991fa9cee94f091c062",
+      "bytes": 114682,
+      "file": "source-14.png"
+    },
+    {
+      "case": "15",
+      "source": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
+      "url": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "676cd52decfc8187605c1339896da690fc125927593117146bd40e4da2027789",
+      "sha256": "a0cbc17f479162d841667f9d46f047d02a28bdc5f7ddd7f09113bbf82ee683f5",
+      "bytes": 123380,
+      "file": "source-15.png"
+    },
+    {
+      "case": "16",
+      "source": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
+      "url": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "344100ad8c5ed318ba84841cbc7cbee5252683a468d4857ff6bacdbd619bc734",
+      "sha256": "80796f3e2c7e5ec2e896a1b4cd06f88e158c01e281bd248f50db55bf5832387c",
+      "bytes": 113108,
+      "file": "source-16.png"
+    },
+    {
+      "case": "17",
+      "source": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
+      "url": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "25e23c9f4b14aa690f9e6f703e500f7d92f4c25ccb5296c8875a6ff7533c09d6",
+      "sha256": "21be45d3fe74c0bc8211601059a2c043ac9fcac19bcc0821a13356d37d9d7743",
+      "bytes": 134849,
+      "file": "source-17.png"
+    },
+    {
+      "case": "18",
+      "source": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
+      "url": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "d9125bd59cce7fc8d939f510d205b1bf7a3a8074eb622c5b22b2dea536c8bc4e",
+      "sha256": "f7cd9437fdf9058673420ef444cf5006b98827da964b73790eba1d2e3679a588",
+      "bytes": 130138,
+      "file": "source-18.png"
+    },
+    {
+      "case": "19",
+      "source": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
+      "url": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "4af786edf48f82a0274623dfc9e84e69f4f087007859f5c256449213dcda1dd9",
+      "sha256": "dfb3b6f2d8ece2d633f7e4f10b26d2eb2092bde78f65a5a615cf31280281c08c",
+      "bytes": 143029,
+      "file": "source-19.png"
+    },
+    {
+      "case": "20",
+      "source": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
+      "publisher": "Reclame AQUI",
+      "kind": "evidence",
+      "captured_local_date": "2026-10-23",
+      "method": "Actual browser viewport, cropped to source title, status and/or publication metadata",
+      "crop_pixels": [
+        0,
+        70,
+        1280,
+        336
+      ],
+      "raw_capture_sha256": "2e985514ac4dc1c486499eced743a62d8789e4a8e3e77a3d2feab38b7851d761",
+      "sha256": "e46b96857d36bde32d59194f2cf0d9517d71024a44d29e02d46ab6382ec6da1e",
+      "bytes": 123049,
+      "file": "source-20.png"
+    }
+  ],
+  "note": "Source headers are actual screenshots. The book separately summarizes allegations, company replies and outcomes; no customer names or private account identifiers are reproduced."
+}

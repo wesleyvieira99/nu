@@ -1,24 +1,13 @@
-(ns portfolio.conditions)
-
-(def required-components #{:balance :limit})
-
-(defn fresh? [now max-age parts]
-  (and
-    (every? #(contains? parts %) required-components)
-    (every?
-      (fn [{:keys [observed-at]}]
-        (<= 0 (- now observed-at) max-age))
-      (vals parts))))
-
-(defn read-conditions
-  [projection now max-age canonical-reader]
-  (if (fresh? now max-age projection)
-    {:source :projection
-     :purpose :display-conditions
-     :data projection}
-    {:source :canonical
-     :purpose :display-conditions
-     :data (canonical-reader)}))
-
-;; canonical-reader é contrato proposto, não API do Nu.
-;; Autorizar pagamento pertence a outra fronteira.
+(defn explain-statement [entries]
+  (let [sum-kind (fn [kind]
+                   (reduce + (map :cents
+                     (filter #(= kind (:kind %)) entries))))
+        purchases (sum-kind :purchase)
+        refunds (sum-kind :refund)
+        payments (sum-kind :payment)
+        signed (- purchases refunds payments)]
+    {:purchases purchases
+     :refunds refunds
+     :payments payments
+     :amount-due (max 0 signed)
+     :credit-balance (max 0 (- signed))}))

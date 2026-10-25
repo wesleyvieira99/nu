@@ -1,131 +1,159 @@
-"""Caso 08: ingestão logística sintética; Python stdlib, sem parceiros reais."""
+"""Synthetic dispute workflow, not Nubank software or a fraud classifier.
+
+SQLite models one durable authority. Roles are injected trusted server context,
+not caller-supplied credentials. Production needs identity, scoped access,
+evidence retention, legal policy and independently validated review decisions.
+Device evidence alone never produces a consent finding in this model.
+"""
 import hashlib
-from concurrent.futures import ThreadPoolExecutor
 import json
 import sqlite3
 import tempfile
-import threading
 import unittest
 from pathlib import Path
 
 
-class Timeline:
+class Dispute:
     def __init__(self, path):
         self.db = sqlite3.connect(path)
-        self.db.executescript('''
-        CREATE TABLE IF NOT EXISTS events (
-          event_id TEXT PRIMARY KEY, digest TEXT NOT NULL);
-        CREATE TABLE IF NOT EXISTS shipments (
-          shipment_id TEXT PRIMARY KEY, seq INTEGER NOT NULL,
-          status TEXT NOT NULL, next_step TEXT NOT NULL);
-        ''')
+        self.db.execute('''CREATE TABLE IF NOT EXISTS events(
+            seq INTEGER PRIMARY KEY, action_id TEXT NOT NULL UNIQUE,
+            payload TEXT NOT NULL)''')
 
-    def ingest(self, event, crash=False):
+    def history(self):
+        return [json.loads(row[0]) for row in self.db.execute(
+            'SELECT payload FROM events ORDER BY seq')]
+
+    # BOOK_CORE_BEGIN
+    def append(self, action_id, expected, actor, role, kind, evidence):
+        if not isinstance(action_id, str) or not action_id.strip():
+            raise ValueError('nonempty action identity required')
+        event = dict(actor=actor, role=role, kind=kind, evidence=evidence)
         payload = json.dumps(event, sort_keys=True)
-        digest = hashlib.sha256(payload.encode()).hexdigest()
-        if event['status'] not in {'transit', 'exception', 'delivered'}:
-            raise ValueError('status desconhecido')
-        if type(event['seq']) is not int or event['seq'] < 1:
-            raise ValueError('sequência inválida')
         with self.db:
-            # A decisão de versão deve usar a mesma transação da gravação.
             self.db.execute('BEGIN IMMEDIATE')
-            old = self.db.execute('SELECT digest FROM events WHERE event_id=?',
-                                  (event['event_id'],)).fetchone()
+            old = self.db.execute('SELECT payload FROM events WHERE action_id=?',
+                                  (action_id,)).fetchone()
             if old:
-                if old[0] != digest:
-                    raise ValueError('evento conflitante')
-                return 'duplicate'
-            row = self.db.execute('SELECT seq,status FROM shipments '
-                'WHERE shipment_id=?', (event['shipment_id'],)).fetchone()
-            self.db.execute('INSERT INTO events VALUES (?,?)',
-                            (event['event_id'], digest))
-            if row and event['seq'] <= row[0]:
-                return 'stale'
-            if row and row[1] == 'delivered' and event['status'] != 'delivered':
-                raise ValueError('regressão terminal')
-            self.db.execute('INSERT OR REPLACE INTO shipments VALUES (?,?,?,?)',
-                (event['shipment_id'], event['seq'], event['status'],
-                 event['next_step']))
-            if crash:
-                raise RuntimeError('falha antes do commit')
-        return 'applied'
+                if old[0] != payload:
+                    raise ValueError('idempotency conflict')
+                return self.history()
+            history = self.history()
+            if expected != len(history):
+                raise ValueError('stale revision')
+            allowed = {'evidence': 'analyst', 'decision': 'reviewer',
+                       'appeal': 'customer', 'review': 'reviewer'}
+            if kind not in allowed or allowed[kind] != role:
+                raise PermissionError('role not authorized')
+            if kind == 'decision' and not any(
+                    e['kind'] == 'evidence' for e in history):
+                raise ValueError('no evidence dossier')
+            validate_transition(history, event)
+            self.db.execute('INSERT INTO events VALUES(?,?,?)',
+                            (expected + 1, action_id, payload))
+        return self.history()
+    # BOOK_CORE_END
 
-    def state(self):
-        return self.db.execute('SELECT * FROM shipments').fetchall()
+    def close(self):
+        self.db.close()
 
 
-class Tests(unittest.TestCase):
+def validate_transition(history, event):
+    kind = event['kind']
+    prior = [e for e in history if e['kind'] in {'decision', 'review'}]
+    if kind == 'evidence':
+        if set(event['evidence']) != {'digest', 'category'}:
+            raise ValueError('only minimized evidence references')
+        if len(event['evidence']['digest']) != 64:
+            raise ValueError('invalid evidence digest')
+    elif kind == 'decision':
+        if prior or not event['evidence'].get('policy'):
+            raise ValueError('initial decision requires policy and unique stage')
+    elif kind == 'appeal':
+        if not prior or any(e['kind'] == 'appeal' for e in history):
+            raise ValueError('appeal requires decision; one appeal in this model')
+    elif kind == 'review':
+        if not history or history[-1]['kind'] != 'appeal':
+            raise ValueError('review requires pending appeal')
+        if prior[-1]['actor'] == event['actor']:
+            raise PermissionError('independent reviewer required')
+        if not event['evidence'].get('policy'):
+            raise ValueError('policy required')
+
+
+class DisputeTests(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.temp.cleanup)
-        self.path = Path(self.temp.name) / 'events.sqlite'
-        self.model = Timeline(self.path)
-        self.addCleanup(self.model.db.close)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name) / 'dispute.db'
+        self.d = Dispute(self.path)
+        self.ev = {'digest': hashlib.sha256(b'device evidence').hexdigest(),
+                   'category': 'device_access'}
 
-    def event(self, **changes):
-        value = dict(event_id='e1', shipment_id='s1', seq=1,
-                     status='transit', next_step='aguardar atualização')
-        return dict(value, **changes)
+    def tearDown(self):
+        self.d.close()
+        self.tmp.cleanup()
 
-    def test_duplicate(self):
-        self.model.ingest(self.event())
-        self.assertEqual(self.model.ingest(self.event()), 'duplicate')
-        self.assertEqual(len(self.model.state()), 1)
+    def seed(self):
+        self.d.append('e', 0, 'a', 'analyst', 'evidence', self.ev)
+        self.d.append('d', 1, 'r1', 'reviewer', 'decision', {'policy': 'v1'})
 
-    def test_conflicting_identity(self):
-        self.model.ingest(self.event())
+    # BOOK_TEST_BEGIN
+    def test_appeal_requires_independent_reviewer(self):
+        self.seed()
+        self.d.append('a', 2, 'owner', 'customer', 'appeal', {})
+        with self.assertRaises(PermissionError):
+            self.d.append('r', 3, 'r1', 'reviewer', 'review', {'policy': 'v2'})
+        self.assertEqual(len(self.d.history()), 3)
+        self.d.append('r', 3, 'r2', 'reviewer', 'review', {'policy': 'v2'})
+        self.assertEqual(self.d.history()[1]['evidence']['policy'], 'v1')
+
+    def test_restart_and_retry_preserve_one_evidence(self):
+        self.d.append('e', 0, 'a', 'analyst', 'evidence', self.ev)
+        self.d.close()
+        self.d = Dispute(self.path)
+        result = self.d.append('e', 0, 'a', 'analyst', 'evidence', self.ev)
+        self.assertEqual(len(result), 1)
+        self.assertNotIn('consent', result[0]['evidence'])
+    # BOOK_TEST_END
+
+    def test_conflicting_retry_rejected(self):
+        self.seed()
         with self.assertRaises(ValueError):
-            self.model.ingest(self.event(status='delivered'))
-        self.assertEqual(self.model.state()[0][2], 'transit')
+            self.d.append('e', 0, 'other', 'analyst', 'evidence', self.ev)
 
-    def test_out_of_order(self):
-        self.model.ingest(self.event(seq=5, status='delivered'))
-        result = self.model.ingest(self.event(event_id='e2', seq=2))
-        self.assertEqual(result, 'stale')
-        self.assertEqual(self.model.state()[0][2], 'delivered')
-
-    def test_terminal_guard(self):
-        self.model.ingest(self.event(status='delivered'))
+    def test_stale_revision_rejected(self):
+        self.seed()
         with self.assertRaises(ValueError):
-            self.model.ingest(self.event(event_id='e2', seq=2))
+            self.d.append('a', 1, 'owner', 'customer', 'appeal', {})
 
-    def test_atomic_failure_and_retry(self):
-        with self.assertRaises(RuntimeError):
-            self.model.ingest(self.event(), crash=True)
-        self.assertEqual(self.model.state(), [])
-        self.assertEqual(self.model.ingest(self.event()), 'applied')
+    def test_decision_without_evidence_rejected(self):
+        with self.assertRaises(ValueError):
+            self.d.append('d', 0, 'r', 'reviewer', 'decision', {'policy': 'v1'})
 
-    def test_reopen(self):
-        self.model.ingest(self.event())
-        other = Timeline(self.path)
-        self.addCleanup(other.db.close)
-        self.assertEqual(other.ingest(self.event()), 'duplicate')
+    def test_wrong_role_rejected(self):
+        with self.assertRaises(PermissionError):
+            self.d.append('e', 0, 'owner', 'customer', 'evidence', self.ev)
+        with self.assertRaises(PermissionError):
+            self.d.append('bad', 0, 'owner', None, 'unknown', {})
 
-    def test_write_transaction_precedes_reads(self):
-        statements = []
-        self.model.db.set_trace_callback(statements.append)
-        self.model.ingest(self.event())
-        first_select = next(i for i, sql in enumerate(statements)
-                            if sql.startswith('SELECT'))
-        self.assertLess(statements.index('BEGIN IMMEDIATE'), first_select)
+    def test_sensitive_payload_rejected(self):
+        with self.assertRaises(ValueError):
+            self.d.append('e', 0, 'a', 'analyst', 'evidence', {'password': '1234'})
 
-    def test_independent_connections_preserve_highest_sequence(self):
-        self.model.ingest(self.event())
-        barrier = threading.Barrier(8)
-        def attempt(sequence):
-            model = Timeline(self.path)
-            try:
-                barrier.wait(timeout=5)
-                return model.ingest(self.event(event_id=f'e{sequence}',
-                                               seq=sequence))
-            finally:
-                model.db.close()
-        with ThreadPoolExecutor(8) as pool:
-            results = list(pool.map(attempt, range(2, 10)))
-        self.assertTrue(set(results) <= {'applied', 'stale'})
-        self.assertEqual(self.model.state()[0][1], 9)
+    def test_repeated_initial_decision_rejected(self):
+        self.seed()
+        with self.assertRaises(ValueError):
+            self.d.append('d2', 2, 'r2', 'reviewer', 'decision', {'policy': 'v2'})
+
+    def test_invalid_identity_cannot_bypass_deduplication(self):
+        for ident in (None, '', ' ', 0):
+            with self.assertRaises(ValueError):
+                self.d.append(ident, 0, 'a', 'analyst', 'evidence', self.ev)
+        self.assertEqual(self.d.history(), [])
+        with self.assertRaises(sqlite3.IntegrityError):
+            with self.d.db:
+                self.d.db.execute('INSERT INTO events VALUES(1,NULL,?)', ('{}',))
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

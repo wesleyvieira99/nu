@@ -1,108 +1,40 @@
 {
   "status": "PASS",
-  "reviewed_at_utc": "2026-10-24T00:46:14.126873+00:00",
-  "scope": {
-    "languages": [
-      "pt",
-      "en"
-    ],
-    "render_dpi": 120,
-    "all_diagram_pages_per_language": [
-      35,
-      36,
-      37,
-      38,
-      41,
-      54,
-      67,
-      80,
-      93,
-      106,
-      119,
-      132,
-      145,
-      158,
-      171,
-      184,
-      197,
-      210,
-      223,
-      236,
-      249,
-      262,
-      275,
-      288
-    ],
-    "diagrams_visually_reviewed": 48,
-    "non_diagram_samples_per_language": [
-      1,
-      2,
-      7,
-      39,
-      104,
-      320
-    ],
-    "total_rendered_pages": 60,
-    "structural_navigation_pages_checked": 640,
-    "diagram_sheets": [
-      "pdf-final-visual/diagram-sheet-01.png",
-      "pdf-final-visual/diagram-sheet-02.png",
-      "pdf-final-visual/diagram-sheet-03.png",
-      "pdf-final-visual/diagram-sheet-04.png",
-      "pdf-final-visual/diagram-sheet-05.png",
-      "pdf-final-visual/diagram-sheet-06.png",
-      "pdf-final-visual/diagram-sheet-07.png",
-      "pdf-final-visual/diagram-sheet-08.png",
-      "pdf-final-visual/diagram-sheet-09.png",
-      "pdf-final-visual/diagram-sheet-10.png",
-      "pdf-final-visual/diagram-sheet-11.png",
-      "pdf-final-visual/diagram-sheet-12.png"
-    ]
-  },
-  "issues": [],
-  "visual_checks": {
-    "diagram_nodes_and_labels": "All 48 diagrams in 12 paired sheets inspected at 120 dpi. Official marks, category chips, node titles and descriptions are visible and contained; no clipped text or missing glyphs seen.",
-    "arrows_and_legend": "Orthogonal paths, numbered arrows and localized legends remain distinct from node content. No route or label is cut by the rounded outer boundary.",
-    "variety": "24 context-specific compositions retained across Portuguese and English, with role-specific official technology marks and non-brand symbols for people or abstract entities.",
-    "rounded_images": "Photographs and source images show subtle rounded corners. Diagram outer bounds retain all visible content. Official logo silhouettes are unchanged.",
-    "page_layout": "Sampled covers, contents, profile, evidence and credits retain separated body, sources and footer navigation. Full-page architecture samples preserve caption and prose spacing.",
-    "typography": "PDF-rendered labels and node titles were inspected at 120 dpi; smaller technology names and secondary route labels remain legible when enlarged. Vector diagram text scales with PDF zoom.",
-    "navigation": "Visible localized footer controls on every sampled page, including covers and credits; full native-link validation independently passed all 640 pages.",
-    "technology_provenance": "diagram-technology-map.json lists proposed technology placement and official-source references. Marks identify proposed implementations and do not establish internal Nubank architecture."
-  },
-  "limitations": [
-    "Visual review focuses on the 48 redesigned diagrams and 12 non-diagram samples; the complete 640-page navigation and clip validation is automated.",
-    "Source screenshots retain their original resolution and language; no screenshot content was regenerated or enhanced."
-  ],
-  "files": {
+  "verified_at_utc": "2026-10-25T12:51:31.860396+00:00",
+  "pdfs": {
     "pt": {
-      "name": "Nubank_Confianca_em_Escala_PT.pdf",
-      "sha256": "db15ebf16dfcceefe33a5271abe03f6c34655f2e70d29b7b5f842e492920048d",
-      "bytes": 25270686,
-      "pages": 320,
-      "menu_links": 1600,
-      "all_internal_links": 1629,
-      "external_links": 136,
-      "outline_roots": 27,
-      "chapter_subtopics": 317,
-      "rounded_images": 57,
-      "min_content_scale": 0.92,
-      "navigation_report": "pdf-navigation-validation-pt.json"
+      "path": "work/v6/Nubank_Confianca_em_Escala_PT.pdf",
+      "sha256": "69dabc1fc7c0d4e4c684a6e59fc42592718bde490e3eb0eae6653600ef606ae4"
     },
     "en": {
-      "name": "Nubank_Trust_at_Scale_EN.pdf",
-      "sha256": "68c4a5b669dbd5a937ee241352238ba6129d71bf9b096bec35d1ee7096cb8301",
-      "bytes": 25236836,
-      "pages": 320,
-      "menu_links": 1600,
-      "all_internal_links": 1629,
-      "external_links": 136,
-      "outline_roots": 27,
-      "chapter_subtopics": 317,
-      "rounded_images": 57,
-      "min_content_scale": 0.92,
-      "navigation_report": "pdf-navigation-validation-en.json"
+      "path": "work/v6/Nubank_Trust_at_Scale_EN.pdf",
+      "sha256": "aaecc38d5d174d48999796a8ed2ad80c49fcc291dfa0c78eb14073b88c128c90"
     }
   },
-  "edition": "V5"
+  "reports": [
+    {
+      "path": "pdf-visual-01-07.json",
+      "sha256": "45b643cb0614fa7cc7048330beac7faaa2e271c26e19e42150e537a3a49fb13a",
+      "status": "PASS"
+    },
+    {
+      "path": "pdf-visual-08-14.json",
+      "sha256": "f3f9688cab1c0c43545808d0823f37815311d8a9b194ea5df69f20c8cc02acea",
+      "status": "PASS"
+    },
+    {
+      "path": "pdf-visual-15-20.json",
+      "sha256": "7abd16de32a5160e0cc1fb4f432fdbc258843494c87511d157dcfc44839ba11f",
+      "status": "PASS"
+    },
+    {
+      "path": "pdf-visual-root.json",
+      "sha256": "893d6c6e920ffb70381b18a5cc2635b64c6b7408f1a2e8034e71c25caac5b9e1",
+      "status": "PASS"
+    }
+  ],
+  "pages_rendered": 640,
+  "case_contact_sheets_reviewed": 40,
+  "scope": "All 20 cases in both languages reviewed in contact sheets with detailed page inspections. Editorial corrections were rechecked; unchanged reviewed renders were hash-compared. Root reviewed updated non-case pages and final HTML screenshots. Current reader and code hashes match their recorded passing checks.",
+  "unresolved_visual_findings": []
 }

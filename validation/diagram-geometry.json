@@ -1,10 +1,11 @@
 {
+  "status": "PASS",
   "files": 48,
   "pass": true,
   "results": [
     {
       "file": "diagram-en-01-3-0.svg",
-      "sha256": "de440022ec7dba743c9c19ea5a91a0e45adac06a1cf8de17c3a0cbf665febe57",
+      "sha256": "98a7cc9e4adb6a53517118d70f36b1f859a9fd3f8e32bba00c8486ca28d04fb7",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -83,7 +84,7 @@
     },
     {
       "file": "diagram-en-02-3-0.svg",
-      "sha256": "228f8b911da5c5671bb1557380d9090a78703cf0c57e76dbd9051c1e6cdcefaa",
+      "sha256": "c22d7489609ee0828215654a8f3a1e51f03cb941584ed0c0c0d3f7c11a308141",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -125,7 +126,7 @@
             "w": 223.3000030517578,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "5",
@@ -162,7 +163,7 @@
     },
     {
       "file": "diagram-en-03-3-0.svg",
-      "sha256": "4ee822755a71fec2904fe5aa2761cbad37194052301805a2ef8134dbde5652e1",
+      "sha256": "85d2ecf488929db4926decac47945bb92b16d5b7c52403a149869900898f7e79",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -204,7 +205,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -214,7 +215,7 @@
             "w": 217.8000030517578,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "6",
@@ -241,7 +242,7 @@
     },
     {
       "file": "diagram-en-04-3-0.svg",
-      "sha256": "201f51c0c919656a9e9d2910db03681a51cc3328f243aa569b75883ddeee51fa",
+      "sha256": "4afad08565c04c069d6d912814cd03fcd7dc2bbd54df00c334e1cc8e5c00bf76",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -283,7 +284,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -320,7 +321,7 @@
     },
     {
       "file": "diagram-en-05-3-0.svg",
-      "sha256": "4c94e7e7b43f4db1bc8ed6efce397e4447b8b7a999189399f307c8aa1f0ec2e3",
+      "sha256": "18fe02bf6775925791a0475f80bf4fe20482f17e52f7e2d8fca57167b2b47db4",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -332,7 +333,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "2",
@@ -399,7 +400,7 @@
     },
     {
       "file": "diagram-en-06-3-0.svg",
-      "sha256": "339a6d6f38616f77c3a5ad6ec7f0fea5f3ed370628c5e9957be7d7ee4652b10a",
+      "sha256": "60b48191cf3db0c4293e6b42bab0b3768553925e450cabfea3b46e74a7959744",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -478,7 +479,7 @@
     },
     {
       "file": "diagram-en-07-3-0.svg",
-      "sha256": "181adc6f34792dea62bdc5d7e7e0c3c2e710151e6765b54dc083a52c716bab38",
+      "sha256": "fe9cf0acaf514e1136f2af5d06df09772600205a5b2a0ae621de88c75f979f28",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -490,7 +491,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "2",
@@ -530,7 +531,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "6",
@@ -540,7 +541,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "7",
@@ -557,7 +558,7 @@
     },
     {
       "file": "diagram-en-08-3-0.svg",
-      "sha256": "080ddc1e28401847d55692fd7e7a1df6657d20fb965cfea026476735aab00266",
+      "sha256": "29b7d9b1322cf0d3892904ffd5a5836d94422be5bd00bc7efc80f72fa154db75",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -629,14 +630,14 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-09-3-0.svg",
-      "sha256": "b0e7122bdd37f2b443e5d97c480b756555e71931670fef8a8370d6789253aa6f",
+      "sha256": "2201126c5d73f236b419cdc0f8326bac69ba5e3a451add42fb7cb66339c6c99f",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -648,7 +649,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "1",
@@ -715,7 +716,7 @@
     },
     {
       "file": "diagram-en-10-3-0.svg",
-      "sha256": "d53360d03f5cc6beefa2f22e9d119461dbeb35e05d190076bfa0d3538a1a3136",
+      "sha256": "56bd8ac62661898c62b14cf120203f3098aca90de5f7ee88ac2c6f3111c2f1a5",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -727,7 +728,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "1",
@@ -747,7 +748,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "3",
@@ -767,7 +768,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -794,7 +795,7 @@
     },
     {
       "file": "diagram-en-11-3-0.svg",
-      "sha256": "1c2e83c7d87d0492f3491844b210564905d04e70ec71ccd96b8eb3e5bd938e37",
+      "sha256": "61d969753bc2a557bfa58cc6748e483a087814e2ca34ca134379055227d19301",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -826,7 +827,7 @@
             "w": 210,
             "h": 140
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -866,14 +867,14 @@
             "w": 220,
             "h": 145
           },
-          "textCount": 3
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-12-3-0.svg",
-      "sha256": "349e0a4cff3cdc6d52aa5f64c26977d2267ae7409454a8bd2c9306e26e9b8694",
+      "sha256": "173eb4ca48df54fb835cc5d862aa3b096ec787029b3f97e60deec3a3c3395067",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -885,7 +886,7 @@
             "w": 210,
             "h": 145
           },
-          "textCount": 4
+          "textCount": 3
         },
         {
           "id": "1",
@@ -905,7 +906,7 @@
             "w": 210,
             "h": 145
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -915,7 +916,7 @@
             "w": 205,
             "h": 150
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -935,7 +936,7 @@
             "w": 230,
             "h": 150
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "6",
@@ -945,14 +946,14 @@
             "w": 220,
             "h": 150
           },
-          "textCount": 4
+          "textCount": 3
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-13-3-0.svg",
-      "sha256": "40a9737a621a94773bfa47498fc035b04e304d6a4e15972d55139fd741fb7afd",
+      "sha256": "7d1e256bd6b3b78de99674e17f4335f6294268c68ae0b104cfbbb59f4deb030d",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -964,7 +965,7 @@
             "w": 250,
             "h": 150
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "1",
@@ -984,7 +985,7 @@
             "w": 260,
             "h": 145
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "3",
@@ -994,7 +995,7 @@
             "w": 260,
             "h": 140
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "4",
@@ -1031,7 +1032,7 @@
     },
     {
       "file": "diagram-en-14-3-0.svg",
-      "sha256": "96a71e60a7b5d5d0aa50fe8f196895482675a532b8641221a2dcbadc37b4324f",
+      "sha256": "5332a223f5a9a6668bac774272ed802365421abcc9671065b6941f0cf9a9a433",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1043,7 +1044,7 @@
             "w": 220,
             "h": 140
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "1",
@@ -1103,14 +1104,14 @@
             "w": 190,
             "h": 140
           },
-          "textCount": 4
+          "textCount": 5
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-15-3-0.svg",
-      "sha256": "9cc3bd71757a1deabfd5db3de61d82f1184e2a9552a9ad0b53726693990c7ec8",
+      "sha256": "55eb7c50a392b7dcf0641918742f270aa55debd2656a0ea19f72edc599fb6f36",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1122,7 +1123,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -1132,7 +1133,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -1142,7 +1143,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -1152,7 +1153,7 @@
             "w": 225,
             "h": 175
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -1162,7 +1163,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -1172,7 +1173,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "7",
@@ -1182,14 +1183,14 @@
             "w": 180,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-16-3-0.svg",
-      "sha256": "aaaba3b300ee6caa80ccf8798f9b91cecd923a084507c4b2ccd6c43d9f3b4b29",
+      "sha256": "fe66066c627f1bad64616ce577a0635a22fc8713d37060f8c0cb49cd04b06a30",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1201,7 +1202,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -1211,7 +1212,7 @@
             "w": 230,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -1221,7 +1222,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -1231,7 +1232,7 @@
             "w": 225,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -1241,7 +1242,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -1251,7 +1252,7 @@
             "w": 210,
             "h": 170
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "7",
@@ -1268,7 +1269,7 @@
     },
     {
       "file": "diagram-en-17-3-0.svg",
-      "sha256": "8b7d2c2d47e8d10b7b8949fb00e28e7a23cb0236e3f4b77e1e405079f82436da",
+      "sha256": "036e194dbc6cc13cab03556c30130093ef1dff3b487ae7266634222d9bcc2fa5",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1280,7 +1281,7 @@
             "w": 215,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -1290,7 +1291,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -1300,7 +1301,7 @@
             "w": 205,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -1310,7 +1311,7 @@
             "w": 245,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -1320,7 +1321,7 @@
             "w": 190,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 6
         },
         {
           "id": "6",
@@ -1347,7 +1348,7 @@
     },
     {
       "file": "diagram-en-18-3-0.svg",
-      "sha256": "1010e9df72b7acfff2147c1937114cc6efdab800b89a9d3d81e4881ae3fc9406",
+      "sha256": "6cd9d00b0bb75f6253e3f8becdd679e846b91ee0b2689ecdce412a853ff5553d",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1359,7 +1360,7 @@
             "w": 210,
             "h": 155
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -1369,7 +1370,7 @@
             "w": 210,
             "h": 155
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -1379,7 +1380,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -1389,7 +1390,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -1399,7 +1400,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -1419,14 +1420,14 @@
             "w": 185,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-19-3-0.svg",
-      "sha256": "967be36dc10e8cec6b0dc9a725ee6cb4af5dc4ca7267e33f65783952dc9051e0",
+      "sha256": "50212b6f6cd3baad7dc9520f9a2ba0479e3b63bd8f7a2aa3d44f147bd5530d11",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1438,7 +1439,7 @@
             "w": 175,
             "h": 150
           },
-          "textCount": 5
+          "textCount": 6
         },
         {
           "id": "2",
@@ -1498,14 +1499,14 @@
             "w": 205,
             "h": 155
           },
-          "textCount": 3
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-en-20-3-0.svg",
-      "sha256": "cb652989c30d5e8f343f4387413be415677110f838c118ec848ab375991a4341",
+      "sha256": "9f5cf245676e763dc0e73ca76c92b2f696c0dd368e971dd861dc7eff552822ac",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -1517,7 +1518,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -1527,7 +1528,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -1547,7 +1548,7 @@
             "w": 225,
             "h": 165
           },
-          "textCount": 4
+          "textCount": 3
         },
         {
           "id": "5",
@@ -1910,7 +1911,7 @@
     },
     {
       "file": "diagram-pt-01-3-0.svg",
-      "sha256": "cd223f30c82e979e4cdff00466ecc6b259ee95431c6e3ad7b761d33f1513a8e1",
+      "sha256": "873c976a8d2178a169b613eb3e655dc233c1f8f43572bc2b867eb6b90f7e82a4",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -1989,7 +1990,7 @@
     },
     {
       "file": "diagram-pt-02-3-0.svg",
-      "sha256": "30056e453117e00601c03beccae8518c855d80640eb8136b07b69a5c127f3c98",
+      "sha256": "33e32accf5029a4c72d845f0573767cecd8139e469a5e94fda4175271db2bd84",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2031,7 +2032,7 @@
             "w": 223.3000030517578,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "5",
@@ -2068,7 +2069,7 @@
     },
     {
       "file": "diagram-pt-03-3-0.svg",
-      "sha256": "d4c632628f2ecd29ae961f50027b9a39442e7a4187ebe8dc5a74367523d8d31e",
+      "sha256": "267252ab355587b5831707bc0e728fe26df9f0f4a3ba62fc7f2476a1941280bf",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2110,7 +2111,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -2120,7 +2121,7 @@
             "w": 217.8000030517578,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "6",
@@ -2147,7 +2148,7 @@
     },
     {
       "file": "diagram-pt-04-3-0.svg",
-      "sha256": "4f1823c46f9d1af59425b993208350a64ec158ae065085912f78ab49abf3eb36",
+      "sha256": "0b60f2e432968dc8d8e5025e9d783739d0822e1fb8e6a0def82124078d3e170e",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2189,7 +2190,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -2226,7 +2227,7 @@
     },
     {
       "file": "diagram-pt-05-3-0.svg",
-      "sha256": "814af4b36966096f6a491b12cdbf5dcc28907774398481ed68f3fe77a3617fd0",
+      "sha256": "507836fecc6886122473f464bf5abedaddb6a170d213d32f3a561ca93f684524",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2238,7 +2239,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "2",
@@ -2305,7 +2306,7 @@
     },
     {
       "file": "diagram-pt-06-3-0.svg",
-      "sha256": "60f7899aa528ee1dd315bb0031084f1dbf881aa9a7451c454b90fdae54dfcd0f",
+      "sha256": "614d1731935f448f8b8d52e03e68094a924f9660f861d29c95d1f444362cb5b9",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2384,7 +2385,7 @@
     },
     {
       "file": "diagram-pt-07-3-0.svg",
-      "sha256": "4283bda6da6e5717cd22e312ed2b23aa0dec8fe800c30fa4e6795f93ec6fb889",
+      "sha256": "dc3b7445073e0c4d8d5f1e60a97300db7f890bdfdb82b08bc846f72a51272194",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2396,7 +2397,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "2",
@@ -2436,7 +2437,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "6",
@@ -2446,7 +2447,7 @@
             "w": 242,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "7",
@@ -2463,7 +2464,7 @@
     },
     {
       "file": "diagram-pt-08-3-0.svg",
-      "sha256": "f286e0456c950b92136c5a56e5c89f0d784d1882ce86862957564ad1ae2f9857",
+      "sha256": "73c238c2c4a8fa0f47eed29dc47f1d7c500888a8007d8c97d493c9e150d15e0b",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2535,14 +2536,14 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-09-3-0.svg",
-      "sha256": "1c6360b4f4cb34063b3e28c6d477473cd5dd6c2b4a10568763195109c61fb356",
+      "sha256": "a552b781a5f45ab9916dbaeb3b190120839df2a3d3674d5a7d1bff4791f109a9",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2554,7 +2555,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "1",
@@ -2621,7 +2622,7 @@
     },
     {
       "file": "diagram-pt-10-3-0.svg",
-      "sha256": "e50047e2e7cf2b8baef51057566fe0cefba74be35a4bcaf58d81908bebee877f",
+      "sha256": "91974591a726ff599ae5b78ffaf4d0aacc3c3cbe534e26901eb6dc4416a2b60f",
       "width": 1100,
       "height": 700,
       "nodes": [
@@ -2633,7 +2634,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "1",
@@ -2653,7 +2654,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "3",
@@ -2673,7 +2674,7 @@
             "w": 231,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -2700,7 +2701,7 @@
     },
     {
       "file": "diagram-pt-11-3-0.svg",
-      "sha256": "30c4d8fedaf8f4bfda28c7357469df8890599839d44c70dfccc421d5b60562bf",
+      "sha256": "b11211895a5855cde23228c4128a94649b7492b73c02a1251d61c0579eafbb78",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -2732,7 +2733,7 @@
             "w": 210,
             "h": 140
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -2772,14 +2773,14 @@
             "w": 220,
             "h": 145
           },
-          "textCount": 3
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-12-3-0.svg",
-      "sha256": "e1b2d553653b2a9c1b8c9efea9d2738c256827967150a5bda91afb9bd08757d4",
+      "sha256": "384e5c0ef8cfa25d727e56a13b5e4f791985b82bdf16049b04fbfa1a08ef8d6c",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -2791,7 +2792,7 @@
             "w": 210,
             "h": 145
           },
-          "textCount": 4
+          "textCount": 3
         },
         {
           "id": "1",
@@ -2811,7 +2812,7 @@
             "w": 210,
             "h": 145
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "3",
@@ -2821,7 +2822,7 @@
             "w": 205,
             "h": 150
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -2851,14 +2852,14 @@
             "w": 220,
             "h": 150
           },
-          "textCount": 4
+          "textCount": 3
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-13-3-0.svg",
-      "sha256": "d4917a650c2150cf248f4a495cd42039f58a62286af1113712336fee0becda28",
+      "sha256": "0dcfd591aa0b4baeb78233eebabd57adf7df2a1b871a6a7f69871bf9dc539030",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -2870,7 +2871,7 @@
             "w": 250,
             "h": 150
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "1",
@@ -2890,7 +2891,7 @@
             "w": 260,
             "h": 145
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "3",
@@ -2900,7 +2901,7 @@
             "w": 260,
             "h": 140
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "4",
@@ -2937,7 +2938,7 @@
     },
     {
       "file": "diagram-pt-14-3-0.svg",
-      "sha256": "96fdd300fac63b6812a0b482b8df8fc59b55da0244f4fe65b174f9795d555c0f",
+      "sha256": "e01071d2158dcbefa2c0347a1dfeb4764cf15acf188292ebd685d95f2571eb41",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -2949,7 +2950,7 @@
             "w": 220,
             "h": 140
           },
-          "textCount": 3
+          "textCount": 4
         },
         {
           "id": "1",
@@ -2969,7 +2970,7 @@
             "w": 210,
             "h": 140
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "3",
@@ -3009,14 +3010,14 @@
             "w": 190,
             "h": 140
           },
-          "textCount": 4
+          "textCount": 5
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-15-3-0.svg",
-      "sha256": "b9588fdd0d30129c5df0a00345b8c8f719c98b958558f001084eec26fa7223f7",
+      "sha256": "1d3bb378f0b802d7b28857950affb00588024bcf511b46ac732ca5440362a15b",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3028,7 +3029,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -3038,7 +3039,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -3048,7 +3049,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -3058,7 +3059,7 @@
             "w": 225,
             "h": 175
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -3068,7 +3069,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -3078,7 +3079,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "7",
@@ -3088,14 +3089,14 @@
             "w": 180,
             "h": 165
           },
-          "textCount": 4
+          "textCount": 5
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-16-3-0.svg",
-      "sha256": "8029fb4a5565d968bada77b0245707cc601ee679f0d52108dc19e9abaa9b7466",
+      "sha256": "7b116b84fc0e654030a20edb2e8a2e394be11368e9a9acb36e1f98d6482291fe",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3107,7 +3108,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -3117,7 +3118,7 @@
             "w": 230,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -3127,7 +3128,7 @@
             "w": 220,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -3137,7 +3138,7 @@
             "w": 225,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -3147,7 +3148,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -3174,7 +3175,7 @@
     },
     {
       "file": "diagram-pt-17-3-0.svg",
-      "sha256": "569b874e3531cfe5eb26ce92689f992d13ef8e6418bba853c372356173594089",
+      "sha256": "0850d0aebfccb7b0a39e09d28aa84c625ce2742c01b43ef53540393ab8e7f557",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3186,7 +3187,7 @@
             "w": 215,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -3196,7 +3197,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -3206,7 +3207,7 @@
             "w": 205,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -3226,7 +3227,7 @@
             "w": 190,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -3253,7 +3254,7 @@
     },
     {
       "file": "diagram-pt-18-3-0.svg",
-      "sha256": "b5c8f8146641f7d292de4daea95a08dda1ef35ca103427b4cd17e5d8c8441580",
+      "sha256": "97c3395f53efb6910874a8b26c6864a19bc63b56282f7e0088066ead8d7a5025",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3265,7 +3266,7 @@
             "w": 210,
             "h": 155
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "2",
@@ -3275,7 +3276,7 @@
             "w": 210,
             "h": 155
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "3",
@@ -3285,7 +3286,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -3295,7 +3296,7 @@
             "w": 220,
             "h": 160
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "5",
@@ -3305,7 +3306,7 @@
             "w": 220,
             "h": 170
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "6",
@@ -3315,7 +3316,7 @@
             "w": 175,
             "h": 160
           },
-          "textCount": 6
+          "textCount": 5
         },
         {
           "id": "7",
@@ -3325,14 +3326,14 @@
             "w": 185,
             "h": 160
           },
-          "textCount": 4
+          "textCount": 5
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-19-3-0.svg",
-      "sha256": "d0192aeaf7a05d33ea607c0d5c1bde4657ce0691146cf6bc3ac1a3817983b668",
+      "sha256": "aab6dc4ffab058a2390603cafe8bc552782070f7e674783bec0cb3e78df24484",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3344,7 +3345,7 @@
             "w": 175,
             "h": 150
           },
-          "textCount": 6
+          "textCount": 5
         },
         {
           "id": "2",
@@ -3354,7 +3355,7 @@
             "w": 235,
             "h": 150
           },
-          "textCount": 4
+          "textCount": 5
         },
         {
           "id": "3",
@@ -3404,14 +3405,14 @@
             "w": 205,
             "h": 155
           },
-          "textCount": 3
+          "textCount": 4
         }
       ],
       "issues": []
     },
     {
       "file": "diagram-pt-20-3-0.svg",
-      "sha256": "89d17a30c01e101163a1d7946ce831636fa62d0756bee6911d786d63be8a25d2",
+      "sha256": "922110e9e28be306a7b0efe1c6abbbcdb281fc889725d195e024ecec56f12f96",
       "width": 1000,
       "height": 700,
       "nodes": [
@@ -3443,7 +3444,7 @@
             "w": 245,
             "h": 165
           },
-          "textCount": 5
+          "textCount": 4
         },
         {
           "id": "4",
@@ -3453,7 +3454,7 @@
             "w": 225,
             "h": 165
           },
-          "textCount": 4
+          "textCount": 3
         },
         {
           "id": "5",

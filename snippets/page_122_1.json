@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "contract_version": "synthetic-adapter-v1",
+  "case_id": "synthetic-med",
+  "event_id": "synthetic-partial-return",
+  "sequence": 2,
+  "state": "partial",
+  "confirmed_cents": 20000,
+  "claimed_cents": 47855
+}

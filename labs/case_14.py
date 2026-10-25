@@ -1,131 +1,164 @@
-"""Caso 14: contratos BDC sintéticos e coorte; não acessa BDC/NuDS reais."""
-from dataclasses import dataclass
-import hashlib
+"""Synthetic early-repayment quote, funding and execution.
+
+Amounts are integer cents; discount is an externally approved input, not a
+calculation of Nubank interest. One account/contract is modeled. Production
+needs authorized scope, real contract pricing, settlement, expiry policy,
+double-entry accounting and a separately authorized refund path.
+"""
+import sqlite3
+import tempfile
 import unittest
+from pathlib import Path
 
 
-@dataclass(frozen=True)
-class Manifest:
-    revision: str
-    protocol: int
-    components: tuple
-    action: str
-    accessible_name: str
+class Repayment:
+    def __init__(self, path):
+        self.db = sqlite3.connect(path)
+        self.db.executescript('''
+          CREATE TABLE IF NOT EXISTS contract(id INTEGER PRIMARY KEY,
+            revision INTEGER,settled INTEGER);
+          INSERT OR IGNORE INTO contract VALUES(1,1,0);
+          CREATE TABLE IF NOT EXISTS quotes(id TEXT PRIMARY KEY NOT NULL,revision INTEGER,
+            bill INTEGER,principal INTEGER,discount INTEGER,expires INTEGER,
+            received INTEGER DEFAULT 0,executed INTEGER DEFAULT 0);
+          CREATE TABLE IF NOT EXISTS funding(id TEXT PRIMARY KEY NOT NULL,quote TEXT,cents INTEGER);
+        ''')
+
+    def quote(self, ident, bill, principal, discount, expires):
+        if not isinstance(ident, str) or not ident.strip():
+            raise ValueError('nonempty quote identity required')
+        if any(type(x) is not int or x < 0 for x in (bill, principal, discount)):
+            raise ValueError('nonnegative integer cents required')
+        if principal == 0 or discount > principal:
+            raise ValueError('invalid discount')
+        revision = self.db.execute('SELECT revision FROM contract').fetchone()[0]
+        with self.db:
+            self.db.execute('INSERT INTO quotes(id,revision,bill,principal,'
+                'discount,expires) VALUES(?,?,?,?,?,?)',
+                (ident, revision, bill, principal, discount, expires))
+
+    def receive(self, payment, quote, cents):
+        if not isinstance(payment, str) or not payment.strip():
+            raise ValueError('nonempty payment identity required')
+        if type(cents) is not int or cents <= 0:
+            raise ValueError('positive integer cents required')
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            old = self.db.execute('SELECT quote,cents FROM funding WHERE id=?',
+                                  (payment,)).fetchone()
+            if old:
+                if old != (quote, cents):
+                    raise ValueError('payment conflict')
+                return
+            updated = self.db.execute('UPDATE quotes SET received=received+? '
+                'WHERE id=? AND executed=0', (cents, quote)).rowcount
+            if updated != 1:
+                raise ValueError('unknown or executed quote')
+            self.db.execute('INSERT INTO funding VALUES(?,?,?)',
+                            (payment, quote, cents))
+
+    # BOOK_CORE_BEGIN
+    def execute(self, ident, now, crash=False):
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            row = self.db.execute('SELECT revision,bill,principal,discount,'
+                'expires,received,executed FROM quotes WHERE id=?',
+                (ident,)).fetchone()
+            if not row:
+                raise ValueError('unknown quote')
+            revision, bill, principal, discount, expires, received, done = row
+            needed = bill + principal - discount
+            if done:
+                return dict(applied=needed, unapplied=received - needed)
+            current = self.db.execute('SELECT revision FROM contract').fetchone()[0]
+            if now >= expires or revision != current:
+                raise ValueError('expired or stale quote; funds remain unapplied')
+            if received < needed:
+                raise ValueError('full quoted amount not received')
+            self.db.execute('UPDATE contract SET revision=revision+1,'
+                            'settled=settled+?', (principal,))
+            self.db.execute('UPDATE quotes SET executed=1 WHERE id=?', (ident,))
+            if crash:
+                raise RuntimeError('crash before commit')
+        return dict(applied=needed, unapplied=received - needed)
+    # BOOK_CORE_END
 
 
-def validate(manifest):
-    if type(manifest.components) is not tuple:
-        raise ValueError('componentes devem ser tupla imutável')
-    if any(type(item) is not str or not item for item in manifest.components):
-        raise ValueError('componentes devem ser identificadores imutáveis')
-    if not manifest.revision or manifest.protocol != 1:
-        raise ValueError('protocolo ou revisão inválidos')
-    if not manifest.components or not manifest.accessible_name.strip():
-        raise ValueError('composição ou semântica ausente')
-    if manifest.action not in {'view-invoice', 'open-support'}:
-        raise ValueError('ação fora do catálogo proposto')
-    return manifest
-
-
-class Publisher:
-    def __init__(self):
-        self.revisions = {}
-        self.active = None
-
-    def publish(self, manifest):
-        validate(manifest)
-        previous = self.revisions.get(manifest.revision)
-        if previous is not None and previous != manifest:
-            raise ValueError('revisão é imutável')
-        self.revisions[manifest.revision] = manifest
-
-    def activate(self, revision):
-        if revision not in self.revisions:
-            raise ValueError('revisão não publicada')
-        self.active = revision
-
-    def select(self, capabilities, protocol, fallback):
-        if self.revisions.get(fallback.revision) != fallback:
-            raise ValueError('fallback não publicado')
-        current = self.revisions.get(self.active)
-        compatible = current and current.protocol == protocol
-        compatible = compatible and set(current.components) <= capabilities
-        if compatible:
-            return current
-        if (fallback.protocol == protocol
-                and set(fallback.components) <= capabilities):
-            return fallback
-        raise ValueError('nenhuma composição compatível')
-
-
-def in_cohort(subject, percent, salt='synthetic-rollout-v1'):
-    if type(percent) is not int or not 0 <= percent <= 100:
-        raise ValueError('percentual inválido')
-    value = hashlib.sha256(f'{salt}:{subject}'.encode()).digest()
-    return int.from_bytes(value[:8], 'big') % 10000 < percent * 100
-
-
-class Tests(unittest.TestCase):
+class RepaymentTests(unittest.TestCase):
     def setUp(self):
-        self.publisher = Publisher()
-        self.old = Manifest('r1', 1, ('text',), 'view-invoice', 'Ver fatura')
-        self.new = Manifest('r2', 1, ('text', 'chart'), 'view-invoice', 'Fatura')
-        self.publisher.publish(self.old)
-        self.publisher.publish(self.new)
-        self.publisher.activate('r2')
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self.tmp.name) / 'repayment.db'
+        self.r = Repayment(self.path)
+        self.r.quote('q', bill=5000, principal=10000, discount=1000, expires=100)
 
-    def test_old_client_gets_fallback(self):
-        self.assertEqual(self.publisher.select({'text'}, 1, self.old), self.old)
+    def tearDown(self):
+        self.r.db.close()
+        self.tmp.cleanup()
 
-    def test_capable_client_gets_active_revision(self):
-        self.assertEqual(self.publisher.select({'text', 'chart'}, 1, self.old),
-                         self.new)
+    # BOOK_TEST_BEGIN
+    def test_received_is_not_executed_and_crash_rolls_back(self):
+        self.r.receive('p', 'q', 14000)
+        with self.assertRaises(RuntimeError):
+            self.r.execute('q', 90, crash=True)
+        self.assertEqual(self.r.db.execute('SELECT settled FROM contract')
+                         .fetchone()[0], 0)
+        self.r.db.close()
+        self.r = Repayment(self.path)
+        self.assertEqual(self.r.execute('q', 90)['applied'], 14000)
+        self.assertEqual(self.r.execute('q', 200)['applied'], 14000)
+        self.assertEqual(self.r.db.execute('SELECT settled FROM contract')
+                         .fetchone()[0], 10000)
+    # BOOK_TEST_END
 
-    def test_revision_cannot_change(self):
-        changed = Manifest('r1', 1, ('chart',), 'view-invoice', 'Fatura')
+    def test_partial_funding_is_not_silently_applied(self):
+        self.r.receive('p', 'q', 9000)
         with self.assertRaises(ValueError):
-            self.publisher.publish(changed)
+            self.r.execute('q', 90)
+        self.assertEqual(self.r.db.execute('SELECT received,executed FROM quotes')
+                         .fetchone(), (9000, 0))
 
-    def test_missing_accessibility_rejected(self):
+    def test_expiry_preserves_received_money_for_resolution(self):
+        self.r.receive('p', 'q', 14000)
         with self.assertRaises(ValueError):
-            validate(Manifest('r3', 1, ('text',), 'view-invoice', ''))
+            self.r.execute('q', 100)
+        self.assertEqual(self.r.db.execute('SELECT received FROM quotes')
+                         .fetchone()[0], 14000)
 
-    def test_rollback_selects_old_revision(self):
-        self.publisher.activate('r1')
-        self.assertEqual(self.publisher.select({'text', 'chart'}, 1, self.old),
-                         self.old)
+    def test_payment_retry_is_idempotent(self):
+        self.r.receive('p', 'q', 14000)
+        self.r.receive('p', 'q', 14000)
+        self.assertEqual(self.r.execute('q', 90)['unapplied'], 0)
 
-    def test_cohort_is_stable_and_monotonic(self):
-        for person in map(str, range(500)):
-            self.assertEqual(in_cohort(person, 5), in_cohort(person, 5))
-            if in_cohort(person, 5):
-                self.assertTrue(in_cohort(person, 20))
-
-    def test_cohort_boundaries(self):
-        self.assertFalse(in_cohort('demo', 0))
-        self.assertTrue(in_cohort('demo', 100))
-
-    def test_arbitrary_action_rejected(self):
+    def test_conflicting_payment_rejected(self):
+        self.r.receive('p', 'q', 100)
         with self.assertRaises(ValueError):
-            validate(Manifest('r4', 1, ('text',), 'execute-money', 'Pagar'))
+            self.r.receive('p', 'q', 101)
 
-    def test_incompatible_fallback_is_not_returned(self):
+    def test_second_quote_becomes_stale_after_execution(self):
+        self.r.quote('q2', 0, 5000, 100, 100)
+        self.r.receive('p', 'q', 14000)
+        self.r.execute('q', 90)
+        self.r.receive('p2', 'q2', 4900)
         with self.assertRaises(ValueError):
-            self.publisher.select(set(), 2, self.old)
+            self.r.execute('q2', 91)
 
-    def test_unpublished_fallback_rejected(self):
-        unknown = Manifest('r99', 1, ('text',), 'view-invoice', 'Fatura')
+    def test_overpayment_is_explicit_remainder(self):
+        self.r.receive('p', 'q', 14001)
+        self.assertEqual(self.r.execute('q', 90), {'applied': 14000, 'unapplied': 1})
+
+    def test_invalid_discount_rejected(self):
         with self.assertRaises(ValueError):
-            self.publisher.select({'text'}, 1, unknown)
+            self.r.quote('bad', 0, 100, 101, 100)
 
-    def test_mutable_components_rejected(self):
-        for components in (['text'], (['text'],), ('',)):
-            with self.subTest(components=components):
-                with self.assertRaises(ValueError):
-                    self.publisher.publish(Manifest('r3', 1, components,
-                                                    'view-invoice', 'Fatura'))
-                self.assertNotIn('r3', self.publisher.revisions)
+    def test_invalid_identity_cannot_duplicate_funding(self):
+        for ident in (None, '', ' ', 0):
+            with self.assertRaises(ValueError):
+                self.r.receive(ident, 'q', 100)
+            with self.assertRaises(ValueError):
+                self.r.quote(ident, 0, 100, 0, 100)
+        self.assertEqual(self.r.db.execute('SELECT received FROM quotes')
+                         .fetchone()[0], 0)
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

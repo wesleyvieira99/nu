@@ -76,18 +76,10 @@
       "url": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
       "pages": {
         "pt": [
-          14,
-          130,
-          143,
-          156,
-          315
+          14
         ],
         "en": [
-          14,
-          130,
-          143,
-          156,
-          315
+          14
         ]
       }
     },
@@ -108,10 +100,12 @@
       "url": "https://clojure.org/reference/data_structures",
       "pages": {
         "pt": [
-          18
+          18,
+          43
         ],
         "en": [
-          18
+          18,
+          43
         ]
       }
     },
@@ -120,12 +114,10 @@
       "url": "https://clojure.org/reference/atoms",
       "pages": {
         "pt": [
-          19,
-          238
+          19
         ],
         "en": [
-          19,
-          238
+          19
         ]
       }
     },
@@ -134,16 +126,10 @@
       "url": "https://docs.datomic.com/transactions/transaction-data-reference.html",
       "pages": {
         "pt": [
-          20,
-          43,
-          56,
-          199
+          20
         ],
         "en": [
-          20,
-          43,
-          56,
-          199
+          20
         ]
       }
     },
@@ -224,12 +210,10 @@
       "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
       "pages": {
         "pt": [
-          27,
-          229
+          27
         ],
         "en": [
-          27,
-          229
+          27
         ]
       }
     },
@@ -250,10 +234,38 @@
       "url": "https://docs.python.org/3/library/unittest.html",
       "pages": {
         "pt": [
-          29
+          29,
+          42,
+          45,
+          55,
+          58,
+          68,
+          71,
+          81,
+          84,
+          94,
+          97,
+          107,
+          110,
+          120,
+          123
         ],
         "en": [
-          29
+          29,
+          42,
+          45,
+          55,
+          58,
+          68,
+          71,
+          81,
+          84,
+          94,
+          97,
+          107,
+          110,
+          120,
+          123
         ]
       }
     },
@@ -298,10 +310,12 @@
       "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
       "pages": {
         "pt": [
-          33
+          33,
+          95
         ],
         "en": [
-          33
+          33,
+          95
         ]
       }
     },
@@ -318,8 +332,8 @@
       }
     },
     {
-      "title": "NuCommunity — Pix fora do AR novamente?",
-      "url": "https://comunidade.nubank.com.br/vida-financeira/post/pix-fora-do-ar-novamente-IZtsFKl2sGHAPn1",
+      "title": "Reclame AQUI — relato e resposta pública",
+      "url": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
       "pages": {
         "pt": [
           39,
@@ -332,44 +346,22 @@
       }
     },
     {
-      "title": "Apache Kafka — Design",
-      "url": "https://kafka.apache.org/40/design/design/",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_01.py",
       "pages": {
         "pt": [
-          41
+          42,
+          51
         ],
         "en": [
-          41
+          42,
+          51
         ]
       }
     },
     {
-      "title": "Python — sqlite3",
-      "url": "https://docs.python.org/3/library/sqlite3.html",
-      "pages": {
-        "pt": [
-          42
-        ],
-        "en": [
-          42
-        ]
-      }
-    },
-    {
-      "title": "Prometheus — Metric and label naming",
-      "url": "https://prometheus.io/docs/practices/naming/",
-      "pages": {
-        "pt": [
-          47
-        ],
-        "en": [
-          47
-        ]
-      }
-    },
-    {
-      "title": "NuCommunity — Sem acesso a minha conta, pede reconhecimento facial",
-      "url": "https://comunidade.nubank.com.br/duvidas/post/sem-acesso-a-minha-conta-pede-reconhecimento-facial-24sdVnkTTIWGmoj",
+      "title": "Canaltech — incidente de 08/07/2026",
+      "url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
       "pages": {
         "pt": [
           52,
@@ -382,20 +374,36 @@
       }
     },
     {
-      "title": "Flutter — Accessibility",
-      "url": "https://docs.flutter.dev/ui/accessibility-and-internationalization/accessibility",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_02.py",
       "pages": {
         "pt": [
-          62
+          55,
+          64
         ],
         "en": [
-          62
+          55,
+          64
         ]
       }
     },
     {
-      "title": "NuCommunity — Notificações Push do App Nubank esquece do valor (sugestões)",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/notificacoes-push-do-app-nubank-esquece-do-valor-sugestoes-Dly2fsieCTAwemO",
+      "title": "Dart — Switch statements",
+      "url": "https://dart.dev/language/branches",
+      "pages": {
+        "pt": [
+          56,
+          82
+        ],
+        "en": [
+          56,
+          82
+        ]
+      }
+    },
+    {
+      "title": "Metrópoles — bloqueio e desfecho relatado",
+      "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
       "pages": {
         "pt": [
           65,
@@ -408,8 +416,58 @@
       }
     },
     {
-      "title": "NuCommunity — Open Finance: Cofrinhos do Mercado Pago não aparecem no Nubank",
-      "url": "https://comunidade.nubank.com.br/discussoes/post/open-finance-cofrinhos-do-mercado-pago-nao-aparecem-no-nubank-zS0XMHfgMLVRdEG",
+      "title": "Metrópoles — desfecho relatado, 06:59–07:23",
+      "url": "https://www.youtube.com/watch?v=f6zCNrN1T8Y&t=419s",
+      "pages": {
+        "pt": [
+          65
+        ],
+        "en": [
+          65
+        ]
+      }
+    },
+    {
+      "title": "Assistir ao vídeo da fonte",
+      "url": "https://www.youtube.com/watch?v=f6zCNrN1T8Y",
+      "pages": {
+        "pt": [
+          66
+        ],
+        "en": [
+          66
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_03.py",
+      "pages": {
+        "pt": [
+          68,
+          77
+        ],
+        "en": [
+          68,
+          77
+        ]
+      }
+    },
+    {
+      "title": "PostgreSQL — Transaction Isolation",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "pages": {
+        "pt": [
+          69
+        ],
+        "en": [
+          69
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — relato e resposta pública",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
       "pages": {
         "pt": [
           78,
@@ -422,8 +480,22 @@
       }
     },
     {
-      "title": "NuCommunity — Assistente de pagamentos do Nubank precisa de melhorias",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/assistente-de-pagamentos-do-nubank-precisa-de-melhorias-CD5OrzX9jWPOsF6",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_04.py",
+      "pages": {
+        "pt": [
+          81,
+          90
+        ],
+        "en": [
+          81,
+          90
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — relato e resposta pública",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
       "pages": {
         "pt": [
           91,
@@ -436,20 +508,22 @@
       }
     },
     {
-      "title": "Python — zoneinfo",
-      "url": "https://docs.python.org/3/library/zoneinfo.html",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_05.py",
       "pages": {
         "pt": [
-          94
+          94,
+          103
         ],
         "en": [
-          94
+          94,
+          103
         ]
       }
     },
     {
-      "title": "NuCommunity — Modo Rua precisa de um pequeno ajuste né",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/modo-rua-precisa-de-um-pequeno-ajuste-ne-qMb3GZwa82zYnGv",
+      "title": "Reclame AQUI — relato e resposta pública",
+      "url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
       "pages": {
         "pt": [
           104,
@@ -462,20 +536,34 @@
       }
     },
     {
-      "title": "Android — Wi-Fi permissions",
-      "url": "https://developer.android.com/develop/connectivity/wifi/wifi-permissions",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_06.py",
       "pages": {
         "pt": [
-          109
+          107,
+          116
         ],
         "en": [
-          109
+          107,
+          116
         ]
       }
     },
     {
-      "title": "NuCommunity — Extrato OFX com erro",
-      "url": "https://comunidade.nubank.com.br/duvidas/post/extrato-ofx-com-erro-skG7GDXoha1Yh09",
+      "title": "Amazon S3 — User Guide",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "pages": {
+        "pt": [
+          108
+        ],
+        "en": [
+          108
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — relato e resposta pública",
+      "url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
       "pages": {
         "pt": [
           117,
@@ -488,26 +576,118 @@
       }
     },
     {
-      "title": "Flutter · Semantics",
-      "url": "https://api.flutter.dev/flutter/widgets/Semantics-class.html",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_07.py",
       "pages": {
         "pt": [
-          147,
-          212,
-          290,
-          291
+          120,
+          129
         ],
         "en": [
-          147,
-          212,
-          290,
-          291
+          120,
+          129
         ]
       }
     },
     {
-      "title": "How we reduced critical path latency by 76% at Nubank",
-      "url": "https://building.nu.com/how-we-reduced-critical-path-latency-by-76-at-nubank/",
+      "title": "Banco Central — API do DICT, referência de integração",
+      "url": "https://aprendervalor.bcb.gov.br/content/estabilidadefinanceira/pix/API-DICT.html",
+      "pages": {
+        "pt": [
+          121
+        ],
+        "en": [
+          121
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — caso 08 · 2026-01-14",
+      "url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "pages": {
+        "pt": [
+          130,
+          315
+        ],
+        "en": [
+          130,
+          315
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_08.py",
+      "pages": {
+        "pt": [
+          133,
+          142
+        ],
+        "en": [
+          133,
+          142
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — caso 09 · 2026-03-10",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "pages": {
+        "pt": [
+          143,
+          315
+        ],
+        "en": [
+          143,
+          315
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_09.py",
+      "pages": {
+        "pt": [
+          146,
+          155
+        ],
+        "en": [
+          146,
+          155
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — caso 10 · 2026-02-27",
+      "url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "pages": {
+        "pt": [
+          156,
+          315
+        ],
+        "en": [
+          156,
+          315
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_10.py",
+      "pages": {
+        "pt": [
+          159,
+          168
+        ],
+        "en": [
+          159,
+          168
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — caso 11 · 2025-03-31",
+      "url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
       "pages": {
         "pt": [
           169,
@@ -520,22 +700,22 @@
       }
     },
     {
-      "title": "Apache Kafka · Design",
-      "url": "https://kafka.apache.org/41/design/design/",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_11.py",
       "pages": {
         "pt": [
-          174,
-          239
+          172,
+          181
         ],
         "en": [
-          174,
-          239
+          172,
+          181
         ]
       }
     },
     {
-      "title": "Managing Cloud Limits",
-      "url": "https://building.nu.com/managing-cloud-limits/",
+      "title": "Reclame AQUI — caso 12 · 2025-10-23",
+      "url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
       "pages": {
         "pt": [
           182,
@@ -548,20 +728,22 @@
       }
     },
     {
-      "title": "Prometheus · Alerting rules",
-      "url": "https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_12.py",
       "pages": {
         "pt": [
-          186
+          185,
+          194
         ],
         "en": [
-          186
+          185,
+          194
         ]
       }
     },
     {
-      "title": "How Nubank distributes infrastructure ownership to operate more than 21 thousand databases with a lean team",
-      "url": "https://building.nu.com/how-nubank-distributes-infrastructure-ownership-to-operate-more-than-21-thousand-databases-with-a-lean-team/",
+      "title": "Reclame AQUI — caso 13 · 2026-03-30",
+      "url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
       "pages": {
         "pt": [
           195,
@@ -574,8 +756,22 @@
       }
     },
     {
-      "title": "Backend Driven Content: why we developed a Server Driven UI framework at Nubank",
-      "url": "https://building.nu.com/server-driven-ui-framework-at-nubank/",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_13.py",
+      "pages": {
+        "pt": [
+          198,
+          207
+        ],
+        "en": [
+          198,
+          207
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI — caso 14 · 2026-01-23",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
       "pages": {
         "pt": [
           208,
@@ -588,32 +784,22 @@
       }
     },
     {
-      "title": "Flutter · ExcludeSemantics remove a semântica dos descendentes",
-      "url": "https://api.flutter.dev/flutter/widgets/ExcludeSemantics-class.html",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_14.py",
       "pages": {
         "pt": [
-          212
+          211,
+          220
         ],
         "en": [
-          212
+          211,
+          220
         ]
       }
     },
     {
-      "title": "Flutter · SemanticsProperties.onTap",
-      "url": "https://api.flutter.dev/flutter/semantics/SemanticsProperties/onTap.html",
-      "pages": {
-        "pt": [
-          212
-        ],
-        "en": [
-          212
-        ]
-      }
-    },
-    {
-      "title": "Platform engineering, Observability, and scaling Mobile Development",
-      "url": "https://building.nu.com/platform-engineering-observability-and-scaling-mobile-development/",
+      "title": "Reclame AQUI · 247218209",
+      "url": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
       "pages": {
         "pt": [
           221,
@@ -626,60 +812,34 @@
       }
     },
     {
-      "title": "Python 3.12: unittest",
-      "url": "https://docs.python.org/3.12/library/unittest.html",
+      "title": "Olhar Digital · 28/04/2026",
+      "url": "https://olhardigital.com.br/2026/04/28/internet-e-redes-sociais/nubank-app-enfrenta-instabilidades-nesta-terca-feira-28/",
       "pages": {
         "pt": [
-          224,
-          228,
-          237,
-          241,
-          250,
-          254,
-          264,
-          267,
-          276,
-          280,
-          289,
-          293
+          221
         ],
         "en": [
-          224,
-          228,
-          237,
-          241,
-          250,
-          254,
-          264,
-          267,
-          276,
-          280,
-          289,
-          293
+          221
         ]
       }
     },
     {
-      "title": "Flutter: testing",
-      "url": "https://docs.flutter.dev/testing",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_15.py",
       "pages": {
         "pt": [
-          225,
-          228,
-          277,
-          283
+          224,
+          233
         ],
         "en": [
-          225,
-          228,
-          277,
-          283
+          224,
+          233
         ]
       }
     },
     {
-      "title": "Presenting Precog, Nubank’s Real Time Event AI",
-      "url": "https://building.nu.com/presenting-precog-nubanks-real-time-event-ai/",
+      "title": "Reclame AQUI · 250210183",
+      "url": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
       "pages": {
         "pt": [
           234,
@@ -692,8 +852,36 @@
       }
     },
     {
-      "title": "Practices to scale Machine Learning operations",
-      "url": "https://building.nu.com/practices-to-scale-machine-learning-operations/",
+      "title": "Regulamento oficial da campanha",
+      "url": "https://cdn.nubank.com.br/investments/portability/regulamento-campanha-cvm210.pdf",
+      "pages": {
+        "pt": [
+          234,
+          237
+        ],
+        "en": [
+          234,
+          237
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_16.py",
+      "pages": {
+        "pt": [
+          237,
+          246
+        ],
+        "en": [
+          237,
+          246
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI · 245086475",
+      "url": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
       "pages": {
         "pt": [
           247,
@@ -706,20 +894,34 @@
       }
     },
     {
-      "title": "Python 3.12: decimal",
-      "url": "https://docs.python.org/3.12/library/decimal.html",
+      "title": "Termos Ultravioleta",
+      "url": "https://nubank.com.br/contratos/termos-e-condicoes-nubank-ultravioleta",
       "pages": {
         "pt": [
-          251
+          247
         ],
         "en": [
-          251
+          247
         ]
       }
     },
     {
-      "title": "Dealing with Train-serve Skew in Real-time ML Models: A Short Guide",
-      "url": "https://building.nu.com/dealing-with-train-serve-skew-in-real-time-ml-models-a-short-guide/",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_17.py",
+      "pages": {
+        "pt": [
+          250,
+          259
+        ],
+        "en": [
+          250,
+          259
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI · 254143071",
+      "url": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
       "pages": {
         "pt": [
           260,
@@ -732,22 +934,46 @@
       }
     },
     {
-      "title": "Python 3.12: datetime",
-      "url": "https://docs.python.org/3.12/library/datetime.html",
+      "title": "Nubank · Portabilidade NuCel · vídeo oficial",
+      "url": "https://www.youtube.com/watch?v=0-Sftqs-plI",
       "pages": {
         "pt": [
-          263,
-          266
+          261
         ],
         "en": [
-          263,
-          266
+          261
         ]
       }
     },
     {
-      "title": "The birth of the Dark Mode: a journey into Nubank’s app evolution",
-      "url": "https://building.nu.com/the-birth-of-the-dark-mode-a-journey-into-nubanks-app-evolution/",
+      "title": "Guia oficial de portabilidade",
+      "url": "https://blog.nubank.com.br/portabilidade-celular-como-funciona/",
+      "pages": {
+        "pt": [
+          261
+        ],
+        "en": [
+          261
+        ]
+      }
+    },
+    {
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_18.py",
+      "pages": {
+        "pt": [
+          263,
+          272
+        ],
+        "en": [
+          263,
+          272
+        ]
+      }
+    },
+    {
+      "title": "Reclame AQUI · 243002037",
+      "url": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
       "pages": {
         "pt": [
           273,
@@ -760,54 +986,34 @@
       }
     },
     {
-      "title": "Flutter API: ColorScheme",
-      "url": "https://api.flutter.dev/flutter/material/ColorScheme-class.html",
+      "title": "Nubank · Transferência internacional",
+      "url": "https://blog.nubank.com.br/transferencia-internacional-o-que-e-e-como-fazer/",
       "pages": {
         "pt": [
-          274,
-          277
+          274
         ],
         "en": [
-          274,
-          277
+          274
         ]
       }
     },
     {
-      "title": "W3C: Understanding Contrast (Minimum)",
-      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_19.py",
       "pages": {
         "pt": [
           276,
-          278,
-          280
+          285
         ],
         "en": [
           276,
-          278,
-          280
+          285
         ]
       }
     },
     {
-      "title": "Flutter: accessibility",
-      "url": "https://docs.flutter.dev/ui/accessibility",
-      "pages": {
-        "pt": [
-          279,
-          283,
-          291
-        ],
-        "en": [
-          279,
-          283,
-          291
-        ]
-      }
-    },
-    {
-      "title": "Bridging the gap: Nubank’s commitment in serving the visually impaired",
-      "url": "https://building.nubank.com/bridging-the-gap-nubanks-commitment-in-serving-the-visually-impaired/",
+      "title": "Reclame AQUI · 255046021",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
       "pages": {
         "pt": [
           286,
@@ -820,14 +1026,28 @@
       }
     },
     {
-      "title": "Flutter API: FocusTraversalGroup",
-      "url": "https://api.flutter.dev/flutter/widgets/FocusTraversalGroup-class.html",
+      "title": "Laboratório executável do caso no GitHub",
+      "url": "https://github.com/wesleyvieira99/nu/blob/main/labs/case_20.py",
       "pages": {
         "pt": [
-          290
+          289,
+          298
         ],
         "en": [
-          290
+          289,
+          298
+        ]
+      }
+    },
+    {
+      "title": "Nu Holdings · Q2 2026 results · 13 August 2026",
+      "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-second-quarter-2026-financial-results",
+      "pages": {
+        "pt": [
+          307
+        ],
+        "en": [
+          307
         ]
       }
     },
@@ -1024,386 +1244,286 @@
       }
     }
   ],
-  "original_case_register": [
+  "cases": [
     {
       "id": "01",
-      "title": "Pix falha e a ajuda falha junto",
-      "category": "Confiabilidade e recuperação",
-      "source_title": "NuCommunity — Pix fora do AR novamente?",
-      "url": "https://comunidade.nubank.com.br/vida-financeira/post/pix-fora-do-ar-novamente-IZtsFKl2sGHAPn1",
-      "date": "15/07/2026",
-      "observed": "Um participante relata que conseguia abrir o app, mas transferências, pagamentos Pix e acesso ao suporte retornavam erro, mesmo após testar outras conexões.",
-      "evidence_type": "Relato público individual em comunidade hospedada pelo Nubank.",
-      "caveat": "O registro comprova a publicação da reclamação; não confirma indisponibilidade geral, duração, perda financeira ou causa técnica. O problema pode ter sido resolvido desde então.",
-      "customer_impact": "A combinação deixa a pessoa sem concluir o pagamento e sem orientação no mesmo canal. Repetir tentativas sem um estado claro aumenta ansiedade e pode gerar contatos adicionais.",
-      "hypothesis": "Investigar se jornadas de movimentação e ajuda compartilham dependências, autenticação ou configuração remota. É uma hipótese de isolamento de falhas, não uma descrição da arquitetura do Nubank.",
-      "proposal": "Criar uma experiência degradada: informar quais operações estão afetadas, preservar contexto da tentativa e oferecer canal de ajuda que continue acessível. Antes de permitir repetição, consultar o estado da operação para evitar pagamentos duplicados.",
-      "staff": "Definiria estados de transação explícitos e chaves de idempotência, com reconciliação para resultados desconhecidos. Separaria o carregamento da ajuda do caminho crítico de pagamentos. O custo adicional de consulta precisa caber no orçamento de latência.",
-      "em": "Uniria responsáveis por Pix, app e atendimento em uma revisão da jornada de incidente. Estabeleceria um responsável por comunicação, exercício de falha e critérios de liberação progressiva.",
-      "metric": "Conclusão de Pix por tentativa elegível; tempo para esclarecer estado; contatos por incidente; taxa de duplicidade como proteção.",
-      "validation": "Reproduzir falhas parciais em ambiente controlado e medir se o cliente compreende quando aguardar, consultar ou tentar novamente.",
-      "value": "Modelo hipotético: contatos evitados × custo médio de atendimento, menos custo operacional da solução. Usar volumes internos medidos; não atribuir economia real ao Nubank."
+      "title": "Pix de R$ 300 falha; estorno e estado precisam ficar claros",
+      "title_en": "A BRL 300 Pix fails: make the refund and state visible",
+      "url": "https://www.reclameaqui.com.br/nubank/pix-falhou-e-valor-nao-retornou-para-conta-nubank-gerando-atraso-em-contas_M2IN15MxGwipZy9E/",
+      "source_title": "Reclame AQUI · ID 250462257",
+      "date": "2026-06-03",
+      "status": "Resolvido; consumidor confirmou em 10/06/2026, voltaria a negociar e deu nota 9",
+      "ra_id": "250462257",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "02",
-      "title": "Recuperar o acesso quando a câmera frontal não funciona",
-      "category": "Identidade e inclusão",
-      "source_title": "NuCommunity — Sem acesso a minha conta, pede reconhecimento facial",
-      "url": "https://comunidade.nubank.com.br/duvidas/post/sem-acesso-a-minha-conta-pede-reconhecimento-facial-24sdVnkTTIWGmoj",
-      "date": "s/d",
-      "observed": "Um participante informa que a câmera frontal estava quebrada, a traseira funcionava e ele não conseguia ativar a conta pelo reconhecimento facial.",
-      "evidence_type": "Relato público individual; trecho disponível da publicação.",
-      "caveat": "O trecho não permite verificar as alternativas oferecidas pelo atendimento, o desfecho ou o comportamento atual. Não demonstra falha do mecanismo biométrico.",
-      "customer_impact": "Uma exigência legítima de segurança pode se tornar uma barreira de recuperação quando depende de um componente indisponível no aparelho. A pessoa precisa entender qual caminho seguro existe.",
-      "hypothesis": "Investigar se o fluxo identifica a indisponibilidade de câmera antes de iniciar repetidas capturas e se encaminha o caso com evidências suficientes para recuperação assistida.",
-      "proposal": "Explicar os requisitos antes da captura, detectar erros de hardware e oferecer recuperação assistida conforme a política de risco. Mostrar etapa, prazo e canal de acompanhamento sem expor critérios antifraude.",
-      "staff": "Projetaria uma máquina de estados de recuperação com auditoria, expiração e autorização limitada. Qualquer alternativa exigiria avaliação de risco e prova de titularidade; reduzir fricção não pode significar permitir retirada de recursos sem verificação.",
-      "em": "Reuniria identidade, prevenção a fraude, suporte e acessibilidade para mapear exceções reais. Treinaria o atendimento com rotas claras e mediria a fila de recuperação, com revisão de casos legítimos que permanecem bloqueados.",
-      "metric": "Taxa de recuperação legítima; tempo até acesso; reincidência de tentativa; fraude após recuperação; encaminhamentos sem solução.",
-      "validation": "Testar cenários de câmera ausente, permissão negada e falha transitória, com aparelhos distintos. Validar a compreensão das instruções com participantes que enfrentem limitações de acesso.",
-      "value": "Estimativa hipotética: horas de atendimento poupadas × custo por hora, acrescidas apenas de retenção incremental demonstrada por experimento. Descontar perdas adicionais de fraude e operação."
+      "title": "Pix recebido sem atualização do saldo: incidente de 8 de julho",
+      "title_en": "Incoming Pix missing from the displayed balance: July 8 incident",
+      "url": "https://canaltech.com.br/apps/recebeu-pix-no-nubank-e-o-dinheiro-nao-caiu-clientes-relatam-problema-no-app/",
+      "source_title": "Canaltech",
+      "date": "2026-07-08",
+      "status": "Instabilidade histórica; Nubank informou normalização por volta de 11h15 no mesmo dia",
+      "ra_id": null,
+      "evidence_type": "Reportagem com resposta da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "News report with the company’s response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "03",
-      "title": "Uma notificação deve ajudar a decidir",
-      "category": "Comunicação transacional",
-      "source_title": "NuCommunity — Notificações Push do App Nubank esquece do valor (sugestões)",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/notificacoes-push-do-app-nubank-esquece-do-valor-sugestoes-Dly2fsieCTAwemO",
-      "date": "s/d",
-      "observed": "Uma sugestão pública aponta ausência de valores em notificações de proventos, cashback e boletos, com imagens anexadas para ilustrar a experiência.",
-      "evidence_type": "Relato e sugestões de um participante, acompanhados de capturas publicadas por ele.",
-      "caveat": "As imagens documentam a alegação do autor, sem provar a configuração de privacidade, versão do app ou situação atual. As comparações com concorrentes não foram auditadas.",
-      "customer_impact": "Uma mensagem sem informação suficiente pode exigir abrir o aplicativo apenas para entender o evento. Exibir dados financeiros na tela bloqueada, porém, também pode contrariar a preferência de privacidade.",
-      "hypothesis": "Investigar se existe divergência entre modelos de mensagem, campos disponíveis no evento e preferências de privacidade. A ausência pode ser intencional; isso precisa ser confirmado.",
-      "proposal": "Definir contratos de conteúdo por evento: o que aconteceu, qual ação é necessária e onde consultar detalhes. Oferecer níveis de privacidade compreensíveis, mantendo uma mensagem útil quando valores estiverem ocultos.",
-      "staff": "Proporia esquemas versionados de eventos e modelos de notificação, com validação de campos e vínculo para a transação. O servidor aplicaria a política de exposição, evitando depender apenas da aparência no dispositivo.",
-      "em": "Alinharia produto, segurança e comunicação em uma biblioteca de mensagens com responsáveis por cada jornada. Priorizaria mensagens que geram dúvidas recorrentes, em vez de alterar todas de uma vez.",
-      "metric": "Compreensão da mensagem; abertura apenas para consulta; preferência de privacidade respeitada; contatos associados ao evento.",
-      "validation": "Comparar mensagens em testes de compreensão e em experimento controlado, incluindo tela bloqueada, texto ampliado e leitores de tela.",
-      "value": "Valor hipotético: tempo de consulta evitado por evento × eventos elegíveis. Economia de suporte só entra na conta se uma redução incremental for observada."
+      "title": "Mais de R$ 2 milhões retidos: revisão e saída de conta com evidência",
+      "title_en": "More than BRL 2 million held: evidence-based review and account exit",
+      "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/indicios-de-ilicitos-nubank-bloqueia-contas-e-deixa-clientes-sem-acesso-ao-dinheiro",
+      "source_title": "Metrópoles",
+      "date": "2026-03-10",
+      "status": "Reportagem e transcrição relatam decisão e posterior transferência para outro banco; autos e cumprimento não verificados independentemente.",
+      "ra_id": null,
+      "evidence_type": "Reportagem com resposta da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "News report with the company’s response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "04",
-      "title": "Open Finance precisa mostrar o que ainda não está completo",
-      "category": "Integrações e qualidade de dados",
-      "source_title": "NuCommunity — Open Finance: Cofrinhos do Mercado Pago não aparecem no Nubank",
-      "url": "https://comunidade.nubank.com.br/discussoes/post/open-finance-cofrinhos-do-mercado-pago-nao-aparecem-no-nubank-zS0XMHfgMLVRdEG",
-      "date": "03/10/2026",
-      "observed": "Um participante relata ver saldo e movimentação do Mercado Pago, mas não posições dos Cofrinhos no agregador de investimentos do Nubank.",
-      "evidence_type": "Relato público individual, com distinção entre dados visíveis e ausentes.",
-      "caveat": "O próprio autor não identifica em qual instituição está a limitação. A fonte não comprova obrigação de cobertura, erro de integração ou perda de dinheiro.",
-      "customer_impact": "Uma visão aparentemente completa pode levar o cliente a interpretar patrimônio parcial como total. Mesmo quando o produto não é suportado, comunicar essa fronteira melhora a utilidade do agregador.",
-      "hypothesis": "Investigar elegibilidade do produto, escopos consentidos, dados disponibilizados pelo participante e mapeamento interno, nessa ordem. Não atribuir ao Nubank uma ausência que possa nascer na origem.",
-      "proposal": "Apresentar cobertura por instituição e tipo de ativo, última atualização e estados distintos para ausência de posição, indisponibilidade e produto ainda não suportado. Permitir iniciar diagnóstico sem refazer toda a conexão.",
-      "staff": "Definiria um contrato de completude com proveniência e estado por recurso. Adaptadores por participante isolariam variações sem preencher ausência com zero. O tradeoff é uma interface mais explicativa para evitar falsa precisão patrimonial.",
-      "em": "Estabeleceria responsáveis entre integrações, investimentos e atendimento, com uma matriz de cobertura publicada internamente. Os casos recorrentes alimentariam testes contratuais e negociação com parceiros.",
-      "metric": "Sessões com cobertura compreendida; tempo de diagnóstico; falhas por participante e recurso; reconexões desnecessárias; divergências confirmadas.",
-      "validation": "Usar contas de teste autorizadas com posições conhecidas, variar consentimentos e indisponibilidades e conferir a informação exibida contra a resposta de origem.",
-      "value": "Modelo hipotético: reconexões e chamados evitados × custo unitário. Qualquer incremento em ativação ou retenção exige grupo de comparação e não deve ser inferido do relato."
+      "title": "Câmera quebrada impede autorização facial: recuperação assistida",
+      "title_en": "Broken camera blocks facial authorization: assisted recovery",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-devido-a-necessidade-de-autorizacao-facial-com-camera-quebrada_lwa1QFYSkYw-6gtU/",
+      "source_title": "Reclame AQUI · ID 230743513",
+      "date": "2025-10-31",
+      "status": "Resolvido; consumidor confirmou em 03/11/2025 que o problema foi resolvido e que voltaria a fazer negócio",
+      "ra_id": "230743513",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "05",
-      "title": "Próximo vencimento, sem procurar entre meses",
-      "category": "Planejamento de pagamentos",
-      "source_title": "NuCommunity — Assistente de pagamentos do Nubank precisa de melhorias",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/assistente-de-pagamentos-do-nubank-precisa-de-melhorias-CD5OrzX9jWPOsF6",
-      "date": "s/d",
-      "observed": "Uma publicação critica lembretes em horários noturnos, a leitura do próximo vencimento e a necessidade de trocar o mês para visualizar contas futuras.",
-      "evidence_type": "Sugestão pública detalhada com capturas anexadas pelo participante.",
-      "caveat": "O registro descreve a experiência do autor na época. Não confirma a cobertura dos recursos atuais nem demonstra que lembretes causaram atrasos.",
-      "customer_impact": "O trabalho do cliente é decidir o que precisa pagar a seguir. A navegação mensal e sinais pouco claros podem aumentar o esforço para formar essa visão.",
-      "hypothesis": "Investigar se a organização por calendário corresponde ao modelo mental do cliente e se regras de envio consideram preferência de horário e relevância do vencimento.",
-      "proposal": "Testar uma fila cronológica de próximos pagamentos com filtros simples, vencimento explícito e próximo compromisso destacado. Permitir horário preferido para lembretes sem tratar uma notificação enviada como garantia de leitura.",
-      "staff": "Separaria o modelo de obrigação financeira da apresentação mensal. O agendador usaria data local, deduplicação e reavaliação após pagamento. Evitaria transformar uma mudança de interface em execução automática sem consentimento.",
-      "em": "Conduziria uma descoberta conjunta com design, pagamentos e atendimento, delimitando primeiro a consulta de vencimentos. O plano teria metas de entendimento e proteção contra pagamentos acidentais, antes de adicionar funcionalidades.",
-      "metric": "Tempo para identificar o próximo vencimento; sucesso na tarefa; lembretes relevantes; cancelamentos de notificação; pagamentos duplicados como proteção.",
-      "validation": "Testar mudança de mês, feriados, contas pagas em outro canal e notificações atrasadas. Comparar conclusão da tarefa com a interface existente em pesquisa e lançamento gradual.",
-      "value": "Hipótese de valor: minutos economizados por planejamento × sessões mensais. Redução de atrasos só pode ser contabilizada com desenho causal e distinção entre organização e falta de saldo."
+      "title": "Telefone novo, e-mail antigo: código que não chega",
+      "title_en": "New phone, old email: an authorization code that never arrives",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-de-acesso-a-conta-nubank-apos-troca-de-celular-devido-a-problemas-com-codigo-de-verificacao-por-e-mail_FO6cRDkD3xp9govT/",
+      "source_title": "Reclame AQUI · ID 242544191",
+      "date": "2026-03-06",
+      "status": "Respondida; empresa informou aparelho autorizado em 09/03/2026, sem confirmação final pública do consumidor",
+      "ra_id": "242544191",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "06",
-      "title": "Modo Rua: explicar a permissão sem enfraquecer a proteção",
-      "category": "Segurança compreensível",
-      "source_title": "NuCommunity — Modo Rua precisa de um pequeno ajuste né",
-      "url": "https://comunidade.nubank.com.br/sugestoes-ideias/post/modo-rua-precisa-de-um-pequeno-ajuste-ne-qMb3GZwa82zYnGv",
-      "date": "s/d",
-      "observed": "Um participante relata que, mesmo no Wi-Fi cadastrado, recebia exigência de biometria quando não autorizava localização, e questiona essa dependência.",
-      "evidence_type": "Relato público e sugestão com duas capturas anexadas pelo autor.",
-      "caveat": "A interpretação do autor sobre GPS e bateria não foi validada. Não há diagnóstico de plataforma, confirmação de defeito ou evidência de vulnerabilidade.",
-      "customer_impact": "Quando a explicação do recurso não corresponde ao que a pessoa observa, ela pode entender uma proteção ativa como falha e abandonar a configuração.",
-      "hypothesis": "Verificar se a permissão limita a identificação da rede e se o app comunica corretamente o estado de confiança. A associação entre permissão e comportamento é hipótese a investigar.",
-      "proposal": "Mostrar um diagnóstico simples: rede reconhecida, permissão necessária ou proteção mantida por falta de confirmação. Explicar a finalidade específica e oferecer continuidade segura sem afirmar que a rede está validada.",
-      "staff": "Modelaria confiança como estado explícito e temporário, com proteção conservadora quando sinais faltarem. Evitaria inferir segurança apenas do nome de uma rede. O tradeoff entre fricção e segurança seria discutido com especialistas e registrado.",
-      "em": "Coordenaria produto, identidade, plataformas móveis e segurança para revisar texto e comportamento por sistema operacional. O lançamento incluiria treinamento de suporte e observação de abandono da configuração.",
-      "metric": "Ativação concluída; compreensão do estado; solicitações de ajuda; desativação após desafio; incidentes de segurança como proteção.",
-      "validation": "Construir uma matriz de permissões, mudanças de rede e retorno do segundo plano. Testar compreensão sem revelar regras sensíveis de detecção.",
-      "value": "Modelo hipotético: custo de atendimento evitado mais adesão incremental à proteção. Não converter adesão diretamente em fraude evitada sem evidência causal e medição de exposição."
+      "title": "Contestação Airbnb em análise não permite anexar nova evidência",
+      "title_en": "Airbnb dispute under review blocks additional evidence",
+      "url": "https://www.reclameaqui.com.br/nubank/compra-nao-reconhecida-contestacao-em-analise-e-impossibilidade-de-enviar-novos-comprovantes_Rud6eWI8D-puvZac/",
+      "source_title": "Reclame AQUI · ID 240394695",
+      "date": "2026-02-10",
+      "status": "Respondida; crédito de confiança e disputa informados, conclusão final não publicada no material consultado",
+      "ra_id": "240394695",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "07",
-      "title": "Um centavo pode quebrar uma integração inteira",
-      "category": "Correção financeira e interoperabilidade",
-      "source_title": "NuCommunity — Extrato OFX com erro",
-      "url": "https://comunidade.nubank.com.br/duvidas/post/extrato-ofx-com-erro-skG7GDXoha1Yh09",
-      "date": "s/d",
-      "observed": "Um participante relata formatação inválida para um valor negativo de um centavo em OFX e problemas de importação após mudanças na representação numérica.",
-      "evidence_type": "Relato público individual com exemplo textual do valor esperado e do recebido.",
-      "caveat": "Não foi obtido o arquivo original nem reproduzido o erro. A fonte não permite concluir se o defeito estava na exportação, no importador ou em uma versão específica.",
-      "customer_impact": "Mesmo uma diferença mínima de representação pode interromper conciliação ou controle financeiro. O impacto está na confiabilidade da integração, não no valor isolado.",
-      "hypothesis": "Investigar serialização monetária, tratamento do sinal e compatibilidade de consumidores. Separar formato inválido de mudanças válidas que um importador não aceita.",
-      "proposal": "Criar uma suíte de contratos de exportação com pequenos valores negativos, zero, estornos, grandes montantes e datas de fechamento. Disponibilizar reemissão rastreável quando uma exportação apresentar defeito confirmado.",
-      "staff": "Usaria representação monetária exata e um serializador centralizado, com testes de ida e volta e validação contra o formato contratado. Manteria identidade de transações na reemissão para prevenir duplicidade na importação.",
-      "em": "Organizaria a correção entre extratos, plataforma financeira e suporte, atribuindo um responsável ao contrato externo. A comunicação explicaria alcance e alternativa temporária somente após confirmação.",
-      "metric": "Exportações válidas; importações bem-sucedidas em consumidores representativos; divergência de saldo; duplicidade após reemissão; tempo até correção.",
-      "validation": "Reproduzir o exemplo com dados sintéticos e verificar fechamento de saldo e consistência após importar, exportar novamente e repetir a mesma importação.",
-      "value": "Hipótese: horas de conciliação manual evitadas × custo por hora, somadas a chamados reduzidos. Não presumir dano financeiro ou erro de saldo com base apenas no relato."
+      "title": "Três Pix somam R$ 478,55; cliente pede clareza sobre o MED",
+      "title_en": "Three Pix transfers totaling BRL 478.55: make MED progress explicit",
+      "url": "https://www.reclameaqui.com.br/nubank/solicitacao-de-informacoes-sobre-med-mecanismo-especial-de-devolucao-para-via-pix_8_pzeovlbbFJyohm/",
+      "source_title": "Reclame AQUI · ID 228360515",
+      "date": "2025-10-02",
+      "status": "Respondida; não há resultado final ou valor recuperado confirmados no material público consultado",
+      "ra_id": "228360515",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "08",
-      "title": "A experiência digital também termina na entrega do cartão",
-      "category": "Operações e jornada física",
-      "source_title": "Google Play — resenha de Murilo Meyrelles sobre entrega de cartão",
-      "url": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
-      "date": "08/04/2026",
-      "observed": "Uma resenha relata dificuldade para receber a reposição do cartão e respostas de suporte restritas ao atraso. O desenvolvedor orienta contato com atendimento.",
-      "evidence_type": "Resenha pública em loja de aplicativos, acompanhada de resposta do desenvolvedor.",
-      "caveat": "A fonte não informa o desfecho, as tentativas da transportadora ou a causa. Não permite estimar frequência nem responsabilidade por cada etapa.",
-      "customer_impact": "Para quem depende do cartão físico, uma entrega incerta pode impedir uso cotidiano. Orientações genéricas transferem para o cliente o esforço de acompanhar uma cadeia que ele não controla.",
-      "hypothesis": "Investigar se eventos logísticos chegam completos e no prazo ao atendimento e se há uma política clara de tratamento para tentativas repetidas sem sucesso.",
-      "proposal": "Exibir uma linha do tempo de entrega com próximo passo, prazo e responsável. Depois de evidência suficiente, abrir exceção operacional com acompanhamento, em vez de reiniciar a mesma orientação.",
-      "staff": "Proporia integração de eventos logísticos com deduplicação, tolerância a eventos fora de ordem e estado de entrega verificável. Divergências entre parceiros exigiriam reconciliação; uma atualização atrasada não deveria disparar reemissão indevida.",
-      "em": "Uniria operações de cartão, transportadoras, app e suporte em uma revisão semanal de exceções. Definiria um dono por caso e critérios objetivos para escalonamento e encerramento.",
-      "metric": "Entrega dentro do prazo prometido; tempo em exceção; contatos por entrega; reemissões desnecessárias; ativação após recebimento.",
-      "validation": "Simular evento ausente, devolução, tentativa repetida e confirmação tardia. Revisar amostra de casos encerrados com confirmação do cliente.",
-      "value": "Modelo hipotético: contatos e reemissões evitados × custos unitários, menos custo de integração. Receita adicional só entraria se ativação incremental fosse demonstrada."
+      "title": "Empréstimo contestado: evidência de acesso e decisão revisável",
+      "title_en": "Disputed loan: access evidence and a reviewable decision",
+      "url": "https://www.reclameaqui.com.br/nubank/emprestimo-nao-reconhecido-e-falta-de-suporte-do-nubank-apos-3-meses_gejzPKG3_RfQy5qv/",
+      "source_title": "Reclame AQUI · ID 237674561",
+      "date": "2026-01-14",
+      "status": "Não resolvido",
+      "ra_id": "237674561",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "09",
-      "title": "Evoluir a fatura sem perder a tarefa principal",
-      "category": "Design de produto e migração",
-      "source_title": "Google Play — resenha de Fernando Cordeiro sobre visualização da fatura",
-      "url": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
-      "date": "24/02/2026",
-      "observed": "Uma resenha critica a nova visualização da fatura: relata que ocultar o gráfico também oculta o total e que a navegação mensal mudou.",
-      "evidence_type": "Resenha pública individual em loja de aplicativos.",
-      "caveat": "Não há reprodução independente, versão identificada ou confirmação de comportamento atual. Uma opinião de layout não representa a preferência da base.",
-      "customer_impact": "A pessoa abre a fatura para entender quanto deve e verificar compras. Se uma preferência visual afeta essa informação essencial, o esforço de consulta pode aumentar.",
-      "hypothesis": "Investigar se componentes informativos e decorativos estão acoplados no estado de apresentação e se a mudança preservou as tarefas mais frequentes.",
-      "proposal": "Manter total, vencimento e situação sempre identificáveis, independentemente de gráficos. Oferecer controles explícitos para mudar o mês, com gestos como conveniência adicional, e validar a transição com usuários habituais.",
-      "staff": "Definiria invariantes de interface para dados financeiros essenciais e separaria estados de preferência visual dos dados da fatura. Usaria uma migração controlada com reversão, preservando consistência entre valores resumidos e lançamentos.",
-      "em": "Conduziria revisão conjunta de pesquisa, design, mobile e acessibilidade. A decisão de expansão dependeria de tarefas concluídas e compreensão, com abertura para reverter escolhas que piorassem o uso.",
-      "metric": "Tempo para localizar total e vencimento; acerto ao identificar mês; sucesso com leitor de tela; contatos sobre fatura; erros de interpretação.",
-      "validation": "Testar gráficos visíveis e ocultos, texto ampliado, meses sem compras, parcelas e navegação por tecnologia assistiva, com comparação direta da experiência anterior.",
-      "value": "Hipótese de valor: consultas concluídas sem retrabalho × tempo poupado, mais redução de suporte comprovada. Uma mudança estética isolada não justifica projeção de receita."
+      "title": "Fatura paga, limite incerto: rastrear a alocação do pagamento",
+      "title_en": "Paid statement, uncertain credit: trace payment allocation",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-de-fatura-nao-processado-e-limite-nao-liberado_DSi3KqzKEFj9hHIa/",
+      "source_title": "Reclame AQUI · ID 242838873",
+      "date": "2026-03-10",
+      "status": "Respondida",
+      "ra_id": "242838873",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "10",
-      "title": "Comprovante no contexto da compra, com significado correto",
-      "category": "Autosserviço e confiança",
-      "source_title": "Google Play — resenha de Neidslem Fernandes da Costa sobre comprovantes",
-      "url": "https://play.google.com/store/apps/details?hl=pt-BR&id=com.nu.production",
-      "date": "12/02/2025",
-      "observed": "Uma resenha pede compartilhar comprovantes de compras no crédito pelo app e relata precisar recorrer à central para receber o documento por e-mail.",
-      "evidence_type": "Resenha pública individual em loja de aplicativos.",
-      "caveat": "Não há confirmação do tipo exato de documento solicitado nem da cobertura atual. Registro de compra, comprovante de pagamento e recibo do lojista têm finalidades diferentes.",
-      "customer_impact": "Quando uma pessoa precisa demonstrar uma transação, depender do suporte acrescenta espera e repetição de informações. Um documento inadequado também pode causar confusão sobre o que foi efetivamente pago.",
-      "hypothesis": "Investigar quais solicitações podem ser atendidas com um registro disponível no app e quais exigem outro documento ou interação com o estabelecimento.",
-      "proposal": "Oferecer, nos detalhes da compra, um registro compartilhável com estado e data de atualização, linguagem clara sobre sua finalidade e dados pessoais minimizados. Preservar acesso ao atendimento quando o documento não resolver a necessidade.",
-      "staff": "Desenharia geração consistente com a fonte da transação, distinguindo autorização, confirmação e estorno. A exportação teria identificador, versão e proteção contra divulgação desnecessária; não seria apresentada como recibo fiscal.",
-      "em": "Alinharia cartão, suporte, jurídico e design sobre o documento e sua terminologia. Priorizaria os motivos de contato mais frequentes e acompanharia se o autosserviço realmente resolve o pedido.",
-      "metric": "Pedidos concluídos sem atendimento; compartilhamentos bem-sucedidos; recontato; documentos com estado incorreto; satisfação com a resolução.",
-      "validation": "Testar compra pendente, confirmada, cancelada, estornada e parcelada. Verificar se quem recebe o documento entende seu alcance sem precisar de explicação adicional.",
-      "value": "Modelo hipotético: solicitações elegíveis × adoção do autosserviço × custo evitado por contato, descontando manutenção. A receita ou economia real depende de dados internos."
+      "title": "NuPay após erro exibido: repetição, duplicidade e juros",
+      "title_en": "NuPay after an error message: retry, duplication and interest",
+      "url": "https://www.reclameaqui.com.br/nubank/cobranca-duplicada-e-juros-indevidos-por-falha-no-nupay_YLMPdqVkdlSKVq-X/",
+      "source_title": "Reclame AQUI · ID 241843991",
+      "date": "2026-02-27",
+      "status": "Resolvido",
+      "ra_id": "241843991",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "11",
-      "title": "Pagamento rápido, sem trocar correção por velocidade",
-      "category": "Arquitetura · Pagamentos",
-      "source_title": "How we reduced critical path latency by 76% at Nubank",
-      "url": "https://building.nu.com/how-we-reduced-critical-path-latency-by-76-at-nubank/",
-      "date": "2026-01-12",
-      "observed": "O Nubank relata redução do P90 da Payment Conditions API de aproximadamente 1.200 ms para 280 ms. A solução combinou remoção de chamadas redundantes e agregação por eventos em cache persistido, com fallback síncrono quando indisponível ou sem garantia de atualização.",
-      "evidence_type": "Relato técnico oficial com arquitetura e resultado publicado.",
-      "caveat": "Resultado daquele fluxo e período; não representa a latência de todo o app nem comprova desempenho atual.",
-      "customer_impact": "Uma condição de pagamento previsível reduz espera e preserva confiança no momento de concluir uma compra.",
-      "hypothesis": "Oportunidade: investigar quais outras jornadas aceitam leitura materializada com limites explícitos de atualização, sem presumir que estejam lentas.",
-      "proposal": "Começar por tracing de uma jornada, classificar dados por criticidade, remover trabalho repetido e só então comparar alternativas de leitura.",
-      "staff": "Definir versão do estado, orçamento de atraso e fallback por campo. Nunca usar uma projeção desatualizada como autorização definitiva de saldo ou limite.",
-      "em": "Alinhar Pagamentos, Crédito e Plataforma em um objetivo de jornada; entregar por etapas com dono, rollback e revisão semanal de risco.",
-      "metric": "P90/P99 ponta a ponta, taxa de fallback, atraso da projeção e conclusão de pagamento, segmentados por dependência.",
-      "validation": "Testar eventos atrasados, fora de ordem e duplicados; comparar decisões com a origem; interromper rollout em divergência financeira.",
-      "value": "Modelo proposto: tentativas elegíveis × variação causal da conclusão × margem por conclusão − custo incremental. Parâmetros dependem de baseline interno; nenhuma receita é estimada como fato."
+      "title": "Estorno em três lançamentos: tornar a fatura explicável",
+      "title_en": "A refund in three entries: make the statement explain itself",
+      "url": "https://www.reclameaqui.com.br/nubank/estorno-nao-abatido-da-fatura_yqEaE2DaZR8JYUSd/",
+      "source_title": "Reclame AQUI · ID 213597411",
+      "date": "2025-03-31",
+      "status": "Resolvido",
+      "ra_id": "213597411",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "12",
-      "title": "Capacidade cloud como compromisso de produto",
-      "category": "Plataforma · Confiabilidade",
-      "source_title": "Managing Cloud Limits",
-      "url": "https://building.nu.com/managing-cloud-limits/",
-      "date": "2025-04-09",
-      "observed": "O artigo descreve múltiplas contas AWS, sharding de infraestrutura e um detector que combina utilização, quotas e custos. Na publicação, o Nubank reportava mais de 4.000 microsserviços e 72 bilhões de eventos diários no Kafka.",
-      "evidence_type": "Publicação oficial de engenharia sobre capacidade e isolamento.",
-      "caveat": "Escala histórica declarada em abril de 2025; não é contagem atual. A publicação não fornece taxa de incidentes evitados.",
-      "customer_impact": "Capacidade insuficiente em uma dependência pode impedir uma jornada mesmo quando o restante da infraestrutura está saudável.",
-      "hypothesis": "Oportunidade: conectar previsão de quotas ao calendário comercial e aos objetivos de disponibilidade de cada jornada crítica.",
-      "proposal": "Criar revisão de prontidão para picos com crescimento esperado, margem de capacidade, tempo de aprovação de quota e plano de degradação.",
-      "staff": "Escolher isolamento por domínio e perfil de carga; comparar custo de capacidade reservada com risco de contenção entre tenants e expansão de shards.",
-      "em": "Estabelecer responsáveis entre Plataforma e squads, antecipar dependências de fornecedores e incluir capacidade no planejamento de lançamentos relevantes.",
-      "metric": "Dias até saturação projetada, headroom por quota crítica, tempo de expansão e sucesso das jornadas durante picos.",
-      "validation": "Executar ensaio de carga e falha de um shard em ambiente controlado, verificando limites de conexão, retries e recuperação.",
-      "value": "Modelo proposto: perda esperada evitada em indisponibilidade + custo de urgências evitadas − capacidade adicional. Probabilidade, impacto e custo precisam ser medidos; escala não prova economia."
+      "title": "Entregue no rastreio, ausente na mão: comprovar posse do cartão",
+      "title_en": "Delivered in tracking, missing in hand: establish card possession",
+      "url": "https://www.reclameaqui.com.br/nubank/nao-recebimento-de-cartao-nubank-solicitado-apos-cancelamento-por-perda-e-falhas-sucessivas-na-entrega_CERudU76NRiJiJM_/",
+      "source_title": "Reclame AQUI · ID 230126691",
+      "date": "2025-10-23",
+      "status": "Em réplica",
+      "ra_id": "230126691",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "13",
-      "title": "Ownership que sobrevive à reorganização",
-      "category": "Plataforma · Eficiência",
-      "source_title": "How Nubank distributes infrastructure ownership to operate more than 21 thousand databases with a lean team",
-      "url": "https://building.nu.com/how-nubank-distributes-infrastructure-ownership-to-operate-more-than-21-thousand-databases-with-a-lean-team/",
-      "date": "2026-07-01",
-      "observed": "O Nubank relata operar mais de 21 mil bancos de dados, com cinco engenheiros diretamente responsáveis pela camada de bancos e responsabilidade distribuída aos times de produto. Provisionamento exige ownership; inventário, identificação de inatividade e arquivamento fazem parte da plataforma.",
-      "evidence_type": "Relato oficial de operação, governança e automação.",
-      "caveat": "Cinco engenheiros não representam todo o esforço organizacional. Remoção de dados depende de retenção, dependências e contexto de negócio.",
-      "customer_impact": "Responsabilidade clara acelera diagnóstico e reduz risco de um recurso importante ficar sem acompanhamento após mudanças organizacionais.",
-      "hypothesis": "Oportunidade: testar se o vínculo entre recurso, jornada e responsável continua íntegro durante transferências de ownership.",
-      "proposal": "Adicionar um fluxo de transferência com aceitação do novo time, dependências visíveis, runbook e confirmação de acesso operacional.",
-      "staff": "Modelar o inventário como grafo versionado de recursos e consumidores; sinais de inatividade nunca bastam isoladamente para autorizar descarte.",
-      "em": "Combinar Plataforma, Produto e governança em revisões curtas de exceções; medir carga operacional e dar tempo aos squads para sanear recursos.",
-      "metric": "Recursos sem responsável válido, tempo para transferência, custo de recursos inativos e sucesso de restauração.",
-      "validation": "Simular reorganização e consumidor sazonal; ensaiar restauração e garantir bloqueio de remoção quando houver retenção ou dependência pendente.",
-      "value": "Modelo proposto: custo mensal desativado com segurança + horas operacionais recuperadas × custo por hora − custo de governança. Não extrapolar a economia de um recurso para os 21 mil."
+      "title": "Teto do cartão virtual não é crédito disponível",
+      "title_en": "A virtual card cap is not available credit",
+      "url": "https://www.reclameaqui.com.br/nubank/recusa-de-transacao-com-limite-disponivel-e-fatura-em-dia_ef3HnxyEcUpqSZLk/",
+      "source_title": "Reclame AQUI · ID 244706833",
+      "date": "2026-03-30",
+      "status": "Respondida",
+      "ra_id": "244706833",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "14",
-      "title": "BDC: velocidade com contrato de experiência",
-      "category": "App · Plataforma",
-      "source_title": "Backend Driven Content: why we developed a Server Driven UI framework at Nubank",
-      "url": "https://building.nu.com/server-driven-ui-framework-at-nubank/",
-      "date": "2023-01-20",
-      "observed": "O Nubank descreve BDC, framework de interface guiada pelo servidor com componentes Flutter e backend Clojure. Em janeiro de 2023, reportava uso em 43% do app e quase 70% das novas telas e fluxos, com rollout controlado e integração ao Design System.",
-      "evidence_type": "Descrição oficial da plataforma e adoção na data da publicação.",
-      "caveat": "Percentuais históricos; BDC não permite inventar componentes ausentes no binário nem elimina toda dependência de atualização do app.",
-      "customer_impact": "A mesma plataforma que acelera melhorias precisa preservar entendimento, acessibilidade e compatibilidade entre versões instaladas.",
-      "hypothesis": "Oportunidade: avaliar contratos de experiência que detectem incompatibilidade antes de uma configuração alcançar clientes.",
-      "proposal": "Validar schemas, capacidades do cliente, semântica acessível e estados de falha em um pipeline comum de publicação.",
-      "staff": "Separar versão do protocolo, catálogo de componentes e revisão do conteúdo; exigir fallback seguro e separar apresentação de autorização financeira.",
-      "em": "Estabelecer parceria de Plataforma com Design e squads consumidores; medir adoção pela redução de esforço e regressões, não por telas migradas.",
-      "metric": "Tempo entre alteração aprovada e exposição, falhas de renderização por versão, conclusão de tarefa e rollback.",
-      "validation": "Executar matriz de clientes antigos, payload inválido, conexão interrompida, leitor de tela e experimentos concorrentes.",
-      "value": "Modelo proposto: entregas elegíveis × horas de implementação e correção evitadas × custo por hora − manutenção da plataforma. Ganho de conversão exige experimento separado."
+      "title": "Antecipação paga fora da data: cotação, execução e desconto",
+      "title_en": "An early repayment applied late: quote, execution and discount",
+      "url": "https://www.reclameaqui.com.br/nubank/dificuldade-em-antecipar-parcelas-e-divergencia-de-informacoes-no-nubank_tFpS34o-ncejc1a3/",
+      "source_title": "Reclame AQUI · ID 238574883",
+      "date": "2026-01-23",
+      "status": "Respondida",
+      "ra_id": "238574883",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "15",
-      "title": "Release mobile guiado pela jornada real",
-      "category": "App · Observabilidade",
-      "source_title": "Platform engineering, Observability, and scaling Mobile Development",
-      "url": "https://building.nu.com/platform-engineering-observability-and-scaling-mobile-development/",
-      "date": "2025-04-16",
-      "observed": "O artigo apresenta pipeline mobile dinâmico, releases alpha e beta e implantação gradual em produção. Descreve OpenTelemetry e Sentry para observar desempenho, encaminhamento de alertas aos times e controles de segurança como verificação de integridade do dispositivo.",
-      "evidence_type": "Resumo oficial de meetup de Plataforma e desenvolvimento mobile.",
-      "caveat": "É uma visão pública de práticas, sem acesso à implementação nem cobertura atual de cada jornada.",
-      "customer_impact": "Um app pode não sofrer crash e ainda assim deixar uma pessoa sem conseguir entrar, pagar ou entender o estado de uma operação.",
-      "hypothesis": "Oportunidade: calibrar decisões de expansão do release pela conclusão de tarefas, além da estabilidade técnica agregada.",
-      "proposal": "Selecionar jornadas críticas e definir sinais de sucesso, espera excessiva e abandono por versão, dispositivo e qualidade de conexão.",
-      "staff": "Propagar correlação sem dados sensíveis; limitar cardinalidade, amostragem e retenção. Evitar que telemetria indisponível bloqueie a transação do cliente.",
-      "em": "Criar critérios conjuntos de avanço e pausa com donos de jornada; reservar capacidade para corrigir regressões detectadas nas primeiras coortes.",
-      "metric": "Sessões sem crash, conclusão de tarefas, latência percebida, tempo de detecção e exposição antes da contenção.",
-      "validation": "Comparar coortes equivalentes, reproduzir rede degradada e validar que alertas chegam a um responsável com contexto acionável.",
-      "value": "Modelo proposto: clientes poupados de falha × custo médio de atendimento associado + retrabalho evitado − custo de telemetria. Não somar abandono e suporte quando representam o mesmo impacto."
+      "title": "Caixinhas: resgate indisponível e estado de serviço invisível",
+      "title_en": "Money Boxes: unavailable withdrawals and an invisible service state",
+      "url": "https://www.reclameaqui.com.br/nubank/indisponibilidade-de-resgate-de-dinheiro-em-caixinhas-e-falta-de-comunicacao-do-banco_Nc3yoYhKbC1BpbqL/",
+      "source_title": "Reclame AQUI · ID 247218209",
+      "date": "2026-04-28",
+      "status": "Respondida",
+      "ra_id": "247218209",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "16",
-      "title": "Precog: chegar ao especialista certo",
-      "category": "IA · Atendimento",
-      "source_title": "Presenting Precog, Nubank’s Real Time Event AI",
-      "url": "https://building.nu.com/presenting-precog-nubanks-real-time-event-ai/",
-      "date": "2023-06-21",
-      "observed": "O Nubank publicou o Precog, que usa representações de eventos para antecipar necessidades de atendimento. Relata aumento superior a 50% no volume de chamadas corretamente direcionadas a especialistas sem entrada do cliente, comparado ao modelo anterior.",
-      "evidence_type": "Relato técnico oficial de modelo, aplicação e resultado.",
-      "caveat": "O aumento é relativo ao volume de roteamentos corretos naquele comparativo; não significa 50 pontos percentuais, resolução garantida ou efeito atual.",
-      "customer_impact": "Menos transferências podem reduzir repetição da história e acelerar o encontro com quem resolve o problema.",
-      "hypothesis": "Oportunidade: medir se a vantagem do roteamento permanece em produtos novos, jornadas sensíveis e casos com baixa confiança.",
-      "proposal": "Comparar predição com motivo confirmado ao final do contato; permitir correção rápida e preservar caminho humano quando houver ambiguidade.",
-      "staff": "Definir limiar de confiança por intenção, monitorar atraso dos eventos e evitar usar representações comportamentais como autorização de ações financeiras.",
-      "em": "Coordenar Ciência de Dados, Engenharia e Operações com avaliação de casos reais; separar rapidez de atendimento de qualidade da resolução.",
-      "metric": "Roteamento correto, transferências, resolução no primeiro contato, recontato e satisfação por intenção e coorte.",
-      "validation": "Rodar em shadow mode, auditar amostra estratificada e usar experimento com proteção para temas urgentes e grupos pouco representados.",
-      "value": "Modelo proposto: transferências evitadas × minutos poupados × custo operacional por minuto − inferência e manutenção. Validar recontato para não chamar deslocamento de trabalho de economia."
+      "title": "Portabilidade de investimentos: elegibilidade contraditória no cashback",
+      "title_en": "Investment transfers: conflicting cashback eligibility answers",
+      "url": "https://www.reclameaqui.com.br/nubank/campanha-de-portabilidade-enganosa-ou-cometeram-um-erro-na-minha-conta_2DQdhvJ76VJIOMDb/",
+      "source_title": "Reclame AQUI · ID 250210183",
+      "date": "2026-06-01",
+      "status": "Respondida",
+      "ra_id": "250210183",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "17",
-      "title": "Antifraude que responde dentro da jornada",
-      "category": "Segurança · Machine Learning",
-      "source_title": "Practices to scale Machine Learning operations",
-      "url": "https://building.nu.com/practices-to-scale-machine-learning-operations/",
-      "date": "2025-04-07",
-      "observed": "O artigo descreve Model Server com Clojure e Python, features recentes e históricas, testes de integração e execução em shadow mode. O contexto é inferência em tempo real para fraude, com atenção a latência, custos e dependências.",
-      "evidence_type": "Prática de engenharia publicada pelo próprio Nubank.",
-      "caveat": "Não revela políticas de decisão, thresholds, perdas ou falsos positivos. Não autoriza inferir vulnerabilidade explorável ou eficiência antifraude atual.",
-      "customer_impact": "A proteção precisa reduzir perdas sem produzir bloqueios indevidos e espera desnecessária para quem está usando a própria conta.",
-      "hypothesis": "Oportunidade: explicitar orçamento de tempo e qualidade por dependência, incluindo a resposta quando uma feature não chega.",
-      "proposal": "Classificar dados indispensáveis e opcionais, instrumentar decisões degradadas e avaliar fricção e risco na mesma experiência.",
-      "staff": "Versionar modelo, features e política; distinguir dado ausente de valor zero; aplicar fallback aprovado por Risco, nunca um permissivo global.",
-      "em": "Unir Risco, ML, Plataforma e atendimento em metas conjuntas; negociar capacidade para investigação e revisão de decisões contestadas.",
-      "metric": "Latência de decisão, indisponibilidade de features, fraude confirmada, falsos positivos e tempo de recuperação do cliente.",
-      "validation": "Reproduzir timeout, drift, features atrasadas e carga de pico; comparar shadow com baseline antes de mudar decisões reais.",
-      "value": "Modelo proposto: redução de perdas por fraude contra baseline comparável, menos o custo de falsos positivos (transações legítimas bloqueadas) e custos incrementais de operação e infraestrutura. Exige janela de confirmação e análise de seleção; acurácia isolada não mede valor."
+      "title": "Ultravioleta: um saldo, duas unidades, uma escolha irreversível",
+      "title_en": "Ultravioleta: one balance, two units, one irreversible choice",
+      "url": "https://www.reclameaqui.com.br/nubank/cliente-ultravioleta-se-sente-prejudicado-por-confusao-entre-cashback-e-pontos-no-app-nubank_L00uI85JWvpRpJLL/",
+      "source_title": "Reclame AQUI · ID 245086475",
+      "date": "2026-04-03",
+      "status": "Respondida",
+      "ra_id": "245086475",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "18",
-      "title": "A mesma feature no treino e na decisão",
-      "category": "Dados · Qualidade de ML",
-      "source_title": "Dealing with Train-serve Skew in Real-time ML Models: A Short Guide",
-      "url": "https://building.nu.com/dealing-with-train-serve-skew-in-real-time-ml-models-a-short-guide/",
-      "date": "2023-06-27",
-      "observed": "O Nubank publica lições sobre diferenças entre features no treinamento e no serving. Os exemplos didáticos incluem janelas de tempo distintas, representação de ausência como zero e fontes de dados incompatíveis; o guia orienta monitorar e diagnosticar essas divergências.",
-      "evidence_type": "Guia técnico oficial baseado na experiência da equipe.",
-      "caveat": "Exemplos ilustrativos não são incidentes atribuíveis a um produto ou cliente específico. Não há magnitude de perda publicada.",
-      "customer_impact": "Uma definição incoerente pode alterar decisões mesmo quando o modelo carregado é o correto e a infraestrutura parece saudável.",
-      "hypothesis": "Oportunidade: tratar significado e temporalidade de features como contrato verificável entre equipes de dados e serviços.",
-      "proposal": "Escolher features críticas, registrar definição, timestamp, versão e tratamento de ausência; comparar valores batch e online para eventos equivalentes.",
-      "staff": "Implementar comparação point-in-time com tolerância explícita; separar atraso legítimo de divergência semântica e impedir vazamento de informação futura.",
-      "em": "Definir ownership compartilhado entre quem produz, transforma e usa a feature; incluir compatibilidade nas revisões de mudanças de produto.",
-      "metric": "Taxa e magnitude de divergência, cobertura das comparações, tempo de detecção e decisões potencialmente afetadas.",
-      "validation": "Usar fixtures com virada de dia, fuso, nulos, reprocessamento e eventos tardios; reproduzir o mesmo instante de decisão.",
-      "value": "Modelo proposto: horas de investigação evitadas × custo por hora + redução validada de decisões inadequadas − custo de comparação. Qualquer efeito financeiro depende de causalidade, não de simples correlação com skew."
+      "title": "NuCel: portabilidade sem conclusão entre duas operadoras",
+      "title_en": "NuCel: number portability stalled between two carriers",
+      "url": "https://www.reclameaqui.com.br/nubank/falha-na-portabilidade-da-linha-vivo-pre-pago-para-nubanknucel-com-cobranca-indevida_6p5gIX1MMyDPSDus/",
+      "source_title": "Reclame AQUI · ID 254143071",
+      "date": "2026-07-17",
+      "status": "Não resolvido",
+      "ra_id": "254143071",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "19",
-      "title": "Dark Mode: consistência que inclui legibilidade",
-      "category": "App · Design System",
-      "source_title": "The birth of the Dark Mode: a journey into Nubank’s app evolution",
-      "url": "https://building.nu.com/the-birth-of-the-dark-mode-a-journey-into-nubanks-app-evolution/",
-      "date": "2023-09-26",
-      "observed": "O relato do Dark Mode apresenta demanda de clientes, uso de tokens de design, fallback para telas ainda sem tokens e ajustes de contraste, inclusive no roxo da conta PJ. Design e Engenharia colaboraram na evolução da experiência.",
-      "evidence_type": "História oficial de desenvolvimento do app e do Design System.",
-      "caveat": "Modo escuro não resolve acessibilidade sozinho. O relato não comprova falha de contraste na versão atual do aplicativo.",
-      "customer_impact": "Legibilidade, significado das cores e transições consistentes ajudam a pessoa a entender valores, alertas e ações em diferentes condições visuais.",
-      "hypothesis": "Oportunidade: avaliar semântica e contraste de estados financeiros em todos os temas, especialmente telas compostas por múltiplos produtos.",
-      "proposal": "Criar matriz de estados de sucesso, espera, erro e indisponibilidade; revisar temas, escala de texto e conteúdo longo com usuários.",
-      "staff": "Adotar tokens semânticos e testes visuais por tema; definir fallback legível, evitando associar estado financeiro apenas à cor ou transparência.",
-      "em": "Organizar Design System e squads em uma agenda de qualidade compartilhada, priorizando jornadas essenciais e participantes com necessidades diversas.",
-      "metric": "Conclusão de tarefa, erros de interpretação, regressões visuais e cobertura de componentes nos temas suportados.",
-      "validation": "Combinar checagens automáticas com avaliação de contraste real, leitor de tela, texto ampliado e sessões moderadas de uso.",
-      "value": "Modelo proposto: tempo de tarefa poupado e contatos evitados por confusão visual; converter em valor apenas com pesquisa e baseline. Autonomia e legibilidade também são critérios próprios de qualidade."
+      "title": "Conta Global: validar o objetivo antes de converter",
+      "title_en": "Global Account: validate the goal before exchanging currency",
+      "url": "https://www.reclameaqui.com.br/nubank/conversao-para-euro-na-conta-global-nubank-gerou-prejuizo-de-r1600-por-limitacao-nao-clara-do-servico_hPjBF5ut2RIkdhxz/",
+      "source_title": "Reclame AQUI · ID 243002037",
+      "date": "2026-03-11",
+      "status": "Resolvido",
+      "ra_id": "243002037",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     },
     {
       "id": "20",
-      "title": "NuBraille: autonomia de ponta a ponta",
-      "category": "Acessibilidade · Jornada",
-      "source_title": "Bridging the gap: Nubank’s commitment in serving the visually impaired",
-      "url": "https://building.nubank.com/bridging-the-gap-nubanks-commitment-in-serving-the-visually-impaired/",
-      "date": "2023-07-18",
-      "observed": "O Nubank relata o desenvolvimento do NuBraille com participação de pessoas cegas, testes de protótipos e colaboração com produção e atendimento. O cartão incorpora nome e últimos quatro dígitos em braille para identificação e desbloqueio com maior autonomia.",
-      "evidence_type": "Caso oficial de produto inclusivo, com processo e participantes identificados.",
-      "caveat": "É evidência de uma iniciativa específica, não certificação de acessibilidade de toda a experiência nem garantia de disponibilidade universal.",
-      "customer_impact": "A autonomia depende da sequência inteira: identificar o cartão, acessar instruções, desbloquear, criar cartão virtual e obter ajuda.",
-      "hypothesis": "Oportunidade: testar a continuidade entre experiência física, autenticação no app e suporte, identificando onde uma pessoa precisa pedir ajuda.",
-      "proposal": "Conduzir pesquisa com participantes cegos e de baixa visão, incluindo troca de dispositivo e recuperação de acesso; priorizar barreiras observadas.",
-      "staff": "Definir contratos semânticos de navegação, foco e anúncios de estado; evitar que uma etapa biométrica seja o único caminho operacional disponível.",
-      "em": "Financiar participação recorrente de usuários, reunir Produto, Engenharia e Operações e incorporar critérios de autonomia ao aceite das entregas.",
-      "metric": "Tarefas concluídas sem assistência, tempo de recuperação, barreiras críticas e recontato após suporte.",
-      "validation": "Testar com tecnologias assistivas e usuários reais em dispositivos distintos; verificar também embalagem, instruções e continuidade do atendimento.",
-      "value": "Medir separadamente: benefício operacional potencial = contatos assistidos evitados × custo incremental por contato; benefício ao cliente = minutos recuperados e tarefas concluídas sem assistência. Descontar o custo da solução da parcela operacional. Não somar dinheiro e tempo nem reduzir inclusão a economia."
+      "title": "NuPay: pagamento aprovado, pedido sem confirmação",
+      "title_en": "NuPay: payment approved, order unconfirmed",
+      "url": "https://www.reclameaqui.com.br/nubank/pagamento-nupay-aprovado-pedido-nao-processado-e-meu-dinheiro-nao-foi-devo_zWbyC-MKbLgrVXSU/",
+      "source_title": "Reclame AQUI · ID 255046021",
+      "date": "2026-07-28",
+      "status": "Resolvido",
+      "ra_id": "255046021",
+      "evidence_type": "Relato individual com resposta pública da empresa",
+      "caveat": "Relato histórico, com desfecho e limitações descritos no capítulo. Não comprova incidência, causa técnica ou falha atual.",
+      "evidence_type_en": "Individual complaint with the company’s public response",
+      "caveat_en": "Historical report; the chapter includes the outcome and evidential limits. It does not establish incidence, technical cause or a current defect."
     }
   ]
 }
